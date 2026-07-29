@@ -5,11 +5,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .database import Base, engine
-from .routers import auth, dashboard, entries, habits, meal_photo, integrations, food_search
+from .routers import auth, dashboard, entries, habits, meal_photo, integrations, food_search, recipes
 
 # Pour ce flow de validation : création des tables au démarrage.
 # En prod, remplacer par Alembic (migrations versionnées).
 Base.metadata.create_all(bind=engine)
+
 # Crée le compte de démo automatiquement s'il n'existe pas encore — utile
 # sur un hébergeur dont le plan gratuit n'inclut pas d'accès shell (ex.
 # Render Free), où lancer `python -m app.seed` manuellement n'est pas
@@ -36,6 +37,7 @@ app.include_router(habits.router)
 app.include_router(meal_photo.router)
 app.include_router(integrations.router)
 app.include_router(food_search.router)
+app.include_router(recipes.router)
 
 
 @app.get("/health")
