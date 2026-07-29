@@ -10,6 +10,13 @@ from .routers import auth, dashboard, entries, habits, meal_photo, integrations,
 # Pour ce flow de validation : création des tables au démarrage.
 # En prod, remplacer par Alembic (migrations versionnées).
 Base.metadata.create_all(bind=engine)
+# Crée le compte de démo automatiquement s'il n'existe pas encore — utile
+# sur un hébergeur dont le plan gratuit n'inclut pas d'accès shell (ex.
+# Render Free), où lancer `python -m app.seed` manuellement n'est pas
+# possible. `seed.run()` est déjà idempotent (ne fait rien si le compte
+# existe déjà), donc sans danger à chaque redémarrage du serveur.
+from . import seed as _seed
+_seed.run()
 
 app = FastAPI(title="Suivi — API", version="0.1.0")
 
