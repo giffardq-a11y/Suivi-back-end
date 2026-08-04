@@ -98,6 +98,14 @@ class Habit(Base):
     label = Column(String, nullable=False)
     target = Column(String, nullable=True)
     active = Column(Boolean, nullable=False, default=True)
+    # Ajoutés pour porter côté serveur ce que mockData.js gérait déjà en
+    # mémoire (voir state.habits) : le nombre de fois/semaine visé sert à
+    # calculer `percent` à partir des HabitLog réels, plutôt que de le
+    # stocker (ce qui se désynchroniserait des vrais logs).
+    weekly_target = Column(Integer, nullable=False, default=7)
+    linked_activity = Column(String, nullable=True)  # 'sport_session' | 'calorie_deficit' | null
+    scheduled_time = Column(String, nullable=True)    # 'HH:MM'
+    notifications_enabled = Column(Boolean, nullable=False, default=False)
 
     user = relationship("User", back_populates="habits")
     logs = relationship("HabitLog", back_populates="habit", cascade="all, delete-orphan")

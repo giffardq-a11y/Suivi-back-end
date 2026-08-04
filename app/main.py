@@ -10,7 +10,28 @@ from .routers import auth, dashboard, entries, habits, meal_photo, integrations,
 # Pour ce flow de validation : création des tables au démarrage.
 # En prod, remplacer par Alembic (migrations versionnées).
 Base.metadata.create_all(bind=engine)
+from sqlalchemy import text
 
+# Ajoute les colonnes de Habit introduites après la création initiale de la
+# table — nécessaire car create_all() ne modifie jamais une table
+# existante. Idempotent : chaque ALTER échoue silencieusement si la colonne
+# existe déjà (cas normal à partir du 2e redémarrage).
+def _ensure_habit_columns():
+    statements = [
+        "ALTER TABLE habits ADD COLUMN weekly_target INTEGER DEFAULT 7",
+        "ALTER TABLE habits ADD COLUMN linked_activity VARCHAR",
+        "ALTER TABLE habits ADD COLUMN scheduled_time VARCHAR",
+        "ALTER TABLE habits ADD COLUMN notifications_enabled BOOLEAN DEFAULT false",
+    ]
+    with engine.connect() as conn:
+        for stmt in statements:
+            try:
+                conn.execute(text(stmt))
+                conn.commit()
+            except Exception:
+                conn.rollback()  # colonne déjà existante — normal
+
+_ensure_habit_columns()
 # Crée le compte de démo automatiquement s'il n'existe pas encore — utile
 # sur un hébergeur dont le plan gratuit n'inclut pas d'accès shell (ex.
 # Render Free), où lancer `python -m app.seed` manuellement n'est pas
