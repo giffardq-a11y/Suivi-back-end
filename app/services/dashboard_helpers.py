@@ -9,6 +9,7 @@ from .. import models
 from .streaks import current_streak_days, personal_best_days
 from .savings import compute_savings
 from .rewards import compute_reward_budget
+from .habit_progress import effective_habit_target
 
 THOUGHTS = [
     "Un jour à la fois.",
@@ -41,7 +42,10 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
         if not habit.active:
             continue
         done_today = any(log.occurred_at >= today_start for log in habit.logs)
-        habits_today.append({"id": habit.id, "label": habit.label, "target": habit.target, "done_today": done_today})
+        habits_today.append({
+            "id": habit.id, "label": habit.label,
+            "target": effective_habit_target(habit, now), "done_today": done_today,
+        })
 
     active_goals = [g for g in user.goals if g.completed_at is None]
     top_goal = max(active_goals, key=lambda g: (g.current_value / g.target_value if g.target_value else 0), default=None)

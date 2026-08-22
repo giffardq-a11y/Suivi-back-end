@@ -7,6 +7,7 @@ from ..database import get_db
 from ..deps import get_current_user
 from ..services.common import now_utc, days_since
 from ..services.dashboard_helpers import build_dashboard_dict
+from ..services.habit_progress import effective_habit_target
 from .profile import _get_or_create_profile
 
 router = APIRouter(tags=["settings"])
@@ -64,10 +65,11 @@ def get_settings(db: Session = Depends(get_db), user: models.User = Depends(get_
         for s in user.substances
         if s.category == models.SubstanceCategory.OTHER
     ]
+    now = now_utc()
     habits_out = [
         {
-            "id": h.id, "label": h.label, "target": h.target,
-            "progressive": False,
+            "id": h.id, "label": h.label, "target": effective_habit_target(h, now),
+            "progressive": bool(h.progressive_rhythm),
             "linked_activity": h.linked_activity,
             "scheduled_time": h.scheduled_time,
             "notifications_enabled": h.notifications_enabled,
@@ -102,10 +104,10 @@ def save_settings(
         by_id = {h.id: h for h in user.habits}
         for entry in payload.habits:
             habit = by_id.get(entry.id)
-            # Une habitude auto-gérée (linked_activity) recalcule son target
-            # elle-même — un éditeur manuel ne doit pas l'écraser (même
-            # garde que saveSettings côté mock).
-            if habit and not habit.linked_activity:
+            # Une habitude progressive ou auto-gérée (linked_activity)
+            # recalcule son target elle-même — un éditeur manuel ne doit pas
+            # l'écraser (même garde que saveSettings côté mock).
+            if habit and not habit.linked_activity and not habit.progressive_rhythm:
                 habit.target = entry.target
 
     if payload.suggestedSelected is not None:

@@ -8,15 +8,25 @@ from .. import models
 from ..database import get_db
 from ..deps import get_current_user
 from ..services.common import now_utc, is_same_day, today_key
+from ..services.habit_progress import effective_habit_target
 
 router = APIRouter(prefix="/habits", tags=["habits"])
 
 
+class ProgressiveIn(BaseModel):
+    rhythm: str  # 'lent' | 'normal' | 'rapide'
+    startValue: float
+    targetValue: float
+
+
 class HabitCreate(BaseModel):
     label: str
+    type: str | None = None
     target: str | None = None
+    note: str | None = None
     weekly_target: int = 7
     linked_activity: str | None = None
+    progressive: ProgressiveIn | None = None
     scheduled_time: str | None = None
     notifications_enabled: bool = False
 
@@ -50,12 +60,9 @@ def _serialize(db: Session, habit: models.Habit) -> HabitOut:
     return HabitOut(
         id=habit.id,
         label=habit.label,
-        target=habit.target,
+        target=effective_habit_target(habit, datetime.now(timezone.utc)),
         percent=percent,
-        # Les habitudes "progressives" (palier qui évolue dans le temps,
-        # voir effectiveHabitTarget côté mock) ne sont pas encore modélisées
-        # côté serveur — toujours False ici pour l'instant.
-        progressive=False,
+        progressive=bool(habit.progressive_rhythm),
         linked_activity=habit.linked_activity,
     )
 
@@ -84,11 +91,23 @@ def create_habit(
         key=payload.label.lower().replace(" ", "_"),
         label=payload.label,
         target=payload.target,
+        note=payload.note,
         weekly_target=payload.weekly_target,
         linked_activity=payload.linked_activity,
         scheduled_time=payload.scheduled_time,
         notifications_enabled=payload.notifications_enabled,
     )
+    if payload.progressive:
+        habit.habit_type = payload.type
+        habit.progressive_rhythm = payload.progressive.rhythm
+        habit.progressive_start_value = payload.progressive.startValue
+        habit.progressive_target_value = payload.progressive.targetValue
+        habit.progressive_start_date = now_utc()
+        # Au palier 0 (à l'instant de la création), la cible affichée est la
+        # valeur de départ formatée — même comportement que effectiveHabitTarget
+        # côté mock juste après avoir posé habit.progressive.
+        habit.target = effective_habit_target(habit, habit.progressive_start_date)
+
     db.add(habit)
     db.commit()
     db.refresh(habit)

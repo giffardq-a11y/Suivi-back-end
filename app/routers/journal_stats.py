@@ -17,6 +17,7 @@ from ..services.common import now_utc, to_ms, from_ms, relative_time, is_same_da
 from ..services.savings import compute_savings
 from ..services.streaks import current_streak_days
 from ..services.sport import calories_burned_on
+from ..services.habit_progress import effective_habit_target
 from .diet import _meals_calories_on
 
 router = APIRouter(tags=["journal-stats"])
@@ -216,7 +217,7 @@ def get_week_overview(db: Session = Depends(get_db), user: models.User = Depends
             continue
         done = sum(1 for l in h.logs if aware(l.occurred_at) >= week_start)
         habits_out.append({
-            "id": h.id, "label": h.label, "target": h.target,
+            "id": h.id, "label": h.label, "target": effective_habit_target(h, now),
             "weeklyTarget": h.weekly_target or 7, "done_this_week": done,
         })
 

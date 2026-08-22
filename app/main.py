@@ -36,6 +36,27 @@ def _ensure_habit_columns():
 
 _ensure_habit_columns()
 
+# Idem pour les colonnes "habitude progressive" ajoutées à Habit (voir
+# services/habit_progress.py) — table déjà existante.
+def _ensure_progressive_habit_columns():
+    statements = [
+        "ALTER TABLE habits ADD COLUMN note VARCHAR",
+        "ALTER TABLE habits ADD COLUMN habit_type VARCHAR",
+        "ALTER TABLE habits ADD COLUMN progressive_rhythm VARCHAR",
+        "ALTER TABLE habits ADD COLUMN progressive_start_value FLOAT",
+        "ALTER TABLE habits ADD COLUMN progressive_target_value FLOAT",
+        "ALTER TABLE habits ADD COLUMN progressive_start_date TIMESTAMPTZ",
+    ]
+    with engine.connect() as conn:
+        for stmt in statements:
+            try:
+                conn.execute(text(stmt))
+                conn.commit()
+            except Exception:
+                conn.rollback()
+
+_ensure_progressive_habit_columns()
+
 # Même principe pour les colonnes ajoutées à Substance (addSubstance —
 # habitudes/objectifs restants, voir routers/substances.py) : la table
 # `substances` existe déjà (compte de démo) donc create_all() ne les

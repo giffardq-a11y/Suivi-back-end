@@ -112,6 +112,16 @@ class Habit(Base):
     linked_activity = Column(String, nullable=True)  # 'sport_session' | 'calorie_deficit' | null
     scheduled_time = Column(String, nullable=True)    # 'HH:MM'
     notifications_enabled = Column(Boolean, nullable=False, default=False)
+    note = Column(String, nullable=True)
+    # Habitude "progressive" (paliers évolutifs, voir services/habit_progress.py)
+    # — habit_type identifie le formatteur à utiliser ('sport'|'meditation'|
+    # 'hydratation'|'sommeil'), les 3 autres colonnes restent NULL si
+    # l'habitude n'est pas progressive.
+    habit_type = Column(String, nullable=True)
+    progressive_rhythm = Column(String, nullable=True)  # 'lent' | 'normal' | 'rapide'
+    progressive_start_value = Column(Float, nullable=True)
+    progressive_target_value = Column(Float, nullable=True)
+    progressive_start_date = Column(DateTime(timezone=True), nullable=True)
 
     user = relationship("User", back_populates="habits")
     logs = relationship("HabitLog", back_populates="habit", cascade="all, delete-orphan")
