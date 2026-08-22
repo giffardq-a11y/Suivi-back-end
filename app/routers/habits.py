@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
+from ..services.common import now_utc, is_same_day, today_key
 
 router = APIRouter(prefix="/habits", tags=["habits"])
 
@@ -132,3 +133,121 @@ def delete_habit(
     # les HabitLog associés.
     db.delete(habit)
     db.commit()
+
+
+class SkipReasonCreate(BaseModel):
+    reason: str
+
+
+class RescheduleCreate(BaseModel):
+    newTime: str
+
+
+@router.delete("/{habit_id}/log", status_code=204)
+def unlog_habit(
+    habit_id: str,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    habit = (
+        db.query(models.Habit)
+        .filter(models.Habit.id == habit_id, models.Habit.user_id == user.id)
+        .first()
+    )
+    if not habit:
+        raise HTTPException(status_code=404, detail="Habitude introuvable")
+    if habit.linked_activity:
+        raise HTTPException(status_code=400, detail="Cette habitude se met à jour automatiquement, elle ne se décoche pas à la main.")
+
+    today_log = (
+        db.query(models.HabitLog)
+        .filter(models.HabitLog.habit_id == habit.id)
+        .all()
+    )
+    now = now_utc()
+    for log in today_log:
+        if is_same_day(log.occurred_at, now):
+            db.delete(log)
+            break
+    db.commit()
+
+
+@router.get("/reminders/pending")
+def get_pending_reminders(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
+    now = datetime.now(timezone.utc)
+    current_minutes = now.hour * 60 + now.minute
+    today = today_key(now)
+
+    habits = (
+        db.query(models.Habit)
+        .filter(models.Habit.user_id == user.id, models.Habit.active.is_(True), models.Habit.notifications_enabled.is_(True))
+        .filter(models.Habit.scheduled_time.isnot(None))
+        .all()
+    )
+
+    reschedules = {
+        r.habit_id for r in db.query(models.HabitReschedule).filter(models.HabitReschedule.date_key == today).all()
+    }
+    skips = {
+        s.habit_id for s in db.query(models.HabitSkipReason).filter(models.HabitSkipReason.date_key == today).all()
+    }
+
+    pending = []
+    for h in habits:
+        hh, mm = (int(x) for x in h.scheduled_time.split(":"))
+        if hh * 60 + mm > current_minutes:
+            continue
+        done_today = any(is_same_day(l.occurred_at, now) for l in h.logs)
+        if done_today or h.id in reschedules or h.id in skips:
+            continue
+        pending.append({"id": h.id, "label": h.label, "scheduled_time": h.scheduled_time})
+
+    return pending
+
+
+@router.post("/{habit_id}/reminders/reschedule")
+def reschedule_habit_reminder(
+    habit_id: str,
+    payload: RescheduleCreate,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    habit = (
+        db.query(models.Habit)
+        .filter(models.Habit.id == habit_id, models.Habit.user_id == user.id)
+        .first()
+    )
+    if not habit:
+        raise HTTPException(status_code=404, detail="Habitude introuvable")
+
+    today = today_key()
+    db.query(models.HabitReschedule).filter(
+        models.HabitReschedule.habit_id == habit_id, models.HabitReschedule.date_key == today,
+    ).delete()
+    db.add(models.HabitReschedule(habit_id=habit_id, date_key=today, new_time=payload.newTime))
+    db.commit()
+    return {"ok": True}
+
+
+@router.post("/{habit_id}/reminders/skip")
+def log_habit_skip_reason(
+    habit_id: str,
+    payload: SkipReasonCreate,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    habit = (
+        db.query(models.Habit)
+        .filter(models.Habit.id == habit_id, models.Habit.user_id == user.id)
+        .first()
+    )
+    if not habit:
+        raise HTTPException(status_code=404, detail="Habitude introuvable")
+
+    today = today_key()
+    db.query(models.HabitSkipReason).filter(
+        models.HabitSkipReason.habit_id == habit_id, models.HabitSkipReason.date_key == today,
+    ).delete()
+    db.add(models.HabitSkipReason(habit_id=habit_id, date_key=today, reason=payload.reason, occurred_at=now_utc()))
+    db.commit()
+    return {"ok": True}

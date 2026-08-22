@@ -27,6 +27,22 @@ def signup(payload: schemas.SignupRequest, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(user)
 
+    # Les 2 substances "de base" (alcool/tabac) sont un pilier de l'app
+    # (streaks Accueil, économies, bénéfices santé) — sans elles un nouveau
+    # compte réel se retrouverait avec un dashboard vide. Coût par défaut
+    # neutre, éditable ensuite dans Paramètres (voir routers/settings.py).
+    db.add_all([
+        models.Substance(
+            user_id=user.id, label="Alcool", unit="1 verre",
+            category=models.SubstanceCategory.ALCOHOL, unit_cost=6.0, usual_frequency_per_day=1.0,
+        ),
+        models.Substance(
+            user_id=user.id, label="Tabac", unit="1 cigarette",
+            category=models.SubstanceCategory.TOBACCO, unit_cost=0.6, usual_frequency_per_day=1.0,
+        ),
+    ])
+    db.commit()
+
     return schemas.AuthResponse(
         user=schemas.UserOut.model_validate(user),
         access_token=create_access_token(user.id),

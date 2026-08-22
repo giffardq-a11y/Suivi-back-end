@@ -2,7 +2,7 @@ import enum
 import uuid
 
 from sqlalchemy import (
-    Column, String, Float, Boolean, DateTime, ForeignKey, Enum, Integer, Text
+    Column, String, Float, Boolean, DateTime, ForeignKey, Enum, Integer, Text, JSON
 )
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
@@ -68,6 +68,12 @@ class Substance(Base):
     # à chaque requête sur un historique qui, par définition, s'arrête
     # au jour de l'arrêt.
     usual_frequency_per_day = Column(Float, nullable=False, default=1.0)
+    # Substance "perso" ajoutée par l'utilisateur (addSubstance) — pas de
+    # champ dédié en base, category=OTHER + ces 2 colonnes suffisent (voir
+    # buildSettings/customSubstances côté mock, fusionné ici avec Substance
+    # plutôt que dupliqué dans une table à part).
+    unit = Column(String, nullable=True)
+    note = Column(String, nullable=True)
 
     user = relationship("User", back_populates="substances")
     entries = relationship("ConsumptionEntry", back_populates="substance", cascade="all, delete-orphan")
@@ -132,6 +138,15 @@ class Goal(Base):
     weight = Column(Integer, nullable=False, default=1)  # 1-3, spec §2
     started_at = Column(DateTime(timezone=True), server_default=func.now())
     completed_at = Column(DateTime(timezone=True), nullable=True)
+    # Objectif "lié" à une vraie métrique de l'app plutôt qu'à une valeur
+    # tapée à la main (voir computeLinkedGoalProgress côté mock) : la
+    # progression est alors recalculée à la lecture, jamais stockée.
+    linked_type = Column(String, nullable=True)  # 'habit_streak' | 'weight_target' | 'body_fat_target' | 'strength_pr'
+    linked_habit_id = Column(String, nullable=True)
+    linked_exercise_name = Column(String, nullable=True)
+    # Incrémenté par toute séance de sport enregistrée (course/muscu/autre) —
+    # voir incrementSessionGoals côté mock.
+    linked_metric = Column(String, nullable=True)  # 'sport_sessions'
 
     user = relationship("User", back_populates="goals")
 
@@ -146,6 +161,216 @@ class RewardPurchase(Base):
     purchased_at = Column(DateTime(timezone=True), server_default=func.now())
 
     user = relationship("User", back_populates="reward_purchases")
+
+
+# ---------------------------------------------------------------------------
+# Modèles ajoutés pour brancher les écrans restants (voir SUIVI_RECAP.md) sur
+# le vrai backend. Tous nouveaux (pas de colonne ajoutée à une table
+# existante) donc `Base.metadata.create_all()` suffit à les créer — pas
+# d'ALTER TABLE idempotent nécessaire comme pour Habit (voir main.py).
+# Requêtés directement par user_id dans les routers plutôt que via une
+# relationship() sur User, pour ne pas toucher à la classe User existante.
+# ---------------------------------------------------------------------------
+
+
+class BadHabit(Base):
+    """Habitude "à perdre" — distincte de Substance (pas de coût/économies),
+    juste un label + date de dernière occurrence (spec §3.6 bis)."""
+    __tablename__ = "bad_habits"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    label = Column(String, nullable=False)
+    note = Column(String, nullable=True)
+    last_occurrence_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class Profile(Base):
+    """Profil physique 1:1 avec User — sert la suggestion de budget
+    calorique (Mifflin-St Jeor) et le poids/objectif cible."""
+    __tablename__ = "profiles"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, unique=True)
+    age = Column(Integer, nullable=True)
+    height_cm = Column(Float, nullable=True)
+    sex = Column(String, nullable=True)  # 'homme' | 'femme' | 'autre'
+    activity_level = Column(String, nullable=True)  # cf ACTIVITY_FACTORS
+    goal_type = Column(String, nullable=True)  # 'maintien' | 'perte' | 'prise'
+    goal_rate_kg_per_month = Column(Float, nullable=True)
+    weight_goal_kg = Column(Float, nullable=True)
+    daily_calorie_budget = Column(Integer, nullable=False, default=2000)
+    suggested_habits_selected = Column(JSON, nullable=False, default=list)
+    meal_photo_provider = Column(String, nullable=False, default="gemini_fatsecret")
+
+
+class WeightEntry(Base):
+    __tablename__ = "weight_entries"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    weight_kg = Column(Float, nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    note = Column(String, nullable=True)
+
+
+class BodyFatEntry(Base):
+    __tablename__ = "body_fat_entries"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    percent = Column(Float, nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    note = Column(String, nullable=True)
+
+
+class CycleSettings(Base):
+    """Réglages de suivi de cycle, 1:1 avec User — opt-in (enabled=False
+    par défaut)."""
+    __tablename__ = "cycle_settings"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, unique=True)
+    enabled = Column(Boolean, nullable=False, default=False)
+    avg_cycle_length_days = Column(Integer, nullable=False, default=28)
+    avg_period_length_days = Column(Integer, nullable=False, default=5)
+    contraception_enabled = Column(Boolean, nullable=False, default=False)
+    contraception_method = Column(String, nullable=True)
+    contraception_reminder_time = Column(String, nullable=True)
+
+
+class CycleLog(Base):
+    """Un log = des règles en cours ou passées. end_date NULL = en cours."""
+    __tablename__ = "cycle_logs"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    start_date = Column(DateTime(timezone=True), nullable=False)
+    end_date = Column(DateTime(timezone=True), nullable=True)
+
+
+class CycleFlowEntry(Base):
+    __tablename__ = "cycle_flow_entries"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    date_key = Column(String, nullable=False)  # 'YYYY-MM-DD'
+    intensity = Column(String, nullable=False)  # 'leger' | 'moyen' | 'abondant'
+
+
+class Meal(Base):
+    __tablename__ = "meals"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    label = Column(String, nullable=False)
+    calories = Column(Integer, nullable=False)
+    type = Column(String, nullable=False)  # petit-dejeuner | dejeuner | diner | collation
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class Run(Base):
+    __tablename__ = "runs"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    distance_km = Column(Float, nullable=False)
+    duration_min = Column(Float, nullable=False)
+    calories_burned = Column(Integer, nullable=False, default=0)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class OtherSportLog(Base):
+    __tablename__ = "other_sport_logs"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    sport_label = Column(String, nullable=False)
+    duration_min = Column(Float, nullable=False)
+    intensity = Column(String, nullable=True)  # 'faible' | 'moyenne' | 'forte'
+    distance_km = Column(Float, nullable=True)
+    calories_burned = Column(Integer, nullable=False, default=0)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class WorkoutTemplate(Base):
+    """Modèle de séance de muscu. `exercises` en JSON plutôt que normalisé
+    (table à part) : structure imbriquée (exercices → séries) éditée en bloc
+    depuis l'app, jamais interrogée finement côté serveur — voir la même
+    logique pour StrengthSession.exercises ci-dessous."""
+    __tablename__ = "workout_templates"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    # NULL = modèle par défaut proposé à tout le monde (voir les 5 modèles
+    # seedés dans main.py) plutôt que créé par un utilisateur particulier.
+    user_id = Column(String, ForeignKey("users.id"), nullable=True)
+    name = Column(String, nullable=False)
+    exercises = Column(JSON, nullable=False, default=list)
+    scheduled_time = Column(String, nullable=True)
+    notifications_enabled = Column(Boolean, nullable=False, default=False)
+
+
+class StrengthSession(Base):
+    __tablename__ = "strength_sessions"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    template_id = Column(String, nullable=True)
+    template_name = Column(String, nullable=True)
+    mode = Column(String, nullable=False, default="quick_duration")
+    duration_min = Column(Float, nullable=False, default=0)
+    calories_burned = Column(Integer, nullable=False, default=0)
+    exercises = Column(JSON, nullable=False, default=list)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class HabitReschedule(Base):
+    """Report d'un rappel d'habitude pour aujourd'hui — une des 3 voies de
+    résolution d'un rappel (avec logHabit et HabitSkipReason)."""
+    __tablename__ = "habit_reschedules"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    habit_id = Column(String, ForeignKey("habits.id"), nullable=False)
+    date_key = Column(String, nullable=False)  # 'YYYY-MM-DD'
+    new_time = Column(String, nullable=False)
+
+
+class HabitSkipReason(Base):
+    __tablename__ = "habit_skip_reasons"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    habit_id = Column(String, ForeignKey("habits.id"), nullable=False)
+    date_key = Column(String, nullable=False)
+    reason = Column(String, nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class ReportSettings(Base):
+    """Préférences du récap quotidien (envoi WhatsApp), 1:1 avec User."""
+    __tablename__ = "report_settings"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, unique=True)
+    auto_send = Column(Boolean, nullable=False, default=True)
+    whatsapp_number = Column(String, nullable=True)
+    send_time = Column(String, nullable=False, default="20:00")
+    reminder_enabled = Column(Boolean, nullable=False, default=True)
+    reminder_minutes_before = Column(Integer, nullable=False, default=30)
+
+
+class Partner(Base):
+    """Partage avec un proche — version volontairement minimale : stocke
+    l'invité (par email) mais ne relie pas deux vrais comptes ni ne
+    fait transiter de rappels en temps réel (contrairement au mock qui a 2
+    rappels de démo en dur). Un vrai flux d'invitation à double sens est
+    laissé pour plus tard, voir zones ouvertes du récap."""
+    __tablename__ = "partners"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, unique=True)
+    invited_email = Column(String, nullable=False)
+    connected_since = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    scopes = Column(JSON, nullable=False, default=list)
 
 
 class ExternalIntegration(Base):

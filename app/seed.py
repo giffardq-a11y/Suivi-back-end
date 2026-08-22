@@ -36,11 +36,13 @@ def run():
             user_id=user.id, label="Alcool — 1 verre",
             category=models.SubstanceCategory.ALCOHOL,
             unit_cost=6.0, currency="EUR", usual_frequency_per_day=1.2,
+            unit="1 verre",
         )
         tabac = models.Substance(
             user_id=user.id, label="Tabac — 1 cigarette",
             category=models.SubstanceCategory.TOBACCO,
             unit_cost=0.6, currency="EUR", usual_frequency_per_day=8,
+            unit="1 cigarette",
         )
         db.add_all([alcool, tabac])
         db.flush()

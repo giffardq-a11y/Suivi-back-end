@@ -5,7 +5,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .database import Base, engine
-from .routers import auth, dashboard, entries, habits, meal_photo, integrations, food_search, recipes
+from .routers import (
+    auth, dashboard, entries, habits, meal_photo, integrations, food_search, recipes,
+    bad_habits, goals, substances, profile, cycle, training, diet, journal_stats, settings,
+)
 
 # Pour ce flow de validation : création des tables au démarrage.
 # En prod, remplacer par Alembic (migrations versionnées).
@@ -32,6 +35,45 @@ def _ensure_habit_columns():
                 conn.rollback()  # colonne déjà existante — normal
 
 _ensure_habit_columns()
+
+# Même principe pour les colonnes ajoutées à Substance (addSubstance —
+# habitudes/objectifs restants, voir routers/substances.py) : la table
+# `substances` existe déjà (compte de démo) donc create_all() ne les
+# ajoutera pas toute seule.
+def _ensure_substance_columns():
+    statements = [
+        "ALTER TABLE substances ADD COLUMN unit VARCHAR",
+        "ALTER TABLE substances ADD COLUMN note VARCHAR",
+    ]
+    with engine.connect() as conn:
+        for stmt in statements:
+            try:
+                conn.execute(text(stmt))
+                conn.commit()
+            except Exception:
+                conn.rollback()
+
+_ensure_substance_columns()
+
+# Idem pour les colonnes ajoutées à Goal (objectifs "liés" à une métrique
+# réelle de l'app, voir routers/goals.py) — table déjà existante.
+def _ensure_goal_columns():
+    statements = [
+        "ALTER TABLE goals ADD COLUMN linked_type VARCHAR",
+        "ALTER TABLE goals ADD COLUMN linked_habit_id VARCHAR",
+        "ALTER TABLE goals ADD COLUMN linked_exercise_name VARCHAR",
+        "ALTER TABLE goals ADD COLUMN linked_metric VARCHAR",
+    ]
+    with engine.connect() as conn:
+        for stmt in statements:
+            try:
+                conn.execute(text(stmt))
+                conn.commit()
+            except Exception:
+                conn.rollback()
+
+_ensure_goal_columns()
+
 # Crée le compte de démo automatiquement s'il n'existe pas encore — utile
 # sur un hébergeur dont le plan gratuit n'inclut pas d'accès shell (ex.
 # Render Free), où lancer `python -m app.seed` manuellement n'est pas
@@ -39,6 +81,49 @@ _ensure_habit_columns()
 # existe déjà), donc sans danger à chaque redémarrage du serveur.
 from . import seed as _seed
 _seed.run()
+
+# Modèles de séance par défaut (Push/Pull/Legs/Dos/Pectoraux), proposés à
+# tout le monde — voir WorkoutTemplate.user_id nullable dans models.py.
+# Idempotent : ne seede qu'une fois (si aucun modèle "système" n'existe).
+def _ensure_default_workout_templates():
+    from .database import SessionLocal
+    from . import models as _models
+
+    db = SessionLocal()
+    try:
+        exists = db.query(_models.WorkoutTemplate).filter(_models.WorkoutTemplate.user_id.is_(None)).first()
+        if exists:
+            return
+        defaults = [
+            ("Push", [
+                {"id": "ex-bench", "name": "Développé couché", "sets": [{"reps": 10, "weight": 40}, {"reps": 8, "weight": 45}, {"reps": 6, "weight": 50}], "restSeconds": 90},
+                {"id": "ex-shoulder", "name": "Développé épaules", "sets": [{"reps": 10, "weight": 20}, {"reps": 10, "weight": 22}], "restSeconds": 75},
+                {"id": "ex-triceps", "name": "Extension triceps", "sets": [{"reps": 12, "weight": 15}, {"reps": 12, "weight": 15}], "restSeconds": 60},
+            ]),
+            ("Pull", [
+                {"id": "ex-row", "name": "Rowing barre", "sets": [{"reps": 10, "weight": 40}, {"reps": 8, "weight": 45}], "restSeconds": 90},
+                {"id": "ex-curl", "name": "Curl biceps", "sets": [{"reps": 12, "weight": 14}, {"reps": 10, "weight": 16}], "restSeconds": 60},
+            ]),
+            ("Legs", [
+                {"id": "ex-squat", "name": "Squat", "sets": [{"reps": 12, "weight": 60}, {"reps": 10, "weight": 70}, {"reps": 8, "weight": 80}], "restSeconds": 120},
+                {"id": "ex-lunges", "name": "Fentes", "sets": [{"reps": 12, "weight": 20}, {"reps": 12, "weight": 20}], "restSeconds": 60},
+            ]),
+            ("Dos", [
+                {"id": "ex-deadlift", "name": "Soulevé de terre", "sets": [{"reps": 8, "weight": 60}, {"reps": 6, "weight": 70}], "restSeconds": 120},
+                {"id": "ex-pullup", "name": "Tractions", "sets": [{"reps": 8, "weight": 0}, {"reps": 6, "weight": 0}], "restSeconds": 90},
+            ]),
+            ("Pectoraux", [
+                {"id": "ex-bench2", "name": "Développé couché", "sets": [{"reps": 10, "weight": 40}, {"reps": 8, "weight": 45}], "restSeconds": 90},
+                {"id": "ex-flyes", "name": "Écarté couché", "sets": [{"reps": 12, "weight": 10}, {"reps": 12, "weight": 10}], "restSeconds": 60},
+            ]),
+        ]
+        for name, exercises in defaults:
+            db.add(_models.WorkoutTemplate(user_id=None, name=name, exercises=exercises))
+        db.commit()
+    finally:
+        db.close()
+
+_ensure_default_workout_templates()
 
 app = FastAPI(title="Suivi — API", version="0.1.0")
 
@@ -59,6 +144,15 @@ app.include_router(meal_photo.router)
 app.include_router(integrations.router)
 app.include_router(food_search.router)
 app.include_router(recipes.router)
+app.include_router(bad_habits.router)
+app.include_router(goals.router)
+app.include_router(substances.router)
+app.include_router(profile.router)
+app.include_router(cycle.router)
+app.include_router(training.router)
+app.include_router(diet.router)
+app.include_router(journal_stats.router)
+app.include_router(settings.router)
 
 
 @app.get("/health")
