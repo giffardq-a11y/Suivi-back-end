@@ -368,19 +368,36 @@ class ReportSettings(Base):
     reminder_minutes_before = Column(Integer, nullable=False, default=30)
 
 
-class Partner(Base):
-    """Partage avec un proche — version volontairement minimale : stocke
-    l'invité (par email) mais ne relie pas deux vrais comptes ni ne
-    fait transiter de rappels en temps réel (contrairement au mock qui a 2
-    rappels de démo en dur). Un vrai flux d'invitation à double sens est
-    laissé pour plus tard, voir zones ouvertes du récap."""
-    __tablename__ = "partners"
+class PartnerLink(Base):
+    """Partage avec un proche — vrai lien à double sens entre 2 comptes
+    (remplace l'ancien modèle Partner, à user unique, qui ne reliait pas
+    de vrais comptes). requester envoie l'invitation par email vers un
+    compte existant ; recipient doit l'accepter pour que status passe à
+    'accepted'. Si les deux comptes s'invitent mutuellement (recipient
+    avait déjà envoyé une invitation en attente à requester), l'invitation
+    est acceptée automatiquement — voir routers/partner.py."""
+    __tablename__ = "partner_links"
 
     id = Column(String, primary_key=True, default=gen_uuid)
-    user_id = Column(String, ForeignKey("users.id"), nullable=False, unique=True)
-    invited_email = Column(String, nullable=False)
-    connected_since = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    requester_id = Column(String, ForeignKey("users.id"), nullable=False)
+    recipient_id = Column(String, ForeignKey("users.id"), nullable=False)
+    status = Column(String, nullable=False, default="pending")  # 'pending' | 'accepted'
     scopes = Column(JSON, nullable=False, default=list)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    accepted_at = Column(DateTime(timezone=True), nullable=True)
+
+
+class PartnerReminder(Base):
+    """Message d'encouragement envoyé par l'un des deux comptes liés à
+    l'autre — remplace les 2 rappels de démo en dur côté mock par de vrais
+    messages échangés entre comptes réels."""
+    __tablename__ = "partner_reminders"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    link_id = Column(String, ForeignKey("partner_links.id"), nullable=False)
+    from_user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    text = Column(String, nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 
 class ExternalIntegration(Base):

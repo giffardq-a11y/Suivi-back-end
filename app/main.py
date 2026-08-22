@@ -8,6 +8,7 @@ from .database import Base, engine
 from .routers import (
     auth, dashboard, entries, habits, meal_photo, integrations, food_search, recipes,
     bad_habits, goals, substances, profile, cycle, training, diet, journal_stats, settings,
+    partner,
 )
 
 # Pour ce flow de validation : création des tables au démarrage.
@@ -174,6 +175,7 @@ app.include_router(training.router)
 app.include_router(diet.router)
 app.include_router(journal_stats.router)
 app.include_router(settings.router)
+app.include_router(partner.router)
 
 
 @app.get("/health")

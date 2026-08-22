@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
-from ..services.common import now_utc, days_since
+from ..services.common import now_utc
 from ..services.dashboard_helpers import build_dashboard_dict
 from ..services.habit_progress import effective_habit_target
 from .profile import _get_or_create_profile
@@ -38,10 +38,6 @@ class SettingsSave(BaseModel):
     substances: list[SubstanceSettingIn] | None = None
     habits: list[HabitSettingIn] | None = None
     suggestedSelected: list[str] | None = None
-
-
-class InvitePartnerBody(BaseModel):
-    email: str
 
 
 class ReportSettingsUpdate(BaseModel):
@@ -121,46 +117,6 @@ def save_settings(
 @router.get("/avatar-info")
 def get_avatar_info():
     return {"benefits": TRANSFORMATION_BENEFITS}
-
-
-@router.get("/partner")
-def get_partner(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
-    partner = db.query(models.Partner).filter(models.Partner.user_id == user.id).first()
-    if not partner:
-        return {"partner": None}
-    return {
-        "partner": {
-            "name": partner.invited_email.split("@")[0],
-            "connectedSinceDays": days_since(partner.connected_since),
-            "scopes": partner.scopes or [],
-            # Pas de vrai fil de rappels temps réel entre 2 comptes pour
-            # l'instant (voir Partner dans models.py) — liste vide plutôt
-            # que les 2 rappels de démo en dur côté mock.
-            "reminders": [],
-        }
-    }
-
-
-@router.delete("/partner")
-def remove_partner(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
-    db.query(models.Partner).filter(models.Partner.user_id == user.id).delete()
-    db.commit()
-    return {"ok": True}
-
-
-@router.post("/partner/invite")
-def invite_partner(
-    payload: InvitePartnerBody,
-    db: Session = Depends(get_db),
-    user: models.User = Depends(get_current_user),
-):
-    db.query(models.Partner).filter(models.Partner.user_id == user.id).delete()
-    db.add(models.Partner(
-        user_id=user.id, invited_email=payload.email,
-        scopes=["Séries", "Habitudes", "Objectifs"],
-    ))
-    db.commit()
-    return {"ok": True}
 
 
 def _get_or_create_report_settings(db: Session, user: models.User) -> models.ReportSettings:
