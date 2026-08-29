@@ -41,7 +41,13 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
     for habit in user.habits:
         if not habit.active:
             continue
-        done_today = any(log.occurred_at >= today_start for log in habit.logs)
+        # occurred_at revient naif depuis SQLite (DateTime(timezone=True) n'y
+        # est pas vraiment tz-aware, contrairement a Postgres/TIMESTAMPTZ en
+        # prod) -- meme garde que _days_between() dans services/streaks.py.
+        done_today = any(
+            (log.occurred_at if log.occurred_at.tzinfo else log.occurred_at.replace(tzinfo=timezone.utc)) >= today_start
+            for log in habit.logs
+        )
         habits_today.append({
             "id": habit.id, "label": habit.label,
             "target": effective_habit_target(habit, now), "done_today": done_today,
