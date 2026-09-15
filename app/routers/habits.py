@@ -158,7 +158,11 @@ def delete_habit(
         raise HTTPException(status_code=404, detail="Habitude introuvable")
 
     # cascade="all, delete-orphan" sur Habit.logs supprime automatiquement
-    # les HabitLog associés.
+    # les HabitLog associés. Les replanifications et raisons de saut n'ont
+    # pas de relationship() : sans ces 2 lignes, Postgres refuse la
+    # suppression (clé étrangère) — SQLite, lui, ne vérifie pas.
+    db.query(models.HabitReschedule).filter(models.HabitReschedule.habit_id == habit.id).delete()
+    db.query(models.HabitSkipReason).filter(models.HabitSkipReason.habit_id == habit.id).delete()
     db.delete(habit)
     db.commit()
 
