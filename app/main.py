@@ -4,122 +4,27 @@ load_dotenv()  # doit s'exécuter avant tout import qui lit os.environ (integrat
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .database import Base, engine
+import os
+
+from .migrate import run_migrations
 from .routers import (
     auth, dashboard, entries, habits, meal_photo, integrations, food_search, recipes,
     bad_habits, goals, substances, profile, cycle, training, diet, journal_stats, settings,
     partner,
 )
 
-# Pour ce flow de validation : création des tables au démarrage.
-# En prod, remplacer par Alembic (migrations versionnées).
-Base.metadata.create_all(bind=engine)
-from sqlalchemy import text
+# Schéma à jour avant tout accès à la base (migrations Alembic, voir
+# app/migrate.py et migrations/versions/). Remplace l'ancien
+# create_all() + ALTER TABLE silencieux au démarrage.
+run_migrations()
 
-# Ajoute les colonnes de Habit introduites après la création initiale de la
-# table — nécessaire car create_all() ne modifie jamais une table
-# existante. Idempotent : chaque ALTER échoue silencieusement si la colonne
-# existe déjà (cas normal à partir du 2e redémarrage).
-def _ensure_habit_columns():
-    statements = [
-        "ALTER TABLE habits ADD COLUMN weekly_target INTEGER DEFAULT 7",
-        "ALTER TABLE habits ADD COLUMN linked_activity VARCHAR",
-        "ALTER TABLE habits ADD COLUMN scheduled_time VARCHAR",
-        "ALTER TABLE habits ADD COLUMN notifications_enabled BOOLEAN DEFAULT false",
-    ]
-    with engine.connect() as conn:
-        for stmt in statements:
-            try:
-                conn.execute(text(stmt))
-                conn.commit()
-            except Exception:
-                conn.rollback()  # colonne déjà existante — normal
-
-_ensure_habit_columns()
-
-# Idem pour les colonnes "habitude progressive" ajoutées à Habit (voir
-# services/habit_progress.py) — table déjà existante.
-def _ensure_progressive_habit_columns():
-    statements = [
-        "ALTER TABLE habits ADD COLUMN note VARCHAR",
-        "ALTER TABLE habits ADD COLUMN habit_type VARCHAR",
-        "ALTER TABLE habits ADD COLUMN progressive_rhythm VARCHAR",
-        "ALTER TABLE habits ADD COLUMN progressive_start_value FLOAT",
-        "ALTER TABLE habits ADD COLUMN progressive_target_value FLOAT",
-        "ALTER TABLE habits ADD COLUMN progressive_start_date TIMESTAMPTZ",
-    ]
-    with engine.connect() as conn:
-        for stmt in statements:
-            try:
-                conn.execute(text(stmt))
-                conn.commit()
-            except Exception:
-                conn.rollback()
-
-_ensure_progressive_habit_columns()
-
-# Même principe pour les colonnes ajoutées à Substance (addSubstance —
-# habitudes/objectifs restants, voir routers/substances.py) : la table
-# `substances` existe déjà (compte de démo) donc create_all() ne les
-# ajoutera pas toute seule.
-def _ensure_substance_columns():
-    statements = [
-        "ALTER TABLE substances ADD COLUMN unit VARCHAR",
-        "ALTER TABLE substances ADD COLUMN note VARCHAR",
-    ]
-    with engine.connect() as conn:
-        for stmt in statements:
-            try:
-                conn.execute(text(stmt))
-                conn.commit()
-            except Exception:
-                conn.rollback()
-
-_ensure_substance_columns()
-
-# Idem pour les colonnes ajoutées à Goal (objectifs "liés" à une métrique
-# réelle de l'app, voir routers/goals.py) — table déjà existante.
-def _ensure_goal_columns():
-    statements = [
-        "ALTER TABLE goals ADD COLUMN linked_type VARCHAR",
-        "ALTER TABLE goals ADD COLUMN linked_habit_id VARCHAR",
-        "ALTER TABLE goals ADD COLUMN linked_exercise_name VARCHAR",
-        "ALTER TABLE goals ADD COLUMN linked_metric VARCHAR",
-    ]
-    with engine.connect() as conn:
-        for stmt in statements:
-            try:
-                conn.execute(text(stmt))
-                conn.commit()
-            except Exception:
-                conn.rollback()
-
-_ensure_goal_columns()
-
-# Idem pour le prix d'une consommation et la note d'une habitude cochée,
-# saisis depuis l'Accueil mais jusqu'ici perdus côté serveur.
-def _ensure_entry_and_habit_log_columns():
-    statements = [
-        "ALTER TABLE consumption_entries ADD COLUMN price FLOAT",
-        "ALTER TABLE habit_logs ADD COLUMN note VARCHAR",
-    ]
-    with engine.connect() as conn:
-        for stmt in statements:
-            try:
-                conn.execute(text(stmt))
-                conn.commit()
-            except Exception:
-                conn.rollback()
-
-_ensure_entry_and_habit_log_columns()
-
-# Crée le compte de démo automatiquement s'il n'existe pas encore — utile
-# sur un hébergeur dont le plan gratuit n'inclut pas d'accès shell (ex.
-# Render Free), où lancer `python -m app.seed` manuellement n'est pas
-# possible. `seed.run()` est déjà idempotent (ne fait rien si le compte
-# existe déjà), donc sans danger à chaque redémarrage du serveur.
-from . import seed as _seed
-_seed.run()
+# Compte de démo (demo@example.com / motdepasse123, voir seed.py) :
+# pratique en local, mais un compte au mot de passe public n'a rien à
+# faire sur le serveur en ligne. Render définit RENDER=true : désactivé
+# par défaut là-bas, forçable des deux côtés avec SEED_DEMO=1 / 0.
+if os.environ.get("SEED_DEMO", "0" if os.environ.get("RENDER") else "1") == "1":
+    from . import seed as _seed
+    _seed.run()
 
 # Modèles de séance par défaut (Push/Pull/Legs/Dos/Pectoraux), proposés à
 # tout le monde — voir WorkoutTemplate.user_id nullable dans models.py.

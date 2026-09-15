@@ -5,7 +5,13 @@ from jose import jwt, JWTError
 from passlib.context import CryptContext
 
 # À définir en variable d'environnement en prod — valeur de dev uniquement.
-SECRET_KEY = os.environ.get("JWT_SECRET", "dev-secret-change-me")
+DEV_SECRET_KEY = "dev-secret-change-me"
+SECRET_KEY = os.environ.get("JWT_SECRET", DEV_SECRET_KEY)
+# Avec la clé de dev (publique, elle est dans ce dépôt), n'importe qui peut
+# fabriquer un jeton valide pour n'importe quel compte : on refuse de
+# démarrer sur Render (RENDER=true) sans une vraie clé.
+if os.environ.get("RENDER") and SECRET_KEY == DEV_SECRET_KEY:
+    raise RuntimeError("JWT_SECRET doit être défini (valeur aléatoire) dans les variables d'environnement Render.")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 REFRESH_TOKEN_EXPIRE_DAYS = 30

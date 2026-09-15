@@ -10,16 +10,43 @@ cette architecture validée.
 
 ```bash
 cd backend
-python3 -m venv venv && source venv/bin/activate
+python3 -m venv venv && source venv/bin/activate   # Python 3.11 ou 3.12 (pas 3.14 : wheels manquants)
 pip install -r requirements.txt
-
-# Crée un compte de démo (demo@example.com / motdepasse123) avec des
-# données réalistes (streaks, économies, un objectif déjà réussi pour
-# voir le multiplicateur à l'œuvre)
-python -m app.seed
 
 uvicorn app.main:app --reload
 ```
+
+Au démarrage, le serveur met le schéma à jour (migrations Alembic) et crée
+le compte de démo `demo@example.com` / `motdepasse123` s'il n'existe pas
+(désactivable avec `SEED_DEMO=0`).
+
+## Base de données et migrations
+
+- **Local** : SQLite `suivi.db` par défaut. **En ligne** : Postgres Neon via
+  `DATABASE_URL`.
+- Le schéma est géré par **Alembic** (`migrations/versions/`), appliqué
+  automatiquement au démarrage par `app/migrate.py` — le plan gratuit de
+  Render n'a pas de shell pour lancer une commande à part.
+- Une base créée avant Alembic (ancien `create_all` + `ALTER TABLE`) est
+  reconnue, complétée puis marquée à la révision `0001` : pas de perte de
+  données.
+- **Modifier le schéma** : changer `app/models.py`, puis
+  `alembic revision --autogenerate -m "description"`, relire le fichier
+  généré, et vérifier avec `alembic check` (doit répondre "No new upgrade
+  operations detected").
+
+## En ligne (Render)
+
+Service `Suivi-back-end` (https://suivi-back-end.onrender.com), redéployé
+à chaque push sur `main`. Variables à définir dans Render :
+
+| Variable | Valeur |
+|---|---|
+| `DATABASE_URL` | URL de connexion Neon (`postgresql://...?sslmode=require`) |
+| `JWT_SECRET` | valeur aléatoire — le serveur refuse de démarrer sans |
+| `BACKEND_BASE_URL` | `https://suivi-back-end.onrender.com` (redirections OAuth) |
+
+Pas de compte de démo en ligne : crée ton compte depuis l'app.
 
 L'API tourne sur `http://localhost:8000`. Doc interactive auto-générée sur
 `http://localhost:8000/docs`.
@@ -72,12 +99,6 @@ Gemini + FatSecret, lui, a été vérifié avec la doc officielle à jour.
 
 ## Ce qui est volontairement simplifié dans ce premier flow
 
-- **DB** : SQLite fichier (`suivi.db`) au lieu de PostgreSQL — même ORM
-  (SQLAlchemy), donc migrer vers Postgres = changer `DATABASE_URL`, pas de
-  réécriture.
-- **Migrations** : `Base.metadata.create_all` au démarrage plutôt qu'Alembic.
-  À introduire dès qu'il y a une deuxième version de schéma à faire évoluer
-  sans perdre de données.
 - **Pas encore implémenté** : refresh token blacklisting, `/devices` (push),
   paliers santé (`/benefits`, spec §3.2), objectifs récurrents avec
   expiration de période (spec §3.4.1 — actuellement `completed_at` non nul

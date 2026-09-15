@@ -4,7 +4,7 @@ Usage : python -m app.seed
 """
 from datetime import datetime, timedelta, timezone
 
-from .database import Base, engine, SessionLocal
+from .database import SessionLocal
 from . import models
 from .security import hash_password
 
@@ -13,7 +13,6 @@ DEMO_PASSWORD = "motdepasse123"
 
 
 def run():
-    Base.metadata.create_all(bind=engine)
     db = SessionLocal()
     try:
         existing = db.query(models.User).filter(models.User.email == DEMO_EMAIL).first()
@@ -96,4 +95,7 @@ def run():
 
 
 if __name__ == "__main__":
+    from .migrate import run_migrations
+
+    run_migrations()
     run()
