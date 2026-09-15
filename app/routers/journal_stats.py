@@ -44,6 +44,8 @@ def _serialize_entry(e: models.ConsumptionEntry) -> dict:
         "label": label,
         "detail": detail,
         "note": e.context,
+        "quantity": e.quantity,
+        "price": e.price,
         "occurredAt": to_ms(e.occurred_at),
         "relativeTime": relative_time(e.occurred_at),
     }

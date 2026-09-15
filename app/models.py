@@ -90,6 +90,9 @@ class ConsumptionEntry(Base):
     context = Column(String, nullable=True)
     mood = Column(Enum(Mood), nullable=True)
     type = Column(Enum(EntryType), nullable=False, default=EntryType.CONSUMPTION)
+    # Prix réellement payé (saisi dans le log rapide de l'Accueil), sinon
+    # quantité × unit_cost de la substance au moment de l'entrée.
+    price = Column(Float, nullable=True)
 
     user = relationship("User", back_populates="entries")
     substance = relationship("Substance", back_populates="entries")
@@ -133,6 +136,7 @@ class HabitLog(Base):
     id = Column(String, primary_key=True, default=gen_uuid)
     habit_id = Column(String, ForeignKey("habits.id"), nullable=False)
     occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    note = Column(String, nullable=True)  # "comment ça s'est passé ?" (Accueil)
 
     habit = relationship("Habit", back_populates="logs")
 

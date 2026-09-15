@@ -114,9 +114,14 @@ def create_habit(
     return _serialize(db, habit)
 
 
+class HabitLogCreate(BaseModel):
+    note: str | None = None
+
+
 @router.post("/{habit_id}/log", status_code=201)
 def log_habit(
     habit_id: str,
+    payload: HabitLogCreate | None = None,
     db: Session = Depends(get_db),
     user: models.User = Depends(get_current_user),
 ):
@@ -128,7 +133,11 @@ def log_habit(
     if not habit:
         raise HTTPException(status_code=404, detail="Habitude introuvable")
 
-    log = models.HabitLog(habit_id=habit.id, occurred_at=datetime.now(timezone.utc))
+    log = models.HabitLog(
+        habit_id=habit.id,
+        occurred_at=datetime.now(timezone.utc),
+        note=(payload.note or None) if payload else None,
+    )
     db.add(log)
     db.commit()
     return {"ok": True, "habit_id": habit.id, "logged_at": log.occurred_at}

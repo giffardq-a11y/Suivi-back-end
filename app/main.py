@@ -96,6 +96,23 @@ def _ensure_goal_columns():
 
 _ensure_goal_columns()
 
+# Idem pour le prix d'une consommation et la note d'une habitude cochée,
+# saisis depuis l'Accueil mais jusqu'ici perdus côté serveur.
+def _ensure_entry_and_habit_log_columns():
+    statements = [
+        "ALTER TABLE consumption_entries ADD COLUMN price FLOAT",
+        "ALTER TABLE habit_logs ADD COLUMN note VARCHAR",
+    ]
+    with engine.connect() as conn:
+        for stmt in statements:
+            try:
+                conn.execute(text(stmt))
+                conn.commit()
+            except Exception:
+                conn.rollback()
+
+_ensure_entry_and_habit_log_columns()
+
 # Crée le compte de démo automatiquement s'il n'existe pas encore — utile
 # sur un hébergeur dont le plan gratuit n'inclut pas d'accès shell (ex.
 # Render Free), où lancer `python -m app.seed` manuellement n'est pas

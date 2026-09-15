@@ -53,6 +53,7 @@ class EntryCreate(BaseModel):
     context: Optional[str] = None
     mood: Optional[Mood] = None
     occurred_at: Optional[datetime] = None
+    price: Optional[float] = None
 
 
 class EntryOut(BaseModel):
@@ -63,6 +64,7 @@ class EntryOut(BaseModel):
     context: Optional[str]
     mood: Optional[Mood]
     occurred_at: datetime
+    price: Optional[float] = None
 
     class Config:
         from_attributes = True

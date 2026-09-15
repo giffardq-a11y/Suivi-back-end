@@ -16,6 +16,7 @@ def create_entry(
     db: Session = Depends(get_db),
     user: models.User = Depends(get_current_user),
 ):
+    substance = None
     if payload.substance_id:
         substance = (
             db.query(models.Substance)
@@ -25,7 +26,14 @@ def create_entry(
         if not substance:
             raise HTTPException(status_code=404, detail="Substance introuvable")
 
+    # Même règle que logEntry dans mockData.js : prix saisi s'il y en a un,
+    # sinon estimé à partir du coût unitaire de la substance.
+    price = payload.price
+    if price is None and substance and substance.unit_cost is not None:
+        price = round(payload.quantity * substance.unit_cost, 2)
+
     entry = models.ConsumptionEntry(
+        price=price,
         user_id=user.id,
         substance_id=payload.substance_id,
         type=payload.type,
