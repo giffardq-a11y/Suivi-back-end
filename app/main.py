@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 load_dotenv()  # doit s'exécuter avant tout import qui lit os.environ (integrations.py, security.py)
 
 from fastapi import FastAPI
+from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 
 import os
@@ -89,6 +90,28 @@ app = FastAPI(title="Suivi — API", version="0.1.0")
 
 # CORS ouvert pour le dev de l'app mobile (Expo Go / simulateur).
 # À restreindre à l'origine réelle en prod.
+import logging
+
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+
+_log = logging.getLogger("uvicorn.error")
+
+
+@app.exception_handler(RequestValidationError)
+async def log_validation_error(request, exc: RequestValidationError):
+    """Un 422 ne disait pas quel champ posait problème, ce qui rendait un
+    refus d'inscription impossible à diagnostiquer à distance. On journalise
+    le champ et le type d'erreur — jamais la valeur envoyée (mot de passe,
+    e-mail), qui n'a rien à faire dans des logs."""
+    champs = [
+        {"champ": ".".join(str(p) for p in e.get("loc", [])), "type": e.get("type"), "message": e.get("msg")}
+        for e in exc.errors()
+    ]
+    _log.warning("422 sur %s : %s", request.url.path, champs)
+    return JSONResponse(status_code=422, content={"detail": jsonable_encoder(exc.errors())})
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
