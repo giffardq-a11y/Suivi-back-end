@@ -279,6 +279,9 @@ class WeightEntry(Base):
     weight_kg = Column(Float, nullable=False)
     occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
     note = Column(String, nullable=True)
+    # Pesées remontées par une balance connectée via Health Connect.
+    source = Column(String, nullable=True)
+    external_id = Column(String, nullable=True)
 
 
 class BodyFatEntry(Base):
@@ -345,6 +348,13 @@ class Run(Base):
     duration_min = Column(Float, nullable=False)
     calories_burned = Column(Integer, nullable=False, default=0)
     occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    # Import automatique depuis la montre (Health Connect) : `source` dit d'où
+    # vient la séance, `external_id` est l'identifiant côté montre — c'est lui
+    # qui évite de créer un doublon à chaque synchronisation.
+    source = Column(String, nullable=True)       # 'health_connect' | None (saisie manuelle)
+    external_id = Column(String, nullable=True)
+    heart_rate_avg = Column(Integer, nullable=True)
+    heart_rate_max = Column(Integer, nullable=True)
 
 
 class OtherSportLog(Base):
@@ -358,6 +368,10 @@ class OtherSportLog(Base):
     distance_km = Column(Float, nullable=True)
     calories_burned = Column(Integer, nullable=False, default=0)
     occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    source = Column(String, nullable=True)
+    external_id = Column(String, nullable=True)
+    heart_rate_avg = Column(Integer, nullable=True)
+    heart_rate_max = Column(Integer, nullable=True)
 
 
 class WorkoutTemplate(Base):
@@ -389,6 +403,38 @@ class StrengthSession(Base):
     calories_burned = Column(Integer, nullable=False, default=0)
     exercises = Column(JSON, nullable=False, default=list)
     occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    source = Column(String, nullable=True)
+    external_id = Column(String, nullable=True)
+    heart_rate_avg = Column(Integer, nullable=True)
+    heart_rate_max = Column(Integer, nullable=True)
+
+
+class SleepLog(Base):
+    """Nuit remontée par la montre (Health Connect). Une nuit = une ligne,
+    rattachée au jour du RÉVEIL (dormir de 23h à 7h compte pour le lendemain,
+    comme le fait Samsung Health)."""
+    __tablename__ = "sleep_logs"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    date_key = Column(String, nullable=False)  # 'YYYY-MM-DD' du réveil
+    started_at = Column(DateTime(timezone=True), nullable=False)
+    ended_at = Column(DateTime(timezone=True), nullable=False)
+    duration_min = Column(Float, nullable=False)
+    source = Column(String, nullable=True)
+    external_id = Column(String, nullable=True)
+
+
+class DailySteps(Base):
+    """Pas d'une journée, écrasés à chaque synchronisation (le total du jour
+    en cours augmente au fil des heures)."""
+    __tablename__ = "daily_steps"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    date_key = Column(String, nullable=False)  # 'YYYY-MM-DD'
+    steps = Column(Integer, nullable=False, default=0)
+    source = Column(String, nullable=True)
 
 
 class HabitReschedule(Base):
