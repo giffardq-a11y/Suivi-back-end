@@ -137,6 +137,52 @@ class Habit(Base):
     logs = relationship("HabitLog", back_populates="habit", cascade="all, delete-orphan")
 
 
+class FlashCard(Base):
+    """Carte de révision (danois), affichée pendant les temps de repos d'une
+    séance de muscu. `user_id` nul = carte du jeu fourni avec l'app, partagée
+    par tout le monde ; sinon carte ajoutée ou importée par l'utilisateur."""
+    __tablename__ = "flash_cards"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=True)
+    language = Column(String, nullable=False, default="da")
+    front = Column(String, nullable=False)   # français
+    back = Column(String, nullable=False)    # danois
+    hint = Column(String, nullable=True)     # prononciation ou exemple
+    category = Column(String, nullable=True)
+    source = Column(String, nullable=False, default="integre")  # integre | import | manuel
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class FlashCardReview(Base):
+    """État de mémorisation espacée d'une carte pour un utilisateur (système
+    de boîtes : une carte sue monte d'une boîte et revient plus tard, une
+    carte ratée redescend en boîte 1 et revient le jour même)."""
+    __tablename__ = "flash_card_reviews"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    card_id = Column(String, ForeignKey("flash_cards.id"), nullable=False)
+    box = Column(Integer, nullable=False, default=1)
+    due_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    last_reviewed_at = Column(DateTime(timezone=True), nullable=True)
+    times_known = Column(Integer, nullable=False, default=0)
+    times_again = Column(Integer, nullable=False, default=0)
+
+
+class FlashCardEvent(Base):
+    """Une révision = une ligne. Sert à compter les cartes revues dans la
+    journée (habitude Danois cochée au-delà d'un seuil) et les statistiques."""
+    __tablename__ = "flash_card_events"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    card_id = Column(String, ForeignKey("flash_cards.id"), nullable=False)
+    known = Column(Boolean, nullable=False, default=True)
+    context = Column(String, nullable=True)  # 'repos_muscu' | 'libre'
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
 class HabitLog(Base):
     __tablename__ = "habit_logs"
 

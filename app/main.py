@@ -10,7 +10,7 @@ from .migrate import run_migrations
 from .routers import (
     auth, dashboard, entries, habits, meal_photo, integrations, food_search, recipes,
     bad_habits, goals, substances, profile, cycle, training, diet, journal_stats, settings,
-    partner,
+    partner, flashcards,
 )
 
 # Schéma à jour avant tout accès à la base (migrations Alembic, voir
@@ -69,6 +69,22 @@ def _ensure_default_workout_templates():
 
 _ensure_default_workout_templates()
 
+
+# Jeu de cartes français -> danois fourni avec l'app (révision pendant les
+# temps de repos, voir routers/flashcards.py). Idempotent.
+def _ensure_danish_deck():
+    from .database import SessionLocal
+    from .danish_deck import seed_builtin_deck
+
+    db = SessionLocal()
+    try:
+        seed_builtin_deck(db)
+    finally:
+        db.close()
+
+
+_ensure_danish_deck()
+
 app = FastAPI(title="Suivi — API", version="0.1.0")
 
 # CORS ouvert pour le dev de l'app mobile (Expo Go / simulateur).
@@ -98,6 +114,7 @@ app.include_router(diet.router)
 app.include_router(journal_stats.router)
 app.include_router(settings.router)
 app.include_router(partner.router)
+app.include_router(flashcards.router)
 
 
 @app.get("/health")
