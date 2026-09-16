@@ -125,6 +125,13 @@ class Habit(Base):
     progressive_start_value = Column(Float, nullable=True)
     progressive_target_value = Column(Float, nullable=True)
     progressive_start_date = Column(DateTime(timezone=True), nullable=True)
+    # Durée de la montée en charge en semaines : sans elle, on retombe sur les
+    # rythmes prédéfinis (lent/normal/rapide = 8/4/2 semaines). Sert aux plans
+    # à progression explicite (ex. +0,5 km par semaine pendant 15 semaines).
+    progressive_weeks = Column(Integer, nullable=True)
+    # Unité affichée après la valeur du palier ("km / semaine", "pompes /
+    # semaine"...) quand habit_type ne correspond à aucun format connu.
+    progressive_unit = Column(String, nullable=True)
 
     user = relationship("User", back_populates="habits")
     logs = relationship("HabitLog", back_populates="habit", cascade="all, delete-orphan")

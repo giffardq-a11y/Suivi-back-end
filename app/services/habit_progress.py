@@ -10,6 +10,10 @@ from .. import models
 
 PROGRESSIVE_RHYTHM_WEEKS = {"lent": 8, "normal": 4, "rapide": 2}
 
+
+def is_progressive(habit: "models.Habit") -> bool:
+    return bool(habit.progressive_rhythm or habit.progressive_weeks)
+
 HABIT_TYPE_FORMATTER = {
     "sport": lambda v: f"{v}x / semaine",
     "meditation": lambda v: f"{v} min / jour",
@@ -18,7 +22,11 @@ HABIT_TYPE_FORMATTER = {
 }
 
 
-def format_habit_target(habit_type: str | None, value: float) -> str:
+def format_habit_target(habit_type: str | None, value: float, unit: str | None = None) -> str:
+    # Une unité explicite (plan importé : "km / semaine", "pompes / semaine")
+    # prime sur le format déduit du type, qui ne connaît que 4 cas.
+    if unit:
+        return f"{value:g} {unit}"
     fmt = HABIT_TYPE_FORMATTER.get(habit_type or "")
     return fmt(value) if fmt else str(value)
 
@@ -28,10 +36,13 @@ def effective_habit_target(habit: "models.Habit", now: datetime) -> str | None:
     si elle n'est pas progressive, sinon la valeur du palier courant,
     interpolée entre valeur de départ et valeur cible selon le rythme
     choisi (lent/normal/rapide = 8/4/2 semaines)."""
-    if not habit.progressive_rhythm:
+    if not is_progressive(habit):
         return habit.target
 
-    total_weeks = PROGRESSIVE_RHYTHM_WEEKS.get(habit.progressive_rhythm, PROGRESSIVE_RHYTHM_WEEKS["normal"])
+    # Durée explicite (plan hebdomadaire importé) sinon rythme prédéfini.
+    total_weeks = habit.progressive_weeks or PROGRESSIVE_RHYTHM_WEEKS.get(
+        habit.progressive_rhythm, PROGRESSIVE_RHYTHM_WEEKS["normal"]
+    )
     start_date = habit.progressive_start_date
     if start_date and start_date.tzinfo is None:
         from datetime import timezone
@@ -42,5 +53,6 @@ def effective_habit_target(habit: "models.Habit", now: datetime) -> str | None:
     start_value = habit.progressive_start_value or 0
     target_value = habit.progressive_target_value or 0
     raw_value = start_value + (target_value - start_value) * progress
-    rounded = round(raw_value * 10) / 10 if habit.habit_type == "hydratation" else round(raw_value)
-    return format_habit_target(habit.habit_type, rounded)
+    decimals = habit.habit_type == "hydratation" or (habit.progressive_unit or "").startswith("km")
+    rounded = round(raw_value * 10) / 10 if decimals else round(raw_value)
+    return format_habit_target(habit.habit_type, rounded, habit.progressive_unit)

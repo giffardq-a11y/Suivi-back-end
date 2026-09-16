@@ -8,15 +8,18 @@ from .. import models
 from ..database import get_db
 from ..deps import get_current_user
 from ..services.common import now_utc, is_same_day, today_key
-from ..services.habit_progress import effective_habit_target
+from ..services.habit_progress import effective_habit_target, is_progressive
 
 router = APIRouter(prefix="/habits", tags=["habits"])
 
 
 class ProgressiveIn(BaseModel):
-    rhythm: str  # 'lent' | 'normal' | 'rapide'
     startValue: float
     targetValue: float
+    rhythm: str | None = None  # 'lent' | 'normal' | 'rapide'
+    # Durée explicite, prioritaire sur `rhythm` (plan hebdomadaire importé).
+    weeks: int | None = None
+    unit: str | None = None  # "km / semaine", "pompes / semaine"...
 
 
 class HabitCreate(BaseModel):
@@ -62,7 +65,7 @@ def _serialize(db: Session, habit: models.Habit) -> HabitOut:
         label=habit.label,
         target=effective_habit_target(habit, datetime.now(timezone.utc)),
         percent=percent,
-        progressive=bool(habit.progressive_rhythm),
+        progressive=is_progressive(habit),
         linked_activity=habit.linked_activity,
     )
 
@@ -100,6 +103,8 @@ def create_habit(
     if payload.progressive:
         habit.habit_type = payload.type
         habit.progressive_rhythm = payload.progressive.rhythm
+        habit.progressive_weeks = payload.progressive.weeks
+        habit.progressive_unit = payload.progressive.unit
         habit.progressive_start_value = payload.progressive.startValue
         habit.progressive_target_value = payload.progressive.targetValue
         habit.progressive_start_date = now_utc()
