@@ -1,6 +1,6 @@
 from datetime import timedelta, timezone
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
@@ -127,9 +127,22 @@ def get_goals(db: Session = Depends(get_db), user: models.User = Depends(get_cur
     multiplier, reward_budget, available_balance = compute_reward_budget(db, user, total_savings, now=now)
 
     goals = db.query(models.Goal).filter(models.Goal.user_id == user.id).all()
+    perso = (
+        db.query(models.Reward)
+        .filter(models.Reward.user_id == user.id)
+        .order_by(models.Reward.created_at)
+        .all()
+    )
     rewards = [
-        {**r, "unlocked": r["cost"] <= available_balance}
+        {**r, "unlocked": r["cost"] <= available_balance, "own": False}
         for r in REWARDS_CATALOG
+    ] + [
+        {
+            "id": r.id, "label": r.label, "cost": r.cost, "own": True,
+            # Sans prix, rien à débloquer : l'app affiche « prix à définir ».
+            "unlocked": r.cost is not None and r.cost <= available_balance,
+        }
+        for r in perso
     ]
 
     return {
@@ -169,6 +182,70 @@ def create_goal(
     return {"ok": True, "id": goal.id}
 
 
+class RewardIn(BaseModel):
+    label: str
+    cost: float | None = None
+
+
+@router.get("/rewards")
+def list_rewards(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
+    perso = db.query(models.Reward).filter(models.Reward.user_id == user.id).order_by(models.Reward.created_at).all()
+    return {
+        "catalogue": REWARDS_CATALOG,
+        "miennes": [{"id": r.id, "label": r.label, "cost": r.cost} for r in perso],
+    }
+
+
+@router.post("/rewards", status_code=201)
+def add_reward(
+    payload: RewardIn,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    reward = models.Reward(user_id=user.id, label=payload.label.strip(), cost=payload.cost)
+    db.add(reward)
+    db.commit()
+    db.refresh(reward)
+    return {"ok": True, "id": reward.id}
+
+
+@router.put("/rewards/{reward_id}")
+def update_reward(
+    reward_id: str,
+    payload: RewardIn,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    reward = (
+        db.query(models.Reward)
+        .filter(models.Reward.id == reward_id, models.Reward.user_id == user.id)
+        .first()
+    )
+    if not reward:
+        raise HTTPException(status_code=404, detail="Récompense introuvable")
+    reward.label = payload.label.strip()
+    reward.cost = payload.cost
+    db.commit()
+    return {"ok": True}
+
+
+@router.delete("/rewards/{reward_id}", status_code=204)
+def delete_reward(
+    reward_id: str,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    reward = (
+        db.query(models.Reward)
+        .filter(models.Reward.id == reward_id, models.Reward.user_id == user.id)
+        .first()
+    )
+    if not reward:
+        raise HTTPException(status_code=404, detail="Récompense introuvable (le catalogue fourni ne se supprime pas)")
+    db.delete(reward)
+    db.commit()
+
+
 @router.post("/rewards/{reward_id}/purchase")
 def purchase_reward(
     reward_id: str,
@@ -176,11 +253,21 @@ def purchase_reward(
     user: models.User = Depends(get_current_user),
 ):
     reward = next((r for r in REWARDS_CATALOG if r["id"] == reward_id), None)
-    if not reward:
-        return {"ok": False}
-    db.add(models.RewardPurchase(
-        user_id=user.id, reward_item_label=reward["label"], cost_at_purchase=reward["cost"],
-    ))
+    if reward:
+        label, cost = reward["label"], reward["cost"]
+    else:
+        perso = (
+            db.query(models.Reward)
+            .filter(models.Reward.id == reward_id, models.Reward.user_id == user.id)
+            .first()
+        )
+        if not perso:
+            raise HTTPException(status_code=404, detail="Récompense introuvable")
+        if perso.cost is None:
+            raise HTTPException(status_code=400, detail="Fixe d'abord un prix pour cette récompense.")
+        label, cost = perso.label, perso.cost
+
+    db.add(models.RewardPurchase(user_id=user.id, reward_item_label=label, cost_at_purchase=cost))
     db.commit()
     return {"ok": True}
 

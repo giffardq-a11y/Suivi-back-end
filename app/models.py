@@ -137,6 +137,20 @@ class Habit(Base):
     logs = relationship("HabitLog", back_populates="habit", cascade="all, delete-orphan")
 
 
+class Reward(Base):
+    """Récompense personnelle (le catalogue fourni avec l'app, lui, reste écrit
+    dans routers/goals.py). `cost` nul = prix pas encore fixé : la récompense
+    s'affiche mais ne peut pas être échangée tant qu'elle n'a pas de prix —
+    cas des récompenses importées d'un plan, qui n'en portent pas."""
+    __tablename__ = "rewards"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    label = Column(String, nullable=False)
+    cost = Column(Float, nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
 class FlashCard(Base):
     """Carte de révision (danois), affichée pendant les temps de repos d'une
     séance de muscu. `user_id` nul = carte du jeu fourni avec l'app, partagée
