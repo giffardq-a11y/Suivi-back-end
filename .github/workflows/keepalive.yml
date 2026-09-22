@@ -1,0 +1,23 @@
+name: Garder le serveur éveillé
+
+# L'offre gratuite Render endort le service après 15 min sans requête, et il
+# met ~45 s à repartir : l'app semble alors bloquée au chargement. Un appel
+# toutes les 10 minutes suffit à l'éviter.
+#
+# À savoir : GitHub suspend les tâches planifiées d'un dépôt resté 60 jours
+# sans activité (il envoie un e-mail avant). Un commit les relance.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Appeler /health
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 120 \
+            https://suivi-back-end.onrender.com/health)
+          echo "Réponse : $code"
+          test "$code" = "200"
