@@ -99,6 +99,22 @@ class HabitTodayOut(BaseModel):
     days_of_week: Optional[str] = None
 
 
+class PlannedWorkoutOut(BaseModel):
+    id: str
+    label: str
+    scheduled_time: Optional[str] = None
+    done_today: bool = False
+
+
+class CalorieBalanceOut(BaseModel):
+    budget: int
+    consumed: int
+    burned: int
+    net: int
+    remaining: int
+    meals_logged: int = 0
+
+
 class GoalSummaryOut(BaseModel):
     active_count: int
     top_goal_label: Optional[str] = None
@@ -117,6 +133,8 @@ class DashboardOut(BaseModel):
     streaks: List[StreakOut]
     savings: SavingsOut
     habits_today: List[HabitTodayOut]
+    planned_workouts: List[PlannedWorkoutOut] = []
+    calorie_balance: Optional[CalorieBalanceOut] = None
     goals_summary: GoalSummaryOut
     reward_budget: RewardBudgetOut
     thought_of_the_day: str

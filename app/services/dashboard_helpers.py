@@ -9,8 +9,9 @@ from .. import models
 from .streaks import current_streak_days, personal_best_days
 from .savings import compute_savings
 from .rewards import compute_reward_budget
-from .common import start_of_week
+from .common import start_of_week, is_same_day
 from .habit_progress import effective_habit_target, jours_actifs
+from .sport import calories_burned_on
 
 THOUGHTS = [
     "Un jour à la fois.",
@@ -71,6 +72,52 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
             "days_of_week": habit.days_of_week,
         })
 
+    # Séances de musculation programmées : elles n'apparaissaient que dans le
+    # fil, alors qu'une séance à heure fixe est un rendez-vous du jour au même
+    # titre qu'une habitude.
+    planned_workouts = []
+    modeles = (
+        db.query(models.WorkoutTemplate)
+        .filter(models.WorkoutTemplate.user_id == user.id,
+                models.WorkoutTemplate.scheduled_time.isnot(None))
+        .all()
+    )
+    for modele in modeles:
+        faite = (
+            db.query(models.StrengthSession)
+            .filter(models.StrengthSession.user_id == user.id,
+                    models.StrengthSession.template_id == modele.id)
+            .all()
+        )
+        planned_workouts.append({
+            "id": modele.id,
+            "label": modele.name,
+            "scheduled_time": modele.scheduled_time,
+            "done_today": any(is_same_day(s.occurred_at, now) for s in faite),
+        })
+    planned_workouts.sort(key=lambda w: w["scheduled_time"] or "")
+
+    # Bilan calorique du jour, repris du fil : mangé, dépensé en sport, net et
+    # reste à manger selon le budget du profil.
+    profil = next((p for p in [getattr(user, "profile", None)] if p), None)
+    if profil is None:
+        profil = db.query(models.Profile).filter(models.Profile.user_id == user.id).first()
+    budget = profil.daily_calorie_budget if profil else 2000
+    repas_du_jour = [
+        m for m in db.query(models.Meal).filter(models.Meal.user_id == user.id).all()
+        if is_same_day(m.occurred_at, now)
+    ]
+    consomme = sum(m.calories for m in repas_du_jour)
+    depense = calories_burned_on(db, user.id, now)
+    calorie_balance = {
+        "budget": budget,
+        "consumed": consomme,
+        "burned": depense,
+        "net": consomme - depense,
+        "remaining": budget - (consomme - depense),
+        "meals_logged": len(repas_du_jour),
+    }
+
     active_goals = [g for g in user.goals if g.completed_at is None]
     top_goal = max(active_goals, key=lambda g: (g.current_value / g.target_value if g.target_value else 0), default=None)
     goals_summary = {
@@ -87,6 +134,8 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
         "streaks": streaks,
         "savings": {"total": total_savings, "delta_week": delta_week, "currency": "EUR"},
         "habits_today": habits_today,
+        "planned_workouts": planned_workouts,
+        "calorie_balance": calorie_balance,
         "goals_summary": goals_summary,
         "reward_budget": {"multiplier": multiplier, "reward_budget": reward_budget, "available_balance": available_balance},
         "thought_of_the_day": THOUGHTS[now.timetuple().tm_yday % len(THOUGHTS)],
