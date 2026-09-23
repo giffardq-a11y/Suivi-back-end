@@ -1,0 +1,2660 @@
+{
+ "source": "https://www.eatthismuch.com (scraped 2026-09-23 via Firecrawl; values copied from each page's Original Recipe list and 'Nutrition Facts For 1 serving' table)",
+ "recettes": [
+  {
+   "url": "https://www.eatthismuch.com/calories/healthy-chicken-stir-fry-4943920",
+   "nom_en": "Healthy Chicken Stir Fry",
+   "type_propose": "dejeuner",
+   "servings": 4,
+   "prep_min": 15,
+   "cook_min": 25,
+   "ingredients": [
+    {
+     "nom": "Tamari soy sauce",
+     "detail": "",
+     "grams_total_recipe": 72
+    },
+    {
+     "nom": "Lemon juice",
+     "detail": "",
+     "grams_total_recipe": 15
+    },
+    {
+     "nom": "Honey",
+     "detail": "",
+     "grams_total_recipe": 21
+    },
+    {
+     "nom": "Sesame oil",
+     "detail": "",
+     "grams_total_recipe": 14
+    },
+    {
+     "nom": "Rice wine vinegar",
+     "detail": "",
+     "grams_total_recipe": 15
+    },
+    {
+     "nom": "Crushed red pepper flakes",
+     "detail": "",
+     "grams_total_recipe": 0.2
+    },
+    {
+     "nom": "Chicken breast",
+     "detail": "raw, skinless",
+     "grams_total_recipe": 454
+    },
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 27
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 12
+    },
+    {
+     "nom": "Carrots",
+     "detail": "raw",
+     "grams_total_recipe": 200
+    },
+    {
+     "nom": "Red bell pepper",
+     "detail": "raw",
+     "grams_total_recipe": 328
+    },
+    {
+     "nom": "White mushrooms",
+     "detail": "raw",
+     "grams_total_recipe": 210
+    },
+    {
+     "nom": "Broccoli",
+     "detail": "raw",
+     "grams_total_recipe": 182
+    },
+    {
+     "nom": "Cornstarch",
+     "detail": "",
+     "grams_total_recipe": 8
+    },
+    {
+     "nom": "White rice",
+     "detail": "long-grain, regular, raw, enriched",
+     "grams_total_recipe": 370
+    }
+   ],
+   "directions": [
+    "Prepare rice according to package instructions and set aside.",
+    "In a medium bowl, whisk together soy sauce, lemon juice, honey, sesame oil, rice wine vinegar, and red pepper flakes. Add chicken and toss to coat. Marinate in the fridge while chopping vegetables.",
+    "Heat a large wok over high heat and add one tablespoon of olive oil. Drain chicken from marinade, reserving marinade. Cook chicken in the wok until cooked through, about 5 minutes. Remove chicken to a plate.",
+    "Add remaining olive oil to the wok and cook garlic until fragrant, about 1 minute. Add carrots, bell peppers, and mushrooms. Cook until bright and crisp-tender, about 3 minutes.",
+    "Add broccoli and cooked chicken to the wok. Reduce heat to low.",
+    "Whisk cornstarch into reserved marinade and pour into the wok. Simmer and cook until thickened, about 5 minutes. Serve over rice."
+   ],
+   "macros_par_portion": {
+    "calories": 677,
+    "proteines": 38,
+    "glucides": 97,
+    "lipides": 15,
+    "fibres": 6
+   },
+   "notes": "glucides = total carbs from table (net carbs 91 g + fibre 6 g). Portion 482 g. 15 ingredients (above 2-10 preference)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/sheet-pan-salmon-dinner-5003243",
+   "nom_en": "Sheet Pan Salmon Dinner",
+   "type_propose": "diner",
+   "servings": 4,
+   "prep_min": 10,
+   "cook_min": 25,
+   "ingredients": [
+    {
+     "nom": "Asparagus",
+     "detail": "raw",
+     "grams_total_recipe": 453
+    },
+    {
+     "nom": "Cherry tomatoes",
+     "detail": "red, raw",
+     "grams_total_recipe": 298
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 0.4
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 0.1
+    },
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 41
+    },
+    {
+     "nom": "Atlantic salmon",
+     "detail": "farmed, raw",
+     "grams_total_recipe": 454
+    },
+    {
+     "nom": "Lemon",
+     "detail": "raw, with peel",
+     "grams_total_recipe": 216
+    },
+    {
+     "nom": "Basil pesto",
+     "detail": "Classico brand, ready-to-serve",
+     "grams_total_recipe": 124
+    }
+   ],
+   "directions": [
+    "Preheat the oven to 450°F and position the rack in the middle.",
+    "On a rimmed baking sheet, toss the asparagus and cherry tomatoes with salt, black pepper, and olive oil. Arrange the vegetables in a single layer.",
+    "Pat the salmon fillets dry with a paper towel. Place them in the pan and turn to coat all sides with oil.",
+    "Season the salmon with salt and pepper on both sides and arrange skin-side down among the vegetables.",
+    "Slice the lemons into 1/2-inch slices and add to the pan, coating both sides with oil.",
+    "Bake in the oven for 10-15 minutes, depending on the thickness of the fillets, until the salmon reaches your desired doneness. For medium, remove when the thickest part of the fish measures 135°F.",
+    "Remove the pan from the oven, add dollops of pesto on the salmon and vegetables, squeeze lemon juice over everything, and serve."
+   ],
+   "macros_par_portion": {
+    "calories": 488,
+    "proteines": 28,
+    "glucides": 15,
+    "lipides": 37,
+    "fibres": 6
+   },
+   "notes": "glucides = total carbs (net 9 + fibre 6). Portion 396 g. Fat-heavy (37 g)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/lentil-soup-5198265",
+   "nom_en": "Lentil Soup",
+   "type_propose": "collation",
+   "servings": 6,
+   "prep_min": 5,
+   "cook_min": 25,
+   "ingredients": [
+    {
+     "nom": "Lentils",
+     "detail": "raw",
+     "grams_total_recipe": 288
+    },
+    {
+     "nom": "Water",
+     "detail": "",
+     "grams_total_recipe": 1420
+    },
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 14
+    },
+    {
+     "nom": "Onion",
+     "detail": "raw",
+     "grams_total_recipe": 80
+    },
+    {
+     "nom": "Carrots",
+     "detail": "raw",
+     "grams_total_recipe": 64
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 6
+    },
+    {
+     "nom": "Cumin seed",
+     "detail": "ground",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 0.4
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 0.1
+    },
+    {
+     "nom": "Lemon juice",
+     "detail": "",
+     "grams_total_recipe": 15
+    },
+    {
+     "nom": "Parsley",
+     "detail": "raw",
+     "grams_total_recipe": 15
+    }
+   ],
+   "directions": [
+    "Rinse and pick over the lentils, removing any debris. Chop the onion and carrots; mince the garlic.",
+    "Warm the olive oil in a large pot over medium heat. Add onion, carrots, and garlic; cook, stirring often, until softened and fragrant, 2–3 minutes.",
+    "Stir in cumin, salt, and pepper; cook 30 seconds to bloom the spices.",
+    "Add lentils and water. Bring to a boil, then reduce to a gentle simmer and cook until lentils are tender, 20–25 minutes. Add more water as needed to reach desired consistency.",
+    "For a smooth soup, blend carefully: use an immersion blender in the pot, or transfer in batches to a vented countertop blender. Alternatively, leave some or all of it chunky.",
+    "Off the heat, stir in lemon juice and parsley. Taste and adjust salt and pepper before serving."
+   ],
+   "macros_par_portion": {
+    "calories": 203,
+    "proteines": 12,
+    "glucides": 34,
+    "lipides": 3,
+    "fibres": 6
+   },
+   "notes": "glucides = total carbs (net 28 + fibre 6). Portion 318 g. Too light for a meal at 1 serving; proposed as collation (or double portion as a meal)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/quick-honey-garlic-shrimp-with-broccoli-and-rice-5285060",
+   "nom_en": "Quick Honey Garlic Shrimp with Broccoli and Rice",
+   "type_propose": "diner",
+   "servings": 4,
+   "prep_min": 15,
+   "cook_min": 10,
+   "ingredients": [
+    {
+     "nom": "Honey",
+     "detail": "",
+     "grams_total_recipe": 84
+    },
+    {
+     "nom": "Tamari soy sauce",
+     "detail": "",
+     "grams_total_recipe": 72
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 6
+    },
+    {
+     "nom": "Ginger root",
+     "detail": "raw",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Shrimp",
+     "detail": "raw",
+     "grams_total_recipe": 454
+    },
+    {
+     "nom": "Brown rice",
+     "detail": "long-grain, raw",
+     "grams_total_recipe": 185
+    },
+    {
+     "nom": "Broccoli",
+     "detail": "raw",
+     "grams_total_recipe": 273
+    },
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 9
+    },
+    {
+     "nom": "Scallions",
+     "detail": "raw",
+     "grams_total_recipe": 15
+    }
+   ],
+   "directions": [
+    "In a medium bowl, whisk together the honey, soy sauce, garlic, and ginger. Adjust to taste as needed.",
+    "Toss the shrimp with half of the sauce, cover, and refrigerate for at least 15 minutes.",
+    "Cook the brown rice according to package directions.",
+    "Steam the broccoli over simmering water until crisp-tender, 4–5 minutes, then rinse briefly under cool water to stop cooking and set aside.",
+    "Heat the olive oil in a large skillet over medium-high heat. Add the marinated shrimp in an even layer and cook about 45 seconds; flip, pour in the remaining sauce, and cook until the shrimp are just opaque and the sauce is bubbling, about 1 minute more.",
+    "Serve the shrimp and sauce over the cooked rice with the broccoli on the side; garnish with chopped scallions."
+   ],
+   "macros_par_portion": {
+    "calories": 373,
+    "proteines": 23,
+    "glucides": 60,
+    "lipides": 5,
+    "fibres": 4
+   },
+   "notes": "glucides = total carbs (net 57 + fibre 4 = 61 vs table 60, rounding on site). Portion 275 g."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/pesto-salmon-4993882",
+   "nom_en": "Pesto Salmon",
+   "type_propose": "diner",
+   "servings": 4,
+   "prep_min": 15,
+   "cook_min": 20,
+   "ingredients": [
+    {
+     "nom": "Green beans",
+     "detail": "raw",
+     "grams_total_recipe": 454
+    },
+    {
+     "nom": "Basil pesto",
+     "detail": "Classico brand, ready-to-serve",
+     "grams_total_recipe": 62
+    },
+    {
+     "nom": "Lemon",
+     "detail": "raw, with peel",
+     "grams_total_recipe": 216
+    },
+    {
+     "nom": "Atlantic salmon",
+     "detail": "farmed, raw",
+     "grams_total_recipe": 680
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 0.4
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 0.1
+    },
+    {
+     "nom": "Parsley",
+     "detail": "raw",
+     "grams_total_recipe": 15
+    }
+   ],
+   "directions": [
+    "Preheat oven to 450°F. Prepare one piece of parchment paper for each serving being prepared, each about 12x12\". Fold each piece in half.",
+    "Place open parchment pieces on a sheet pan and place a handful of green beans along the fold of each piece. Top with a small spoonful of pesto and 2 to 3 lemon slices.",
+    "Season salmon with salt and pepper and place one piece on top of lemons in each packet. Spread a spoonful of pesto over each piece of fish.",
+    "Fold parchment over fish and vegetables, then fold and twist edges under to seal (you should create a half-moon shape). Repeat with remaining packets and bake for 15 to 20 minutes.",
+    "Transfer each parchment packet to a dish and carefully cut a slit to let out steam. Garnish with parsley and serve with remaining pesto sauce. Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 459,
+    "proteines": 38,
+    "glucides": 15,
+    "lipides": 29,
+    "fibres": 6
+   },
+   "notes": "glucides = total carbs (net 9 + fibre 6). Portion 357 g."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/mediterranean-salmon-chickpea-and-feta-wrap-4991528",
+   "nom_en": "Mediterranean Salmon Chickpea and Feta Wrap",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": null,
+   "ingredients": [
+    {
+     "nom": "Greek yogurt",
+     "detail": "plain, nonfat",
+     "grams_total_recipe": 30
+    },
+    {
+     "nom": "Oregano",
+     "detail": "dried",
+     "grams_total_recipe": 0.3
+    },
+    {
+     "nom": "Garlic powder",
+     "detail": "",
+     "grams_total_recipe": 0.8
+    },
+    {
+     "nom": "Lemon juice",
+     "detail": "",
+     "grams_total_recipe": 15
+    },
+    {
+     "nom": "Pink salmon",
+     "detail": "canned, drained, solids with bone",
+     "grams_total_recipe": 85
+    },
+    {
+     "nom": "Chickpeas",
+     "detail": "canned",
+     "grams_total_recipe": 60
+    },
+    {
+     "nom": "Tomatoes",
+     "detail": "red, raw",
+     "grams_total_recipe": 91
+    },
+    {
+     "nom": "Cucumber",
+     "detail": "raw, with peel",
+     "grams_total_recipe": 26
+    },
+    {
+     "nom": "Spinach",
+     "detail": "raw",
+     "grams_total_recipe": 30
+    },
+    {
+     "nom": "Flour tortillas",
+     "detail": "1 tortilla, medium",
+     "grams_total_recipe": 46
+    },
+    {
+     "nom": "Feta cheese",
+     "detail": "",
+     "grams_total_recipe": 28
+    }
+   ],
+   "directions": [
+    "In a medium mixing bowl, whisk together the yogurt, lemon juice, oregano, garlic powder, salt, and pepper to taste.",
+    "Spread the yogurt mixture evenly over the tortillas, then sprinkle the crumbled feta over the yogurt.",
+    "Layer the salmon, chickpeas, tomato, cucumber, and spinach on top of the yogurt mixture.",
+    "Fold the sides of the tortilla over the filling and roll it up tightly like a burrito."
+   ],
+   "macros_par_portion": {
+    "calories": 431,
+    "proteines": 35,
+    "glucides": 41,
+    "lipides": 15,
+    "fibres": 6
+   },
+   "notes": "glucides = total carbs (net 35 + fibre 6). Serving = 1 wrap."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/southwest-chicken-skillet-4849163",
+   "nom_en": "Southwest Chicken Skillet",
+   "type_propose": "dejeuner",
+   "servings": 4,
+   "prep_min": 5,
+   "cook_min": 20,
+   "ingredients": [
+    {
+     "nom": "White rice",
+     "detail": "long-grain, regular, raw, enriched",
+     "grams_total_recipe": 185
+    },
+    {
+     "nom": "Salsa",
+     "detail": "",
+     "grams_total_recipe": 260
+    },
+    {
+     "nom": "Canned chicken",
+     "detail": "no broth",
+     "grams_total_recipe": 410
+    },
+    {
+     "nom": "Black beans",
+     "detail": "canned, low-sodium, drained",
+     "grams_total_recipe": 425
+    },
+    {
+     "nom": "Chili powder",
+     "detail": "",
+     "grams_total_recipe": 8
+    },
+    {
+     "nom": "Chicken broth",
+     "detail": "canned, reduced sodium",
+     "grams_total_recipe": 480
+    },
+    {
+     "nom": "Cheddar cheese",
+     "detail": "shredded",
+     "grams_total_recipe": 113
+    },
+    {
+     "nom": "Scallions",
+     "detail": "raw",
+     "grams_total_recipe": 30
+    }
+   ],
+   "directions": [
+    "Combine the rice, salsa, chicken, drained black beans, chili powder, and chicken broth in a large skillet. Stir until evenly mixed.",
+    "Cover the skillet with a tight-fitting lid, bring to a full boil over high heat, then reduce to low and simmer for 15 minutes.",
+    "Turn off the heat and let it rest with the lid on for 5 minutes. Remove the lid and fluff the mixture with a fork, ensuring all liquid is absorbed and the rice is tender.",
+    "Sprinkle the shredded cheese over the top, cover, and let it sit until the cheese melts.",
+    "Slice the green onions and sprinkle over the melted cheese before serving hot."
+   ],
+   "macros_par_portion": {
+    "calories": 605,
+    "proteines": 45,
+    "glucides": 62,
+    "lipides": 19,
+    "fibres": 10
+   },
+   "notes": "glucides = total carbs (net 52 + fibre 10). Canned chicken is uncommon in France (can be replaced by cooked chicken breast; macros would then change)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/asian-style-tuna-salad-5137487",
+   "nom_en": "Asian Style Tuna Salad",
+   "type_propose": "collation",
+   "servings": 2,
+   "prep_min": 20,
+   "cook_min": null,
+   "ingredients": [
+    {
+     "nom": "Light tuna",
+     "detail": "canned in water, drained",
+     "grams_total_recipe": 330
+    },
+    {
+     "nom": "Radishes",
+     "detail": "raw",
+     "grams_total_recipe": 36
+    },
+    {
+     "nom": "Carrots",
+     "detail": "raw",
+     "grams_total_recipe": 61
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Ginger root",
+     "detail": "raw",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Chili pepper",
+     "detail": "sun-dried",
+     "grams_total_recipe": 0.5
+    },
+    {
+     "nom": "Sesame oil",
+     "detail": "",
+     "grams_total_recipe": 27
+    },
+    {
+     "nom": "Rice wine vinegar",
+     "detail": "",
+     "grams_total_recipe": 45
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 0.4
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 0.1
+    },
+    {
+     "nom": "Cilantro",
+     "detail": "raw, coriander leaves",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Scallions",
+     "detail": "raw",
+     "grams_total_recipe": 12
+    },
+    {
+     "nom": "Romaine lettuce",
+     "detail": "raw",
+     "grams_total_recipe": 47
+    }
+   ],
+   "directions": [
+    "In a large bowl, combine drained tuna, radish wedges, carrot, garlic, ginger, and minced chile (or a pinch of red pepper flakes). Add sesame oil and rice vinegar and toss to coat.",
+    "Season to taste with salt and black pepper, tossing gently until evenly distributed.",
+    "Fold in the cilantro and scallions. Serve over a bed of shredded romaine lettuce."
+   ],
+   "macros_par_portion": {
+    "calories": 292,
+    "proteines": 33,
+    "glucides": 6,
+    "lipides": 15,
+    "fibres": 2
+   },
+   "notes": "glucides = total carbs (net 4 + fibre 2). Portion 283 g. 292 kcal is below the dinner range, so proposed as a protein snack; could serve as a light dinner."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/turkey-omelet-946456",
+   "nom_en": "Turkey Omelet",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 10,
+   "ingredients": [
+    {
+     "nom": "Cooking spray",
+     "detail": "Pam brand",
+     "grams_total_recipe": 0.3
+    },
+    {
+     "nom": "Turkey",
+     "detail": "deli-sliced, rotisserie, white meat",
+     "grams_total_recipe": 43
+    },
+    {
+     "nom": "Egg",
+     "detail": "whole",
+     "grams_total_recipe": 100
+    },
+    {
+     "nom": "Cheddar cheese",
+     "detail": "shredded",
+     "grams_total_recipe": 28
+    }
+   ],
+   "directions": [
+    "Lightly coat a nonstick pan with cooking spray and place over medium heat. Add the chopped turkey and brown slightly, remove from pan.",
+    "Whisk the eggs in a bowl and pour into the pan, tilt the pan to evenly coat with the eggs.",
+    "After a couple of minutes, you should see bubbles. Gently lift the edges of the omelet with a spatula to let the uncooked part of the eggs flow toward the edges and cook. Continue cooking for 2-3 minutes or until the center of the omelet starts to look dry.",
+    "Place the cheese in the middle of the omelet and spread the turkey on top (in the center of the omelet). Using a spatula gently fold one edge of the omelet over.",
+    "Let the omelet cook for another two minutes or until the cheese melts to your desired consistency. Slide the omelet out of the skillet and onto a plate. Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 308,
+    "proteines": 25,
+    "glucides": 4,
+    "lipides": 21,
+    "fibres": 0.2
+   },
+   "notes": "glucides = total carbs from table (net carbs 4). Portion 171 g."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/tofu-scramble-5026700",
+   "nom_en": "Tofu Scramble",
+   "type_propose": "petit-dejeuner",
+   "servings": 4,
+   "prep_min": 10,
+   "cook_min": 15,
+   "ingredients": [
+    {
+     "nom": "Tofu",
+     "detail": "firm, raw",
+     "grams_total_recipe": 794
+    },
+    {
+     "nom": "Canola oil",
+     "detail": "high oleic",
+     "grams_total_recipe": 28
+    },
+    {
+     "nom": "Onion",
+     "detail": "raw",
+     "grams_total_recipe": 110
+    },
+    {
+     "nom": "Green bell pepper",
+     "detail": "raw",
+     "grams_total_recipe": 119
+    },
+    {
+     "nom": "Red bell pepper",
+     "detail": "raw",
+     "grams_total_recipe": 119
+    },
+    {
+     "nom": "Coriander seed",
+     "detail": "",
+     "grams_total_recipe": 0.9
+    },
+    {
+     "nom": "Cumin seed",
+     "detail": "ground",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Turmeric",
+     "detail": "ground",
+     "grams_total_recipe": 4
+    },
+    {
+     "nom": "Black beans",
+     "detail": "canned, low-sodium, drained",
+     "grams_total_recipe": 520
+    },
+    {
+     "nom": "Cilantro",
+     "detail": "raw, coriander leaves",
+     "grams_total_recipe": 4
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 0.4
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 0.1
+    }
+   ],
+   "directions": [
+    "Drain the tofu and place on a plate lined with several layers of paper towels to absorb excess liquid. Once drained, use a fork or potato masher to crumble the tofu.",
+    "Chop the onion and bell peppers.",
+    "Heat the oil in a large skillet over medium-high heat. Add the onion and bell peppers and cook for about 3-4 minutes until softened.",
+    "Stir in the coriander and cumin, cooking until fragrant, about 1 minute.",
+    "Add the crumbled tofu and turmeric to the skillet. Stir in the black beans and cook, stirring often, until heated through, about 1-2 minutes.",
+    "Stir in the cilantro and season with salt and pepper to taste."
+   ],
+   "macros_par_portion": {
+    "calories": 351,
+    "proteines": 25,
+    "glucides": 32,
+    "lipides": 16,
+    "fibres": 13
+   },
+   "notes": "glucides = total carbs (net 19 + fibre 13). Portion 425 g. Vegetarian (tofu + black beans)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/eggs-piperade-4933546",
+   "nom_en": "Eggs Piperade",
+   "type_propose": "diner",
+   "servings": 4,
+   "prep_min": 10,
+   "cook_min": 20,
+   "ingredients": [
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 54
+    },
+    {
+     "nom": "Onion",
+     "detail": "raw",
+     "grams_total_recipe": 110
+    },
+    {
+     "nom": "Red bell pepper",
+     "detail": "raw",
+     "grams_total_recipe": 119
+    },
+    {
+     "nom": "Yellow bell pepper",
+     "detail": "sweet, raw",
+     "grams_total_recipe": 93
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 6
+    },
+    {
+     "nom": "Tomatoes",
+     "detail": "red, raw",
+     "grams_total_recipe": 246
+    },
+    {
+     "nom": "Egg",
+     "detail": "whole",
+     "grams_total_recipe": 336
+    },
+    {
+     "nom": "Thyme",
+     "detail": "",
+     "grams_total_recipe": 0.8
+    },
+    {
+     "nom": "Parsley",
+     "detail": "raw",
+     "grams_total_recipe": 4
+    },
+    {
+     "nom": "Sourdough bread",
+     "detail": "French/Vienna style",
+     "grams_total_recipe": 454
+    }
+   ],
+   "directions": [
+    "Heat olive oil in a large frying pan over medium-high heat.",
+    "Add the chopped onion, red and yellow bell peppers, and minced garlic. Cover and cook, stirring occasionally, until very tender, about 8-10 minutes.",
+    "Add the chopped tomatoes, season to taste, and simmer uncovered until the tomatoes begin to break down, about 4-5 minutes.",
+    "Gently stir in the eggs and cook, stirring occasionally, until scrambled, about 3-4 minutes.",
+    "Scatter with thyme and parsley, then serve hot with toasted sourdough bread."
+   ],
+   "macros_par_portion": {
+    "calories": 588,
+    "proteines": 24,
+    "glucides": 68,
+    "lipides": 25,
+    "fibres": 5
+   },
+   "notes": "glucides = total carbs (net 64 + fibre 5 = 69 vs 68, site rounding). Portion 356 g incl. 113 g bread. Fits breakfast range too (588 kcal, 24 g P)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/egg-casserole-4977907",
+   "nom_en": "Egg Casserole",
+   "type_propose": "petit-dejeuner",
+   "servings": 4,
+   "prep_min": 10,
+   "cook_min": 25,
+   "ingredients": [
+    {
+     "nom": "Egg",
+     "detail": "whole",
+     "grams_total_recipe": 672
+    },
+    {
+     "nom": "White mushrooms",
+     "detail": "raw",
+     "grams_total_recipe": 158
+    },
+    {
+     "nom": "Onion",
+     "detail": "raw",
+     "grams_total_recipe": 80
+    },
+    {
+     "nom": "Spinach",
+     "detail": "raw",
+     "grams_total_recipe": 83
+    },
+    {
+     "nom": "Cheddar cheese",
+     "detail": "shredded",
+     "grams_total_recipe": 85
+    }
+   ],
+   "directions": [
+    "Preheat the oven to 350°F.",
+    "Chop the mushrooms, onions, and spinach. In a large bowl, mix them together with the shredded cheddar cheese and eggs.",
+    "Pour the mixture into a 9x13-inch casserole pan and bake for approximately 25 minutes, or until the eggs are set."
+   ],
+   "macros_par_portion": {
+    "calories": 348,
+    "proteines": 28,
+    "glucides": 5,
+    "lipides": 23,
+    "fibres": 1
+   },
+   "notes": "glucides = total carbs (net 4 + fibre 1). Portion 269 g. Oven dish, can be batch-cooked."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/cottage-cheese-breakfast-1488026",
+   "nom_en": "Cottage Cheese Breakfast",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 2,
+   "cook_min": null,
+   "ingredients": [
+    {
+     "nom": "Cottage cheese",
+     "detail": "1% milkfat",
+     "grams_total_recipe": 226
+    },
+    {
+     "nom": "Cinnamon",
+     "detail": "ground",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Almonds",
+     "detail": "raw",
+     "grams_total_recipe": 36
+    }
+   ],
+   "directions": [
+    "Chop almonds.",
+    "Combine cottage cheese and cinnamon, then sprinkle chopped almonds on top."
+   ],
+   "macros_par_portion": {
+    "calories": 376,
+    "proteines": 36,
+    "glucides": 16,
+    "lipides": 20,
+    "fibres": 6
+   },
+   "notes": "glucides = total carbs (net 10 + fibre 6). Portion 264 g. No cooking."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/banana-oatmeal-33511",
+   "nom_en": "Banana Oatmeal",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 2,
+   "cook_min": 2,
+   "ingredients": [
+    {
+     "nom": "Rolled oats",
+     "detail": "dry oatmeal, Quaker brand",
+     "grams_total_recipe": 80
+    },
+    {
+     "nom": "Banana",
+     "detail": "",
+     "grams_total_recipe": 118
+    },
+    {
+     "nom": "2% milk",
+     "detail": "",
+     "grams_total_recipe": 244
+    }
+   ],
+   "directions": [
+    "Put oatmeal and milk into a bowl. Eat raw or microwave for two minutes.",
+    "Slice the banana up and put it in the bowl, or put the banana in the bowl and chop it up with the spoon. Eat."
+   ],
+   "macros_par_portion": {
+    "calories": 494,
+    "proteines": 19,
+    "glucides": 97,
+    "lipides": 7,
+    "fibres": 13
+   },
+   "notes": "glucides = total carbs (net 84 + fibre 13). Serving = 1 bowl (442 g). 2% milk ~ lait demi-écrémé."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/strawberry-oatmeal-717811",
+   "nom_en": "Strawberry Oatmeal",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 4,
+   "cook_min": 2,
+   "ingredients": [
+    {
+     "nom": "Strawberries",
+     "detail": "raw",
+     "grams_total_recipe": 144
+    },
+    {
+     "nom": "2% milk",
+     "detail": "",
+     "grams_total_recipe": 244
+    },
+    {
+     "nom": "Rolled oats",
+     "detail": "dry oatmeal, Quaker brand",
+     "grams_total_recipe": 40
+    },
+    {
+     "nom": "Brown sugar",
+     "detail": "",
+     "grams_total_recipe": 3
+    }
+   ],
+   "directions": [
+    "Puree the strawberries. Mix together with milk and oats.",
+    "Microwave for 45 seconds, stir, then microwave for 30 more seconds.",
+    "Sprinkle with brown sugar and enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 314,
+    "proteines": 14,
+    "glucides": 55,
+    "lipides": 6,
+    "fibres": 8
+   },
+   "notes": "glucides = total carbs (net 47 + fibre 8). Serving = 1 bowl (431 g)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/eggs-pizzaiola-5019602",
+   "nom_en": "Eggs Pizzaiola",
+   "type_propose": "petit-dejeuner",
+   "servings": 3,
+   "prep_min": 10,
+   "cook_min": 21,
+   "ingredients": [
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 7
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 12
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 0.1
+    },
+    {
+     "nom": "Crushed red pepper flakes",
+     "detail": "",
+     "grams_total_recipe": 0.08
+    },
+    {
+     "nom": "Parsley",
+     "detail": "raw",
+     "grams_total_recipe": 4
+    },
+    {
+     "nom": "Tomatoes",
+     "detail": "canned, packed in tomato juice",
+     "grams_total_recipe": 480
+    },
+    {
+     "nom": "Vegetable broth",
+     "detail": "from bouillon, low-sodium",
+     "grams_total_recipe": 60
+    },
+    {
+     "nom": "Basil",
+     "detail": "",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Egg",
+     "detail": "whole",
+     "grams_total_recipe": 336
+    },
+    {
+     "nom": "Parmesan cheese",
+     "detail": "shredded",
+     "grams_total_recipe": 40
+    },
+    {
+     "nom": "Baguette",
+     "detail": "Budgens",
+     "grams_total_recipe": 125
+    }
+   ],
+   "directions": [
+    "Heat two-thirds of the olive oil in a large non-stick skillet over medium heat. Sauté the garlic until golden, about 1 minute. Add salt, black pepper, red pepper flakes, and parsley, stirring to combine.",
+    "Add the crushed tomatoes and vegetable broth, bringing the mixture to a boil. Reduce the heat, add the basil, and simmer for 5 minutes.",
+    "Gently drop in the eggs, keeping the yolks intact, and top with cheese. Cover and simmer on medium-low for 10 to 15 minutes, or until the egg whites are cooked through and no longer runny.",
+    "Finish with the remainder of the cheese and remaining olive oil. Serve with crusty baguette and enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 381,
+    "proteines": 24,
+    "glucides": 31,
+    "lipides": 17,
+    "fibres": 4
+   },
+   "notes": "glucides = total carbs (net 27 + fibre 4). Portion 356 g. 12 ingredients (mostly seasonings). Savory brunch-style breakfast; also suits a light dinner."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/blueberry-yogurt-overnight-oats-5064434",
+   "nom_en": "Blueberry Yogurt Overnight Oats",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 360,
+   "cook_min": null,
+   "ingredients": [
+    {
+     "nom": "Rolled oats",
+     "detail": "dry oatmeal",
+     "grams_total_recipe": 40
+    },
+    {
+     "nom": "Water",
+     "detail": "",
+     "grams_total_recipe": 158
+    },
+    {
+     "nom": "Greek yogurt",
+     "detail": "plain, nonfat",
+     "grams_total_recipe": 120
+    },
+    {
+     "nom": "Flaxseed",
+     "detail": "ground",
+     "grams_total_recipe": 7
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 0.4
+    },
+    {
+     "nom": "Blueberries",
+     "detail": "raw",
+     "grams_total_recipe": 19
+    },
+    {
+     "nom": "Brown sugar",
+     "detail": "packed",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Pecans",
+     "detail": "",
+     "grams_total_recipe": 4
+    }
+   ],
+   "directions": [
+    "In an individual food storage container, layer the oats, water, yogurt, flaxseed, salt, and blueberries. Do not stir. Cover and refrigerate overnight.",
+    "In the morning, stir the mixture until combined and thickened. Top with pecans and brown sugar before serving."
+   ],
+   "macros_par_portion": {
+    "calories": 285,
+    "proteines": 18,
+    "glucides": 41,
+    "lipides": 7,
+    "fibres": 8
+   },
+   "notes": "glucides = total carbs (net 34 + fibre 8 = 42 vs 41, site rounding). Page prep time 360 min = overnight rest in the fridge; active prep ~5 min."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/tuna-nicoise-5187112",
+   "nom_en": "Tuna Nicoise",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 15,
+   "cook_min": 15,
+   "ingredients": [
+    {
+     "nom": "Lentils",
+     "detail": "raw",
+     "grams_total_recipe": 24
+    },
+    {
+     "nom": "Egg",
+     "detail": "whole",
+     "grams_total_recipe": 28
+    },
+    {
+     "nom": "Green beans",
+     "detail": "raw",
+     "grams_total_recipe": 35
+    },
+    {
+     "nom": "Coconut oil",
+     "detail": "",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Yellowfin tuna",
+     "detail": "raw",
+     "grams_total_recipe": 151
+    },
+    {
+     "nom": "Spinach",
+     "detail": "raw",
+     "grams_total_recipe": 75
+    },
+    {
+     "nom": "Sun-dried tomatoes",
+     "detail": "",
+     "grams_total_recipe": 7
+    },
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 7
+    },
+    {
+     "nom": "Balsamic vinegar",
+     "detail": "",
+     "grams_total_recipe": 5
+    },
+    {
+     "nom": "English walnuts",
+     "detail": "",
+     "grams_total_recipe": 9
+    }
+   ],
+   "directions": [
+    "Cook the lentils according to the package directions until tender; drain well and set aside to cool slightly.",
+    "Bring a medium saucepan of water to a gentle boil. Lower in the egg and cook for 8 minutes; add the green beans and blanch for 1 minute more.",
+    "While the egg cooks, heat the coconut oil in a skillet over medium-high heat. Sear the tuna for 1 minute per side for rare or 2 minutes per side for medium; season and let rest.",
+    "Drain the egg and beans; cool under cold water until easy to handle. Peel the egg and halve it. In a bowl, combine spinach, lentils, green beans, sun-dried tomatoes, walnuts, olive oil, and balsamic; season with salt and pepper and toss gently.",
+    "Transfer the salad to a plate and top with the sliced tuna and the egg halves. Serve immediately."
+   ],
+   "macros_par_portion": {
+    "calories": 490,
+    "proteines": 52,
+    "glucides": 27,
+    "lipides": 20,
+    "fibres": 7
+   },
+   "notes": "glucides = total carbs (net 20 + fibre 7). Portion 345 g. Fresh yellowfin tuna steak (thon albacore/listao frais)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/chicken-jambalaya-3250700",
+   "nom_en": "Chicken Jambalaya",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 10,
+   "cook_min": 45,
+   "ingredients": [
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 14
+    },
+    {
+     "nom": "Chicken breast",
+     "detail": "raw, skinless",
+     "grams_total_recipe": 118
+    },
+    {
+     "nom": "Onion",
+     "detail": "raw",
+     "grams_total_recipe": 55
+    },
+    {
+     "nom": "Red bell pepper",
+     "detail": "raw",
+     "grams_total_recipe": 60
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Brown rice",
+     "detail": "long-grain, raw",
+     "grams_total_recipe": 46
+    },
+    {
+     "nom": "Tomatoes",
+     "detail": "canned, packed in tomato juice",
+     "grams_total_recipe": 60
+    },
+    {
+     "nom": "Chicken stock",
+     "detail": "home-prepared",
+     "grams_total_recipe": 120
+    }
+   ],
+   "directions": [
+    "Heat the oil in a large frying pan with a lid and brown the chicken for 5-8 minutes until golden. Remove and set aside. Tip in the onion and cook for 3-4 minutes until soft. Then add the pepper and garlic, and cook for 5 minutes more.",
+    "Stir the chicken back in with the rice, add the tomatoes and stock. Cover and simmer for 20-25 minutes until the rice is tender."
+   ],
+   "macros_par_portion": {
+    "calories": 530,
+    "proteines": 35,
+    "glucides": 52,
+    "lipides": 20,
+    "fibres": 5
+   },
+   "notes": "glucides = total carbs (net 47 + fibre 5). One-pan. Total time 55 min (above the 40 min preference)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/thai-pork-salad-4942822",
+   "nom_en": "Thai Pork Salad",
+   "type_propose": "dejeuner",
+   "servings": 4,
+   "prep_min": 10,
+   "cook_min": 15,
+   "ingredients": [
+    {
+     "nom": "Pork shoulder (Boston butt)",
+     "detail": "cooked, broiled, blade steak, lean and fat",
+     "grams_total_recipe": 507
+    },
+    {
+     "nom": "Oyster sauce",
+     "detail": "",
+     "grams_total_recipe": 54
+    },
+    {
+     "nom": "Tamari soy sauce",
+     "detail": "",
+     "grams_total_recipe": 54
+    },
+    {
+     "nom": "Romaine lettuce",
+     "detail": "raw",
+     "grams_total_recipe": 141
+    },
+    {
+     "nom": "Carrots",
+     "detail": "raw",
+     "grams_total_recipe": 61
+    },
+    {
+     "nom": "Red bell pepper",
+     "detail": "raw",
+     "grams_total_recipe": 238
+    },
+    {
+     "nom": "Mayonnaise",
+     "detail": "regular, salted",
+     "grams_total_recipe": 41
+    }
+   ],
+   "directions": [
+    "Mix the pork with oyster sauce and soy sauce in a bowl. Marinate overnight if desired.",
+    "Heat a saucepan over high heat and fry the pork in batches if necessary to prevent overcrowding.",
+    "Combine the cooked pork, shredded lettuce, carrots, red bell peppers, and mayonnaise in a salad bowl and serve."
+   ],
+   "macros_par_portion": {
+    "calories": 444,
+    "proteines": 35,
+    "glucides": 8,
+    "lipides": 29,
+    "fibres": 3
+   },
+   "notes": "glucides = total carbs (net 6 + fibre 3 = 9 vs 8, site rounding). Portion 274 g. Pork weight is COOKED shoulder (échine). Fat-heavy (29 g)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/lentil-salad-5198366",
+   "nom_en": "Lentil Salad",
+   "type_propose": "dejeuner",
+   "servings": 2,
+   "prep_min": 5,
+   "cook_min": 20,
+   "ingredients": [
+    {
+     "nom": "Lentils",
+     "detail": "raw",
+     "grams_total_recipe": 192
+    },
+    {
+     "nom": "Water",
+     "detail": "",
+     "grams_total_recipe": 414
+    },
+    {
+     "nom": "Pears",
+     "detail": "raw",
+     "grams_total_recipe": 107
+    },
+    {
+     "nom": "Hazelnuts",
+     "detail": "chopped",
+     "grams_total_recipe": 57
+    },
+    {
+     "nom": "Feta cheese",
+     "detail": "crumbled",
+     "grams_total_recipe": 38
+    },
+    {
+     "nom": "Arugula",
+     "detail": "raw",
+     "grams_total_recipe": 40
+    },
+    {
+     "nom": "Newman's Own balsamic vinaigrette",
+     "detail": "low fat, McDonald's",
+     "grams_total_recipe": 15
+    }
+   ],
+   "directions": [
+    "Rinse the lentils under cool water in a fine-mesh sieve, removing any debris.",
+    "Bring a pot of water to a boil, add the lentils, return to a gentle boil, then cover and cook until tender, about 20 minutes. Drain well and spread on a tray for 5–10 minutes to steam-dry and cool slightly.",
+    "While the lentils cook, dice the pears. In a large bowl, combine the warm (not hot) lentils with pears, hazelnuts, feta, and arugula.",
+    "Drizzle with the balsamic vinaigrette and toss gently to coat. Taste and adjust to preference, then serve."
+   ],
+   "macros_par_portion": {
+    "calories": 610,
+    "proteines": 31,
+    "glucides": 77,
+    "lipides": 23,
+    "fibres": 15
+   },
+   "notes": "glucides = total carbs (net 62 + fibre 15). Portion 432 g. Vegetarian. Branded low-fat balsamic vinaigrette (15 g) can be replaced by any light balsamic vinaigrette."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/turkey-hummus-wrap-4993995",
+   "nom_en": "Turkey Hummus Wrap",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 10,
+   "cook_min": null,
+   "ingredients": [
+    {
+     "nom": "Flour tortillas",
+     "detail": "medium",
+     "grams_total_recipe": 46
+    },
+    {
+     "nom": "Turkey",
+     "detail": "sliced, light meat",
+     "grams_total_recipe": 116
+    },
+    {
+     "nom": "Romaine lettuce",
+     "detail": "raw",
+     "grams_total_recipe": 24
+    },
+    {
+     "nom": "Avocado",
+     "detail": "raw",
+     "grams_total_recipe": 101
+    },
+    {
+     "nom": "Tomatoes",
+     "detail": "red, raw",
+     "grams_total_recipe": 62
+    },
+    {
+     "nom": "American cheese",
+     "detail": "pasteurized process, low fat",
+     "grams_total_recipe": 42
+    },
+    {
+     "nom": "Hummus",
+     "detail": "commercially prepared",
+     "grams_total_recipe": 30
+    }
+   ],
+   "directions": [
+    "Spread the hummus evenly over the tortilla.",
+    "Layer the tortilla with turkey slices, shredded lettuce, avocado slices, tomato slices, and cheese.",
+    "Roll up the tortilla tightly and enjoy."
+   ],
+   "macros_par_portion": {
+    "calories": 552,
+    "proteines": 38,
+    "glucides": 44,
+    "lipides": 26,
+    "fibres": 11
+   },
+   "notes": "glucides = total carbs (net 33 + fibre 11). No cooking. 'American cheese' = processed low-fat cheese slices (tranches de fromage fondu allégé)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/french-style-cod-with-black-olives-3232743",
+   "nom_en": "French Style Cod with Black Olives",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 15,
+   "cook_min": 15,
+   "ingredients": [
+    {
+     "nom": "Butter",
+     "detail": "unsalted",
+     "grams_total_recipe": 14
+    },
+    {
+     "nom": "Bacon",
+     "detail": "raw, cured pork",
+     "grams_total_recipe": 12
+    },
+    {
+     "nom": "Onion",
+     "detail": "raw",
+     "grams_total_recipe": 28
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Atlantic cod",
+     "detail": "raw",
+     "grams_total_recipe": 128
+    },
+    {
+     "nom": "Tomatoes",
+     "detail": "canned, packed in tomato juice",
+     "grams_total_recipe": 240
+    },
+    {
+     "nom": "Black olives",
+     "detail": "ripe, canned",
+     "grams_total_recipe": 13
+    },
+    {
+     "nom": "Mozzarella cheese",
+     "detail": "part-skim",
+     "grams_total_recipe": 56
+    },
+    {
+     "nom": "Pine nuts",
+     "detail": "dried",
+     "grams_total_recipe": 8
+    },
+    {
+     "nom": "Basil",
+     "detail": "",
+     "grams_total_recipe": 0.5
+    }
+   ],
+   "directions": [
+    "Melt the butter in a large frying pan over medium-high heat. Add the bacon and onion and fry for 2 minutes, or until the onion is starting to soften and the bacon is cooked. Add the garlic and cook for another 30 seconds.",
+    "Add the cod to the pan and fry, turning occasionally, for 2 minutes. Add the tomatoes and bring to a boil. Reduce the heat to a simmer and cook for 2–3 minutes.",
+    "Add the olives and mozzarella cheese. Remove the pan from the heat and allow the mozzarella to melt from the residual heat.",
+    "Serve the cod topped with the pine nuts and basil leaves. Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 524,
+    "proteines": 42,
+    "glucides": 16,
+    "lipides": 34,
+    "fibres": 6
+   },
+   "notes": "glucides = total carbs (net 10 + fibre 6). White fish (cabillaud). Fat 34 g (butter, bacon, mozzarella, pine nuts). Also suits dinner."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/mongolian-beef-4948299",
+   "nom_en": "Mongolian Beef",
+   "type_propose": "dejeuner",
+   "servings": 4,
+   "prep_min": 10,
+   "cook_min": 20,
+   "ingredients": [
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 54
+    },
+    {
+     "nom": "Ginger root",
+     "detail": "raw",
+     "grams_total_recipe": 24
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 6
+    },
+    {
+     "nom": "Tamari soy sauce",
+     "detail": "",
+     "grams_total_recipe": 144
+    },
+    {
+     "nom": "Water",
+     "detail": "",
+     "grams_total_recipe": 118
+    },
+    {
+     "nom": "Honey",
+     "detail": "",
+     "grams_total_recipe": 168
+    },
+    {
+     "nom": "Crushed red pepper flakes",
+     "detail": "",
+     "grams_total_recipe": 0.3
+    },
+    {
+     "nom": "Flank steak",
+     "detail": "beef flank, raw, lean, trimmed to 0\" fat",
+     "grams_total_recipe": 454
+    },
+    {
+     "nom": "Cornstarch",
+     "detail": "",
+     "grams_total_recipe": 31
+    },
+    {
+     "nom": "Scallions",
+     "detail": "raw",
+     "grams_total_recipe": 50
+    }
+   ],
+   "directions": [
+    "Heat half of the olive oil in a saucepan over medium heat. Add ginger and garlic, sauté for 30 seconds, then quickly add soy sauce and water to prevent the garlic from scorching.",
+    "Add honey and red pepper flakes, increase the heat, and simmer for 3 to 4 minutes until the sauce thickens. Remove from heat and set aside.",
+    "Combine beef strips and cornstarch in a zip-top bag or shallow dish, tossing until all beef strips are evenly coated.",
+    "Heat the remaining olive oil in a large frying pan or wok until hot but not smoking. Add beef and stir-fry for 2 minutes until it begins to darken around the edges, stirring occasionally.",
+    "Remove the meat from the pan and clean the pan. Return the pan to the heat, add the meat, and simmer for one minute. Add the sauce and cook for one minute, stirring constantly. Add the scallions and cook for an additional minute.",
+    "Transfer to a plate, leaving excess sauce in the pan, and serve."
+   ],
+   "macros_par_portion": {
+    "calories": 486,
+    "proteines": 29,
+    "glucides": 46,
+    "lipides": 22,
+    "fibres": 1
+   },
+   "notes": "glucides = total carbs (net 45 + fibre 1). Flank steak = bavette. CAVEAT: sauce is sugar-heavy (168 g honey for 4 servings, ~42 g/serving) and salty; served without rice (add a starch for a full lunch)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/chickpea-salad-950242",
+   "nom_en": "Chickpea Salad",
+   "type_propose": "dejeuner",
+   "servings": 2,
+   "prep_min": 15,
+   "cook_min": null,
+   "ingredients": [
+    {
+     "nom": "Chickpeas",
+     "detail": "canned",
+     "grams_total_recipe": 480
+    },
+    {
+     "nom": "Tomatoes",
+     "detail": "red, raw",
+     "grams_total_recipe": 246
+    },
+    {
+     "nom": "Onion",
+     "detail": "raw",
+     "grams_total_recipe": 110
+    },
+    {
+     "nom": "Cucumber",
+     "detail": "raw, with peel",
+     "grams_total_recipe": 151
+    },
+    {
+     "nom": "Black olives",
+     "detail": "ripe, canned",
+     "grams_total_recipe": 34
+    },
+    {
+     "nom": "Feta cheese",
+     "detail": "crumbled",
+     "grams_total_recipe": 150
+    },
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 14
+    },
+    {
+     "nom": "Lemon juice",
+     "detail": "",
+     "grams_total_recipe": 15
+    },
+    {
+     "nom": "Spearmint",
+     "detail": "",
+     "grams_total_recipe": 0.05
+    },
+    {
+     "nom": "Cilantro",
+     "detail": "raw, coriander leaves",
+     "grams_total_recipe": 1
+    }
+   ],
+   "directions": [
+    "Drain chickpeas. Chop tomatoes, onion, and cucumber. Slice olives.",
+    "Toss all ingredients together in a bowl and mix well.",
+    "Serve immediately or chill until ready.",
+    "Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 545,
+    "proteines": 25,
+    "glucides": 50,
+    "lipides": 30,
+    "fibres": 14
+   },
+   "notes": "glucides = total carbs (net 36 + fibre 14). Vegetarian, no cooking. Page credits a French source (jojocuisine.fr, salade de pois chiches et feta)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/chicken-wraps-4932999",
+   "nom_en": "Chicken Wraps",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 10,
+   "cook_min": 20,
+   "ingredients": [
+    {
+     "nom": "Chicken breast",
+     "detail": "raw, skinless",
+     "grams_total_recipe": 113
+    },
+    {
+     "nom": "Romaine lettuce",
+     "detail": "raw",
+     "grams_total_recipe": 56
+    },
+    {
+     "nom": "Parmesan cheese",
+     "detail": "shredded",
+     "grams_total_recipe": 5
+    },
+    {
+     "nom": "Tomatoes",
+     "detail": "red, raw",
+     "grams_total_recipe": 62
+    },
+    {
+     "nom": "Mayonnaise",
+     "detail": "regular, salted",
+     "grams_total_recipe": 14
+    },
+    {
+     "nom": "Flour tortillas",
+     "detail": "medium",
+     "grams_total_recipe": 46
+    }
+   ],
+   "directions": [
+    "Preheat oven to 400°F. Place chicken on a foil-lined pan and bake for about 15-20 minutes or until it is cooked through, no longer pink, and juices run clear. Chop up into bite-sized pieces.",
+    "Place first 5 ingredients in a large bowl and mix together well, until mayonnaise is evenly distributed. Spoon onto tortillas; roll up. Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 406,
+    "proteines": 32,
+    "glucides": 28,
+    "lipides": 18,
+    "fibres": 3
+   },
+   "notes": "glucides = total carbs (net 25 + fibre 3). Serving = 1 wrap."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/tuna-wok-905672",
+   "nom_en": "Tuna Wok",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 10,
+   "ingredients": [
+    {
+     "nom": "Mixed vegetables",
+     "detail": "frozen",
+     "grams_total_recipe": 426
+    },
+    {
+     "nom": "Light tuna",
+     "detail": "canned in water, drained",
+     "grams_total_recipe": 165
+    },
+    {
+     "nom": "Tamari soy sauce",
+     "detail": "",
+     "grams_total_recipe": 36
+    },
+    {
+     "nom": "Worcestershire sauce",
+     "detail": "",
+     "grams_total_recipe": 17
+    },
+    {
+     "nom": "Lemon juice",
+     "detail": "bottled",
+     "grams_total_recipe": 15
+    },
+    {
+     "nom": "Chili powder",
+     "detail": "",
+     "grams_total_recipe": 3
+    }
+   ],
+   "directions": [
+    "Put all ingredients in a Wok pan on medium heat. Cover the pan and let it cook for 10 minutes. Stir every two minutes.",
+    "Serve with additional soy sauce, if desired. Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 494,
+    "proteines": 50,
+    "glucides": 65,
+    "lipides": 4,
+    "fibres": 18
+   },
+   "notes": "glucides = total carbs (net 47 + fibre 18). Very lean. Frozen mixed vegetables (US mix: corn, peas, carrots, green beans) drive the carbs. High sodium (soy + Worcestershire)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/greek-chicken-4930660",
+   "nom_en": "Greek Chicken",
+   "type_propose": "diner",
+   "servings": 6,
+   "prep_min": 15,
+   "cook_min": 45,
+   "ingredients": [
+    {
+     "nom": "Chicken breast",
+     "detail": "raw, skinless",
+     "grams_total_recipe": 680
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 0.4
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 0.1
+    },
+    {
+     "nom": "Spinach",
+     "detail": "frozen, chopped or leaf",
+     "grams_total_recipe": 284
+    },
+    {
+     "nom": "Feta cheese",
+     "detail": "",
+     "grams_total_recipe": 227
+    },
+    {
+     "nom": "Mayonnaise",
+     "detail": "regular, salted",
+     "grams_total_recipe": 110
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Paprika",
+     "detail": "",
+     "grams_total_recipe": 1
+    }
+   ],
+   "directions": [
+    "Preheat oven to 325°F. If chicken breasts are thick, pound them to even thickness. Season with salt and pepper.",
+    "Defrost and drain spinach. Combine with mayonnaise, minced garlic, spinach, and feta cheese.",
+    "Slice and stuff chicken breasts with spinach mixture, securing with toothpicks. Sprinkle with paprika and bake for 45 minutes or until done."
+   ],
+   "macros_par_portion": {
+    "calories": 376,
+    "proteines": 33,
+    "glucides": 4,
+    "lipides": 25,
+    "fibres": 1
+   },
+   "notes": "glucides = total carbs (net 2 + fibre 1 = 3 vs 4, site rounding). Portion 218 g. Oven dish, 60 min total (above 40 min preference). Low-carb; add a side for a full dinner."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/balsamic-pork-chops-4959247",
+   "nom_en": "Balsamic Pork Chops",
+   "type_propose": "diner",
+   "servings": 4,
+   "prep_min": 15,
+   "cook_min": 20,
+   "ingredients": [
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 27
+    },
+    {
+     "nom": "Onion",
+     "detail": "raw",
+     "grams_total_recipe": 110
+    },
+    {
+     "nom": "Pork loin center loin chop",
+     "detail": "bone-in, raw (weight without bone)",
+     "grams_total_recipe": 796
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 0.4
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 0.1
+    },
+    {
+     "nom": "Garlic powder",
+     "detail": "",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Cherry tomatoes",
+     "detail": "red, raw",
+     "grams_total_recipe": 298
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 9
+    },
+    {
+     "nom": "Basil",
+     "detail": "dried",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Balsamic vinegar",
+     "detail": "",
+     "grams_total_recipe": 13
+    },
+    {
+     "nom": "Feta cheese",
+     "detail": "",
+     "grams_total_recipe": 113
+    }
+   ],
+   "directions": [
+    "Heat 1 tablespoon of olive oil in a skillet over medium heat. Add the onion and cook until golden brown. Remove and set aside.",
+    "In the same skillet, heat 1/2 tablespoon of olive oil. Season the pork chops with salt, pepper, and garlic powder. Cook the chops for 5-8 minutes per side, depending on thickness, until desired doneness. Remove and keep warm.",
+    "Add the remaining olive oil to the skillet. Return the onions to the skillet and add the tomatoes, minced garlic, and basil. Cook and stir for about 3 minutes, until the tomatoes are tender. Mix in the balsamic vinegar and season with salt and pepper. Top the pork chops with the onion and tomato mixture, and sprinkle with feta cheese before serving."
+   ],
+   "macros_par_portion": {
+    "calories": 507,
+    "proteines": 47,
+    "glucides": 9,
+    "lipides": 31,
+    "fibres": 2
+   },
+   "notes": "glucides = total carbs (net 7 + fibre 2). Portion 343 g. Pork weight 796 g is 'without refuse' (edible part of 4 bone-in chops = côtes de porc)."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/cod-with-garlic-asparagus-5095808",
+   "nom_en": "Cod with Garlic Asparagus",
+   "type_propose": "diner",
+   "servings": 1,
+   "prep_min": 10,
+   "cook_min": 15,
+   "ingredients": [
+    {
+     "nom": "Atlantic cod",
+     "detail": "raw",
+     "grams_total_recipe": 170
+    },
+    {
+     "nom": "Asparagus",
+     "detail": "raw",
+     "grams_total_recipe": 128
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 6
+    },
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 27
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 1
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 0.4
+    }
+   ],
+   "directions": [
+    "Heat half of olive oil in a large skillet over medium-high heat.",
+    "Season the cod fillets with salt and pepper on both sides.",
+    "Place the cod fillets in the skillet and cook for 4-5 minutes on each side, or until the fish is opaque and flakes easily with a fork. Remove the cod from the skillet and set aside.",
+    "In the same skillet, add the remaining olive oil and the minced garlic. Sauté for about 1 minute until fragrant.",
+    "Add the trimmed asparagus to the skillet and sauté for 4-5 minutes, stirring occasionally, until the asparagus is tender-crisp.",
+    "Serve the cod fillets alongside the garlic asparagus. Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 415,
+    "proteines": 34,
+    "glucides": 8,
+    "lipides": 28,
+    "fibres": 3
+   },
+   "notes": "glucides = total carbs (net 5 + fibre 3). 6 ingredients. Most calories from 27 g olive oil; reduce oil to lighten."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/seared-cod-with-minted-peas-5095816",
+   "nom_en": "Seared Cod with Minted Peas",
+   "type_propose": "diner",
+   "servings": 1,
+   "prep_min": 10,
+   "cook_min": 15,
+   "ingredients": [
+    {
+     "nom": "Atlantic cod",
+     "detail": "raw",
+     "grams_total_recipe": 170
+    },
+    {
+     "nom": "Green peas",
+     "detail": "frozen",
+     "grams_total_recipe": 134
+    },
+    {
+     "nom": "Spearmint",
+     "detail": "",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Lemon juice",
+     "detail": "",
+     "grams_total_recipe": 15
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 14
+    },
+    {
+     "nom": "Butter",
+     "detail": "unsalted",
+     "grams_total_recipe": 5
+    }
+   ],
+   "directions": [
+    "Season the cod fillets with salt on both sides.",
+    "Heat a non-stick skillet over medium-high heat and add oil.",
+    "Place the cod fillets in the skillet and cook for about 3-4 minutes on each side, or until the fish is opaque and flakes easily with a fork.",
+    "While the cod is cooking, bring a small pot of water to a boil and add the peas. Cook for 2-3 minutes until tender.",
+    "Drain the peas and return them to the pot. Add chopped mint, lemon juice, butter, and a pinch of salt. Stir to combine.",
+    "Serve the cod with the minted peas on the side, drizzling any remaining lemon juice over the fish."
+   ],
+   "macros_par_portion": {
+    "calories": 400,
+    "proteines": 38,
+    "glucides": 20,
+    "lipides": 19,
+    "fibres": 6
+   },
+   "notes": "glucides = total carbs (net 13 + fibre 6 = 19 vs 20, site rounding). 7 ingredients."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/garbanzo-salad-5064474",
+   "nom_en": "Garbanzo Salad",
+   "type_propose": "diner",
+   "servings": 4,
+   "prep_min": 5,
+   "cook_min": 10,
+   "ingredients": [
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 14
+    },
+    {
+     "nom": "Chicken breast",
+     "detail": "raw, skinless",
+     "grams_total_recipe": 236
+    },
+    {
+     "nom": "Chickpeas",
+     "detail": "canned",
+     "grams_total_recipe": 454
+    },
+    {
+     "nom": "Cucumber",
+     "detail": "raw, with peel",
+     "grams_total_recipe": 104
+    },
+    {
+     "nom": "Onion",
+     "detail": "raw",
+     "grams_total_recipe": 70
+    },
+    {
+     "nom": "Spearmint",
+     "detail": "",
+     "grams_total_recipe": 91
+    },
+    {
+     "nom": "Greek yogurt",
+     "detail": "plain, nonfat",
+     "grams_total_recipe": 240
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 6
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 6
+    },
+    {
+     "nom": "Spinach",
+     "detail": "raw",
+     "grams_total_recipe": 60
+    },
+    {
+     "nom": "Feta cheese",
+     "detail": "crumbled",
+     "grams_total_recipe": 150
+    },
+    {
+     "nom": "Lemon",
+     "detail": "raw, with peel",
+     "grams_total_recipe": 108
+    }
+   ],
+   "directions": [
+    "Heat oil in a pan over medium-high heat. Add chicken and cook 5-10 minutes per side, or until chicken is cooked through, no longer pink, and the juices run clear. Remove from heat, let rest 5 minutes, and then cut into bite sized pieces.",
+    "Drain chickpeas and chop cucumber and onion.",
+    "Toss all ingredients together in a bowl and squeeze with the juice of 1 lemon.",
+    "Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 367,
+    "proteines": 32,
+    "glucides": 27,
+    "lipides": 16,
+    "fibres": 9
+   },
+   "notes": "glucides = total carbs (net 19 + fibre 9 = 28 vs 27, site rounding). Portion 385 g. Chicken + chickpea salad, 12 ingredients."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/turkey-burger-5203798",
+   "nom_en": "Turkey Burger",
+   "type_propose": "diner",
+   "servings": 8,
+   "prep_min": 10,
+   "cook_min": 14,
+   "ingredients": [
+    {
+     "nom": "Zucchini",
+     "detail": "raw, with skin",
+     "grams_total_recipe": 784
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 6
+    },
+    {
+     "nom": "Onion powder",
+     "detail": "",
+     "grams_total_recipe": 5
+    },
+    {
+     "nom": "Garlic powder",
+     "detail": "",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Basil",
+     "detail": "dried",
+     "grams_total_recipe": 1
+    },
+    {
+     "nom": "Oregano",
+     "detail": "dried",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Ground turkey",
+     "detail": "raw",
+     "grams_total_recipe": 1140
+    },
+    {
+     "nom": "Hamburger bun",
+     "detail": "mixed-grain",
+     "grams_total_recipe": 344
+    },
+    {
+     "nom": "Romaine lettuce",
+     "detail": "raw",
+     "grams_total_recipe": 224
+    },
+    {
+     "nom": "Tomatoes",
+     "detail": "red, raw",
+     "grams_total_recipe": 320
+    }
+   ],
+   "directions": [
+    "Preheat the broiler on high and adjust the oven racks so the burgers will be about 2 inches from the heat.",
+    "In a large bowl, combine grated zucchini, salt, onion powder, garlic powder, dried basil, oregano, pepper, and ground turkey. Mix well and form into equal sized patties.",
+    "Place the burgers in the oven and broil for 7 minutes. Carefully flip each burger and broil for another 7 minutes.",
+    "Serve the burgers on hamburger buns topped with lettuce and tomato slices."
+   ],
+   "macros_par_portion": {
+    "calories": 358,
+    "proteines": 34,
+    "glucides": 26,
+    "lipides": 14,
+    "fibres": 4
+   },
+   "notes": "glucides = total carbs (net 22 + fibre 4). Serving = 1 burger. Makes 8 (halve for a household). Ground turkey = dinde hachée."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/hoisin-beef-skewers-4938433",
+   "nom_en": "Hoisin Beef Skewers",
+   "type_propose": "diner",
+   "servings": 20,
+   "prep_min": 140,
+   "cook_min": 5,
+   "ingredients": [
+    {
+     "nom": "Flank steak",
+     "detail": "beef flank, raw, lean, trimmed to 0\" fat",
+     "grams_total_recipe": 851
+    },
+    {
+     "nom": "Hoisin sauce",
+     "detail": "",
+     "grams_total_recipe": 128
+    },
+    {
+     "nom": "Lime juice",
+     "detail": "",
+     "grams_total_recipe": 30
+    },
+    {
+     "nom": "Honey",
+     "detail": "",
+     "grams_total_recipe": 21
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Ginger root",
+     "detail": "raw",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Sesame oil",
+     "detail": "",
+     "grams_total_recipe": 5
+    },
+    {
+     "nom": "Sriracha",
+     "detail": "",
+     "grams_total_recipe": 5
+    },
+    {
+     "nom": "Crushed red pepper flakes",
+     "detail": "",
+     "grams_total_recipe": 0.2
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 0.5
+    },
+    {
+     "nom": "Sesame seeds",
+     "detail": "whole, dried",
+     "grams_total_recipe": 9
+    },
+    {
+     "nom": "Scallions",
+     "detail": "raw",
+     "grams_total_recipe": 30
+    },
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 5
+    }
+   ],
+   "directions": [
+    "Thinly slice the flank steak across the grain at an angle, creating slices 1 inch wide by 1/4 inch thick.",
+    "In a bowl, whisk together hoisin sauce, lime juice, honey, garlic, ginger, sesame oil, sriracha, crushed red pepper flakes, and black pepper. Pour the marinade into a resealable plastic bag, add the sliced flank steak, coat well, squeeze out excess air, and seal the bag. Marinate in the refrigerator for 2 to 12 hours.",
+    "Preheat an outdoor grill to medium-high heat and lightly oil the grate. Remove the flank steak from the marinade and discard the marinade. Thread the meat onto soaked skewers.",
+    "Grill the skewers until cooked to your desired doneness, about 2 to 3 minutes per side for well done. Garnish with toasted sesame seeds and chopped scallions before serving."
+   ],
+   "macros_par_portion": {
+    "calories": 365,
+    "proteines": 38,
+    "glucides": 17,
+    "lipides": 16,
+    "fibres": 1
+   },
+   "notes": "CAUTION servings: page says 'Makes 20 servings' (20 skewers) but the Nutrition Facts are 'For 4 skewers' (218 g). macros_par_portion = 4 skewers; the recipe (851 g beef) yields ~5 such portions. glucides = total carbs (net 16 + fibre 1). Prep 140 min includes marinating (2-12 h); active time ~15 min. Flank steak = bavette."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/easy-pork-tenderloin-5119737",
+   "nom_en": "Easy Pork Tenderloin",
+   "type_propose": "diner",
+   "servings": 6,
+   "prep_min": 10,
+   "cook_min": 35,
+   "ingredients": [
+    {
+     "nom": "Breadcrumbs",
+     "detail": "dry, grated, plain",
+     "grams_total_recipe": 108
+    },
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 108
+    },
+    {
+     "nom": "Pork tenderloin",
+     "detail": "raw",
+     "grams_total_recipe": 906
+    }
+   ],
+   "directions": [
+    "Preheat the oven to 425°F (220°C).",
+    "In a bowl, mix the bread crumbs and olive oil until the mixture is moist enough to adhere to the meat. Place the pork on a shallow baking sheet and press the crumb mixture onto all sides of the meat, ensuring it is about 1/4 inch thick.",
+    "Bake for at least 35 minutes, or until a meat thermometer reads 165°F (75°C) and the pork shows no pink when cut. Allow the pork to rest for 10 minutes before slicing into 1/2 inch pieces."
+   ],
+   "macros_par_portion": {
+    "calories": 411,
+    "proteines": 34,
+    "glucides": 13,
+    "lipides": 24,
+    "fibres": 1
+   },
+   "notes": "glucides = total carbs (net 12 + fibre 1). Portion 187 g. 3 ingredients, oven. Pork tenderloin = filet mignon de porc. 108 g olive oil in the crust drives the fat; add vegetables on the side."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/yogurt-strawberries-3266362",
+   "nom_en": "Yogurt & Strawberries",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": null,
+   "ingredients": [
+    {
+     "nom": "Greek yogurt",
+     "detail": "plain, nonfat",
+     "grams_total_recipe": 227
+    },
+    {
+     "nom": "Strawberries",
+     "detail": "raw",
+     "grams_total_recipe": 152
+    }
+   ],
+   "directions": [
+    "Mixed sliced strawberries with yogurt and enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 182,
+    "proteines": 24,
+    "glucides": 20,
+    "lipides": 1,
+    "fibres": 3
+   },
+   "notes": "glucides = total carbs (net 17 + fibre 3). Nonfat Greek yogurt ~ skyr / fromage blanc 0%."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/italian-quinoa-lentils-4983459",
+   "nom_en": "Italian Quinoa & Lentils",
+   "type_propose": "diner",
+   "servings": 4,
+   "prep_min": 5,
+   "cook_min": 40,
+   "ingredients": [
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 14
+    },
+    {
+     "nom": "Onion",
+     "detail": "raw",
+     "grams_total_recipe": 70
+    },
+    {
+     "nom": "Garlic",
+     "detail": "raw",
+     "grams_total_recipe": 12
+    },
+    {
+     "nom": "White mushrooms",
+     "detail": "raw",
+     "grams_total_recipe": 210
+    },
+    {
+     "nom": "Lentils",
+     "detail": "raw",
+     "grams_total_recipe": 192
+    },
+    {
+     "nom": "Quinoa",
+     "detail": "raw",
+     "grams_total_recipe": 128
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 2
+    },
+    {
+     "nom": "Thyme",
+     "detail": "dried",
+     "grams_total_recipe": 1
+    },
+    {
+     "nom": "Vegetable broth",
+     "detail": "from bouillon, low-sodium",
+     "grams_total_recipe": 960
+    },
+    {
+     "nom": "Sun-dried tomatoes",
+     "detail": "",
+     "grams_total_recipe": 27
+    },
+    {
+     "nom": "Spinach",
+     "detail": "raw",
+     "grams_total_recipe": 120
+    },
+    {
+     "nom": "Lemon juice",
+     "detail": "",
+     "grams_total_recipe": 3
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 0.1
+    },
+    {
+     "nom": "Nutritional yeast",
+     "detail": "vegan",
+     "grams_total_recipe": 8
+    }
+   ],
+   "directions": [
+    "Heat the olive oil in a large pot or Dutch oven over medium heat. Add the chopped onion and cook, stirring frequently, until the onion is clear and soft, about 5 minutes.",
+    "Add the garlic and mushrooms. Cook until the mushrooms have released their juices and reduced in size, about 4-5 minutes.",
+    "Add the lentils, quinoa, salt, thyme, and broth. Bring the mixture to a boil, then reduce heat to low. Cover and simmer for 30 minutes, or until the lentils are tender. If all of the liquid has been absorbed, add a splash of extra broth or water.",
+    "Add the sun-dried tomatoes and spinach to the pot. Stir until the spinach has wilted completely into the quinoa and lentil mixture. Add a splash of lemon juice, along with black pepper to taste and extra salt as needed."
+   ],
+   "macros_par_portion": {
+    "calories": 387,
+    "proteines": 23,
+    "glucides": 63,
+    "lipides": 6,
+    "fibres": 10
+   },
+   "notes": "glucides = total carbs (net 53 + fibre 10). Portion 436 g. Vegan one-pot, 45 min. Nutritional yeast (8 g, optional) is the only uncommon ingredient in France."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/cottage-cheese-raspberries-3263847",
+   "nom_en": "Cottage Cheese & Raspberries",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": null,
+   "ingredients": [
+    {
+     "nom": "Cottage cheese",
+     "detail": "1% milkfat",
+     "grams_total_recipe": 226
+    },
+    {
+     "nom": "Raspberries",
+     "detail": "raw",
+     "grams_total_recipe": 62
+    }
+   ],
+   "directions": [
+    "Combine cottage cheese and raspberries; serve."
+   ],
+   "macros_par_portion": {
+    "calories": 195,
+    "proteines": 29,
+    "glucides": 13,
+    "lipides": 3,
+    "fibres": 4
+   },
+   "notes": "glucides = total carbs (net 9 + fibre 4). Portion 288 g."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/carrots-with-hummus-34111",
+   "nom_en": "Carrots with Hummus",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 1,
+   "cook_min": null,
+   "ingredients": [
+    {
+     "nom": "Hummus",
+     "detail": "commercially prepared",
+     "grams_total_recipe": 75
+    },
+    {
+     "nom": "Carrots",
+     "detail": "raw",
+     "grams_total_recipe": 122
+    }
+   ],
+   "directions": [
+    "Dip carrots into hummus, eat."
+   ],
+   "macros_par_portion": {
+    "calories": 175,
+    "proteines": 7,
+    "glucides": 22,
+    "lipides": 7,
+    "fibres": 8
+   },
+   "notes": "glucides = total carbs (net 14 + fibre 8). Portion 197 g."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/roasted-chickpeas-34584",
+   "nom_en": "Roasted Chickpeas",
+   "type_propose": "collation",
+   "servings": 2,
+   "prep_min": 5,
+   "cook_min": 30,
+   "ingredients": [
+    {
+     "nom": "Chickpeas",
+     "detail": "canned",
+     "grams_total_recipe": 480
+    },
+    {
+     "nom": "Olive oil",
+     "detail": "",
+     "grams_total_recipe": 14
+    }
+   ],
+   "directions": [
+    "Rinse, drain and dry chick peas.",
+    "Toss with enough olive oil to evenly coat peas",
+    "Roast them like you would any vegetable—at about 400ºF for 30 to 40 minutes—on a baking sheet",
+    "Sprinkle some Indian or hot pepper spices to add flavor"
+   ],
+   "macros_par_portion": {
+    "calories": 271,
+    "proteines": 12,
+    "glucides": 32,
+    "lipides": 11,
+    "fibres": 11
+   },
+   "notes": "glucides = total carbs (net 22 + fibre 11 = 33 vs 32, site rounding). Serving = 1 cup. Oven, batch-friendly."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/egg-muffins-942525",
+   "nom_en": "Egg Muffins",
+   "type_propose": "collation",
+   "servings": 6,
+   "prep_min": 5,
+   "cook_min": 18,
+   "ingredients": [
+    {
+     "nom": "Red bell pepper",
+     "detail": "raw",
+     "grams_total_recipe": 119
+    },
+    {
+     "nom": "Onion",
+     "detail": "raw",
+     "grams_total_recipe": 110
+    },
+    {
+     "nom": "Tomatoes",
+     "detail": "red, raw",
+     "grams_total_recipe": 123
+    },
+    {
+     "nom": "Spinach",
+     "detail": "raw",
+     "grams_total_recipe": 15
+    },
+    {
+     "nom": "Egg",
+     "detail": "whole",
+     "grams_total_recipe": 300
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 0.4
+    },
+    {
+     "nom": "Cheddar cheese",
+     "detail": "shredded",
+     "grams_total_recipe": 113
+    }
+   ],
+   "directions": [
+    "Preheat the oven to 400 degrees F.",
+    "Wash and dice the pepper, onions, spinach, and tomatoes and put them in a large mixing bowl.",
+    "Add the eggs, cheese, and salt and mix well.",
+    "Grease the muffin tin with oil and pour the egg mixture evenly into the muffin slots. (If you think they might still stick to the pan use some muffin cups)",
+    "Pop the tray into the oven for 15-18 minutes or until the tops are firm to the touch. Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 166,
+    "proteines": 11,
+    "glucides": 4,
+    "lipides": 11,
+    "fibres": 1
+   },
+   "notes": "glucides = total carbs (net 3 + fibre 1). Serving = 1 muffin (130 g). Two muffins also make a breakfast."
+  },
+  {
+   "url": "https://www.eatthismuch.com/calories/tuna-stuffed-tomato-4841989",
+   "nom_en": "Tuna-Stuffed Tomato",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": null,
+   "ingredients": [
+    {
+     "nom": "Tomatoes",
+     "detail": "red, raw",
+     "grams_total_recipe": 182
+    },
+    {
+     "nom": "Light tuna",
+     "detail": "canned in water, drained",
+     "grams_total_recipe": 165
+    },
+    {
+     "nom": "Dill weed",
+     "detail": "dried",
+     "grams_total_recipe": 0.5
+    },
+    {
+     "nom": "Salt",
+     "detail": "table",
+     "grams_total_recipe": 0.4
+    },
+    {
+     "nom": "Black pepper",
+     "detail": "ground",
+     "grams_total_recipe": 0.1
+    },
+    {
+     "nom": "Scallions",
+     "detail": "raw",
+     "grams_total_recipe": 15
+    },
+    {
+     "nom": "Cottage cheese",
+     "detail": "1% milkfat",
+     "grams_total_recipe": 113
+    }
+   ],
+   "directions": [
+    "Cut the tomato in half and carefully scoop out some of the interior to form a bowl shape.",
+    "Drain the tuna and mix it with chopped green onions, cottage cheese, dill, salt, and pepper. Stuff the mixture into the tomato halves and serve."
+   ],
+   "macros_par_portion": {
+    "calories": 262,
+    "proteines": 48,
+    "glucides": 12,
+    "lipides": 3,
+    "fibres": 3
+   },
+   "notes": "glucides = total carbs (net 9 + fibre 3). Portion 476 g. Very high protein; could also be a light lunch/dinner."
+  }
+ ]
+}

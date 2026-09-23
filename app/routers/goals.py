@@ -1,3 +1,4 @@
+import math
 from datetime import timedelta, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -86,6 +87,30 @@ def _linked_goal_progress(db: Session, user: models.User, goal: models.Goal, now
         percent = min(100, round((traveled / total_distance) * 100)) if total_distance > 0 else 100
         return {"current_value": current, "target_value": goal.target_value, "percent_override": percent}
 
+    if goal.linked_type == "savings_target":
+        # Économies déjà faites, et date à laquelle la cible sera atteinte au
+        # rythme actuel : dépense quotidienne évitée = somme, sur les
+        # substances, du prix unitaire fois la fréquence habituelle (même
+        # formule que services/savings.py, qui la multiplie par les jours).
+        total, _delta = compute_savings(db, user, now=now)
+        rythme = sum((s.unit_cost or 0) * (s.usual_frequency_per_day or 0) for s in user.substances)
+        restant = max(0.0, goal.target_value - total)
+        progression = {"current_value": round(total, 2), "target_value": goal.target_value,
+                       "daily_rate": round(rythme, 2)}
+        if restant <= 0:
+            progression["eta_days"] = 0
+            progression["eta_date"] = now.date().isoformat()
+        elif rythme > 0:
+            jours = math.ceil(restant / rythme)
+            progression["eta_days"] = jours
+            progression["eta_date"] = (now.date() + timedelta(days=jours)).isoformat()
+        else:
+            # Aucune substance chiffrée : la cible est inatteignable telle
+            # quelle, autant le dire plutôt que d'afficher une date fausse.
+            progression["eta_days"] = None
+            progression["eta_date"] = None
+        return progression
+
     if goal.linked_type == "strength_pr" and goal.linked_exercise_name:
         sessions = db.query(models.StrengthSession).filter(models.StrengthSession.user_id == user.id).all()
         max_weight = 0
@@ -117,6 +142,11 @@ def _serialize_goal(db: Session, user: models.User, goal: models.Goal, now) -> d
         "weight": goal.weight,
         "completed": goal.completed_at is not None or percent >= 100,
         "linked_type": goal.linked_type,
+        # Objectif d'économies : date d'atteinte au rythme actuel (None si
+        # aucune substance chiffrée).
+        "eta_days": linked.get("eta_days") if linked else None,
+        "eta_date": linked.get("eta_date") if linked else None,
+        "daily_rate": linked.get("daily_rate") if linked else None,
     }
 
 

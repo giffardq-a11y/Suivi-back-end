@@ -192,6 +192,40 @@ INGREDIENTS = [
     ("abricot_sec", "Abricots secs", r"code:13001", "epicerie", "g", 250),
     ("pruneau", "Pruneaux", r"code:13042", "epicerie", "g", 250),
     ("citron_vert", "Citron vert", r"code:13067", "primeur", "piece", 4),
+    # --- Complément du 23/09/2026 : import de recettes eatthismuch.com ---------
+    ("asperge", "Asperges vertes", r"code:20279", "primeur", "g", 500),
+    ("framboise", "Framboises", r"code:13015", "primeur", "g", 250),
+    ("myrtille", "Myrtilles", r"code:13028", "primeur", "g", 250),
+    ("radis", "Radis", r"code:20045", "primeur", "g", 250),
+    ("roquette", "Roquette", r"code:20217", "primeur", "g", 125),
+    ("poivron_jaune", "Poivron jaune", r"code:20168", "primeur", "g", 500),
+    ("legumes_surgeles", "Mélange de légumes surgelés", r"code:20101", "surgeles", "g", 1000),
+    ("tomate_sechee", "Tomates séchées", r"code:20189", "epicerie", "g", 150),
+    ("cheddar", "Cheddar", r"code:12726", "frais", "g", 200),
+    ("blanc_dinde", "Blanc de dinde en tranches", r"code:28964", "charcuterie", "g", 160),
+    ("houmous", "Houmous", r"code:25621", "frais", "g", 200),
+    ("mayonnaise", "Mayonnaise", r"code:11054", "epicerie", "g", 235),
+    ("maizena", "Fécule de maïs", r"code:9510", "epicerie", "g", 400),
+    ("chapelure", "Chapelure", r"code:7500", "epicerie", "g", 250),
+    ("pignon", "Pignons de pin", r"code:15025", "epicerie", "g", 100),
+    ("baguette", "Baguette", r"code:7001", "boulangerie", "g", 250),
+    ("pain_burger", "Pain à burger complet", r"code:7262", "boulangerie", "piece", 4),
+    # --- Complément du 23/09/2026 (3) : de quoi cuisiner japonais, coréen,
+    # libanais, mexicain, portugais et scandinave sans tout approximer.
+    ("miso", "Miso", r"code:20916", "epicerie", "g", 300),
+    ("nori", "Algues nori", r"code:20987", "epicerie", "g", 25),
+    ("vermicelle_riz", "Vermicelles de riz", r"code:9900", "epicerie", "g", 400),
+    ("huile_sesame", "Huile de sésame", r"code:17400", "epicerie", "ml", 250),
+    ("nuoc_mam", "Sauce nuoc-mâm", r"code:11194", "epicerie", "ml", 200),
+    ("piment", "Piment frais", r"code:20151", "primeur", "g", 100),
+    ("cayenne", "Piment de Cayenne", r"code:11088", "epicerie", "g", 40),
+    ("ciboulette", "Ciboulette", r"code:11003", "primeur", "g", 30),
+    ("agneau_gigot", "Gigot d'agneau", r"code:21502", "boucherie", "g", 500),
+    ("hareng", "Hareng", r"code:26011", "poissonnerie", "g", 300),
+    ("morue_salee", "Morue salée", r"code:26098", "poissonnerie", "g", 400),
+    ("pois_casse", "Pois cassés (secs)", r"code:20515", "epicerie", "g", 500),
+    ("kale", "Chou frisé (kale)", r"code:20218", "primeur", "g", 400),
+    ("feuille_brick", "Feuilles de brick", r"code:23430", "epicerie", "piece", 10),
 ]
 
 # Poids net moyen d'une pièce, pour les ingrédients qui s'achètent à l'unité :
@@ -211,6 +245,8 @@ POIDS_PIECE_G = {
     "citron": 60,
     "citron_vert": 50,
     "galette_riz": 9,
+    "pain_burger": 45,
+    "feuille_brick": 12,
 }
 
 PREFERES = ("cru", "crue", "nature", "frais", "fraîche", "sans sel", "non sucré")

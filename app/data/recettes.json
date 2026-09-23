@@ -1,5 +1,5 @@
 {
- "source": "Recettes rédigées pour ce projet ; macros calculées depuis app/data/ingredients.json (CIQUAL 2020, ANSES).",
+ "source": "Recettes rédigées pour ce projet ; macros calculées depuis app/data/ingredients.json (CIQUAL 2020, ANSES). Recettes marquées « origine » : reprises d'eatthismuch.com (macros annoncées conservées pour contrôle), recalculées avec CIQUAL.",
  "recettes": [
   {
    "id": "pdj-porridge-banane-amandes",
@@ -7136,6 +7136,3407 @@
     "rapide",
     "sans-cuisson",
     "vegetarien"
+   ]
+  },
+  {
+   "id": "dej-wok-poulet-legumes-riz-etm",
+   "nom": "Wok de poulet mariné, légumes et riz",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 18
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 4
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    },
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 114
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 3
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 50
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 82
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 52
+    },
+    {
+     "cle": "brocoli",
+     "quantite_g": 46
+    },
+    {
+     "cle": "maizena",
+     "quantite_g": 2
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 92
+    }
+   ],
+   "etapes": [
+    "Cuire le riz selon le paquet. Mélanger sauce soja, jus de citron, miel et huile, y enrober le poulet en dés et laisser mariner.",
+    "Saisir le poulet égoutté 5 min au wok très chaud avec la moitié de l'huile, le réserver en gardant la marinade.",
+    "Faire revenir l'ail 1 min dans le reste d'huile, ajouter carottes, poivron et champignons 3 min, puis le brocoli et le poulet.",
+    "Délayer la fécule dans la marinade, verser dans le wok et laisser épaissir 5 min à feu doux. Servir sur le riz."
+   ],
+   "tags": [
+    "wok",
+    "poele",
+    "plat-complet"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/healthy-chicken-stir-fry-4943920",
+    "nom_original": "Healthy Chicken Stir Fry",
+    "portions_originales": 4,
+    "macros_annoncees": {
+     "calories": 677,
+     "proteines": 38,
+     "glucides": 97,
+     "lipides": 15,
+     "fibres": 6
+    }
+   }
+  },
+  {
+   "id": "din-saumon-asperges-tomates-pesto-etm",
+   "nom": "Saumon rôti, asperges et tomates cerises au pesto",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "asperge",
+     "quantite_g": 113
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 74
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    },
+    {
+     "cle": "saumon",
+     "quantite_g": 114
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 54
+    },
+    {
+     "cle": "pesto",
+     "quantite_g": 31
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 230 °C. Sur une plaque, enrober asperges et tomates cerises d'huile d'olive, sel et poivre.",
+    "Poser le saumon assaisonné parmi les légumes avec les rondelles de citron et enfourner 10 à 15 min.",
+    "À la sortie du four, déposer le pesto sur le saumon et les légumes, arroser de jus de citron et servir."
+   ],
+   "tags": [
+    "four",
+    "poisson",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/sheet-pan-salmon-dinner-5003243",
+    "nom_original": "Sheet Pan Salmon Dinner",
+    "portions_originales": 4,
+    "macros_annoncees": {
+     "calories": 488,
+     "proteines": 28,
+     "glucides": 15,
+     "lipides": 37,
+     "fibres": 6
+    }
+   }
+  },
+  {
+   "id": "col-soupe-lentilles-cumin-etm",
+   "nom": "Soupe de lentilles au cumin et citron",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 48
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 2
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 13
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 11
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 1
+    },
+    {
+     "cle": "cumin",
+     "quantite_g": 1
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 2
+    },
+    {
+     "cle": "persil",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Faire revenir oignon, carottes et ail hachés 3 min dans l'huile d'olive, ajouter le cumin et cuire 30 s.",
+    "Ajouter les lentilles rincées et 5 fois leur poids d'eau, porter à ébullition puis cuire 20 à 25 min à petit feu.",
+    "Mixer en partie ou totalement, puis ajouter hors du feu le jus de citron et le persil, rectifier l'assaisonnement."
+   ],
+   "tags": [
+    "soupe",
+    "batch",
+    "vegetalien",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/lentil-soup-5198265",
+    "nom_original": "Lentil Soup",
+    "portions_originales": 6,
+    "macros_annoncees": {
+     "calories": 203,
+     "proteines": 12,
+     "glucides": 34,
+     "lipides": 3,
+     "fibres": 6
+    }
+   }
+  },
+  {
+   "id": "din-crevettes-miel-ail-brocoli-riz-etm",
+   "nom": "Crevettes miel-ail, brocoli et riz complet",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "miel",
+     "quantite_g": 21
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 18
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 2
+    },
+    {
+     "cle": "gingembre",
+     "quantite_g": 1
+    },
+    {
+     "cle": "crevette",
+     "quantite_g": 114
+    },
+    {
+     "cle": "riz_complet",
+     "quantite_g": 46
+    },
+    {
+     "cle": "brocoli",
+     "quantite_g": 68
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 2
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Mélanger miel, sauce soja, ail et gingembre râpés ; y enrober les crevettes avec la moitié de la sauce, 15 min au frais.",
+    "Cuire le riz complet selon le paquet et le brocoli 4 à 5 min à la vapeur.",
+    "Saisir les crevettes 1 min dans l'huile chaude, retourner, verser le reste de sauce et cuire jusqu'à ce qu'elles soient opaques.",
+    "Servir sur le riz avec le brocoli, parsemer d'oignon émincé."
+   ],
+   "tags": [
+    "poele",
+    "poisson",
+    "plat-complet"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/quick-honey-garlic-shrimp-with-broccoli-and-rice-5285060",
+    "nom_original": "Quick Honey Garlic Shrimp with Broccoli and Rice",
+    "portions_originales": 4,
+    "macros_annoncees": {
+     "calories": 373,
+     "proteines": 23,
+     "glucides": 60,
+     "lipides": 5,
+     "fibres": 4
+    }
+   }
+  },
+  {
+   "id": "din-papillote-saumon-pesto-haricots-verts-etm",
+   "nom": "Papillote de saumon au pesto et haricots verts",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "haricot_vert",
+     "quantite_g": 114
+    },
+    {
+     "cle": "pesto",
+     "quantite_g": 16
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 54
+    },
+    {
+     "cle": "saumon",
+     "quantite_g": 170
+    },
+    {
+     "cle": "persil",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 230 °C. Sur une feuille de papier cuisson, poser les haricots verts, un peu de pesto et des rondelles de citron.",
+    "Ajouter le saumon assaisonné, le napper du reste de pesto et fermer la papillote en roulant les bords.",
+    "Cuire 15 à 20 min, ouvrir délicatement et parsemer de persil."
+   ],
+   "tags": [
+    "four",
+    "poisson"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/pesto-salmon-4993882",
+    "nom_original": "Pesto Salmon",
+    "portions_originales": 4,
+    "macros_annoncees": {
+     "calories": 459,
+     "proteines": 38,
+     "glucides": 15,
+     "lipides": 29,
+     "fibres": 6
+    }
+   }
+  },
+  {
+   "id": "col-salade-thon-asiatique-etm",
+   "nom": "Salade de thon à l'asiatique",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 165
+    },
+    {
+     "cle": "radis",
+     "quantite_g": 18
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 30
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 2
+    },
+    {
+     "cle": "gingembre",
+     "quantite_g": 1
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    },
+    {
+     "cle": "vinaigre_cidre",
+     "quantite_g": 22
+    },
+    {
+     "cle": "coriandre_fraiche",
+     "quantite_g": 1
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 6
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 24
+    }
+   ],
+   "etapes": [
+    "Mélanger le thon égoutté, les radis en quartiers, la carotte râpée, l'ail et le gingembre hachés.",
+    "Assaisonner d'huile, de vinaigre, sel et poivre, puis ajouter coriandre et oignon émincés.",
+    "Servir sur la laitue émincée."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "froid",
+    "poisson"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/asian-style-tuna-salad-5137487",
+    "nom_original": "Asian Style Tuna Salad",
+    "portions_originales": 2,
+    "macros_annoncees": {
+     "calories": 292,
+     "proteines": 33,
+     "glucides": 6,
+     "lipides": 15,
+     "fibres": 2
+    }
+   }
+  },
+  {
+   "id": "pdj-omelette-dinde-cheddar-etm",
+   "nom": "Omelette au blanc de dinde et cheddar",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "blanc_dinde",
+     "quantite_g": 43
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "cheddar",
+     "quantite_g": 28
+    }
+   ],
+   "etapes": [
+    "Faire dorer le blanc de dinde émincé dans une poêle antiadhésive, le réserver.",
+    "Battre les œufs, les verser dans la poêle et cuire 3 à 4 min en ramenant les bords vers le centre.",
+    "Garnir de cheddar et de dinde, replier l'omelette et laisser fondre le fromage 2 min."
+   ],
+   "tags": [
+    "sale",
+    "poele",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/turkey-omelet-946456",
+    "nom_original": "Turkey Omelet",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 308,
+     "proteines": 25,
+     "glucides": 4,
+     "lipides": 21,
+     "fibres": 0.2
+    }
+   }
+  },
+  {
+   "id": "pdj-piperade-oeufs-pain-etm",
+   "nom": "Piperade aux œufs brouillés et pain grillé",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 28
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 30
+    },
+    {
+     "cle": "poivron_jaune",
+     "quantite_g": 23
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 2
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 62
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 84
+    },
+    {
+     "cle": "persil",
+     "quantite_g": 1
+    },
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 114
+    }
+   ],
+   "etapes": [
+    "Faire fondre oignon, poivrons et ail 8 à 10 min à couvert dans l'huile d'olive.",
+    "Ajouter les tomates concassées, assaisonner et laisser compoter 5 min à découvert.",
+    "Incorporer les œufs battus et remuer 3 à 4 min jusqu'à ce qu'ils soient brouillés. Parsemer de persil, servir avec le pain grillé."
+   ],
+   "tags": [
+    "poele",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/eggs-piperade-4933546",
+    "nom_original": "Eggs Piperade",
+    "portions_originales": 4,
+    "macros_annoncees": {
+     "calories": 588,
+     "proteines": 24,
+     "glucides": 68,
+     "lipides": 25,
+     "fibres": 5
+    }
+   }
+  },
+  {
+   "id": "pdj-oeufs-cocotte-champignons-epinards-etm",
+   "nom": "Gratin d'œufs aux champignons, épinards et cheddar",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 168
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 40
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 20
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 21
+    },
+    {
+     "cle": "cheddar",
+     "quantite_g": 21
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 180 °C. Hacher champignons, oignon et épinards.",
+    "Mélanger avec les œufs battus et le cheddar râpé, verser dans un plat.",
+    "Cuire 25 min, jusqu'à ce que les œufs soient pris. Se garde 3 jours au frais."
+   ],
+   "tags": [
+    "four",
+    "sale",
+    "batch",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/egg-casserole-4977907",
+    "nom_original": "Egg Casserole",
+    "portions_originales": 4,
+    "macros_annoncees": {
+     "calories": 348,
+     "proteines": 28,
+     "glucides": 5,
+     "lipides": 23,
+     "fibres": 1
+    }
+   }
+  },
+  {
+   "id": "pdj-fromage-blanc-cannelle-amandes-etm",
+   "nom": "Fromage blanc 0 % à la cannelle et aux amandes",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 2,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 226
+    },
+    {
+     "cle": "cannelle",
+     "quantite_g": 3
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 36
+    }
+   ],
+   "etapes": [
+    "Concasser grossièrement les amandes.",
+    "Mélanger le fromage blanc avec la cannelle et parsemer d'amandes."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/cottage-cheese-breakfast-1488026",
+    "nom_original": "Cottage Cheese Breakfast",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 376,
+     "proteines": 36,
+     "glucides": 16,
+     "lipides": 20,
+     "fibres": 6
+    }
+   }
+  },
+  {
+   "id": "pdj-porridge-banane-lait-etm",
+   "nom": "Flocons d'avoine au lait et à la banane",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 80
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 118
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 244
+    }
+   ],
+   "etapes": [
+    "Verser les flocons et le lait dans un bol, manger tel quel ou chauffer 2 min au micro-ondes.",
+    "Ajouter la banane en rondelles."
+   ],
+   "tags": [
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/banana-oatmeal-33511",
+    "nom_original": "Banana Oatmeal",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 494,
+     "proteines": 19,
+     "glucides": 97,
+     "lipides": 7,
+     "fibres": 13
+    }
+   }
+  },
+  {
+   "id": "pdj-porridge-fraises-etm",
+   "nom": "Porridge aux fraises mixées",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 6,
+   "ingredients": [
+    {
+     "cle": "fraise",
+     "quantite_g": 144
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 244
+    },
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 40
+    }
+   ],
+   "etapes": [
+    "Mixer les fraises et les mélanger au lait et aux flocons d'avoine.",
+    "Chauffer 45 s au micro-ondes, remuer, puis 30 s de plus."
+   ],
+   "tags": [
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/strawberry-oatmeal-717811",
+    "nom_original": "Strawberry Oatmeal",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 314,
+     "proteines": 14,
+     "glucides": 55,
+     "lipides": 6,
+     "fibres": 8
+    }
+   }
+  },
+  {
+   "id": "pdj-oeufs-pizzaiola-baguette-etm",
+   "nom": "Œufs pochés à la pizzaiola et baguette",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 31,
+   "ingredients": [
+    {
+     "cle": "huile_olive",
+     "quantite_g": 2
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 4
+    },
+    {
+     "cle": "persil",
+     "quantite_g": 1
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 160
+    },
+    {
+     "cle": "basilic",
+     "quantite_g": 1
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 112
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 13
+    },
+    {
+     "cle": "baguette",
+     "quantite_g": 42
+    }
+   ],
+   "etapes": [
+    "Dorer l'ail 1 min dans l'huile, ajouter persil, tomates concassées et bouillon, porter à ébullition puis ajouter le basilic.",
+    "Laisser mijoter 5 min, casser les œufs dans la sauce, parsemer de parmesan et cuire 10 à 15 min à couvert.",
+    "Servir avec la baguette."
+   ],
+   "tags": [
+    "poele",
+    "sale",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/eggs-pizzaiola-5019602",
+    "nom_original": "Eggs Pizzaiola",
+    "portions_originales": 3,
+    "macros_annoncees": {
+     "calories": 381,
+     "proteines": 24,
+     "glucides": 31,
+     "lipides": 17,
+     "fibres": 4
+    }
+   }
+  },
+  {
+   "id": "pdj-overnight-oats-myrtilles-lin-etm",
+   "nom": "Overnight oats aux myrtilles et graines de lin",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 40
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 120
+    },
+    {
+     "cle": "lin",
+     "quantite_g": 7
+    },
+    {
+     "cle": "myrtille",
+     "quantite_g": 19
+    },
+    {
+     "cle": "noix",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "La veille, superposer dans un bocal flocons d'avoine, 160 g d'eau, fromage blanc 0 %, graines de lin et myrtilles, sans mélanger.",
+    "Le matin, mélanger et parsemer de noix concassées."
+   ],
+   "tags": [
+    "prepare-la-veille",
+    "sans-cuisson",
+    "sucre",
+    "vegetarien",
+    "transportable"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/blueberry-yogurt-overnight-oats-5064434",
+    "nom_original": "Blueberry Yogurt Overnight Oats",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 285,
+     "proteines": 18,
+     "glucides": 41,
+     "lipides": 7,
+     "fibres": 8
+    }
+   }
+  },
+  {
+   "id": "dej-salade-nicoise-thon-lentilles-etm",
+   "nom": "Salade niçoise au thon, lentilles et œuf",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 24
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 28
+    },
+    {
+     "cle": "haricot_vert",
+     "quantite_g": 35
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 3
+    },
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 151
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 75
+    },
+    {
+     "cle": "tomate_sechee",
+     "quantite_g": 7
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 7
+    },
+    {
+     "cle": "vinaigre_balsamique",
+     "quantite_g": 5
+    },
+    {
+     "cle": "noix",
+     "quantite_g": 9
+    }
+   ],
+   "etapes": [
+    "Cuire les lentilles 20 min à l'eau, égoutter. Cuire l'œuf 8 min, ajouter les haricots verts la dernière minute.",
+    "Saisir le thon 1 à 2 min par face dans l'huile de coco (ou utiliser du thon au naturel).",
+    "Mélanger épinards, lentilles, haricots, tomates séchées, noix, huile d'olive et balsamique ; garnir de thon et d'œuf coupé en deux."
+   ],
+   "tags": [
+    "poisson",
+    "tiede"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/tuna-nicoise-5187112",
+    "nom_original": "Tuna Nicoise",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 490,
+     "proteines": 52,
+     "glucides": 27,
+     "lipides": 20,
+     "fibres": 7
+    }
+   }
+  },
+  {
+   "id": "dej-jambalaya-poulet-riz-complet-etm",
+   "nom": "Jambalaya de poulet au riz complet",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 55,
+   "ingredients": [
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    },
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 118
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 55
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 60
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 3
+    },
+    {
+     "cle": "riz_complet",
+     "quantite_g": 46
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 60
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Dorer le poulet en dés 5 à 8 min dans l'huile, réserver. Faire fondre l'oignon 3 min, ajouter poivron et ail 5 min.",
+    "Remettre le poulet, ajouter le riz, les tomates concassées et 12 cl de bouillon, couvrir et mijoter 20 à 25 min."
+   ],
+   "tags": [
+    "one-pot",
+    "plat-complet",
+    "epice"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/chicken-jambalaya-3250700",
+    "nom_original": "Chicken Jambalaya",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 530,
+     "proteines": 35,
+     "glucides": 52,
+     "lipides": 20,
+     "fibres": 5
+    }
+   }
+  },
+  {
+   "id": "dej-salade-lentilles-poire-noisettes-feta-etm",
+   "nom": "Salade de lentilles, poire, noisettes et feta",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 96
+    },
+    {
+     "cle": "poire",
+     "quantite_g": 54
+    },
+    {
+     "cle": "noisette",
+     "quantite_g": 28
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 19
+    },
+    {
+     "cle": "roquette",
+     "quantite_g": 20
+    },
+    {
+     "cle": "vinaigre_balsamique",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Cuire les lentilles rincées 20 min à l'eau frémissante, égoutter et laisser tiédir.",
+    "Mélanger avec la poire en dés, les noisettes, la feta et la roquette.",
+    "Arroser de vinaigre balsamique, mélanger délicatement et servir."
+   ],
+   "tags": [
+    "tiede",
+    "vegetarien",
+    "transportable"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/lentil-salad-5198366",
+    "nom_original": "Lentil Salad",
+    "portions_originales": 2,
+    "macros_annoncees": {
+     "calories": 610,
+     "proteines": 31,
+     "glucides": 77,
+     "lipides": 23,
+     "fibres": 15
+    }
+   }
+  },
+  {
+   "id": "dej-cabillaud-tomate-olives-mozzarella-etm",
+   "nom": "Cabillaud à la tomate, olives et mozzarella",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "beurre",
+     "quantite_g": 14
+    },
+    {
+     "cle": "lardons",
+     "quantite_g": 12
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 28
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 3
+    },
+    {
+     "cle": "cabillaud",
+     "quantite_g": 128
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 240
+    },
+    {
+     "cle": "olive_noire",
+     "quantite_g": 13
+    },
+    {
+     "cle": "mozzarella",
+     "quantite_g": 56
+    },
+    {
+     "cle": "pignon",
+     "quantite_g": 8
+    },
+    {
+     "cle": "basilic",
+     "quantite_g": 1
+    }
+   ],
+   "etapes": [
+    "Faire fondre le beurre, dorer les lardons et l'oignon 2 min, ajouter l'ail 30 s.",
+    "Ajouter le cabillaud 2 min en le retournant, puis les tomates concassées ; mijoter 2 à 3 min.",
+    "Ajouter olives et mozzarella hors du feu, laisser fondre, servir parsemé de pignons et de basilic."
+   ],
+   "tags": [
+    "poele",
+    "poisson"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/french-style-cod-with-black-olives-3232743",
+    "nom_original": "French Style Cod with Black Olives",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 524,
+     "proteines": 42,
+     "glucides": 16,
+     "lipides": 34,
+     "fibres": 6
+    }
+   }
+  },
+  {
+   "id": "dej-wrap-poulet-cesar-etm",
+   "nom": "Wrap de poulet façon César",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 113
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 56
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 5
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 62
+    },
+    {
+     "cle": "mayonnaise",
+     "quantite_g": 14
+    },
+    {
+     "cle": "tortilla",
+     "quantite_g": 46
+    }
+   ],
+   "etapes": [
+    "Cuire le poulet 15 à 20 min au four à 200 °C, puis le couper en dés.",
+    "Mélanger poulet, laitue émincée, parmesan, tomate en dés et mayonnaise, garnir la tortilla et rouler."
+   ],
+   "tags": [
+    "four",
+    "transportable"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/chicken-wraps-4932999",
+    "nom_original": "Chicken Wraps",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 406,
+     "proteines": 32,
+     "glucides": 28,
+     "lipides": 18,
+     "fibres": 3
+    }
+   }
+  },
+  {
+   "id": "dej-wok-thon-legumes-etm",
+   "nom": "Wok de légumes au thon et soja",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "legumes_surgeles",
+     "quantite_g": 426
+    },
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 165
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 36
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Mettre les légumes surgelés, le thon égoutté, la sauce soja et le citron dans un wok à feu moyen.",
+    "Couvrir et cuire 10 min en remuant toutes les 2 min."
+   ],
+   "tags": [
+    "wok",
+    "rapide",
+    "poisson"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/tuna-wok-905672",
+    "nom_original": "Tuna Wok",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 494,
+     "proteines": 50,
+     "glucides": 65,
+     "lipides": 4,
+     "fibres": 18
+    }
+   }
+  },
+  {
+   "id": "din-poulet-farci-epinards-feta-etm",
+   "nom": "Poulet farci aux épinards et à la feta",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 60,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 113
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 47
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 38
+    },
+    {
+     "cle": "mayonnaise",
+     "quantite_g": 18
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 1
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 165 °C. Aplatir les blancs de poulet et les assaisonner.",
+    "Mélanger épinards décongelés et essorés, mayonnaise, ail haché et feta.",
+    "Inciser le poulet, le farcir, fermer avec des piques, saupoudrer de paprika et cuire 45 min."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/greek-chicken-4930660",
+    "nom_original": "Greek Chicken",
+    "portions_originales": 6,
+    "macros_annoncees": {
+     "calories": 376,
+     "proteines": 33,
+     "glucides": 4,
+     "lipides": 25,
+     "fibres": 1
+    }
+   }
+  },
+  {
+   "id": "din-cabillaud-asperges-ail-etm",
+   "nom": "Cabillaud poêlé et asperges à l'ail",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "cabillaud",
+     "quantite_g": 170
+    },
+    {
+     "cle": "asperge",
+     "quantite_g": 128
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 6
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 27
+    }
+   ],
+   "etapes": [
+    "Cuire le cabillaud assaisonné 4 à 5 min par face dans la moitié de l'huile, le réserver.",
+    "Dans la même poêle, faire revenir l'ail 1 min dans le reste d'huile, puis les asperges 4 à 5 min."
+   ],
+   "tags": [
+    "poele",
+    "poisson",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/cod-with-garlic-asparagus-5095808",
+    "nom_original": "Cod with Garlic Asparagus",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 415,
+     "proteines": 34,
+     "glucides": 8,
+     "lipides": 28,
+     "fibres": 3
+    }
+   }
+  },
+  {
+   "id": "din-cabillaud-petits-pois-menthe-etm",
+   "nom": "Cabillaud poêlé et petits pois à la menthe",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "cabillaud",
+     "quantite_g": 170
+    },
+    {
+     "cle": "petit_pois",
+     "quantite_g": 134
+    },
+    {
+     "cle": "menthe",
+     "quantite_g": 3
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Cuire le cabillaud salé 3 à 4 min par face dans l'huile chaude.",
+    "Pendant ce temps, cuire les petits pois 2 à 3 min à l'eau bouillante, égoutter.",
+    "Mélanger les petits pois avec la menthe hachée, le beurre et le jus de citron, servir avec le poisson."
+   ],
+   "tags": [
+    "poele",
+    "poisson",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/seared-cod-with-minted-peas-5095816",
+    "nom_original": "Seared Cod with Minted Peas",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 400,
+     "proteines": 38,
+     "glucides": 20,
+     "lipides": 19,
+     "fibres": 6
+    }
+   }
+  },
+  {
+   "id": "din-salade-poulet-pois-chiches-menthe-etm",
+   "nom": "Salade de poulet, pois chiches, feta et menthe",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "huile_olive",
+     "quantite_g": 4
+    },
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 59
+    },
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 114
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 26
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 18
+    },
+    {
+     "cle": "menthe",
+     "quantite_g": 23
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 60
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 2
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 15
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 38
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 27
+    }
+   ],
+   "etapes": [
+    "Cuire le poulet dans l'huile 5 à 10 min par face, laisser reposer puis couper en dés.",
+    "Égoutter les pois chiches, couper concombre et oignon.",
+    "Mélanger avec épinards, feta, menthe, ail, fromage blanc 0 % et le jus du citron."
+   ],
+   "tags": [
+    "froid",
+    "transportable"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/garbanzo-salad-5064474",
+    "nom_original": "Garbanzo Salad",
+    "portions_originales": 4,
+    "macros_annoncees": {
+     "calories": 367,
+     "proteines": 32,
+     "glucides": 27,
+     "lipides": 16,
+     "fibres": 9
+    }
+   }
+  },
+  {
+   "id": "din-filet-mignon-croute-chapelure-etm",
+   "nom": "Filet mignon de porc en croûte de chapelure",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "chapelure",
+     "quantite_g": 18
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 18
+    },
+    {
+     "cle": "porc_filet",
+     "quantite_g": 151
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 220 °C. Mélanger chapelure et huile d'olive, en couvrir le filet mignon.",
+    "Cuire au moins 35 min (75 °C à cœur), laisser reposer 10 min avant de trancher."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/easy-pork-tenderloin-5119737",
+    "nom_original": "Easy Pork Tenderloin",
+    "portions_originales": 6,
+    "macros_annoncees": {
+     "calories": 411,
+     "proteines": 34,
+     "glucides": 13,
+     "lipides": 24,
+     "fibres": 1
+    }
+   }
+  },
+  {
+   "id": "col-fromage-blanc-fraises-etm",
+   "nom": "Fromage blanc 0 % aux fraises",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 227
+    },
+    {
+     "cle": "fraise",
+     "quantite_g": 152
+    }
+   ],
+   "etapes": [
+    "Couper les fraises en lamelles.",
+    "Les mélanger au fromage blanc."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/yogurt-strawberries-3266362",
+    "nom_original": "Yogurt & Strawberries",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 182,
+     "proteines": 24,
+     "glucides": 20,
+     "lipides": 1,
+     "fibres": 3
+    }
+   }
+  },
+  {
+   "id": "col-muffins-oeufs-legumes-etm",
+   "nom": "Muffins d'œufs aux légumes et cheddar",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 23,
+   "ingredients": [
+    {
+     "cle": "poivron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 18
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 20
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 2
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "cheddar",
+     "quantite_g": 19
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C. Couper poivron, oignon, épinards et tomates en dés.",
+    "Mélanger avec les œufs battus et le cheddar, répartir dans des moules à muffins huilés.",
+    "Cuire 15 à 18 min, jusqu'à ce que le dessus soit ferme."
+   ],
+   "tags": [
+    "four",
+    "batch",
+    "sale",
+    "vegetarien",
+    "transportable"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/egg-muffins-942525",
+    "nom_original": "Egg Muffins",
+    "portions_originales": 6,
+    "macros_annoncees": {
+     "calories": 166,
+     "proteines": 11,
+     "glucides": 4,
+     "lipides": 11,
+     "fibres": 1
+    }
+   }
+  },
+  {
+   "id": "col-tomate-farcie-thon-etm",
+   "nom": "Tomate farcie au thon et fromage blanc",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "tomate",
+     "quantite_g": 182
+    },
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 165
+    },
+    {
+     "cle": "aneth",
+     "quantite_g": 1
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 15
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 113
+    }
+   ],
+   "etapes": [
+    "Couper la tomate en deux et l'évider légèrement.",
+    "Mélanger thon égoutté, oignon haché, fromage blanc 0 % et aneth, garnir les demi-tomates."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "poisson"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/tuna-stuffed-tomato-4841989",
+    "nom_original": "Tuna-Stuffed Tomato",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 262,
+     "proteines": 48,
+     "glucides": 12,
+     "lipides": 3,
+     "fibres": 3
+    }
+   }
+  },
+  {
+   "id": "pdj-asagohan-saumon-miso-mde",
+   "nom": "Petit-déjeuner japonais : riz, saumon grillé et soupe miso",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 60
+    },
+    {
+     "cle": "saumon",
+     "quantite_g": 90
+    },
+    {
+     "cle": "miso",
+     "quantite_g": 12
+    },
+    {
+     "cle": "tofu",
+     "quantite_g": 40
+    },
+    {
+     "cle": "nori",
+     "quantite_g": 2
+    },
+    {
+     "cle": "ciboulette",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Rincer le riz à l'eau froide jusqu'à ce qu'elle reste claire, le couvrir de 1,5 fois son volume d'eau, porter à frémissement, cuire 12 min à couvert sur feu très doux puis laisser gonfler 10 min hors du feu.",
+    "Saler légèrement le saumon, le poser côté peau dans une poêle bien chaude et le griller 4 min, puis 3 min sur l'autre face, jusqu'à ce que la chair se détache en lamelles.",
+    "Porter 250 ml d'eau à frémissement avec le tofu en dés, retirer du feu, délayer le miso dans une louche de ce bouillon puis le reverser sans jamais laisser rebouillir.",
+    "Dresser le riz en bol, poser le saumon effeuillé dessus, parsemer de nori ciselé et de ciboulette, et servir la soupe miso à côté, bien chaude."
+   ],
+   "tags": [
+    "japonais",
+    "sale",
+    "poisson"
+   ]
+  },
+  {
+   "id": "pdj-huevos-rancheros-mde",
+   "nom": "Huevos rancheros",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "tortilla",
+     "quantite_g": 45
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "haricots_rouges",
+     "quantite_g": 90
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 120
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 35
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 4
+    },
+    {
+     "cle": "piment",
+     "quantite_g": 6
+    },
+    {
+     "cle": "coriandre_fraiche",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Chauffer l'huile 2 min à feu moyen, y faire fondre l'oignon et l'ail émincés 5 min, ajouter la tomate coupée en dés et le piment haché, puis laisser réduire 10 min à découvert en salsa épaisse.",
+    "Réchauffer les haricots rouges égouttés 5 min dans deux cuillères de salsa, puis les écraser grossièrement à la fourchette pour obtenir une purée rustique.",
+    "Passer la tortilla 40 secondes par face dans une poêle sèche à feu vif, jusqu'à ce qu'elle gonfle et se marque.",
+    "Cuire les œufs au plat 3 min à feu doux, blanc pris et jaune coulant, les poser sur la tortilla tartinée de haricots, napper de salsa et parsemer de coriandre."
+   ],
+   "tags": [
+    "mexicain",
+    "sale",
+    "epice"
+   ]
+  },
+  {
+   "id": "dej-bibimbap-boeuf-mde",
+   "nom": "Bibimbap au bœuf et légumes assaisonnés",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 90
+    },
+    {
+     "cle": "boeuf_bavette",
+     "quantite_g": 110
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 80
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 60
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 70
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_sesame",
+     "quantite_g": 6
+    },
+    {
+     "cle": "sesame",
+     "quantite_g": 5
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 4
+    },
+    {
+     "cle": "cayenne",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Cuire le riz 12 min à couvert dans 1,5 fois son volume d'eau, puis le laisser reposer 10 min hors du feu, grains bien détachés.",
+    "Trancher le bœuf en fines lanières, le mélanger à la sauce soja, à l'ail râpé et à la moitié de l'huile de sésame, puis laisser mariner 20 min au frais.",
+    "Blanchir les épinards 1 min à l'eau bouillante et les presser, puis sauter séparément 3 min à feu vif la carotte râpée et la courgette en bâtonnets, chacune avec un filet d'huile de sésame.",
+    "Saisir le bœuf égoutté 3 min à feu très vif dans la poêle brûlante, puis cuire l'œuf au plat 3 min à côté.",
+    "Étaler le riz au fond du bol, ranger légumes et viande en secteurs, poser l'œuf au centre, saupoudrer de piment de Cayenne et de sésame, et mélanger avant de manger."
+   ],
+   "tags": [
+    "coreen",
+    "plat-complet",
+    "bol"
+   ]
+  },
+  {
+   "id": "dej-chich-taouk-boulgour-mde",
+   "nom": "Chich taouk et boulgour au persil",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 150
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 60
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 25
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 4
+    },
+    {
+     "cle": "cumin",
+     "quantite_g": 3
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "boulgour",
+     "quantite_g": 70
+    },
+    {
+     "cle": "persil",
+     "quantite_g": 12
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 80
+    }
+   ],
+   "etapes": [
+    "Mélanger le skyr, le jus de citron, l'ail écrasé, le paprika, le cumin et l'huile d'olive, y enrober les cubes de poulet et laisser mariner au moins 2 h au réfrigérateur.",
+    "Verser le boulgour dans un saladier, le couvrir d'une fois et demie son volume d'eau bouillante salée, filmer et laisser gonfler 15 min avant de l'égrener à la fourchette.",
+    "Enfiler le poulet sur des brochettes et le griller 12 min sur une poêle-gril très chaude, en tournant tous les 3 min, jusqu'à ce que les arêtes des cubes soient bien colorées.",
+    "Mêler le persil ciselé et la tomate en dés au boulgour, poser les brochettes dessus et arroser du jus rendu à la cuisson."
+   ],
+   "tags": [
+    "libanais",
+    "grill",
+    "plat-complet"
+   ]
+  },
+  {
+   "id": "dej-caldo-verde-mde",
+   "nom": "Caldo verde",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 300
+    },
+    {
+     "cle": "kale",
+     "quantite_g": 120
+    },
+    {
+     "cle": "chorizo",
+     "quantite_g": 60
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 6
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Éplucher les pommes de terre, les couper en morceaux et les cuire 20 min avec l'oignon et l'ail dans 800 ml d'eau salée, jusqu'à ce qu'une lame les traverse sans résistance.",
+    "Mixer la casserole en velouté lisse, remettre sur feu doux et verser l'huile d'olive en filet en fouettant.",
+    "Retirer les côtes du chou frisé, le tailler en lanières très fines et le plonger 5 min dans le velouté frémissant, sans couvrir, pour qu'il garde sa couleur vive.",
+    "Poêler les rondelles de chorizo 2 min à sec pour libérer leur gras, les déposer sur la soupe et servir aussitôt."
+   ],
+   "tags": [
+    "portugais",
+    "soupe",
+    "reconfortant"
+   ]
+  },
+  {
+   "id": "dej-tinga-poulet-tortillas-mde",
+   "nom": "Tinga de poulet en tortillas",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 50,
+   "ingredients": [
+    {
+     "cle": "poulet_cuisse",
+     "quantite_g": 150
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 150
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 4
+    },
+    {
+     "cle": "cayenne",
+     "quantite_g": 2
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 7
+    },
+    {
+     "cle": "tortilla",
+     "quantite_g": 90
+    },
+    {
+     "cle": "coriandre_fraiche",
+     "quantite_g": 6
+    },
+    {
+     "cle": "citron_vert",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Couvrir la cuisse de poulet d'eau froide salée avec la moitié de l'oignon, porter à frémissement et pocher 20 min, puis effilocher la chair à la fourchette.",
+    "Faire blondir 8 min à feu moyen le reste d'oignon émincé dans l'huile, ajouter l'ail, le paprika et le piment de Cayenne, et laisser torréfier 1 min en remuant.",
+    "Verser la tomate concassée, saler et laisser réduire 12 min à feu doux jusqu'à une sauce brun-rouge nappante, puis y remettre le poulet effiloché 5 min.",
+    "Réchauffer les tortillas 30 secondes par face à la poêle sèche, les garnir de tinga, parsemer de coriandre et presser le citron vert dessus."
+   ],
+   "tags": [
+    "mexicain",
+    "epice",
+    "plat-complet"
+   ]
+  },
+  {
+   "id": "din-oyakodon-mde",
+   "nom": "Oyakodon, bol de riz au poulet et à l'œuf",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 85
+    },
+    {
+     "cle": "poulet_cuisse",
+     "quantite_g": 130
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 70
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 20
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 6
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 3
+    },
+    {
+     "cle": "ciboulette",
+     "quantite_g": 5
+    },
+    {
+     "cle": "nori",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Cuire le riz 12 min à couvert dans 1,5 fois son volume d'eau, puis le laisser reposer 10 min à couvert hors du feu.",
+    "Délayer le bouillon dans 150 ml d'eau chaude, ajouter la sauce soja et le miel, verser dans une petite poêle avec l'oignon émincé et laisser frémir 3 min.",
+    "Ajouter le poulet en morceaux, couvrir et laisser mijoter 7 min à feu doux, en retournant les morceaux à mi-cuisson.",
+    "Battre les œufs à peine, les verser en spirale sur le bouillon frémissant, couvrir et couper le feu au bout de 60 secondes : l'œuf doit rester crémeux.",
+    "Faire glisser la préparation sur le riz, parsemer de ciboulette et de nori ciselé, et servir immédiatement."
+   ],
+   "tags": [
+    "japonais",
+    "bol",
+    "rapide"
+   ]
+  },
+  {
+   "id": "din-bulgogi-boeuf-riz-mde",
+   "nom": "Bulgogi de bœuf et riz",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "boeuf_bavette",
+     "quantite_g": 140
+    },
+    {
+     "cle": "poire",
+     "quantite_g": 60
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_sesame",
+     "quantite_g": 5
+    },
+    {
+     "cle": "sesame",
+     "quantite_g": 4
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    },
+    {
+     "cle": "gingembre",
+     "quantite_g": 6
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 70
+    },
+    {
+     "cle": "ciboulette",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Râper la poire et la mélanger à la sauce soja, à l'ail écrasé, au gingembre râpé et à l'huile de sésame : la poire attendrit la viande autant qu'elle la sucre.",
+    "Trancher la bavette en lamelles de 3 mm en travers des fibres, l'enrober de marinade avec l'oignon émincé et réserver 1 h au frais.",
+    "Cuire le riz 12 min à couvert dans 1,5 fois son volume d'eau, puis le laisser gonfler 10 min hors du feu.",
+    "Saisir la viande égouttée 2 min en deux fois dans une poêle fumante, sans superposer les lamelles, puis reverser la marinade et laisser caraméliser 2 min.",
+    "Servir sur le riz, parsemé de graines de sésame torréfiées à sec et de ciboulette ciselée."
+   ],
+   "tags": [
+    "coreen",
+    "poele",
+    "plat-complet"
+   ]
+  },
+  {
+   "id": "din-moujadara-mde",
+   "nom": "Moujadara, lentilles et riz aux oignons confits",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 55,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 75
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 50
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 150
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 12
+    },
+    {
+     "cle": "cumin",
+     "quantite_g": 3
+    },
+    {
+     "cle": "cannelle",
+     "quantite_g": 2
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 90
+    },
+    {
+     "cle": "menthe",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Émincer les oignons très finement et les cuire 25 min dans l'huile d'olive à feu moyen-doux, en remuant souvent, jusqu'à une couleur brun acajou : tout le goût du plat se joue là.",
+    "Cuire les lentilles 15 min à l'eau frémissante non salée, puis ajouter le riz rincé, le cumin, la cannelle et de l'eau à hauteur.",
+    "Incorporer un tiers des oignons confits, couvrir et cuire 15 min à feu doux jusqu'à absorption complète, puis laisser reposer 10 min hors du feu.",
+    "Égrener à la fourchette, couronner du reste d'oignons, et servir avec le skyr battu et la menthe ciselée."
+   ],
+   "tags": [
+    "libanais",
+    "vegetarien",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-bacalhau-bras-mde",
+   "nom": "Bacalhau à Brás, morue effilochée aux œufs",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "morue_salee",
+     "quantite_g": 90
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 200
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    },
+    {
+     "cle": "olive_noire",
+     "quantite_g": 25
+    },
+    {
+     "cle": "persil",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 12
+    }
+   ],
+   "etapes": [
+    "Dessaler la morue 24 h au réfrigérateur dans un grand volume d'eau froide renouvelée trois fois, puis l'effilocher en retirant peau et arêtes.",
+    "Tailler les pommes de terre en allumettes très fines, les sécher dans un linge et les dorer 8 min dans l'huile d'olive chaude, puis les égoutter sur papier absorbant.",
+    "Faire fondre l'oignon et l'ail émincés 6 min à feu moyen, ajouter la morue et la chauffer 3 min sans la dessécher, puis mêler les pommes de terre.",
+    "Verser les œufs battus hors du feu et remuer 1 min sur feu très doux : ils doivent rester crémeux, jamais pris en omelette.",
+    "Parsemer d'olives noires et de persil ciselé, et servir aussitôt."
+   ],
+   "tags": [
+    "portugais",
+    "poisson",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-fiskesuppe-mde",
+   "nom": "Fiskesuppe, soupe de poisson crémeuse du Nord",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "saumon",
+     "quantite_g": 80
+    },
+    {
+     "cle": "colin",
+     "quantite_g": 80
+    },
+    {
+     "cle": "poireau",
+     "quantite_g": 80
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 70
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 120
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 60
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 5
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 4
+    },
+    {
+     "cle": "aneth",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Fondre le beurre à feu doux et y faire suer 6 min le poireau émincé et la carotte en rondelles, sans les colorer.",
+    "Ajouter les pommes de terre en dés et le bouillon délayé dans 500 ml d'eau, puis laisser frémir 15 min jusqu'à ce que les légumes cèdent sous la lame.",
+    "Verser la crème, revenir à un frémissement léger, plonger le saumon et le colin en gros cubes et couper le feu au bout de 3 min : la chaleur résiduelle finit la cuisson.",
+    "Rectifier l'assaisonnement, parsemer généreusement d'aneth et servir sans attendre."
+   ],
+   "tags": [
+    "scandinave",
+    "soupe",
+    "poisson"
+   ]
+  },
+  {
+   "id": "col-smorrebrod-hareng-mde",
+   "nom": "Smørrebrød au hareng et betterave",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "pain_complet",
+     "quantite_g": 50
+    },
+    {
+     "cle": "hareng",
+     "quantite_g": 55
+    },
+    {
+     "cle": "betterave",
+     "quantite_g": 50
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 20
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 25
+    },
+    {
+     "cle": "aneth",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Griller la tranche de pain complet 3 min au grille-pain pour qu'elle reste ferme sous la garniture.",
+    "Battre le skyr avec la moitié de l'aneth ciselé, puis l'étaler en couche épaisse jusqu'aux bords du pain.",
+    "Ranger dessus les filets de hareng mariné coupés en tronçons, la betterave en petits dés et l'oignon en lamelles très fines.",
+    "Terminer par le reste d'aneth et un tour de moulin à poivre, et manger à la fourchette, sans refermer la tartine."
+   ],
+   "tags": [
+    "scandinave",
+    "sale",
+    "sans-cuisson"
+   ]
+  },
+  {
+   "id": "pdj-mug-cake-avoine-myrtilles-exp",
+   "nom": "Mug cake avoine-myrtilles au micro-ondes",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 6,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 50
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 60
+    },
+    {
+     "cle": "levure_chimique",
+     "quantite_g": 3
+    },
+    {
+     "cle": "myrtille",
+     "quantite_g": 60
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Casser l'oeuf directement dans un grand mug, le battre 20 secondes a la fourchette, puis verser le lait et le miel et melanger.",
+    "Ajouter les flocons d'avoine et la levure, remuer 30 secondes jusqu'a obtenir une pate epaisse, puis enfoncer les myrtilles dedans.",
+    "Cuire 1 min 30 au micro-ondes a pleine puissance, verifier le centre et relancer par tranches de 20 secondes si la pate colle encore.",
+    "Laisser reposer 1 minute hors du four avant de manger : la cuisson se termine toute seule et le coeur finit de prendre."
+   ],
+   "tags": [
+    "rapide",
+    "sucre",
+    "vegetarien",
+    "micro-ondes"
+   ]
+  },
+  {
+   "id": "pdj-oeufs-brouilles-micro-ondes-epinards-feta-exp",
+   "nom": "Oeufs brouilles minute aux epinards et feta",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 6,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 50
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 25
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 60
+    },
+    {
+     "cle": "ciboulette",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Battre les oeufs 20 secondes dans un bol allant au micro-ondes, ajouter les epinards grossierement dechires et la feta emiettee, saler legerement.",
+    "Chauffer 40 secondes a pleine puissance, sortir le bol et brasser a la fourchette pour ramener les bords cuits vers le centre.",
+    "Relancer par tranches de 20 secondes, en brassant a chaque fois, jusqu'a ce que les oeufs soient juste pris : compter 1 min 20 au total.",
+    "Toaster le pain pendant la cuisson, parsemer les oeufs de ciboulette ciselee et servir sans attendre."
+   ],
+   "tags": [
+    "rapide",
+    "sale",
+    "vegetarien",
+    "micro-ondes"
+   ]
+  },
+  {
+   "id": "pdj-wrap-dinde-cheddar-roquette-exp",
+   "nom": "Wrap express blanc de dinde, cheddar et roquette",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "tortilla",
+     "quantite_g": 45
+    },
+    {
+     "cle": "blanc_dinde",
+     "quantite_g": 80
+    },
+    {
+     "cle": "cheddar",
+     "quantite_g": 25
+    },
+    {
+     "cle": "roquette",
+     "quantite_g": 20
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 50
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Passer la tortilla 15 secondes au micro-ondes ou 20 secondes dans une poele seche : souple, elle se roule sans craquer.",
+    "Etaler la moutarde sur toute la surface en laissant 2 cm de marge sur le bord oppose, puis couvrir de cheddar en lamelles fines.",
+    "Repartir le blanc de dinde, les rondelles de tomate et la roquette sur la moitie la plus proche, sans surcharger le centre.",
+    "Rouler serre en repliant les cotes des le premier tour, couper en deux en biais et manger aussitot ou emballer pour emporter."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "sale",
+    "nomade"
+   ]
+  },
+  {
+   "id": "pdj-haricots-blancs-tomate-oeuf-pain-exp",
+   "nom": "Haricots blancs a la tomate et oeuf au plat sur pain",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 9,
+   "ingredients": [
+    {
+     "cle": "haricots_blancs",
+     "quantite_g": 200
+    },
+    {
+     "cle": "concentre_tomate",
+     "quantite_g": 15
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 60
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Egoutter et rincer les haricots blancs, les verser dans une poele chaude avec le concentre de tomate, le paprika et 3 cuilleres a soupe d'eau.",
+    "Laisser mijoter 4 minutes a feu moyen en ecrasant une petite poignee de haricots a la fourchette : la sauce epaissit toute seule.",
+    "Pousser les haricots sur un cote, verser l'huile dans l'espace libre et y casser l'oeuf, couvrir et cuire 3 minutes pour un blanc pris et un jaune coulant.",
+    "Toaster le pain pendant ce temps, poser les haricots dessus puis l'oeuf, saler et poivrer au moment de servir."
+   ],
+   "tags": [
+    "rapide",
+    "sale",
+    "vegetarien",
+    "une-poele"
+   ]
+  },
+  {
+   "id": "dej-wrap-thon-avocat-mais-exp",
+   "nom": "Wrap de thon, avocat et mais",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 7,
+   "ingredients": [
+    {
+     "cle": "tortilla",
+     "quantite_g": 90
+    },
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 120
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 60
+    },
+    {
+     "cle": "mais",
+     "quantite_g": 60
+    },
+    {
+     "cle": "citron_vert",
+     "quantite_g": 10
+    },
+    {
+     "cle": "roquette",
+     "quantite_g": 20
+    }
+   ],
+   "etapes": [
+    "Ecraser l'avocat a la fourchette avec le jus de citron vert, saler et poivrer : cette puree sert de liant et remplace toute sauce.",
+    "Egoutter le thon et le mais, les melanger a la puree d'avocat en 30 secondes sans trop ecraser pour garder du mordant.",
+    "Assouplir les deux tortillas 15 secondes au micro-ondes, garnir chacune sur la moitie basse et ajouter la roquette par-dessus.",
+    "Replier les cotes puis rouler bien serre, trancher en biais et servir immediatement, ou emballer dans du papier cuisson pour la gamelle."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "conserve",
+    "nomade"
+   ]
+  },
+  {
+   "id": "dej-vermicelles-crevettes-courgette-soja-exp",
+   "nom": "Vermicelles de riz aux crevettes et courgette",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 13,
+   "ingredients": [
+    {
+     "cle": "vermicelle_riz",
+     "quantite_g": 80
+    },
+    {
+     "cle": "crevette",
+     "quantite_g": 150
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 120
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 60
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_sesame",
+     "quantite_g": 5
+    },
+    {
+     "cle": "gingembre",
+     "quantite_g": 6
+    },
+    {
+     "cle": "coriandre_fraiche",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Faire bouillir de l'eau a la bouilloire, la verser sur les vermicelles dans un saladier, couvrir d'une assiette et laisser gonfler 4 minutes.",
+    "Pendant ce temps, tailler la courgette et la carotte en fins batonnets : plus la coupe est fine, plus la cuisson sera courte.",
+    "Saisir les legumes 3 minutes a feu vif dans l'huile de sesame avec le gingembre rape, puis ajouter les crevettes et sauter 2 minutes de plus.",
+    "Egoutter les vermicelles, les verser dans la poele avec la sauce soja, melanger 1 minute hors du feu et parsemer de coriandre ciselee."
+   ],
+   "tags": [
+    "rapide",
+    "une-poele",
+    "asiatique"
+   ]
+  },
+  {
+   "id": "dej-burger-minute-boeuf-cheddar-exp",
+   "nom": "Burger minute au boeuf et cheddar",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "pain_burger",
+     "quantite_g": 80
+    },
+    {
+     "cle": "boeuf_hache_5",
+     "quantite_g": 130
+    },
+    {
+     "cle": "cheddar",
+     "quantite_g": 20
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 40
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 20
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 20
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Aplatir le steak hache a la main sur 1,5 cm d'epaisseur, saler les deux faces : un palet fin cuit deux fois plus vite qu'une boule epaisse.",
+    "Chauffer une poele a sec 2 minutes a feu vif, y poser le steak et le laisser sans le bouger 3 minutes pour former une croute.",
+    "Retourner, deposer le cheddar dessus, couvrir et cuire 2 minutes : la vapeur emprisonnee fait fondre le fromage sans dessecher la viande.",
+    "Toaster les deux moities de pain 1 minute dans la poele liberee, tartiner de moutarde, empiler salade, oignon en rondelles fines, steak et tomate."
+   ],
+   "tags": [
+    "rapide",
+    "une-poele",
+    "sale"
+   ]
+  },
+  {
+   "id": "dej-assiette-nordique-saumon-fume-exp",
+   "nom": "Assiette nordique au saumon fume et pommes de terre",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 8,
+   "ingredients": [
+    {
+     "cle": "saumon_fume",
+     "quantite_g": 100
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 200
+    },
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 100
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 80
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    },
+    {
+     "cle": "aneth",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Partir de pommes de terre deja cuites la veille (quantite comptee crue) : les couper en rondelles epaisses et les arroser d'huile d'olive.",
+    "Les passer 2 minutes au micro-ondes sous une assiette retournee pour les rechauffer sans les dessecher, ou les servir froides en salade.",
+    "Fouetter le fromage blanc avec le jus de citron et l'aneth cisele, saler et poivrer : la sauce est prete en 1 minute.",
+    "Dresser sur l'assiette les pommes de terre, le saumon fume en lanieres et le concombre en fines rondelles, puis napper de sauce."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "froid",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-haricots-rouges-oeuf-tortilla-exp",
+   "nom": "Poelee de haricots rouges au cumin et oeuf au plat",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "haricots_rouges",
+     "quantite_g": 200
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 150
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "tortilla",
+     "quantite_g": 45
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 40
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    },
+    {
+     "cle": "cumin",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Faire revenir l'oignon emince 2 minutes a feu vif dans l'huile, ajouter le cumin et remuer 20 secondes pour qu'il libere son parfum.",
+    "Verser les tomates concassees et les haricots rouges egouttes et rinces, laisser reduire 4 minutes a feu moyen en remuant de temps en temps.",
+    "Creuser deux puits dans la poelee, y casser les oeufs, couvrir et laisser cuire 4 minutes : la vapeur cuit le dessus sans retourner les oeufs.",
+    "Rechauffer la tortilla 15 secondes au micro-ondes, la couper en triangles et la servir a cote pour saucer la poelee."
+   ],
+   "tags": [
+    "rapide",
+    "une-poele",
+    "vegetarien",
+    "conserve"
+   ]
+  },
+  {
+   "id": "din-cabillaud-micro-ondes-semoule-courgette-exp",
+   "nom": "Cabillaud vapeur au micro-ondes, semoule et courgette",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 13,
+   "ingredients": [
+    {
+     "cle": "cabillaud",
+     "quantite_g": 180
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 150
+    },
+    {
+     "cle": "semoule",
+     "quantite_g": 60
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    },
+    {
+     "cle": "aneth",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Verser la semoule dans un bol avec la moitie de l'huile et du sel, couvrir d'un volume egal d'eau bouillante, poser une assiette dessus et laisser gonfler 5 minutes.",
+    "Poser le dos de cabillaud dans un plat, l'entourer de courgette en fines rondelles, ajouter l'ail rape, le jus de citron et 2 cuilleres a soupe d'eau.",
+    "Couvrir d'un film perce ou d'un couvercle entrouvert et cuire 4 minutes au micro-ondes, puis laisser reposer 2 minutes couvert pour finir la cuisson.",
+    "Egrener la semoule a la fourchette, dresser le poisson et les courgettes dessus, arroser du jus de cuisson, du reste d'huile et parsemer d'aneth."
+   ],
+   "tags": [
+    "rapide",
+    "micro-ondes",
+    "poisson",
+    "sans-matiere-grasse-cuite"
+   ]
+  },
+  {
+   "id": "col-galettes-riz-ricotta-tomates-sechees-exp",
+   "nom": "Galettes de riz, ricotta et tomates sechees",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "galette_riz",
+     "quantite_g": 30
+    },
+    {
+     "cle": "ricotta",
+     "quantite_g": 90
+    },
+    {
+     "cle": "tomate_sechee",
+     "quantite_g": 12
+    },
+    {
+     "cle": "basilic",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Detendre la ricotta 30 secondes a la fourchette avec une pincee de sel et un tour de poivre : elle s'etale bien mieux qu'a la sortie du pot.",
+    "Tartiner les galettes de riz juste avant de manger, sinon elles ramollissent en quelques minutes.",
+    "Repartir les tomates sechees egouttees et taillees en lanieres, puis ajouter le basilic cisele a la main."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "vegetarien",
+    "sale"
+   ]
+  },
+  {
+   "id": "col-fromage-blanc-radis-ciboulette-exp",
+   "nom": "Fromage blanc sale aux radis et ciboulette",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 200
+    },
+    {
+     "cle": "radis",
+     "quantite_g": 80
+    },
+    {
+     "cle": "ciboulette",
+     "quantite_g": 5
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 40
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Laver les radis et les couper en fines rondelles, garder quelques fanes tendres si elles sont fraiches.",
+    "Fouetter le fromage blanc 30 secondes avec du sel, du poivre, l'huile d'olive et la ciboulette ciselee pour l'aerer.",
+    "Melanger les radis a la preparation, toaster le pain 2 minutes et le couper en mouillettes pour tremper dans le bol."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "vegetarien",
+    "sale"
+   ]
+  },
+  {
+   "id": "pdj-gratin-avoine-pomme-amandes-bat",
+   "nom": "Gratin d'avoine au four, pomme et amandes",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 60
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 150
+    },
+    {
+     "cle": "pomme",
+     "quantite_g": 120
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 15
+    },
+    {
+     "cle": "cannelle",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Préchauffe le four à 180 °C. Râpe la pomme sans la peler et mélange-la dans un saladier avec les flocons d'avoine, la cannelle et les amandes concassées au couteau.",
+    "Bats l'œuf avec le lait et le skyr, verse sur le mélange sec et remue 30 secondes : la pâte doit rester épaisse et tenir à la cuillère.",
+    "Répartis dans un petit plat à gratin et enfourne 30 minutes à 180 °C. Le dessus doit être doré et le centre ferme quand tu appuies dessus.",
+    "Laisse tiédir 20 à 30 minutes à l'air libre avant de fermer une boîte : un couvercle posé trop tôt fait de la buée et détrempe la croûte.",
+    "Pour 4 matins, multiplie les quantités par 4 dans un grand plat et cuis 40 minutes. Découpe en parts : 4 jours au frais, ou 2 mois au congélateur ; réchauffe 2 minutes au micro-ondes."
+   ],
+   "tags": [
+    "batch",
+    "congelable"
+   ]
+  },
+  {
+   "id": "dej-boulettes-dinde-sauce-tomate-bat",
+   "nom": "Boulettes de dinde à la sauce tomate maison et pâtes complètes",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 50,
+   "ingredients": [
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 120
+    },
+    {
+     "cle": "pates_completes",
+     "quantite_g": 70
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 180
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 40
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 4
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 2
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Fais suer l'oignon et l'ail hachés 5 minutes dans l'huile à feu moyen, ajoute les tomates concassées et les herbes, puis laisse mijoter 25 minutes à petits bouillons sans couvrir.",
+    "Pendant ce temps, hache l'escalope de dinde au couteau, sale, poivre et roule des boulettes de la taille d'une noix entre tes paumes humides.",
+    "Dépose les boulettes dans la sauce, couvre et cuis 15 minutes à feu doux en les retournant à mi-cuisson : elles doivent être fermes et opaques à cœur.",
+    "Cuis les pâtes complètes 2 minutes de moins que le temps indiqué et rafraîchis-les à l'eau froide si elles partent en boîte : elles finiront de cuire au réchauffage.",
+    "Double la sauce et garde-en la moitié nature, elle sert aussi de base à un gratin ou à une shakshuka. Pour 4 repas, multiplie par 4 : 4 jours au frais, 3 mois congelé, réchauffé à 75 °C."
+   ],
+   "tags": [
+    "batch",
+    "congelable"
+   ]
+  },
+  {
+   "id": "dej-curry-pois-chiches-epinards-bat",
+   "nom": "Curry de pois chiches aux épinards et riz complet",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 230
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 120
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 60
+    },
+    {
+     "cle": "riz_complet",
+     "quantite_g": 70
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 40
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 4
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 5
+    },
+    {
+     "cle": "gingembre",
+     "quantite_g": 5
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 100
+    }
+   ],
+   "etapes": [
+    "Fais revenir l'oignon émincé, l'ail et le gingembre râpés 5 minutes à feu moyen, puis ajoute le curry et remue 1 minute à sec pour réveiller les épices.",
+    "Verse les tomates, les pois chiches égouttés et rincés, puis le lait de coco. Laisse mijoter 20 minutes à découvert : la sauce doit napper le dos d'une cuillère.",
+    "Ajoute les épinards en deux fois, laisse-les tomber 3 minutes et coupe le feu. Cuis le riz complet 20 minutes dans deux fois son volume d'eau salée.",
+    "Étale le curry dans un plat large et laisse-le refroidir 20 minutes à découvert avant de fermer les boîtes, le riz dans un compartiment séparé.",
+    "Pour 4 repas, multiplie par 4 : le goût s'arrondit dès le lendemain. 4 jours au frais, 3 mois congelé ; décongèle une nuit au réfrigérateur et réchauffe 6 minutes à la casserole."
+   ],
+   "tags": [
+    "batch",
+    "congelable"
+   ]
+  },
+  {
+   "id": "dej-poulet-poche-boulgour-legumes-bat",
+   "nom": "Blancs de poulet pochés en série, boulgour et légumes rôtis",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 140
+    },
+    {
+     "cle": "boulgour",
+     "quantite_g": 70
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 120
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 100
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 4
+    },
+    {
+     "cle": "persil",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Plonge les blancs de poulet dans un bouillon frémissant à 80 °C, couvre et coupe le feu. Laisse pocher 18 minutes hors du feu : la chair reste tendre et ne sèche pas.",
+    "Préchauffe le four à 200 °C. Taille la courgette et le poivron en gros dés, mélange-les à l'huile et fais-les rôtir 25 minutes en remuant une fois à mi-cuisson.",
+    "Verse le boulgour dans un bol, couvre-le d'eau bouillante salée à hauteur plus 1 cm, filme et laisse gonfler 12 minutes, puis égraine à la fourchette.",
+    "Sors le poulet et laisse-le refroidir 20 minutes entier avant de le trancher : découpé froid, il perd beaucoup moins de jus. Arrose de citron et de persil haché.",
+    "Poche 4 à 6 blancs d'un coup, cette base se redécline en wrap, en salade ou en riz sauté. Pour 4 repas, multiplie par 4 : 3 jours au frais, ou 2 mois congelé en tranches."
+   ],
+   "tags": [
+    "batch",
+    "congelable"
+   ]
+  },
+  {
+   "id": "dej-mijote-porc-paprika-haricots-blancs-bat",
+   "nom": "Mijoté de porc au paprika et haricots blancs",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 60,
+   "ingredients": [
+    {
+     "cle": "porc_filet",
+     "quantite_g": 130
+    },
+    {
+     "cle": "haricots_blancs",
+     "quantite_g": 180
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 150
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 80
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 5
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Coupe le filet mignon en cubes de 3 cm et saisis-les 4 minutes à feu vif dans l'huile, sur toutes les faces, puis réserve-les dans une assiette.",
+    "Baisse le feu, fais fondre l'oignon et le poivron émincés 8 minutes, puis ajoute le paprika hors du feu et remue 30 secondes : sur feu vif il brûle et devient amer.",
+    "Remets la viande, verse les tomates et le bouillon délayé dans 100 ml d'eau chaude. Couvre et laisse mijoter 35 minutes à feu doux en remuant deux fois.",
+    "Ajoute les haricots blancs rincés pour les 10 dernières minutes, juste le temps qu'ils prennent la sauce sans se défaire.",
+    "Pour 4 repas, multiplie par 4 et refroidis en plats larges en moins de 2 heures. 4 jours au frais, 3 mois au congélateur ; réchauffe à couvert 10 minutes à feu doux."
+   ],
+   "tags": [
+    "batch",
+    "congelable"
+   ]
+  },
+  {
+   "id": "dej-salade-lentilles-betterave-feta-bat",
+   "nom": "Salade de lentilles, betterave et feta",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 90
+    },
+    {
+     "cle": "betterave",
+     "quantite_g": 100
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 40
+    },
+    {
+     "cle": "noix",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "vinaigre_cidre",
+     "quantite_g": 6
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 20
+    },
+    {
+     "cle": "persil",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Cuis les lentilles 22 minutes dans trois fois leur volume d'eau non salée, à petits frémissements : salées trop tôt, elles durcissent. Égoutte-les et étale-les sur un plat.",
+    "Arrose-les de vinaigre de cidre et d'huile d'olive pendant qu'elles sont encore tièdes : tièdes elles boivent l'assaisonnement, froides elles le laissent au fond.",
+    "Coupe la betterave cuite en dés, cisèle l'échalote et le persil, concasse les noix, puis mélange le tout aux lentilles refroidies.",
+    "Garde la feta émiettée à part dans un petit pot et ajoute-la au moment de manger : elle rend de l'eau et sale toute la salade si elle attend 3 jours dedans.",
+    "Pour 4 repas, multiplie par 4 et répartis en boîtes hermétiques. 4 jours au frais, elle gagne même en goût ; ne la congèle pas, betterave et feta rendent trop d'eau au dégel."
+   ],
+   "tags": [
+    "batch"
+   ]
+  },
+  {
+   "id": "din-soupe-pois-casses-jambon-bat",
+   "nom": "Soupe épaisse de pois cassés au jambon",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 60,
+   "ingredients": [
+    {
+     "cle": "pois_casse",
+     "quantite_g": 80
+    },
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 80
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 100
+    },
+    {
+     "cle": "poireau",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 40
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 4
+    },
+    {
+     "cle": "persil",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Rince les pois cassés à l'eau froide. Fais suer l'oignon, le poireau et la carotte taillés en rondelles 8 minutes dans l'huile, sans les colorer.",
+    "Ajoute les pois cassés et le bouillon délayé dans 600 ml d'eau, porte à ébullition, puis baisse et laisse cuire 40 minutes à couvert : les pois doivent s'écraser à la cuillère.",
+    "Mixe la moitié de la soupe seulement et remets-la dans la casserole : tu gardes de la mâche et la texture tient mieux au réchauffage.",
+    "Coupe le jambon en lanières et ajoute-le hors du feu avec le persil pour qu'il ne durcisse pas. Rectifie l'épaisseur avec un peu d'eau chaude.",
+    "Pour 4 dîners, multiplie par 4 et refroidis en récipients peu profonds en moins de 2 heures. 3 jours au frais, 4 mois congelé à plat en sachets ; réchauffe 3 minutes à ébullition."
+   ],
+   "tags": [
+    "batch",
+    "congelable"
+   ]
+  },
+  {
+   "id": "din-hachis-lentilles-patate-douce-bat",
+   "nom": "Hachis de lentilles à la purée de patate douce",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 65,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 80
+    },
+    {
+     "cle": "patate_douce",
+     "quantite_g": 250
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 80
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 40
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 100
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "cumin",
+     "quantite_g": 3
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 20
+    }
+   ],
+   "etapes": [
+    "Cuis les lentilles 25 minutes à l'eau frémissante non salée. En parallèle, cuis la patate douce en gros cubes 20 minutes à l'eau bouillante, jusqu'à ce qu'un couteau entre sans résistance.",
+    "Fais revenir l'oignon et la carotte en petits dés 10 minutes dans l'huile avec le cumin, ajoute les tomates et les lentilles égouttées, puis laisse compoter 10 minutes.",
+    "Écrase la patate douce à la fourchette sans la mixer : mixée, elle devient élastique. Sale, poivre et réserve.",
+    "Préchauffe le four à 200 °C. Étale le hachis de lentilles, couvre de purée, parsème d'emmental râpé et gratine 20 minutes jusqu'à ce que le dessus soit doré.",
+    "Pour 4 dîners, multiplie par 4 dans un grand plat et découpe en parts une fois tiède. 4 jours au frais, 2 mois congelé en parts ; réchauffe 25 minutes à 180 °C."
+   ],
+   "tags": [
+    "batch",
+    "congelable"
+   ]
+  },
+  {
+   "id": "din-galettes-lentilles-avoine-bat",
+   "nom": "Galettes de lentilles à l'avoine et sauce au skyr",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 55,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 80
+    },
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 25
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 40
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 60
+    },
+    {
+     "cle": "cumin",
+     "quantite_g": 3
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 80
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Cuis les lentilles 25 minutes à l'eau non salée, égoutte-les très soigneusement et laisse-les sécher 10 minutes à l'air : une pâte humide se délite à la cuisson.",
+    "Écrase grossièrement les lentilles à la fourchette avec l'oignon et la carotte râpés, le cumin, les flocons d'avoine et l'œuf. Laisse reposer 15 minutes, le temps que l'avoine gonfle.",
+    "Forme 3 ou 4 galettes de 1,5 cm d'épaisseur et saisis-les 4 minutes par face à feu moyen dans l'huile, sans les bouger avant qu'une croûte se forme.",
+    "Mélange le skyr avec le jus de citron, du sel et du poivre pour la sauce, et garde-la dans un pot à part.",
+    "Pour 4 dîners, multiplie par 4 et sépare les galettes par du papier cuisson. 3 jours au frais, 2 mois congelées ; réchauffe 10 minutes à 180 °C plutôt qu'au micro-ondes, qui les ramollit."
+   ],
+   "tags": [
+    "batch",
+    "congelable"
+   ]
+  },
+  {
+   "id": "din-mijote-boeuf-carottes-bat",
+   "nom": "Mijoté de bœuf aux carottes et pommes de terre",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 100,
+   "ingredients": [
+    {
+     "cle": "boeuf_bavette",
+     "quantite_g": 130
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 120
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 150
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 100
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 3
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 7
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Coupe la viande en cubes de 4 cm et saisis-les 5 minutes à feu vif dans une cocotte, par petites quantités : entassée, la viande bout au lieu de colorer.",
+    "Réserve la viande, fais blondir l'oignon 5 minutes, déglace avec les tomates en grattant les sucs du fond, puis verse le bouillon délayé dans 250 ml d'eau chaude.",
+    "Remets la viande avec les herbes, couvre et laisse mijoter 1 heure à tout petit feu : la surface doit frémir, jamais bouillir.",
+    "Ajoute les carottes et les pommes de terre en gros morceaux et poursuis 30 minutes à couvert, jusqu'à ce que la lame d'un couteau les traverse sans effort.",
+    "Pour 4 dîners, multiplie par 4 ; il est meilleur le lendemain. 4 jours au frais, réchauffé 10 minutes à feu doux ; ne le congèle pas avec les pommes de terre, elles deviennent granuleuses."
+   ],
+   "tags": [
+    "batch"
+   ]
+  },
+  {
+   "id": "din-ratatouille-oeufs-feta-bat",
+   "nom": "Ratatouille maison, œufs pochés et feta",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "ratatouille",
+     "quantite_g": 250
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 50
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 60
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 4
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 2
+    },
+    {
+     "cle": "concentre_tomate",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Fais chauffer l'huile avec l'ail écrasé, verse les légumes encore surgelés et laisse-les rendre leur eau 10 minutes à feu vif, sans couvrir.",
+    "Ajoute le concentré de tomate et les herbes, baisse le feu et laisse compoter 20 minutes : la ratatouille doit épaissir et ne plus rendre de jus au fond.",
+    "Creuse deux nids dans la préparation, casse un œuf dans chacun, couvre et laisse prendre 6 minutes à feu doux : le blanc est pris, le jaune encore coulant.",
+    "Émiette la feta par-dessus hors du feu et sers avec le pain complet grillé 3 minutes.",
+    "Fais la ratatouille en grande quantité, elle sert aussi de base à des pâtes ou à une tartine : 4 jours au frais, 3 mois congelée seule ; cuis toujours les œufs au moment de manger."
+   ],
+   "tags": [
+    "batch"
+   ]
+  },
+  {
+   "id": "col-muffins-avoine-cacao-banane-bat",
+   "nom": "Muffins d'avoine au cacao et à la banane",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 40
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 60
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 30
+    },
+    {
+     "cle": "cacao",
+     "quantite_g": 8
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 50
+    },
+    {
+     "cle": "levure_chimique",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Préchauffe le four à 180 °C. Écrase la banane bien mûre à la fourchette jusqu'à obtenir une purée lisse, sans morceaux.",
+    "Mixe les flocons d'avoine 30 secondes pour les réduire en farine grossière, puis mélange-les au cacao et à la levure.",
+    "Réunis les deux préparations avec l'œuf battu et le skyr, et remue juste assez pour qu'il n'y ait plus de farine sèche : trop travaillée, la pâte donne des muffins caoutchouteux.",
+    "Remplis des moules aux deux tiers et enfourne 18 minutes à 180 °C. La pointe d'un couteau doit ressortir sèche au centre.",
+    "Pour 4 collations, multiplie par 4 et démoule tiède sur une grille. 4 jours au frais en boîte, ou 2 mois congelés à l'unité ; sors-en un le matin, il dégèle en 2 heures."
+   ],
+   "tags": [
+    "batch",
+    "congelable"
    ]
   }
  ]

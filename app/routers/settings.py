@@ -27,6 +27,11 @@ TRANSFORMATION_BENEFITS = {
 class SubstanceSettingIn(BaseModel):
     key: str
     unit_cost: float
+    # Consommation habituelle par jour : c'est elle qui donne son sens aux
+    # économies (services/savings.py = prix x frequence x jours sans consommer)
+    # et donc a l'echeance d'un objectif d'economies. Optionnelle pour ne pas
+    # casser les clients qui n'envoient que le prix.
+    usual_frequency_per_day: float | None = None
 
 
 class HabitSettingIn(BaseModel):
@@ -52,12 +57,14 @@ class ReportSettingsUpdate(BaseModel):
 def get_settings(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
     profile = _get_or_create_profile(db, user)
     built_in = [
-        {"key": s.category.value, "label": s.label, "unit": s.unit, "unit_cost": s.unit_cost}
+        {"key": s.category.value, "label": s.label, "unit": s.unit, "unit_cost": s.unit_cost,
+         "usual_frequency_per_day": s.usual_frequency_per_day}
         for s in user.substances
         if s.category in (models.SubstanceCategory.ALCOHOL, models.SubstanceCategory.TOBACCO)
     ]
     custom = [
-        {"id": s.id, "label": s.label, "unit": s.unit, "unit_cost": s.unit_cost, "note": s.note}
+        {"id": s.id, "label": s.label, "unit": s.unit, "unit_cost": s.unit_cost, "note": s.note,
+         "usual_frequency_per_day": s.usual_frequency_per_day}
         for s in user.substances
         if s.category == models.SubstanceCategory.OTHER
     ]
@@ -95,6 +102,8 @@ def save_settings(
             sub = by_key.get(entry.key)
             if sub:
                 sub.unit_cost = entry.unit_cost
+                if entry.usual_frequency_per_day is not None:
+                    sub.usual_frequency_per_day = max(0.0, entry.usual_frequency_per_day)
 
     if payload.habits:
         by_id = {h.id: h for h in user.habits}
