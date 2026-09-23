@@ -29,6 +29,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
+from ..plan_alimentation import JOURS, SEMAINE_TYPE
 from ..services.common import now_utc, is_same_day
 from ..services.sport import calories_burned_on
 from .profile import _get_or_create_profile
@@ -61,6 +62,33 @@ INTERNAL_RECIPES = [
 RECIPE_MEAL_TYPE_LABEL = {
     "petit-dejeuner": "Petit-déjeuner", "dejeuner": "Déjeuner", "diner": "Dîner", "collation": "Collation",
 }
+
+
+def _recettes_du_plan() -> list[dict]:
+    """Les repas de la semaine type d'alimentation, ajoutés au catalogue pour
+    pouvoir les choisir hors du jour prévu. Dédoublonnés par libellé (le même
+    repas revient plusieurs fois dans la semaine) et enrichis des macros, que
+    les 18 recettes historiques ci-dessus n'ont pas."""
+    vus, recettes = set(), []
+    for day_index, repas in sorted(SEMAINE_TYPE.items()):
+        for meal_type, label, kcal, p, g, l in repas:
+            if label in vus:
+                continue
+            vus.add(label)
+            recettes.append({
+                "id": f"plan-{day_index}-{meal_type}",
+                "label": label,
+                "mealType": meal_type,
+                "kcal": kcal,
+                "ingredients": label,
+                "source": "plan",
+                "day_label": JOURS[day_index],
+                "proteines": p, "glucides": g, "lipides": l,
+            })
+    return recettes
+
+
+INTERNAL_RECIPES = INTERNAL_RECIPES + _recettes_du_plan()
 
 MEALDB_BASE_URL = "https://www.themealdb.com/api/json/v1"
 

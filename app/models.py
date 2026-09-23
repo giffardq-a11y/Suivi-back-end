@@ -351,6 +351,34 @@ class Meal(Base):
     calories = Column(Integer, nullable=False)
     type = Column(String, nullable=False)  # petit-dejeuner | dejeuner | diner | collation
     occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    # Macros en grammes. Renseignées quand le repas vient du plan
+    # d'alimentation (MealPlanEntry) ou d'une saisie détaillée ; 0 pour les
+    # repas saisis à la volée avec les seules calories.
+    proteines = Column(Integer, nullable=False, default=0, server_default="0")
+    glucides = Column(Integer, nullable=False, default=0, server_default="0")
+    lipides = Column(Integer, nullable=False, default=0, server_default="0")
+
+
+class MealPlanEntry(Base):
+    """Un repas prévu d'une semaine type d'alimentation (plan 80 kg oct.-déc.,
+    importé du classeur par importer_alimentation.py).
+
+    La semaine type est le seul cycle : day_index 0 = lundi ... 6 = dimanche,
+    et elle se répète à l'identique toutes les semaines. Le plan est propre à
+    l'utilisateur — un PUT /diet/plan remplace l'intégralité du sien."""
+    __tablename__ = "meal_plan_entries"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    plan_name = Column(String, nullable=False)
+    day_index = Column(Integer, nullable=False)  # 0 = lundi ... 6 = dimanche
+    meal_type = Column(String, nullable=False)  # même vocabulaire que Meal.type
+    label = Column(String, nullable=False)
+    calories = Column(Integer, nullable=False)
+    proteines = Column(Integer, nullable=False, default=0)
+    glucides = Column(Integer, nullable=False, default=0)
+    lipides = Column(Integer, nullable=False, default=0)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
 
 
 class Run(Base):
