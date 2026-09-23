@@ -8,6 +8,12 @@ ALTER TABLE au démarrage, jusqu'au 15/09/2026 — ex. suivi.db en local) a déj
 les tables mais pas de table alembic_version. On lui applique les derniers
 ALTER de l'ancien système pour la mettre au niveau de la révision 0001, puis
 on la marque comme telle ("stamp") au lieu de recréer les tables.
+
+Le create_all ci-dessous crée TOUTES les tables du modèle actuel, alors que le
+tampon posé est 0001 : les migrations suivantes rejoueraient donc des
+créations déjà faites. C'est ce qui avait bloqué la base de dev au démarrage
+(« table flash_cards already exists », 23/09/2026). Elles passent depuis par
+les helpers de app/schema_rattrapage.py, qui ignorent ce qui existe déjà.
 """
 from pathlib import Path
 
