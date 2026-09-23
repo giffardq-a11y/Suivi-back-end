@@ -283,6 +283,11 @@ class Profile(Base):
     daily_calorie_budget = Column(Integer, nullable=False, default=2000)
     suggested_habits_selected = Column(JSON, nullable=False, default=list)
     meal_photo_provider = Column(String, nullable=False, default="gemini_fatsecret")
+    # Réglages du plan d'alimentation : date du lundi de la semaine 0 (sert à
+    # savoir dans quelle semaine du cycle on est) et nombre de personnes, qui
+    # multiplie la liste de courses sans toucher aux portions affichées.
+    plan_start_date = Column(String, nullable=True)  # 'YYYY-MM-DD'
+    plan_persons = Column(Integer, nullable=False, default=1, server_default="1")
 
 
 class WeightEntry(Base):
@@ -360,20 +365,31 @@ class Meal(Base):
 
 
 class MealPlanEntry(Base):
-    """Un repas prévu d'une semaine type d'alimentation (plan 80 kg oct.-déc.,
-    importé du classeur par importer_alimentation.py).
+    """Un repas prévu du plan d'alimentation de l'utilisateur.
 
-    La semaine type est le seul cycle : day_index 0 = lundi ... 6 = dimanche,
-    et elle se répète à l'identique toutes les semaines. Le plan est propre à
-    l'utilisateur — un PUT /diet/plan remplace l'intégralité du sien."""
+    day_index 0 = lundi ... 6 = dimanche. week_index vaut 0 pour un plan d'une
+    seule semaine, qui se répète alors à l'identique ; un plan généré sur un
+    mois numérote ses semaines 0 à 3 et tourne à partir de Profile.plan_start_date.
+
+    recipe_id pointe une recette du catalogue (app/data/recettes.json) quand le
+    repas en vient : c'est ce qui permet d'afficher les ingrédients et d'en
+    déduire la liste de courses. Les repas importés d'un classeur n'ont qu'un
+    libellé et des macros, donc pas de liste de courses possible.
+
+    portions multiplie les quantités de la recette (1.2 = « un peu plus »),
+    comme les macros enregistrées ici : c'est la variable d'ajustement du
+    générateur pour tomber sur la cible calorique du jour."""
     __tablename__ = "meal_plan_entries"
 
     id = Column(String, primary_key=True, default=gen_uuid)
     user_id = Column(String, ForeignKey("users.id"), nullable=False)
     plan_name = Column(String, nullable=False)
+    week_index = Column(Integer, nullable=False, default=0, server_default="0")
     day_index = Column(Integer, nullable=False)  # 0 = lundi ... 6 = dimanche
     meal_type = Column(String, nullable=False)  # même vocabulaire que Meal.type
     label = Column(String, nullable=False)
+    recipe_id = Column(String, nullable=True)
+    portions = Column(Float, nullable=False, default=1.0, server_default="1")
     calories = Column(Integer, nullable=False)
     proteines = Column(Integer, nullable=False, default=0)
     glucides = Column(Integer, nullable=False, default=0)

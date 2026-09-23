@@ -1,0 +1,6091 @@
+{
+ "source": "Recettes rédigées pour ce projet ; macros calculées depuis app/data/ingredients.json (CIQUAL 2020, ANSES).",
+ "recettes": [
+  {
+   "id": "pdj-porridge-banane-amandes",
+   "nom": "Porridge banane-amandes",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 60
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 200
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 120
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Porter le lait à frémissement dans une casserole, verser les flocons d'avoine et cuire 5 min à feu doux en remuant sans arrêt.",
+    "Retirer du feu, verser dans un bol, ajouter la banane en rondelles et les amandes concassées, laisser reposer 1 min avant de servir."
+   ],
+   "tags": [
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-porridge-pomme-noisettes",
+   "nom": "Porridge pomme-noisettes",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 55
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 200
+    },
+    {
+     "cle": "pomme",
+     "quantite_g": 130
+    },
+    {
+     "cle": "noisette",
+     "quantite_g": 12
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Râper la pomme avec sa peau, la faire compoter 3 min à feu moyen dans une casserole avec 2 cuillères à soupe d'eau.",
+    "Ajouter le lait et les flocons, cuire 5 min à feu doux en remuant, puis verser dans un bol.",
+    "Parsemer de noisettes concassées et napper de miel juste avant de servir."
+   ],
+   "tags": [
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-porridge-cacao-cacahuete",
+   "nom": "Porridge cacao et beurre de cacahuète",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 60
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 200
+    },
+    {
+     "cle": "cacao",
+     "quantite_g": 8
+    },
+    {
+     "cle": "beurre_cacahuete",
+     "quantite_g": 15
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 80
+    }
+   ],
+   "etapes": [
+    "Délayer le cacao dans le lait froid au fouet pour éviter les grumeaux, puis porter à frémissement.",
+    "Verser les flocons et cuire 5 min à feu doux en remuant.",
+    "Hors du feu, incorporer le beurre de cacahuète, verser dans un bol et couvrir de rondelles de banane."
+   ],
+   "tags": [
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-bowl-skyr-fruits-rouges-muesli",
+   "nom": "Bowl de skyr aux fruits rouges et muesli",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 200
+    },
+    {
+     "cle": "fruits_rouges",
+     "quantite_g": 100
+    },
+    {
+     "cle": "muesli",
+     "quantite_g": 50
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Sortir les fruits rouges surgelés 10 min avant, ou les passer 40 secondes au micro-ondes pour les décongeler.",
+    "Verser le skyr dans un bol, lisser à la cuillère, répartir les fruits rouges et le muesli par-dessus.",
+    "Napper de miel et servir immédiatement pour garder le muesli croquant."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-fromage-blanc-banane-noix",
+   "nom": "Fromage blanc, banane et noix",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 200
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 120
+    },
+    {
+     "cle": "noix",
+     "quantite_g": 20
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Écraser la moitié de la banane à la fourchette et la mélanger au fromage blanc pour le sucrer naturellement.",
+    "Couper le reste de la banane en rondelles, les disposer sur le mélange, ajouter les cerneaux de noix grossièrement cassés et le miel."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-overnight-oats-fruits-rouges",
+   "nom": "Overnight oats aux fruits rouges",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 50
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 150
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 100
+    },
+    {
+     "cle": "fruits_rouges",
+     "quantite_g": 100
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "La veille au soir, mélanger dans un bocal les flocons, le skyr, le lait et le miel jusqu'à obtenir une texture homogène.",
+    "Ajouter les fruits rouges, fermer et placer au réfrigérateur au moins 8 heures.",
+    "Le matin, remuer et manger froid, directement dans le bocal."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "batch",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-pancakes-avoine-banane",
+   "nom": "Pancakes à l'avoine et à la banane",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 60
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 80
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 100
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Mixer les flocons, les œufs, le lait et la moitié de la banane 30 secondes jusqu'à obtenir une pâte lisse, laisser reposer 5 min.",
+    "Chauffer une poêle antiadhésive avec l'huile à feu moyen, verser 4 petites louches et cuire 2 min par face jusqu'à coloration.",
+    "Empiler les pancakes et garnir du reste de banane en rondelles."
+   ],
+   "tags": [
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-pain-perdu-miel",
+   "nom": "Pain perdu au miel",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 80
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 120
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 12
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Battre les œufs avec le lait, y tremper les tranches de pain 1 min par face pour qu'elles s'imprègnent sans se déliter.",
+    "Faire fondre le beurre dans une poêle à feu moyen et dorer les tranches 3 min de chaque côté.",
+    "Servir chaud, arrosé de miel."
+   ],
+   "tags": [
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-tartines-cacahuete-banane",
+   "nom": "Tartines beurre de cacahuète et banane",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "pain_complet",
+     "quantite_g": 80
+    },
+    {
+     "cle": "beurre_cacahuete",
+     "quantite_g": 25
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 100
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 100
+    }
+   ],
+   "etapes": [
+    "Passer les tranches de pain 2 min au grille-pain pour qu'elles restent fermes sous la garniture.",
+    "Tartiner de beurre de cacahuète, couvrir de rondelles de banane et servir avec le skyr nature à côté."
+   ],
+   "tags": [
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-muesli-lait-poire",
+   "nom": "Muesli au lait et poire",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "muesli",
+     "quantite_g": 60
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 200
+    },
+    {
+     "cle": "poire",
+     "quantite_g": 130
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Verser le muesli dans un bol, couvrir de lait froid et laisser gonfler 2 min.",
+    "Couper la poire en dés, l'ajouter avec les amandes effilées et mélanger juste avant de manger."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-smoothie-bowl-banane-skyr",
+   "nom": "Smoothie bowl banane-skyr",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 8,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 200
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 120
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 100
+    },
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 30
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Mixer 1 min le skyr, 90 g de banane, le lait et les flocons jusqu'à obtenir une crème épaisse.",
+    "Verser dans un bol large, disposer le reste de banane en rondelles et les amandes concassées en surface.",
+    "Manger aussitôt, avant que la préparation ne se liquéfie."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-riz-au-lait-raisins",
+   "nom": "Riz au lait aux raisins secs",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 50
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 250
+    },
+    {
+     "cle": "raisin_sec",
+     "quantite_g": 15
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Verser le riz et le lait dans une casserole, porter à frémissement puis cuire 20 min à feu très doux en remuant régulièrement.",
+    "Ajouter les raisins secs 5 min avant la fin pour qu'ils gonflent.",
+    "Sucrer au miel hors du feu et servir tiède ou froid."
+   ],
+   "tags": [
+    "sucre",
+    "batch",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-semoule-lait-dattes",
+   "nom": "Semoule au lait, dattes et amandes",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "semoule",
+     "quantite_g": 50
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 250
+    },
+    {
+     "cle": "datte",
+     "quantite_g": 25
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Porter le lait à ébullition, verser la semoule en pluie et cuire 3 min à feu doux sans cesser de fouetter.",
+    "Couvrir et laisser gonfler 5 min hors du feu.",
+    "Ajouter les dattes dénoyautées coupées en dés et les amandes concassées, mélanger et servir."
+   ],
+   "tags": [
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-yaourt-grec-fraises-noix",
+   "nom": "Yaourt grec, fraises, miel et noix",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "yaourt_grec",
+     "quantite_g": 150
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 120
+    },
+    {
+     "cle": "fraise",
+     "quantite_g": 100
+    },
+    {
+     "cle": "noix",
+     "quantite_g": 15
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Mélanger le yaourt grec et le skyr au fouet pour obtenir une crème onctueuse et bien protéinée.",
+    "Équeuter et couper les fraises en deux, les répartir sur la crème.",
+    "Parsemer de noix concassées et napper de miel au moment de servir."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-pancakes-proteines-fromage-blanc",
+   "nom": "Pancakes protéinés au fromage blanc",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "farine",
+     "quantite_g": 50
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 100
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 50
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Fouetter les œufs avec 60 g de fromage blanc et le lait, puis incorporer la farine en pluie jusqu'à obtenir une pâte sans grumeaux.",
+    "Huiler une poêle au pinceau, cuire les pancakes 2 min par face à feu moyen.",
+    "Servir avec le reste de fromage blanc et le miel."
+   ],
+   "tags": [
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-bowl-skyr-kiwi-graines",
+   "nom": "Bowl skyr, kiwi et graines de tournesol",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 6,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 250
+    },
+    {
+     "cle": "kiwi",
+     "quantite_g": 150
+    },
+    {
+     "cle": "graines_tournesol",
+     "quantite_g": 20
+    },
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 25
+    }
+   ],
+   "etapes": [
+    "Torréfier les graines de tournesol et les flocons 3 min à sec dans une poêle chaude, jusqu'à ce qu'ils embaument.",
+    "Peler les kiwis et les couper en rondelles.",
+    "Dresser le skyr dans un bol, poser les kiwis et parsemer du mélange tiède graines-flocons."
+   ],
+   "tags": [
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-tartine-chocolat-fromage-blanc",
+   "nom": "Tartine chocolat noir et fromage blanc",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 6,
+   "ingredients": [
+    {
+     "cle": "pain_complet",
+     "quantite_g": 70
+    },
+    {
+     "cle": "chocolat_noir",
+     "quantite_g": 20
+    },
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 150
+    },
+    {
+     "cle": "orange",
+     "quantite_g": 100
+    }
+   ],
+   "etapes": [
+    "Griller les tranches de pain 2 min, puis y déposer le chocolat noir cassé en carrés pour qu'il fonde à la chaleur du pain.",
+    "Peler l'orange à vif et la couper en quartiers.",
+    "Servir les tartines avec le fromage blanc et l'orange dans un ramequin."
+   ],
+   "tags": [
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-bircher-pomme-raisins",
+   "nom": "Bircher pomme râpée et raisins secs",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 8,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 45
+    },
+    {
+     "cle": "yaourt_nature",
+     "quantite_g": 125
+    },
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 120
+    },
+    {
+     "cle": "pomme",
+     "quantite_g": 130
+    },
+    {
+     "cle": "raisin_sec",
+     "quantite_g": 15
+    },
+    {
+     "cle": "noisette",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Mélanger les flocons, le yaourt, le fromage blanc et les raisins secs dans un bol, couvrir et réserver 30 min au frais.",
+    "Râper la pomme avec la peau juste avant de servir et l'incorporer pour qu'elle ne brunisse pas.",
+    "Parsemer de noisettes concassées."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-porridge-coco-fruits-rouges",
+   "nom": "Porridge au lait de coco et fruits rouges",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 55
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 60
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 150
+    },
+    {
+     "cle": "fruits_rouges",
+     "quantite_g": 100
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 80
+    }
+   ],
+   "etapes": [
+    "Mélanger le lait de coco et le lait demi-écrémé dans une casserole, porter à frémissement.",
+    "Verser les flocons et cuire 5 min à feu doux en remuant, puis ajouter les fruits rouges les 2 dernières minutes.",
+    "Verser dans un bol et déposer le skyr en quenelle sur le dessus."
+   ],
+   "tags": [
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-smoothie-orange-banane-avoine",
+   "nom": "Smoothie orange, banane et avoine",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 6,
+   "ingredients": [
+    {
+     "cle": "lait_demi",
+     "quantite_g": 250
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 120
+    },
+    {
+     "cle": "orange",
+     "quantite_g": 150
+    },
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 40
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Peler l'orange et la banane, les couper en morceaux et les mettre dans le blender avec le lait.",
+    "Ajouter les flocons et les amandes, mixer 1 min à pleine vitesse jusqu'à ce que la texture soit homogène.",
+    "Verser dans un grand verre et boire aussitôt."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-oeufs-brouilles-pain-complet",
+   "nom": "Œufs brouillés sur pain complet",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 150
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 30
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 8
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 60
+    }
+   ],
+   "etapes": [
+    "Battre les œufs avec le lait, saler et poivrer.",
+    "Fondre le beurre à feu doux, verser les œufs et remuer sans arrêt 3 à 4 min : retirer la poêle du feu dès que la texture est encore crémeuse.",
+    "Griller le pain 2 min et le recouvrir des œufs brouillés."
+   ],
+   "tags": [
+    "rapide",
+    "sale",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-omelette-champignons-emmental",
+   "nom": "Omelette champignons et emmental",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 150
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 100
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 25
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 40
+    }
+   ],
+   "etapes": [
+    "Émincer les champignons et les faire revenir 5 min à feu vif dans l'huile jusqu'à évaporation de leur eau.",
+    "Verser les œufs battus, baisser le feu et cuire 4 min à couvert.",
+    "Parsemer d'emmental râpé, plier l'omelette et servir avec le pain complet grillé."
+   ],
+   "tags": [
+    "sale",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-oeufs-plat-jambon-tomate",
+   "nom": "Œufs au plat, jambon et tomate",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 60
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 100
+    },
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 60
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Chauffer l'huile à feu moyen, y poser le jambon coupé en lanières et les tomates en tranches épaisses, cuire 3 min.",
+    "Casser les œufs par-dessus, couvrir et cuire 4 min pour que le blanc prenne et le jaune reste coulant.",
+    "Servir dans l'assiette avec le pain de campagne grillé."
+   ],
+   "tags": [
+    "rapide",
+    "sale"
+   ]
+  },
+  {
+   "id": "pdj-tartine-avocat-oeuf-poche",
+   "nom": "Tartine avocat et œuf poché",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "pain_complet",
+     "quantite_g": 70
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 70
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 10
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 80
+    }
+   ],
+   "etapes": [
+    "Porter une casserole d'eau vinaigrée à frémissement, y glisser les œufs un par un et pocher 3 min, puis égoutter sur du papier absorbant.",
+    "Écraser l'avocat à la fourchette avec le jus de citron, du sel et du poivre, tartiner sur le pain grillé.",
+    "Poser les œufs pochés dessus et servir avec le skyr à côté."
+   ],
+   "tags": [
+    "sale",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-omelette-epinards-feta",
+   "nom": "Omelette épinards et feta",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 150
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 80
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 40
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 30
+    }
+   ],
+   "etapes": [
+    "Faire tomber les épinards 2 min à feu vif dans l'huile chaude, puis les répartir dans la poêle.",
+    "Verser les œufs battus, émietter la feta dessus et cuire 5 min à feu doux à couvert.",
+    "Faire glisser l'omelette dans l'assiette et servir avec une tranche de pain complet."
+   ],
+   "tags": [
+    "sale",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-brouillade-saumon",
+   "nom": "Brouillade de saumon",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 150
+    },
+    {
+     "cle": "saumon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 20
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 50
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Poêler le pavé de saumon coupé en dés 3 min à feu moyen dans une poêle antiadhésive, puis réserver.",
+    "Battre les œufs avec la crème, les cuire 4 min à feu très doux en remuant pour obtenir une brouillade crémeuse.",
+    "Ajouter le saumon, un filet de citron, et servir sur le pain complet grillé."
+   ],
+   "tags": [
+    "sale"
+   ]
+  },
+  {
+   "id": "pdj-tartine-chevre-tomates-cerises",
+   "nom": "Tartine chèvre et tomates cerises",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "pain_complet",
+     "quantite_g": 80
+    },
+    {
+     "cle": "chevre_buche",
+     "quantite_g": 50
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 80
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 1
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 100
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four en position gril à 220 °C.",
+    "Tartiner le pain de chèvre, poser les tomates cerises coupées en deux, arroser d'huile et saupoudrer d'herbes de Provence.",
+    "Enfourner 5 min jusqu'à ce que le fromage colore, servir avec le skyr nature."
+   ],
+   "tags": [
+    "sale",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-wrap-oeuf-poivron",
+   "nom": "Wrap œuf et poivron",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "tortilla",
+     "quantite_g": 90
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 60
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Émincer le poivron et le faire revenir 4 min à feu vif dans l'huile.",
+    "Verser les œufs battus, cuire 3 min en remuant, puis parsemer d'emmental râpé hors du feu.",
+    "Réchauffer les tortillas 30 secondes par face à la poêle, les garnir et les rouler serré."
+   ],
+   "tags": [
+    "sale",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-shakshuka-express",
+   "nom": "Shakshuka express",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 200
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 60
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 60
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Faire suer l'oignon et le poivron émincés 5 min à feu moyen dans l'huile, ajouter le paprika et mélanger 30 secondes.",
+    "Verser les tomates concassées et laisser réduire 6 min à feu doux.",
+    "Creuser deux puits, y casser les œufs, couvrir et cuire 5 min ; servir avec le pain de campagne."
+   ],
+   "tags": [
+    "sale",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-oeufs-durs-fromage-blanc-herbes",
+   "nom": "Œufs durs et fromage blanc aux herbes",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 70
+    },
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 100
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 60
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 3
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 1
+    }
+   ],
+   "etapes": [
+    "Plonger les œufs dans l'eau bouillante et cuire 9 min, puis les refroidir sous l'eau froide avant de les écaler.",
+    "Mélanger le fromage blanc avec les herbes, l'huile, du sel et du poivre.",
+    "Couper les œufs en deux et le concombre en rondelles, servir avec le pain complet et la crème d'herbes."
+   ],
+   "tags": [
+    "rapide",
+    "sale",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "dej-wok-poulet-legumes-croquants",
+   "nom": "Wok de poulet aux légumes croquants",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 170
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 85
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 100
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 80
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 80
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Rincer le riz et le cuire 11 min dans deux fois son volume d'eau bouillante salée, puis le laisser gonfler 5 min à couvert hors du feu.",
+    "Tailler le poulet en lanières et le saisir 5 min à feu vif dans l'huile de colza, jusqu'à coloration dorée.",
+    "Ajouter le poivron, la carotte en julienne et les champignons émincés, faire sauter 6 min en remuant sans arrêt.",
+    "Déglacer avec la sauce soja, laisser réduire 1 min et servir aussitôt sur le riz."
+   ],
+   "tags": [
+    "rapide",
+    "poele",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "dej-poulet-roti-patate-douce-brocoli",
+   "nom": "Poulet rôti, patate douce et brocoli",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 180
+    },
+    {
+     "cle": "patate_douce",
+     "quantite_g": 250
+    },
+    {
+     "cle": "brocoli",
+     "quantite_g": 150
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 12
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C, couper la patate douce en cubes de 2 cm et les enrober des deux tiers de l'huile.",
+    "Enfourner les cubes 25 min sur une plaque, en les retournant à mi-cuisson.",
+    "Saisir le filet de poulet 6 min par face à la poêle dans le reste d'huile, saler et poivrer.",
+    "Cuire les fleurettes de brocoli 6 min à la vapeur, garder croquant et dresser avec le poulet tranché."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-pates-completes-poulet-pesto",
+   "nom": "Pâtes complètes au poulet et pesto",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 150
+    },
+    {
+     "cle": "pates_completes",
+     "quantite_g": 90
+    },
+    {
+     "cle": "pesto",
+     "quantite_g": 25
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 100
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Cuire les pâtes complètes 10 min dans un grand volume d'eau bouillante salée et réserver une louche d'eau de cuisson.",
+    "Couper le poulet en dés et le poêler 8 min à feu moyen-vif jusqu'à ce qu'il soit doré à cœur.",
+    "Ajouter les tomates cerises coupées en deux, les laisser éclater 3 min.",
+    "Hors du feu, mélanger pâtes, poulet et pesto avec un peu d'eau de cuisson, puis râper le parmesan dessus."
+   ],
+   "tags": [
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "dej-taboule-boulgour-poulet-feta",
+   "nom": "Taboulé de boulgour au poulet et feta",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 140
+    },
+    {
+     "cle": "boulgour",
+     "quantite_g": 70
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 100
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 100
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 40
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Verser le boulgour dans un bol, couvrir d'eau bouillante salée et laisser gonfler 12 min à couvert, puis égrener à la fourchette.",
+    "Griller le poulet 6 min par face à la poêle, le laisser tiédir puis le couper en cubes.",
+    "Tailler tomate et concombre en petits dés, émietter la feta.",
+    "Mélanger le tout avec le jus de citron et l'huile d'olive, saler, et réserver 1 h au frais avant d'emporter."
+   ],
+   "tags": [
+    "froid",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-curry-poulet-lait-coco",
+   "nom": "Curry de poulet au lait de coco et riz complet",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "poulet_cuisse",
+     "quantite_g": 170
+    },
+    {
+     "cle": "riz_complet",
+     "quantite_g": 70
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 80
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 6
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Cuire le riz complet 18 min à l'eau bouillante salée, puis l'égoutter.",
+    "Faire suer l'oignon émincé 5 min dans l'huile, ajouter le curry et le laisser torréfier 30 secondes.",
+    "Ajouter la cuisse de poulet désossée en morceaux, la colorer 5 min sur toutes les faces.",
+    "Verser le lait de coco, laisser mijoter 15 min à feu doux à couvert et servir nappé sur le riz."
+   ],
+   "tags": [
+    "one-pot",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-poulet-citron-pommes-de-terre-four",
+   "nom": "Poulet au citron et pommes de terre au four",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "poulet_cuisse",
+     "quantite_g": 180
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 280
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 30
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 8
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 12
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 190 °C et couper les pommes de terre en quartiers réguliers.",
+    "Déposer quartiers, gousses d'ail écrasées et cuisse de poulet dans un plat, arroser d'huile et de jus de citron, saupoudrer d'herbes.",
+    "Enfourner 40 min en arrosant deux fois avec le jus du plat.",
+    "Vérifier que le jus du poulet est clair, puis laisser reposer 5 min avant de servir."
+   ],
+   "tags": [
+    "four",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "dej-buddha-bowl-dinde-quinoa",
+   "nom": "Buddha bowl de dinde et quinoa",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 160
+    },
+    {
+     "cle": "quinoa",
+     "quantite_g": 70
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 80
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 80
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 50
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Rincer le quinoa et le cuire 13 min dans deux fois son volume d'eau salée, puis l'égrener.",
+    "Poêler l'escalope de dinde 5 min par face dans la moitié de l'huile, saler, puis la trancher.",
+    "Râper la carotte et faire tomber les épinards 2 min à la poêle avec le reste d'huile.",
+    "Composer le bol en secteurs : quinoa, dinde, carotte, épinards et lamelles d'avocat."
+   ],
+   "tags": [
+    "rapide",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-wrap-dinde-crudites",
+   "nom": "Wrap de dinde et crudités",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 150
+    },
+    {
+     "cle": "tortilla",
+     "quantite_g": 90
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 40
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 80
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 50
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Griller l'escalope de dinde 5 min par face à la poêle antiadhésive, saler et laisser refroidir 5 min.",
+    "Mélanger le skyr et la moutarde pour obtenir une sauce lisse.",
+    "Tiédir les tortillas 30 secondes à la poêle, les tartiner de sauce, garnir de salade, de rondelles de tomate et de dinde en lanières.",
+    "Rouler serré, couper en deux en biais et emballer dans du papier cuisson pour le bureau."
+   ],
+   "tags": [
+    "rapide",
+    "froid"
+   ]
+  },
+  {
+   "id": "dej-tajine-dinde-carottes-semoule",
+   "nom": "Tajine de dinde aux carottes et semoule",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 170
+    },
+    {
+     "cle": "semoule",
+     "quantite_g": 80
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 120
+    },
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 80
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Colorer les morceaux de dinde 5 min dans l'huile avec l'oignon émincé, puis ajouter le curry et mélanger 30 secondes.",
+    "Ajouter les carottes en rondelles, couvrir d'eau à hauteur et laisser mijoter 25 min à feu doux.",
+    "Incorporer les pois chiches égouttés pour les 5 dernières minutes de cuisson.",
+    "Couvrir la semoule de son volume d'eau bouillante salée, laisser gonfler 5 min, égrener et servir avec le tajine."
+   ],
+   "tags": [
+    "one-pot",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-chili-con-carne-riz-complet",
+   "nom": "Chili con carne et riz complet",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "boeuf_hache_5",
+     "quantite_g": 150
+    },
+    {
+     "cle": "haricots_rouges",
+     "quantite_g": 150
+    },
+    {
+     "cle": "riz_complet",
+     "quantite_g": 60
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 200
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 4
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Faire revenir l'oignon haché 5 min dans l'huile, ajouter le bœuf haché et l'émietter 5 min à feu vif.",
+    "Saupoudrer de paprika, verser les tomates concassées et laisser mijoter 20 min à découvert.",
+    "Ajouter les haricots rouges rincés, poursuivre 5 min et rectifier le sel.",
+    "Cuire le riz complet 18 min à l'eau bouillante salée et servir le chili par-dessus."
+   ],
+   "tags": [
+    "batch",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "dej-bolognaise-maison",
+   "nom": "Pâtes à la bolognaise maison",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "boeuf_hache_5",
+     "quantite_g": 150
+    },
+    {
+     "cle": "pates",
+     "quantite_g": 90
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 200
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 60
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Tailler carotte et oignon en brunoise et les faire suer 8 min dans l'huile à feu moyen.",
+    "Ajouter le bœuf haché, l'émietter et le saisir 5 min jusqu'à ce qu'il ne soit plus rosé.",
+    "Verser les tomates concassées, saler, et laisser mijoter 25 min à feu doux en remuant de temps en temps.",
+    "Cuire les pâtes 9 min al dente, les mélanger à la sauce et terminer avec le parmesan râpé."
+   ],
+   "tags": [
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-bavette-echalote-pommes-sautees",
+   "nom": "Bavette à l'échalote et pommes de terre sautées",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "boeuf_bavette",
+     "quantite_g": 150
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 250
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 40
+    },
+    {
+     "cle": "haricot_vert",
+     "quantite_g": 120
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 12
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Couper les pommes de terre en rondelles épaisses et les sauter 18 min dans l'huile à feu moyen, à couvert les 10 premières minutes.",
+    "Cuire les haricots verts 8 min à l'eau bouillante salée, puis les égoutter.",
+    "Saisir la bavette 2 min par face à feu vif dans le beurre, saler et la laisser reposer 5 min sous une feuille d'aluminium.",
+    "Faire fondre les échalotes ciselées 3 min dans le jus de cuisson et en napper la viande tranchée."
+   ],
+   "tags": [
+    "poele",
+    "rapide"
+   ]
+  },
+  {
+   "id": "dej-boeuf-saute-poivrons-riz",
+   "nom": "Bœuf sauté aux poivrons et riz parfumé",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "boeuf_bavette",
+     "quantite_g": 150
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 80
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 120
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Cuire le riz 11 min à l'eau bouillante salée puis le laisser reposer 5 min à couvert.",
+    "Découper la bavette en fines lanières dans le sens contraire des fibres et la mariner 10 min dans la sauce soja.",
+    "Saisir la viande 2 min à feu très vif dans l'huile, la réserver au chaud.",
+    "Faire sauter poivrons et oignon 6 min dans le même wok, remettre le bœuf 1 min et servir sur le riz."
+   ],
+   "tags": [
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "dej-filet-mignon-porc-lentilles",
+   "nom": "Filet mignon de porc aux lentilles vertes",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "porc_filet",
+     "quantite_g": 160
+    },
+    {
+     "cle": "lentilles",
+     "quantite_g": 80
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Rincer les lentilles et les cuire 25 min dans trois fois leur volume d'eau avec le cube de bouillon, sans saler au départ.",
+    "Faire revenir oignon et carotte en dés 6 min dans l'huile, puis les ajouter aux lentilles à mi-cuisson.",
+    "Colorer le filet mignon 3 min sur chaque face à la poêle, puis le finir 12 min à couvert à feu doux.",
+    "Laisser reposer la viande 5 min, la trancher en médaillons et la déposer sur les lentilles."
+   ],
+   "tags": [
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-porc-paprika-patate-douce",
+   "nom": "Porc rôti au paprika et patate douce",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "porc_filet",
+     "quantite_g": 170
+    },
+    {
+     "cle": "patate_douce",
+     "quantite_g": 250
+    },
+    {
+     "cle": "haricot_vert",
+     "quantite_g": 120
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 4
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C, frotter le porc de paprika, de sel et de la moitié de l'huile.",
+    "Disposer la patate douce en cubes autour de la viande, arroser du reste d'huile et enfourner 28 min.",
+    "Cuire les haricots verts 8 min à l'eau bouillante salée et les rafraîchir aussitôt.",
+    "Laisser reposer le porc 5 min hors du four avant de le trancher et de dresser l'assiette."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-gratin-pommes-terre-jambon",
+   "nom": "Gratin de pommes de terre au jambon",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 55,
+   "ingredients": [
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 120
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 280
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 60
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 30
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 60
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 180 °C et frotter un plat avec la gousse d'ail coupée.",
+    "Détailler les pommes de terre en fines rondelles et les alterner avec le jambon en lanières dans le plat.",
+    "Mélanger crème et lait, saler, poivrer, verser sur le gratin et couvrir d'emmental râpé.",
+    "Enfourner 45 min jusqu'à ce que la lame d'un couteau traverse sans résistance et que le dessus soit doré."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-club-jambon-emmental",
+   "nom": "Club sandwich jambon-emmental au pain complet",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 100
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 120
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 25
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 30
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 60
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Toaster les tranches de pain complet 2 min au grille-pain pour qu'elles restent croustillantes jusqu'au midi.",
+    "Tartiner deux faces de moutarde, répartir le jambon, l'emmental râpé, la tomate en rondelles et les feuilles de salade.",
+    "Refermer, presser fermement, couper en deux en diagonale et emballer dans du film alimentaire.",
+    "Conserver au frais jusqu'au repas et sortir le sandwich 10 min avant de le manger."
+   ],
+   "tags": [
+    "rapide",
+    "froid"
+   ]
+  },
+  {
+   "id": "dej-tortilla-espagnole-oignons",
+   "nom": "Tortilla espagnole aux oignons",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 180
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 250
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 80
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Émincer finement pommes de terre et oignon, puis les confire 15 min à feu doux dans l'huile, à couvert, sans les colorer.",
+    "Battre les œufs, saler, et y mélanger les légumes égouttés ; laisser reposer 5 min.",
+    "Verser l'appareil dans la poêle et cuire 6 min à feu doux jusqu'à ce que les bords prennent.",
+    "Retourner la tortilla à l'aide d'une assiette et poursuivre 4 min ; servir tiède ou froid."
+   ],
+   "tags": [
+    "poele",
+    "vegetarien",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-salade-lentilles-oeuf-mollet",
+   "nom": "Salade de lentilles à l'œuf mollet",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "lentilles",
+     "quantite_g": 80
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 100
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 30
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 10
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 40
+    }
+   ],
+   "etapes": [
+    "Cuire les lentilles 25 min à l'eau frémissante non salée, les égoutter et les laisser tiédir.",
+    "Plonger les œufs 6 min dans l'eau bouillante, les refroidir immédiatement puis les écaler.",
+    "Fouetter la moutarde avec l'huile de colza et l'échalote ciselée pour obtenir une vinaigrette.",
+    "Mélanger lentilles, tomates cerises coupées en deux et salade, assaisonner et poser les œufs mollets coupés en deux."
+   ],
+   "tags": [
+    "froid",
+    "batch",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "dej-riz-saute-oeufs-petits-pois",
+   "nom": "Riz sauté aux œufs et petits pois",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 150
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 85
+    },
+    {
+     "cle": "petit_pois",
+     "quantite_g": 100
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 60
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Cuire le riz 11 min à l'eau bouillante salée, l'égoutter et l'étaler pour qu'il refroidisse et sèche 10 min.",
+    "Battre les œufs et les brouiller 2 min à feu vif dans la moitié de l'huile, puis les réserver.",
+    "Sauter la carotte en petits dés et les petits pois 5 min dans le reste d'huile.",
+    "Ajouter le riz, le faire sauter 4 min à feu vif, remettre les œufs, déglacer à la sauce soja et servir brûlant."
+   ],
+   "tags": [
+    "rapide",
+    "poele",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "dej-saumon-roti-quinoa-epinards",
+   "nom": "Saumon rôti, quinoa et épinards",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "saumon",
+     "quantite_g": 140
+    },
+    {
+     "cle": "quinoa",
+     "quantite_g": 70
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 150
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 190 °C, poser le pavé de saumon sur du papier cuisson, saler et arroser de jus de citron.",
+    "Enfourner 14 min : la chair doit rester nacrée au centre.",
+    "Cuire le quinoa 13 min dans deux fois son volume d'eau salée, puis l'égrener à la fourchette.",
+    "Faire tomber les épinards 3 min à la poêle dans l'huile d'olive et dresser avec le saumon."
+   ],
+   "tags": [
+    "four",
+    "rapide"
+   ]
+  },
+  {
+   "id": "dej-tagliatelles-saumon-epinards",
+   "nom": "Tagliatelles au saumon et aux épinards",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "saumon",
+     "quantite_g": 130
+    },
+    {
+     "cle": "pates",
+     "quantite_g": 85
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 100
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 60
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 30
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Cuire les pâtes 9 min à l'eau bouillante salée et réserver une louche d'eau de cuisson.",
+    "Faire suer l'échalote ciselée 4 min à feu doux, ajouter le saumon en cubes et le saisir 3 min.",
+    "Ajouter les épinards, laisser tomber 2 min, puis verser la crème et chauffer 3 min sans bouillir.",
+    "Lier avec un peu d'eau de cuisson, mélanger aux pâtes et finir d'un trait de jus de citron."
+   ],
+   "tags": [
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "dej-poke-bowl-saumon-avocat",
+   "nom": "Poke bowl saumon et avocat",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "saumon",
+     "quantite_g": 130
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 80
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 60
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 80
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 15
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Cuire le riz 11 min, l'assaisonner d'un filet de jus de citron et le laisser refroidir 20 min à découvert.",
+    "Couper le saumon extra-frais en cubes de 2 cm et le mariner 15 min au frais dans la sauce soja.",
+    "Tailler le concombre en fines rondelles et l'avocat en lamelles au dernier moment.",
+    "Dresser le riz froid au fond du bol, répartir saumon, concombre et avocat, puis verser la marinade restante."
+   ],
+   "tags": [
+    "froid",
+    "rapide"
+   ]
+  },
+  {
+   "id": "dej-cabillaud-ecrase-poireau",
+   "nom": "Cabillaud vapeur et écrasé de pommes de terre au poireau",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "cabillaud",
+     "quantite_g": 190
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 260
+    },
+    {
+     "cle": "poireau",
+     "quantite_g": 120
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 50
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Cuire les pommes de terre en morceaux 20 min à l'eau bouillante salée, jusqu'à ce qu'elles s'écrasent à la fourchette.",
+    "Émincer le poireau et le faire fondre 10 min à feu doux dans l'huile d'olive.",
+    "Cuire le dos de cabillaud 8 min à la vapeur, assaisonner juste avant de servir.",
+    "Écraser grossièrement les pommes de terre avec la crème et le poireau, puis poser le poisson dessus."
+   ],
+   "tags": [
+    "rapide"
+   ]
+  },
+  {
+   "id": "dej-curry-cabillaud-tomate",
+   "nom": "Curry de cabillaud à la tomate et riz complet",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "cabillaud",
+     "quantite_g": 190
+    },
+    {
+     "cle": "riz_complet",
+     "quantite_g": 75
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 200
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 60
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 5
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    }
+   ],
+   "etapes": [
+    "Cuire le riz complet 18 min à l'eau bouillante salée.",
+    "Faire suer l'oignon 5 min à la poêle, ajouter le curry et le faire torréfier 30 secondes.",
+    "Verser les tomates concassées et le lait de coco, puis laisser réduire 10 min à feu moyen.",
+    "Déposer le cabillaud en gros cubes dans la sauce et pocher 7 min à couvert sans remuer ; servir sur le riz."
+   ],
+   "tags": [
+    "one-pot"
+   ]
+  },
+  {
+   "id": "dej-colin-legumes-soleil-semoule",
+   "nom": "Colin aux légumes du soleil et semoule",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "colin",
+     "quantite_g": 190
+    },
+    {
+     "cle": "semoule",
+     "quantite_g": 80
+    },
+    {
+     "cle": "ratatouille",
+     "quantite_g": 200
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Faire revenir les légumes surgelés 15 min à la poêle dans l'huile avec les herbes de Provence, à feu moyen.",
+    "Poser les dos de colin sur les légumes, couvrir et laisser cuire 9 min à feu doux.",
+    "Couvrir la semoule de son volume d'eau bouillante salée et laisser gonfler 5 min à couvert.",
+    "Égrener la semoule à la fourchette et dresser avec le poisson et les légumes."
+   ],
+   "tags": [
+    "poele",
+    "rapide"
+   ]
+  },
+  {
+   "id": "dej-papillote-colin-patate-douce",
+   "nom": "Papillote de colin et patate douce rôtie",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "colin",
+     "quantite_g": 190
+    },
+    {
+     "cle": "patate_douce",
+     "quantite_g": 250
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 150
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C et enfourner les cubes de patate douce huilés 25 min sur une plaque.",
+    "Disposer le colin et les rondelles de courgette sur une feuille de papier cuisson, arroser de jus de citron et saler.",
+    "Fermer hermétiquement la papillote et l'enfourner 15 min à côté de la patate douce.",
+    "Ouvrir la papillote à table pour garder les parfums et servir avec les cubes rôtis."
+   ],
+   "tags": [
+    "four"
+   ]
+  },
+  {
+   "id": "dej-truite-grillee-boulgour-herbes",
+   "nom": "Truite grillée et boulgour aux herbes",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "truite",
+     "quantite_g": 170
+    },
+    {
+     "cle": "boulgour",
+     "quantite_g": 75
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 100
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 120
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    }
+   ],
+   "etapes": [
+    "Couvrir le boulgour d'eau bouillante salée et le laisser gonfler 12 min à couvert.",
+    "Sauter la courgette en demi-lunes 7 min à feu vif dans la moitié de l'huile, ajouter les tomates cerises 2 min.",
+    "Griller le filet de truite 4 min côté peau puis 2 min côté chair dans le reste d'huile.",
+    "Mélanger le boulgour aux légumes, arroser de jus de citron et poser la truite dessus."
+   ],
+   "tags": [
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "dej-salade-pates-thon",
+   "nom": "Salade de pâtes au thon et olives",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 140
+    },
+    {
+     "cle": "pates",
+     "quantite_g": 90
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 100
+    },
+    {
+     "cle": "olive_noire",
+     "quantite_g": 30
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 40
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Cuire les pâtes 9 min à l'eau bouillante salée, les rincer à l'eau froide et les égoutter soigneusement.",
+    "Égoutter le thon, l'émietter, et couper les tomates cerises en deux.",
+    "Émincer l'oignon très finement et dénoyauter les olives si besoin.",
+    "Mélanger tous les ingrédients avec l'huile d'olive, saler, poivrer et réserver 2 h au frais avant d'emporter."
+   ],
+   "tags": [
+    "froid",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-salade-toscane-thon-haricots-blancs",
+   "nom": "Salade toscane au thon et haricots blancs",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 120
+    },
+    {
+     "cle": "haricots_blancs",
+     "quantite_g": 200
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 120
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 40
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 12
+    },
+    {
+     "cle": "vinaigre_balsamique",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Rincer les haricots blancs sous l'eau froide 1 min et les égoutter à fond.",
+    "Émincer l'oignon en lamelles fines et le laisser dégorger 5 min dans le vinaigre balsamique.",
+    "Couper les tomates en quartiers et émietter le thon égoutté.",
+    "Mélanger le tout avec l'huile d'olive, saler, poivrer et laisser reposer 15 min avant de servir frais."
+   ],
+   "tags": [
+    "froid",
+    "rapide"
+   ]
+  },
+  {
+   "id": "dej-tartines-sardines-avocat",
+   "nom": "Tartines de sardines à l'avocat",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "sardine_boite",
+     "quantite_g": 100
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 100
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 60
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 60
+    }
+   ],
+   "etapes": [
+    "Toaster les tranches de pain complet 3 min au four à 200 °C pour qu'elles restent fermes sous la garniture.",
+    "Écraser l'avocat à la fourchette avec le jus de citron, saler et poivrer.",
+    "Tartiner les toasts d'avocat, répartir les sardines égouttées et les rondelles de tomate.",
+    "Donner un tour de moulin à poivre et manger aussitôt, ou emballer séparément pain et garniture."
+   ],
+   "tags": [
+    "rapide",
+    "froid"
+   ]
+  },
+  {
+   "id": "dej-linguine-crevettes-ail",
+   "nom": "Linguine aux crevettes et à l'ail",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "crevette",
+     "quantite_g": 180
+    },
+    {
+     "cle": "pates",
+     "quantite_g": 90
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 8
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 100
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 12
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Cuire les linguine 9 min à l'eau bouillante salée et garder une louche d'eau de cuisson.",
+    "Faire blondir l'ail émincé 1 min dans l'huile d'olive à feu doux, sans le brûler.",
+    "Monter le feu, ajouter les crevettes et les tomates cerises, sauter 4 min jusqu'à ce que les crevettes soient nacrées.",
+    "Mélanger aux pâtes avec un peu d'eau de cuisson et un trait de jus de citron, puis servir immédiatement."
+   ],
+   "tags": [
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "dej-wok-crevettes-curry-thai",
+   "nom": "Wok de crevettes au curry thaï",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "crevette",
+     "quantite_g": 180
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 80
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 70
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 100
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Cuire le riz 11 min à l'eau bouillante salée et le réserver à couvert.",
+    "Faire chauffer l'huile au wok, y torréfier le curry 30 secondes puis ajouter le poivron en lanières 5 min.",
+    "Verser le lait de coco et laisser frémir 4 min pour épaissir légèrement la sauce.",
+    "Ajouter les crevettes, chauffer 3 min sans bouillir et servir aussitôt sur le riz."
+   ],
+   "tags": [
+    "rapide",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "dej-wok-tofu-marine-soja",
+   "nom": "Wok de tofu mariné au soja et riz complet",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "tofu",
+     "quantite_g": 200
+    },
+    {
+     "cle": "riz_complet",
+     "quantite_g": 75
+    },
+    {
+     "cle": "brocoli",
+     "quantite_g": 150
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 8
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Presser le tofu 10 min entre deux feuilles de papier absorbant, le couper en cubes et le mariner dans la sauce soja et l'ail haché.",
+    "Cuire le riz complet 18 min à l'eau bouillante salée.",
+    "Saisir les cubes de tofu 8 min à feu vif dans l'huile, en les retournant pour les dorer sur toutes les faces.",
+    "Ajouter le brocoli en fleurettes et 3 cuillères d'eau, couvrir 5 min, puis servir sur le riz."
+   ],
+   "tags": [
+    "vegetarien",
+    "poele"
+   ]
+  },
+  {
+   "id": "dej-bowl-tofu-grille-quinoa",
+   "nom": "Bowl de tofu grillé, quinoa et légumes rôtis",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "tofu",
+     "quantite_g": 180
+    },
+    {
+     "cle": "quinoa",
+     "quantite_g": 70
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 120
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 120
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C, mélanger poivron et courgette en morceaux avec la moitié de l'huile et le paprika.",
+    "Enfourner les légumes 25 min en remuant à mi-cuisson.",
+    "Cuire le quinoa 13 min dans deux fois son volume d'eau salée, puis l'égrener.",
+    "Griller les tranches de tofu 4 min par face dans le reste d'huile et assembler le bol bien chaud."
+   ],
+   "tags": [
+    "vegetarien",
+    "four",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-dahl-lentilles-riz",
+   "nom": "Dahl de lentilles au riz basmati",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 100
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 60
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 70
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 150
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Faire suer l'oignon haché 5 min dans une casserole, ajouter le curry et le laisser parfumer 30 secondes.",
+    "Verser les lentilles rincées, les tomates concassées et 40 cl d'eau, puis cuire 28 min à feu doux à couvert.",
+    "Incorporer le lait de coco 5 min avant la fin et saler généreusement.",
+    "Cuire le riz 11 min à l'eau bouillante salée et le servir à côté du dahl."
+   ],
+   "tags": [
+    "vegetarien",
+    "batch",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "dej-couscous-vegetarien-pois-chiches",
+   "nom": "Couscous végétarien aux pois chiches",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 200
+    },
+    {
+     "cle": "semoule",
+     "quantite_g": 75
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 120
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 120
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 50
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Faire revenir carotte et courgette en gros morceaux 5 min dans l'huile, ajouter le curry et mélanger 30 secondes.",
+    "Couvrir d'eau à hauteur, saler et laisser mijoter 15 min jusqu'à ce que les légumes soient tendres.",
+    "Ajouter les pois chiches égouttés et poursuivre 5 min à découvert.",
+    "Faire gonfler la semoule 5 min sous un volume égal d'eau bouillante salée, l'égrener et servir avec la feta émiettée."
+   ],
+   "tags": [
+    "vegetarien",
+    "one-pot",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-salade-pois-chiches-boulgour-feta",
+   "nom": "Salade de pois chiches, boulgour et feta",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 200
+    },
+    {
+     "cle": "boulgour",
+     "quantite_g": 60
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 60
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 100
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 100
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Couvrir le boulgour d'eau bouillante salée et le laisser gonfler 12 min à couvert, puis le refroidir à découvert.",
+    "Rincer et égoutter les pois chiches, couper les tomates cerises en deux et le concombre en dés.",
+    "Fouetter le jus de citron avec l'huile d'olive, saler et poivrer.",
+    "Mélanger tous les éléments, parsemer de feta émiettée et réserver 1 h au frais avant d'emporter."
+   ],
+   "tags": [
+    "froid",
+    "vegetarien",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-burritos-haricots-rouges",
+   "nom": "Burritos végétariens aux haricots rouges",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "haricots_rouges",
+     "quantite_g": 200
+    },
+    {
+     "cle": "tortilla",
+     "quantite_g": 90
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 30
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 100
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Faire revenir oignon et poivron en dés 7 min dans une poêle chaude, ajouter le paprika et mélanger 30 secondes.",
+    "Verser les tomates concassées et les haricots rouges rincés, écraser grossièrement et laisser réduire 8 min.",
+    "Tiédir les tortillas 30 secondes par face, les garnir de la préparation et de l'emmental râpé.",
+    "Rouler les burritos et les passer 4 min au four à 200 °C pour faire fondre le fromage."
+   ],
+   "tags": [
+    "vegetarien",
+    "four"
+   ]
+  },
+  {
+   "id": "dej-pates-feta-rotie-tomates-cerises",
+   "nom": "Pâtes complètes à la feta rôtie et tomates cerises",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "feta",
+     "quantite_g": 100
+    },
+    {
+     "cle": "pates_completes",
+     "quantite_g": 90
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 200
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 12
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 6
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C, poser le bloc de feta au centre d'un plat et l'entourer des tomates cerises et de l'ail.",
+    "Arroser d'huile d'olive, saupoudrer d'herbes de Provence et enfourner 25 min.",
+    "Cuire les pâtes complètes 10 min à l'eau bouillante salée et garder un peu d'eau de cuisson.",
+    "Écraser la feta rôtie avec les tomates, lier avec l'eau de cuisson et mélanger aux pâtes égouttées."
+   ],
+   "tags": [
+    "four",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "dej-bruschettas-mozzarella-tomate",
+   "nom": "Bruschettas mozzarella-tomate au pain de campagne",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "mozzarella",
+     "quantite_g": 125
+    },
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 100
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 150
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    },
+    {
+     "cle": "olive_noire",
+     "quantite_g": 20
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four en position gril à 220 °C et toaster les tranches de pain 3 min d'un seul côté.",
+    "Couper la tomate et la mozzarella égouttée en rondelles régulières et les répartir sur les tranches.",
+    "Ajouter les olives émincées, arroser d'huile d'olive et saupoudrer d'herbes de Provence.",
+    "Passer 5 min sous le gril jusqu'à ce que la mozzarella fonde, puis servir chaud avec un tour de poivre."
+   ],
+   "tags": [
+    "vegetarien",
+    "four",
+    "rapide"
+   ]
+  },
+  {
+   "id": "dej-keftas-boeuf-semoule",
+   "nom": "Boulettes de bœuf façon kefta et semoule",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "boeuf_hache_5",
+     "quantite_g": 160
+    },
+    {
+     "cle": "semoule",
+     "quantite_g": 80
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 150
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 4
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Mélanger le bœuf haché avec la moitié de l'oignon râpé, l'ail haché, le paprika et du sel, puis former 8 boulettes.",
+    "Dorer les boulettes 6 min dans l'huile en les retournant régulièrement, puis les réserver.",
+    "Faire suer le reste d'oignon 4 min, verser les tomates concassées et laisser mijoter 10 min avec les boulettes.",
+    "Faire gonfler la semoule 5 min sous un volume égal d'eau bouillante salée et servir avec la sauce."
+   ],
+   "tags": [
+    "poele",
+    "batch"
+   ]
+  },
+  {
+   "id": "dej-dinde-champignons-pates-completes",
+   "nom": "Poêlée crémeuse de dinde aux champignons",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 170
+    },
+    {
+     "cle": "pates_completes",
+     "quantite_g": 85
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 150
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 60
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 30
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Cuire les pâtes complètes 10 min à l'eau bouillante salée.",
+    "Saisir la dinde en lanières 5 min à feu vif dans l'huile, saler et réserver au chaud.",
+    "Faire suer l'échalote 3 min, ajouter les champignons émincés et les cuire 8 min jusqu'à évaporation de l'eau.",
+    "Remettre la dinde, verser la crème et chauffer 3 min sans bouillir, puis napper les pâtes."
+   ],
+   "tags": [
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "dej-salade-quinoa-crevettes-avocat",
+   "nom": "Salade de quinoa aux crevettes et avocat",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "crevette",
+     "quantite_g": 170
+    },
+    {
+     "cle": "quinoa",
+     "quantite_g": 70
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 60
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 100
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Cuire le quinoa 13 min dans deux fois son volume d'eau salée, l'égoutter et le laisser refroidir 15 min.",
+    "Fouetter le jus de citron avec l'huile d'olive, du sel et du poivre.",
+    "Couper les tomates cerises en deux et l'avocat en cubes juste avant le montage.",
+    "Mélanger quinoa, crevettes décortiquées et tomates avec la sauce, ajouter l'avocat et servir frais."
+   ],
+   "tags": [
+    "froid",
+    "rapide"
+   ]
+  },
+  {
+   "id": "dej-bolognaise-lentilles-pates-completes",
+   "nom": "Bolognaise de lentilles aux pâtes complètes",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 90
+    },
+    {
+     "cle": "pates_completes",
+     "quantite_g": 85
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 200
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 80
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Faire suer carotte et oignon en brunoise 8 min dans l'huile d'olive à feu moyen.",
+    "Ajouter les lentilles rincées, les tomates concassées, les herbes et 30 cl d'eau.",
+    "Laisser mijoter 30 min à couvert et à feu doux, jusqu'à ce que les lentilles soient fondantes ; saler en fin de cuisson.",
+    "Cuire les pâtes complètes 10 min al dente et les mélanger à la sauce avant de servir."
+   ],
+   "tags": [
+    "vegetarien",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-cabillaud-ratatouille-papillote",
+   "nom": "Papillote de cabillaud à la ratatouille",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "cabillaud",
+     "quantite_g": 200
+    },
+    {
+     "cle": "ratatouille",
+     "quantite_g": 300
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 180
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C. Couper les pommes de terre en rondelles de 5 mm et les précuire 8 min à l'eau bouillante salée.",
+    "Étaler les légumes à ratatouille et les pommes de terre sur une grande feuille de papier cuisson, arroser d'huile, ajouter l'ail haché et les herbes.",
+    "Poser le dos de cabillaud dessus, refermer la papillote hermétiquement et enfourner 18 min.",
+    "Ouvrir la papillote à table, saler et poivrer au dernier moment."
+   ],
+   "tags": [
+    "four",
+    "leger"
+   ]
+  },
+  {
+   "id": "din-saumon-poireaux-quinoa",
+   "nom": "Saumon à la fondue de poireaux et quinoa",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "saumon",
+     "quantite_g": 160
+    },
+    {
+     "cle": "poireau",
+     "quantite_g": 200
+    },
+    {
+     "cle": "quinoa",
+     "quantite_g": 60
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 40
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Rincer le quinoa et le cuire 15 min dans deux fois son volume d'eau bouillante salée, puis laisser gonfler couvert 5 min.",
+    "Émincer les poireaux en fines rondelles et les faire fondre 12 min à feu doux avec l'huile et 3 cuillères d'eau.",
+    "Ajouter la crème aux poireaux, poser le pavé de saumon peau vers le haut, couvrir et cuire 8 min à feu doux.",
+    "Arroser de jus de citron et servir sur le quinoa."
+   ],
+   "tags": [
+    "poele",
+    "leger"
+   ]
+  },
+  {
+   "id": "din-colin-curry-coco-riz",
+   "nom": "Colin au curry coco et riz complet",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "colin",
+     "quantite_g": 200
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 80
+    },
+    {
+     "cle": "riz_complet",
+     "quantite_g": 55
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Cuire le riz complet 18 min à l'eau bouillante salée.",
+    "Faire suer l'oignon et le poivron émincés 6 min à feu moyen dans l'huile, puis ajouter le curry et le laisser griller 30 secondes.",
+    "Verser le lait de coco, porter à frémissement et déposer le colin coupé en gros cubes.",
+    "Couvrir et pocher 7 min à feu doux sans remuer, servir sur le riz."
+   ],
+   "tags": [
+    "poele",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "din-truite-haricots-verts-amandes",
+   "nom": "Truite meunière, haricots verts aux amandes",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "truite",
+     "quantite_g": 180
+    },
+    {
+     "cle": "haricot_vert",
+     "quantite_g": 250
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 20
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 150
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 8
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Cuire les pommes de terre en robe des champs 20 min à l'eau bouillante et les haricots verts 10 min à la vapeur.",
+    "Concasser les amandes et les torréfier 3 min à sec dans une poêle chaude, réserver.",
+    "Faire mousser le beurre dans la poêle et cuire le filet de truite 3 min par face à feu moyen.",
+    "Déglacer au jus de citron, verser sur le poisson et parsemer les haricots d'amandes."
+   ],
+   "tags": [
+    "poele",
+    "rapide"
+   ]
+  },
+  {
+   "id": "din-gratin-courgettes-thon",
+   "nom": "Gratin de courgettes au thon",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 140
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 350
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 40
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 50
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 190 °C. Râper les courgettes, les saler et les laisser dégorger 10 min, puis presser fermement pour retirer l'eau.",
+    "Battre les œufs avec la crème et l'ail écrasé, ajouter le thon égoutté émietté et les courgettes.",
+    "Verser dans un petit plat beurré, couvrir d'emmental râpé.",
+    "Enfourner 30 min jusqu'à ce que le dessus soit doré et le centre pris."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-sardines-lentilles-tiedes",
+   "nom": "Sardines et lentilles tièdes à la moutarde",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "sardine_boite",
+     "quantite_g": 100
+    },
+    {
+     "cle": "lentilles",
+     "quantite_g": 70
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 10
+    },
+    {
+     "cle": "vinaigre_balsamique",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Cuire les lentilles 25 min à l'eau frémissante non salée avec la carotte en petits dés et l'oignon piqué.",
+    "Fouetter la moutarde, le vinaigre balsamique et l'huile d'olive en vinaigrette.",
+    "Égoutter les lentilles encore chaudes et les mélanger à la vinaigrette.",
+    "Déposer les sardines égouttées sur les lentilles tièdes et poivrer généreusement."
+   ],
+   "tags": [
+    "rapide",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-crevettes-wok-riz-soja",
+   "nom": "Wok de crevettes au brocoli et sauce soja",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "crevette",
+     "quantite_g": 200
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 60
+    },
+    {
+     "cle": "brocoli",
+     "quantite_g": 150
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 100
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 8
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Cuire le riz 11 min à l'eau bouillante salée et l'égoutter.",
+    "Chauffer l'huile à feu vif dans un wok, y saisir le brocoli en petits bouquets et le poivron en lanières 5 min en remuant sans arrêt.",
+    "Ajouter l'ail haché et les crevettes, poursuivre 3 min jusqu'à ce qu'elles soient bien chaudes.",
+    "Déglacer à la sauce soja hors du feu et servir aussitôt sur le riz."
+   ],
+   "tags": [
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-soupe-thai-crevettes-coco",
+   "nom": "Soupe thaïe crevettes, coco et champignons",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "crevette",
+     "quantite_g": 150
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 100
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 150
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 80
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 6
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Délayer le bouillon dans 400 ml d'eau et porter à frémissement avec la carotte taillée en fins bâtonnets.",
+    "Ajouter les champignons émincés et le curry, laisser cuire 8 min à petit bouillon.",
+    "Verser le lait de coco, ajouter les crevettes et maintenir 3 min à 80 °C sans faire bouillir.",
+    "Finir avec le jus de citron juste avant de servir."
+   ],
+   "tags": [
+    "soupe",
+    "rapide"
+   ]
+  },
+  {
+   "id": "din-poulet-champignons-creme-boulgour",
+   "nom": "Cuisse de poulet aux champignons, boulgour",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "poulet_cuisse",
+     "quantite_g": 180
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 200
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 60
+    },
+    {
+     "cle": "boulgour",
+     "quantite_g": 60
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 40
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Cuire le boulgour 12 min à l'eau bouillante salée puis le laisser gonfler couvert.",
+    "Colorer la cuisse de poulet 5 min par face à feu vif dans l'huile, réserver au chaud.",
+    "Dans la même poêle, faire suer l'échalote ciselée puis les champignons en lamelles 8 min, jusqu'à évaporation de l'eau.",
+    "Ajouter la crème, remettre le poulet et laisser mijoter 8 min à couvert à feu doux."
+   ],
+   "tags": [
+    "poele",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "din-poulet-tikka-epinards",
+   "nom": "Poulet tikka aux épinards",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 180
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 250
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 100
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 150
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 6
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Couper le poulet en cubes et le mariner 15 min dans la moitié du skyr avec le curry.",
+    "Faire revenir l'oignon émincé 5 min dans l'huile, ajouter les cubes de poulet et les saisir 4 min à feu vif.",
+    "Verser les tomates concassées, baisser le feu et laisser mijoter 10 min à découvert.",
+    "Incorporer les épinards et les faire tomber 3 min, puis lier hors du feu avec le skyr restant."
+   ],
+   "tags": [
+    "poele",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "din-dinde-poivrons-paprika-semoule",
+   "nom": "Dinde aux poivrons et paprika, semoule",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 170
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 200
+    },
+    {
+     "cle": "semoule",
+     "quantite_g": 55
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 4
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Verser la semoule dans un bol, couvrir d'eau bouillante salée à hauteur, couvrir et laisser gonfler 6 min puis égrener à la fourchette.",
+    "Saisir les lanières de dinde 3 min à feu vif dans la moitié de l'huile, réserver.",
+    "Faire revenir l'oignon et les poivrons en lanières 10 min à feu moyen avec le reste d'huile et le paprika.",
+    "Remettre la dinde 2 min pour réchauffer et servir sur la semoule."
+   ],
+   "tags": [
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-gratin-chou-fleur-dinde",
+   "nom": "Gratin de chou-fleur à la dinde",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 150
+    },
+    {
+     "cle": "chou_fleur",
+     "quantite_g": 350
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 40
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 100
+    },
+    {
+     "cle": "farine",
+     "quantite_g": 12
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C et cuire les bouquets de chou-fleur 12 min à la vapeur, bien les égoutter.",
+    "Poêler la dinde coupée en dés 5 min à feu vif, saler et poivrer.",
+    "Faire un roux avec le beurre et la farine, verser le lait en trois fois et fouetter 4 min jusqu'à épaississement.",
+    "Mélanger chou-fleur et dinde dans un plat, napper de béchamel, couvrir d'emmental et gratiner 18 min."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-chili-boeuf-haricots-rouges",
+   "nom": "Chili de bœuf aux haricots rouges",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "boeuf_hache_5",
+     "quantite_g": 150
+    },
+    {
+     "cle": "haricots_rouges",
+     "quantite_g": 200
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 200
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 4
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Faire revenir l'oignon et le poivron en dés 6 min à feu moyen dans l'huile.",
+    "Ajouter le bœuf haché, l'écraser à la cuillère et le saisir 5 min à feu vif jusqu'à coloration.",
+    "Incorporer le paprika, les tomates concassées et les haricots rouges rincés.",
+    "Laisser mijoter 20 min à feu doux à découvert, en remuant de temps en temps."
+   ],
+   "tags": [
+    "one-pot",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-moussaka-aubergine-boeuf",
+   "nom": "Moussaka légère d'aubergines",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 55,
+   "ingredients": [
+    {
+     "cle": "boeuf_hache_5",
+     "quantite_g": 150
+    },
+    {
+     "cle": "aubergine",
+     "quantite_g": 300
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 150
+    },
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 80
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 30
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C, trancher les aubergines en lamelles de 8 mm, les badigeonner d'huile et les rôtir 20 min.",
+    "Pendant ce temps, faire revenir l'oignon puis le bœuf haché 8 min, ajouter les tomates et mijoter 10 min.",
+    "Monter en alternant aubergines et viande dans un petit plat.",
+    "Couvrir du fromage blanc battu et de l'emmental, puis gratiner 20 min à 190 °C."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-bavette-echalotes-patate-douce",
+   "nom": "Bavette aux échalotes, écrasé de patate douce",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "boeuf_bavette",
+     "quantite_g": 160
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 80
+    },
+    {
+     "cle": "patate_douce",
+     "quantite_g": 200
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 10
+    },
+    {
+     "cle": "vinaigre_balsamique",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Cuire la patate douce en cubes 18 min à l'eau bouillante salée, l'égoutter et l'écraser grossièrement à la fourchette.",
+    "Faire confire les échalotes émincées 12 min à feu doux dans le beurre, déglacer au vinaigre balsamique.",
+    "Sortir la bavette du froid 15 min avant, puis la saisir 2 min par face à feu très vif dans l'huile.",
+    "Laisser reposer la viande 4 min sous une feuille d'aluminium avant de la trancher dans le sens contraire des fibres."
+   ],
+   "tags": [
+    "poele",
+    "rapide"
+   ]
+  },
+  {
+   "id": "din-porc-poireaux-moutarde",
+   "nom": "Filet mignon aux poireaux et moutarde",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "porc_filet",
+     "quantite_g": 170
+    },
+    {
+     "cle": "poireau",
+     "quantite_g": 250
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 150
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 15
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 50
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Cuire les pommes de terre en quartiers 20 min à l'eau bouillante salée.",
+    "Colorer les médaillons de porc 3 min par face à feu vif dans l'huile, réserver.",
+    "Faire fondre les poireaux émincés 12 min à feu doux à couvert dans la même sauteuse.",
+    "Ajouter la crème et la moutarde, remettre le porc et laisser mijoter 6 min à feu doux sans faire bouillir."
+   ],
+   "tags": [
+    "poele",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "din-porc-saute-brocoli-soja",
+   "nom": "Sauté de porc au brocoli et soja",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "porc_filet",
+     "quantite_g": 160
+    },
+    {
+     "cle": "brocoli",
+     "quantite_g": 200
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 55
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 100
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 20
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 6
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Cuire le riz 11 min à l'eau bouillante salée.",
+    "Tailler le porc en fines lanières et le saisir 3 min à feu très vif dans la moitié de l'huile, réserver.",
+    "Sauter le brocoli et les champignons 6 min à feu vif avec le reste d'huile et l'ail haché, en ajoutant 2 cuillères d'eau.",
+    "Remettre le porc, verser la sauce soja et faire sauter 1 min de plus avant de servir sur le riz."
+   ],
+   "tags": [
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-jambon-petits-pois-riz",
+   "nom": "Riz crémeux aux petits pois et jambon",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 150
+    },
+    {
+     "cle": "petit_pois",
+     "quantite_g": 250
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 50
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 40
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Faire suer l'oignon ciselé 5 min dans le beurre à feu doux, sans coloration.",
+    "Ajouter le riz, le nacrer 2 min puis verser 200 ml d'eau bouillante salée et cuire 12 min à couvert.",
+    "Incorporer les petits pois surgelés et poursuivre 6 min à feu doux.",
+    "Ajouter le jambon en dés et la crème hors du feu, mélanger et laisser reposer 2 min."
+   ],
+   "tags": [
+    "one-pot",
+    "rapide"
+   ]
+  },
+  {
+   "id": "din-frittata-courgette-feta",
+   "nom": "Frittata courgette et feta",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 150
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 250
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 50
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 100
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Faire revenir les courgettes en demi-rondelles 8 min à feu moyen dans l'huile, jusqu'à légère coloration.",
+    "Battre les œufs avec les herbes, saler modérément à cause de la feta, poivrer.",
+    "Verser les œufs dans la poêle, répartir la feta émiettée et les tomates cerises coupées en deux.",
+    "Cuire 8 min à feu doux à couvert, jusqu'à ce que le centre soit juste pris."
+   ],
+   "tags": [
+    "vegetarien",
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-omelette-champignons-epinards",
+   "nom": "Omelette champignons épinards, pain complet",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 150
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 150
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 150
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 60
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 25
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Faire sauter les champignons émincés 6 min à feu vif dans la moitié du beurre, jusqu'à évaporation complète de l'eau.",
+    "Ajouter les épinards et les faire tomber 2 min, saler et poivrer, réserver.",
+    "Battre les œufs, les verser dans la poêle avec le reste de beurre et cuire 3 min à feu moyen en ramenant les bords au centre.",
+    "Garnir de la poêlée et de l'emmental, replier l'omelette et servir avec le pain complet grillé."
+   ],
+   "tags": [
+    "vegetarien",
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-shakshuka-pois-chiches",
+   "nom": "Shakshuka aux pois chiches",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 150
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 250
+    },
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 150
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 120
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 4
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Faire revenir l'oignon et le poivron en lanières 8 min à feu moyen dans l'huile d'olive.",
+    "Ajouter le paprika, les tomates concassées et les pois chiches rincés, puis laisser réduire 10 min à feu doux.",
+    "Creuser trois puits dans la sauce et y casser les œufs, saler et poivrer.",
+    "Couvrir et cuire 7 min à feu doux, jusqu'à ce que les blancs soient pris et les jaunes encore coulants."
+   ],
+   "tags": [
+    "vegetarien",
+    "one-pot",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-curry-tofu-epinards-riz",
+   "nom": "Curry de tofu aux épinards",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "tofu",
+     "quantite_g": 200
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 250
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 60
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 50
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 5
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Presser le tofu 10 min entre deux feuilles de papier absorbant, puis le couper en cubes de 2 cm.",
+    "Cuire le riz 11 min à l'eau bouillante salée.",
+    "Dorer les cubes de tofu 6 min à feu vif dans une poêle antiadhésive, réserver, puis y faire suer l'oignon et l'ail 4 min avec le curry.",
+    "Verser le lait de coco, remettre le tofu, ajouter les épinards et cuire 5 min à feu doux."
+   ],
+   "tags": [
+    "vegetarien",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "din-tofu-quinoa-soja-brocoli",
+   "nom": "Tofu grillé au soja, quinoa et brocoli",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "tofu",
+     "quantite_g": 180
+    },
+    {
+     "cle": "quinoa",
+     "quantite_g": 60
+    },
+    {
+     "cle": "brocoli",
+     "quantite_g": 200
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 100
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Cuire le quinoa 15 min dans deux fois son volume d'eau salée.",
+    "Couper le tofu en tranches de 1 cm et le laisser mariner 10 min dans la sauce soja.",
+    "Cuire le brocoli et la carotte en bâtonnets 8 min à la vapeur, ils doivent rester croquants.",
+    "Griller les tranches de tofu 4 min par face à feu vif dans l'huile, puis verser le reste de marinade dessus hors du feu."
+   ],
+   "tags": [
+    "vegetarien",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-dahl-lentilles-carottes",
+   "nom": "Dahl de lentilles aux carottes",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 90
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 200
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 60
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 150
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 6
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Faire suer l'oignon ciselé 5 min dans l'huile, ajouter le curry et le laisser griller 30 secondes.",
+    "Ajouter les lentilles rincées, les carottes en rondelles, les tomates et 350 ml d'eau.",
+    "Porter à ébullition puis laisser mijoter 28 min à couvert et à feu doux, en remuant toutes les 10 min.",
+    "Verser le lait de coco, saler et poursuivre 4 min à découvert pour épaissir."
+   ],
+   "tags": [
+    "vegetarien",
+    "one-pot",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-tajine-pois-chiches-feta",
+   "nom": "Tajine de pois chiches et légumes, feta",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 250
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 200
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 100
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 50
+    },
+    {
+     "cle": "semoule",
+     "quantite_g": 30
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 4
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Faire revenir les carottes en rondelles et les courgettes en gros cubes 8 min à feu moyen dans l'huile avec le paprika.",
+    "Ajouter les pois chiches égouttés et 150 ml d'eau, couvrir et laisser mijoter 15 min à feu doux.",
+    "Préparer la semoule à part avec un volume égal d'eau bouillante salée, couvrir 6 min puis égrener.",
+    "Servir le tajine sur la semoule et parsemer de feta émiettée."
+   ],
+   "tags": [
+    "vegetarien",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "din-soupe-toscane-haricots-blancs",
+   "nom": "Soupe toscane aux haricots blancs",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "haricots_blancs",
+     "quantite_g": 250
+    },
+    {
+     "cle": "lardons",
+     "quantite_g": 60
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 150
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 6
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Faire rissoler les lardons 5 min à sec dans une cocotte, retirer l'excédent de gras.",
+    "Ajouter l'huile, l'oignon et la carotte en petits dés, faire suer 6 min à feu moyen.",
+    "Verser 500 ml d'eau et le bouillon délayé, ajouter les haricots blancs rincés et laisser mijoter 15 min.",
+    "Mixer un tiers de la soupe pour l'épaissir, remettre dans la cocotte avec les épinards et cuire 3 min."
+   ],
+   "tags": [
+    "soupe",
+    "one-pot",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-veloute-carottes-lentilles",
+   "nom": "Velouté de carottes aux lentilles et coco",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 80
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 300
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 50
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 6
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Faire suer l'oignon 4 min dans une casserole avec un fond d'eau, ajouter le curry.",
+    "Ajouter les carottes en rondelles, les lentilles rincées, le bouillon délayé dans 600 ml d'eau.",
+    "Cuire 28 min à couvert et à feu doux, jusqu'à ce que les lentilles soient fondantes.",
+    "Mixer finement, ajouter le lait de coco et réchauffer 2 min sans bouillir."
+   ],
+   "tags": [
+    "soupe",
+    "vegetarien",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-soupe-poireaux-pommes-terre-jambon",
+   "nom": "Soupe poireaux pommes de terre au jambon",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "poireau",
+     "quantite_g": 300
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 250
+    },
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 120
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 100
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 6
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Faire fondre les poireaux émincés 8 min à feu doux dans le beurre, sans les colorer.",
+    "Ajouter les pommes de terre en cubes et 600 ml d'eau avec le bouillon délayé, cuire 20 min à couvert.",
+    "Mixer la soupe finement, puis incorporer le skyr hors du feu pour la rendre onctueuse.",
+    "Poêler le jambon taillé en lardons 3 min à feu vif et le déposer sur la soupe au moment de servir."
+   ],
+   "tags": [
+    "soupe",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-veloute-brocoli-amandes",
+   "nom": "Velouté de brocoli aux amandes",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "brocoli",
+     "quantite_g": 350
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 150
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 25
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 150
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 6
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Porter 600 ml d'eau à ébullition avec le bouillon délayé et l'ail écrasé.",
+    "Ajouter les pommes de terre en cubes, cuire 12 min, puis le brocoli en bouquets et poursuivre 8 min.",
+    "Mixer très finement et incorporer le skyr hors du feu pour garder l'onctuosité.",
+    "Torréfier les amandes concassées 3 min à sec dans une poêle et les parsemer au moment de servir."
+   ],
+   "tags": [
+    "soupe",
+    "vegetarien",
+    "leger"
+   ]
+  },
+  {
+   "id": "din-soupe-poisson-colin-tomate",
+   "nom": "Soupe de poisson au colin et tomate",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "colin",
+     "quantite_g": 200
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 250
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 200
+    },
+    {
+     "cle": "poireau",
+     "quantite_g": 150
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 4
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 6
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Faire suer le poireau émincé 6 min dans l'huile avec le paprika, à feu moyen.",
+    "Ajouter les tomates, les pommes de terre en cubes, le bouillon délayé et 500 ml d'eau.",
+    "Laisser mijoter 20 min à découvert jusqu'à ce que les pommes de terre soient tendres.",
+    "Déposer le colin en gros morceaux, couvrir et pocher 6 min à feu très doux sans remuer."
+   ],
+   "tags": [
+    "soupe",
+    "one-pot"
+   ]
+  },
+  {
+   "id": "din-gratin-colin-epinards",
+   "nom": "Gratin de colin aux épinards",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "colin",
+     "quantite_g": 200
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 300
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 40
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 120
+    },
+    {
+     "cle": "farine",
+     "quantite_g": 12
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 8
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 190 °C. Faire tomber les épinards 4 min à la poêle avec l'ail haché, puis bien les presser.",
+    "Préparer une béchamel : roux beurre-farine 2 min, puis lait versé en trois fois, fouetter 5 min jusqu'à nappage.",
+    "Disposer les épinards au fond d'un plat, poser le colin en morceaux, saler et poivrer.",
+    "Napper de béchamel, couvrir d'emmental râpé et enfourner 22 min jusqu'à coloration."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-gratin-dauphinois-jambon",
+   "nom": "Gratin de pommes de terre au jambon",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 60,
+   "ingredients": [
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 300
+    },
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 130
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 80
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 100
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 30
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 170 °C et frotter un plat avec la gousse d'ail coupée en deux.",
+    "Trancher les pommes de terre en rondelles de 3 mm sans les rincer, pour garder l'amidon.",
+    "Alterner rondelles et jambon en dés, saler et poivrer chaque couche, puis verser le mélange crème et lait.",
+    "Enfourner 45 min, ajouter l'emmental à 35 min et vérifier la cuisson à la pointe du couteau."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-aubergines-parmigiana-boeuf",
+   "nom": "Aubergines à la parmigiana et bœuf",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 55,
+   "ingredients": [
+    {
+     "cle": "boeuf_hache_5",
+     "quantite_g": 140
+    },
+    {
+     "cle": "aubergine",
+     "quantite_g": 300
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 200
+    },
+    {
+     "cle": "mozzarella",
+     "quantite_g": 60
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C, trancher les aubergines en lamelles de 1 cm, les huiler et les rôtir 20 min en les retournant à mi-cuisson.",
+    "Saisir le bœuf haché 5 min à feu vif, ajouter les tomates et les herbes, laisser réduire 10 min.",
+    "Alterner aubergines, sauce et mozzarella en tranches dans un petit plat.",
+    "Saupoudrer de parmesan et gratiner 18 min à 190 °C, laisser reposer 5 min avant de servir."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-papillote-truite-courgette-citron",
+   "nom": "Papillote de truite au citron et courgette",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "truite",
+     "quantite_g": 180
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 250
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 120
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 150
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C et précuire les pommes de terre en rondelles 8 min à l'eau bouillante salée.",
+    "Disposer sur une feuille de papier cuisson les courgettes en rondelles fines, les pommes de terre et les tomates cerises, arroser d'huile.",
+    "Poser le filet de truite, couvrir de rondelles de citron et d'herbes, saler et poivrer.",
+    "Fermer la papillote et enfourner 18 min, servir dès la sortie du four."
+   ],
+   "tags": [
+    "four",
+    "leger"
+   ]
+  },
+  {
+   "id": "din-papillote-poulet-olives-tomates",
+   "nom": "Poulet aux olives et tomates cerises, boulgour",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 180
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 150
+    },
+    {
+     "cle": "olive_noire",
+     "quantite_g": 30
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 200
+    },
+    {
+     "cle": "boulgour",
+     "quantite_g": 50
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C et cuire le boulgour 12 min à l'eau bouillante salée.",
+    "Disposer le filet de poulet dans un plat avec les courgettes en cubes, les tomates cerises et les olives.",
+    "Arroser d'huile et de jus de citron, saler et poivrer, puis enfourner 25 min à découvert.",
+    "Mélanger le boulgour aux légumes rôtis et à leur jus avant de servir."
+   ],
+   "tags": [
+    "four",
+    "leger"
+   ]
+  },
+  {
+   "id": "din-saumon-teriyaki-brocoli",
+   "nom": "Saumon teriyaki, brocoli et riz",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "saumon",
+     "quantite_g": 150
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 25
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 10
+    },
+    {
+     "cle": "brocoli",
+     "quantite_g": 200
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 50
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Mélanger la sauce soja, le miel et l'ail râpé, et y faire mariner le saumon 10 min.",
+    "Cuire le riz 11 min à l'eau bouillante salée et le brocoli 7 min à la vapeur.",
+    "Saisir le saumon égoutté 3 min par face à feu moyen dans l'huile, en commençant côté peau.",
+    "Verser la marinade dans la poêle et la laisser réduire 2 min en nappant le poisson à la cuillère."
+   ],
+   "tags": [
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-dinde-curry-patate-douce",
+   "nom": "Dinde au curry et patate douce",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 170
+    },
+    {
+     "cle": "patate_douce",
+     "quantite_g": 250
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 60
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "curry",
+     "quantite_g": 6
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Faire revenir l'oignon émincé 5 min dans l'huile, ajouter le curry et le laisser griller 30 secondes.",
+    "Ajouter la patate douce en cubes de 2 cm et 200 ml d'eau, couvrir et cuire 15 min à feu moyen.",
+    "Ajouter la dinde taillée en lanières et poursuivre 6 min à feu doux.",
+    "Verser le lait de coco et les épinards, mélanger et laisser 3 min sur feu doux avant de servir."
+   ],
+   "tags": [
+    "one-pot",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-salade-tiede-quinoa-crevettes",
+   "nom": "Salade tiède de quinoa, crevettes et avocat",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "crevette",
+     "quantite_g": 150
+    },
+    {
+     "cle": "quinoa",
+     "quantite_g": 55
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 70
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 120
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 60
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Cuire le quinoa 15 min à l'eau bouillante salée, l'égoutter et le laisser tiédir 5 min.",
+    "Poêler les crevettes 2 min à feu vif dans la moitié de l'huile, saler et poivrer.",
+    "Fouetter le jus de citron avec le reste d'huile pour la vinaigrette.",
+    "Mélanger quinoa tiède, salade ciselée, tomates cerises coupées et avocat en dés, poser les crevettes et assaisonner."
+   ],
+   "tags": [
+    "rapide",
+    "leger"
+   ]
+  },
+  {
+   "id": "din-bavette-salade-parmesan",
+   "nom": "Bavette grillée, salade au parmesan",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "boeuf_bavette",
+     "quantite_g": 160
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 100
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 150
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 20
+    },
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 50
+    },
+    {
+     "cle": "vinaigre_balsamique",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Sortir la bavette du réfrigérateur 15 min avant cuisson et l'éponger soigneusement.",
+    "Saisir la viande 2 min par face à feu très vif dans la moitié de l'huile, puis la laisser reposer 5 min sous aluminium.",
+    "Fouetter le vinaigre balsamique avec le reste d'huile et assaisonner la salade et les tomates cerises.",
+    "Trancher la bavette en biais, la déposer sur la salade, ajouter les copeaux de parmesan et servir avec le pain grillé."
+   ],
+   "tags": [
+    "rapide",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-boulettes-boeuf-tomate-boulgour",
+   "nom": "Boulettes de bœuf à la tomate et boulgour",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "boeuf_hache_5",
+     "quantite_g": 150
+    },
+    {
+     "cle": "boulgour",
+     "quantite_g": 55
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 200
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 150
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 25
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 2
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Mélanger le bœuf haché avec l'œuf battu, la moitié de l'oignon râpé, du sel et du poivre, puis façonner six boulettes.",
+    "Les dorer 5 min à feu vif dans l'huile en les retournant, puis les réserver.",
+    "Faire revenir le reste d'oignon et la courgette en cubes 6 min, ajouter les tomates et les herbes.",
+    "Remettre les boulettes, couvrir et mijoter 15 min à feu doux ; servir avec le boulgour cuit 12 min à l'eau salée."
+   ],
+   "tags": [
+    "one-pot",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-boulettes-dinde-courgettes-four",
+   "nom": "Boulettes de dinde au four et courgettes",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 170
+    },
+    {
+     "cle": "courgette",
+     "quantite_g": 250
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 120
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 30
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 25
+    },
+    {
+     "cle": "farine",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C. Hacher finement la dinde au couteau et la mélanger à l'œuf, à la farine, au sel et au poivre.",
+    "Former huit petites boulettes et les déposer sur une plaque huilée.",
+    "Répartir autour les courgettes en rondelles et les tomates cerises, arroser du reste d'huile.",
+    "Enfourner 25 min, parsemer de feta émiettée et remettre 3 min avant de servir."
+   ],
+   "tags": [
+    "four",
+    "batch"
+   ]
+  },
+  {
+   "id": "din-tortilla-espagnole-salade",
+   "nom": "Tortilla espagnole et salade verte",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 150
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 250
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 70
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 20
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 80
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Couper les pommes de terre en fines rondelles et les cuire 15 min à feu doux dans l'huile avec l'oignon émincé, à couvert et sans coloration.",
+    "Battre les œufs avec l'emmental, saler et poivrer, puis y verser les pommes de terre égouttées.",
+    "Cuire l'appareil 6 min à feu doux dans la poêle, puis retourner la tortilla à l'aide d'une assiette.",
+    "Poursuivre 4 min de l'autre côté et servir tiède avec la salade assaisonnée."
+   ],
+   "tags": [
+    "vegetarien",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-risotto-champignons-poulet",
+   "nom": "Risotto aux champignons et poulet",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 150
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 60
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 200
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 25
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 40
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 40
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Délayer le bouillon dans 500 ml d'eau et le maintenir frémissant dans une petite casserole.",
+    "Faire suer l'échalote ciselée, ajouter le riz et le nacrer 2 min, puis verser le bouillon louche par louche en remuant 18 min.",
+    "En parallèle, saisir les champignons émincés 7 min à feu vif puis le poulet en dés 5 min, saler et poivrer.",
+    "Hors du feu, incorporer la crème, le parmesan, les champignons et le poulet, couvrir 2 min avant de servir."
+   ],
+   "tags": [
+    "one-pot",
+    "poele"
+   ]
+  },
+  {
+   "id": "din-soupe-tofu-champignons-soja",
+   "nom": "Soupe asiatique au tofu et champignons",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "tofu",
+     "quantite_g": 200
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 200
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 100
+    },
+    {
+     "cle": "poireau",
+     "quantite_g": 100
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 30
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 6
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Couper le tofu en cubes et le dorer 6 min à feu vif dans l'huile, en le retournant sur toutes les faces.",
+    "Porter 600 ml d'eau à frémissement avec le bouillon délayé, la carotte en fins bâtonnets et le poireau en rondelles.",
+    "Ajouter les champignons émincés et cuire 8 min à petit bouillon.",
+    "Verser la sauce soja, ajouter le tofu doré et laisser infuser 2 min hors du feu."
+   ],
+   "tags": [
+    "soupe",
+    "vegetarien",
+    "rapide"
+   ]
+  },
+  {
+   "id": "din-cabillaud-tomates-olives-semoule",
+   "nom": "Cabillaud aux tomates et olives, semoule",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "cabillaud",
+     "quantite_g": 200
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 200
+    },
+    {
+     "cle": "olive_noire",
+     "quantite_g": 30
+    },
+    {
+     "cle": "semoule",
+     "quantite_g": 50
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Faire revenir l'oignon émincé et l'ail haché 5 min à feu moyen dans l'huile d'olive.",
+    "Ajouter les tomates concassées et les olives dénoyautées, laisser réduire 10 min à feu doux.",
+    "Déposer le cabillaud dans la sauce, couvrir et pocher 8 min à feu très doux sans le retourner.",
+    "Préparer la semoule avec un volume égal d'eau bouillante salée, couvrir 6 min, égrener et servir avec le poisson."
+   ],
+   "tags": [
+    "poele",
+    "leger"
+   ]
+  },
+  {
+   "id": "col-skyr-fruits-rouges-amandes",
+   "nom": "Skyr, fruits rouges et amandes",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 3,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 200
+    },
+    {
+     "cle": "fruits_rouges",
+     "quantite_g": 100
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Verser le skyr dans un bol et ajouter les fruits rouges encore légèrement givrés.",
+    "Concasser les amandes au couteau, les parsemer sur le dessus et servir frais."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-fromage-blanc-miel-noix",
+   "nom": "Fromage blanc, miel et noix",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 3,
+   "ingredients": [
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 200
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 10
+    },
+    {
+     "cle": "noix",
+     "quantite_g": 20
+    }
+   ],
+   "etapes": [
+    "Détendre le fromage blanc à la cuillère dans un bol ou un pot à emporter.",
+    "Napper de miel, ajouter les cerneaux de noix grossièrement brisés et mélanger juste avant de manger."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-skyr-banane-beurre-cacahuete",
+   "nom": "Skyr, banane et beurre de cacahuète",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 3,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 150
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 100
+    },
+    {
+     "cle": "beurre_cacahuete",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Couper la banane en rondelles et les répartir sur le skyr.",
+    "Faire couler le beurre de cacahuète en filet par-dessus et déguster sans attendre."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-yaourt-muesli-raisins",
+   "nom": "Yaourt, muesli et raisins secs",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 2,
+   "ingredients": [
+    {
+     "cle": "yaourt_nature",
+     "quantite_g": 125
+    },
+    {
+     "cle": "muesli",
+     "quantite_g": 30
+    },
+    {
+     "cle": "raisin_sec",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Verser le yaourt dans un bol et ajouter le muesli.",
+    "Parsemer de raisins secs et mélanger rapidement pour garder le croquant."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-overnight-oats-fruits-rouges",
+   "nom": "Overnight oats aux fruits rouges",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 40
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 150
+    },
+    {
+     "cle": "fruits_rouges",
+     "quantite_g": 60
+    }
+   ],
+   "etapes": [
+    "Mélanger les flocons d'avoine et le lait dans un bocal, puis fermer.",
+    "Réserver au frais au moins une nuit.",
+    "Ajouter les fruits rouges au moment de manger et remuer."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "batch",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-pomme-beurre-cacahuete",
+   "nom": "Pomme au beurre de cacahuète",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 2,
+   "ingredients": [
+    {
+     "cle": "pomme",
+     "quantite_g": 150
+    },
+    {
+     "cle": "beurre_cacahuete",
+     "quantite_g": 25
+    }
+   ],
+   "etapes": [
+    "Couper la pomme en quartiers épais sans la peler.",
+    "Tremper chaque quartier dans le beurre de cacahuète, ou l'étaler dessus pour emporter."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-smoothie-banane-cacao",
+   "nom": "Smoothie banane-cacao au lait",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "lait_demi",
+     "quantite_g": 250
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 100
+    },
+    {
+     "cle": "cacao",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Mettre le lait, la banane coupée en tronçons et le cacao dans le blender.",
+    "Mixer trente secondes jusqu'à obtenir une texture mousseuse, puis verser dans une bouteille."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-barre-avoine-datte-amande",
+   "nom": "Barre maison avoine, datte et amande",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 38
+    },
+    {
+     "cle": "datte",
+     "quantite_g": 25
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 13
+    },
+    {
+     "cle": "beurre_cacahuete",
+     "quantite_g": 9
+    }
+   ],
+   "etapes": [
+    "Mixer les dattes dénoyautées avec le beurre de cacahuète jusqu'à obtenir une pâte collante.",
+    "Incorporer les flocons d'avoine et les amandes concassées, puis tasser fermement.",
+    "Réserver une heure au frais, découper en barre et emballer."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "batch",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-skyr-cacao-noisettes",
+   "nom": "Skyr façon chocolat-noisette",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 3,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 200
+    },
+    {
+     "cle": "cacao",
+     "quantite_g": 6
+    },
+    {
+     "cle": "noisette",
+     "quantite_g": 12
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Fouetter le skyr avec le cacao et le miel jusqu'à une couleur homogène.",
+    "Concasser les noisettes, les parsemer sur le dessus et servir bien frais."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre"
+   ]
+  },
+  {
+   "id": "col-fromage-blanc-fraises-graines",
+   "nom": "Fromage blanc, fraises et graines de tournesol",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 180
+    },
+    {
+     "cle": "fraise",
+     "quantite_g": 100
+    },
+    {
+     "cle": "graines_tournesol",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Équeuter les fraises et les couper en deux.",
+    "Les déposer sur le fromage blanc, parsemer de graines de tournesol et servir."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-skyr-poire-chocolat-noir",
+   "nom": "Skyr, poire et éclats de chocolat noir",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 150
+    },
+    {
+     "cle": "poire",
+     "quantite_g": 120
+    },
+    {
+     "cle": "chocolat_noir",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Couper la poire en petits dés et les mélanger au skyr.",
+    "Hacher le chocolat noir au couteau, en parsemer le bol et déguster aussitôt."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre"
+   ]
+  },
+  {
+   "id": "col-porridge-express-pomme",
+   "nom": "Porridge express à la pomme",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 40
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 120
+    },
+    {
+     "cle": "pomme",
+     "quantite_g": 100
+    }
+   ],
+   "etapes": [
+    "Verser les flocons d'avoine et le lait dans un bol, chauffer deux minutes au micro-ondes.",
+    "Râper la pomme, l'incorporer au porridge encore chaud et laisser tiédir avant de manger."
+   ],
+   "tags": [
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "col-yaourt-grec-miel-noix",
+   "nom": "Yaourt grec, miel et noix",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 2,
+   "ingredients": [
+    {
+     "cle": "yaourt_grec",
+     "quantite_g": 150
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 10
+    },
+    {
+     "cle": "noix",
+     "quantite_g": 12
+    }
+   ],
+   "etapes": [
+    "Verser le yaourt grec dans une coupelle sans le battre.",
+    "Arroser de miel, ajouter les noix brisées et servir immédiatement."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre"
+   ]
+  },
+  {
+   "id": "col-skyr-kiwi-orange",
+   "nom": "Skyr aux agrumes et kiwi",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 180
+    },
+    {
+     "cle": "kiwi",
+     "quantite_g": 75
+    },
+    {
+     "cle": "orange",
+     "quantite_g": 100
+    }
+   ],
+   "etapes": [
+    "Peler le kiwi et l'orange, puis les couper en morceaux au-dessus du bol pour garder le jus.",
+    "Mélanger délicatement avec le skyr et servir frais."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-smoothie-skyr-fruits-rouges",
+   "nom": "Smoothie protéiné aux fruits rouges",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 150
+    },
+    {
+     "cle": "fruits_rouges",
+     "quantite_g": 120
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 100
+    }
+   ],
+   "etapes": [
+    "Réunir le skyr, les fruits rouges et le lait dans le bol du blender.",
+    "Mixer jusqu'à obtenir une boisson lisse, puis verser dans un gobelet fermé."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-tartine-banane-cacahuete",
+   "nom": "Tartine banane et beurre de cacahuète",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "pain_complet",
+     "quantite_g": 60
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 90
+    },
+    {
+     "cle": "beurre_cacahuete",
+     "quantite_g": 18
+    }
+   ],
+   "etapes": [
+    "Étaler le beurre de cacahuète sur les tranches de pain complet.",
+    "Recouvrir de rondelles de banane, presser légèrement et couper en deux."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-muesli-lait-froid",
+   "nom": "Bol de muesli au lait froid",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 2,
+   "ingredients": [
+    {
+     "cle": "muesli",
+     "quantite_g": 45
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 180
+    }
+   ],
+   "etapes": [
+    "Verser le muesli dans un bol.",
+    "Couvrir de lait froid, attendre une minute que les flocons s'imbibent et manger."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "col-fromage-blanc-dattes-amandes",
+   "nom": "Fromage blanc, dattes et amandes",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 150
+    },
+    {
+     "cle": "datte",
+     "quantite_g": 30
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Dénoyauter les dattes et les couper en petits morceaux.",
+    "Les mélanger au fromage blanc, parsemer d'amandes concassées et servir."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-pain-chocolat-verre-lait",
+   "nom": "Pain de campagne, chocolat noir et verre de lait",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 3,
+   "ingredients": [
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 45
+    },
+    {
+     "cle": "chocolat_noir",
+     "quantite_g": 12
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 150
+    }
+   ],
+   "etapes": [
+    "Couper le pain en deux dans l'épaisseur et y glisser les carrés de chocolat noir.",
+    "Servir avec un grand verre de lait demi-écrémé bien frais."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre"
+   ]
+  },
+  {
+   "id": "col-skyr-raisins-noisettes",
+   "nom": "Skyr, raisins secs et noisettes",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 3,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 200
+    },
+    {
+     "cle": "raisin_sec",
+     "quantite_g": 20
+    },
+    {
+     "cle": "noisette",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Mélanger les raisins secs au skyr et laisser reposer deux minutes pour qu'ils gonflent.",
+    "Ajouter les noisettes concassées juste avant de déguster."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sucre",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-oeufs-durs-tomates-cerises",
+   "nom": "Œufs durs, tomates cerises et paprika",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 80
+    },
+    {
+     "cle": "paprika",
+     "quantite_g": 1
+    }
+   ],
+   "etapes": [
+    "Plonger les œufs dans l'eau bouillante et compter neuf minutes, puis les refroidir sous l'eau froide.",
+    "Écaler, couper en deux, saupoudrer de paprika et servir avec les tomates cerises."
+   ],
+   "tags": [
+    "batch",
+    "sale",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-thon-concombre-citron",
+   "nom": "Thon au naturel, concombre et citron",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 80
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 100
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Égoutter le thon et l'émietter dans une boîte hermétique.",
+    "Ajouter le concombre en dés, presser le citron, verser l'huile d'olive et mélanger."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sale",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-houmous-carottes",
+   "nom": "Houmous de pois chiches et bâtonnets de carotte",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 8,
+   "ingredients": [
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 120
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 10
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 3
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 100
+    }
+   ],
+   "etapes": [
+    "Mixer les pois chiches égouttés avec l'ail, le jus de citron et l'huile d'olive jusqu'à obtenir une crème.",
+    "Détendre avec un peu d'eau si besoin, puis servir avec les carottes taillées en bâtonnets."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sale",
+    "vegetarien",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-tartine-jambon-moutarde",
+   "nom": "Tartine jambon-moutarde",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 3,
+   "ingredients": [
+    {
+     "cle": "pain_complet",
+     "quantite_g": 50
+    },
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 60
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Tartiner le pain complet d'une fine couche de moutarde.",
+    "Replier la tranche de jambon dessus et refermer en sandwich pour emporter."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sale",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-mozzarella-tomates-cerises",
+   "nom": "Mozzarella et tomates cerises aux herbes",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "mozzarella",
+     "quantite_g": 60
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 120
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 4
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 1
+    }
+   ],
+   "etapes": [
+    "Couper la mozzarella en cubes et les tomates cerises en deux.",
+    "Assembler dans une boîte, arroser d'huile d'olive et saupoudrer d'herbes de Provence."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sale",
+    "vegetarien",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-omelette-blancs-epinards",
+   "nom": "Omelette de blancs d'œufs aux épinards",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 7,
+   "ingredients": [
+    {
+     "cle": "blanc_oeuf",
+     "quantite_g": 150
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 60
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Faire tomber les épinards deux minutes dans la poêle avec l'huile d'olive.",
+    "Verser les blancs d'œufs battus, cuire à feu doux trois minutes puis replier l'omelette."
+   ],
+   "tags": [
+    "sale",
+    "rapide"
+   ]
+  },
+  {
+   "id": "col-sardines-pain-citron",
+   "nom": "Sardines sur pain complet au citron",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "sardine_boite",
+     "quantite_g": 50
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 40
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Égoutter les sardines et les écraser à la fourchette sur le pain complet.",
+    "Arroser de quelques gouttes de citron et poivrer avant de servir."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "sale"
+   ]
+  },
+  {
+   "id": "col-crevettes-avocat-citron",
+   "nom": "Crevettes, avocat et citron",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "crevette",
+     "quantite_g": 80
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 60
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Décortiquer les crevettes cuites et les disposer dans une coupelle.",
+    "Ajouter l'avocat en dés, presser le citron par-dessus pour éviter qu'il noircisse et mélanger."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sale",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-wrap-jambon-chevre",
+   "nom": "Wrap roulé jambon et chèvre",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "tortilla",
+     "quantite_g": 45
+    },
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 60
+    },
+    {
+     "cle": "chevre_buche",
+     "quantite_g": 30
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 20
+    }
+   ],
+   "etapes": [
+    "Étaler le chèvre sur la tortilla jusqu'aux bords.",
+    "Déposer le jambon et les feuilles de salade, rouler serré puis couper en deux tronçons."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sale",
+    "transportable"
+   ]
+  },
+  {
+   "id": "col-tzatziki-batonnets",
+   "nom": "Tzatziki de skyr et bâtonnets de légumes",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 8,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 150
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 100
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 2
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 3
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 1
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 80
+    }
+   ],
+   "etapes": [
+    "Râper la moitié du concombre, le presser dans un torchon puis le mélanger au skyr avec l'ail écrasé, l'huile et les herbes.",
+    "Tailler le reste du concombre et la carotte en bâtonnets et les servir avec la sauce."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sale",
+    "vegetarien",
+    "transportable"
+   ]
+  }
+ ]
+}

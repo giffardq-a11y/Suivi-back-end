@@ -30,6 +30,7 @@ from .. import models
 from ..database import get_db
 from ..deps import get_current_user
 from ..plan_alimentation import JOURS, SEMAINE_TYPE
+from ..recettes import recettes as catalogue_recettes
 from ..services.common import now_utc, is_same_day
 from ..services.sport import calories_burned_on
 from .profile import _get_or_create_profile
@@ -155,6 +156,31 @@ def _meal_to_detail(meal: dict) -> RecipeDetail:
     )
 
 
+def _catalogue_complet() -> list[dict]:
+    """Les recettes du catalogue CIQUAL (app/data/recettes.json) au format des
+    fiches de l'app, plus les recettes historiques et celles du plan livré."""
+    fiches = []
+    for recette in catalogue_recettes():
+        macros = recette["macros"]
+        fiches.append({
+            "id": recette["id"],
+            "label": recette["nom"],
+            "mealType": recette["type"],
+            "kcal": macros["calories"],
+            "ingredients": ", ".join(
+                f"{i['nom'].lower()} {round(i['quantite_g'])} g" for i in recette["ingredients"]
+            ),
+            "source": "catalogue",
+            "proteines": macros["proteines"],
+            "glucides": macros["glucides"],
+            "lipides": macros["lipides"],
+            "temps_min": recette.get("temps_min"),
+            "etapes": recette.get("etapes", []),
+            "tags": recette.get("tags", []),
+        })
+    return fiches + INTERNAL_RECIPES
+
+
 @router.get("/catalog")
 def get_recipe_catalog(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
     profile = _get_or_create_profile(db, user)
@@ -171,11 +197,21 @@ def get_recipe_catalog(db: Session = Depends(get_db), user: models.User = Depend
                 "meal_type_label": RECIPE_MEAL_TYPE_LABEL.get(r["mealType"], r["mealType"]),
                 "fits_remaining": r["kcal"] <= remaining_kcal,
             }
-            for r in INTERNAL_RECIPES
+            for r in _catalogue_complet()
         ],
         key=lambda r: r["kcal"],
     )
     return {"remaining_kcal": remaining_kcal, "recipes": recipes}
+
+
+@router.get("/catalogue/{recette_id}")
+def get_recipe_detail(recette_id: str):
+    """Fiche complète d'une recette du catalogue : ingrédients quantifiés,
+    étapes et macros calculées."""
+    for recette in catalogue_recettes():
+        if recette["id"] == recette_id:
+            return recette
+    raise HTTPException(status_code=404, detail="Recette introuvable.")
 
 
 @router.get("/search-external", response_model=list[RecipeSummary])

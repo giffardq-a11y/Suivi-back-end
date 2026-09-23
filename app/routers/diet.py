@@ -1,14 +1,19 @@
+from datetime import date, timedelta
+
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
+from ..generateur_repas import generer_plan
+from ..liste_courses import liste_de_courses
 from ..plan_alimentation import JOURS, PLAN_NOM, SEMAINE_TYPE
 from ..services.common import now_utc, to_ms, relative_time, is_same_day
 from ..services.sport import calories_burned_on
-from .profile import _get_or_create_profile
+from .profile import _current_weight_kg, _get_or_create_profile, _suggested_calorie_budget
 
 router = APIRouter(prefix="/diet", tags=["diet"])
 
@@ -40,11 +45,39 @@ class PlanEntryIn(BaseModel):
     proteines: int = 0
     glucides: int = 0
     lipides: int = 0
+    week_index: int = 0
+    recipe_id: str | None = None
+    portions: float = 1.0
 
 
 class PlanIn(BaseModel):
     plan_name: str = PLAN_NOM
     entries: list[PlanEntryIn]
+    date_debut: str | None = None  # lundi de la semaine 0, 'YYYY-MM-DD'
+    nb_personnes: int | None = None
+
+
+class GenerationIn(BaseModel):
+    """Réglages de génération. cible_kcal/cible_proteines sont optionnelles :
+    sans elles, on reprend le budget du profil (Mifflin-St Jeor + activité +
+    objectif de poids) et 1,8 g de protéines par kg."""
+    semaines: int = 1
+    avec_petit_dejeuner: bool = True
+    avec_collation: bool = True
+    max_repetitions_semaine: int = 2
+    repetitions_entre_semaines: bool = True
+    nb_personnes: int = 1
+    cible_kcal: int | None = None
+    cible_proteines: int | None = None
+    graine: int | None = None
+
+
+class PlanGenereIn(BaseModel):
+    """Le plan renvoyé par /diet/plan/generate, tel quel, pour l'enregistrer."""
+    plan_name: str = "Plan généré"
+    semaines: list[dict]
+    nb_personnes: int = 1
+    date_debut: str | None = None
 
 
 def _meals_calories_on(db: Session, user_id: str, date_dt) -> int:
@@ -72,14 +105,40 @@ def _macros_totales(meals) -> dict:
     }
 
 
-def _plan_du_jour(db: Session, user_id: str, day_index: int) -> tuple[str, str, list[dict]]:
-    """Repas prévus ce jour-là : le plan importé dans le compte s'il existe,
+def _semaine_courante(db: Session, user_id: str, profile: models.Profile | None,
+                      aujourdhui) -> int:
+    """Index de la semaine du plan à appliquer aujourd'hui.
+
+    Un plan d'une seule semaine se répète (toujours 0). Un plan de plusieurs
+    semaines tourne à partir de la date de début enregistrée dans le profil ;
+    sans date de début, on reste sur la semaine 0."""
+    nb_semaines = (db.query(func.max(models.MealPlanEntry.week_index))
+                     .filter(models.MealPlanEntry.user_id == user_id)
+                     .scalar())
+    if not nb_semaines:
+        return 0
+    nb_semaines += 1
+    debut = getattr(profile, "plan_start_date", None)
+    if not debut:
+        return 0
+    try:
+        depart = date.fromisoformat(debut)
+    except ValueError:
+        return 0
+    semaines_ecoulees = (aujourdhui.date() - depart).days // 7
+    return max(0, semaines_ecoulees) % nb_semaines
+
+
+def _plan_du_jour(db: Session, user_id: str, day_index: int,
+                  week_index: int = 0) -> tuple[str, str, list[dict]]:
+    """Repas prévus ce jour-là : le plan enregistré dans le compte s'il existe,
     sinon la semaine type livrée avec l'app (models.MealPlanEntry vs
     plan_alimentation.SEMAINE_TYPE). Renvoie (nom du plan, origine, repas)."""
     entries = (
         db.query(models.MealPlanEntry)
         .filter(models.MealPlanEntry.user_id == user_id,
-                models.MealPlanEntry.day_index == day_index)
+                models.MealPlanEntry.day_index == day_index,
+                models.MealPlanEntry.week_index == week_index)
         .all()
     )
     if entries:
@@ -89,6 +148,7 @@ def _plan_du_jour(db: Session, user_id: str, day_index: int) -> tuple[str, str, 
                 "id": e.id, "type": e.meal_type, "label": e.label, "calories": e.calories,
                 "proteines": e.proteines or 0, "glucides": e.glucides or 0,
                 "lipides": e.lipides or 0,
+                "recipe_id": e.recipe_id, "portions": e.portions or 1,
             }
             for e in entries
         ]
@@ -138,7 +198,8 @@ def get_diet(db: Session = Depends(get_db), user: models.User = Depends(get_curr
     burned_today = calories_burned_on(db, user.id, now)
     net_today = consumed_today - burned_today
 
-    _, _, repas_prevus = _plan_du_jour(db, user.id, now.weekday())
+    semaine = _semaine_courante(db, user.id, profile, now)
+    _, _, repas_prevus = _plan_du_jour(db, user.id, now.weekday(), semaine)
 
     return {
         "budget": profile.daily_calorie_budget,
@@ -177,7 +238,9 @@ def get_plan(db: Session = Depends(get_db), user: models.User = Depends(get_curr
     même libellé est enregistré dans la journée)."""
     now = now_utc()
     day_index = now.weekday()
-    nom, origine, repas = _plan_du_jour(db, user.id, day_index)
+    profile = _get_or_create_profile(db, user)
+    semaine = _semaine_courante(db, user.id, profile, now)
+    nom, origine, repas = _plan_du_jour(db, user.id, day_index, semaine)
 
     meals = db.query(models.Meal).filter(models.Meal.user_id == user.id).all()
     libelles_du_jour = {m.label for m in meals if is_same_day(m.occurred_at, now)}
@@ -189,17 +252,22 @@ def get_plan(db: Session = Depends(get_db), user: models.User = Depends(get_curr
         "source": origine,
         "day_index": day_index,
         "day_label": JOURS[day_index],
+        "week_index": semaine,
         "meals": repas,
         "totals": _totaux(repas),
     }
 
 
 @router.get("/plan/week")
-def get_plan_week(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
-    """La semaine type complète, pour consulter les autres jours."""
+def get_plan_week(semaine: int | None = None, db: Session = Depends(get_db),
+                  user: models.User = Depends(get_current_user)):
+    """Une semaine complète du plan. Par défaut celle en cours."""
+    profile = _get_or_create_profile(db, user)
+    if semaine is None:
+        semaine = _semaine_courante(db, user.id, profile, now_utc())
     jours, noms, origines = [], set(), set()
     for day_index in range(7):
-        nom, origine, repas = _plan_du_jour(db, user.id, day_index)
+        nom, origine, repas = _plan_du_jour(db, user.id, day_index, semaine)
         noms.add(nom)
         origines.add(origine)
         jours.append({
@@ -209,7 +277,15 @@ def get_plan_week(db: Session = Depends(get_db), user: models.User = Depends(get
     # "compte" seulement si toute la semaine vient du plan importé : un plan
     # partiel retombe sur la semaine type pour les jours manquants.
     origine = "compte" if origines == {"compte"} else "modele"
-    return {"plan_name": sorted(noms)[0] if noms else PLAN_NOM, "source": origine, "days": jours}
+    nb_semaines = (db.query(func.max(models.MealPlanEntry.week_index))
+                     .filter(models.MealPlanEntry.user_id == user.id).scalar())
+    return {
+        "plan_name": sorted(noms)[0] if noms else PLAN_NOM,
+        "source": origine,
+        "week_index": semaine,
+        "nb_semaines": (nb_semaines or 0) + 1,
+        "days": jours,
+    }
 
 
 @router.post("/plan/{entry_id}/log", status_code=201)
@@ -270,14 +346,140 @@ def replace_plan(
         if e.meal_type not in MEAL_TYPE_LABEL:
             raise HTTPException(status_code=422, detail=f"Type de repas inconnu : {e.meal_type}")
 
+    profile = _get_or_create_profile(db, user)
     (db.query(models.MealPlanEntry)
        .filter(models.MealPlanEntry.user_id == user.id)
        .delete(synchronize_session=False))
     for e in payload.entries:
         db.add(models.MealPlanEntry(
             user_id=user.id, plan_name=payload.plan_name, day_index=e.day_index,
-            meal_type=e.meal_type, label=e.label, calories=e.calories,
+            week_index=e.week_index, meal_type=e.meal_type, label=e.label,
+            recipe_id=e.recipe_id, portions=e.portions, calories=e.calories,
             proteines=e.proteines, glucides=e.glucides, lipides=e.lipides,
         ))
+    profile.plan_start_date = payload.date_debut or _lundi_de_la_semaine()
+    if payload.nb_personnes:
+        profile.plan_persons = payload.nb_personnes
     db.commit()
     return {"ok": True, "count": len(payload.entries), "plan_name": payload.plan_name}
+
+
+def _lundi_de_la_semaine() -> str:
+    aujourdhui = now_utc().date()
+    return (aujourdhui - timedelta(days=aujourdhui.weekday())).isoformat()
+
+
+def _cibles(db: Session, user: models.User, payload: GenerationIn) -> tuple[int, int]:
+    """Cible calorique et protéique de la journée.
+
+    Par défaut : le budget calculé depuis le profil (Mifflin-St Jeor, activité,
+    objectif de poids) ou, à défaut, le budget saisi ; et 1,8 g de protéines
+    par kg de poids — fourchette usuelle en perte comme en prise de masse."""
+    profile = _get_or_create_profile(db, user)
+    poids = _current_weight_kg(db, user)
+    cible_kcal = (payload.cible_kcal
+                  or _suggested_calorie_budget(profile, poids)
+                  or profile.daily_calorie_budget)
+    cible_proteines = payload.cible_proteines or round(1.8 * (poids or 75))
+    return int(cible_kcal), int(cible_proteines)
+
+
+@router.post("/plan/generate")
+def generate_plan(
+    payload: GenerationIn,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    """Propose un plan à partir du catalogue de recettes. **N'enregistre rien** :
+    l'app affiche la proposition, l'utilisateur valide, puis POST /diet/plan/apply."""
+    cible_kcal, cible_proteines = _cibles(db, user, payload)
+    try:
+        plan = generer_plan(
+            cible_kcal=cible_kcal,
+            cible_proteines=cible_proteines,
+            nb_semaines=payload.semaines,
+            avec_petit_dejeuner=payload.avec_petit_dejeuner,
+            avec_collation=payload.avec_collation,
+            max_repetitions_semaine=payload.max_repetitions_semaine,
+            repetitions_entre_semaines=payload.repetitions_entre_semaines,
+            graine=payload.graine,
+        )
+    except ValueError as erreur:
+        raise HTTPException(status_code=422, detail=str(erreur))
+
+    for semaine in plan["semaines"]:
+        for jour in semaine["jours"]:
+            jour["day_label"] = JOURS[jour["day_index"]]
+            for repas in jour["repas"]:
+                repas["type_label"] = MEAL_TYPE_LABEL.get(repas["meal_type"], repas["meal_type"])
+    plan["nb_personnes"] = payload.nb_personnes
+    return plan
+
+
+@router.post("/plan/apply")
+def apply_plan(
+    payload: PlanGenereIn,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    """Enregistre un plan généré (remplace le précédent)."""
+    profile = _get_or_create_profile(db, user)
+    (db.query(models.MealPlanEntry)
+       .filter(models.MealPlanEntry.user_id == user.id)
+       .delete(synchronize_session=False))
+
+    nombre = 0
+    for semaine in payload.semaines:
+        for jour in semaine.get("jours", []):
+            for repas in jour.get("repas", []):
+                db.add(models.MealPlanEntry(
+                    user_id=user.id,
+                    plan_name=payload.plan_name,
+                    week_index=semaine.get("week_index", 0),
+                    day_index=jour["day_index"],
+                    meal_type=repas["meal_type"],
+                    label=repas["label"],
+                    recipe_id=repas.get("recipe_id"),
+                    portions=repas.get("portions", 1),
+                    calories=repas["calories"],
+                    proteines=repas.get("proteines", 0),
+                    glucides=repas.get("glucides", 0),
+                    lipides=repas.get("lipides", 0),
+                ))
+                nombre += 1
+    if not nombre:
+        raise HTTPException(status_code=422, detail="Plan vide : rien à enregistrer.")
+
+    profile.plan_start_date = payload.date_debut or _lundi_de_la_semaine()
+    profile.plan_persons = payload.nb_personnes or 1
+    db.commit()
+    return {"ok": True, "count": nombre, "plan_name": payload.plan_name,
+            "date_debut": profile.plan_start_date}
+
+
+@router.get("/plan/shopping-list")
+def get_shopping_list(
+    semaine: int | None = None,
+    nb_personnes: int | None = None,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    """Liste de courses d'une semaine du plan, groupée par rayon.
+
+    Seuls les repas venant d'une recette du catalogue sont décomposables en
+    ingrédients ; les autres sont listés dans `repas_sans_recette`."""
+    profile = _get_or_create_profile(db, user)
+    if semaine is None:
+        semaine = _semaine_courante(db, user.id, profile, now_utc())
+
+    entries = (
+        db.query(models.MealPlanEntry)
+        .filter(models.MealPlanEntry.user_id == user.id,
+                models.MealPlanEntry.week_index == semaine)
+        .all()
+    )
+    repas = [{"recipe_id": e.recipe_id, "portions": e.portions or 1, "label": e.label}
+             for e in entries]
+    resultat = liste_de_courses(repas, nb_personnes or profile.plan_persons or 1)
+    resultat["week_index"] = semaine
+    return resultat
