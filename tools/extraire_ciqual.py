@@ -154,6 +154,44 @@ INGREDIENTS = [
     ("herbes_provence", "Herbes de Provence", r"code:11060", "epicerie", "g", 30),
     ("olive_noire", "Olives noires", r"^Olive noire", "epicerie", "g", 200),
     ("pesto", "Pesto", r"^(Pesto|Sauce pesto)", "epicerie", "g", 190),
+    # --- Complément du 23/09/2026 : manques relevés à la rédaction des 150
+    # premières recettes (épices, aromates frais, poissons fumés, graines).
+    ("cumin", "Cumin", r"code:11042", "epicerie", "g", 40),
+    ("gingembre", "Gingembre frais", r"code:11074", "primeur", "g", 100),
+    ("cannelle", "Cannelle", r"code:11025", "epicerie", "g", 40),
+    ("curcuma", "Curcuma", r"code:11089", "epicerie", "g", 40),
+    ("coriandre_graine", "Coriandre (graines)", r"code:11026", "epicerie", "g", 40),
+    ("coriandre_fraiche", "Coriandre fraîche", r"code:11094", "primeur", "g", 30),
+    ("persil", "Persil frais", r"code:11014", "primeur", "g", 30),
+    ("basilic", "Basilic frais", r"code:11033", "primeur", "g", 30),
+    ("menthe", "Menthe fraîche", r"code:11027", "primeur", "g", 30),
+    ("aneth", "Aneth frais", r"code:11093", "primeur", "g", 30),
+    ("harissa", "Harissa", r"code:11112", "epicerie", "g", 70),
+    ("levure_chimique", "Levure chimique", r"code:11046", "epicerie", "g", 40),
+    ("vinaigre_cidre", "Vinaigre de cidre", r"code:11090", "epicerie", "ml", 500),
+    ("saumon_fume", "Saumon fumé", r"code:26037", "poissonnerie", "g", 150),
+    ("maquereau", "Maquereau", r"code:26051", "poissonnerie", "g", 300),
+    ("haddock", "Haddock fumé", r"code:26090", "poissonnerie", "g", 250),
+    ("chorizo", "Chorizo", r"code:30315", "charcuterie", "g", 150),
+    ("chia", "Graines de chia", r"code:15047", "epicerie", "g", 250),
+    ("sesame", "Graines de sésame", r"code:15010", "epicerie", "g", 200),
+    ("lin", "Graines de lin", r"code:15034", "epicerie", "g", 250),
+    ("cajou", "Noix de cajou", r"code:15054", "epicerie", "g", 200),
+    ("tahin", "Tahin (purée de sésame)", r"code:15203", "epicerie", "g", 300),
+    ("ricotta", "Ricotta", r"code:19585", "frais", "g", 250),
+    ("boisson_amande", "Boisson à l'amande", r"code:18107", "epicerie", "ml", 1000),
+    ("boisson_soja", "Boisson au soja", r"code:18900", "epicerie", "ml", 1000),
+    ("concentre_tomate", "Concentré de tomate", r"code:20068", "epicerie", "g", 140),
+    ("chou_vert", "Chou vert", r"code:20069", "primeur", "g", 600),
+    ("chou_blanc", "Chou blanc", r"code:20116", "primeur", "g", 600),
+    ("fenouil", "Fenouil", r"code:20028", "primeur", "g", 400),
+    ("endive", "Endives", r"code:20026", "primeur", "g", 500),
+    ("mais", "Maïs doux", r"code:20066", "epicerie", "g", 300),
+    ("polenta", "Polenta (crue)", r"code:9614", "epicerie", "g", 500),
+    ("galette_riz", "Galettes de riz", r"code:7352", "epicerie", "piece", 12),
+    ("abricot_sec", "Abricots secs", r"code:13001", "epicerie", "g", 250),
+    ("pruneau", "Pruneaux", r"code:13042", "epicerie", "g", 250),
+    ("citron_vert", "Citron vert", r"code:13067", "primeur", "piece", 4),
 ]
 
 # Poids net moyen d'une pièce, pour les ingrédients qui s'achètent à l'unité :
@@ -171,6 +209,8 @@ POIDS_PIECE_G = {
     "orange": 180,
     "kiwi": 75,
     "citron": 60,
+    "citron_vert": 50,
+    "galette_riz": 9,
 }
 
 PREFERES = ("cru", "crue", "nature", "frais", "fraîche", "sans sel", "non sucré")

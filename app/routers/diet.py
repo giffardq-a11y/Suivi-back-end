@@ -69,6 +69,10 @@ class GenerationIn(BaseModel):
     nb_personnes: int = 1
     cible_kcal: int | None = None
     cible_proteines: int | None = None
+    # Grammes de protéines par kilo de poids de corps : 1,4 suffit en
+    # maintien, 1,8 est le réglage par défaut, 2,2 vise une sèche ou une prise
+    # de masse. Ignoré si cible_proteines est donnée directement.
+    proteines_par_kg: float = 1.8
     graine: int | None = None
 
 
@@ -373,14 +377,16 @@ def _cibles(db: Session, user: models.User, payload: GenerationIn) -> tuple[int,
     """Cible calorique et protéique de la journée.
 
     Par défaut : le budget calculé depuis le profil (Mifflin-St Jeor, activité,
-    objectif de poids) ou, à défaut, le budget saisi ; et 1,8 g de protéines
-    par kg de poids — fourchette usuelle en perte comme en prise de masse."""
+    objectif de poids) ou, à défaut, le budget saisi ; et `proteines_par_kg`
+    grammes de protéines par kilo de poids (1,8 par défaut). Sans pesée
+    enregistrée, on retient 75 kg plutôt que de refuser de générer."""
     profile = _get_or_create_profile(db, user)
     poids = _current_weight_kg(db, user)
     cible_kcal = (payload.cible_kcal
                   or _suggested_calorie_budget(profile, poids)
                   or profile.daily_calorie_budget)
-    cible_proteines = payload.cible_proteines or round(1.8 * (poids or 75))
+    par_kg = payload.proteines_par_kg or 1.8
+    cible_proteines = payload.cible_proteines or round(par_kg * (poids or 75))
     return int(cible_kcal), int(cible_proteines)
 
 

@@ -6086,6 +6086,1057 @@
     "vegetarien",
     "transportable"
    ]
+  },
+  {
+   "id": "pdj-pudding-chia-amande-fruits-rouges",
+   "nom": "Pudding de chia à la boisson d'amande et fruits rouges",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "chia",
+     "quantite_g": 30
+    },
+    {
+     "cle": "boisson_amande",
+     "quantite_g": 200
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 100
+    },
+    {
+     "cle": "fruits_rouges",
+     "quantite_g": 80
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Verser les graines de chia dans la boisson d'amande, fouetter 30 secondes, puis laisser gonfler au réfrigérateur 4 h minimum (idéalement toute la nuit à 4 °C).",
+    "Sortir le pudding, le détendre à la cuillère et incorporer le skyr pour obtenir une texture crémeuse.",
+    "Répartir les fruits rouges décongelés sur le dessus et napper de miel juste avant de servir."
+   ],
+   "tags": [
+    "sucre",
+    "vegetarien",
+    "prepare-la-veille"
+   ]
+  },
+  {
+   "id": "pdj-porridge-cannelle-pruneaux",
+   "nom": "Porridge à la cannelle et aux pruneaux",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 60
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 200
+    },
+    {
+     "cle": "cannelle",
+     "quantite_g": 3
+    },
+    {
+     "cle": "pruneau",
+     "quantite_g": 40
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Porter le lait à frémissement dans une casserole avec la cannelle, en fouettant pour la disperser.",
+    "Verser les flocons d'avoine et cuire 5 min à feu doux en remuant sans arrêt, jusqu'à épaississement.",
+    "Ajouter les pruneaux coupés en lamelles, laisser gonfler 2 min hors du feu, puis parsemer d'amandes concassées."
+   ],
+   "tags": [
+    "sucre",
+    "vegetarien",
+    "rapide"
+   ]
+  },
+  {
+   "id": "pdj-tartine-saumon-fume-ricotta-aneth",
+   "nom": "Tartine de saumon fumé, ricotta et aneth",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 8,
+   "ingredients": [
+    {
+     "cle": "pain_complet",
+     "quantite_g": 80
+    },
+    {
+     "cle": "saumon_fume",
+     "quantite_g": 60
+    },
+    {
+     "cle": "ricotta",
+     "quantite_g": 50
+    },
+    {
+     "cle": "aneth",
+     "quantite_g": 3
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Toaster les tranches de pain complet 3 min au grille-pain jusqu'à ce qu'elles soient dorées et fermes.",
+    "Fouetter la ricotta avec l'aneth ciselé et quelques gouttes de jus de citron, puis l'étaler sur les tartines.",
+    "Draper les tranches de saumon fumé par-dessus, arroser du reste de citron et servir immédiatement."
+   ],
+   "tags": [
+    "sale",
+    "rapide",
+    "sans-cuisson"
+   ]
+  },
+  {
+   "id": "pdj-pancakes-levure-boisson-soja",
+   "nom": "Pancakes moelleux à la boisson de soja",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "farine",
+     "quantite_g": 60
+    },
+    {
+     "cle": "levure_chimique",
+     "quantite_g": 4
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "boisson_soja",
+     "quantite_g": 120
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 10
+    },
+    {
+     "cle": "fruits_rouges",
+     "quantite_g": 60
+    }
+   ],
+   "etapes": [
+    "Mélanger la farine et la levure chimique dans un bol, puis creuser un puits au centre.",
+    "Y battre l'œuf avec la boisson de soja et incorporer la farine au fouet jusqu'à obtenir une pâte lisse ; laisser reposer 5 min.",
+    "Cuire 4 à 5 pancakes dans une poêle antiadhésive chaude, 2 min par face à feu moyen, jusqu'à ce que des bulles éclatent en surface.",
+    "Empiler les pancakes, couvrir de fruits rouges et napper de miel."
+   ],
+   "tags": [
+    "sucre",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "pdj-oeufs-brouilles-chorizo-persil",
+   "nom": "Œufs brouillés au chorizo et persil",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "chorizo",
+     "quantite_g": 25
+    },
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 60
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 80
+    },
+    {
+     "cle": "persil",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Faire revenir le chorizo en petits dés 2 min à feu moyen dans une poêle, sans matière grasse, puis ajouter la tomate en cubes et cuire 2 min.",
+    "Baisser à feu doux, verser les œufs battus et remuer sans arrêt 3 à 4 min jusqu'à une texture crémeuse.",
+    "Parsemer de persil ciselé et servir avec le pain de campagne toasté."
+   ],
+   "tags": [
+    "sale",
+    "rapide"
+   ]
+  },
+  {
+   "id": "pdj-bowl-skyr-abricots-secs-lin",
+   "nom": "Bowl de skyr aux abricots secs et graines de lin",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 6,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 200
+    },
+    {
+     "cle": "abricot_sec",
+     "quantite_g": 40
+    },
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 30
+    },
+    {
+     "cle": "lin",
+     "quantite_g": 10
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Torréfier les flocons d'avoine et les graines de lin 3 min à sec dans une poêle à feu moyen, jusqu'à ce qu'ils embaument.",
+    "Verser le skyr dans un bol et le lisser à la cuillère.",
+    "Couvrir des abricots secs coupés en lanières et du mélange torréfié, puis napper de miel."
+   ],
+   "tags": [
+    "sucre",
+    "rapide",
+    "vegetarien"
+   ]
+  },
+  {
+   "id": "dej-curry-poulet-gingembre-curcuma",
+   "nom": "Curry de poulet au gingembre frais et curcuma",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 150
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 70
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 80
+    },
+    {
+     "cle": "gingembre",
+     "quantite_g": 8
+    },
+    {
+     "cle": "curcuma",
+     "quantite_g": 3
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "coriandre_fraiche",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Cuire le riz 11 min dans deux fois son volume d'eau bouillante salée, puis le réserver à couvert.",
+    "Faire suer l'oignon émincé et le gingembre râpé 4 min à feu moyen dans l'huile, ajouter le curcuma et poursuivre 30 secondes.",
+    "Saisir les morceaux de poulet 4 min à feu vif, verser le lait de coco et laisser mijoter 12 min à feu doux à découvert.",
+    "Parsemer de coriandre fraîche ciselée et servir sur le riz."
+   ],
+   "tags": [
+    "epice",
+    "plat-complet"
+   ]
+  },
+  {
+   "id": "dej-taboule-menthe-pois-chiches-feta",
+   "nom": "Taboulé de boulgour à la menthe, pois chiches et feta",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "boulgour",
+     "quantite_g": 70
+    },
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 150
+    },
+    {
+     "cle": "menthe",
+     "quantite_g": 8
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 100
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 60
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 50
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 20
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Couvrir le boulgour d'eau bouillante salée, laisser gonfler 15 min à couvert, puis l'égrener à la fourchette et le laisser tiédir.",
+    "Couper la tomate et le concombre en petits dés, rincer et égoutter les pois chiches.",
+    "Mélanger le tout avec la menthe finement ciselée, le jus de citron et l'huile d'olive.",
+    "Émietter la feta par-dessus et réserver 10 min au frais avant de servir."
+   ],
+   "tags": [
+    "froid",
+    "vegetarien",
+    "batch-cooking"
+   ]
+  },
+  {
+   "id": "dej-poke-saumon-sesame-citron-vert",
+   "nom": "Poke bowl saumon, sésame et citron vert",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 70
+    },
+    {
+     "cle": "saumon",
+     "quantite_g": 120
+    },
+    {
+     "cle": "sesame",
+     "quantite_g": 10
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 15
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 60
+    },
+    {
+     "cle": "mais",
+     "quantite_g": 60
+    },
+    {
+     "cle": "citron_vert",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Cuire le riz 11 min à l'eau bouillante salée, l'égoutter et le laisser refroidir 10 min à température ambiante.",
+    "Détailler le saumon en cubes de 2 cm, le faire mariner 10 min au frais dans la sauce soja et le jus de citron vert.",
+    "Torréfier les graines de sésame 2 min à sec dans une poêle chaude jusqu'à ce qu'elles dorent.",
+    "Dresser le riz dans un bol, poser le saumon mariné, l'avocat en lamelles et le maïs égoutté, puis parsemer de sésame."
+   ],
+   "tags": [
+    "froid",
+    "plat-complet"
+   ]
+  },
+  {
+   "id": "dej-wrap-poulet-houmous-tahin-cumin",
+   "nom": "Wrap de poulet au houmous de tahin et cumin",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 18,
+   "ingredients": [
+    {
+     "cle": "tortilla",
+     "quantite_g": 90
+    },
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 100
+    },
+    {
+     "cle": "tahin",
+     "quantite_g": 15
+    },
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 100
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 40
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 10
+    },
+    {
+     "cle": "cumin",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Saisir le blanc de poulet 4 min par face dans une poêle antiadhésive à feu moyen, puis le laisser reposer 3 min avant de l'émincer.",
+    "Mixer les pois chiches égouttés avec le tahin, le jus de citron, le cumin et 2 cuillères à soupe d'eau jusqu'à obtenir un houmous lisse.",
+    "Réchauffer les tortillas 30 secondes par face dans la poêle chaude.",
+    "Tartiner de houmous, garnir de poulet et de salade, puis rouler serré et couper en deux."
+   ],
+   "tags": [
+    "rapide",
+    "nomade"
+   ]
+  },
+  {
+   "id": "dej-salade-fenouil-maquereau-pommes-terre",
+   "nom": "Salade tiède de fenouil, maquereau et pommes de terre",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "maquereau",
+     "quantite_g": 130
+    },
+    {
+     "cle": "fenouil",
+     "quantite_g": 120
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 180
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 30
+    },
+    {
+     "cle": "vinaigre_cidre",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    }
+   ],
+   "etapes": [
+    "Cuire les pommes de terre en morceaux 18 min à l'eau bouillante salée, puis les égoutter et les laisser tiédir.",
+    "Rôtir les filets de maquereau 10 min au four à 200 °C, peau vers le haut, jusqu'à ce que la chair se détache.",
+    "Émincer le fenouil très finement et l'échalote en lamelles, puis les assaisonner de vinaigre de cidre, d'huile d'olive et de jus de citron.",
+    "Mélanger les pommes de terre tièdes à la salade de fenouil et poser le maquereau effeuillé par-dessus."
+   ],
+   "tags": [
+    "tiede",
+    "poisson"
+   ]
+  },
+  {
+   "id": "dej-salade-chou-blanc-poulet-cajou",
+   "nom": "Salade de chou blanc, poulet et noix de cajou",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "chou_blanc",
+     "quantite_g": 150
+    },
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 140
+    },
+    {
+     "cle": "cajou",
+     "quantite_g": 20
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 80
+    },
+    {
+     "cle": "riz_complet",
+     "quantite_g": 60
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Cuire le riz complet 18 min à l'eau bouillante salée, l'égoutter et le laisser refroidir.",
+    "Saisir le poulet émincé 6 min à feu vif dans l'huile, déglacer à la sauce soja et réserver.",
+    "Râper le chou blanc et la carotte en fine julienne, puis les mélanger au riz refroidi.",
+    "Ajouter le poulet tiède, parsemer de noix de cajou concassées et servir aussitôt."
+   ],
+   "tags": [
+    "croquant",
+    "plat-complet"
+   ]
+  },
+  {
+   "id": "dej-boulettes-boeuf-harissa-semoule",
+   "nom": "Boulettes de bœuf à la harissa, semoule et coriandre",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "boeuf_hache_5",
+     "quantite_g": 130
+    },
+    {
+     "cle": "semoule",
+     "quantite_g": 70
+    },
+    {
+     "cle": "harissa",
+     "quantite_g": 12
+    },
+    {
+     "cle": "concentre_tomate",
+     "quantite_g": 30
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 80
+    },
+    {
+     "cle": "coriandre_graine",
+     "quantite_g": 3
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Écraser les graines de coriandre au mortier, les mêler à la viande hachée et former 6 boulettes régulières.",
+    "Les saisir 5 min dans l'huile à feu vif en les retournant, puis les réserver.",
+    "Faire suer l'oignon et le poivron en dés 5 min, ajouter le concentré de tomate, la harissa et 15 cl d'eau, remettre les boulettes et mijoter 12 min à couvert.",
+    "Couvrir la semoule d'eau bouillante salée à hauteur, laisser gonfler 5 min, l'égrener puis servir avec les boulettes et leur sauce."
+   ],
+   "tags": [
+    "epice",
+    "plat-complet"
+   ]
+  },
+  {
+   "id": "din-polenta-cremeuse-champignons-parmesan",
+   "nom": "Polenta crémeuse aux champignons et parmesan",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "polenta",
+     "quantite_g": 70
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 150
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 30
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 150
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    },
+    {
+     "cle": "persil",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Porter le lait et 15 cl d'eau salée à frémissement, verser la polenta en pluie et cuire 8 min à feu doux en remuant sans arrêt.",
+    "Hors du feu, incorporer le parmesan râpé pour obtenir une texture souple et nappante.",
+    "Poêler les champignons émincés 6 min à feu vif dans l'huile, ajouter l'ail haché la dernière minute.",
+    "Dresser la polenta en creux, garnir des champignons et parsemer de persil ciselé."
+   ],
+   "tags": [
+    "vegetarien",
+    "reconfortant"
+   ]
+  },
+  {
+   "id": "din-endives-braisees-jambon-gratin",
+   "nom": "Endives braisées au jambon gratinées",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "endive",
+     "quantite_g": 250
+    },
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 120
+    },
+    {
+     "cle": "gruyere",
+     "quantite_g": 30
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 60
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 100
+    }
+   ],
+   "etapes": [
+    "Retirer le cône amer des endives et les braiser 20 min à couvert dans une sauteuse avec 5 cl d'eau, à feu doux, jusqu'à ce qu'elles soient fondantes.",
+    "Cuire les pommes de terre en rondelles 15 min à l'eau bouillante salée et les égoutter.",
+    "Rouler chaque endive pressée dans une tranche de jambon et les ranger dans un plat avec les pommes de terre.",
+    "Napper de crème, couvrir d'emmental râpé et gratiner 15 min au four à 200 °C."
+   ],
+   "tags": [
+    "gratin",
+    "hiver"
+   ]
+  },
+  {
+   "id": "din-chou-vert-farci-dinde",
+   "nom": "Chou vert farci à la dinde et tomate",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 45,
+   "ingredients": [
+    {
+     "cle": "chou_vert",
+     "quantite_g": 200
+    },
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 130
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 40
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 150
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 50
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 8
+    },
+    {
+     "cle": "herbes_provence",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Blanchir les feuilles de chou vert 5 min à l'eau bouillante salée, les rafraîchir et les éponger.",
+    "Hacher la dinde au couteau, la mélanger au riz cru, à l'oignon émincé revenu 4 min dans l'huile et aux herbes de Provence.",
+    "Garnir les feuilles de farce, les rouler en paupiettes serrées et les déposer dans un plat.",
+    "Verser la tomate concassée par-dessus et cuire 35 min au four à 180 °C, en arrosant à mi-cuisson."
+   ],
+   "tags": [
+    "four",
+    "hiver"
+   ]
+  },
+  {
+   "id": "din-haddock-poireaux-pommes-terre",
+   "nom": "Haddock fumé aux poireaux fondants",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 30,
+   "ingredients": [
+    {
+     "cle": "haddock",
+     "quantite_g": 150
+    },
+    {
+     "cle": "poireau",
+     "quantite_g": 150
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 200
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 100
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 40
+    },
+    {
+     "cle": "aneth",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Pocher le haddock 8 min dans le lait frémissant additionné d'autant d'eau, sans ébullition, puis l'égoutter en gardant le liquide.",
+    "Cuire les pommes de terre en cubes 18 min à l'eau bouillante salée et les égoutter.",
+    "Faire fondre les poireaux émincés 12 min à feu doux avec 10 cl du lait de pochage, puis lier à la crème.",
+    "Dresser les poireaux et les pommes de terre, poser le haddock effeuillé et parsemer d'aneth ciselé."
+   ],
+   "tags": [
+    "poisson",
+    "reconfortant"
+   ]
+  },
+  {
+   "id": "din-gratin-courgettes-ricotta-basilic",
+   "nom": "Gratin de courgettes à la ricotta et au basilic",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 40,
+   "ingredients": [
+    {
+     "cle": "courgette",
+     "quantite_g": 250
+    },
+    {
+     "cle": "ricotta",
+     "quantite_g": 120
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 20
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 100
+    },
+    {
+     "cle": "basilic",
+     "quantite_g": 8
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Poêler les courgettes en rondelles 8 min à feu vif dans l'huile, jusqu'à ce qu'elles soient dorées et sans eau.",
+    "Fouetter la ricotta avec l'œuf et le basilic ciselé, saler et poivrer.",
+    "Mélanger les courgettes à l'appareil, verser dans un plat et répartir les tomates cerises coupées en deux.",
+    "Parsemer de parmesan râpé et cuire 25 min au four à 190 °C jusqu'à ce que le dessus soit doré."
+   ],
+   "tags": [
+    "vegetarien",
+    "four"
+   ]
+  },
+  {
+   "id": "din-wok-crevettes-chou-blanc-gingembre",
+   "nom": "Wok de crevettes au chou et gingembre",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "crevette",
+     "quantite_g": 150
+    },
+    {
+     "cle": "chou_blanc",
+     "quantite_g": 150
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 70
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 60
+    },
+    {
+     "cle": "gingembre",
+     "quantite_g": 8
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 15
+    },
+    {
+     "cle": "sesame",
+     "quantite_g": 8
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Cuire le riz 11 min à l'eau bouillante salée, l'égoutter et le réserver à couvert.",
+    "Chauffer l'huile dans un wok à feu vif, y faire sauter le gingembre râpé 30 secondes puis le chou et la carotte en julienne 5 min.",
+    "Ajouter les crevettes et la sauce soja, poursuivre 3 min en remuant jusqu'à ce qu'elles soient bien chaudes.",
+    "Incorporer le riz, réchauffer 2 min et parsemer de graines de sésame torréfiées."
+   ],
+   "tags": [
+    "rapide",
+    "wok"
+   ]
+  },
+  {
+   "id": "din-dahl-coco-curcuma-coriandre",
+   "nom": "Dahl de lentilles au curcuma, coco et coriandre",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "lentilles",
+     "quantite_g": 80
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 80
+    },
+    {
+     "cle": "curcuma",
+     "quantite_g": 3
+    },
+    {
+     "cle": "cumin",
+     "quantite_g": 3
+    },
+    {
+     "cle": "concentre_tomate",
+     "quantite_g": 30
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "coriandre_fraiche",
+     "quantite_g": 6
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 6
+    }
+   ],
+   "etapes": [
+    "Rincer les lentilles et les cuire 22 min dans trois fois leur volume d'eau non salée, à petits bouillons.",
+    "Faire suer l'oignon émincé 5 min dans l'huile à feu moyen, ajouter le cumin et le curcuma et torréfier 30 secondes.",
+    "Incorporer le concentré de tomate, les lentilles égouttées et le lait de coco, puis mijoter 8 min à feu doux en remuant.",
+    "Saler, parsemer de coriandre fraîche ciselée et servir bien chaud."
+   ],
+   "tags": [
+    "vegetarien",
+    "epice"
+   ]
+  },
+  {
+   "id": "col-galettes-riz-cacahuete-banane",
+   "nom": "Galettes de riz au beurre de cacahuète et banane",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "galette_riz",
+     "quantite_g": 30
+    },
+    {
+     "cle": "beurre_cacahuete",
+     "quantite_g": 20
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 60
+    },
+    {
+     "cle": "cannelle",
+     "quantite_g": 1
+    }
+   ],
+   "etapes": [
+    "Étaler le beurre de cacahuète sur les galettes de riz en couche régulière.",
+    "Couvrir de rondelles de banane fines et saupoudrer de cannelle.",
+    "Consommer dans les 10 min pour garder les galettes croquantes."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "nomade"
+   ]
+  },
+  {
+   "id": "col-pudding-chia-soja-cacao",
+   "nom": "Pudding de chia au soja et cacao",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 6,
+   "ingredients": [
+    {
+     "cle": "chia",
+     "quantite_g": 25
+    },
+    {
+     "cle": "boisson_soja",
+     "quantite_g": 150
+    },
+    {
+     "cle": "cacao",
+     "quantite_g": 6
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Délayer le cacao dans la boisson de soja au fouet jusqu'à disparition des grumeaux.",
+    "Ajouter les graines de chia et le miel, fouetter 30 secondes puis laisser reposer 5 min.",
+    "Fouetter de nouveau pour éviter les amas et réfrigérer 3 h à 4 °C avant de déguster."
+   ],
+   "tags": [
+    "prepare-la-veille",
+    "vegetalien"
+   ]
+  },
+  {
+   "id": "col-houmous-tahin-batonnets-carotte",
+   "nom": "Houmous au tahin et bâtonnets de carotte",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 130
+    },
+    {
+     "cle": "tahin",
+     "quantite_g": 15
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 10
+    },
+    {
+     "cle": "cumin",
+     "quantite_g": 2
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 80
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 4
+    }
+   ],
+   "etapes": [
+    "Rincer et égoutter les pois chiches, puis les mixer 1 min avec le tahin, le jus de citron, le cumin et 2 cuillères à soupe d'eau glacée.",
+    "Ajouter l'huile d'olive en filet et mixer 30 secondes de plus pour une texture lisse.",
+    "Tailler la carotte en bâtonnets et servir avec le houmous, ou réserver au frais jusqu'à 3 jours."
+   ],
+   "tags": [
+    "vegetalien",
+    "sans-cuisson",
+    "batch-cooking"
+   ]
+  },
+  {
+   "id": "col-fromage-blanc-pomme-cannelle-lin",
+   "nom": "Fromage blanc, pomme, cannelle et graines de lin",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 150
+    },
+    {
+     "cle": "pomme",
+     "quantite_g": 120
+    },
+    {
+     "cle": "cannelle",
+     "quantite_g": 2
+    },
+    {
+     "cle": "lin",
+     "quantite_g": 8
+    }
+   ],
+   "etapes": [
+    "Râper la pomme avec sa peau juste avant de servir pour limiter l'oxydation.",
+    "Mélanger le fromage blanc avec la cannelle, puis incorporer la pomme râpée.",
+    "Concasser grossièrement les graines de lin au mortier et les parsemer sur le dessus."
+   ],
+   "tags": [
+    "rapide",
+    "sans-cuisson",
+    "vegetarien"
+   ]
   }
  ]
 }
