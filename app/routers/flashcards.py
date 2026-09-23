@@ -10,6 +10,7 @@ Au-delà de DAILY_REVIEW_TARGET cartes revues dans la journée, les habitudes
 liées à l'activité "danish_review" se cochent toutes seules (même mécanisme
 que mark_sport_habits_done_today pour le sport).
 """
+import re
 from datetime import timedelta
 
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -220,22 +221,39 @@ def list_cards(db: Session = Depends(get_db), user: models.User = Depends(get_cu
     ]
 
 
-def _parse_lignes(texte: str) -> list[tuple[str, str]]:
-    """Accepte "français ; danois", "français<TAB>danois", "français - danois"
-    et "français, danois" — l'export de mots de Duolingo et les listes faites
-    à la main ne se ressemblent jamais tout à fait."""
-    paires = []
+# Séparateurs essayés dans l'ordre : les plus explicites d'abord, la virgule
+# en dernier (elle apparaît aussi à l'intérieur d'une traduction).
+SEPARATEURS = ("\t", ";", " : ", " - ", " – ", " — ", " = ", " -> ", " => ", ":", ",")
+
+
+def _parse_lignes(texte: str) -> tuple[list[tuple[str, str]], list[str]]:
+    """Découpe « français <séparateur> danois », une carte par ligne.
+
+    Renvoie aussi les lignes non reconnues : un import qui échoue doit dire
+    laquelle, sinon l'utilisateur n'a aucun moyen de corriger sa liste. Les
+    exports de mots et les listes faites à la main ne se ressemblent jamais
+    tout à fait, d'où les séparateurs multiples et le repli sur deux espaces
+    ou plus (deux colonnes collées depuis un tableur)."""
+    paires, rejetees = [], []
     for ligne in texte.splitlines():
         ligne = ligne.strip()
         if not ligne:
             continue
-        for sep in ("\t", ";", " - ", " – ", " = ", ","):
+        gauche = droite = ""
+        for sep in SEPARATEURS:
             if sep in ligne:
                 gauche, _, droite = ligne.partition(sep)
-                if gauche.strip() and droite.strip():
-                    paires.append((gauche.strip(), droite.strip()))
                 break
-    return paires
+        else:
+            morceaux = re.split(r"\s{2,}", ligne, maxsplit=1)
+            if len(morceaux) == 2:
+                gauche, droite = morceaux
+
+        if gauche.strip() and droite.strip():
+            paires.append((gauche.strip(), droite.strip()))
+        else:
+            rejetees.append(ligne)
+    return paires, rejetees
 
 
 @router.post("/import", status_code=201)
@@ -247,10 +265,17 @@ def import_cards(
     entrees: list[tuple[str, str, str | None]] = []
     if payload.cards:
         entrees += [(c.front, c.back, c.hint) for c in payload.cards]
+    rejetees: list[str] = []
     if payload.text:
-        entrees += [(f, b, None) for f, b in _parse_lignes(payload.text)]
+        paires, rejetees = _parse_lignes(payload.text)
+        entrees += [(f, b, None) for f, b in paires]
     if not entrees:
-        raise HTTPException(status_code=400, detail="Aucune carte reconnue (format attendu : « français ; danois » par ligne)")
+        exemple = f" Première ligne non reconnue : « {rejetees[0][:60]} »." if rejetees else ""
+        raise HTTPException(
+            status_code=400,
+            detail="Aucune carte reconnue. Format attendu : « français ; danois », une carte par "
+                   f"ligne (séparateur « ; », tabulation, « : », « - », « = » ou deux espaces).{exemple}",
+        )
 
     existantes = {(c.front.lower(), c.back.lower()) for c in _visible_cards(db, user).all()}
     ajoutees = 0
@@ -264,7 +289,11 @@ def import_cards(
         existantes.add((front.lower(), back.lower()))
         ajoutees += 1
     db.commit()
-    return {"ok": True, "recues": len(entrees), "ajoutees": ajoutees, "doublons": len(entrees) - ajoutees}
+    return {"ok": True, "recues": len(entrees), "ajoutees": ajoutees,
+            "doublons": len(entrees) - ajoutees,
+            # Lignes ignorées : l'utilisateur doit pouvoir les repérer plutôt
+            # que de croire que toute sa liste est passée.
+            "ignorees": rejetees[:5], "nb_ignorees": len(rejetees)}
 
 
 @router.post("", status_code=201)
