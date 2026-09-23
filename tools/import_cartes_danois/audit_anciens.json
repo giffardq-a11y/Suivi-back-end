@@ -1,0 +1,2255 @@
+[
+ {
+  "i": 0,
+  "fr": "bonjour (la journée)",
+  "da": "goddag",
+  "cat": "politesse",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Bonjour."
+  ]
+ },
+ {
+  "i": 1,
+  "fr": "salut",
+  "da": "hej",
+  "cat": "politesse",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Salut, bonjour."
+  ]
+ },
+ {
+  "i": 2,
+  "fr": "au revoir",
+  "da": "farvel",
+  "cat": "politesse",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "adieu"
+  ]
+ },
+ {
+  "i": 3,
+  "fr": "bonsoir",
+  "da": "godaften",
+  "cat": "politesse",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "good evening"
+  ]
+ },
+ {
+  "i": 4,
+  "fr": "bonne nuit",
+  "da": "godnat",
+  "cat": "politesse",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "good night"
+  ]
+ },
+ {
+  "i": 5,
+  "fr": "merci",
+  "da": "tak",
+  "cat": "politesse",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "merci."
+  ]
+ },
+ {
+  "i": 6,
+  "fr": "merci beaucoup",
+  "da": "mange tak",
+  "cat": "politesse",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "thank you very much, thanks a lot"
+  ]
+ },
+ {
+  "i": 7,
+  "fr": "de rien",
+  "da": "selv tak",
+  "cat": "politesse",
+  "ok": false,
+  "site": null,
+  "why": "fr: page absente ; en: sens absent",
+  "defs": [
+   "thank you as well"
+  ]
+ },
+ {
+  "i": 8,
+  "fr": "oui",
+  "da": "ja",
+  "cat": "politesse",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "yes"
+  ]
+ },
+ {
+  "i": 9,
+  "fr": "non",
+  "da": "nej",
+  "cat": "politesse",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Non, ne … pas."
+  ]
+ },
+ {
+  "i": 10,
+  "fr": "peut-être",
+  "da": "måske",
+  "cat": "politesse",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Peut-être."
+  ]
+ },
+ {
+  "i": 11,
+  "fr": "pardon / excuse-moi",
+  "da": "undskyld",
+  "cat": "politesse",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Je vous demande pardon, veuillez m’excuser."
+  ]
+ },
+ {
+  "i": 12,
+  "fr": "à bientôt",
+  "da": "vi ses",
+  "cat": "politesse",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "see you"
+  ]
+ },
+ {
+  "i": 13,
+  "fr": "bienvenue",
+  "da": "velkommen",
+  "cat": "politesse",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "welcome"
+  ]
+ },
+ {
+  "i": 14,
+  "fr": "comment ça va ?",
+  "da": "hvordan går det?",
+  "cat": "politesse",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 15,
+  "fr": "ça va bien",
+  "da": "det går godt",
+  "cat": "politesse",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 16,
+  "fr": "je m'appelle...",
+  "da": "jeg hedder...",
+  "cat": "politesse",
+  "ok": true,
+  "site": "loecsen",
+  "why": null,
+  "defs": [
+   "Je m'appelle Sarah, et toi ?",
+   "Jeg hedder Sarah, hvad hedder du ?"
+  ]
+ },
+ {
+  "i": 17,
+  "fr": "parles-tu anglais ?",
+  "da": "taler du engelsk?",
+  "cat": "politesse",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 18,
+  "fr": "je ne comprends pas",
+  "da": "jeg forstår ikke",
+  "cat": "politesse",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 19,
+  "fr": "je ne parle pas danois",
+  "da": "jeg taler ikke dansk",
+  "cat": "politesse",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 20,
+  "fr": "peux-tu répéter ?",
+  "da": "kan du gentage det?",
+  "cat": "politesse",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 21,
+  "fr": "lentement",
+  "da": "langsomt",
+  "cat": "politesse",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Lentement."
+  ]
+ },
+ {
+  "i": 22,
+  "fr": "santé ! (trinquer)",
+  "da": "skål",
+  "cat": "politesse",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Santé."
+  ]
+ },
+ {
+  "i": 23,
+  "fr": "bonne chance",
+  "da": "held og lykke",
+  "cat": "politesse",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "good luck"
+  ]
+ },
+ {
+  "i": 24,
+  "fr": "je",
+  "da": "jeg",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Je, moi."
+  ]
+ },
+ {
+  "i": 25,
+  "fr": "tu",
+  "da": "du",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Tu."
+  ]
+ },
+ {
+  "i": 26,
+  "fr": "il",
+  "da": "han",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Il, lui."
+  ]
+ },
+ {
+  "i": 27,
+  "fr": "elle",
+  "da": "hun",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Elle."
+  ]
+ },
+ {
+  "i": 28,
+  "fr": "nous",
+  "da": "vi",
+  "cat": "base",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "we"
+  ]
+ },
+ {
+  "i": 29,
+  "fr": "ils / elles",
+  "da": "de",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Ils, elles."
+  ]
+ },
+ {
+  "i": 30,
+  "fr": "et",
+  "da": "og",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Et, conjonction exprimant l’addition."
+  ]
+ },
+ {
+  "i": 31,
+  "fr": "mais",
+  "da": "men",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Mais."
+  ]
+ },
+ {
+  "i": 32,
+  "fr": "avec",
+  "da": "med",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Avec, à."
+  ]
+ },
+ {
+  "i": 33,
+  "fr": "sans",
+  "da": "uden",
+  "cat": "base",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "without",
+   "except for, but, save"
+  ]
+ },
+ {
+  "i": 34,
+  "fr": "pour",
+  "da": "for",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "De.",
+   "En, vers, à, envers, pour."
+  ]
+ },
+ {
+  "i": 35,
+  "fr": "parce que",
+  "da": "fordi",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Attendu que, car, parce que, puisque, vu que, comme."
+  ]
+ },
+ {
+  "i": 36,
+  "fr": "très",
+  "da": "meget",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Bien, fort, tout, très."
+  ]
+ },
+ {
+  "i": 37,
+  "fr": "un peu",
+  "da": "lidt",
+  "cat": "base",
+  "ok": false,
+  "site": null,
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Une certaine quantité."
+  ]
+ },
+ {
+  "i": 38,
+  "fr": "beaucoup",
+  "da": "mange",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Nombreux."
+  ]
+ },
+ {
+  "i": 39,
+  "fr": "aussi",
+  "da": "også",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Aussi."
+  ]
+ },
+ {
+  "i": 40,
+  "fr": "ici",
+  "da": "her",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Ici."
+  ]
+ },
+ {
+  "i": 41,
+  "fr": "là-bas",
+  "da": "der",
+  "cat": "base",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "there"
+  ]
+ },
+ {
+  "i": 42,
+  "fr": "qui ?",
+  "da": "hvem?",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Qui, qu’ est-ce qui."
+  ]
+ },
+ {
+  "i": 43,
+  "fr": "quoi ?",
+  "da": "hvad?",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Quoi."
+  ]
+ },
+ {
+  "i": 44,
+  "fr": "où ?",
+  "da": "hvor?",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Où."
+  ]
+ },
+ {
+  "i": 45,
+  "fr": "quand ?",
+  "da": "hvornår?",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Quand."
+  ]
+ },
+ {
+  "i": 46,
+  "fr": "pourquoi ?",
+  "da": "hvorfor?",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Pourquoi."
+  ]
+ },
+ {
+  "i": 47,
+  "fr": "comment ?",
+  "da": "hvordan?",
+  "cat": "base",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Comment, de quelle manière."
+  ]
+ },
+ {
+  "i": 48,
+  "fr": "être",
+  "da": "at være",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Être."
+  ]
+ },
+ {
+  "i": 49,
+  "fr": "avoir",
+  "da": "at have",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Avoir."
+  ]
+ },
+ {
+  "i": 50,
+  "fr": "faire",
+  "da": "at lave",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Construire, fabriquer, faire, opérer, poser."
+  ]
+ },
+ {
+  "i": 51,
+  "fr": "aller",
+  "da": "at gå",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Aller, marcher.",
+   "Partir.",
+   "Mener.",
+   "Fonctionner."
+  ]
+ },
+ {
+  "i": 52,
+  "fr": "venir",
+  "da": "at komme",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Venir, s’abouler."
+  ]
+ },
+ {
+  "i": 53,
+  "fr": "vouloir",
+  "da": "at ville",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Vouloir."
+  ]
+ },
+ {
+  "i": 54,
+  "fr": "pouvoir",
+  "da": "at kunne",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Pouvoir.",
+   "Savoir (faculté acquise).",
+   "Afin de composer le conjonctif ou subjonctif en danois. On utilise toujours la forme de l’imparfait."
+  ]
+ },
+ {
+  "i": 55,
+  "fr": "devoir",
+  "da": "at skulle",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Devoir, être obligé.",
+   "Pouvoir, être invité."
+  ]
+ },
+ {
+  "i": 56,
+  "fr": "savoir",
+  "da": "at vide",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Savoir."
+  ]
+ },
+ {
+  "i": 57,
+  "fr": "manger",
+  "da": "at spise",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Déjeuner, manger."
+  ]
+ },
+ {
+  "i": 58,
+  "fr": "boire",
+  "da": "at drikke",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Boire."
+  ]
+ },
+ {
+  "i": 59,
+  "fr": "dormir",
+  "da": "at sove",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Dormir."
+  ]
+ },
+ {
+  "i": 60,
+  "fr": "travailler",
+  "da": "at arbejde",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Travailler."
+  ]
+ },
+ {
+  "i": 61,
+  "fr": "parler",
+  "da": "at tale",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Parler."
+  ]
+ },
+ {
+  "i": 62,
+  "fr": "lire",
+  "da": "at læse",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Lire."
+  ]
+ },
+ {
+  "i": 63,
+  "fr": "écrire",
+  "da": "at skrive",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Écrire."
+  ]
+ },
+ {
+  "i": 64,
+  "fr": "courir",
+  "da": "at løbe",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Courir."
+  ]
+ },
+ {
+  "i": 65,
+  "fr": "nager",
+  "da": "at svømme",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Nager."
+  ]
+ },
+ {
+  "i": 66,
+  "fr": "s'entraîner",
+  "da": "at træne",
+  "cat": "verbes",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "to train, coach",
+   "to practise",
+   "to train"
+  ]
+ },
+ {
+  "i": 67,
+  "fr": "acheter",
+  "da": "at købe",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Acheter, acquérir."
+  ]
+ },
+ {
+  "i": 68,
+  "fr": "payer",
+  "da": "at betale",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Payer."
+  ]
+ },
+ {
+  "i": 69,
+  "fr": "comprendre",
+  "da": "at forstå",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Comprendre."
+  ]
+ },
+ {
+  "i": 70,
+  "fr": "apprendre",
+  "da": "at lære",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Apprendre."
+  ]
+ },
+ {
+  "i": 71,
+  "fr": "aider",
+  "da": "at hjælpe",
+  "cat": "verbes",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Aider, assister, secourir."
+  ]
+ },
+ {
+  "i": 72,
+  "fr": "attendre",
+  "da": "at vente",
+  "cat": "verbes",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "wait",
+   "expect"
+  ]
+ },
+ {
+  "i": 73,
+  "fr": "un",
+  "da": "en",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Un."
+  ]
+ },
+ {
+  "i": 74,
+  "fr": "deux",
+  "da": "to",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Deux (2)."
+  ]
+ },
+ {
+  "i": 75,
+  "fr": "trois",
+  "da": "tre",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Trois."
+  ]
+ },
+ {
+  "i": 76,
+  "fr": "quatre",
+  "da": "fire",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Quatre."
+  ]
+ },
+ {
+  "i": 77,
+  "fr": "cinq",
+  "da": "fem",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Cinq."
+  ]
+ },
+ {
+  "i": 78,
+  "fr": "six",
+  "da": "seks",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Six."
+  ]
+ },
+ {
+  "i": 79,
+  "fr": "sept",
+  "da": "syv",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Sept."
+  ]
+ },
+ {
+  "i": 80,
+  "fr": "huit",
+  "da": "otte",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Huit."
+  ]
+ },
+ {
+  "i": 81,
+  "fr": "neuf",
+  "da": "ni",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Neuf (9)."
+  ]
+ },
+ {
+  "i": 82,
+  "fr": "dix",
+  "da": "ti",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Dix (10)."
+  ]
+ },
+ {
+  "i": 83,
+  "fr": "vingt",
+  "da": "tyve",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Vingt."
+  ]
+ },
+ {
+  "i": 84,
+  "fr": "trente",
+  "da": "tredive",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Trente."
+  ]
+ },
+ {
+  "i": 85,
+  "fr": "cent",
+  "da": "hundrede",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Cent."
+  ]
+ },
+ {
+  "i": 86,
+  "fr": "mille",
+  "da": "tusind",
+  "cat": "nombres",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Mille (1000)."
+  ]
+ },
+ {
+  "i": 87,
+  "fr": "aujourd'hui",
+  "da": "i dag",
+  "cat": "temps",
+  "ok": false,
+  "site": null,
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Aujourdˆhui."
+  ]
+ },
+ {
+  "i": 88,
+  "fr": "demain",
+  "da": "i morgen",
+  "cat": "temps",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "tomorrow (on the day after the present day)"
+  ]
+ },
+ {
+  "i": 89,
+  "fr": "hier",
+  "da": "i går",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Hier."
+  ]
+ },
+ {
+  "i": 90,
+  "fr": "maintenant",
+  "da": "nu",
+  "cat": "temps",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "now"
+  ]
+ },
+ {
+  "i": 91,
+  "fr": "toujours",
+  "da": "altid",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "En tous temps, toujours."
+  ]
+ },
+ {
+  "i": 92,
+  "fr": "jamais",
+  "da": "aldrig",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Jamais, ne … jamais."
+  ]
+ },
+ {
+  "i": 93,
+  "fr": "souvent",
+  "da": "ofte",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Beaucoup, fréquemment, souvent."
+  ]
+ },
+ {
+  "i": 94,
+  "fr": "le matin",
+  "da": "morgen",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Matin, matinée."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 95,
+  "fr": "l'après-midi",
+  "da": "eftermiddag",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "(Moment de la journée) Après-midi."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 96,
+  "fr": "le soir",
+  "da": "aften",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Soir, soirée."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 97,
+  "fr": "la nuit",
+  "da": "nat",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Nuit."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 98,
+  "fr": "la semaine",
+  "da": "uge",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Semaine."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 99,
+  "fr": "le mois",
+  "da": "måned",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Mois, environ un douzième d’année."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 100,
+  "fr": "l'année",
+  "da": "år",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "An, année."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 101,
+  "fr": "l'heure",
+  "da": "time",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Heure."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 102,
+  "fr": "la minute",
+  "da": "minut",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Minute."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 103,
+  "fr": "lundi",
+  "da": "mandag",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Lundi."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 104,
+  "fr": "mardi",
+  "da": "tirsdag",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Mardi."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 105,
+  "fr": "mercredi",
+  "da": "onsdag",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Mercredi."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 106,
+  "fr": "jeudi",
+  "da": "torsdag",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Jeudi."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 107,
+  "fr": "vendredi",
+  "da": "fredag",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Vendredi."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 108,
+  "fr": "samedi",
+  "da": "lørdag",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Samedi, sabbat."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 109,
+  "fr": "dimanche",
+  "da": "søndag",
+  "cat": "temps",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Dimanche."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 110,
+  "fr": "le corps",
+  "da": "kroppen",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Corps."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 111,
+  "fr": "le dos",
+  "da": "ryggen",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Dos."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 112,
+  "fr": "la jambe",
+  "da": "benet",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "(anatomie) Jambe.",
+   "(anatomie) Os.",
+   "(anatomie) Arête de poisson.",
+   "(médecine) , jointure"
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 113,
+  "fr": "le bras",
+  "da": "armen",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "(anatomie) Bras."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 114,
+  "fr": "l'épaule",
+  "da": "skulderen",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "(anatomie) Épaule."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 115,
+  "fr": "la poitrine",
+  "da": "brystet",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Sein.",
+   "Poitrine, sein."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 116,
+  "fr": "le ventre",
+  "da": "maven",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Estomac.",
+   "Ventre."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 117,
+  "fr": "le cœur",
+  "da": "hjertet",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Cœur."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 118,
+  "fr": "la main",
+  "da": "hånden",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "(anatomie) Main."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 119,
+  "fr": "le pied",
+  "da": "foden",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Patte, pied."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 120,
+  "fr": "la tête",
+  "da": "hovedet",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Tête."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 121,
+  "fr": "le muscle",
+  "da": "musklen",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Muscle."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 122,
+  "fr": "le poids",
+  "da": "vægt",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Poids."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 123,
+  "fr": "l'haltère",
+  "da": "håndvægt",
+  "cat": "sport",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "dumbbell"
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 124,
+  "fr": "la salle de sport",
+  "da": "fitnesscenter",
+  "cat": "sport",
+  "ok": false,
+  "site": null,
+  "why": "fr: page absente ; en: pas de section Danish",
+  "defs": []
+ },
+ {
+  "i": 125,
+  "fr": "l'entraînement",
+  "da": "træning",
+  "cat": "sport",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "training, practice"
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 126,
+  "fr": "la série",
+  "da": "sæt",
+  "cat": "sport",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "set",
+   "set",
+   "start"
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 127,
+  "fr": "la répétition",
+  "da": "gentagelse",
+  "cat": "sport",
+  "ok": false,
+  "site": null,
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Reprise."
+  ]
+ },
+ {
+  "i": 128,
+  "fr": "le repos",
+  "da": "hvile",
+  "cat": "sport",
+  "ok": false,
+  "site": null,
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Se reposer."
+  ]
+ },
+ {
+  "i": 129,
+  "fr": "l'échauffement",
+  "da": "opvarmning",
+  "cat": "sport",
+  "ok": false,
+  "site": null,
+  "why": "fr: page absente ; en: pas de section Danish",
+  "defs": []
+ },
+ {
+  "i": 130,
+  "fr": "les étirements",
+  "da": "udstrækning",
+  "cat": "sport",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "extent, extension",
+   "stretching"
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 131,
+  "fr": "transpirer",
+  "da": "at svede",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Suer, transpirer."
+  ]
+ },
+ {
+  "i": 132,
+  "fr": "fatigué",
+  "da": "træt",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Fatigué, las."
+  ]
+ },
+ {
+  "i": 133,
+  "fr": "fort",
+  "da": "stærk",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Fort, puissant."
+  ]
+ },
+ {
+  "i": 134,
+  "fr": "la course à pied",
+  "da": "løb",
+  "cat": "sport",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "run, the act of running",
+   "race",
+   "barrel (of a firearm)",
+   "the bore (interior of the barrel)",
+   "course, channel (of a river or stream)",
+   "tarsometatarsus, tarsus, shank (bone found in some dinosaurs)"
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 135,
+  "fr": "la natation",
+  "da": "svømning",
+  "cat": "sport",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "swimming"
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 136,
+  "fr": "la piscine",
+  "da": "svømmehal",
+  "cat": "sport",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "natatorium (building/facility that houses one or more indoor swimming pools)"
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 137,
+  "fr": "le vélo",
+  "da": "cykel",
+  "cat": "sport",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "(da) Bicyclette, bécane, vélo.",
+   "Cycle"
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 138,
+  "fr": "l'eau",
+  "da": "vand",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Eau Une liquide qui pour nous est claire, transparente, sans odeur ni gout."
+  ],
+  "genre_en": null
+ },
+ {
+  "i": 139,
+  "fr": "le pain",
+  "da": "brød",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Pain."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 140,
+  "fr": "le lait",
+  "da": "mælk",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Lait (produit par les femelles des mammifères destiné à nourrir les bébés lors de l’allaitement), sinon spécifié il s’agit du lait de vaches."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 141,
+  "fr": "le café",
+  "da": "kaffe",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Café (matière, boisson)."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 142,
+  "fr": "le thé",
+  "da": "te",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "tea ()",
+   "tea",
+   "tea"
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 143,
+  "fr": "la bière",
+  "da": "øl",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Bière (la boisson même)."
+  ],
+  "genre_en": null
+ },
+ {
+  "i": 144,
+  "fr": "le vin",
+  "da": "vin",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Vin."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 145,
+  "fr": "la pomme",
+  "da": "æble",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "(da) Pomme.",
+   "Pommier."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 146,
+  "fr": "la viande",
+  "da": "kød",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Viande.",
+   "Chair."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 147,
+  "fr": "le poisson",
+  "da": "fisk",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Poisson."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 148,
+  "fr": "le légume",
+  "da": "grøntsag",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "en",
+  "why": null,
+  "defs": [
+   "vegetable (a plant raised for some edible part of it)",
+   "vegetable (the edible part of such a plant)",
+   "vegetable ((metaphorically) a person whose body or brain has been damaged so that they cannot interact with the surrounding environment)"
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 149,
+  "fr": "le fruit",
+  "da": "frugt",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Fruit."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 150,
+  "fr": "le petit-déjeuner",
+  "da": "morgenmad",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Petit déjeuner."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 151,
+  "fr": "le déjeuner",
+  "da": "frokost",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Déjeuner ou dîner, le repas pris au milieu de la journée."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 152,
+  "fr": "le dîner",
+  "da": "aftensmad",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Dîner, souper."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 153,
+  "fr": "la maison",
+  "da": "hus",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Maison."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 154,
+  "fr": "l'appartement",
+  "da": "lejlighed",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Occasion, opportunité.",
+   "Appartement."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 155,
+  "fr": "le travail",
+  "da": "arbejde",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Travail, emploi, boulot.",
+   "Travail (lieu où un emploi ou un travail se fait).",
+   "Ouvrage, travail, projet, effort."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 156,
+  "fr": "l'argent",
+  "da": "penge",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Argent, monnaie."
+  ],
+  "genre_en": null
+ },
+ {
+  "i": 157,
+  "fr": "le magasin",
+  "da": "butik",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Boutique, magasin."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 158,
+  "fr": "la rue",
+  "da": "gade",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Rue.",
+   "Partie d’une rue où circulent les véhicules, chaussée."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 159,
+  "fr": "la ville",
+  "da": "by",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Ville"
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 160,
+  "fr": "la voiture",
+  "da": "bil",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "(da) Auto, automobile."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 161,
+  "fr": "le train",
+  "da": "tog",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "(chemin de fer) Train."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 162,
+  "fr": "le temps qu'il fait",
+  "da": "vejr",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Temps."
+  ],
+  "genre_en": "et"
+ },
+ {
+  "i": 163,
+  "fr": "la pluie",
+  "da": "regn",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "(météorologie) Pluie."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 164,
+  "fr": "le soleil",
+  "da": "sol",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Soleil."
+  ],
+  "genre_en": null
+ },
+ {
+  "i": 165,
+  "fr": "la neige",
+  "da": "sne",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Neige."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 166,
+  "fr": "froid",
+  "da": "kold",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Froid."
+  ]
+ },
+ {
+  "i": 167,
+  "fr": "chaud",
+  "da": "varm",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Chaud."
+  ]
+ },
+ {
+  "i": 168,
+  "fr": "l'ami",
+  "da": "ven",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Ami."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 169,
+  "fr": "la famille",
+  "da": "familie",
+  "cat": "quotidien",
+  "ok": true,
+  "site": "fr",
+  "why": null,
+  "defs": [
+   "Famille."
+  ],
+  "genre_en": "en"
+ },
+ {
+  "i": 170,
+  "fr": "combien ça coûte ?",
+  "da": "hvad koster det?",
+  "cat": "phrases",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 171,
+  "fr": "où est... ?",
+  "da": "hvor er...?",
+  "cat": "phrases",
+  "ok": true,
+  "site": "loecsen",
+  "why": null,
+  "defs": [
+   "De quel pays viens-tu ?",
+   "Hvor er du fra ?"
+  ]
+ },
+ {
+  "i": 172,
+  "fr": "je voudrais...",
+  "da": "jeg vil gerne have...",
+  "cat": "phrases",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 173,
+  "fr": "l'addition, s'il vous plaît",
+  "da": "regningen, tak",
+  "cat": "phrases",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 174,
+  "fr": "aide-moi",
+  "da": "hjælp mig",
+  "cat": "phrases",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 175,
+  "fr": "j'ai faim",
+  "da": "jeg er sulten",
+  "cat": "phrases",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 176,
+  "fr": "j'ai soif",
+  "da": "jeg er tørstig",
+  "cat": "phrases",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 177,
+  "fr": "je suis fatigué",
+  "da": "jeg er træt",
+  "cat": "phrases",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 178,
+  "fr": "c'est bon",
+  "da": "det er godt",
+  "cat": "phrases",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 179,
+  "fr": "ça suffit",
+  "da": "det er nok",
+  "cat": "phrases",
+  "ok": false,
+  "site": null,
+  "why": "phrase absente de loecsen",
+  "defs": []
+ },
+ {
+  "i": 180,
+  "fr": "encore une fois",
+  "da": "en gang til",
+  "cat": "phrases",
+  "ok": false,
+  "site": null,
+  "why": "fr: page absente ; en: pas de section Danish",
+  "defs": []
+ },
+ {
+  "i": 181,
+  "fr": "je ne sais pas",
+  "da": "det ved jeg ikke",
+  "cat": "phrases",
+  "ok": true,
+  "site": "loecsen",
+  "why": null,
+  "defs": [
+   "Je ne sais pas",
+   "Det ved jeg ikke"
+  ]
+ }
+]

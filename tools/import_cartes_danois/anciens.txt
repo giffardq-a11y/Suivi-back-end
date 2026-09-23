@@ -1,0 +1,183 @@
+# index|lemme danois à chercher|nature|mots-clés fr (;)|mot-clé en (repli)   — vide = phrase à chercher dans loecsen
+0|goddag|interjection|bonjour|hello
+1|hej|interjection|salut;bonjour|hi
+2|farvel|interjection|au revoir;adieu|goodbye
+3|godaften|interjection|bonsoir|good evening
+4|godnat|interjection|bonne nuit|good night
+5|tak|interjection|merci|thanks
+6|mange tak|interjection|merci beaucoup|thank you very much
+7|selv tak|interjection|de rien;je vous en prie|you're welcome
+8|ja|adverbe|oui|yes
+9|nej|adverbe|non|no
+10|måske|adverbe|peut-être|maybe
+11|undskyld|interjection|pardon;excuse|sorry
+12|vi ses|interjection|à bientôt;à plus tard;au revoir|see you
+13|velkommen|interjection|bienvenue|welcome
+14|
+15|
+16|
+17|
+18|
+19|
+20|
+21|langsomt|adverbe|lentement|slowly
+22|skål|interjection|santé;tchin|cheers
+23|held og lykke|interjection|bonne chance|good luck
+24|jeg|pronom|je|I
+25|du|pronom|tu|you
+26|han|pronom|il|he
+27|hun|pronom|elle|she
+28|vi|pronom|nous|we
+29|de|pronom|ils;elles|they
+30|og|conjonction|et|and
+31|men|conjonction|mais|but
+32|med|préposition|avec|with
+33|uden|préposition|sans|without
+34|for|préposition|pour|for
+35|fordi|conjonction|parce que|because
+36|meget|adverbe|très;beaucoup|very
+37|lidt|adverbe|un peu|a little
+38|mange|adjectif|beaucoup;nombreux|many
+39|også|adverbe|aussi|also
+40|her|adverbe|ici|here
+41|der|adverbe|là|there
+42|hvem|pronom|qui|who
+43|hvad|pronom|quoi;que|what
+44|hvor|adverbe|où|where
+45|hvornår|adverbe|quand|when
+46|hvorfor|adverbe|pourquoi|why
+47|hvordan|adverbe|comment|how
+48|være|verbe|être|be
+49|have|verbe|avoir|have
+50|lave|verbe|faire|make
+51|gå|verbe|aller;marcher|walk
+52|komme|verbe|venir|come
+53|ville|verbe|vouloir|want
+54|kunne|verbe|pouvoir|can
+55|skulle|verbe|devoir|shall
+56|vide|verbe|savoir|know
+57|spise|verbe|manger|eat
+58|drikke|verbe|boire|drink
+59|sove|verbe|dormir|sleep
+60|arbejde|verbe|travailler|work
+61|tale|verbe|parler|speak
+62|læse|verbe|lire|read
+63|skrive|verbe|écrire|write
+64|løbe|verbe|courir|run
+65|svømme|verbe|nager|swim
+66|træne|verbe|entraîner;exercer|train
+67|købe|verbe|acheter|buy
+68|betale|verbe|payer|pay
+69|forstå|verbe|comprendre|understand
+70|lære|verbe|apprendre|learn
+71|hjælpe|verbe|aider|help
+72|vente|verbe|attendre|wait
+73|en|numéral|un|one
+74|to|numéral|deux|two
+75|tre|numéral|trois|three
+76|fire|numéral|quatre|four
+77|fem|numéral|cinq|five
+78|seks|numéral|six|six
+79|syv|numéral|sept|seven
+80|otte|numéral|huit|eight
+81|ni|numéral|neuf|nine
+82|ti|numéral|dix|ten
+83|tyve|numéral|vingt|twenty
+84|tredive|numéral|trente|thirty
+85|hundrede|numéral|cent|hundred
+86|tusind|numéral|mille|thousand
+87|i dag|adverbe|aujourd'hui|today
+88|i morgen|adverbe|demain|tomorrow
+89|i går|adverbe|hier|yesterday
+90|nu|adverbe|maintenant|now
+91|altid|adverbe|toujours|always
+92|aldrig|adverbe|jamais|never
+93|ofte|adverbe|souvent|often
+94|morgen|nom|matin|morning
+95|eftermiddag|nom|après-midi|afternoon
+96|aften|nom|soir;soirée|evening
+97|nat|nom|nuit|night
+98|uge|nom|semaine|week
+99|måned|nom|mois|month
+100|år|nom|année;an|year
+101|time|nom|heure|hour
+102|minut|nom|minute|minute
+103|mandag|nom|lundi|Monday
+104|tirsdag|nom|mardi|Tuesday
+105|onsdag|nom|mercredi|Wednesday
+106|torsdag|nom|jeudi|Thursday
+107|fredag|nom|vendredi|Friday
+108|lørdag|nom|samedi|Saturday
+109|søndag|nom|dimanche|Sunday
+110|krop|nom|corps|body
+111|ryg|nom|dos|back
+112|ben|nom|jambe|leg
+113|arm|nom|bras|arm
+114|skulder|nom|épaule|shoulder
+115|bryst|nom|poitrine;sein|chest
+116|mave|nom|ventre;estomac|belly
+117|hjerte|nom|cœur|heart
+118|hånd|nom|main|hand
+119|fod|nom|pied|foot
+120|hoved|nom|tête|head
+121|muskel|nom|muscle|muscle
+122|vægt|nom|poids|weight
+123|håndvægt|nom|haltère|dumbbell
+124|fitnesscenter|nom|salle de sport;salle de musculation;centre de fitness|gym
+125|træning|nom|entraînement;exercice|training
+126|sæt|nom|série;ensemble|set
+127|gentagelse|nom|répétition|repetition
+128|hvile|nom|repos|rest
+129|opvarmning|nom|échauffement|warm-up
+130|udstrækning|nom|étirement|stretching
+131|svede|verbe|transpirer;suer|sweat
+132|træt|adjectif|fatigué|tired
+133|stærk|adjectif|fort|strong
+134|løb|nom|course|run
+135|svømning|nom|natation|swimming
+136|svømmehal|nom|piscine|swimming pool
+137|cykel|nom|vélo;bicyclette|bicycle
+138|vand|nom|eau|water
+139|brød|nom|pain|bread
+140|mælk|nom|lait|milk
+141|kaffe|nom|café|coffee
+142|te|nom|thé|tea
+143|øl|nom|bière|beer
+144|vin|nom|vin|wine
+145|æble|nom|pomme|apple
+146|kød|nom|viande|meat
+147|fisk|nom|poisson|fish
+148|grøntsag|nom|légume|vegetable
+149|frugt|nom|fruit|fruit
+150|morgenmad|nom|petit-déjeuner;petit déjeuner|breakfast
+151|frokost|nom|déjeuner|lunch
+152|aftensmad|nom|dîner;souper|dinner
+153|hus|nom|maison|house
+154|lejlighed|nom|appartement|apartment
+155|arbejde|nom|travail|work
+156|penge|nom|argent|money
+157|butik|nom|magasin;boutique|shop
+158|gade|nom|rue|street
+159|by|nom|ville|town
+160|bil|nom|voiture;automobile|car
+161|tog|nom|train|train
+162|vejr|nom|temps|weather
+163|regn|nom|pluie|rain
+164|sol|nom|soleil|sun
+165|sne|nom|neige|snow
+166|kold|adjectif|froid|cold
+167|varm|adjectif|chaud|warm
+168|ven|nom|ami|friend
+169|familie|nom|famille|family
+170|
+171|
+172|
+173|
+174|
+175|
+176|
+177|
+178|
+179|
+180|en gang til|adverbe|encore une fois|once more
+181|

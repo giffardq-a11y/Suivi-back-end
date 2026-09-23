@@ -3,15 +3,27 @@
 Vocabulaire courant, choisi pour être utile tout de suite : politesse, verbes
 de base, nombres, temps, salle de sport, quotidien, phrases pratiques.
 
-Honnêteté sur la source : ces traductions sont écrites de mémoire, pas tirées
-d'un dictionnaire officiel. Les formes données sont les formes de base
-(infinitif « at ... » pour les verbes, forme définie pour les parties du
+Honnêteté sur la source : les 182 cartes ci-dessous ont été écrites de mémoire,
+puis contrôlées le 23/09/2026 (tools/import_cartes_danois/audit_anciens.json) :
+159 confirmées par le Wiktionnaire ou loecsen.com, aucune fausse, 23 sans
+source trouvée (surtout des phrases). Les formes données sont les formes de
+base (infinitif « at ... » pour les verbes, forme définie pour les parties du
 corps). Si l'une d'elles te semble fausse, supprime la carte ou corrige-la
 depuis l'app — tes propres cartes priment.
 """
+import json
+from pathlib import Path
+
 from sqlalchemy.orm import Session
 
 from . import models
+
+# Cartes vérifiées une à une (Wiktionnaire fr/en, phrases loecsen.com), avec leur
+# source : voir tools/import_cartes_danois/. Ajoutées au jeu ci-dessous au chargement.
+FICHIER_CARTES_SOURCEES = Path(__file__).resolve().parent / "data" / "cartes_danois.json"
+# Genre des noms du jeu d'origine, vérifié après coup : ajouté à l'indice des cartes
+# ci-dessous (recto/verso inchangés, donc la progression de révision est conservée).
+FICHIER_GENRES_ORIGINE = Path(__file__).resolve().parent / "data" / "genres_cartes_origine.json"
 
 # (français, danois, indice, catégorie)
 DECK: list[tuple[str, str, str | None, str]] = [
@@ -215,17 +227,43 @@ DECK: list[tuple[str, str, str | None, str]] = [
 ]
 
 
+def _cartes_sourcees() -> list[tuple[str, str, str | None, str]]:
+    if not FICHIER_CARTES_SOURCEES.exists():
+        return []
+    donnees = json.loads(FICHIER_CARTES_SOURCEES.read_text(encoding="utf-8"))
+    return [(c["francais"], c["danois"], c.get("hint"), c["categorie"]) for c in donnees["cartes"]]
+
+
+def _avec_genres(deck):
+    if not FICHIER_GENRES_ORIGINE.exists():
+        return deck
+    donnees = json.loads(FICHIER_GENRES_ORIGINE.read_text(encoding="utf-8"))
+    genres = {(c["francais"], c["danois"]): c["indice_genre"] for c in donnees["cartes"]}
+    return [
+        (front, back, "; ".join(filter(None, (hint, genres.get((front, back))))) or None, categorie)
+        for front, back, hint, categorie in deck
+    ]
+
+
+DECK = _avec_genres(DECK) + _cartes_sourcees()
+
+
 def seed_builtin_deck(db: Session) -> int:
-    """Ajoute les cartes fournies avec l'app qui manquent encore. Idempotent :
+    """Ajoute les cartes fournies avec l'app qui manquent encore et met à jour
+    l'indice de celles déjà présentes (retourne le nombre de cartes touchées). Idempotent :
     rien n'est écrasé, les cartes supprimées par un utilisateur ne reviennent
     pas puisqu'elles sont partagées (seules ses propres cartes lui appartiennent)."""
     existantes = {
-        (c.front, c.back)
+        (c.front, c.back): c
         for c in db.query(models.FlashCard).filter(models.FlashCard.user_id.is_(None)).all()
     }
     ajoutees = 0
     for front, back, hint, categorie in DECK:
         if (front, back) in existantes:
+            carte = existantes[(front, back)]
+            if carte.hint != hint:  # indice enrichi depuis (genre vérifié...) : mis à jour sur place
+                carte.hint = hint
+                ajoutees += 1
             continue
         db.add(models.FlashCard(
             user_id=None, language="da", front=front, back=back,

@@ -1,0 +1,473 @@
+# categorie|francais|danois|pos|mots-cles fr (;)|mot-cle en (repli)|hint force
+verbes|voir|se|verbe|voir|see|
+verbes|entendre|høre|verbe|entendre|hear|
+verbes|dire|sige|verbe|dire|say|
+verbes|donner|give|verbe|donner|give|
+verbes|prendre|tage|verbe|prendre|take|
+verbes|trouver|finde|verbe|trouver|find|
+verbes|croire|tro|verbe|croire|believe|
+verbes|penser|tænke|verbe|penser|think|
+verbes|trouver (avis), sembler|synes|verbe|trouver;sembler;penser|think|avis : « je trouve que »
+verbes|connaître|kende|verbe|connaître|know|une personne, un lieu
+verbes|aimer (d'amour)|elske|verbe|aimer|love|
+verbes|habiter|bo|verbe|habiter;demeurer;vivre|live|
+verbes|s'appeler|hedde|verbe|appeler;nommer|be called|
+verbes|demander|spørge|verbe|demander|ask|poser une question
+verbes|répondre|svare|verbe|répondre|answer|
+verbes|ouvrir|åbne|verbe|ouvrir|open|
+verbes|fermer|lukke|verbe|fermer|close|
+verbes|être assis|sidde|verbe|assis|sit|
+verbes|être debout|stå|verbe|debout|stand|
+verbes|être couché|ligge|verbe|couché;allongé|lie|
+verbes|commencer|begynde|verbe|commencer|begin|
+verbes|arrêter|stoppe|verbe|arrêter|stop|
+verbes|téléphoner|ringe|verbe|téléphoner;appeler|call|
+verbes|essayer|prøve|verbe|essayer|try|
+verbes|utiliser|bruge|verbe|utiliser;employer|use|
+verbes|recevoir, obtenir|få|verbe|recevoir;obtenir|get|
+verbes|devenir|blive|verbe|devenir|become|
+verbes|voyager|rejse|verbe|voyager|travel|
+verbes|conduire|køre|verbe|conduire|drive|un véhicule
+verbes|faire du vélo|cykle|verbe|vélo;bicyclette|cycle|
+verbes|déménager|flytte|verbe|déménager;déplacer|move|
+verbes|envoyer|sende|verbe|envoyer|send|
+verbes|montrer|vise|verbe|montrer|show|
+verbes|oublier|glemme|verbe|oublier|forget|
+verbes|se souvenir|huske|verbe|souvenir;rappeler|remember|
+verbes|jouer (enfant)|lege|verbe|jouer|play|
+verbes|jouer (jeu, sport, instrument)|spille|verbe|jouer|play|
+verbes|chanter|synge|verbe|chanter|sing|
+verbes|danser|danse|verbe|danser|dance|
+verbes|laver|vaske|verbe|laver|wash|
+verbes|vendre|sælge|verbe|vendre|sell|
+verbes|louer|leje|verbe|louer|rent|
+verbes|commander|bestille|verbe|commander|order|
+verbes|signifier|betyde|verbe|signifier|mean|
+verbes|espérer|håbe|verbe|espérer|hope|
+verbes|sentir, ressentir|føle|verbe|sentir;ressentir|feel|
+verbes|rire|grine|verbe|rire|laugh|
+verbes|pleurer|græde|verbe|pleurer|cry|
+verbes|sourire|smile|verbe|sourire|smile|
+verbes|embrasser|kysse|verbe|embrasser|kiss|
+verbes|se réveiller|vågne|verbe|réveiller|wake|
+verbes|aller chercher|hente|verbe|chercher|fetch|
+verbes|rencontrer|møde|verbe|rencontrer|meet|
+verbes|rendre visite|besøge|verbe|visite;visiter|visit|
+verbes|inviter|invitere|verbe|inviter|invite|
+verbes|gagner|vinde|verbe|gagner|win|
+verbes|perdre|tabe|verbe|perdre|lose|
+verbes|vivre|leve|verbe|vivre|live|
+verbes|mourir|dø|verbe|mourir|die|
+verbes|porter|bære|verbe|porter|carry|
+verbes|tomber|falde|verbe|tomber|fall|
+verbes|sauter|hoppe|verbe|sauter|jump|
+verbes|lancer|kaste|verbe|lancer;jeter|throw|
+verbes|tirer|trække|verbe|tirer|pull|
+verbes|pousser|skubbe|verbe|pousser|push|
+verbes|soulever|løfte|verbe|soulever;lever|lift|
+verbes|étirer|strække|verbe|étirer;tendre|stretch|
+verbes|plier|bøje|verbe|plier;courber|bend|
+verbes|grimper|klatre|verbe|grimper|climb|
+verbes|écouter|lytte|verbe|écouter|listen|
+verbes|regarder|kigge|verbe|regarder|look|
+verbes|choisir|vælge|verbe|choisir|choose|
+verbes|décider|beslutte|verbe|décider|decide|
+verbes|expliquer|forklare|verbe|expliquer|explain|
+verbes|s'exercer|øve|verbe|exercer;entraîner;pratiquer|practice|
+verbes|coûter|koste|verbe|coûter|cost|
+verbes|emprunter|låne|verbe|emprunter;prêter|borrow|
+verbes|cuire au four|bage|verbe|cuire;four|bake|
+verbes|faire bouillir|koge|verbe|bouillir;cuire|boil|
+verbes|faire frire, rôtir|stege|verbe|frire;rôtir|fry|
+verbes|rêver|drømme|verbe|rêver|dream|
+verbes|compter|tælle|verbe|compter|count|
+verbes|mettre, poser|sætte|verbe|mettre;poser|put|
+verbes|tenir|holde|verbe|tenir|hold|
+verbes|grandir|vokse|verbe|grandir;croître|grow|
+verbes|changer|ændre|verbe|changer;modifier|change|
+verbes|arriver|ankomme|verbe|arriver|arrive|
+verbes|quitter|forlade|verbe|quitter|leave|
+verbes|goûter|smage|verbe|goûter|taste|
+verbes|partager|dele|verbe|partager|share|
+verbes|marcher, randonner|vandre|verbe|marcher;randonner;errer|hike|
+verbes|se dépêcher|skynde|verbe|dépêcher;presser|hurry|« skynd dig ! »
+verbes|nettoyer|rengøre|verbe|nettoyer|clean|
+verbes|cuisiner|kokkerere|verbe|cuisiner|cook|
+verbes|fumer|ryge|verbe|fumer|smoke|
+verbes|construire|bygge|verbe|construire;bâtir|build|
+verbes|monter|stige|verbe|monter|rise|
+verbes|se baigner|bade|verbe|baigner|bathe|se baigner
+adjectifs|grand|stor|adjectif|grand|big|
+adjectifs|petit|lille|adjectif|petit|small|
+adjectifs|bon|god|adjectif|bon|good|
+adjectifs|mauvais|dårlig|adjectif|mauvais|bad|
+adjectifs|nouveau|ny|adjectif|nouveau;neuf|new|
+adjectifs|vieux|gammel|adjectif|vieux;âgé|old|
+adjectifs|jeune|ung|adjectif|jeune|young|
+adjectifs|long|lang|adjectif|long|long|
+adjectifs|court|kort|adjectif|court|short|
+adjectifs|haut, grand (taille)|høj|adjectif|haut;grand|tall|
+adjectifs|bas|lav|adjectif|bas|low|
+adjectifs|lourd|tung|adjectif|lourd|heavy|
+adjectifs|léger|let|adjectif|léger|light|
+adjectifs|facile|nem|adjectif|facile|easy|
+adjectifs|difficile|svær|adjectif|difficile|difficult|
+adjectifs|rapide|hurtig|adjectif|rapide|fast|
+adjectifs|content, heureux|glad|adjectif|content;heureux;joyeux|happy|
+adjectifs|triste|trist|adjectif|triste|sad|
+adjectifs|malade|syg|adjectif|malade|sick|
+adjectifs|sain|sund|adjectif|sain|healthy|
+adjectifs|beau|smuk|adjectif|beau|beautiful|
+adjectifs|laid|grim|adjectif|laid|ugly|
+adjectifs|bon marché|billig|adjectif|bon marché;pas cher|cheap|
+adjectifs|cher|dyr|adjectif|cher;coûteux|expensive|
+adjectifs|riche|rig|adjectif|riche|rich|
+adjectifs|pauvre|fattig|adjectif|pauvre|poor|
+adjectifs|sec|tør|adjectif|sec|dry|
+adjectifs|mouillé|våd|adjectif|mouillé|wet|
+adjectifs|propre|ren|adjectif|propre|clean|
+adjectifs|sale|beskidt|adjectif|sale|dirty|
+adjectifs|plein|fuld|adjectif|plein|full|
+adjectifs|vide|tom|adjectif|vide|empty|
+adjectifs|ouvert|åben|adjectif|ouvert|open|
+adjectifs|fermé|lukket|adjectif|fermé|closed|
+adjectifs|libre|fri|adjectif|libre|free|
+adjectifs|occupé|optaget|adjectif|occupé|busy|
+adjectifs|important|vigtig|adjectif|important|important|
+adjectifs|juste, correct|rigtig|adjectif|juste;correct;vrai|right|
+adjectifs|faux, erroné|forkert|adjectif|faux;erroné;incorrect|wrong|
+adjectifs|vrai|sand|adjectif|vrai|true|
+adjectifs|agréable|dejlig|adjectif|agréable;délicieux;charmant|lovely|
+adjectifs|gentil, sucré|sød|adjectif|gentil;sucré;doux;mignon|sweet|
+adjectifs|acide, grincheux|sur|adjectif|acide;aigre|sour|
+adjectifs|faible|svag|adjectif|faible|weak|
+adjectifs|gros, épais|tyk|adjectif|gros;épais|thick|
+adjectifs|mince|tynd|adjectif|mince|thin|
+adjectifs|étroit|smal|adjectif|étroit|narrow|
+adjectifs|large|bred|adjectif|large|wide|
+adjectifs|profond|dyb|adjectif|profond|deep|
+adjectifs|sombre|mørk|adjectif|sombre;foncé;obscur|dark|
+adjectifs|clair, lumineux|lys|adjectif|clair;lumineux|light|
+adjectifs|calme|rolig|adjectif|calme;tranquille|calm|
+adjectifs|amusant, drôle|sjov|adjectif|amusant;drôle|fun|
+adjectifs|ennuyeux|kedelig|adjectif|ennuyeux|boring|
+adjectifs|intéressant|interessant|adjectif|intéressant|interesting|
+adjectifs|aimable|venlig|adjectif|aimable;gentil|kind|
+adjectifs|en colère|vred|adjectif|colère;fâché|angry|
+adjectifs|effrayé, avoir peur|bange|adjectif|peur;effrayé|afraid|« jeg er bange »
+adjectifs|prêt|klar|adjectif|prêt|ready|
+adjectifs|fini, terminé|færdig|adjectif|fini;terminé|finished|
+adjectifs|premier|første|adjectif|premier|first|
+adjectifs|dernier|sidste|adjectif|dernier|last|
+adjectifs|prochain|næste|adjectif|prochain;suivant|next|
+adjectifs|entier|hel|adjectif|entier|whole|
+adjectifs|demi|halv|adjectif|demi;moitié|half|
+adjectifs|rassasié|mæt|adjectif|rassasié|full|
+adjectifs|frais|frisk|adjectif|frais|fresh|
+adjectifs|cru|rå|adjectif|cru|raw|
+adjectifs|mou|blød|adjectif|mou;tendre;doux|soft|
+adjectifs|dur|hård|adjectif|dur|hard|
+adjectifs|tôt|tidlig|adjectif|tôt;précoce|early|
+adjectifs|tard, en retard|sen|adjectif|tard;tardif|late|
+adjectifs|proche|nær|adjectif|proche|near|
+adjectifs|marié|gift|adjectif|marié|married|
+adjectifs|possible|mulig|adjectif|possible|possible|
+adjectifs|parfait|perfekt|adjectif|parfait|perfect|
+adjectifs|interdit|forbudt|adjectif|interdit|forbidden|
+adjectifs|dangereux|farlig|adjectif|dangereux|dangerous|
+adjectifs|épuisé|udmattet|adjectif|épuisé|exhausted|
+couleurs|rouge|rød|adjectif|rouge|red|
+couleurs|bleu|blå|adjectif|bleu|blue|
+couleurs|jaune|gul|adjectif|jaune|yellow|
+couleurs|vert|grøn|adjectif|vert|green|
+couleurs|blanc|hvid|adjectif|blanc|white|
+couleurs|noir|sort|adjectif|noir|black|
+couleurs|gris|grå|adjectif|gris|grey|
+couleurs|marron, brun|brun|adjectif|brun;marron|brown|
+couleurs|violet|lilla|adjectif|violet;lilas|purple|
+couleurs|orange|orange|adjectif|orange|orange|
+couleurs|rose|lyserød|adjectif|rose|pink|
+couleurs|la couleur|farve|nom|couleur|colour|
+nourriture|l'œuf|æg|nom|œuf|egg|
+nourriture|le fromage|ost|nom|fromage|cheese|
+nourriture|le beurre|smør|nom|beurre|butter|
+nourriture|le riz|ris|nom|riz|rice|
+nourriture|les pâtes|pasta|nom|pâtes|pasta|
+nourriture|la pomme de terre|kartoffel|nom|pomme de terre|potato|
+nourriture|le poulet|kylling|nom|poulet|chicken|
+nourriture|le porc (viande)|svinekød|nom|porc|pork|
+nourriture|le bœuf (viande)|oksekød|nom|bœuf|beef|
+nourriture|le jambon|skinke|nom|jambon|ham|
+nourriture|la saucisse|pølse|nom|saucisse|sausage|
+nourriture|la carotte|gulerod|nom|carotte|carrot|
+nourriture|l'oignon|løg|nom|oignon|onion|
+nourriture|la tomate|tomat|nom|tomate|tomato|
+nourriture|le concombre|agurk|nom|concombre|cucumber|
+nourriture|la salade|salat|nom|salade;laitue|salad|
+nourriture|la banane|banan|nom|banane|banana|
+nourriture|l'orange (fruit)|appelsin|nom|orange|orange|
+nourriture|le citron|citron|nom|citron|lemon|
+nourriture|la fraise|jordbær|nom|fraise|strawberry|
+nourriture|la poire|pære|nom|poire|pear|
+nourriture|le raisin (grain)|drue|nom|raisin|grape|
+nourriture|le sucre|sukker|nom|sucre|sugar|
+nourriture|le sel|salt|nom|sel|salt|
+nourriture|le poivre|peber|nom|poivre|pepper|
+nourriture|la farine|mel|nom|farine|flour|
+nourriture|les flocons d'avoine|havregryn|nom|avoine|oat|
+nourriture|le yaourt|yoghurt|nom|yaourt;yogourt|yogurt|
+nourriture|le jus|juice|nom|jus|juice|
+nourriture|la soupe|suppe|nom|soupe;potage|soup|
+nourriture|le gâteau|kage|nom|gâteau|cake|
+nourriture|le chocolat|chokolade|nom|chocolat|chocolate|
+nourriture|la glace (dessert)|is|nom|glace|ice cream|
+nourriture|la noix|nød|nom|noix|nut|
+nourriture|le haricot|bønne|nom|haricot|bean|
+nourriture|le petit pois|ært|nom|pois|pea|
+nourriture|la crème (fraîche)|fløde|nom|crème|cream|
+nourriture|l'huile|olie|nom|huile|oil|
+nourriture|le miel|honning|nom|miel|honey|
+nourriture|le pain de seigle|rugbrød|nom|seigle|rye bread|
+nourriture|le repas|måltid|nom|repas|meal|
+nourriture|la nourriture|mad|nom|nourriture;aliment|food|
+nourriture|le saumon|laks|nom|saumon|salmon|
+nourriture|le thon|tun|nom|thon|tuna|
+nourriture|la crevette|reje|nom|crevette|shrimp|
+nourriture|le champignon|svamp|nom|champignon|mushroom|
+nourriture|l'ail|hvidløg|nom|ail|garlic|
+nourriture|les épinards|spinat|nom|épinard|spinach|
+nourriture|le maïs|majs|nom|maïs|maize|
+nourriture|la protéine|protein|nom|protéine|protein|
+nourriture|le dessert|dessert|nom|dessert|dessert|
+maison|la pièce, la chambre|værelse|nom|chambre;pièce|room|
+maison|la chambre à coucher|soveværelse|nom|chambre à coucher;chambre|bedroom|
+maison|la cuisine (pièce)|køkken|nom|cuisine|kitchen|
+maison|la salle de bain|badeværelse|nom|salle de bain;salle de bains|bathroom|
+maison|le salon|stue|nom|salon;séjour|living room|
+maison|la porte|dør|nom|porte|door|
+maison|la fenêtre|vindue|nom|fenêtre|window|
+maison|la table|bord|nom|table|table|
+maison|la chaise|stol|nom|chaise|chair|
+maison|le lit|seng|nom|lit|bed|
+maison|le canapé|sofa|nom|canapé;sofa|sofa|
+maison|la lampe|lampe|nom|lampe|lamp|
+maison|la clé|nøgle|nom|clé;clef|key|
+maison|l'escalier|trappe|nom|escalier|stairs|
+maison|le sol, le plancher|gulv|nom|sol;plancher|floor|
+maison|le mur|væg|nom|mur;paroi|wall|
+maison|le toit|tag|nom|toit|roof|
+maison|le réfrigérateur|køleskab|nom|réfrigérateur;frigo|refrigerator|
+maison|le four|ovn|nom|four|oven|
+maison|l'armoire, le placard|skab|nom|armoire;placard|cupboard|
+maison|le miroir|spejl|nom|miroir|mirror|
+maison|la douche|bruser|nom|douche|shower|
+maison|les toilettes|toilet|nom|toilette|toilet|
+maison|la serviette (de bain)|håndklæde|nom|serviette|towel|
+maison|la couverture, le tapis|tæppe|nom|couverture;tapis|blanket|
+maison|l'oreiller, le coussin|pude|nom|oreiller;coussin|pillow|
+maison|la couette|dyne|nom|couette|duvet|
+maison|la machine à laver|vaskemaskine|nom|machine à laver;lave-linge|washing machine|
+maison|la tasse|kop|nom|tasse|cup|
+maison|le verre|glas|nom|verre|glass|
+maison|l'assiette|tallerken|nom|assiette|plate|
+maison|le couteau|kniv|nom|couteau|knife|
+maison|la fourchette|gaffel|nom|fourchette|fork|
+maison|la cuillère|ske|nom|cuillère;cuiller|spoon|
+maison|la casserole|gryde|nom|casserole;marmite|pot|
+maison|la poêle|pande|nom|poêle|pan|
+maison|le balcon|altan|nom|balcon|balcony|
+maison|le plafond|loft|nom|plafond|ceiling|
+maison|le foyer, le chez-soi|hjem|nom|foyer;maison;chez|home|
+ville|la gare|station|nom|gare;station|station|
+ville|l'aéroport|lufthavn|nom|aéroport|airport|
+ville|le bus|bus|nom|bus;autobus|bus|
+ville|le métro|metro|nom|métro|metro|
+ville|le billet, le ticket|billet|nom|billet;ticket|ticket|
+ville|la route, le chemin|vej|nom|route;chemin|road|
+ville|le pont|bro|nom|pont|bridge|
+ville|la place (du marché)|torv|nom|place;marché|square|
+ville|le parc|park|nom|parc|park|
+ville|l'église|kirke|nom|église|church|
+ville|l'école|skole|nom|école|school|
+ville|la bibliothèque|bibliotek|nom|bibliothèque|library|
+ville|la banque|bank|nom|banque|bank|
+ville|le supermarché|supermarked|nom|supermarché|supermarket|
+ville|le boulanger, la boulangerie|bager|nom|boulanger;boulangerie|baker|
+ville|le marché|marked|nom|marché|market|
+ville|la police|politi|nom|police|police|
+ville|l'hôtel|hotel|nom|hôtel|hotel|
+ville|le restaurant|restaurant|nom|restaurant|restaurant|
+ville|le café (lieu)|café|nom|café|café|
+ville|le musée|museum|nom|musée|museum|
+ville|la droite|højre|adjectif|droite;droit|right|
+ville|la gauche|venstre|adjectif|gauche|left|
+ville|tout droit|ligeud|adverbe|tout droit;droit|straight ahead|
+ville|le coin|hjørne|nom|coin|corner|
+ville|le trottoir|fortov|nom|trottoir|sidewalk|
+ville|le centre-ville|centrum|nom|centre|centre|
+ville|le port|havn|nom|port|harbour|
+ville|le village|landsby|nom|village|village|
+ville|l'arrêt (de bus)|stoppested|nom|arrêt|stop|
+ville|le taxi|taxa|nom|taxi|taxi|
+ville|le parking|parkering|nom|parking;stationnement|parking|
+ville|le nord|nord|nom|nord|north|
+ville|le sud|syd|nom|sud|south|
+ville|l'est|øst|nom|est|east|
+ville|l'ouest|vest|nom|ouest|west|
+ville|la boutique, le magasin|forretning|nom|magasin;boutique;commerce|shop|
+ville|le pays|land|nom|pays|country|
+ville|l'adresse|adresse|nom|adresse|address|
+ville|le bateau|båd|nom|bateau|boat|
+ville|l'avion|fly|nom|avion|aeroplane|
+travail|l'emploi, le job|job|nom|emploi;travail;job|job|
+travail|le bureau (lieu)|kontor|nom|bureau|office|
+travail|la réunion|møde|nom|réunion|meeting|
+travail|le collègue|kollega|nom|collègue|colleague|
+travail|le chef, le patron|chef|nom|chef;patron|boss|
+travail|le salaire|løn|nom|salaire|salary|
+travail|l'ordinateur|computer|nom|ordinateur|computer|
+travail|le téléphone|telefon|nom|téléphone|telephone|
+travail|la tâche, l'exercice|opgave|nom|tâche;exercice;devoir|task|
+travail|l'entreprise|firma|nom|entreprise;société;firme|company|
+travail|le client|kunde|nom|client|customer|
+travail|la pause|pause|nom|pause|break|
+travail|les vacances|ferie|nom|vacances;congé|holiday|
+travail|la lettre (courrier)|brev|nom|lettre|letter|
+travail|le papier|papir|nom|papier|paper|
+travail|le stylo|kuglepen|nom|stylo|ballpoint pen|
+travail|le crayon|blyant|nom|crayon|pencil|
+travail|le projet|projekt|nom|projet|project|
+travail|la formation, les études|uddannelse|nom|formation;éducation;études|education|
+travail|l'élève|elev|nom|élève|pupil|
+travail|l'enseignant|lærer|nom|enseignant;professeur;instituteur|teacher|
+travail|l'ingénieur|ingeniør|nom|ingénieur|engineer|
+travail|le rendez-vous, l'accord|aftale|nom|rendez-vous;accord;convention|appointment|
+travail|le chômeur|arbejdsløs|adjectif|chômeur;chômage|unemployed|
+travail|la question|spørgsmål|nom|question|question|
+travail|la réponse|svar|nom|réponse|answer|
+travail|le problème|problem|nom|problème|problem|
+travail|l'étudiant|studerende|nom|étudiant|student|
+travail|l'université|universitet|nom|université|university|
+travail|le mot|ord|nom|mot|word|
+travail|la langue (parlée)|sprog|nom|langue;langage|language|
+famille|la mère|mor|nom|mère|mother|
+famille|le père|far|nom|père|father|
+famille|les parents|forælder|nom|parent|parent|
+famille|le fils|søn|nom|fils|son|
+famille|la fille (de ses parents)|datter|nom|fille|daughter|
+famille|le frère|bror|nom|frère|brother|
+famille|la sœur|søster|nom|sœur|sister|
+famille|l'enfant|barn|nom|enfant|child|
+famille|le bébé|baby|nom|bébé|baby|
+famille|l'oncle|onkel|nom|oncle|uncle|
+famille|la tante|tante|nom|tante|aunt|
+famille|le cousin|fætter|nom|cousin|cousin|
+famille|la cousine|kusine|nom|cousine|cousin|
+famille|l'homme, le mari|mand|nom|homme;mari|man|
+famille|l'épouse|kone|nom|épouse;femme|wife|
+famille|le petit ami, la petite amie|kæreste|nom|ami;amie;amoureux;fiancé;chéri|sweetheart|
+famille|le voisin|nabo|nom|voisin|neighbour|
+famille|la fille (jeune)|pige|nom|fille|girl|
+famille|le garçon|dreng|nom|garçon|boy|
+famille|la femme|kvinde|nom|femme|woman|
+famille|l'être humain|menneske|nom|humain;homme;personne|human|
+famille|la grand-mère (maternelle)|mormor|nom|grand-mère|maternal grandmother|
+famille|le grand-père (maternel)|morfar|nom|grand-père|maternal grandfather|
+famille|la grand-mère (paternelle)|farmor|nom|grand-mère|paternal grandmother|
+famille|le grand-père (paternel)|farfar|nom|grand-père|paternal grandfather|
+famille|le mariage (noce)|bryllup|nom|mariage;noce|wedding|
+famille|la personne|person|nom|personne|person|
+sante|le médecin|læge|nom|médecin|doctor|
+sante|l'infirmière|sygeplejerske|nom|infirmière;infirmier|nurse|
+sante|la pharmacie|apotek|nom|pharmacie|pharmacy|
+sante|l'hôpital|hospital|nom|hôpital|hospital|
+sante|le médicament|medicin|nom|médicament;médecine|medicine|
+sante|le dentiste|tandlæge|nom|dentiste|dentist|
+sante|la dent|tand|nom|dent|tooth|
+sante|l'œil|øje|nom|œil|eye|
+sante|l'oreille|øre|nom|oreille|ear|
+sante|le nez|næse|nom|nez|nose|
+sante|la bouche|mund|nom|bouche|mouth|
+sante|le cou, la gorge|hals|nom|cou;gorge|neck|
+sante|le genou|knæ|nom|genou|knee|
+sante|le doigt|finger|nom|doigt|finger|
+sante|la peau|hud|nom|peau|skin|
+sante|le sang|blod|nom|sang|blood|
+sante|la douleur|smerte|nom|douleur|pain|
+sante|la fièvre|feber|nom|fièvre|fever|
+sante|le mal de tête|hovedpine|nom|mal de tête;céphalée|headache|
+sante|le rhume|forkølelse|nom|rhume|cold|
+sante|le sommeil|søvn|nom|sommeil|sleep|
+sante|la maladie|sygdom|nom|maladie|disease|
+sante|la santé|sundhed|nom|santé|health|
+sante|les cheveux|hår|nom|cheveu;poil|hair|
+sante|le visage|ansigt|nom|visage|face|
+sante|la hanche|hofte|nom|hanche|hip|
+sante|le poumon|lunge|nom|poumon|lung|
+sante|l'os|knogle|nom|os|bone|
+temps|janvier|januar|nom|janvier|January|
+temps|février|februar|nom|février|February|
+temps|mars|marts|nom|mars|March|
+temps|avril|april|nom|avril|April|
+temps|mai|maj|nom|mai|May|
+temps|juin|juni|nom|juin|June|
+temps|juillet|juli|nom|juillet|July|
+temps|août|august|nom|août|August|
+temps|septembre|september|nom|septembre|September|
+temps|octobre|oktober|nom|octobre|October|
+temps|novembre|november|nom|novembre|November|
+temps|décembre|december|nom|décembre|December|
+temps|le printemps|forår|nom|printemps|spring|
+temps|l'été|sommer|nom|été|summer|
+temps|l'automne|efterår|nom|automne|autumn|
+temps|l'hiver|vinter|nom|hiver|winter|
+temps|le jour|dag|nom|jour;journée|day|
+temps|la seconde|sekund|nom|seconde|second|
+temps|minuit|midnat|nom|minuit|midnight|
+temps|le week-end|weekend|nom|week-end;fin de semaine|weekend|
+temps|le temps (durée)|tid|nom|temps|time|
+temps|bientôt|snart|adverbe|bientôt|soon|
+temps|plus tard|senere|adverbe|tard;ultérieurement|later|
+temps|déjà|allerede|adverbe|déjà|already|
+temps|de nouveau, encore|igen|adverbe|nouveau;encore|again|
+temps|l'anniversaire|fødselsdag|nom|anniversaire|birthday|
+temps|l'horloge, la cloche|klokke|nom|horloge;cloche;heure|clock|
+questions|quel, lequel|hvilken|pronom|quel;lequel|which|
+questions|combien (nombre)|hvor mange|adverbe|combien|how many|
+questions|combien (quantité)|hvor meget|adverbe|combien|how much|
+nature|l'arbre|træ|nom|arbre|tree|
+nature|la fleur|blomst|nom|fleur|flower|
+nature|la forêt|skov|nom|forêt;bois|forest|
+nature|le lac|sø|nom|lac|lake|
+nature|la mer|hav|nom|mer|sea|
+nature|la plage|strand|nom|plage|beach|
+nature|la montagne|bjerg|nom|montagne|mountain|
+nature|le ciel|himmel|nom|ciel|sky|
+nature|le vent|vind|nom|vent|wind|
+nature|le nuage|sky|nom|nuage|cloud|
+nature|l'étoile|stjerne|nom|étoile|star|
+nature|la lune|måne|nom|lune|moon|
+nature|l'herbe|græs|nom|herbe|grass|
+nature|l'oiseau|fugl|nom|oiseau|bird|
+nature|le chien|hund|nom|chien|dog|
+nature|le chat|kat|nom|chat|cat|
+nature|le cheval|hest|nom|cheval|horse|
+nature|la vache|ko|nom|vache|cow|
+nature|l'île|ø|nom|île|island|
+nature|la rivière|å|nom|rivière;ruisseau|river|
+loisirs|le film|film|nom|film|film|
+loisirs|la musique|musik|nom|musique|music|
+loisirs|le livre|bog|nom|livre|book|
+loisirs|la chanson|sang|nom|chanson;chant|song|
+loisirs|le jeu|spil|nom|jeu|game|
+loisirs|le football|fodbold|nom|football|football|
+loisirs|le cinéma|biograf|nom|cinéma|cinema|
+loisirs|le concert|koncert|nom|concert|concert|
+loisirs|la fête|fest|nom|fête|party|
+loisirs|le journal|avis|nom|journal|newspaper|
+loisirs|la télévision|fjernsyn|nom|télévision|television|
+loisirs|la promenade|gåtur|nom|promenade|walk|
+loisirs|la photo|billede|nom|image;photo;tableau|picture|
+loisirs|le sport|sport|nom|sport|sport|
+loisirs|la danse|dans|nom|danse|dance|
+loisirs|le ballon|bold|nom|ballon;balle|ball|

@@ -1,0 +1,402 @@
+[
+ {
+  "da": "ringe",
+  "fr": "téléphoner",
+  "cat": "verbes",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Tinter.",
+   "Sonner, sonner à la porte."
+  ]
+ },
+ {
+  "da": "hoppe",
+  "fr": "sauter",
+  "cat": "verbes",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Jument."
+  ]
+ },
+ {
+  "da": "skubbe",
+  "fr": "pousser",
+  "cat": "verbes",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Faire glisser, fourrer."
+  ]
+ },
+ {
+  "da": "kokkerere",
+  "fr": "cuisiner",
+  "cat": "verbes",
+  "why": "fr: page absente ; en: pas de section Danish",
+  "defs": []
+ },
+ {
+  "da": "lav",
+  "fr": "bas",
+  "cat": "adjectifs",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Lichen.",
+   "Corporation.",
+   "Superficiel."
+  ]
+ },
+ {
+  "da": "let",
+  "fr": "léger",
+  "cat": "adjectifs",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Clair, lumineux.",
+   "Facile.",
+   "Lait demi-écrémé (entre 1,5 et 1,8 %)."
+  ]
+ },
+ {
+  "da": "fuld",
+  "fr": "plein",
+  "cat": "adjectifs",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Complet, entier.",
+   "Ivre."
+  ]
+ },
+ {
+  "da": "optaget",
+  "fr": "occupé",
+  "cat": "adjectifs",
+  "why": "fr: page absente ; en: pas de section Danish",
+  "defs": []
+ },
+ {
+  "da": "bange",
+  "fr": "effrayé, avoir peur",
+  "cat": "adjectifs",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Peureux, timide."
+  ]
+ },
+ {
+  "da": "klar",
+  "fr": "prêt",
+  "cat": "adjectifs",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Clair, limpide, net."
+  ]
+ },
+ {
+  "da": "færdig",
+  "fr": "fini, terminé",
+  "cat": "adjectifs",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Prêt."
+  ]
+ },
+ {
+  "da": "nær",
+  "fr": "proche",
+  "cat": "adjectifs",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Auprès, près.",
+   "Près."
+  ]
+ },
+ {
+  "da": "pasta",
+  "fr": "les pâtes",
+  "cat": "nourriture",
+  "why": "fr: pas de section da ; en: sens absent",
+  "defs": [
+   "paste"
+  ]
+ },
+ {
+  "da": "peber",
+  "fr": "le poivre",
+  "cat": "nourriture",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Poivtre, épice obtenue à partir du fruit du poivrier.",
+   "Poivron.",
+   "Poivrier."
+  ]
+ },
+ {
+  "da": "bønne",
+  "fr": "le haricot",
+  "cat": "nourriture",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Fève."
+  ]
+ },
+ {
+  "da": "svamp",
+  "fr": "le champignon",
+  "cat": "nourriture",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Éponge."
+  ]
+ },
+ {
+  "da": "protein",
+  "fr": "la protéine",
+  "cat": "nourriture",
+  "why": "fr: pas de section da ; en: sens absent",
+  "defs": []
+ },
+ {
+  "da": "sofa",
+  "fr": "le canapé",
+  "cat": "maison",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Banc."
+  ]
+ },
+ {
+  "da": "bruser",
+  "fr": "la douche",
+  "cat": "maison",
+  "why": "fr: page absente ; en: sens absent",
+  "defs": [
+   "a showerhead"
+  ]
+ },
+ {
+  "da": "toilet",
+  "fr": "les toilettes",
+  "cat": "maison",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "WC, cabinet."
+  ]
+ },
+ {
+  "da": "dyne",
+  "fr": "la couette",
+  "cat": "maison",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Couverture."
+  ]
+ },
+ {
+  "da": "pande",
+  "fr": "la poêle",
+  "cat": "maison",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Front."
+  ]
+ },
+ {
+  "da": "hjem",
+  "fr": "le foyer, le chez-soi",
+  "cat": "maison",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Domicile."
+  ]
+ },
+ {
+  "da": "metro",
+  "fr": "le métro",
+  "cat": "ville",
+  "why": "fr: pas de section da ; en: pas de section Danish",
+  "defs": []
+ },
+ {
+  "da": "ligeud",
+  "fr": "tout droit",
+  "cat": "ville",
+  "why": "fr: page absente ; en: pas de section Danish",
+  "defs": []
+ },
+ {
+  "da": "stoppested",
+  "fr": "l'arrêt (de bus)",
+  "cat": "ville",
+  "why": "fr: pas de section da ; en: pas de section Danish",
+  "defs": []
+ },
+ {
+  "da": "job",
+  "fr": "l'emploi, le job",
+  "cat": "travail",
+  "why": "fr: pas de section da ; en: sens absent",
+  "defs": [
+   "a task (at home or at work)"
+  ]
+ },
+ {
+  "da": "møde",
+  "fr": "la réunion",
+  "cat": "travail",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Rencontre, abord.",
+   "Rencontrer."
+  ]
+ },
+ {
+  "da": "computer",
+  "fr": "l'ordinateur",
+  "cat": "travail",
+  "why": "fr: pas de section da ; en: sens absent",
+  "defs": [
+   "(machine)"
+  ]
+ },
+ {
+  "da": "kæreste",
+  "fr": "le petit ami, la petite amie",
+  "cat": "famille",
+  "why": "fr: page absente ; en: sens absent",
+  "defs": [
+   "boyfriend or girlfriend; significant other",
+   "to make light, sexual advances; to act like lovers"
+  ]
+ },
+ {
+  "da": "medicin",
+  "fr": "le médicament",
+  "cat": "sante",
+  "why": "fr: section da sans le sens",
+  "defs": [
+   "Remède."
+  ]
+ },
+ {
+  "da": "hvor mange",
+  "fr": "combien (nombre)",
+  "cat": "questions",
+  "why": "fr: page absente ; en: pas de section Danish",
+  "defs": []
+ },
+ {
+  "da": "hvor meget",
+  "fr": "combien (quantité)",
+  "cat": "questions",
+  "why": "fr: page absente ; en: pas de section Danish",
+  "defs": []
+ },
+ {
+  "da": "biograf",
+  "fr": "le cinéma",
+  "cat": "loisirs",
+  "why": "fr: pas de section da ; en: sens absent",
+  "defs": [
+   "movie theater",
+   "biographer"
+  ]
+ },
+ {
+  "da": "undskyld, kan du hjælpe mig?",
+  "fr": "excusez-moi, pouvez-vous m'aider ?",
+  "cat": "phrases",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "hvor kommer du fra?",
+  "fr": "d'où viens-tu ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "hvad hedder du?",
+  "fr": "comment tu t'appelles ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "hvad hedder det?",
+  "fr": "comment ça s'appelle ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "hvad laver du her?",
+  "fr": "qu'est-ce que tu fais ici ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "er det langt herfra?",
+  "fr": "est-ce loin d'ici ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "hvor længe bliver du?",
+  "fr": "tu restes combien de temps ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "hvad tid tager du afsted?",
+  "fr": "tu pars à quelle heure ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "hvordan bliver vejret i morgen?",
+  "fr": "quel temps fera-t-il demain ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "hvor meget bliver det?",
+  "fr": "combien je vous dois ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "vil du dyrke sport?",
+  "fr": "est-ce que tu veux faire du sport ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "har du familie her?",
+  "fr": "est-ce que tu as de la famille ici ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "hvor er det nærmeste apotek?",
+  "fr": "où est la pharmacie la plus proche ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ },
+ {
+  "da": "vil du have noget at spise?",
+  "fr": "tu veux manger quelque chose ?",
+  "cat": "questions",
+  "why": "loecsen: paire introuvable",
+  "defs": []
+ }
+]

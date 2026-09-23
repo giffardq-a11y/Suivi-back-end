@@ -1,0 +1,44 @@
+# categorie|francais carte|danois carte|francais loecsen exact|danois loecsen exact|hint
+phrases|bonjour (le matin)|godmorgen|Bonjour|Godmorgen|le matin
+phrases|à plus tard|vi ses senere|À plus tard|Vi ses senere|
+phrases|à demain|vi ses i morgen|A demain|Vi ses i morgen|
+phrases|merci pour ton aide|tak for hjælpen|Merci pour votre aide|Tak for hjœlpen|
+phrases|je t'en prie|det var så lidt|Je vous en prie|Det var så lidt|réponse à « merci »
+phrases|d'accord|okay, det er i orden|D'accord|Okay, det er I orden|
+phrases|j'ai compris|jeg har forstået|J'ai compris|Jeg har forstået|
+phrases|je suis en retard|jeg er forsinket|Je suis en retard|Jeg er forsinket|
+phrases|je suis perdu|jeg er faret vild|Je suis perdu|Jeg er faret vild|
+phrases|excusez-moi, pouvez-vous m'aider ?|undskyld, kan du hjælpe mig?|Pouvez-vous m'aider s'il vous plaît ?|Undskyld, kan du hjælpe mig?|
+phrases|je t'aime|jeg elsker dig|Je t'aime|Jeg elsker dig|
+phrases|je suis heureux|jeg er glad|Je suis heureux|Jeg er glad|
+phrases|je suis triste|jeg er ked af det|Je suis triste|Jeg er ked af det|
+phrases|j'ai froid|jeg fryser|J'ai froid|Jeg fryser|
+phrases|j'ai trop chaud|jeg har det for varmt|J'ai chaud|Jeg har det for varmt|
+phrases|c'est parfait|det er perfekt|C'est parfait|Det er perfekt|
+phrases|c'est une bonne idée|det er en god idé|C'est une bonne idée|Det er en god idé|
+phrases|oui, avec plaisir|ja, meget gerne|Oui, avec plaisir|Ja, meget gerne|
+phrases|félicitations !|tillykke!|Félicitations !|Tillykke!|
+phrases|bon anniversaire !|tillykke med fødselsdagen!|Bon anniversaire !|Tillykke med fødselsdagen !|
+phrases|bonne année !|godt nytår!|Bonne année !|Godt nytår!|
+phrases|moi aussi|det samme her|Moi aussi|Det samme her|
+phrases|c'est un peu trop cher pour moi|det er lidt for dyrt for mig|C'est un peu trop cher pour moi, merci|Det er lidt for dyrt for mig|
+phrases|je travaille ici|jeg arbejder her|Je travaille ici|Jeg arbejder her|
+phrases|oui, j'habite ici|ja, jeg bor her|Oui, j'habite ici|Ja, jeg bor her|
+phrases|j'ai envie de me reposer|jeg har lyst til at slappe af|J'ai envie de me reposer|Jeg har lyst til at slappe af|
+phrases|non merci, je suis assez fatigué|nej tak, jeg er ret træt|Non merci, je suis assez fatigué|Nej tak jeg er ret træt|
+phrases|je joue au tennis|jeg spiller tennis|Je joue au tennis|Jeg spiller tennis|
+phrases|rien, merci|ingenting, tak|Rien, merci|Ingenting, tak|
+phrases|laissez-moi tranquille !|lad mig være i fred|Laissez-moi tranquille !|Lad mig være I fred|
+questions|d'où viens-tu ?|hvor kommer du fra?|De quel pays viens-tu ?|Hvor kommer du fra ?|
+questions|comment tu t'appelles ?|hvad hedder du?|Je m'appelle Sarah, et toi ?|Jeg hedder Sarah, hvad hedder du ?|
+questions|comment ça s'appelle ?|hvad hedder det?|Comment ça s'appelle ?|Hvad hedder det ?|
+questions|qu'est-ce que tu fais ici ?|hvad laver du her?|Qu'est-ce que tu fais ici ?|Hvad laver du her  ?|
+questions|est-ce loin d'ici ?|er det langt herfra?|Est-ce que c'est loin d'ici ?|Er det langt herfra ?|
+questions|tu restes combien de temps ?|hvor længe bliver du?|Tu restes combien de temps ?|Hvor længe bliver du ?|
+questions|tu pars à quelle heure ?|hvad tid tager du afsted?|Tu pars à quelle heure ?|Hvad tid tager du afsted ?|
+questions|quel temps fera-t-il demain ?|hvordan bliver vejret i morgen?|Quel temps fera-t-il demain ?|Hvordan bliver vejret i morgen?|
+questions|combien je vous dois ?|hvor meget bliver det?|Combien je vous dois s'il vous plaît ?|Hvor meget bliver det ?|
+questions|est-ce que tu veux faire du sport ?|vil du dyrke sport?|Est-ce que tu veux faire du sport ?|Vil du dyrke sport ?|
+questions|est-ce que tu as de la famille ici ?|har du familie her?|Est-ce que tu as de la famille ici ?|Har du familie her ?|
+questions|où est la pharmacie la plus proche ?|hvor er det nærmeste apotek?|Où se trouve la pharmacie la plus proche ?|Hvor er det nærmeste apotek?|
+questions|tu veux manger quelque chose ?|vil du have noget at spise?|Est-ce que tu veux manger ?|Vil du have noget at spise ?|

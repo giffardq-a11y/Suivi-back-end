@@ -1,0 +1,383 @@
+{
+ "source": "Genre des noms du jeu d'origine, vérifié sur en.wiktionary.org le 23/09/2026 (audit : tools/import_cartes_danois/audit_anciens.json). Ajouté à l'indice, recto/verso inchangés.",
+ "cartes": [
+  {
+   "francais": "le matin",
+   "danois": "morgen",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/morgen#Danish"
+  },
+  {
+   "francais": "l'après-midi",
+   "danois": "eftermiddag",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/eftermiddag#Danish"
+  },
+  {
+   "francais": "le soir",
+   "danois": "aften",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/aften#Danish"
+  },
+  {
+   "francais": "la nuit",
+   "danois": "nat",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/nat#Danish"
+  },
+  {
+   "francais": "la semaine",
+   "danois": "uge",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/uge#Danish"
+  },
+  {
+   "francais": "le mois",
+   "danois": "måned",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/måned#Danish"
+  },
+  {
+   "francais": "l'année",
+   "danois": "år",
+   "indice_genre": "genre : et",
+   "source": "https://en.wiktionary.org/wiki/år#Danish"
+  },
+  {
+   "francais": "l'heure",
+   "danois": "time",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/time#Danish"
+  },
+  {
+   "francais": "la minute",
+   "danois": "minut",
+   "indice_genre": "genre : et",
+   "source": "https://en.wiktionary.org/wiki/minut#Danish"
+  },
+  {
+   "francais": "lundi",
+   "danois": "mandag",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/mandag#Danish"
+  },
+  {
+   "francais": "mardi",
+   "danois": "tirsdag",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/tirsdag#Danish"
+  },
+  {
+   "francais": "mercredi",
+   "danois": "onsdag",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/onsdag#Danish"
+  },
+  {
+   "francais": "jeudi",
+   "danois": "torsdag",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/torsdag#Danish"
+  },
+  {
+   "francais": "vendredi",
+   "danois": "fredag",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/fredag#Danish"
+  },
+  {
+   "francais": "samedi",
+   "danois": "lørdag",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/lørdag#Danish"
+  },
+  {
+   "francais": "dimanche",
+   "danois": "søndag",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/søndag#Danish"
+  },
+  {
+   "francais": "le corps",
+   "danois": "kroppen",
+   "indice_genre": "en krop → kroppen",
+   "source": "https://en.wiktionary.org/wiki/krop#Danish"
+  },
+  {
+   "francais": "le dos",
+   "danois": "ryggen",
+   "indice_genre": "en ryg → ryggen",
+   "source": "https://en.wiktionary.org/wiki/ryg#Danish"
+  },
+  {
+   "francais": "la jambe",
+   "danois": "benet",
+   "indice_genre": "et ben → benet",
+   "source": "https://en.wiktionary.org/wiki/ben#Danish"
+  },
+  {
+   "francais": "le bras",
+   "danois": "armen",
+   "indice_genre": "en arm → armen",
+   "source": "https://en.wiktionary.org/wiki/arm#Danish"
+  },
+  {
+   "francais": "l'épaule",
+   "danois": "skulderen",
+   "indice_genre": "en skulder → skulderen",
+   "source": "https://en.wiktionary.org/wiki/skulder#Danish"
+  },
+  {
+   "francais": "la poitrine",
+   "danois": "brystet",
+   "indice_genre": "et bryst → brystet",
+   "source": "https://en.wiktionary.org/wiki/bryst#Danish"
+  },
+  {
+   "francais": "le ventre",
+   "danois": "maven",
+   "indice_genre": "en mave → maven",
+   "source": "https://en.wiktionary.org/wiki/mave#Danish"
+  },
+  {
+   "francais": "le cœur",
+   "danois": "hjertet",
+   "indice_genre": "et hjerte → hjertet",
+   "source": "https://en.wiktionary.org/wiki/hjerte#Danish"
+  },
+  {
+   "francais": "la main",
+   "danois": "hånden",
+   "indice_genre": "en hånd → hånden",
+   "source": "https://en.wiktionary.org/wiki/hånd#Danish"
+  },
+  {
+   "francais": "le pied",
+   "danois": "foden",
+   "indice_genre": "en fod → foden",
+   "source": "https://en.wiktionary.org/wiki/fod#Danish"
+  },
+  {
+   "francais": "la tête",
+   "danois": "hovedet",
+   "indice_genre": "et hoved → hovedet",
+   "source": "https://en.wiktionary.org/wiki/hoved#Danish"
+  },
+  {
+   "francais": "le muscle",
+   "danois": "musklen",
+   "indice_genre": "en muskel → musklen",
+   "source": "https://en.wiktionary.org/wiki/muskel#Danish"
+  },
+  {
+   "francais": "le poids",
+   "danois": "vægt",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/vægt#Danish"
+  },
+  {
+   "francais": "l'haltère",
+   "danois": "håndvægt",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/håndvægt#Danish"
+  },
+  {
+   "francais": "l'entraînement",
+   "danois": "træning",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/træning#Danish"
+  },
+  {
+   "francais": "la série",
+   "danois": "sæt",
+   "indice_genre": "genre : et",
+   "source": "https://en.wiktionary.org/wiki/sæt#Danish"
+  },
+  {
+   "francais": "les étirements",
+   "danois": "udstrækning",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/udstrækning#Danish"
+  },
+  {
+   "francais": "la course à pied",
+   "danois": "løb",
+   "indice_genre": "genre : et",
+   "source": "https://en.wiktionary.org/wiki/løb#Danish"
+  },
+  {
+   "francais": "la natation",
+   "danois": "svømning",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/svømning#Danish"
+  },
+  {
+   "francais": "la piscine",
+   "danois": "svømmehal",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/svømmehal#Danish"
+  },
+  {
+   "francais": "le vélo",
+   "danois": "cykel",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/cykel#Danish"
+  },
+  {
+   "francais": "le pain",
+   "danois": "brød",
+   "indice_genre": "genre : et",
+   "source": "https://en.wiktionary.org/wiki/brød#Danish"
+  },
+  {
+   "francais": "le lait",
+   "danois": "mælk",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/mælk#Danish"
+  },
+  {
+   "francais": "le café",
+   "danois": "kaffe",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/kaffe#Danish"
+  },
+  {
+   "francais": "le thé",
+   "danois": "te",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/te#Danish"
+  },
+  {
+   "francais": "le vin",
+   "danois": "vin",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/vin#Danish"
+  },
+  {
+   "francais": "la pomme",
+   "danois": "æble",
+   "indice_genre": "genre : et",
+   "source": "https://en.wiktionary.org/wiki/æble#Danish"
+  },
+  {
+   "francais": "la viande",
+   "danois": "kød",
+   "indice_genre": "genre : et",
+   "source": "https://en.wiktionary.org/wiki/kød#Danish"
+  },
+  {
+   "francais": "le poisson",
+   "danois": "fisk",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/fisk#Danish"
+  },
+  {
+   "francais": "le légume",
+   "danois": "grøntsag",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/grøntsag#Danish"
+  },
+  {
+   "francais": "le fruit",
+   "danois": "frugt",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/frugt#Danish"
+  },
+  {
+   "francais": "le petit-déjeuner",
+   "danois": "morgenmad",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/morgenmad#Danish"
+  },
+  {
+   "francais": "le déjeuner",
+   "danois": "frokost",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/frokost#Danish"
+  },
+  {
+   "francais": "le dîner",
+   "danois": "aftensmad",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/aftensmad#Danish"
+  },
+  {
+   "francais": "la maison",
+   "danois": "hus",
+   "indice_genre": "genre : et",
+   "source": "https://en.wiktionary.org/wiki/hus#Danish"
+  },
+  {
+   "francais": "l'appartement",
+   "danois": "lejlighed",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/lejlighed#Danish"
+  },
+  {
+   "francais": "le travail",
+   "danois": "arbejde",
+   "indice_genre": "genre : et",
+   "source": "https://en.wiktionary.org/wiki/arbejde#Danish"
+  },
+  {
+   "francais": "le magasin",
+   "danois": "butik",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/butik#Danish"
+  },
+  {
+   "francais": "la rue",
+   "danois": "gade",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/gade#Danish"
+  },
+  {
+   "francais": "la ville",
+   "danois": "by",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/by#Danish"
+  },
+  {
+   "francais": "la voiture",
+   "danois": "bil",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/bil#Danish"
+  },
+  {
+   "francais": "le train",
+   "danois": "tog",
+   "indice_genre": "genre : et",
+   "source": "https://en.wiktionary.org/wiki/tog#Danish"
+  },
+  {
+   "francais": "le temps qu'il fait",
+   "danois": "vejr",
+   "indice_genre": "genre : et",
+   "source": "https://en.wiktionary.org/wiki/vejr#Danish"
+  },
+  {
+   "francais": "la pluie",
+   "danois": "regn",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/regn#Danish"
+  },
+  {
+   "francais": "la neige",
+   "danois": "sne",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/sne#Danish"
+  },
+  {
+   "francais": "l'ami",
+   "danois": "ven",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/ven#Danish"
+  },
+  {
+   "francais": "la famille",
+   "danois": "familie",
+   "indice_genre": "genre : en",
+   "source": "https://en.wiktionary.org/wiki/familie#Danish"
+  }
+ ]
+}

@@ -1,0 +1,6371 @@
+{
+ "cartes": [
+  {
+   "francais": "voir",
+   "danois": "at se",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/se#Danish",
+   "definitions_source": [
+    "to see",
+    "to look",
+    "to watch",
+    "to understand",
+    "to see each other"
+   ],
+   "frequence_rang": 52
+  },
+  {
+   "francais": "entendre",
+   "danois": "at høre",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/h%C3%B8re#da",
+   "definitions_source": [
+    "Entendre.",
+    "Écouter."
+   ],
+   "frequence_rang": 218
+  },
+  {
+   "francais": "dire",
+   "danois": "at sige",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sige#da",
+   "definitions_source": [
+    "Dire."
+   ],
+   "frequence_rang": 133
+  },
+  {
+   "francais": "donner",
+   "danois": "at give",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/give#da",
+   "definitions_source": [
+    "Donner."
+   ],
+   "frequence_rang": 215
+  },
+  {
+   "francais": "prendre",
+   "danois": "at tage",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tage#da",
+   "definitions_source": [
+    "Prendre."
+   ],
+   "frequence_rang": 127
+  },
+  {
+   "francais": "trouver",
+   "danois": "at finde",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/finde#da",
+   "definitions_source": [
+    "Trouver."
+   ],
+   "frequence_rang": 160
+  },
+  {
+   "francais": "croire",
+   "danois": "at tro",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tro#da",
+   "definitions_source": [
+    "Supposer.",
+    "Croire."
+   ],
+   "frequence_rang": 230
+  },
+  {
+   "francais": "penser",
+   "danois": "at tænke",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/t%C3%A6nke#da",
+   "definitions_source": [
+    "Penser."
+   ],
+   "frequence_rang": 458
+  },
+  {
+   "francais": "trouver (avis), sembler",
+   "danois": "at synes",
+   "hint": "avis : « je trouve que »",
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/synes#da",
+   "definitions_source": [
+    "Réfléchir.",
+    "Penser que, être d’avis.",
+    "Méditer, songer."
+   ],
+   "frequence_rang": 228
+  },
+  {
+   "francais": "connaître",
+   "danois": "at kende",
+   "hint": "une personne, un lieu",
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/kende#da",
+   "definitions_source": [
+    "Connaître."
+   ],
+   "frequence_rang": 871
+  },
+  {
+   "francais": "aimer (d'amour)",
+   "danois": "at elske",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/elske#da",
+   "definitions_source": [
+    "Faire la cour.",
+    "Aimer."
+   ],
+   "frequence_rang": 847
+  },
+  {
+   "francais": "habiter",
+   "danois": "at bo",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bo#da",
+   "definitions_source": [
+    "Habiter, vivre, demeurer, résider.",
+    "(ornithologie) Nicher."
+   ],
+   "frequence_rang": 869
+  },
+  {
+   "francais": "s'appeler",
+   "danois": "at hedde",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/hedde#da",
+   "definitions_source": [
+    "S'appeler."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "demander",
+   "danois": "at spørge",
+   "hint": "poser une question",
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sp%C3%B8rge#da",
+   "definitions_source": [
+    "Demander, poser une question."
+   ],
+   "frequence_rang": 540
+  },
+  {
+   "francais": "répondre",
+   "danois": "at svare",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/svare#da",
+   "definitions_source": [
+    "Correspondre à, répondre."
+   ],
+   "frequence_rang": 1447
+  },
+  {
+   "francais": "ouvrir",
+   "danois": "at åbne",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/%C3%A5bne#da",
+   "definitions_source": [
+    "Ouvrir."
+   ],
+   "frequence_rang": 751
+  },
+  {
+   "francais": "fermer",
+   "danois": "at lukke",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/lukke#da",
+   "definitions_source": [
+    "Fermer."
+   ],
+   "frequence_rang": 1194
+  },
+  {
+   "francais": "être assis",
+   "danois": "at sidde",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sidde#da",
+   "definitions_source": [
+    "Siéger, être assis."
+   ],
+   "frequence_rang": 711
+  },
+  {
+   "francais": "être debout",
+   "danois": "at stå",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/st%C3%A5#da",
+   "definitions_source": [
+    "Se dresser, être debout."
+   ],
+   "frequence_rang": 442
+  },
+  {
+   "francais": "être couché",
+   "danois": "at ligge",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/ligge#da",
+   "definitions_source": [
+    "Être situé.",
+    "Être couché, (« gésir »)."
+   ],
+   "frequence_rang": 1149
+  },
+  {
+   "francais": "commencer",
+   "danois": "at begynde",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/begynde#da",
+   "definitions_source": [
+    "Débuter.",
+    "Commencer, aborder."
+   ],
+   "frequence_rang": 807
+  },
+  {
+   "francais": "arrêter",
+   "danois": "at stoppe",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/stoppe#Danish",
+   "definitions_source": [
+    "to stop, halt",
+    "to stop"
+   ],
+   "frequence_rang": 444
+  },
+  {
+   "francais": "essayer",
+   "danois": "at prøve",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/pr%C3%B8ve#da",
+   "definitions_source": [
+    "Essayer."
+   ],
+   "frequence_rang": 388
+  },
+  {
+   "francais": "utiliser",
+   "danois": "at bruge",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bruge#da",
+   "definitions_source": [
+    "Appliquer, employer, se servir de, user de."
+   ],
+   "frequence_rang": 225
+  },
+  {
+   "francais": "recevoir, obtenir",
+   "danois": "at få",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/f%C3%A5#Danish",
+   "definitions_source": [
+    "to get",
+    "to have"
+   ],
+   "frequence_rang": 68
+  },
+  {
+   "francais": "devenir",
+   "danois": "at blive",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/blive#da",
+   "definitions_source": [
+    "Rester.",
+    "Devenir."
+   ],
+   "frequence_rang": 128
+  },
+  {
+   "francais": "voyager",
+   "danois": "at rejse",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/rejse#da",
+   "definitions_source": [
+    "Voyager."
+   ],
+   "frequence_rang": 590
+  },
+  {
+   "francais": "conduire",
+   "danois": "at køre",
+   "hint": "un véhicule",
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/k%C3%B8re#da",
+   "definitions_source": [
+    "Aller, aller en véhicule, se déplacer.",
+    "Conduire, piloter.",
+    "Partir",
+    "Passer",
+    "Transporter.",
+    "Démarrer, effectuer, exploiter, tourner, exécuter."
+   ],
+   "frequence_rang": 430
+  },
+  {
+   "francais": "faire du vélo",
+   "danois": "at cykle",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/cykle#Danish",
+   "definitions_source": [
+    "to cycle, to ride a bicycle"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "déménager",
+   "danois": "at flytte",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/flytte#Danish",
+   "definitions_source": [
+    "move, remove",
+    "move",
+    "move, move away"
+   ],
+   "frequence_rang": 1010
+  },
+  {
+   "francais": "envoyer",
+   "danois": "at sende",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sende#da",
+   "definitions_source": [
+    "Adresser, envoyer."
+   ],
+   "frequence_rang": 767
+  },
+  {
+   "francais": "montrer",
+   "danois": "at vise",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/vise#da",
+   "definitions_source": [
+    "Désigner, indiquer, montrer."
+   ],
+   "frequence_rang": 403
+  },
+  {
+   "francais": "oublier",
+   "danois": "at glemme",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/glemme#da",
+   "definitions_source": [
+    "Oublier."
+   ],
+   "frequence_rang": 948
+  },
+  {
+   "francais": "se souvenir",
+   "danois": "at huske",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/huske#da",
+   "definitions_source": [
+    "Retenir, se rappeler, se souvenir."
+   ],
+   "frequence_rang": 295
+  },
+  {
+   "francais": "jouer (enfant)",
+   "danois": "at lege",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/lege#da",
+   "definitions_source": [
+    "Jouer, représenter."
+   ],
+   "frequence_rang": 1038
+  },
+  {
+   "francais": "jouer (jeu, sport, instrument)",
+   "danois": "at spille",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/spille#da",
+   "definitions_source": [
+    "Jouer, représenter."
+   ],
+   "frequence_rang": 510
+  },
+  {
+   "francais": "chanter",
+   "danois": "at synge",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/synge#da",
+   "definitions_source": [
+    "Chanter."
+   ],
+   "frequence_rang": 1534
+  },
+  {
+   "francais": "danser",
+   "danois": "at danse",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/danse#Danish",
+   "definitions_source": [
+    "to dance"
+   ],
+   "frequence_rang": 1034
+  },
+  {
+   "francais": "laver",
+   "danois": "at vaske",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/vaske#da",
+   "definitions_source": [
+    "Laver."
+   ],
+   "frequence_rang": 2771
+  },
+  {
+   "francais": "vendre",
+   "danois": "at sælge",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/s%C3%A6lge#da",
+   "definitions_source": [
+    "Vendre."
+   ],
+   "frequence_rang": 1174
+  },
+  {
+   "francais": "louer",
+   "danois": "at leje",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/leje#da",
+   "definitions_source": [
+    "Louer."
+   ],
+   "frequence_rang": 3733
+  },
+  {
+   "francais": "commander",
+   "danois": "at bestille",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bestille#da",
+   "definitions_source": [
+    "Commander, demander, retenir."
+   ],
+   "frequence_rang": 3462
+  },
+  {
+   "francais": "signifier",
+   "danois": "at betyde",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/betyde#da",
+   "definitions_source": [
+    "Signifier."
+   ],
+   "frequence_rang": 1915
+  },
+  {
+   "francais": "espérer",
+   "danois": "at håbe",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/h%C3%A5be#da",
+   "definitions_source": [
+    "Espérer, souhaiter."
+   ],
+   "frequence_rang": 2119
+  },
+  {
+   "francais": "sentir, ressentir",
+   "danois": "at føle",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/f%C3%B8le#da",
+   "definitions_source": [
+    "Ressentir, sentir."
+   ],
+   "frequence_rang": 938
+  },
+  {
+   "francais": "rire",
+   "danois": "at grine",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/grine#Danish",
+   "definitions_source": [
+    "to laugh"
+   ],
+   "frequence_rang": 2807
+  },
+  {
+   "francais": "pleurer",
+   "danois": "at græde",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/gr%C3%A6de#da",
+   "definitions_source": [
+    "Pleurer."
+   ],
+   "frequence_rang": 1973
+  },
+  {
+   "francais": "sourire",
+   "danois": "at smile",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/smile#da",
+   "definitions_source": [
+    "Sourire."
+   ],
+   "frequence_rang": 4337
+  },
+  {
+   "francais": "embrasser",
+   "danois": "at kysse",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/kysse#da",
+   "definitions_source": [
+    "Embrasser, baiser."
+   ],
+   "frequence_rang": 1713
+  },
+  {
+   "francais": "se réveiller",
+   "danois": "at vågne",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/v%C3%A5gne#Danish",
+   "definitions_source": [
+    "to awake, to wake",
+    "to come to, to come round",
+    "vågne op – wake up"
+   ],
+   "frequence_rang": 2615
+  },
+  {
+   "francais": "aller chercher",
+   "danois": "at hente",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/hente#Danish",
+   "definitions_source": [
+    "to fetch, retrieve",
+    "to download"
+   ],
+   "frequence_rang": 658
+  },
+  {
+   "francais": "rencontrer",
+   "danois": "at møde",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/m%C3%B8de#da",
+   "definitions_source": [
+    "Rencontrer."
+   ],
+   "frequence_rang": 308
+  },
+  {
+   "francais": "rendre visite",
+   "danois": "at besøge",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bes%C3%B8ge#da",
+   "definitions_source": [
+    "Visiter, rendre une visite."
+   ],
+   "frequence_rang": 1606
+  },
+  {
+   "francais": "inviter",
+   "danois": "at invitere",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/invitere#da",
+   "definitions_source": [
+    "Inviter."
+   ],
+   "frequence_rang": 2687
+  },
+  {
+   "francais": "gagner",
+   "danois": "at vinde",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/vinde#da",
+   "definitions_source": [
+    "Gagner, remporter."
+   ],
+   "frequence_rang": 766
+  },
+  {
+   "francais": "perdre",
+   "danois": "at tabe",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/tabe#Danish",
+   "definitions_source": [
+    "to lose",
+    "to lose"
+   ],
+   "frequence_rang": 1711
+  },
+  {
+   "francais": "vivre",
+   "danois": "at leve",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/leve#da",
+   "definitions_source": [
+    "Vivre."
+   ],
+   "frequence_rang": 479
+  },
+  {
+   "francais": "mourir",
+   "danois": "at dø",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/d%C3%B8#da",
+   "definitions_source": [
+    "Mourir."
+   ],
+   "frequence_rang": 284
+  },
+  {
+   "francais": "porter",
+   "danois": "at bære",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/b%C3%A6re#da",
+   "definitions_source": [
+    "Porter."
+   ],
+   "frequence_rang": 1204
+  },
+  {
+   "francais": "tomber",
+   "danois": "at falde",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/falde#da",
+   "definitions_source": [
+    "Tomber, s'abattre."
+   ],
+   "frequence_rang": 1157
+  },
+  {
+   "francais": "lancer",
+   "danois": "at kaste",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/kaste#da",
+   "definitions_source": [
+    "Jeter, projeter."
+   ],
+   "frequence_rang": 1826
+  },
+  {
+   "francais": "tirer",
+   "danois": "at trække",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tr%C3%A6kke#da",
+   "definitions_source": [
+    "Tirer."
+   ],
+   "frequence_rang": 1023
+  },
+  {
+   "francais": "soulever",
+   "danois": "at løfte",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/l%C3%B8fte#da",
+   "definitions_source": [
+    "Lever, soulever, élever."
+   ],
+   "frequence_rang": 1704
+  },
+  {
+   "francais": "étirer",
+   "danois": "at strække",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/str%C3%A6kke#Danish",
+   "definitions_source": [
+    "to stretch",
+    "to be sufficient",
+    "to stretch",
+    "to stretch out, spread"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "plier",
+   "danois": "at bøje",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/b%C3%B8je#da",
+   "definitions_source": [
+    "Courber.",
+    "Incliner.",
+    "Courber, fléchir, ployer."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "grimper",
+   "danois": "at klatre",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/klatre#da",
+   "definitions_source": [
+    "Gravir, grimper."
+   ],
+   "frequence_rang": 4634
+  },
+  {
+   "francais": "écouter",
+   "danois": "at lytte",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/lytte#da",
+   "definitions_source": [
+    "Écouter."
+   ],
+   "frequence_rang": 1543
+  },
+  {
+   "francais": "regarder",
+   "danois": "at kigge",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/kigge#Danish",
+   "definitions_source": [
+    "to look",
+    "to glance",
+    "to peek, peep, keek",
+    "to peer",
+    "to gaze"
+   ],
+   "frequence_rang": 879
+  },
+  {
+   "francais": "choisir",
+   "danois": "at vælge",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/v%C3%A6lge#da",
+   "definitions_source": [
+    "Adopter, choisir, désigner, opter."
+   ],
+   "frequence_rang": 1233
+  },
+  {
+   "francais": "décider",
+   "danois": "at beslutte",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/beslutte#da",
+   "definitions_source": [
+    "Décider."
+   ],
+   "frequence_rang": 4508
+  },
+  {
+   "francais": "expliquer",
+   "danois": "at forklare",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/forklare#da",
+   "definitions_source": [
+    "Développer, expliquer.",
+    "Expliquer."
+   ],
+   "frequence_rang": 809
+  },
+  {
+   "francais": "s'exercer",
+   "danois": "at øve",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/%C3%B8ve#da",
+   "definitions_source": [
+    "Exercer, instruire."
+   ],
+   "frequence_rang": 3416
+  },
+  {
+   "francais": "coûter",
+   "danois": "at koste",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/koste#da",
+   "definitions_source": [
+    "Coûter, revenir à."
+   ],
+   "frequence_rang": 3156
+  },
+  {
+   "francais": "emprunter",
+   "danois": "at låne",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/l%C3%A5ne#da",
+   "definitions_source": [
+    "Emprunter, prêter."
+   ],
+   "frequence_rang": 1462
+  },
+  {
+   "francais": "cuire au four",
+   "danois": "at bage",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bage#da",
+   "definitions_source": [
+    "(cuisine) Faire cuire au four."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "faire bouillir",
+   "danois": "at koge",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/koge#da",
+   "definitions_source": [
+    "Cuire, cuisiner.",
+    "Bouillir."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "faire frire, rôtir",
+   "danois": "at stege",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/stege#da",
+   "definitions_source": [
+    "Griller, rôtir."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "rêver",
+   "danois": "at drømme",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/dr%C3%B8mme#da",
+   "definitions_source": [
+    "Rêver, songer."
+   ],
+   "frequence_rang": 1124
+  },
+  {
+   "francais": "compter",
+   "danois": "at tælle",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/t%C3%A6lle#Danish",
+   "definitions_source": [
+    "to count",
+    "to number"
+   ],
+   "frequence_rang": 3386
+  },
+  {
+   "francais": "mettre, poser",
+   "danois": "at sætte",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/s%C3%A6tte#da",
+   "definitions_source": [
+    "Appliquer, mettre, poser."
+   ],
+   "frequence_rang": 577
+  },
+  {
+   "francais": "tenir",
+   "danois": "at holde",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/holde#da",
+   "definitions_source": [
+    "Tenir."
+   ],
+   "frequence_rang": 226
+  },
+  {
+   "francais": "grandir",
+   "danois": "at vokse",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/vokse#da",
+   "definitions_source": [
+    "Augmenter, croître, grandir, s'accroître.",
+    "Cirer, frotter ou enduire de cire."
+   ],
+   "frequence_rang": 3037
+  },
+  {
+   "francais": "changer",
+   "danois": "at ændre",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/%C3%A6ndre#da",
+   "definitions_source": [
+    "Changer, transformer, convertir."
+   ],
+   "frequence_rang": 885
+  },
+  {
+   "francais": "arriver",
+   "danois": "at ankomme",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/ankomme#da",
+   "definitions_source": [
+    "Arriver."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "quitter",
+   "danois": "at forlade",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/forlade#da",
+   "definitions_source": [
+    "Abandonner, délaisser, livrer, quitter."
+   ],
+   "frequence_rang": 858
+  },
+  {
+   "francais": "goûter",
+   "danois": "at smage",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/smage#da",
+   "definitions_source": [
+    "Goûter."
+   ],
+   "frequence_rang": 2506
+  },
+  {
+   "francais": "partager",
+   "danois": "at dele",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/dele#da",
+   "definitions_source": [
+    "Diviser, débiter, partager."
+   ],
+   "frequence_rang": 860
+  },
+  {
+   "francais": "marcher, randonner",
+   "danois": "at vandre",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/vandre#da",
+   "definitions_source": [
+    "Randonner, balader",
+    "Migrer, voyager",
+    "Vagabonder"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "se dépêcher",
+   "danois": "at skynde sig",
+   "hint": "« skynd dig ! »",
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/skynde#Danish",
+   "definitions_source": [
+    "to rush, hurry",
+    "to hurry"
+   ],
+   "frequence_rang": 2068
+  },
+  {
+   "francais": "nettoyer",
+   "danois": "at rengøre",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/reng%C3%B8re#Danish",
+   "definitions_source": [
+    "to clean"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "fumer",
+   "danois": "at ryge",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/ryge#da",
+   "definitions_source": [
+    "Fumer."
+   ],
+   "frequence_rang": 1965
+  },
+  {
+   "francais": "construire",
+   "danois": "at bygge",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bygge#da",
+   "definitions_source": [
+    "Construire, poser, bâtir."
+   ],
+   "frequence_rang": 1699
+  },
+  {
+   "francais": "monter",
+   "danois": "at stige",
+   "hint": null,
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/stige#da",
+   "definitions_source": [
+    "Monter."
+   ],
+   "frequence_rang": 3262
+  },
+  {
+   "francais": "se baigner",
+   "danois": "at bade",
+   "hint": "se baigner",
+   "categorie": "verbes",
+   "nature": "verbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bade#da",
+   "definitions_source": [
+    "Baigner."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "grand",
+   "danois": "stor",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/stor#da",
+   "definitions_source": [
+    "Grand."
+   ],
+   "frequence_rang": 242
+  },
+  {
+   "francais": "petit",
+   "danois": "lille",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/lille#da",
+   "definitions_source": [
+    "Petit."
+   ],
+   "frequence_rang": 152
+  },
+  {
+   "francais": "bon",
+   "danois": "god",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/god#da",
+   "definitions_source": [
+    "Bon."
+   ],
+   "frequence_rang": 141
+  },
+  {
+   "francais": "mauvais",
+   "danois": "dårlig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/d%C3%A5rlig#da",
+   "definitions_source": [
+    "Mal, mauvais, méchant."
+   ],
+   "frequence_rang": 726
+  },
+  {
+   "francais": "nouveau",
+   "danois": "ny",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/ny#da",
+   "definitions_source": [
+    "Nouveau."
+   ],
+   "frequence_rang": 368
+  },
+  {
+   "francais": "vieux",
+   "danois": "gammel",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/gammel#da",
+   "definitions_source": [
+    "Ancien.",
+    "Vieux."
+   ],
+   "frequence_rang": 421
+  },
+  {
+   "francais": "jeune",
+   "danois": "ung",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/ung#da",
+   "definitions_source": [
+    "Jeune."
+   ],
+   "frequence_rang": 802
+  },
+  {
+   "francais": "long",
+   "danois": "lang",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/lang#da",
+   "definitions_source": [
+    "Long."
+   ],
+   "frequence_rang": 379
+  },
+  {
+   "francais": "court",
+   "danois": "kort",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/kort#da",
+   "definitions_source": [
+    "Court."
+   ],
+   "frequence_rang": 500
+  },
+  {
+   "francais": "haut, grand (taille)",
+   "danois": "høj",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/h%C3%B8j#da",
+   "definitions_source": [
+    "Fort, haut, sonore.",
+    "Haut."
+   ],
+   "frequence_rang": 1082
+  },
+  {
+   "francais": "lourd",
+   "danois": "tung",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tung#da",
+   "definitions_source": [
+    "Lourd."
+   ],
+   "frequence_rang": 3605
+  },
+  {
+   "francais": "facile",
+   "danois": "nem",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/nem#da",
+   "definitions_source": [
+    "Facile."
+   ],
+   "frequence_rang": 3990
+  },
+  {
+   "francais": "difficile",
+   "danois": "svær",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/sv%C3%A6r#Danish",
+   "definitions_source": [
+    "difficult, hard, stiff, tough",
+    "heavy, massive, solid",
+    "severe",
+    "portly, stout"
+   ],
+   "frequence_rang": 2386
+  },
+  {
+   "francais": "rapide",
+   "danois": "hurtig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/hurtig#da",
+   "definitions_source": [
+    "Prompt, rapide.",
+    "Prochain."
+   ],
+   "frequence_rang": 1198
+  },
+  {
+   "francais": "content, heureux",
+   "danois": "glad",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/glad#da",
+   "definitions_source": [
+    "Joyeux."
+   ],
+   "frequence_rang": 359
+  },
+  {
+   "francais": "triste",
+   "danois": "trist",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/trist#da",
+   "definitions_source": [
+    "Triste."
+   ],
+   "frequence_rang": 1924
+  },
+  {
+   "francais": "malade",
+   "danois": "syg",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/syg#da",
+   "definitions_source": [
+    "Malade, malsain."
+   ],
+   "frequence_rang": 756
+  },
+  {
+   "francais": "sain",
+   "danois": "sund",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sund#da",
+   "definitions_source": [
+    "Sain."
+   ],
+   "frequence_rang": 4393
+  },
+  {
+   "francais": "beau",
+   "danois": "smuk",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/smuk#da",
+   "definitions_source": [
+    "Beau."
+   ],
+   "frequence_rang": 537
+  },
+  {
+   "francais": "laid",
+   "danois": "grim",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/grim#da",
+   "definitions_source": [
+    "Laid, vilain."
+   ],
+   "frequence_rang": 2266
+  },
+  {
+   "francais": "bon marché",
+   "danois": "billig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/billig#da",
+   "definitions_source": [
+    "Bon marché, économique.",
+    "Juste, équitable, Légitime, moral.",
+    "Raisonnable, fondé."
+   ],
+   "frequence_rang": 4247
+  },
+  {
+   "francais": "cher",
+   "danois": "dyr",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/dyr#da",
+   "definitions_source": [
+    "Cher, coûteux."
+   ],
+   "frequence_rang": 752
+  },
+  {
+   "francais": "riche",
+   "danois": "rig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/rig#da",
+   "definitions_source": [
+    "Riche."
+   ],
+   "frequence_rang": 1661
+  },
+  {
+   "francais": "pauvre",
+   "danois": "fattig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/fattig#da",
+   "definitions_source": [
+    "Malheureux.",
+    "Pauvre."
+   ],
+   "frequence_rang": 4897
+  },
+  {
+   "francais": "sec",
+   "danois": "tør",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/t%C3%B8r#da",
+   "definitions_source": [
+    "Sec."
+   ],
+   "frequence_rang": 826
+  },
+  {
+   "francais": "mouillé",
+   "danois": "våd",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/v%C3%A5d#Danish",
+   "definitions_source": [
+    "wet"
+   ],
+   "frequence_rang": 3477
+  },
+  {
+   "francais": "propre",
+   "danois": "ren",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/ren#da",
+   "definitions_source": [
+    "Propre, pur."
+   ],
+   "frequence_rang": 1047
+  },
+  {
+   "francais": "sale",
+   "danois": "beskidt",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/beskidt#Danish",
+   "definitions_source": [
+    "dirty",
+    "filthy, mucky, grimy, grubby"
+   ],
+   "frequence_rang": 2883
+  },
+  {
+   "francais": "vide",
+   "danois": "tom",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tom#da",
+   "definitions_source": [
+    "Vide."
+   ],
+   "frequence_rang": 579
+  },
+  {
+   "francais": "ouvert",
+   "danois": "åben",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/%C3%A5ben#Danish",
+   "definitions_source": [
+    "open",
+    "frank, candid"
+   ],
+   "frequence_rang": 819
+  },
+  {
+   "francais": "fermé",
+   "danois": "lukket",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/lukket#Danish",
+   "definitions_source": [
+    "closed",
+    "shut",
+    "private"
+   ],
+   "frequence_rang": 935
+  },
+  {
+   "francais": "libre",
+   "danois": "fri",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/fri#da",
+   "definitions_source": [
+    "Libre."
+   ],
+   "frequence_rang": 420
+  },
+  {
+   "francais": "important",
+   "danois": "vigtig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/vigtig#da",
+   "definitions_source": [
+    "Considérable, grave, important, majeur."
+   ],
+   "frequence_rang": 1364
+  },
+  {
+   "francais": "juste, correct",
+   "danois": "rigtig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/rigtig#da",
+   "definitions_source": [
+    "Exact, juste."
+   ],
+   "frequence_rang": 299
+  },
+  {
+   "francais": "faux, erroné",
+   "danois": "forkert",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/forkert#Danish",
+   "definitions_source": [
+    "wrong"
+   ],
+   "frequence_rang": 589
+  },
+  {
+   "francais": "vrai",
+   "danois": "sand",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sand#da",
+   "definitions_source": [
+    "Vrai, réel, véritable."
+   ],
+   "frequence_rang": 1759
+  },
+  {
+   "francais": "agréable",
+   "danois": "dejlig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/dejlig#Danish",
+   "definitions_source": [
+    "delightful",
+    "lovely",
+    "beautiful",
+    "delicious",
+    "fine, nice",
+    "delightfully, beautifully"
+   ],
+   "frequence_rang": 1181
+  },
+  {
+   "francais": "gentil, sucré",
+   "danois": "sød",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/s%C3%B8d#da",
+   "definitions_source": [
+    "Cher, coûteux.",
+    "Doux, gentil, suave, sucré."
+   ],
+   "frequence_rang": 397
+  },
+  {
+   "francais": "acide, grincheux",
+   "danois": "sur",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sur#da",
+   "definitions_source": [
+    "Acide, aigre, sur, aigri, revêche, hargneux."
+   ],
+   "frequence_rang": 1019
+  },
+  {
+   "francais": "faible",
+   "danois": "svag",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/svag#da",
+   "definitions_source": [
+    "Faible."
+   ],
+   "frequence_rang": 2317
+  },
+  {
+   "francais": "gros, épais",
+   "danois": "tyk",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tyk#da",
+   "definitions_source": [
+    "Gros, épais."
+   ],
+   "frequence_rang": 4039
+  },
+  {
+   "francais": "mince",
+   "danois": "tynd",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tynd#da",
+   "definitions_source": [
+    "Mince.",
+    "Maigre."
+   ],
+   "frequence_rang": 3604
+  },
+  {
+   "francais": "étroit",
+   "danois": "smal",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/smal#da",
+   "definitions_source": [
+    "Étroit."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "large",
+   "danois": "bred",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bred#da",
+   "definitions_source": [
+    "Ample, large."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "profond",
+   "danois": "dyb",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/dyb#da",
+   "definitions_source": [
+    "Profond."
+   ],
+   "frequence_rang": 2785
+  },
+  {
+   "francais": "sombre",
+   "danois": "mørk",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/m%C3%B8rk#da",
+   "definitions_source": [
+    "Obscur, sombre, noir.",
+    "Foncé.",
+    "(da) Obscur, sombre, noir."
+   ],
+   "frequence_rang": 4192
+  },
+  {
+   "francais": "clair, lumineux",
+   "danois": "lys",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/lys#da",
+   "definitions_source": [
+    "Clair.",
+    "Blond."
+   ],
+   "frequence_rang": 704
+  },
+  {
+   "francais": "calme",
+   "danois": "rolig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/rolig#da",
+   "definitions_source": [
+    "Calme, paisible, tranquille.",
+    "Calme, paisible, quiet, tranquille."
+   ],
+   "frequence_rang": 320
+  },
+  {
+   "francais": "amusant, drôle",
+   "danois": "sjov",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sjov#da",
+   "definitions_source": [
+    "Comique, drôle."
+   ],
+   "frequence_rang": 619
+  },
+  {
+   "francais": "ennuyeux",
+   "danois": "kedelig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/kedelig#Danish",
+   "definitions_source": [
+    "boring",
+    "unfortunate, lamentable"
+   ],
+   "frequence_rang": 3857
+  },
+  {
+   "francais": "intéressant",
+   "danois": "interessant",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/interessant#da",
+   "definitions_source": [
+    "Intéressant."
+   ],
+   "frequence_rang": 996
+  },
+  {
+   "francais": "aimable",
+   "danois": "venlig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/venlig#da",
+   "definitions_source": [
+    "Affable, aimable, gentil, amène."
+   ],
+   "frequence_rang": 823
+  },
+  {
+   "francais": "en colère",
+   "danois": "vred",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/vred#Danish",
+   "definitions_source": [
+    "angry"
+   ],
+   "frequence_rang": 985
+  },
+  {
+   "francais": "premier",
+   "danois": "første",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/f%C3%B8rste#da",
+   "definitions_source": [
+    "Premier."
+   ],
+   "frequence_rang": 201
+  },
+  {
+   "francais": "dernier",
+   "danois": "sidste",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/sidste#Danish",
+   "definitions_source": [
+    "last",
+    "latest",
+    "latter",
+    "past"
+   ],
+   "frequence_rang": 182
+  },
+  {
+   "francais": "prochain",
+   "danois": "næste",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/n%C3%A6ste#da",
+   "definitions_source": [
+    "Suivant.",
+    "Suivant."
+   ],
+   "frequence_rang": 259
+  },
+  {
+   "francais": "entier",
+   "danois": "hel",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/hel#da",
+   "definitions_source": [
+    "Entier, total."
+   ],
+   "frequence_rang": 1051
+  },
+  {
+   "francais": "demi",
+   "danois": "halv",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/halv#da",
+   "definitions_source": [
+    "Demi.",
+    "La moitié d’un montant ou volume.",
+    "Une demi-heure.",
+    "Quelque part qui n’est pas complet.",
+    "Une partie de la totalité.",
+    "Un demi-litre du lait.",
+    "La moitié d’une tranche de pain."
+   ],
+   "frequence_rang": 864
+  },
+  {
+   "francais": "rassasié",
+   "danois": "mæt",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/m%C3%A6t#Danish",
+   "definitions_source": [
+    "full (having eaten enough to no longer be hungry)"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "frais",
+   "danois": "frisk",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/frisk#da",
+   "definitions_source": [
+    "Frais."
+   ],
+   "frequence_rang": 1467
+  },
+  {
+   "francais": "cru",
+   "danois": "rå",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/r%C3%A5#Danish",
+   "definitions_source": [
+    "raw",
+    "crude",
+    "rough",
+    "coarse",
+    "brutal",
+    "tough"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "mou",
+   "danois": "blød",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bl%C3%B8d#da",
+   "definitions_source": [
+    "Mou, moelleux, tendre."
+   ],
+   "frequence_rang": 3461
+  },
+  {
+   "francais": "dur",
+   "danois": "hård",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/h%C3%A5rd#da",
+   "definitions_source": [
+    "Dur.",
+    "Dur, difficile."
+   ],
+   "frequence_rang": 1156
+  },
+  {
+   "francais": "tôt",
+   "danois": "tidlig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tidlig#da",
+   "definitions_source": [
+    "Hâtif, précoce."
+   ],
+   "frequence_rang": 1635
+  },
+  {
+   "francais": "tard, en retard",
+   "danois": "sen",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/sen#Danish",
+   "definitions_source": [
+    "late",
+    "belated, tardy",
+    "slow"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "marié",
+   "danois": "gift",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/gift#da",
+   "definitions_source": [
+    "Mariés.",
+    "Marié.",
+    "Mariée."
+   ],
+   "frequence_rang": 514
+  },
+  {
+   "francais": "possible",
+   "danois": "mulig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/mulig#da",
+   "definitions_source": [
+    "Possible."
+   ],
+   "frequence_rang": 3583
+  },
+  {
+   "francais": "parfait",
+   "danois": "perfekt",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/perfekt#da",
+   "definitions_source": [
+    "Parfait, accompli, achevé."
+   ],
+   "frequence_rang": 578
+  },
+  {
+   "francais": "interdit",
+   "danois": "forbudt",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/forbudt#Danish",
+   "definitions_source": [
+    "forbidden, prohibited"
+   ],
+   "frequence_rang": 1987
+  },
+  {
+   "francais": "dangereux",
+   "danois": "farlig",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/farlig#da",
+   "definitions_source": [
+    "Dangereux, périlleux, redoutable."
+   ],
+   "frequence_rang": 1638
+  },
+  {
+   "francais": "épuisé",
+   "danois": "udmattet",
+   "hint": null,
+   "categorie": "adjectifs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/udmattet#Danish",
+   "definitions_source": [
+    "exhausted"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "rouge",
+   "danois": "rød",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/r%C3%B8d#da",
+   "definitions_source": [
+    "Rouge."
+   ],
+   "frequence_rang": 1448
+  },
+  {
+   "francais": "bleu",
+   "danois": "blå",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bl%C3%A5#da",
+   "definitions_source": [
+    "Bleu."
+   ],
+   "frequence_rang": 943
+  },
+  {
+   "francais": "jaune",
+   "danois": "gul",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/gul#da",
+   "definitions_source": [
+    "Jaune."
+   ],
+   "frequence_rang": 4214
+  },
+  {
+   "francais": "vert",
+   "danois": "grøn",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/gr%C3%B8n#da",
+   "definitions_source": [
+    "Vert."
+   ],
+   "frequence_rang": 2763
+  },
+  {
+   "francais": "blanc",
+   "danois": "hvid",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/hvid#da",
+   "definitions_source": [
+    "Blanc."
+   ],
+   "frequence_rang": 1230
+  },
+  {
+   "francais": "noir",
+   "danois": "sort",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sort#da",
+   "definitions_source": [
+    "Noir."
+   ],
+   "frequence_rang": 758
+  },
+  {
+   "francais": "gris",
+   "danois": "grå",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/gr%C3%A5#da",
+   "definitions_source": [
+    "Gris."
+   ],
+   "frequence_rang": 3834
+  },
+  {
+   "francais": "marron, brun",
+   "danois": "brun",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/brun#da",
+   "definitions_source": [
+    "Brun."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "violet",
+   "danois": "lilla",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/lilla#Danish",
+   "definitions_source": [
+    "purple (colour)",
+    "mauve",
+    "lilac"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "orange",
+   "danois": "orange",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/orange#da",
+   "definitions_source": [
+    "Orange (couleur)."
+   ],
+   "frequence_rang": 4484
+  },
+  {
+   "francais": "rose",
+   "danois": "lyserød",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/lyser%C3%B8d#Danish",
+   "definitions_source": [
+    "pink (colored/coloured between red and white)"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la couleur",
+   "danois": "en farve",
+   "hint": null,
+   "categorie": "couleurs",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/farve#da",
+   "definitions_source": [
+    "Couleur, teinte."
+   ],
+   "frequence_rang": 2177,
+   "genre_verifie": "https://en.wiktionary.org/wiki/farve#Danish"
+  },
+  {
+   "francais": "l'œuf",
+   "danois": "æg",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/%C3%A6g#da",
+   "definitions_source": [
+    "Œuf."
+   ],
+   "frequence_rang": 1686
+  },
+  {
+   "francais": "le fromage",
+   "danois": "en ost",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/ost#da",
+   "definitions_source": [
+    "Fromage."
+   ],
+   "frequence_rang": 2769,
+   "genre_verifie": "https://en.wiktionary.org/wiki/ost#Danish"
+  },
+  {
+   "francais": "le beurre",
+   "danois": "smør",
+   "hint": "indénombrable, genre et",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/sm%C3%B8r#da",
+   "definitions_source": [
+    "Beurre."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le riz",
+   "danois": "ris",
+   "hint": "indénombrable",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/ris#da",
+   "definitions_source": [
+    "Riz.",
+    "Plante de riz.",
+    "Grain de riz.",
+    "Produit sur la base du riz."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la pomme de terre",
+   "danois": "en kartoffel",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kartoffel#da",
+   "definitions_source": [
+    "(da) Pomme de terre."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kartoffel#Danish"
+  },
+  {
+   "francais": "le poulet",
+   "danois": "en kylling",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kylling#da",
+   "definitions_source": [
+    "Béjaune.",
+    "Poussin",
+    "Poulet",
+    "Petite (10 cl) bouteille de akvavit."
+   ],
+   "frequence_rang": 1852,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kylling#Danish"
+  },
+  {
+   "francais": "le porc (viande)",
+   "danois": "svinekød",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/svinek%C3%B8d#da",
+   "definitions_source": [
+    "Porc, cochonnerie."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le bœuf (viande)",
+   "danois": "oksekød",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/oksek%C3%B8d#da",
+   "definitions_source": [
+    "Bœuf."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le jambon",
+   "danois": "skinke",
+   "hint": "indénombrable, genre en",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/skinke#da",
+   "definitions_source": [
+    "Jambon."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la saucisse",
+   "danois": "en pølse",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/p%C3%B8lse#da",
+   "definitions_source": [
+    "Saucisse, andouille.",
+    "Crotte."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/p%C3%B8lse#Danish"
+  },
+  {
+   "francais": "la carotte",
+   "danois": "gulerod",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/gulerod#da",
+   "definitions_source": [
+    "Carotte."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "l'oignon",
+   "danois": "løg",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/l%C3%B8g#da",
+   "definitions_source": [
+    "Oignon."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la tomate",
+   "danois": "en tomat",
+   "hint": "pl. tomater",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/tomat#da",
+   "definitions_source": [
+    "(da) Tomate."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/tomat#Danish"
+  },
+  {
+   "francais": "le concombre",
+   "danois": "en agurk",
+   "hint": "pl. agurker",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/agurk#da",
+   "definitions_source": [
+    "Concombre, légume vert allongés à la chair blanche."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/agurk#Danish"
+  },
+  {
+   "francais": "la salade",
+   "danois": "salat",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/salat#da",
+   "definitions_source": [
+    "Salade.",
+    "Laitue."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la banane",
+   "danois": "banan",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/banan#da",
+   "definitions_source": [
+    "Banane."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "l'orange (fruit)",
+   "danois": "en appelsin",
+   "hint": "pl. appelsiner",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/appelsin#da",
+   "definitions_source": [
+    "Orange."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/appelsin#Danish"
+  },
+  {
+   "francais": "le citron",
+   "danois": "en citron",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/citron#da",
+   "definitions_source": [
+    "Citron."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/citron#Danish"
+  },
+  {
+   "francais": "la fraise",
+   "danois": "jordbær",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/jordb%C3%A6r#da",
+   "definitions_source": [
+    "(da) Fraise."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la poire",
+   "danois": "en pære",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/p%C3%A6re#da",
+   "definitions_source": [
+    "Poire.",
+    "Ampoule."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/p%C3%A6re#Danish"
+  },
+  {
+   "francais": "le raisin (grain)",
+   "danois": "en drue",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/drue#Danish",
+   "definitions_source": [
+    "grape",
+    "wine"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/drue#Danish"
+  },
+  {
+   "francais": "le sucre",
+   "danois": "sukker",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sukker#da",
+   "definitions_source": [
+    "Sucre."
+   ],
+   "frequence_rang": 2820
+  },
+  {
+   "francais": "le sel",
+   "danois": "salt",
+   "hint": "indénombrable, genre et",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/salt#da",
+   "definitions_source": [
+    "Sel."
+   ],
+   "frequence_rang": 3017
+  },
+  {
+   "francais": "la farine",
+   "danois": "mel",
+   "hint": "indénombrable, genre et",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/mel#da",
+   "definitions_source": [
+    "Farine."
+   ],
+   "frequence_rang": 4390
+  },
+  {
+   "francais": "les flocons d'avoine",
+   "danois": "havregryn",
+   "hint": "indénombrable, genre et",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://en.wiktionary.org/wiki/havregryn#Danish",
+   "definitions_source": [
+    "a grain of oat",
+    "oatmeal"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le yaourt",
+   "danois": "yoghurt",
+   "hint": "indénombrable",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/yoghurt#da",
+   "definitions_source": [
+    "Yaourt."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le jus",
+   "danois": "juice",
+   "hint": "indénombrable, genre en",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://en.wiktionary.org/wiki/juice#Danish",
+   "definitions_source": [
+    "a container containing juice"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la soupe",
+   "danois": "en suppe",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/suppe#da",
+   "definitions_source": [
+    "Potage, soupe."
+   ],
+   "frequence_rang": 3855,
+   "genre_verifie": "https://en.wiktionary.org/wiki/suppe#Danish"
+  },
+  {
+   "francais": "le gâteau",
+   "danois": "en kage",
+   "hint": "pl. kager",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kage#da",
+   "definitions_source": [
+    "Gâteau.",
+    "Une croûte d’une matière sale, comme de la terre."
+   ],
+   "frequence_rang": 2189,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kage#Danish"
+  },
+  {
+   "francais": "le chocolat",
+   "danois": "en chokolade",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/chokolade#da",
+   "definitions_source": [
+    "Chocolat."
+   ],
+   "frequence_rang": 2359,
+   "genre_verifie": "https://en.wiktionary.org/wiki/chokolade#Danish"
+  },
+  {
+   "francais": "la glace (dessert)",
+   "danois": "is",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/is#da",
+   "definitions_source": [
+    "Glace."
+   ],
+   "frequence_rang": 1175
+  },
+  {
+   "francais": "la noix",
+   "danois": "nød",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/n%C3%B8d#Danish",
+   "definitions_source": [
+    "nut",
+    "nut",
+    "wood of the walnut tree",
+    "a true nut",
+    "head",
+    "a dumb or stupid person, an idiot",
+    "breasts — see entry"
+   ],
+   "frequence_rang": 710
+  },
+  {
+   "francais": "le petit pois",
+   "danois": "en ært",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/%C3%A6rt#da",
+   "definitions_source": [
+    "Pois."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/%C3%A6rt#Danish"
+  },
+  {
+   "francais": "la crème (fraîche)",
+   "danois": "fløde",
+   "hint": "indénombrable, genre en",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/fl%C3%B8de#da",
+   "definitions_source": [
+    "Crème."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "l'huile",
+   "danois": "olie",
+   "hint": "indénombrable, genre en",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/olie#da",
+   "definitions_source": [
+    "Huile."
+   ],
+   "frequence_rang": 2587
+  },
+  {
+   "francais": "le miel",
+   "danois": "honning",
+   "hint": "indénombrable, genre en",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/honning#da",
+   "definitions_source": [
+    "Miel."
+   ],
+   "frequence_rang": 4118
+  },
+  {
+   "francais": "le pain de seigle",
+   "danois": "et rugbrød",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://en.wiktionary.org/wiki/rugbr%C3%B8d#Danish",
+   "definitions_source": [
+    "rye bread"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/rugbr%C3%B8d#Danish"
+  },
+  {
+   "francais": "le repas",
+   "danois": "måltid",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/m%C3%A5ltid#da",
+   "definitions_source": [
+    "Repas."
+   ],
+   "frequence_rang": 3985
+  },
+  {
+   "francais": "la nourriture",
+   "danois": "mad",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/mad#da",
+   "definitions_source": [
+    "Nourriture."
+   ],
+   "frequence_rang": 443
+  },
+  {
+   "francais": "le saumon",
+   "danois": "laks",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/laks#da",
+   "definitions_source": [
+    "Saumon."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le thon",
+   "danois": "tun",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/tun#Danish",
+   "definitions_source": [
+    "tuna",
+    "tuna fish"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la crevette",
+   "danois": "en reje",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/reje#da",
+   "definitions_source": [
+    "Crevette."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/reje#Danish"
+  },
+  {
+   "francais": "l'ail",
+   "danois": "hvidløg",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/hvidl%C3%B8g#da",
+   "definitions_source": [
+    "Ail."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "les épinards",
+   "danois": "spinat",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/spinat#da",
+   "definitions_source": [
+    "Épinard"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le maïs",
+   "danois": "majs",
+   "hint": "indénombrable, genre en",
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/majs#da",
+   "definitions_source": [
+    "Maïs (plante).",
+    "Maïs (grain).",
+    "Maïs (épi)."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le dessert",
+   "danois": "dessert",
+   "hint": null,
+   "categorie": "nourriture",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/dessert#da",
+   "definitions_source": [
+    "Dessert."
+   ],
+   "frequence_rang": 4831
+  },
+  {
+   "francais": "la pièce, la chambre",
+   "danois": "et værelse",
+   "hint": "pl. værelser",
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/v%C3%A6relse#da",
+   "definitions_source": [
+    "Chambre, pièce."
+   ],
+   "frequence_rang": 634,
+   "genre_verifie": "https://en.wiktionary.org/wiki/v%C3%A6relse#Danish"
+  },
+  {
+   "francais": "la chambre à coucher",
+   "danois": "et soveværelse",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/sovev%C3%A6relse#da",
+   "definitions_source": [
+    "Chambre à coucher."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/sovev%C3%A6relse#Danish"
+  },
+  {
+   "francais": "la cuisine (pièce)",
+   "danois": "et køkken",
+   "hint": "pl. køkkener",
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/k%C3%B8kken#da",
+   "definitions_source": [
+    "Cuisine."
+   ],
+   "frequence_rang": 4542,
+   "genre_verifie": "https://en.wiktionary.org/wiki/k%C3%B8kken#Danish"
+  },
+  {
+   "francais": "la salle de bain",
+   "danois": "et badeværelse",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/badev%C3%A6relse#da",
+   "definitions_source": [
+    "Salle de bains.",
+    "Piscine, salle de bains."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/badev%C3%A6relse#Danish"
+  },
+  {
+   "francais": "le salon",
+   "danois": "en stue",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/stue#Danish",
+   "definitions_source": [
+    "living room",
+    "room",
+    "first floor, ground floor"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/stue#Danish"
+  },
+  {
+   "francais": "la porte",
+   "danois": "en dør",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/d%C3%B8r#da",
+   "definitions_source": [
+    "Porte."
+   ],
+   "frequence_rang": 342,
+   "genre_verifie": "https://en.wiktionary.org/wiki/d%C3%B8r#Danish"
+  },
+  {
+   "francais": "la fenêtre",
+   "danois": "et vindue",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/vindue#da",
+   "definitions_source": [
+    "Fenêtre."
+   ],
+   "frequence_rang": 2815,
+   "genre_verifie": "https://en.wiktionary.org/wiki/vindue#Danish"
+  },
+  {
+   "francais": "la table",
+   "danois": "et bord",
+   "hint": "pl. borde",
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/bord#da",
+   "definitions_source": [
+    "Table, surface plane posée sur un ou plusieurs pieds."
+   ],
+   "frequence_rang": 759,
+   "genre_verifie": "https://en.wiktionary.org/wiki/bord#Danish"
+  },
+  {
+   "francais": "la chaise",
+   "danois": "en stol",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/stol#da",
+   "definitions_source": [
+    "Chaise, siège."
+   ],
+   "frequence_rang": 1044,
+   "genre_verifie": "https://en.wiktionary.org/wiki/stol#Danish"
+  },
+  {
+   "francais": "le lit",
+   "danois": "seng",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/seng#da",
+   "definitions_source": [
+    "Lit."
+   ],
+   "frequence_rang": 567
+  },
+  {
+   "francais": "la lampe",
+   "danois": "en lampe",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/lampe#da",
+   "definitions_source": [
+    "Lampe."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/lampe#Danish"
+  },
+  {
+   "francais": "la clé",
+   "danois": "nøgle",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/n%C3%B8gle#da",
+   "definitions_source": [
+    "(serrurerie) Clef."
+   ],
+   "frequence_rang": 2235
+  },
+  {
+   "francais": "l'escalier",
+   "danois": "en trappe",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/trappe#da",
+   "definitions_source": [
+    "Escalier."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/trappe#Danish"
+  },
+  {
+   "francais": "le sol, le plancher",
+   "danois": "gulv",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/gulv#da",
+   "definitions_source": [
+    "Plancher."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le mur",
+   "danois": "en væg",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/v%C3%A6g#da",
+   "definitions_source": [
+    "Cloison, paroi.",
+    "Mur."
+   ],
+   "frequence_rang": 4805,
+   "genre_verifie": "https://en.wiktionary.org/wiki/v%C3%A6g#Danish"
+  },
+  {
+   "francais": "le toit",
+   "danois": "tag",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tag#da",
+   "definitions_source": [
+    "Toit."
+   ],
+   "frequence_rang": 144
+  },
+  {
+   "francais": "le réfrigérateur",
+   "danois": "et køleskab",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/k%C3%B8leskab#da",
+   "definitions_source": [
+    "Réfrigérateur."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/k%C3%B8leskab#Danish"
+  },
+  {
+   "francais": "le four",
+   "danois": "ovn",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/ovn#da",
+   "definitions_source": [
+    "Cuisinière, four, fourneau."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "l'armoire, le placard",
+   "danois": "et skab",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/skab#da",
+   "definitions_source": [
+    "Armoire."
+   ],
+   "frequence_rang": 2971,
+   "genre_verifie": "https://en.wiktionary.org/wiki/skab#Danish"
+  },
+  {
+   "francais": "le miroir",
+   "danois": "et spejl",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/spejl#da",
+   "definitions_source": [
+    "Miroir."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/spejl#Danish"
+  },
+  {
+   "francais": "la serviette (de bain)",
+   "danois": "et håndklæde",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/h%C3%A5ndkl%C3%A6de#da",
+   "definitions_source": [
+    "Serviette."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/h%C3%A5ndkl%C3%A6de#Danish"
+  },
+  {
+   "francais": "la couverture, le tapis",
+   "danois": "et tæppe",
+   "hint": "pl. tæpper",
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/t%C3%A6ppe#da",
+   "definitions_source": [
+    "Tapis.",
+    "Couverture."
+   ],
+   "frequence_rang": 3486,
+   "genre_verifie": "https://en.wiktionary.org/wiki/t%C3%A6ppe#Danish"
+  },
+  {
+   "francais": "l'oreiller, le coussin",
+   "danois": "en pude",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/pude#da",
+   "definitions_source": [
+    "Coussin.",
+    "Oreiller."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/pude#Danish"
+  },
+  {
+   "francais": "la machine à laver",
+   "danois": "en vaskemaskine",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/vaskemaskine#Danish",
+   "definitions_source": [
+    "washing machine"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/vaskemaskine#Danish"
+  },
+  {
+   "francais": "la tasse",
+   "danois": "en kop",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kop#da",
+   "definitions_source": [
+    "Tasse."
+   ],
+   "frequence_rang": 1475,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kop#Danish"
+  },
+  {
+   "francais": "le verre",
+   "danois": "et glas",
+   "hint": "pl. glas (invariable)",
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/glas#da",
+   "definitions_source": [
+    "Verre, vitre (objet).",
+    "Verre (matière)."
+   ],
+   "frequence_rang": 1323,
+   "genre_verifie": "https://en.wiktionary.org/wiki/glas#Danish"
+  },
+  {
+   "francais": "l'assiette",
+   "danois": "tallerken",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tallerken#da",
+   "definitions_source": [
+    "Assiette."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le couteau",
+   "danois": "en kniv",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kniv#da",
+   "definitions_source": [
+    "Couteau."
+   ],
+   "frequence_rang": 1891,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kniv#Danish"
+  },
+  {
+   "francais": "la fourchette",
+   "danois": "en gaffel",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/gaffel#da",
+   "definitions_source": [
+    "Fourchette."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/gaffel#Danish"
+  },
+  {
+   "francais": "la cuillère",
+   "danois": "en ske",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/ske#da",
+   "definitions_source": [
+    "Cuiller, cuillère."
+   ],
+   "frequence_rang": 447,
+   "genre_verifie": "https://en.wiktionary.org/wiki/ske#Danish"
+  },
+  {
+   "francais": "la casserole",
+   "danois": "en gryde",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/gryde#Danish",
+   "definitions_source": [
+    "cooking pot"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/gryde#Danish"
+  },
+  {
+   "francais": "le balcon",
+   "danois": "en altan",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/altan#da",
+   "definitions_source": [
+    "Balcon."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/altan#Danish"
+  },
+  {
+   "francais": "le plafond",
+   "danois": "et loft",
+   "hint": null,
+   "categorie": "maison",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/loft#da",
+   "definitions_source": [
+    "Plafond."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/loft#Danish"
+  },
+  {
+   "francais": "la gare",
+   "danois": "en station",
+   "hint": "pl. stationer",
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/station#da",
+   "definitions_source": [
+    "(chemin de fer) Gare, station."
+   ],
+   "frequence_rang": 2523,
+   "genre_verifie": "https://en.wiktionary.org/wiki/station#Danish"
+  },
+  {
+   "francais": "l'aéroport",
+   "danois": "en lufthavn",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/lufthavn#da",
+   "definitions_source": [
+    "Aéroport."
+   ],
+   "frequence_rang": 4416,
+   "genre_verifie": "https://en.wiktionary.org/wiki/lufthavn#Danish"
+  },
+  {
+   "francais": "le bus",
+   "danois": "bus",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bus#da",
+   "definitions_source": [
+    "Autobus.",
+    "Omnibus."
+   ],
+   "frequence_rang": 2579
+  },
+  {
+   "francais": "le billet, le ticket",
+   "danois": "billet",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/billet#da",
+   "definitions_source": [
+    "Billet, ticket."
+   ],
+   "frequence_rang": 2869
+  },
+  {
+   "francais": "la route, le chemin",
+   "danois": "en vej",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/vej#da",
+   "definitions_source": [
+    "Chemin, route, voie."
+   ],
+   "frequence_rang": 166,
+   "genre_verifie": "https://en.wiktionary.org/wiki/vej#Danish"
+  },
+  {
+   "francais": "le pont",
+   "danois": "en bro",
+   "hint": "pl. broer",
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/bro#da",
+   "definitions_source": [
+    "(architecture) Pont."
+   ],
+   "frequence_rang": 3267,
+   "genre_verifie": "https://en.wiktionary.org/wiki/bro#Danish"
+  },
+  {
+   "francais": "la place (du marché)",
+   "danois": "torv",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/torv#da",
+   "definitions_source": [
+    "Marché.",
+    "Foire, marché, bazar."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le parc",
+   "danois": "park",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/park#da",
+   "definitions_source": [
+    "Parc."
+   ],
+   "frequence_rang": 2190
+  },
+  {
+   "francais": "l'église",
+   "danois": "en kirke",
+   "hint": "pl. kirker",
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kirke#da",
+   "definitions_source": [
+    "Église (bâtiment).",
+    "(christianisme) Église (organisation)."
+   ],
+   "frequence_rang": 2070,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kirke#Danish"
+  },
+  {
+   "francais": "l'école",
+   "danois": "en skole",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/skole#da",
+   "definitions_source": [
+    "École."
+   ],
+   "frequence_rang": 803,
+   "genre_verifie": "https://en.wiktionary.org/wiki/skole#Danish"
+  },
+  {
+   "francais": "la bibliothèque",
+   "danois": "bibliotek",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bibliotek#da",
+   "definitions_source": [
+    "Bibliothèque."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la banque",
+   "danois": "bank",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bank#da",
+   "definitions_source": [
+    "(économie) Banque."
+   ],
+   "frequence_rang": 1349
+  },
+  {
+   "francais": "le supermarché",
+   "danois": "et supermarked",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://en.wiktionary.org/wiki/supermarked#Danish",
+   "definitions_source": [
+    "a supermarket"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/supermarked#Danish"
+  },
+  {
+   "francais": "le boulanger, la boulangerie",
+   "danois": "en bager",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/bager#da",
+   "definitions_source": [
+    "Boulanger.",
+    "Boulangerie."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/bager#Danish"
+  },
+  {
+   "francais": "le marché",
+   "danois": "et marked",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://en.wiktionary.org/wiki/marked#Danish",
+   "definitions_source": [
+    "market",
+    "fair",
+    "emporium"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/marked#Danish"
+  },
+  {
+   "francais": "la police",
+   "danois": "politi",
+   "hint": "indénombrable, genre et",
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/politi#da",
+   "definitions_source": [
+    "Police, force de l’ordre."
+   ],
+   "frequence_rang": 1333
+  },
+  {
+   "francais": "l'hôtel",
+   "danois": "et hotel",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/hotel#da",
+   "definitions_source": [
+    "Hôtel."
+   ],
+   "frequence_rang": 1272,
+   "genre_verifie": "https://en.wiktionary.org/wiki/hotel#Danish"
+  },
+  {
+   "francais": "le restaurant",
+   "danois": "restaurant",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/restaurant#da",
+   "definitions_source": [
+    "Restaurant."
+   ],
+   "frequence_rang": 2621
+  },
+  {
+   "francais": "le café (lieu)",
+   "danois": "en café",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/caf%C3%A9#da",
+   "definitions_source": [
+    "Café, établissement où l'on peut consommer du café, ainsi que d'autres boissons en outre. Lieu convivial, parfois familier où l'on a la possibilité de sociabiliser ou de travailler."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/caf%C3%A9#Danish"
+  },
+  {
+   "francais": "le musée",
+   "danois": "museum",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/museum#da",
+   "definitions_source": [
+    "(muséologie) Musée."
+   ],
+   "frequence_rang": 4867
+  },
+  {
+   "francais": "droite",
+   "danois": "højre",
+   "hint": "à droite = til højre",
+   "categorie": "ville",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/h%C3%B8jre#da",
+   "definitions_source": [
+    "Droit (côté opposé à gauche)."
+   ],
+   "frequence_rang": 627
+  },
+  {
+   "francais": "gauche",
+   "danois": "venstre",
+   "hint": "à gauche = til venstre",
+   "categorie": "ville",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/venstre#da",
+   "definitions_source": [
+    "Gauche."
+   ],
+   "frequence_rang": 606
+  },
+  {
+   "francais": "le coin",
+   "danois": "hjørne",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/hj%C3%B8rne#Danish",
+   "definitions_source": [
+    "corner",
+    "nook",
+    "niche",
+    "node"
+   ],
+   "frequence_rang": 3751
+  },
+  {
+   "francais": "le trottoir",
+   "danois": "et fortov",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/fortov#da",
+   "definitions_source": [
+    "Trottoir."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/fortov#Danish"
+  },
+  {
+   "francais": "le centre-ville",
+   "danois": "et centrum",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/centrum#da",
+   "definitions_source": [
+    "centre"
+   ],
+   "frequence_rang": 4037,
+   "genre_verifie": "https://en.wiktionary.org/wiki/centrum#Danish"
+  },
+  {
+   "francais": "le port",
+   "danois": "havn",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/havn#da",
+   "definitions_source": [
+    "Port."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le village",
+   "danois": "en landsby",
+   "hint": "pl. landsbyer",
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/landsby#da",
+   "definitions_source": [
+    "Localité, village."
+   ],
+   "frequence_rang": 3329,
+   "genre_verifie": "https://en.wiktionary.org/wiki/landsby#Danish"
+  },
+  {
+   "francais": "le taxi",
+   "danois": "taxa",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/taxa#da",
+   "definitions_source": [
+    "Taxi."
+   ],
+   "frequence_rang": 2881
+  },
+  {
+   "francais": "le parking",
+   "danois": "en parkering",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/parkering#Danish",
+   "definitions_source": [
+    "parking",
+    "parking place, parking space, parking spot"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/parkering#Danish"
+  },
+  {
+   "francais": "le nord",
+   "danois": "nord",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/nord#da",
+   "definitions_source": [
+    "Nord."
+   ],
+   "frequence_rang": 1561
+  },
+  {
+   "francais": "le sud",
+   "danois": "syd",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/syd#da",
+   "definitions_source": [
+    "Sud."
+   ],
+   "frequence_rang": 1654
+  },
+  {
+   "francais": "l'est",
+   "danois": "øst",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/%C3%B8st#da",
+   "definitions_source": [
+    "Est, orient."
+   ],
+   "frequence_rang": 2128
+  },
+  {
+   "francais": "l'ouest",
+   "danois": "vest",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/vest#da",
+   "definitions_source": [
+    "Occident, ouest."
+   ],
+   "frequence_rang": 1932
+  },
+  {
+   "francais": "la boutique, le magasin",
+   "danois": "en forretning",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/forretning#Danish",
+   "definitions_source": [
+    "business",
+    "firm; enterprise",
+    "shop; store",
+    "trade",
+    "transaction"
+   ],
+   "frequence_rang": 1598,
+   "genre_verifie": "https://en.wiktionary.org/wiki/forretning#Danish"
+  },
+  {
+   "francais": "le pays",
+   "danois": "et land",
+   "hint": "pl. lande",
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/land#da",
+   "definitions_source": [
+    "(géographie) Contrée, pays.",
+    "Campagne."
+   ],
+   "frequence_rang": 528,
+   "genre_verifie": "https://en.wiktionary.org/wiki/land#Danish"
+  },
+  {
+   "francais": "l'adresse",
+   "danois": "en adresse",
+   "hint": "pl. adresser",
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/adresse#da",
+   "definitions_source": [
+    "Adresse, suscription."
+   ],
+   "frequence_rang": 2013,
+   "genre_verifie": "https://en.wiktionary.org/wiki/adresse#Danish"
+  },
+  {
+   "francais": "le bateau",
+   "danois": "en båd",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/b%C3%A5d#da",
+   "definitions_source": [
+    "Bateau, barque."
+   ],
+   "frequence_rang": 1241,
+   "genre_verifie": "https://en.wiktionary.org/wiki/b%C3%A5d#Danish"
+  },
+  {
+   "francais": "l'avion",
+   "danois": "et fly",
+   "hint": null,
+   "categorie": "ville",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://en.wiktionary.org/wiki/fly#Danish",
+   "definitions_source": [
+    "airplane, aeroplane"
+   ],
+   "frequence_rang": 649,
+   "genre_verifie": "https://en.wiktionary.org/wiki/fly#Danish"
+  },
+  {
+   "francais": "le bureau (lieu)",
+   "danois": "et kontor",
+   "hint": "pl. kontorer",
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/kontor#da",
+   "definitions_source": [
+    "Bureau (lieu, salle)."
+   ],
+   "frequence_rang": 788,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kontor#Danish"
+  },
+  {
+   "francais": "le collègue",
+   "danois": "en kollega",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kollega#da",
+   "definitions_source": [
+    "Collègue."
+   ],
+   "frequence_rang": 3083,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kollega#Danish"
+  },
+  {
+   "francais": "le chef, le patron",
+   "danois": "en chef",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/chef#da",
+   "definitions_source": [
+    "Chef."
+   ],
+   "frequence_rang": 625,
+   "genre_verifie": "https://en.wiktionary.org/wiki/chef#Danish"
+  },
+  {
+   "francais": "le salaire",
+   "danois": "løn",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/l%C3%B8n#da",
+   "definitions_source": [
+    "Salaire, appointements, gaine."
+   ],
+   "frequence_rang": 2383
+  },
+  {
+   "francais": "le téléphone",
+   "danois": "telefon",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/telefon#da",
+   "definitions_source": [
+    "Téléphone."
+   ],
+   "frequence_rang": 887
+  },
+  {
+   "francais": "la tâche, l'exercice",
+   "danois": "en opgave",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/opgave#da",
+   "definitions_source": [
+    "Devoir, tâche."
+   ],
+   "frequence_rang": 1005,
+   "genre_verifie": "https://en.wiktionary.org/wiki/opgave#Danish"
+  },
+  {
+   "francais": "l'entreprise",
+   "danois": "et firma",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://en.wiktionary.org/wiki/firma#Danish",
+   "definitions_source": [
+    "a company, a firm"
+   ],
+   "frequence_rang": 1798,
+   "genre_verifie": "https://en.wiktionary.org/wiki/firma#Danish"
+  },
+  {
+   "francais": "le client",
+   "danois": "en kunde",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kunde#da",
+   "definitions_source": [
+    "Client."
+   ],
+   "frequence_rang": 3177,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kunde#Danish"
+  },
+  {
+   "francais": "la pause",
+   "danois": "en pause",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/pause#da",
+   "definitions_source": [
+    "Pause, repos, trêve."
+   ],
+   "frequence_rang": 1575,
+   "genre_verifie": "https://en.wiktionary.org/wiki/pause#Danish"
+  },
+  {
+   "francais": "les vacances",
+   "danois": "en ferie",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/ferie#da",
+   "definitions_source": [
+    "Congé, loisirs, vacances.",
+    "Vacances."
+   ],
+   "frequence_rang": 1497,
+   "genre_verifie": "https://en.wiktionary.org/wiki/ferie#Danish"
+  },
+  {
+   "francais": "la lettre (courrier)",
+   "danois": "et brev",
+   "hint": "pl. breve",
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/brev#da",
+   "definitions_source": [
+    "Lettre (message écrit)."
+   ],
+   "frequence_rang": 1345,
+   "genre_verifie": "https://en.wiktionary.org/wiki/brev#Danish"
+  },
+  {
+   "francais": "le papier",
+   "danois": "papir",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/papir#da",
+   "definitions_source": [
+    "Papier."
+   ],
+   "frequence_rang": 2081
+  },
+  {
+   "francais": "le stylo",
+   "danois": "kuglepen",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/kuglepen#Danish",
+   "definitions_source": [
+    "ballpoint pen"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le crayon",
+   "danois": "blyant",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/blyant#da",
+   "definitions_source": [
+    "Crayon."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le projet",
+   "danois": "projekt",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/projekt#da",
+   "definitions_source": [
+    "Projet."
+   ],
+   "frequence_rang": 2280
+  },
+  {
+   "francais": "la formation, les études",
+   "danois": "en uddannelse",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/uddannelse#Danish",
+   "definitions_source": [
+    "education"
+   ],
+   "frequence_rang": 3256,
+   "genre_verifie": "https://en.wiktionary.org/wiki/uddannelse#Danish"
+  },
+  {
+   "francais": "l'élève",
+   "danois": "en elev",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/elev#Danish",
+   "definitions_source": [
+    "pupil",
+    "student",
+    "trainee",
+    "apprentice"
+   ],
+   "frequence_rang": 3230,
+   "genre_verifie": "https://en.wiktionary.org/wiki/elev#Danish"
+  },
+  {
+   "francais": "l'enseignant",
+   "danois": "en lærer",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/l%C3%A6rer#da",
+   "definitions_source": [
+    "Instituteur."
+   ],
+   "frequence_rang": 873,
+   "genre_verifie": "https://en.wiktionary.org/wiki/l%C3%A6rer#Danish"
+  },
+  {
+   "francais": "l'ingénieur",
+   "danois": "en ingeniør",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/ingeni%C3%B8r#da",
+   "definitions_source": [
+    "Ingénieur."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/ingeni%C3%B8r#Danish"
+  },
+  {
+   "francais": "le rendez-vous, l'accord",
+   "danois": "en aftale",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/aftale#da",
+   "definitions_source": [
+    "Rencontre, rendez-vous.",
+    "Pacte, accommodement."
+   ],
+   "frequence_rang": 605,
+   "genre_verifie": "https://en.wiktionary.org/wiki/aftale#Danish"
+  },
+  {
+   "francais": "le chômeur",
+   "danois": "arbejdsløs",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/arbejdsl%C3%B8s#Danish",
+   "definitions_source": [
+    "unemployed (having no job)"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la question",
+   "danois": "spørgsmål",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sp%C3%B8rgsm%C3%A5l#da",
+   "definitions_source": [
+    "Question."
+   ],
+   "frequence_rang": 378
+  },
+  {
+   "francais": "la réponse",
+   "danois": "et svar",
+   "hint": "pl. svar (invariable)",
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/svar#da",
+   "definitions_source": [
+    "Réponse."
+   ],
+   "frequence_rang": 611,
+   "genre_verifie": "https://en.wiktionary.org/wiki/svar#Danish"
+  },
+  {
+   "francais": "le problème",
+   "danois": "problem",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/problem#da",
+   "definitions_source": [
+    "Problème."
+   ],
+   "frequence_rang": 390
+  },
+  {
+   "francais": "l'étudiant",
+   "danois": "en studerende",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/studerende#Danish",
+   "definitions_source": [
+    "student"
+   ],
+   "frequence_rang": 3613,
+   "genre_verifie": "https://en.wiktionary.org/wiki/studerende#Danish"
+  },
+  {
+   "francais": "l'université",
+   "danois": "et universitet",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/universitet#da",
+   "definitions_source": [
+    "(éducation) Université."
+   ],
+   "frequence_rang": 3946,
+   "genre_verifie": "https://en.wiktionary.org/wiki/universitet#Danish"
+  },
+  {
+   "francais": "le mot",
+   "danois": "et ord",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/ord#da",
+   "definitions_source": [
+    "Mot."
+   ],
+   "frequence_rang": 374,
+   "genre_verifie": "https://en.wiktionary.org/wiki/ord#Danish"
+  },
+  {
+   "francais": "la langue (parlée)",
+   "danois": "et sprog",
+   "hint": null,
+   "categorie": "travail",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/sprog#da",
+   "definitions_source": [
+    "Langage."
+   ],
+   "frequence_rang": 1717,
+   "genre_verifie": "https://en.wiktionary.org/wiki/sprog#Danish"
+  },
+  {
+   "francais": "la mère",
+   "danois": "en mor",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/mor#da",
+   "definitions_source": [
+    "Mère."
+   ],
+   "frequence_rang": 129,
+   "genre_verifie": "https://en.wiktionary.org/wiki/mor#Danish"
+  },
+  {
+   "francais": "le père",
+   "danois": "en far",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/far#da",
+   "definitions_source": [
+    "(famille) Père."
+   ],
+   "frequence_rang": 109,
+   "genre_verifie": "https://en.wiktionary.org/wiki/far#Danish"
+  },
+  {
+   "francais": "le parent",
+   "danois": "en forælder",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/for%C3%A6lder#Danish",
+   "definitions_source": [
+    "parent"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/for%C3%A6lder#Danish"
+  },
+  {
+   "francais": "le fils",
+   "danois": "søn",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/s%C3%B8n#da",
+   "definitions_source": [
+    "Fils."
+   ],
+   "frequence_rang": 276
+  },
+  {
+   "francais": "la fille (de ses parents)",
+   "danois": "datter",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/datter#da",
+   "definitions_source": [
+    "Fille."
+   ],
+   "frequence_rang": 465
+  },
+  {
+   "francais": "le frère",
+   "danois": "bror",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bror#da",
+   "definitions_source": [
+    "Frère."
+   ],
+   "frequence_rang": 386
+  },
+  {
+   "francais": "la sœur",
+   "danois": "en søster",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/s%C3%B8ster#da",
+   "definitions_source": [
+    "Sœur."
+   ],
+   "frequence_rang": 516,
+   "genre_verifie": "https://en.wiktionary.org/wiki/s%C3%B8ster#Danish"
+  },
+  {
+   "francais": "l'enfant",
+   "danois": "et barn",
+   "hint": "pl. børn",
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/barn#da",
+   "definitions_source": [
+    "Enfant, garçon ou fille qui n’a pas encore atteint l’adolescence.",
+    "Fille ou fils de quelqu’un.",
+    "Barn."
+   ],
+   "frequence_rang": 401,
+   "genre_verifie": "https://en.wiktionary.org/wiki/barn#Danish"
+  },
+  {
+   "francais": "le bébé",
+   "danois": "baby",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/baby#da",
+   "definitions_source": [
+    "Bébé."
+   ],
+   "frequence_rang": 700
+  },
+  {
+   "francais": "l'oncle",
+   "danois": "onkel",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/onkel#da",
+   "definitions_source": [
+    "Oncle."
+   ],
+   "frequence_rang": 740
+  },
+  {
+   "francais": "la tante",
+   "danois": "en tante",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/tante#da",
+   "definitions_source": [
+    "(famille) Tante."
+   ],
+   "frequence_rang": 1720,
+   "genre_verifie": "https://en.wiktionary.org/wiki/tante#Danish"
+  },
+  {
+   "francais": "le cousin",
+   "danois": "en fætter",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/f%C3%A6tter#da",
+   "definitions_source": [
+    "Cousin."
+   ],
+   "frequence_rang": 1729,
+   "genre_verifie": "https://en.wiktionary.org/wiki/f%C3%A6tter#Danish"
+  },
+  {
+   "francais": "la cousine",
+   "danois": "en kusine",
+   "hint": "pl. kusiner",
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kusine#da",
+   "definitions_source": [
+    "Cousine."
+   ],
+   "frequence_rang": 4056,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kusine#Danish"
+  },
+  {
+   "francais": "l'homme, le mari",
+   "danois": "en mand",
+   "hint": "pl. mænd",
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/mand#da",
+   "definitions_source": [
+    "(da) Homme, mâle.",
+    "(da) Mari, époux."
+   ],
+   "frequence_rang": 97,
+   "genre_verifie": "https://en.wiktionary.org/wiki/mand#Danish"
+  },
+  {
+   "francais": "l'épouse",
+   "danois": "en kone",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kone#da",
+   "definitions_source": [
+    "(da) Femme, épouse."
+   ],
+   "frequence_rang": 304,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kone#Danish"
+  },
+  {
+   "francais": "le voisin",
+   "danois": "en nabo",
+   "hint": "pl. naboer",
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/nabo#da",
+   "definitions_source": [
+    "Voisin."
+   ],
+   "frequence_rang": 3485,
+   "genre_verifie": "https://en.wiktionary.org/wiki/nabo#Danish"
+  },
+  {
+   "francais": "la fille (jeune)",
+   "danois": "en pige",
+   "hint": "pl. piger",
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/pige#da",
+   "definitions_source": [
+    "(da) Fille, jeune fille."
+   ],
+   "frequence_rang": 268,
+   "genre_verifie": "https://en.wiktionary.org/wiki/pige#Danish"
+  },
+  {
+   "francais": "le garçon",
+   "danois": "en dreng",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/dreng#da",
+   "definitions_source": [
+    "(da) Garçon, gosse."
+   ],
+   "frequence_rang": 336,
+   "genre_verifie": "https://en.wiktionary.org/wiki/dreng#Danish"
+  },
+  {
+   "francais": "la femme",
+   "danois": "en kvinde",
+   "hint": "pl. kvinder",
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kvinde#da",
+   "definitions_source": [
+    "(da) Femme."
+   ],
+   "frequence_rang": 327,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kvinde#Danish"
+  },
+  {
+   "francais": "l'être humain",
+   "danois": "et menneske",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/menneske#da",
+   "definitions_source": [
+    "Humain, être humain , homme."
+   ],
+   "frequence_rang": 725,
+   "genre_verifie": "https://en.wiktionary.org/wiki/menneske#Danish"
+  },
+  {
+   "francais": "la grand-mère (maternelle)",
+   "danois": "en mormor",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/mormor#Danish",
+   "definitions_source": [
+    "maternal grandmother"
+   ],
+   "frequence_rang": 4589,
+   "genre_verifie": "https://en.wiktionary.org/wiki/mormor#Danish"
+  },
+  {
+   "francais": "le grand-père (maternel)",
+   "danois": "en morfar",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/morfar#Danish",
+   "definitions_source": [
+    "grandfather (maternal grandfather)",
+    "nap"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/morfar#Danish"
+  },
+  {
+   "francais": "la grand-mère (paternelle)",
+   "danois": "en farmor",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/farmor#Danish",
+   "definitions_source": [
+    "paternal grandmother"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/farmor#Danish"
+  },
+  {
+   "francais": "le grand-père (paternel)",
+   "danois": "farfar",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/farfar#Danish",
+   "definitions_source": [
+    "paternal grandfather"
+   ],
+   "frequence_rang": 3963
+  },
+  {
+   "francais": "le mariage (noce)",
+   "danois": "bryllup",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bryllup#da",
+   "definitions_source": [
+    "Mariage, noces."
+   ],
+   "frequence_rang": 1705
+  },
+  {
+   "francais": "la personne",
+   "danois": "person",
+   "hint": null,
+   "categorie": "famille",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/person#da",
+   "definitions_source": [
+    "Personnage, personne."
+   ],
+   "frequence_rang": 697
+  },
+  {
+   "francais": "le médecin",
+   "danois": "en læge",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/l%C3%A6ge#da",
+   "definitions_source": [
+    "Docteur, docteur médecin, médecin."
+   ],
+   "frequence_rang": 877,
+   "genre_verifie": "https://en.wiktionary.org/wiki/l%C3%A6ge#Danish"
+  },
+  {
+   "francais": "l'infirmière",
+   "danois": "en sygeplejerske",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/sygeplejerske#da",
+   "definitions_source": [
+    "Infirmière, infirmier."
+   ],
+   "frequence_rang": 3432,
+   "genre_verifie": "https://en.wiktionary.org/wiki/sygeplejerske#Danish"
+  },
+  {
+   "francais": "la pharmacie",
+   "danois": "et apotek",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/apotek#da",
+   "definitions_source": [
+    "Pharmacie."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/apotek#Danish"
+  },
+  {
+   "francais": "l'hôpital",
+   "danois": "et hospital",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/hospital#da",
+   "definitions_source": [
+    "Hôpital."
+   ],
+   "frequence_rang": 2461,
+   "genre_verifie": "https://en.wiktionary.org/wiki/hospital#Danish"
+  },
+  {
+   "francais": "le dentiste",
+   "danois": "en tandlæge",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/tandl%C3%A6ge#da",
+   "definitions_source": [
+    "Dentiste."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/tandl%C3%A6ge#Danish"
+  },
+  {
+   "francais": "la dent",
+   "danois": "tand",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tand#da",
+   "definitions_source": [
+    "(anatomie) Dent."
+   ],
+   "frequence_rang": 4427
+  },
+  {
+   "francais": "l'œil",
+   "danois": "et øje",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/%C3%B8je#da",
+   "definitions_source": [
+    "Œil."
+   ],
+   "frequence_rang": 531,
+   "genre_verifie": "https://en.wiktionary.org/wiki/%C3%B8je#Danish"
+  },
+  {
+   "francais": "l'oreille",
+   "danois": "øre",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/%C3%B8re#da",
+   "definitions_source": [
+    "(anatomie) Oreille."
+   ],
+   "frequence_rang": 2042
+  },
+  {
+   "francais": "le nez",
+   "danois": "en næse",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/n%C3%A6se#da",
+   "definitions_source": [
+    "Nez."
+   ],
+   "frequence_rang": 2029,
+   "genre_verifie": "https://en.wiktionary.org/wiki/n%C3%A6se#Danish"
+  },
+  {
+   "francais": "la bouche",
+   "danois": "en mund",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/mund#da",
+   "definitions_source": [
+    "Bouche, embouchure."
+   ],
+   "frequence_rang": 878,
+   "genre_verifie": "https://en.wiktionary.org/wiki/mund#Danish"
+  },
+  {
+   "francais": "le cou, la gorge",
+   "danois": "hals",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/hals#da",
+   "definitions_source": [
+    "Col, cou."
+   ],
+   "frequence_rang": 2588
+  },
+  {
+   "francais": "le genou",
+   "danois": "knæ",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/kn%C3%A6#da",
+   "definitions_source": [
+    "Genou."
+   ],
+   "frequence_rang": 1803
+  },
+  {
+   "francais": "le doigt",
+   "danois": "finger",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/finger#da",
+   "definitions_source": [
+    "(anatomie) Doigt.",
+    "(anatomie) Doigt, orteil."
+   ],
+   "frequence_rang": 2533
+  },
+  {
+   "francais": "la peau",
+   "danois": "hud",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/hud#da",
+   "definitions_source": [
+    "(anatomie) Peau."
+   ],
+   "frequence_rang": 2002
+  },
+  {
+   "francais": "le sang",
+   "danois": "blod",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/blod#da",
+   "definitions_source": [
+    "Sang."
+   ],
+   "frequence_rang": 488
+  },
+  {
+   "francais": "la douleur",
+   "danois": "en smerte",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/smerte#da",
+   "definitions_source": [
+    "Douleur, mal, peine."
+   ],
+   "frequence_rang": 1314,
+   "genre_verifie": "https://en.wiktionary.org/wiki/smerte#Danish"
+  },
+  {
+   "francais": "la fièvre",
+   "danois": "feber",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/feber#da",
+   "definitions_source": [
+    "Fièvre."
+   ],
+   "frequence_rang": 4404
+  },
+  {
+   "francais": "le mal de tête",
+   "danois": "en hovedpine",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/hovedpine#Danish",
+   "definitions_source": [
+    "headache"
+   ],
+   "frequence_rang": 3795,
+   "genre_verifie": "https://en.wiktionary.org/wiki/hovedpine#Danish"
+  },
+  {
+   "francais": "le rhume",
+   "danois": "en forkølelse",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/fork%C3%B8lelse#da",
+   "definitions_source": [
+    "Rhume."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/fork%C3%B8lelse#Danish"
+  },
+  {
+   "francais": "le sommeil",
+   "danois": "søvn",
+   "hint": "indénombrable, genre en",
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/s%C3%B8vn#da",
+   "definitions_source": [
+    "Sommeil."
+   ],
+   "frequence_rang": 1223
+  },
+  {
+   "francais": "la maladie",
+   "danois": "en sygdom",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/sygdom#da",
+   "definitions_source": [
+    "(da) (médecine) Maladie, infirmité."
+   ],
+   "frequence_rang": 2304,
+   "genre_verifie": "https://en.wiktionary.org/wiki/sygdom#Danish"
+  },
+  {
+   "francais": "la santé",
+   "danois": "sundhed",
+   "hint": "indénombrable, genre en",
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/sundhed#da",
+   "definitions_source": [
+    "Santé."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "les cheveux",
+   "danois": "et hår",
+   "hint": "pl. hår (invariable)",
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/h%C3%A5r#da",
+   "definitions_source": [
+    "(anatomie) Cheveu, poil."
+   ],
+   "frequence_rang": 741,
+   "genre_verifie": "https://en.wiktionary.org/wiki/h%C3%A5r#Danish"
+  },
+  {
+   "francais": "le visage",
+   "danois": "et ansigt",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/ansigt#da",
+   "definitions_source": [
+    "Face, figure, visage."
+   ],
+   "frequence_rang": 587,
+   "genre_verifie": "https://en.wiktionary.org/wiki/ansigt#Danish"
+  },
+  {
+   "francais": "la hanche",
+   "danois": "en hofte",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/hofte#da",
+   "definitions_source": [
+    "Hanche."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/hofte#Danish"
+  },
+  {
+   "francais": "le poumon",
+   "danois": "en lunge",
+   "hint": "pl. lunger",
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/lunge#da",
+   "definitions_source": [
+    "(anatomie) Poumon."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/lunge#Danish"
+  },
+  {
+   "francais": "l'os",
+   "danois": "en knogle",
+   "hint": null,
+   "categorie": "sante",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/knogle#da",
+   "definitions_source": [
+    "Os."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/knogle#Danish"
+  },
+  {
+   "francais": "janvier",
+   "danois": "januar",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/januar#da",
+   "definitions_source": [
+    "Janvier."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "février",
+   "danois": "februar",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/februar#da",
+   "definitions_source": [
+    "Février."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "mars",
+   "danois": "marts",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/marts#da",
+   "definitions_source": [
+    "Le mois de mars."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "avril",
+   "danois": "april",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/april#da",
+   "definitions_source": [
+    "Avril."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "mai",
+   "danois": "maj",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/maj#da",
+   "definitions_source": [
+    "Mai, cinquième mois de l’année."
+   ],
+   "frequence_rang": 3686
+  },
+  {
+   "francais": "juin",
+   "danois": "juni",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/juni#da",
+   "definitions_source": [
+    "Juin."
+   ],
+   "frequence_rang": 3414
+  },
+  {
+   "francais": "juillet",
+   "danois": "juli",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/juli#da",
+   "definitions_source": [
+    "Juillet."
+   ],
+   "frequence_rang": 3698
+  },
+  {
+   "francais": "août",
+   "danois": "august",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/august#da",
+   "definitions_source": [
+    "Août."
+   ],
+   "frequence_rang": 3565
+  },
+  {
+   "francais": "septembre",
+   "danois": "september",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/september#da",
+   "definitions_source": [
+    "Septembre."
+   ],
+   "frequence_rang": 3488
+  },
+  {
+   "francais": "octobre",
+   "danois": "oktober",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/oktober#da",
+   "definitions_source": [
+    "Octobre."
+   ],
+   "frequence_rang": 3629
+  },
+  {
+   "francais": "novembre",
+   "danois": "november",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/november#da",
+   "definitions_source": [
+    "Novembre."
+   ],
+   "frequence_rang": 3941
+  },
+  {
+   "francais": "décembre",
+   "danois": "december",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/december#da",
+   "definitions_source": [
+    "Décembre."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le printemps",
+   "danois": "et forår",
+   "hint": "pl. forår (invariable)",
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/for%C3%A5r#da",
+   "definitions_source": [
+    "(cat=Saisons) Printemps."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/for%C3%A5r#Danish"
+  },
+  {
+   "francais": "l'été",
+   "danois": "en sommer",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/sommer#da",
+   "definitions_source": [
+    "(cat=Saisons) Été."
+   ],
+   "frequence_rang": 2443,
+   "genre_verifie": "https://en.wiktionary.org/wiki/sommer#Danish"
+  },
+  {
+   "francais": "l'automne",
+   "danois": "et efterår",
+   "hint": "pl. efterår (invariable)",
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/efter%C3%A5r#da",
+   "definitions_source": [
+    "(cat=Saisons) Automne, arrière-saison."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/efter%C3%A5r#Danish"
+  },
+  {
+   "francais": "l'hiver",
+   "danois": "en vinter",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/vinter#da",
+   "definitions_source": [
+    "(cat=Saisons) Hiver."
+   ],
+   "frequence_rang": 4885,
+   "genre_verifie": "https://en.wiktionary.org/wiki/vinter#Danish"
+  },
+  {
+   "francais": "le jour",
+   "danois": "en dag",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/dag#da",
+   "definitions_source": [
+    "Jour, journée."
+   ],
+   "frequence_rang": 125,
+   "genre_verifie": "https://en.wiktionary.org/wiki/dag#Danish"
+  },
+  {
+   "francais": "la seconde",
+   "danois": "sekund",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sekund#da",
+   "definitions_source": [
+    "Seconde."
+   ],
+   "frequence_rang": 1945
+  },
+  {
+   "francais": "minuit",
+   "danois": "en midnat",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/midnat#Danish",
+   "definitions_source": [
+    "midnight"
+   ],
+   "frequence_rang": 2558,
+   "genre_verifie": "https://en.wiktionary.org/wiki/midnat#Danish"
+  },
+  {
+   "francais": "le week-end",
+   "danois": "en weekend",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/weekend#da",
+   "definitions_source": [
+    "Week-end."
+   ],
+   "frequence_rang": 2250,
+   "genre_verifie": "https://en.wiktionary.org/wiki/weekend#Danish"
+  },
+  {
+   "francais": "le temps (durée)",
+   "danois": "tid",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/tid#da",
+   "definitions_source": [
+    "Durée, temps."
+   ],
+   "frequence_rang": 135
+  },
+  {
+   "francais": "bientôt",
+   "danois": "snart",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "adverbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/snart#da",
+   "definitions_source": [
+    "Bientôt, tout à l’heure."
+   ],
+   "frequence_rang": 258
+  },
+  {
+   "francais": "plus tard",
+   "danois": "senere",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "adjectif",
+   "genre": null,
+   "source": "https://en.wiktionary.org/wiki/senere#Danish",
+   "definitions_source": [
+    "later"
+   ],
+   "frequence_rang": 345
+  },
+  {
+   "francais": "déjà",
+   "danois": "allerede",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "adverbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/allerede#da",
+   "definitions_source": [
+    "Déjà."
+   ],
+   "frequence_rang": 310
+  },
+  {
+   "francais": "de nouveau, encore",
+   "danois": "igen",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "adverbe",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/igen#da",
+   "definitions_source": [
+    "De nouveau, encore."
+   ],
+   "frequence_rang": 116
+  },
+  {
+   "francais": "l'anniversaire",
+   "danois": "en fødselsdag",
+   "hint": null,
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/f%C3%B8dselsdag#Danish",
+   "definitions_source": [
+    "birthday"
+   ],
+   "frequence_rang": 1418,
+   "genre_verifie": "https://en.wiktionary.org/wiki/f%C3%B8dselsdag#Danish"
+  },
+  {
+   "francais": "l'horloge, la cloche",
+   "danois": "en klokke",
+   "hint": "pl. klokker",
+   "categorie": "temps",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/klokke#da",
+   "definitions_source": [
+    "Cloche, sonnette."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/klokke#Danish"
+  },
+  {
+   "francais": "quel, lequel",
+   "danois": "hvilken",
+   "hint": null,
+   "categorie": "questions",
+   "nature": "pronom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/hvilken#da",
+   "definitions_source": [
+    "Qui.",
+    "Quel.",
+    "Ce que."
+   ],
+   "frequence_rang": 321
+  },
+  {
+   "francais": "l'arbre",
+   "danois": "et træ",
+   "hint": "pl. træer",
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/tr%C3%A6#da",
+   "definitions_source": [
+    "Arbre.",
+    "Bois."
+   ],
+   "frequence_rang": 1373,
+   "genre_verifie": "https://en.wiktionary.org/wiki/tr%C3%A6#Danish"
+  },
+  {
+   "francais": "la fleur",
+   "danois": "blomst",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/blomst#da",
+   "definitions_source": [
+    "Fleur."
+   ],
+   "frequence_rang": 4046
+  },
+  {
+   "francais": "la forêt",
+   "danois": "skov",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/skov#da",
+   "definitions_source": [
+    "Bois, forêt."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "le lac",
+   "danois": "en sø",
+   "hint": "pl. søer",
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/s%C3%B8#da",
+   "definitions_source": [
+    "Lac.",
+    "Mer."
+   ],
+   "frequence_rang": 4244,
+   "genre_verifie": "https://en.wiktionary.org/wiki/s%C3%B8#Danish"
+  },
+  {
+   "francais": "la mer",
+   "danois": "et hav",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/hav#da",
+   "definitions_source": [
+    "Mer."
+   ],
+   "frequence_rang": 937,
+   "genre_verifie": "https://en.wiktionary.org/wiki/hav#Danish"
+  },
+  {
+   "francais": "la plage",
+   "danois": "strand",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/strand#da",
+   "definitions_source": [
+    "Plage."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la montagne",
+   "danois": "bjerg",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/bjerg#da",
+   "definitions_source": [
+    "Mont, montagne."
+   ],
+   "frequence_rang": 3971
+  },
+  {
+   "francais": "le ciel",
+   "danois": "himmel",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/himmel#da",
+   "definitions_source": [
+    "Ciel."
+   ],
+   "frequence_rang": 3720
+  },
+  {
+   "francais": "le vent",
+   "danois": "en vind",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/vind#da",
+   "definitions_source": [
+    "Vent."
+   ],
+   "frequence_rang": 2903,
+   "genre_verifie": "https://en.wiktionary.org/wiki/vind#Danish"
+  },
+  {
+   "francais": "le nuage",
+   "danois": "sky",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sky#da",
+   "definitions_source": [
+    "(météorologie) Nuage."
+   ],
+   "frequence_rang": 3654
+  },
+  {
+   "francais": "l'étoile",
+   "danois": "stjerne",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/stjerne#da",
+   "definitions_source": [
+    "(astronomie) Étoile."
+   ],
+   "frequence_rang": 1775
+  },
+  {
+   "francais": "la lune",
+   "danois": "en måne",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/m%C3%A5ne#da",
+   "definitions_source": [
+    "Lune."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/m%C3%A5ne#Danish"
+  },
+  {
+   "francais": "l'herbe",
+   "danois": "græs",
+   "hint": "indénombrable, genre et",
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/gr%C3%A6s#da",
+   "definitions_source": [
+    "(da) (botanique) Herbe."
+   ],
+   "frequence_rang": 4203
+  },
+  {
+   "francais": "l'oiseau",
+   "danois": "en fugl",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/fugl#da",
+   "definitions_source": [
+    "(zoologie) Oiseau."
+   ],
+   "frequence_rang": 1882,
+   "genre_verifie": "https://en.wiktionary.org/wiki/fugl#Danish"
+  },
+  {
+   "francais": "le chien",
+   "danois": "en hund",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/hund#da",
+   "definitions_source": [
+    "Chien, clébard (animal)."
+   ],
+   "frequence_rang": 707,
+   "genre_verifie": "https://en.wiktionary.org/wiki/hund#Danish"
+  },
+  {
+   "francais": "le chat",
+   "danois": "en kat",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/kat#da",
+   "definitions_source": [
+    "Chat."
+   ],
+   "frequence_rang": 1817,
+   "genre_verifie": "https://en.wiktionary.org/wiki/kat#Danish"
+  },
+  {
+   "francais": "le cheval",
+   "danois": "en hest",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/hest#da",
+   "definitions_source": [
+    "Cheval (animal)."
+   ],
+   "frequence_rang": 1186,
+   "genre_verifie": "https://en.wiktionary.org/wiki/hest#Danish"
+  },
+  {
+   "francais": "la vache",
+   "danois": "en ko",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/ko#da",
+   "definitions_source": [
+    "Vache."
+   ],
+   "frequence_rang": 3353,
+   "genre_verifie": "https://en.wiktionary.org/wiki/ko#Danish"
+  },
+  {
+   "francais": "l'île",
+   "danois": "en ø",
+   "hint": "pl. øer",
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/%C3%B8#da",
+   "definitions_source": [
+    "(géographie) Île."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/%C3%B8#Danish"
+  },
+  {
+   "francais": "la rivière",
+   "danois": "en å",
+   "hint": null,
+   "categorie": "nature",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/%C3%A5#da",
+   "definitions_source": [
+    "(géographie) Ruisseau, petite rivière."
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/%C3%A5#Danish"
+  },
+  {
+   "francais": "le film",
+   "danois": "film",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/film#da",
+   "definitions_source": [
+    "(cinéma) Film, pellicule."
+   ],
+   "frequence_rang": 652
+  },
+  {
+   "francais": "la musique",
+   "danois": "musik",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/musik#da",
+   "definitions_source": [
+    "Musique."
+   ],
+   "frequence_rang": 992
+  },
+  {
+   "francais": "le livre",
+   "danois": "en bog",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/bog#da",
+   "definitions_source": [
+    "(édition) Livre."
+   ],
+   "frequence_rang": 715,
+   "genre_verifie": "https://en.wiktionary.org/wiki/bog#Danish"
+  },
+  {
+   "francais": "la chanson",
+   "danois": "en sang",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/sang#Danish",
+   "definitions_source": [
+    "song",
+    "singing"
+   ],
+   "frequence_rang": 984,
+   "genre_verifie": "https://en.wiktionary.org/wiki/sang#Danish"
+  },
+  {
+   "francais": "le jeu",
+   "danois": "spil",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/spil#da",
+   "definitions_source": [
+    "Jeu."
+   ],
+   "frequence_rang": 612
+  },
+  {
+   "francais": "le football",
+   "danois": "en fodbold",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/fodbold#da",
+   "definitions_source": [
+    "Football."
+   ],
+   "frequence_rang": 2631,
+   "genre_verifie": "https://en.wiktionary.org/wiki/fodbold#Danish"
+  },
+  {
+   "francais": "le concert",
+   "danois": "koncert",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/koncert#da",
+   "definitions_source": [
+    "(musique) Concert."
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "la fête",
+   "danois": "fest",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/fest#da",
+   "definitions_source": [
+    "Fête."
+   ],
+   "frequence_rang": 764
+  },
+  {
+   "francais": "le journal",
+   "danois": "en avis",
+   "hint": "pl. aviser",
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/avis#da",
+   "definitions_source": [
+    "Journal, quotidien.",
+    "Gazette, journal."
+   ],
+   "frequence_rang": 3409,
+   "genre_verifie": "https://en.wiktionary.org/wiki/avis#Danish"
+  },
+  {
+   "francais": "la télévision",
+   "danois": "fjernsyn",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/fjernsyn#da",
+   "definitions_source": [
+    "Télévision."
+   ],
+   "frequence_rang": 3598
+  },
+  {
+   "francais": "la promenade",
+   "danois": "en gåtur",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/g%C3%A5tur#Danish",
+   "definitions_source": [
+    "a walk"
+   ],
+   "frequence_rang": null,
+   "genre_verifie": "https://en.wiktionary.org/wiki/g%C3%A5tur#Danish"
+  },
+  {
+   "francais": "la photo",
+   "danois": "et billede",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": "n",
+   "source": "https://fr.wiktionary.org/wiki/billede#da",
+   "definitions_source": [
+    "Portrait.",
+    "Image."
+   ],
+   "frequence_rang": 754,
+   "genre_verifie": "https://en.wiktionary.org/wiki/billede#Danish"
+  },
+  {
+   "francais": "le sport",
+   "danois": "sport",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": null,
+   "source": "https://fr.wiktionary.org/wiki/sport#da",
+   "definitions_source": [
+    "Sport."
+   ],
+   "frequence_rang": 3296
+  },
+  {
+   "francais": "la danse",
+   "danois": "en dans",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://en.wiktionary.org/wiki/dans#Danish",
+   "definitions_source": [
+    "a dance"
+   ],
+   "frequence_rang": 1684,
+   "genre_verifie": "https://en.wiktionary.org/wiki/dans#Danish"
+  },
+  {
+   "francais": "le ballon",
+   "danois": "en bold",
+   "hint": null,
+   "categorie": "loisirs",
+   "nature": "nom",
+   "genre": "c",
+   "source": "https://fr.wiktionary.org/wiki/bold#da",
+   "definitions_source": [
+    "Balle, ballon."
+   ],
+   "frequence_rang": 2816,
+   "genre_verifie": "https://en.wiktionary.org/wiki/bold#Danish"
+  },
+  {
+   "francais": "bonjour (le matin)",
+   "danois": "godmorgen",
+   "hint": "le matin",
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Bonjour = Godmorgen"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "à plus tard",
+   "danois": "vi ses senere",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "À plus tard = Vi ses senere"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "à demain",
+   "danois": "vi ses i morgen",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "A demain = Vi ses i morgen"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "merci pour ton aide",
+   "danois": "tak for hjælpen",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Merci pour votre aide = Tak for hjœlpen"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "je t'en prie",
+   "danois": "det var så lidt",
+   "hint": "réponse à « merci »",
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Je vous en prie = Det var så lidt"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "d'accord",
+   "danois": "okay, det er i orden",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "D'accord = Okay, det er I orden"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "j'ai compris",
+   "danois": "jeg har forstået",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "J'ai compris = Jeg har forstået"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "je suis en retard",
+   "danois": "jeg er forsinket",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Je suis en retard = Jeg er forsinket"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "je suis perdu",
+   "danois": "jeg er faret vild",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Je suis perdu = Jeg er faret vild"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "je t'aime",
+   "danois": "jeg elsker dig",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Je t'aime = Jeg elsker dig"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "je suis heureux",
+   "danois": "jeg er glad",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Je suis heureux = Jeg er glad"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "je suis triste",
+   "danois": "jeg er ked af det",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Je suis triste = Jeg er ked af det"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "j'ai froid",
+   "danois": "jeg fryser",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "J'ai froid = Jeg fryser"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "j'ai trop chaud",
+   "danois": "jeg har det for varmt",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "J'ai chaud = Jeg har det for varmt"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "c'est parfait",
+   "danois": "det er perfekt",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "C'est parfait = Det er perfekt"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "c'est une bonne idée",
+   "danois": "det er en god idé",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "C'est une bonne idée = Det er en god idé"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "oui, avec plaisir",
+   "danois": "ja, meget gerne",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Oui, avec plaisir = Ja, meget gerne"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "félicitations !",
+   "danois": "tillykke!",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Félicitations ! = Tillykke!"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "bon anniversaire !",
+   "danois": "tillykke med fødselsdagen!",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Bon anniversaire ! = Tillykke med fødselsdagen !"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "bonne année !",
+   "danois": "godt nytår!",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Bonne année ! = Godt nytår!"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "moi aussi",
+   "danois": "det samme her",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Moi aussi = Det samme her"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "c'est un peu trop cher pour moi",
+   "danois": "det er lidt for dyrt for mig",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "C'est un peu trop cher pour moi, merci = Det er lidt for dyrt for mig"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "je travaille ici",
+   "danois": "jeg arbejder her",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Je travaille ici = Jeg arbejder her"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "oui, j'habite ici",
+   "danois": "ja, jeg bor her",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Oui, j'habite ici = Ja, jeg bor her"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "j'ai envie de me reposer",
+   "danois": "jeg har lyst til at slappe af",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "J'ai envie de me reposer = Jeg har lyst til at slappe af"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "non merci, je suis assez fatigué",
+   "danois": "nej tak, jeg er ret træt",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Non merci, je suis assez fatigué = Nej tak jeg er ret træt"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "je joue au tennis",
+   "danois": "jeg spiller tennis",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Je joue au tennis = Jeg spiller tennis"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "rien, merci",
+   "danois": "ingenting, tak",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Rien, merci = Ingenting, tak"
+   ],
+   "frequence_rang": null
+  },
+  {
+   "francais": "laissez-moi tranquille !",
+   "danois": "lad mig være i fred",
+   "hint": null,
+   "categorie": "phrases",
+   "nature": "expression",
+   "genre": null,
+   "source": "https://www.loecsen.com/fr/vocabulaire-danois",
+   "definitions_source": [
+    "Laissez-moi tranquille ! = Lad mig være I fred"
+   ],
+   "frequence_rang": null
+  }
+ ]
+}
