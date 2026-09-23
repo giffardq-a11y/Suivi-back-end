@@ -1,5 +1,5 @@
 {
- "source": "Recettes rédigées pour ce projet ; macros calculées depuis app/data/ingredients.json (CIQUAL 2020, ANSES). Recettes marquées « origine » : reprises d'eatthismuch.com (macros annoncées conservées pour contrôle), recalculées avec CIQUAL.",
+ "source": "Recettes rédigées pour ce projet ; macros calculées depuis app/data/ingredients.json (CIQUAL 2020, ANSES). Recettes marquées « origine » : reprises d'eatthismuch.com, bbcgoodfood.com, jow.fr ou jamieoliver.com (macros annoncées conservées pour contrôle), recalculées avec CIQUAL.",
  "recettes": [
   {
    "id": "pdj-porridge-banane-amandes",
@@ -10538,6 +10538,3099 @@
     "batch",
     "congelable"
    ]
+  },
+  {
+   "id": "pdj-haricots-blancs-fumes-sur-pain-bbc",
+   "nom": "Haricots blancs à la tomate fumée sur pain grillé",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "huile_olive",
+     "quantite_g": 7
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 40
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 50
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 5
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 227
+    },
+    {
+     "cle": "vinaigre_cidre",
+     "quantite_g": 10
+    },
+    {
+     "cle": "haricots_blancs",
+     "quantite_g": 210
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 40
+    }
+   ],
+   "etapes": [
+    "Faire fondre l'oignon et le poivron 10 à 15 min dans l'huile, ajouter la moitié de l'ail écrasé, les tomates, le paprika et le vinaigre.",
+    "Ajouter les haricots égouttés et mijoter 10 min jusqu'à ce que la sauce épaississe.",
+    "Griller le pain, le frotter avec le reste d'ail et le garnir de haricots, avec un filet d'huile et du persil."
+   ],
+   "tags": [
+    "poele",
+    "vegetalien",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "bbcgoodfood.com",
+    "url": "https://www.bbcgoodfood.com/recipes/smoky-beans-toast",
+    "nom_original": "Smoky beans on toast",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 380.0,
+     "proteines": 13.0,
+     "glucides": 42.0,
+     "lipides": 14.0,
+     "fibres": 15.0
+    }
+   }
+  },
+  {
+   "id": "din-oeufs-turque-yaourt-jow",
+   "nom": "Œufs à la turque, yaourt et huile pimentée",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 8,
+   "ingredients": [
+    {
+     "cle": "ail",
+     "quantite_g": 1
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 80
+    },
+    {
+     "cle": "yaourt_grec",
+     "quantite_g": 150
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 28
+    }
+   ],
+   "etapes": [
+    "Cuire les œufs 6 min à l'eau bouillante, les refroidir et les écaler.",
+    "Faire dorer l'ail en lamelles 1 à 2 min dans l'huile d'olive, ajouter hors du feu le piment d'Espelette.",
+    "Étaler le yaourt grec, poser les œufs, arroser d'huile pimentée et servir avec le pain grillé."
+   ],
+   "tags": [
+    "sale",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/oeufs-a-la-turque-85g7cdutf176ju3o0aee",
+    "nom_original": "Œufs à la turque",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 476.0,
+     "proteines": 26.0,
+     "glucides": 47.0,
+     "lipides": 27.0,
+     "fibres": 4.0
+    },
+    "remarque": "Macros du site hors huile de placard ; l'huile est comptée dans les macros de l'app."
+   }
+  },
+  {
+   "id": "pdj-wrap-oeuf-dinde-champignons-jow",
+   "nom": "Wrap complet œuf, dinde et champignons",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 14,
+   "ingredients": [
+    {
+     "cle": "tortilla",
+     "quantite_g": 45
+    },
+    {
+     "cle": "blanc_dinde",
+     "quantite_g": 40
+    },
+    {
+     "cle": "champignon",
+     "quantite_g": 60
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "mozzarella",
+     "quantite_g": 15
+    },
+    {
+     "cle": "pesto",
+     "quantite_g": 2
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Battre l'œuf avec le pesto, sel et poivre, le verser dans une poêle huilée et poser la tortilla dessus ; cuire 2 à 3 min puis retourner.",
+    "Garnir de champignons émincés, de dinde en morceaux et de mozzarella, replier et laisser dorer 30 s."
+   ],
+   "tags": [
+    "poele",
+    "sale",
+    "rapide"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/wrap-complet-oeuf-dinde-et-champignons-91oyc60x6pls02sg178h",
+    "nom_original": "Wrap complet œuf, dinde & champignons",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 369.0,
+     "proteines": 22.0,
+     "glucides": 33.0,
+     "lipides": 16.0,
+     "fibres": 3.0
+    }
+   }
+  },
+  {
+   "id": "dej-bowl-riz-poulet-carottes-avocat-jow",
+   "nom": "Bowl riz, poulet, carottes râpées et avocat",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 28,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 150
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 70
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 100
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 38
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 15
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 18
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 15
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 1
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Cuire le riz. Faire revenir l'échalote émincée 2 min dans l'huile, ajouter le poulet en morceaux et l'ail, cuire 6 à 8 min.",
+    "Verser la sauce soja et poursuivre 1 à 2 min.",
+    "Servir sur le riz avec les carottes râpées et l'avocat, napper de skyr assaisonné au piment d'Espelette."
+   ],
+   "tags": [
+    "poele",
+    "plat-complet"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/bowl-proteine-riz-et-poulet-96d5f0laaiez7pmj0e9e",
+    "nom_original": "Bowl protéiné riz & poulet",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 614.0,
+     "proteines": 47.0,
+     "glucides": 71.0,
+     "lipides": 14.0,
+     "fibres": 7.0
+    }
+   }
+  },
+  {
+   "id": "dej-saumon-harissa-semoule-tomates-sechees-jow",
+   "nom": "Saumon à la harissa, semoule aux tomates séchées",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 14,
+   "ingredients": [
+    {
+     "cle": "saumon",
+     "quantite_g": 125
+    },
+    {
+     "cle": "semoule",
+     "quantite_g": 60
+    },
+    {
+     "cle": "harissa",
+     "quantite_g": 1
+    },
+    {
+     "cle": "tomate_sechee",
+     "quantite_g": 40
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Badigeonner le saumon de harissa et d'huile d'olive, saler et laisser mariner.",
+    "Couvrir la semoule d'eau chaude 5 min, l'égrainer et ajouter les tomates séchées et le persil.",
+    "Cuire le saumon 3 min de chaque côté à feu vif et le servir sur la semoule."
+   ],
+   "tags": [
+    "poele",
+    "poisson",
+    "rapide"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/saumon-a-la-harissa-8e0ghdodaffp0uqp0zre",
+    "nom_original": "Saumon à la harissa",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 531.0,
+     "proteines": 34.0,
+     "glucides": 49.0,
+     "lipides": 21.0,
+     "fibres": 6.0
+    },
+    "remarque": "Macros du site hors huile de placard ; l'huile est comptée dans les macros de l'app."
+   }
+  },
+  {
+   "id": "dej-linguine-tomates-crevettes-jow",
+   "nom": "Linguine aux tomates et crevettes",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 12,
+   "ingredients": [
+    {
+     "cle": "pates",
+     "quantite_g": 100
+    },
+    {
+     "cle": "crevette",
+     "quantite_g": 100
+    },
+    {
+     "cle": "tomate_concassee",
+     "quantite_g": 150
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Cuire les pâtes. Faire revenir les crevettes 1 min dans l'huile avec les herbes.",
+    "Ajouter les tomates pelées en les écrasant, saler, poivrer, puis mélanger avec les pâtes égouttées."
+   ],
+   "tags": [
+    "poele",
+    "rapide",
+    "poisson"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/pates-tomates-et-crevettes-8dpbdodc7e9s9jc40qr9",
+    "nom_original": "Pâtes tomates & crevettes",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 457.0,
+     "proteines": 32.0,
+     "glucides": 71.0,
+     "lipides": 3.0,
+     "fibres": 5.0
+    },
+    "remarque": "Macros du site hors huile de placard ; l'huile est comptée dans les macros de l'app."
+   }
+  },
+  {
+   "id": "dej-linguine-thon-tomates-sechees-jow",
+   "nom": "Linguine au thon et tomates séchées",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 60
+    },
+    {
+     "cle": "pates",
+     "quantite_g": 100
+    },
+    {
+     "cle": "tomate_sechee",
+     "quantite_g": 40
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 1
+    }
+   ],
+   "etapes": [
+    "Cuire les pâtes en gardant 2 c. à s. d'eau de cuisson.",
+    "Faire revenir l'ail râpé et les tomates séchées en lamelles 2 min, ajouter le thon émietté et l'eau de cuisson.",
+    "Mélanger avec les pâtes égouttées et le persil."
+   ],
+   "tags": [
+    "poele",
+    "rapide",
+    "poisson"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/pates-au-thon-8dtcesvb21e910lk0hur",
+    "nom_original": "Pâtes au thon",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 482.0,
+     "proteines": 30.0,
+     "glucides": 72.0,
+     "lipides": 7.0,
+     "fibres": 6.0
+    }
+   }
+  },
+  {
+   "id": "dej-brochettes-dinde-paprika-semoule-jow",
+   "nom": "Brochettes de dinde au paprika, haricots verts et semoule",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 27,
+   "ingredients": [
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 150
+    },
+    {
+     "cle": "haricot_vert",
+     "quantite_g": 150
+    },
+    {
+     "cle": "semoule",
+     "quantite_g": 60
+    },
+    {
+     "cle": "yaourt_grec",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 7
+    }
+   ],
+   "etapes": [
+    "Cuire les haricots verts 10 min à l'eau bouillante salée.",
+    "Couper la dinde en lanières, l'enrober de paprika et d'huile, l'enfiler sur des piques et la cuire 10 à 12 min à la poêle.",
+    "Faire gonfler la semoule dans le même volume d'eau bouillante, servir avec le yaourt grec assaisonné."
+   ],
+   "tags": [
+    "poele",
+    "plat-complet"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/brochettes-dinde-haricots-et-semoule-8il409afg3eokpaf0p5b",
+    "nom_original": "Brochettes dinde, haricots & semoule",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 450.0,
+     "proteines": 47.0,
+     "glucides": 52.0,
+     "lipides": 6.0,
+     "fibres": 7.0
+    },
+    "remarque": "Macros du site hors huile de placard ; l'huile est comptée dans les macros de l'app."
+   }
+  },
+  {
+   "id": "dej-tofu-sauce-cacahuete-riz-brocoli-jow",
+   "nom": "Tofu sauce cacahuète, riz et brocoli",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 27,
+   "ingredients": [
+    {
+     "cle": "tofu",
+     "quantite_g": 80
+    },
+    {
+     "cle": "brocoli",
+     "quantite_g": 100
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 70
+    },
+    {
+     "cle": "beurre_cacahuete",
+     "quantite_g": 16
+    },
+    {
+     "cle": "sauce_soja",
+     "quantite_g": 18
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 2
+    },
+    {
+     "cle": "farine",
+     "quantite_g": 16
+    }
+   ],
+   "etapes": [
+    "Cuire le riz et le brocoli en fleurettes 6 min à l'eau salée.",
+    "Enrober le tofu en dés de farine et le faire griller 5 min à la poêle.",
+    "Mélanger beurre de cacahuète, sauce soja, ail râpé et un peu d'eau, verser sur le tofu et cuire 1 à 2 min. Servir avec le riz et le brocoli."
+   ],
+   "tags": [
+    "poele",
+    "vegetalien",
+    "vegetarien",
+    "plat-complet"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/tofu-cacahuetes-riz-et-brocoli-8vrj3lffamsg03i60qh6",
+    "nom_original": "Tofu cacahuètes, riz & brocoli",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 613.0,
+     "proteines": 27.0,
+     "glucides": 78.0,
+     "lipides": 19.0,
+     "fibres": 6.0
+    }
+   }
+  },
+  {
+   "id": "dej-salade-lentilles-saumon-echalote-jow",
+   "nom": "Salade de lentilles au saumon et échalote",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 13,
+   "ingredients": [
+    {
+     "cle": "saumon",
+     "quantite_g": 125
+    },
+    {
+     "cle": "lentilles",
+     "quantite_g": 80
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 15
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 2
+    },
+    {
+     "cle": "vinaigre_balsamique",
+     "quantite_g": 8
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    }
+   ],
+   "etapes": [
+    "Cuire le saumon 6 min côté peau puis 1 min de chaque côté, et l'émietter.",
+    "Mélanger moutarde, vinaigre balsamique et huile d'olive.",
+    "Dresser les lentilles cuites rincées avec le saumon et l'échalote émincée, arroser de vinaigrette."
+   ],
+   "tags": [
+    "poele",
+    "poisson",
+    "tiede"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/salade-lentilles-et-saumon-8j2261b3kxsgk9wp19zd",
+    "nom_original": "Salade lentilles & saumon",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 467.0,
+     "proteines": 43.0,
+     "glucides": 29.0,
+     "lipides": 16.0,
+     "fibres": 17.0
+    },
+    "remarque": "Macros du site hors huile de placard ; l'huile est comptée dans les macros de l'app."
+   }
+  },
+  {
+   "id": "dej-salade-lyonnaise-jow",
+   "nom": "Salade lyonnaise, œuf mollet, lardons et parmesan",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 9,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "lardons",
+     "quantite_g": 50
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 80
+    },
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 40
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 5
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 30
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    }
+   ],
+   "etapes": [
+    "Cuire l'œuf 5 min 30 à l'eau bouillante, le refroidir puis l'écaler.",
+    "Faire revenir les lardons 2 à 3 min, puis dorer le pain dans la même poêle.",
+    "Servir la salade avec les lardons, les croûtons, l'œuf, les copeaux de parmesan et la vinaigrette moutarde-huile."
+   ],
+   "tags": [
+    "poele",
+    "rapide"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/salade-lyonnaise-81gnf3ccmf3k00tp0dw1",
+    "nom_original": "Salade Lyonnaise",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 462.0,
+     "proteines": 29.0,
+     "glucides": 21.0,
+     "lipides": 28.0,
+     "fibres": 3.0
+    },
+    "remarque": "Macros du site hors huile de placard ; l'huile est comptée dans les macros de l'app."
+   }
+  },
+  {
+   "id": "dej-salade-quinoa-poulet-brocoli-lard-jow",
+   "nom": "Salade de quinoa, poulet, brocoli et lard",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 21,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 150
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 100
+    },
+    {
+     "cle": "brocoli",
+     "quantite_g": 100
+    },
+    {
+     "cle": "lardons",
+     "quantite_g": 30
+    },
+    {
+     "cle": "quinoa",
+     "quantite_g": 24
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 2
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    }
+   ],
+   "etapes": [
+    "Cuire le brocoli 5 min à l'eau salée et le quinoa selon le paquet.",
+    "Faire revenir le poulet en tranches 2 à 3 min par face, puis le lard en morceaux.",
+    "Dresser la sucrine, le quinoa, le poulet, le brocoli et le lard, assaisonner de vinaigrette à la moutarde."
+   ],
+   "tags": [
+    "poele",
+    "tiede"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/salade-quinoa-poulet-et-brocoli-8y7kj0t9cju802zl1dq3",
+    "nom_original": "Salade quinoa, poulet & brocoli",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 411.0,
+     "proteines": 48.0,
+     "glucides": 23.0,
+     "lipides": 12.0,
+     "fibres": 7.0
+    },
+    "remarque": "Macros du site hors huile de placard ; l'huile est comptée dans les macros de l'app."
+   }
+  },
+  {
+   "id": "dej-poulet-grecque-cereales-jow",
+   "nom": "Poulet mariné à la grecque, salade et céréales",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 25,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 150
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 100
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 100
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 30
+    },
+    {
+     "cle": "yaourt_grec",
+     "quantite_g": 15
+    },
+    {
+     "cle": "boulgour",
+     "quantite_g": 28
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 28
+    }
+   ],
+   "etapes": [
+    "Mariner le poulet 10 min dans 1 c. à s. d'huile et le paprika.",
+    "Mélanger concombre, tomate et oignon rouge en dés avec un filet d'huile.",
+    "Cuire le poulet 4 à 5 min par face, servir avec les céréales réchauffées, la salade et le yaourt assaisonné."
+   ],
+   "tags": [
+    "poele",
+    "plat-complet"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/poulet-a-la-grecque-et-melange-de-cereales-8bzlc113m4xw3iuw13mj",
+    "nom_original": "Poulet à la grecque & mélange de céréales",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 613.0,
+     "proteines": 41.0,
+     "glucides": 23.0,
+     "lipides": 40.0,
+     "fibres": 4.0
+    }
+   }
+  },
+  {
+   "id": "dej-poulet-poivrons-pommes-terre-amandes-four-bbc",
+   "nom": "Plaque de poulet, poivrons, pommes de terre et amandes",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 55,
+   "ingredients": [
+    {
+     "cle": "poulet_cuisse",
+     "quantite_g": 125
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 112
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 125
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 75
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 1
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 10
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 12
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 42
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C. Mélanger poulet, oignons, pommes de terre et poivrons avec l'ail, les épices, l'huile et le citron.",
+    "Rôtir 40 min en retournant à mi-cuisson, ajouter les amandes les 8 dernières minutes.",
+    "Servir avec une cuillerée de fromage blanc 0 %."
+   ],
+   "tags": [
+    "four",
+    "batch",
+    "plat-complet"
+   ],
+   "origine": {
+    "site": "bbcgoodfood.com",
+    "url": "https://www.bbcgoodfood.com/recipes/chicken-red-pepper-almond-traybake",
+    "nom_original": "Chicken, red pepper & almond traybake",
+    "portions_originales": 4,
+    "macros_annoncees": {
+     "calories": 442.0,
+     "proteines": 34.0,
+     "glucides": 34.0,
+     "lipides": 20.0,
+     "fibres": 5.0
+    }
+   }
+  },
+  {
+   "id": "dej-poisson-harissa-boulgour-olives-bbc",
+   "nom": "Poisson blanc à la harissa, taboulé de boulgour",
+   "type": "dejeuner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "boulgour",
+     "quantite_g": 50
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 50
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 50
+    },
+    {
+     "cle": "olive_verte",
+     "quantite_g": 12
+    },
+    {
+     "cle": "harissa",
+     "quantite_g": 15
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 7
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 2
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 30
+    },
+    {
+     "cle": "cabillaud",
+     "quantite_g": 120
+    }
+   ],
+   "etapes": [
+    "Cuire le boulgour, le rincer et le mélanger avec concombre, tomates cerises, olives et persil.",
+    "Mélanger harissa, miel, ail, jus de citron et un peu d'huile.",
+    "Faire dorer l'oignon 4 à 5 min, ajouter le poisson et la sauce harissa et cuire 3 à 4 min par face. Servir sur le boulgour."
+   ],
+   "tags": [
+    "poele",
+    "poisson"
+   ],
+   "origine": {
+    "site": "bbcgoodfood.com",
+    "url": "https://www.bbcgoodfood.com/recipes/harissa-fish-with-bulgur-salad",
+    "nom_original": "Harissa fish with bulgur salad",
+    "portions_originales": 2,
+    "macros_annoncees": {
+     "calories": 430.0,
+     "proteines": 35.0,
+     "glucides": 35.0,
+     "lipides": 15.0,
+     "fibres": 5.0
+    }
+   }
+  },
+  {
+   "id": "din-poulet-carottes-chou-fleur-pois-chiches-jow",
+   "nom": "Poulet, légumes rôtis aux pois chiches et sauce yaourt",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 48,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 150
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 150
+    },
+    {
+     "cle": "chou_fleur",
+     "quantite_g": 150
+    },
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 60
+    },
+    {
+     "cle": "yaourt_grec",
+     "quantite_g": 15
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    }
+   ],
+   "etapes": [
+    "Rôtir chou-fleur, carottes et pois chiches égouttés 30 à 40 min à 180 °C avec un filet d'huile.",
+    "Cuire le poulet 4 à 5 min par face à la poêle.",
+    "Mélanger le yaourt avec le zeste et le jus de citron et servir en sauce."
+   ],
+   "tags": [
+    "four",
+    "plat-complet"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/poulet-legumes-rotis-et-sauce-yaourt-8w963wktezhc02tg0chs",
+    "nom_original": "Poulet, légumes rôtis & sauce yaourt",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 383.0,
+     "proteines": 45.0,
+     "glucides": 27.0,
+     "lipides": 9.0,
+     "fibres": 13.0
+    },
+    "remarque": "Macros du site hors huile de placard ; l'huile est comptée dans les macros de l'app."
+   }
+  },
+  {
+   "id": "din-saumon-pommes-terre-haricots-verts-jow",
+   "nom": "Saumon, pommes de terre rôties et haricots verts",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 41,
+   "ingredients": [
+    {
+     "cle": "saumon",
+     "quantite_g": 125
+    },
+    {
+     "cle": "pomme_terre",
+     "quantite_g": 150
+    },
+    {
+     "cle": "haricot_vert",
+     "quantite_g": 150
+    },
+    {
+     "cle": "creme_legere",
+     "quantite_g": 15
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 60
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    }
+   ],
+   "etapes": [
+    "Rôtir les pommes de terre en fines lamelles 25 min à 190 °C avec un filet d'huile.",
+    "Ajouter le saumon assaisonné et cuire encore 8 à 10 min. Cuire les haricots verts 3 min à l'eau.",
+    "Servir avec la crème mélangée au zeste et au jus de citron."
+   ],
+   "tags": [
+    "four",
+    "poisson"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/saumon-pommes-de-terre-et-haricots-verts-8tnea80zkts16cux07aq",
+    "nom_original": "Saumon, pommes de terre & haricots verts",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 504.0,
+     "proteines": 32.0,
+     "glucides": 33.0,
+     "lipides": 25.0,
+     "fibres": 9.0
+    }
+   }
+  },
+  {
+   "id": "din-papillote-cabillaud-agrumes-riz-jow",
+   "nom": "Papillote de cabillaud aux agrumes et riz",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "cabillaud",
+     "quantite_g": 125
+    },
+    {
+     "cle": "riz_blanc",
+     "quantite_g": 70
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 15
+    },
+    {
+     "cle": "orange",
+     "quantite_g": 45
+    },
+    {
+     "cle": "echalote",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Préchauffer le four à 200 °C. Poser le cabillaud sur du papier cuisson avec l'échalote hachée, un filet d'huile et les tranches d'orange et de citron.",
+    "Fermer la papillote et cuire 10 min. Servir avec le riz."
+   ],
+   "tags": [
+    "four",
+    "poisson",
+    "leger"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/cabillaud-en-papillote-et-agrumes-8ek9gb04f3i8kcx70dk7",
+    "nom_original": "Cabillaud en papillote & agrumes",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 371.0,
+     "proteines": 26.0,
+     "glucides": 61.0,
+     "lipides": 2.0,
+     "fibres": 3.0
+    },
+    "remarque": "Macros du site hors huile de placard ; l'huile est comptée dans les macros de l'app."
+   }
+  },
+  {
+   "id": "din-salade-quinoa-maquereau-fume-petits-pois-jow",
+   "nom": "Salade de quinoa, maquereau fumé, concombre et petits pois",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 9,
+   "ingredients": [
+    {
+     "cle": "concombre",
+     "quantite_g": 75
+    },
+    {
+     "cle": "maquereau_fume",
+     "quantite_g": 100
+    },
+    {
+     "cle": "quinoa",
+     "quantite_g": 24
+    },
+    {
+     "cle": "petit_pois",
+     "quantite_g": 80
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 2
+    },
+    {
+     "cle": "vinaigre_cidre",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    }
+   ],
+   "etapes": [
+    "Cuire le quinoa, ébouillanter les petits pois.",
+    "Mélanger moutarde à l'ancienne, vinaigre de cidre et huile d'olive.",
+    "Dresser quinoa, concombre en dés, petits pois, maquereau émietté et menthe, arroser de vinaigrette."
+   ],
+   "tags": [
+    "froid",
+    "poisson",
+    "rapide"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/salade-concombre-et-maquereau-fume-8xrq7d376fc002uu16jr",
+    "nom_original": "Salade concombre & maquereau fumé",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 474.0,
+     "proteines": 27.0,
+     "glucides": 28.0,
+     "lipides": 26.0,
+     "fibres": 8.0
+    },
+    "remarque": "Macros du site hors huile de placard ; l'huile est comptée dans les macros de l'app."
+   }
+  },
+  {
+   "id": "din-bouchees-dinde-carottes-roties-jow",
+   "nom": "Bouchées de dinde et carottes rôties au yaourt",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 31,
+   "ingredients": [
+    {
+     "cle": "dinde_escalope",
+     "quantite_g": 150
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 12
+    },
+    {
+     "cle": "chapelure",
+     "quantite_g": 7
+    },
+    {
+     "cle": "carotte",
+     "quantite_g": 150
+    },
+    {
+     "cle": "roquette",
+     "quantite_g": 30
+    },
+    {
+     "cle": "yaourt_grec",
+     "quantite_g": 46
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 60
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Rôtir les carottes coupées en deux 20 à 25 min à 220 °C avec un filet d'huile.",
+    "Hacher la dinde, la mélanger avec l'œuf, le garam masala, la chapelure et le zeste de citron, former des galettes et les cuire 4 min par face.",
+    "Servir sur la sauce yaourt-citron avec les carottes et la roquette."
+   ],
+   "tags": [
+    "four",
+    "poele"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/bouchees-de-dinde-et-carottes-roties-au-yaourt-84su2orebri85u171719",
+    "nom_original": "Bouchées de dinde & carottes rôties au yaourt",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 379.0,
+     "proteines": 45.0,
+     "glucides": 28.0,
+     "lipides": 13.0,
+     "fibres": 6.0
+    }
+   }
+  },
+  {
+   "id": "din-poulet-cajun-quinoa-lentilles-abricots-bbc",
+   "nom": "Poulet cajun, quinoa, lentilles et abricots secs",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 35,
+   "ingredients": [
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 150
+    },
+    {
+     "cle": "quinoa",
+     "quantite_g": 25
+    },
+    {
+     "cle": "bouillon",
+     "quantite_g": 3
+    },
+    {
+     "cle": "abricot_sec",
+     "quantite_g": 25
+    },
+    {
+     "cle": "lentilles",
+     "quantite_g": 12
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 3
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 100
+    }
+   ],
+   "etapes": [
+    "Enrober le poulet d'épices cajun et le rôtir 20 min à 200 °C.",
+    "Cuire le quinoa 15 min dans le bouillon, en ajoutant abricots et lentilles les 5 dernières minutes, puis égoutter.",
+    "Faire fondre les oignons 10 à 15 min dans l'huile, mélanger au quinoa avec les oignons nouveaux et servir avec le poulet tranché."
+   ],
+   "tags": [
+    "four",
+    "batch",
+    "epice"
+   ],
+   "origine": {
+    "site": "bbcgoodfood.com",
+    "url": "https://www.bbcgoodfood.com/recipes/spicy-cajun-chicken-quinoa",
+    "nom_original": "Spicy Cajun chicken quinoa",
+    "portions_originales": 4,
+    "macros_annoncees": {
+     "calories": 386.0,
+     "proteines": 47.0,
+     "glucides": 35.0,
+     "lipides": 7.0,
+     "fibres": 5.0
+    }
+   }
+  },
+  {
+   "id": "din-thon-avocat-feuilles-laitue-bbc",
+   "nom": "Thon snacké et « mayo » d'avocat en feuilles de laitue",
+   "type": "diner",
+   "portions": 1,
+   "temps_min": 17,
+   "ingredients": [
+    {
+     "cle": "huile_colza",
+     "quantite_g": 2
+    },
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 140
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 75
+    },
+    {
+     "cle": "vinaigre_cidre",
+     "quantite_g": 2
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 60
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 120
+    }
+   ],
+   "etapes": [
+    "Saisir le thon huilé 1 min de chaque côté et le laisser reposer.",
+    "Écraser l'avocat avec le vinaigre de cidre (et un peu de moutarde) jusqu'à obtenir une texture de mayonnaise.",
+    "Garnir les feuilles de laitue de « mayo », de thon tranché et de tomates cerises."
+   ],
+   "tags": [
+    "poele",
+    "poisson",
+    "rapide"
+   ],
+   "origine": {
+    "site": "bbcgoodfood.com",
+    "url": "https://www.bbcgoodfood.com/recipes/tuna-mayo-wraps",
+    "nom_original": "Healthy tuna lettuce wraps",
+    "portions_originales": 2,
+    "macros_annoncees": {
+     "calories": 361.0,
+     "proteines": 40.0,
+     "glucides": 8.0,
+     "lipides": 17.0,
+     "fibres": 8.0
+    }
+   }
+  },
+  {
+   "id": "col-aiguillettes-poulet-satay-bbc",
+   "nom": "Aiguillettes de poulet satay au four",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "beurre_cacahuete",
+     "quantite_g": 16
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 2
+    },
+    {
+     "cle": "citron_vert",
+     "quantite_g": 5
+    },
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 150
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 50
+    }
+   ],
+   "etapes": [
+    "Mélanger beurre de cacahuète, ail râpé, curry, un trait de sauce soja et jus de citron vert.",
+    "Enrober le poulet en lanières et cuire 8 à 10 min au four à 200 °C.",
+    "Servir chaud ou froid avec des bâtonnets de concombre."
+   ],
+   "tags": [
+    "four",
+    "transportable"
+   ],
+   "origine": {
+    "site": "bbcgoodfood.com",
+    "url": "https://www.bbcgoodfood.com/recipes/nutty-chicken-sate-strips",
+    "nom_original": "Nutty chicken satay strips",
+    "portions_originales": 2,
+    "macros_annoncees": {
+     "calories": 276.0,
+     "proteines": 41.0,
+     "glucides": 3.0,
+     "lipides": 10.0,
+     "fibres": 2.0
+    }
+   }
+  },
+  {
+   "id": "col-salade-haricots-verts-oeuf-jow",
+   "nom": "Salade de haricots verts et œuf dur",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 14,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "haricot_vert",
+     "quantite_g": 250
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 5
+    },
+    {
+     "cle": "vinaigre_cidre",
+     "quantite_g": 5
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    }
+   ],
+   "etapes": [
+    "Cuire les haricots verts 10 à 12 min à l'eau salée et l'œuf 10 min.",
+    "Mélanger vinaigre, huile d'olive et moutarde.",
+    "Servir les haricots avec l'œuf en dés et la vinaigrette."
+   ],
+   "tags": [
+    "leger",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/salade-haricots-et-oeufs-85hxamt64gcmkgl10wb2",
+    "nom_original": "Salade haricots & œufs",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 179.0,
+     "proteines": 13.0,
+     "glucides": 11.0,
+     "lipides": 8.0,
+     "fibres": 7.0
+    },
+    "remarque": "Macros du site hors huile de placard ; l'huile est comptée dans les macros de l'app."
+   }
+  },
+  {
+   "id": "col-avoine-cuite-myrtilles-bbc",
+   "nom": "Petits gratins d'avoine aux myrtilles",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "boisson_amande",
+     "quantite_g": 50
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 30
+    },
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 25
+    },
+    {
+     "cle": "cannelle",
+     "quantite_g": 1
+    },
+    {
+     "cle": "yaourt_nature",
+     "quantite_g": 25
+    },
+    {
+     "cle": "myrtille",
+     "quantite_g": 30
+    }
+   ],
+   "etapes": [
+    "Battre la boisson d'amande, l'œuf, les flocons, 2 c. à s. d'eau, la cannelle et la vanille, répartir dans 2 ramequins.",
+    "Cuire 15 min à 200 °C et servir avec le yaourt et les myrtilles."
+   ],
+   "tags": [
+    "four",
+    "sucre",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "bbcgoodfood.com",
+    "url": "https://www.bbcgoodfood.com/recipes/cinnamon-baked-oats-with-blueberries",
+    "nom_original": "Healthy baked oats",
+    "portions_originales": 2,
+    "macros_annoncees": {
+     "calories": 190.0,
+     "proteines": 9.0,
+     "glucides": 22.0,
+     "lipides": 6.0,
+     "fibres": 3.0
+    }
+   }
+  },
+  {
+   "id": "pdj-tacos-oeufs-avocat-jambon-cru-jow",
+   "nom": "Tacos du matin : œufs brouillés, avocat et jambon cru",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 9,
+   "ingredients": [
+    {
+     "cle": "tortilla",
+     "quantite_g": 45
+    },
+    {
+     "cle": "avocat",
+     "quantite_g": 75
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "jambon_cru",
+     "quantite_g": 15
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 7
+    }
+   ],
+   "etapes": [
+    "Réchauffer la tortilla 30 s de chaque côté à la poêle.",
+    "Écraser l'avocat sur la tortilla, brouiller les œufs dans un filet d'huile.",
+    "Garnir d'œufs brouillés et de jambon cru, parsemer de coriandre."
+   ],
+   "tags": [
+    "poele",
+    "sale",
+    "rapide"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/breakfast-tacos-8lwn6tgg38g0jnle10wb",
+    "nom_original": "Breakfast tacos",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 596.0,
+     "proteines": 25.0,
+     "glucides": 33.0,
+     "lipides": 39.0,
+     "fibres": 6.0
+    }
+   }
+  },
+  {
+   "id": "pdj-tartines-seigle-oeufs-fromage-frais-jambon-jow",
+   "nom": "Tartines de seigle, œufs brouillés, fromage frais et jambon",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 7,
+   "ingredients": [
+    {
+     "cle": "pain_seigle",
+     "quantite_g": 50
+    },
+    {
+     "cle": "fromage_frais",
+     "quantite_g": 30
+    },
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 80
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 30
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    }
+   ],
+   "etapes": [
+    "Battre les œufs avec sel et poivre, les cuire 4 à 5 min à feu doux en remuant.",
+    "Tartiner le fromage frais sur le pain de seigle, ajouter les œufs, le jambon et la ciboulette."
+   ],
+   "tags": [
+    "poele",
+    "sale",
+    "rapide"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/tartines-oeufs-brouilles-fromage-frais-et-jambon-8uyz3rieelo3jgw60sfi",
+    "nom_original": "Tartines œufs brouillés, fromage frais & jambon",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 513.0,
+     "proteines": 39.0,
+     "glucides": 24.0,
+     "lipides": 29.0,
+     "fibres": 2.0
+    }
+   }
+  },
+  {
+   "id": "pdj-oeuf-coque-mouillettes-comte-jow",
+   "nom": "Œuf à la coque, mouillettes beurrées et comté",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 7,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "muffin_anglais",
+     "quantite_g": 60
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 5
+    },
+    {
+     "cle": "comte",
+     "quantite_g": 20
+    }
+   ],
+   "etapes": [
+    "Plonger l'œuf 3 à 4 min dans l'eau bouillante.",
+    "Toaster le muffin, le beurrer et le couper en mouillettes ; servir avec le comté."
+   ],
+   "tags": [
+    "sale",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/oeuf-a-la-coque-et-mouillettes-84b6bvxb7lwi1ijj04uu",
+    "nom_original": "Œuf à la coque & mouillettes",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 348.0,
+     "proteines": 20.0,
+     "glucides": 25.0,
+     "lipides": 18.0,
+     "fibres": 2.0
+    }
+   }
+  },
+  {
+   "id": "pdj-sandwich-jambon-fromage-blanc-tomate-etm",
+   "nom": "Sandwich complet jambon, fromage blanc et tomate",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 7,
+   "ingredients": [
+    {
+     "cle": "pain_complet",
+     "quantite_g": 56
+    },
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 57
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 60
+    },
+    {
+     "cle": "jambon_blanc",
+     "quantite_g": 56
+    }
+   ],
+   "etapes": [
+    "Griller le pain et tartiner chaque tranche de fromage blanc.",
+    "Garnir de jambon et de rondelles de tomate, refermer."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "transportable"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/ham-and-cottage-cheese-sandwich-4967292",
+    "nom_original": "Ham and Cottage Cheese Sandwich",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 283.9,
+     "proteines": 23.8,
+     "glucides": 29.9,
+     "lipides": 7.5,
+     "fibres": 4.8
+    },
+    "remarque": "Cottage cheese (absent de CIQUAL) remplacé par du fromage blanc 3 %."
+   }
+  },
+  {
+   "id": "pdj-omelette-saumon-fume-seigle-jamie",
+   "nom": "Omelette roulée au saumon fumé et pain de seigle",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 9,
+   "ingredients": [
+    {
+     "cle": "pain_seigle",
+     "quantite_g": 50
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 2
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 80
+    },
+    {
+     "cle": "saumon_fume",
+     "quantite_g": 50
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 30
+    },
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 30
+    }
+   ],
+   "etapes": [
+    "Émietter le pain de seigle dans une poêle avec un filet d'huile et le faire dorer, ajouter les épinards jusqu'à ce qu'ils tombent.",
+    "Verser les œufs battus, cuire 1 à 2 min, garnir de saumon fumé et de fromage blanc, rouler et servir avec du citron."
+   ],
+   "tags": [
+    "poele",
+    "sale",
+    "poisson"
+   ],
+   "origine": {
+    "site": "jamieoliver.com",
+    "url": "https://www.jamieoliver.com/recipes/egg/smoked-salmon-and-rye-omelette/",
+    "nom_original": "Smoked salmon & rye omelette",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 380.0,
+     "proteines": 33.5,
+     "glucides": 20.5,
+     "lipides": 18.4,
+     "fibres": 4.3
+    },
+    "remarque": "Cottage cheese (absent de CIQUAL) remplacé par du fromage blanc 3 %."
+   }
+  },
+  {
+   "id": "pdj-overnight-oats-banane-cacahuete-etm",
+   "nom": "Overnight oats banane, beurre de cacahuète et chocolat",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 27
+    },
+    {
+     "cle": "boisson_amande",
+     "quantite_g": 80
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 180
+    },
+    {
+     "cle": "beurre_cacahuete",
+     "quantite_g": 16
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 59
+    },
+    {
+     "cle": "chocolat_noir",
+     "quantite_g": 11
+    }
+   ],
+   "etapes": [
+    "Mélanger flocons, boisson d'amande, fromage blanc 0 %, beurre de cacahuète, banane et chocolat dans un bocal.",
+    "Couvrir et laisser au frais une nuit (au moins 4 h), mélanger avant de servir."
+   ],
+   "tags": [
+    "prepare-la-veille",
+    "sans-cuisson",
+    "sucre",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/chunky-monkey-overnight-oats-5058764",
+    "nom_original": "Chunky Monkey Overnight Oats",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 413.8,
+     "proteines": 26.7,
+     "glucides": 52.2,
+     "lipides": 13.8,
+     "fibres": 6.4
+    }
+   }
+  },
+  {
+   "id": "pdj-tartine-thon-fromage-frais-radis-jow",
+   "nom": "Tartine thon, fromage frais, radis et feta",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 7,
+   "ingredients": [
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 40
+    },
+    {
+     "cle": "fromage_frais",
+     "quantite_g": 30
+    },
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 50
+    },
+    {
+     "cle": "radis",
+     "quantite_g": 50
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 75
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 30
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 30
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    }
+   ],
+   "etapes": [
+    "Griller le pain et le tartiner de fromage frais.",
+    "Ajouter concombre et radis en fines rondelles, le thon émietté et la feta, un filet d'huile d'olive."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "poisson"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/tartine-thon-fromage-frais-radis-et-salade-8sx65a9jkro0ma680ycq",
+    "nom_original": "Tartine thon, fromage frais, radis & salade",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 383.0,
+     "proteines": 23.0,
+     "glucides": 25.0,
+     "lipides": 21.0,
+     "fibres": 4.0
+    },
+    "remarque": "Macros du site hors huile/beurre de placard ; ils sont comptés dans les macros de l'app."
+   }
+  },
+  {
+   "id": "pdj-tartines-oeuf-mimosa-moutarde-etm",
+   "nom": "Tartines d'œuf dur écrasé à la moutarde",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "moutarde",
+     "quantite_g": 15
+    },
+    {
+     "cle": "mayonnaise",
+     "quantite_g": 14
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 56
+    }
+   ],
+   "etapes": [
+    "Cuire l'œuf 10 min, le refroidir, l'écaler et l'écraser.",
+    "Mélanger avec la moutarde et la mayonnaise, étaler sur le pain grillé."
+   ],
+   "tags": [
+    "sale",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/devilled-egg-toast-4932951",
+    "nom_original": "Devilled Egg Toast",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 315.5,
+     "proteines": 14.0,
+     "glucides": 25.2,
+     "lipides": 17.5,
+     "fibres": 4.0
+    }
+   }
+  },
+  {
+   "id": "pdj-pizza-pita-oeuf-epinards-etm",
+   "nom": "Pita façon pizza à l'œuf et aux épinards",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 15,
+   "ingredients": [
+    {
+     "cle": "pain_pita",
+     "quantite_g": 64
+    },
+    {
+     "cle": "mozzarella",
+     "quantite_g": 66
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 15
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 56
+    },
+    {
+     "cle": "parmesan",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Parsemer les pitas de mozzarella et d'origan, disposer les épinards en nid.",
+    "Casser un œuf au centre et passer 6 à 8 min sous le gril, puis parsemer de parmesan."
+   ],
+   "tags": [
+    "four",
+    "sale",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/breakfast-pita-pizza-34083",
+    "nom_original": "Breakfast pita pizza",
+    "portions_originales": 2,
+    "macros_annoncees": {
+     "calories": 434.6,
+     "proteines": 30.8,
+     "glucides": 38.6,
+     "lipides": 18.3,
+     "fibres": 5.4
+    }
+   }
+  },
+  {
+   "id": "pdj-oeufs-brouilles-houmous-etm",
+   "nom": "Œufs brouillés au houmous",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 10,
+   "ingredients": [
+    {
+     "cle": "houmous",
+     "quantite_g": 30
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 168
+    },
+    {
+     "cle": "huile_colza",
+     "quantite_g": 7
+    }
+   ],
+   "etapes": [
+    "Brouiller les œufs battus dans l'huile chaude en ramenant les bords vers le centre.",
+    "Incorporer le houmous en fin de cuisson et servir aussitôt."
+   ],
+   "tags": [
+    "poele",
+    "sale",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/hummus-eggs-5174636",
+    "nom_original": "Hummus Eggs",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 348.7,
+     "proteines": 23.5,
+     "glucides": 5.5,
+     "lipides": 25.7,
+     "fibres": 1.8
+    }
+   }
+  },
+  {
+   "id": "pdj-smoothie-peche-yaourt-etm",
+   "nom": "Smoothie pêche, fromage blanc et cannelle",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "peche",
+     "quantite_g": 150
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 21
+    },
+    {
+     "cle": "cannelle",
+     "quantite_g": 3
+    },
+    {
+     "cle": "lait_demi",
+     "quantite_g": 244
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 360
+    }
+   ],
+   "etapes": [
+    "Mettre la pêche, le miel, la cannelle, le lait, le fromage blanc 0 % et quelques glaçons dans un blender.",
+    "Mixer jusqu'à obtenir une texture lisse et servir aussitôt."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sucre",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/peach-yogurt-breakfast-smoothie-5064457",
+    "nom_original": "Peach Yogurt Breakfast Smoothie",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 463.1,
+     "proteines": 46.3,
+     "glucides": 58.5,
+     "lipides": 6.6,
+     "fibres": 3.6
+    }
+   }
+  },
+  {
+   "id": "pdj-fromage-blanc-raisin-pomme-noix-etm",
+   "nom": "Fromage blanc au raisin, pomme, noix et cannelle",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 226
+    },
+    {
+     "cle": "raisin",
+     "quantite_g": 76
+    },
+    {
+     "cle": "pomme",
+     "quantite_g": 63
+    },
+    {
+     "cle": "noix",
+     "quantite_g": 15
+    },
+    {
+     "cle": "cannelle",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Couper la pomme en dés.",
+    "Mélanger le fromage blanc avec le raisin, la pomme, les noix et la cannelle."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sucre",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/cottage-fruit-salad-4948704",
+    "nom_original": "Cottage Fruit Salad",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 349.4,
+     "proteines": 31.0,
+     "glucides": 32.5,
+     "lipides": 12.1,
+     "fibres": 4.5
+    },
+    "remarque": "Cottage cheese (absent de CIQUAL) remplacé par du fromage blanc 3 %."
+   }
+  },
+  {
+   "id": "pdj-poelee-patate-douce-feta-oeuf-jow",
+   "nom": "Poêlée de patate douce, feta et œuf au plat",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 28,
+   "ingredients": [
+    {
+     "cle": "patate_douce",
+     "quantite_g": 200
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 50
+    },
+    {
+     "cle": "feta",
+     "quantite_g": 40
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 1
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    },
+    {
+     "cle": "beurre",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Faire revenir la patate douce en dés 10 à 12 min dans l'huile, ajouter l'ail et un fond d'eau, couvrir 10 min.",
+    "Cuire l'œuf au plat dans un peu de beurre.",
+    "Servir la patate douce avec la feta émiettée, l'œuf et le piment d'Espelette."
+   ],
+   "tags": [
+    "poele",
+    "sale",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/poelee-de-patates-douces-feta-et-oeuf-au-plat-88cjj8y07cvkioqn174z",
+    "nom_original": "Poêlée de patates douces, feta & œuf au plat",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 372.0,
+     "proteines": 17.0,
+     "glucides": 38.0,
+     "lipides": 15.0,
+     "fibres": 6.0
+    },
+    "remarque": "Macros du site hors huile/beurre de placard ; ils sont comptés dans les macros de l'app."
+   }
+  },
+  {
+   "id": "pdj-bagel-oeufs-lard-cheddar-jow",
+   "nom": "Bagel aux œufs, lard grillé et cheddar",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 9,
+   "ingredients": [
+    {
+     "cle": "bagel",
+     "quantite_g": 90
+    },
+    {
+     "cle": "cheddar",
+     "quantite_g": 20
+    },
+    {
+     "cle": "oeuf",
+     "quantite_g": 100
+    },
+    {
+     "cle": "lardons",
+     "quantite_g": 30
+    }
+   ],
+   "etapes": [
+    "Griller les tranches de lard 2 min par face, puis cuire les œufs battus dans la même poêle et y faire fondre le cheddar.",
+    "Toaster le bagel et le garnir de lard et d'œufs au fromage."
+   ],
+   "tags": [
+    "poele",
+    "sale"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/bagel-aux-oeufs-et-bacon-8uzkdqfaelo3jgw70o0t",
+    "nom_original": "Bagel aux œufs & bacon",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 550.0,
+     "proteines": 32.0,
+     "glucides": 38.0,
+     "lipides": 29.0,
+     "fibres": 3.0
+    }
+   }
+  },
+  {
+   "id": "pdj-tartine-caprese-pesto-jow",
+   "nom": "Tartine caprese au pesto",
+   "type": "petit-dejeuner",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "pain_campagne",
+     "quantite_g": 40
+    },
+    {
+     "cle": "tomate",
+     "quantite_g": 120
+    },
+    {
+     "cle": "mozzarella",
+     "quantite_g": 62
+    },
+    {
+     "cle": "pesto",
+     "quantite_g": 15
+    },
+    {
+     "cle": "vinaigre_balsamique",
+     "quantite_g": 6
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 30
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 7
+    }
+   ],
+   "etapes": [
+    "Griller le pain et le tartiner de pesto.",
+    "Ajouter tomate et mozzarella en tranches, un filet d'huile d'olive et de crème balsamique."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/tartine-caprese-au-pesto-8t7p43evbdmohqfn08un",
+    "nom_original": "Tartine caprese au pesto",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 373.0,
+     "proteines": 16.0,
+     "glucides": 27.0,
+     "lipides": 21.0,
+     "fibres": 4.0
+    }
+   }
+  },
+  {
+   "id": "col-porridge-yaourt-cremeux-bbc",
+   "nom": "Porridge crémeux au yaourt",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 25
+    },
+    {
+     "cle": "yaourt_nature",
+     "quantite_g": 150
+    }
+   ],
+   "etapes": [
+    "Cuire les flocons dans 20 cl d'eau à feu doux jusqu'à épaississement.",
+    "Incorporer le yaourt et servir."
+   ],
+   "tags": [
+    "sucre",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "bbcgoodfood.com",
+    "url": "https://www.bbcgoodfood.com/recipes/creamy-yogurt-porridge",
+    "nom_original": "Creamy yogurt porridge",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 184.0,
+     "proteines": 13.0,
+     "glucides": 26.0,
+     "lipides": 2.0,
+     "fibres": 3.0
+    }
+   }
+  },
+  {
+   "id": "col-houmous-betterave-jow",
+   "nom": "Houmous à la betterave",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 6,
+   "ingredients": [
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 60
+    },
+    {
+     "cle": "citron",
+     "quantite_g": 60
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 1
+    },
+    {
+     "cle": "betterave",
+     "quantite_g": 75
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 14
+    },
+    {
+     "cle": "tahin",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Mixer pois chiches, ail, huile d'olive, tahin, cumin et betterave jusqu'à obtenir une texture lisse, en ajoutant un peu d'eau si besoin.",
+    "Assaisonner et servir avec un filet d'huile d'olive."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "vegetalien",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/houmous-a-la-betterave-8i3xh7rojp6ok6vq1eh5",
+    "nom_original": "Houmous à la betterave",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 309.0,
+     "proteines": 8.0,
+     "glucides": 22.0,
+     "lipides": 19.0,
+     "fibres": 8.0
+    }
+   }
+  },
+  {
+   "id": "col-pois-chiches-grilles-epices-bbc",
+   "nom": "Pois chiches grillés au cumin et paprika",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 20,
+   "ingredients": [
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 120
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Égoutter, rincer et sécher les pois chiches, les enrober d'huile et d'épices.",
+    "Les griller 40 à 45 min à 180 °C en remuant de temps en temps."
+   ],
+   "tags": [
+    "four",
+    "croquant",
+    "vegetalien",
+    "vegetarien",
+    "transportable"
+   ],
+   "origine": {
+    "site": "bbcgoodfood.com",
+    "url": "https://www.bbcgoodfood.com/recipes/roasted-chickpeas",
+    "nom_original": "Roasted chickpeas",
+    "portions_originales": 2,
+    "macros_annoncees": {
+     "calories": 181.0,
+     "proteines": 9.0,
+     "glucides": 18.0,
+     "lipides": 7.0,
+     "fibres": 7.0
+    }
+   }
+  },
+  {
+   "id": "col-fromage-blanc-concombre-saumon-fume-etm",
+   "nom": "Fromage blanc au concombre et saumon fumé",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 3,
+   "ingredients": [
+    {
+     "cle": "skyr",
+     "quantite_g": 227
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 52
+    },
+    {
+     "cle": "saumon_fume",
+     "quantite_g": 85
+    }
+   ],
+   "etapes": [
+    "Couper le concombre en dés et le saumon fumé en lanières.",
+    "Mélanger avec le fromage blanc 0 %."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "poisson"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/yogurt-with-cucumber-lox-4823238",
+    "nom_original": "Yogurt with Cucumber & Lox",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 241.0,
+     "proteines": 39.0,
+     "glucides": 10.0,
+     "lipides": 4.6,
+     "fibres": 0.3
+    }
+   }
+  },
+  {
+   "id": "col-oeufs-mimosa-basilic-olives-bbc",
+   "nom": "Œufs mimosa au basilic et aux olives",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 13,
+   "ingredients": [
+    {
+     "cle": "oeuf",
+     "quantite_g": 60
+    },
+    {
+     "cle": "olive_noire",
+     "quantite_g": 8
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    },
+    {
+     "cle": "vinaigre_cidre",
+     "quantite_g": 2
+    }
+   ],
+   "etapes": [
+    "Cuire les œufs 8 min, les refroidir, les écaler et retirer les jaunes.",
+    "Mixer basilic, olives, huile et vinaigre, écraser avec les jaunes et garnir les blancs."
+   ],
+   "tags": [
+    "vegetarien",
+    "transportable"
+   ],
+   "origine": {
+    "site": "bbcgoodfood.com",
+    "url": "https://www.bbcgoodfood.com/recipes/basil-olive-eggs",
+    "nom_original": "Basil & olive eggs",
+    "portions_originales": 3,
+    "macros_annoncees": {
+     "calories": 137.0,
+     "proteines": 10.0,
+     "glucides": 0.3,
+     "lipides": 12.0,
+     "fibres": 0.2
+    }
+   }
+  },
+  {
+   "id": "col-bol-thon-fromage-blanc-cornichons-etm",
+   "nom": "Bol de thon, fromage blanc et cornichons",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 8,
+   "ingredients": [
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 165
+    },
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 113
+    }
+   ],
+   "etapes": [
+    "Égoutter le thon, hacher cornichons et piment.",
+    "Mélanger avec le fromage blanc (et un trait de sauce piquante si on veut)."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "poisson"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/spicy-tuna-and-cottage-cheese-bowl-4869200",
+    "nom_original": "Spicy Tuna and Cottage Cheese Bowl",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 238.7,
+     "proteines": 46.5,
+     "glucides": 6.3,
+     "lipides": 2.9,
+     "fibres": 1.1
+    },
+    "remarque": "Cottage cheese (absent de CIQUAL) remplacé par du fromage blanc 3 %."
+   }
+  },
+  {
+   "id": "col-salade-thon-curry-etm",
+   "nom": "Salade de thon au curry",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 7,
+   "ingredients": [
+    {
+     "cle": "thon_naturel",
+     "quantite_g": 82
+    },
+    {
+     "cle": "mayonnaise",
+     "quantite_g": 14
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 10
+    }
+   ],
+   "etapes": [
+    "Hacher l'oignon et égoutter le thon.",
+    "Mélanger avec la mayonnaise et le curry."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "poisson"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/curry-tuna-salad-4930931",
+    "nom_original": "Curry Tuna Salad",
+    "portions_originales": 2,
+    "macros_annoncees": {
+     "calories": 170.4,
+     "proteines": 16.3,
+     "glucides": 1.3,
+     "lipides": 11.2,
+     "fibres": 0.4
+    }
+   }
+  },
+  {
+   "id": "col-tartines-seigle-fromage-blanc-truite-jow",
+   "nom": "Tartines de seigle, fromage blanc et truite fumée",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 3,
+   "ingredients": [
+    {
+     "cle": "pain_seigle",
+     "quantite_g": 50
+    },
+    {
+     "cle": "truite_fumee",
+     "quantite_g": 50
+    },
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 30
+    },
+    {
+     "cle": "salade",
+     "quantite_g": 30
+    },
+    {
+     "cle": "tomate_sechee",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Tartiner le pain de seigle de fromage blanc.",
+    "Ajouter la truite fumée et les tomates séchées en morceaux, servir avec un peu de salade assaisonnée."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "poisson"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/tartines-au-cottage-cheese-et-truite-fumee-97i3gaoh81k2dr0o11kc",
+    "nom_original": "Tartines au cottage cheese & truite fumée",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 339.0,
+     "proteines": 25.0,
+     "glucides": 24.0,
+     "lipides": 15.0,
+     "fibres": 3.0
+    },
+    "remarque": "Cottage cheese (absent de CIQUAL) remplacé par du fromage blanc 3 %."
+   }
+  },
+  {
+   "id": "col-veloute-petits-pois-coco-curry-jow",
+   "nom": "Velouté de petits pois au lait de coco et curry vert",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 14,
+   "ingredients": [
+    {
+     "cle": "petit_pois",
+     "quantite_g": 200
+    },
+    {
+     "cle": "oignon",
+     "quantite_g": 30
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 1
+    },
+    {
+     "cle": "lait_coco",
+     "quantite_g": 50
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 5
+    }
+   ],
+   "etapes": [
+    "Faire revenir oignon et ail 2 min dans l'huile.",
+    "Ajouter petits pois, lait de coco, pâte de curry et 12 cl d'eau, mijoter 8 min à couvert, puis mixer."
+   ],
+   "tags": [
+    "soupe",
+    "vegetalien",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/veloute-de-petits-pois-epice-84frc8ipez1umgmo07c7",
+    "nom_original": "Velouté de petits pois épicé",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 245.0,
+     "proteines": 12.0,
+     "glucides": 21.0,
+     "lipides": 10.0,
+     "fibres": 12.0
+    },
+    "remarque": "Macros du site hors huile/beurre de placard ; ils sont comptés dans les macros de l'app."
+   }
+  },
+  {
+   "id": "col-tartine-ricotta-poire-miel-etm",
+   "nom": "Tartine ricotta, poire et miel",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "pain_complet",
+     "quantite_g": 28
+    },
+    {
+     "cle": "poire",
+     "quantite_g": 89
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 7
+    },
+    {
+     "cle": "ricotta",
+     "quantite_g": 62
+    }
+   ],
+   "etapes": [
+    "Griller le pain et le tartiner de ricotta.",
+    "Ajouter la poire en lamelles et un filet de miel."
+   ],
+   "tags": [
+    "sucre",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/toast-with-pear-ricotta-honey-331906",
+    "nom_original": "Toast with Pear, Ricotta, & Honey",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 227.6,
+     "proteines": 10.8,
+     "glucides": 34.5,
+     "lipides": 6.0,
+     "fibres": 4.5
+    }
+   }
+  },
+  {
+   "id": "col-barquettes-concombre-dinde-fromage-frais-etm",
+   "nom": "Barquettes de concombre, fromage frais et dinde",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "fromage_frais",
+     "quantite_g": 80
+    },
+    {
+     "cle": "blanc_dinde",
+     "quantite_g": 57
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 151
+    }
+   ],
+   "etapes": [
+    "Couper le concombre en deux dans la longueur et l'évider.",
+    "Tartiner l'intérieur de fromage frais, garnir de dinde roulée et refermer."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "transportable"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/cucumber-snack-sandwiches-332354",
+    "nom_original": "Cucumber Snack Sandwiches",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 246.9,
+     "proteines": 14.9,
+     "glucides": 16.3,
+     "lipides": 14.1,
+     "fibres": 1.0
+    }
+   }
+  },
+  {
+   "id": "col-sandwich-pois-chiches-ecrases-etm",
+   "nom": "Sandwich de pois chiches écrasés et crudités",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "pois_chiches",
+     "quantite_g": 120
+    },
+    {
+     "cle": "pain_complet",
+     "quantite_g": 56
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 93
+    },
+    {
+     "cle": "poivron",
+     "quantite_g": 60
+    }
+   ],
+   "etapes": [
+    "Écraser les pois chiches à la fourchette, émincer poivron et concombre.",
+    "Griller le pain et garnir de pois chiches et de légumes."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "vegetalien",
+    "vegetarien",
+    "transportable"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/chickpea-snack-sandwich-386723",
+    "nom_original": "Chickpea Snack Sandwich",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 276.4,
+     "proteines": 14.0,
+     "glucides": 45.7,
+     "lipides": 4.6,
+     "fibres": 10.6
+    }
+   }
+  },
+  {
+   "id": "col-assiette-fromage-blanc-pistaches-chocolat-fruits-etm",
+   "nom": "Assiette fromage blanc, pistaches, chocolat et fruits rouges",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "fromage_blanc_3",
+     "quantite_g": 57
+    },
+    {
+     "cle": "pistache",
+     "quantite_g": 23
+    },
+    {
+     "cle": "chocolat_noir",
+     "quantite_g": 21
+    },
+    {
+     "cle": "fraise",
+     "quantite_g": 36
+    },
+    {
+     "cle": "myrtille",
+     "quantite_g": 37
+    }
+   ],
+   "etapes": [
+    "Répartir le fromage blanc, les pistaches, le chocolat noir, les fraises et les myrtilles dans une boîte ou une assiette.",
+    "Se déguste tel quel."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sucre",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/sweet-savory-snack-box-4680877",
+    "nom_original": "Sweet & Savory Snack Box",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 328.5,
+     "proteines": 13.8,
+     "glucides": 25.7,
+     "lipides": 20.2,
+     "fibres": 6.3
+    },
+    "remarque": "Cottage cheese (absent de CIQUAL) remplacé par du fromage blanc 3 %."
+   }
+  },
+  {
+   "id": "col-assiette-carottes-pomme-cheddar-amandes-etm",
+   "nom": "Assiette carottes, pomme, cheddar et amandes",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "carotte",
+     "quantite_g": 122
+    },
+    {
+     "cle": "pomme",
+     "quantite_g": 91
+    },
+    {
+     "cle": "cheddar",
+     "quantite_g": 28
+    },
+    {
+     "cle": "amande",
+     "quantite_g": 24
+    }
+   ],
+   "etapes": [
+    "Couper la pomme en quartiers et les carottes en bâtonnets.",
+    "Servir avec le cheddar et les amandes."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "vegetarien",
+    "transportable"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/fruit-vegetable-plate-with-almonds-cheese-5020823",
+    "nom_original": "Fruit & Vegetable Plate with Almonds & Cheese",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 351.4,
+     "proteines": 13.3,
+     "glucides": 29.8,
+     "lipides": 22.0,
+     "fibres": 8.6
+    }
+   }
+  },
+  {
+   "id": "col-creme-feta-miel-pistaches-jow",
+   "nom": "Crème de feta au miel et pistaches",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 5,
+   "ingredients": [
+    {
+     "cle": "feta",
+     "quantite_g": 50
+    },
+    {
+     "cle": "yaourt_grec",
+     "quantite_g": 20
+    },
+    {
+     "cle": "ail",
+     "quantite_g": 1
+    },
+    {
+     "cle": "miel",
+     "quantite_g": 10
+    },
+    {
+     "cle": "pistache",
+     "quantite_g": 10
+    },
+    {
+     "cle": "huile_olive",
+     "quantite_g": 3
+    }
+   ],
+   "etapes": [
+    "Mixer la feta, le yaourt grec, l'ail et la moitié du miel jusqu'à obtenir une crème lisse.",
+    "Servir parsemé de pistaches concassées, du reste de miel et d'un filet d'huile d'olive."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "vegetarien"
+   ],
+   "origine": {
+    "site": "jow.fr",
+    "url": "https://jow.fr/recipes/creme-de-feta-et-miel-8qetfd8idpjnjfto0tf7",
+    "nom_original": "Crème de feta & miel",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 278.0,
+     "proteines": 10.0,
+     "glucides": 11.0,
+     "lipides": 22.0,
+     "fibres": 1.0
+    }
+   }
+  },
+  {
+   "id": "col-smoothie-banane-cannelle-avoine-etm",
+   "nom": "Smoothie banane, cannelle et avoine",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 4,
+   "ingredients": [
+    {
+     "cle": "boisson_amande",
+     "quantite_g": 120
+    },
+    {
+     "cle": "skyr",
+     "quantite_g": 120
+    },
+    {
+     "cle": "flocons_avoine",
+     "quantite_g": 10
+    },
+    {
+     "cle": "banane",
+     "quantite_g": 59
+    }
+   ],
+   "etapes": [
+    "Mixer boisson d'amande, fromage blanc 0 %, flocons, cannelle et banane jusqu'à obtenir une texture lisse.",
+    "Servir aussitôt."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "sucre",
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/cinnamon-roll-smoothie-5054671",
+    "nom_original": "Cinnamon Roll Smoothie",
+    "portions_originales": 2,
+    "macros_annoncees": {
+     "calories": 204.5,
+     "proteines": 14.5,
+     "glucides": 33.8,
+     "lipides": 2.1,
+     "fibres": 3.4
+    }
+   }
+  },
+  {
+   "id": "col-wrap-facon-pizza-etm",
+   "nom": "Wrap façon pizza aux épinards",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 8,
+   "ingredients": [
+    {
+     "cle": "tortilla",
+     "quantite_g": 46
+    },
+    {
+     "cle": "sauce_tomate",
+     "quantite_g": 32
+    },
+    {
+     "cle": "epinard",
+     "quantite_g": 120
+    },
+    {
+     "cle": "mozzarella",
+     "quantite_g": 28
+    }
+   ],
+   "etapes": [
+    "Étaler la sauce tomate sur la tortilla, ajouter les épinards et la mozzarella.",
+    "Passer 1 min au micro-ondes (ou à la poêle) jusqu'à ce que le fromage fonde, puis rouler."
+   ],
+   "tags": [
+    "vegetarien",
+    "rapide"
+   ],
+   "origine": {
+    "site": "eatthismuch.com",
+    "url": "https://www.eatthismuch.com/calories/pizza-roll-up-5003800",
+    "nom_original": "Pizza Roll-Up",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 249.3,
+     "proteines": 14.3,
+     "glucides": 31.1,
+     "lipides": 8.1,
+     "fibres": 4.4
+    }
+   }
+  },
+  {
+   "id": "col-demi-pita-poulet-crudites-bbc",
+   "nom": "Demi-pita au poulet et crudités",
+   "type": "collation",
+   "portions": 1,
+   "temps_min": 2,
+   "ingredients": [
+    {
+     "cle": "pain_pita",
+     "quantite_g": 30
+    },
+    {
+     "cle": "poulet_filet",
+     "quantite_g": 33
+    },
+    {
+     "cle": "concombre",
+     "quantite_g": 75
+    },
+    {
+     "cle": "tomate_cerise",
+     "quantite_g": 60
+    }
+   ],
+   "etapes": [
+    "Ouvrir la demi-pita.",
+    "La garnir de poulet cuit, de concombre en morceaux et de tomates cerises coupées en deux."
+   ],
+   "tags": [
+    "sans-cuisson",
+    "rapide",
+    "transportable"
+   ],
+   "origine": {
+    "site": "bbcgoodfood.com",
+    "url": "https://www.bbcgoodfood.com/recipes/pitta-pocket",
+    "nom_original": "Pitta pocket",
+    "portions_originales": 1,
+    "macros_annoncees": {
+     "calories": 146.0,
+     "proteines": 13.0,
+     "glucides": 17.0,
+     "lipides": 2.0,
+     "fibres": 3.0
+    }
+   }
   }
  ]
 }

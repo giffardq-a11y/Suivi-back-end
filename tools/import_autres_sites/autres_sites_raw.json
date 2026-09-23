@@ -1,0 +1,3439 @@
+{
+ "recettes": [
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/breakfast-egg-wraps",
+   "nom_original": "Breakfast egg wraps",
+   "type_propose": "petit-dejeuner",
+   "servings": 4,
+   "prep_min": 5,
+   "cook_min": 7,
+   "total_min": 12,
+   "ingredients": [
+    {
+     "texte": "500g pack closed cup mushrooms",
+     "nom": "pack closed cup mushrooms",
+     "quantite": 500.0,
+     "unite": "g"
+    },
+    {
+     "texte": "4 tsp rapeseed oil plus 2 drops",
+     "nom": "rapeseed oil plus 2 drops",
+     "quantite": 20.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 4 tsp = 20.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "320g cherry tomatoes halved, or 8 tomatoes, cut into wedges",
+     "nom": "cherry tomatoes halved, or 8 tomatoes, cut into wedges",
+     "quantite": 320.0,
+     "unite": "g"
+    },
+    {
+     "texte": "2 generous handfuls parsley finely chopped",
+     "nom": "parsley",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (2 generous handfuls)"
+    },
+    {
+     "texte": "8 tbsp porridge oats (40g)",
+     "nom": "porridge oats",
+     "quantite": 40,
+     "unite": "g",
+     "remarque": "la page donne \"8 tbsp (40g)\" : poids de la page retenu"
+    },
+    {
+     "texte": "10 eggs",
+     "nom": "eggs",
+     "quantite": 10.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "4 tsp English mustard powder made up with water",
+     "nom": "English mustard powder made up with water",
+     "quantite": 20.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 4 tsp = 20.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Thickly slice half the pack of mushrooms. Heat 2 tsp rapeseed oil in a non-stick pan. Add the mushrooms, stir briefly then fry with the lid on the pan for 6-8 mins. Stir in half the tomatoes then cook 1-2 mins more with the lid off until softened.",
+    "Beat together the eggs really well with the parsley and oats. Heat a drop of oil in a large non-stick frying pan. Pour in a ¼ of the egg mix and fry for 1 min until almost set, flip over as if making a pancake. Tip from the pan, spread with a quarter of the mustard, spoon a ¼ the filling down the centre and roll up. Now make a second wrap using another ¼ of the egg mix and filling. If you're following our Healthy Diet Plan, save the rest for the following day."
+   ],
+   "macros_par_portion": {
+    "calories": 429.0,
+    "proteines": 28.0,
+    "glucides": 31.0,
+    "lipides": 20.0,
+    "fibres": 6.0,
+    "sucres": 4.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Les 'wraps' sont des galettes œuf + flocons d'avoine garnies de champignons/tomates."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/baked-salmon-eggs",
+   "nom_original": "Baked salmon & eggs",
+   "type_propose": "petit-dejeuner",
+   "servings": 6,
+   "prep_min": 5,
+   "cook_min": 15,
+   "total_min": 20,
+   "ingredients": [
+    {
+     "texte": "6 crusty white rolls (poppy seed ones look lovely)",
+     "nom": "crusty white rolls (poppy seed ones look lovely)",
+     "quantite": 6.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "25g butter melted",
+     "nom": "butter melted",
+     "quantite": 25.0,
+     "unite": "g"
+    },
+    {
+     "texte": "6 slices smoked salmon or gravadlax",
+     "nom": "smoked salmon or gravadlax",
+     "quantite": 6.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "6 medium eggs",
+     "nom": "medium eggs",
+     "quantite": 6.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "a few snipped chives",
+     "nom": "a few snipped chives",
+     "quantite": null,
+     "unite": null
+    }
+   ],
+   "directions": [
+    "Heat oven to 180C/160C fan/gas 4. Slice off the top of each roll, then gently remove the bread inside until there is a hole large enough to accommodate a slice of salmon and an egg. Arrange the rolls on a baking sheet, reserving the tops. (If you like, whizz the middles into crumbs and keep in the freezer for another recipe.)",
+    "Brush the inside and edges of the rolls with a little melted butter, then arrange a slice of salmon inside each one. Crack an egg into each and season. Bake for 10-15 mins or until the eggs are cooked to your liking. Scatter with snipped chives. Toast the tops, brush with the remaining butter, then cut into soldiers and use to dip into eggs."
+   ],
+   "macros_par_portion": {
+    "calories": 341.0,
+    "proteines": 24.0,
+    "glucides": 26.0,
+    "lipides": 15.0,
+    "fibres": 1.0,
+    "sucres": 2.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. 6 tranches de saumon fumé non pesées sur la page (comptées en pièces). Petits pains blancs (crusty rolls)."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/poached-eggs-broccoli-tomatoes-wholemeal-flatbread",
+   "nom_original": "Poached eggs with broccoli, tomatoes & wholemeal flatbread",
+   "type_propose": "petit-dejeuner",
+   "servings": 2,
+   "prep_min": null,
+   "cook_min": null,
+   "total_min": 11,
+   "ingredients": [
+    {
+     "texte": "100g thin-stemmed broccoli trimmed and halved",
+     "nom": "thin-stemmed broccoli trimmed and halved",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "200g cherry tomatoes on the vine",
+     "nom": "cherry tomatoes on the vine",
+     "quantite": 200.0,
+     "unite": "g"
+    },
+    {
+     "texte": "4 medium free-range eggs (fridge cold)",
+     "nom": "medium free-range eggs (fridge cold)",
+     "quantite": 4.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 wholemeal flatbreads (see Goes well with for recipe)",
+     "nom": "wholemeal flatbreads (see Goes well with for recipe)",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 tsp mixed seeds (such as sunflower, pumpkin, sesame and linseed)",
+     "nom": "mixed seeds (such as sunflower, pumpkin, sesame and linseed)",
+     "quantite": 10.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tsp = 10.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 tsp olive oil",
+     "nom": "olive oil",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "good pinch of chilli flakes",
+     "nom": "good pinch of chilli flakes",
+     "quantite": null,
+     "unite": null
+    }
+   ],
+   "directions": [
+    "Boil the kettle. Heat oven to 120C/100C fan/gas 1/2 and put an ovenproof plate inside to warm up. Fill a wide-based saucepan one-third full of water from the kettle and bring to the boil. Add the broccoli and cook for 2 mins. Add the tomatoes, return to the boil and cook for 30 secs. Lift out with tongs or a slotted spoon and place on the warm plate in the oven while you poach the eggs.",
+    "Return the water to a gentle simmer. Break the eggs into the pan, one at a time, and cook for 2 1/2 - 3 mins or until the whites are set and the yolks are runny.",
+    "Divide the flatbreads between the two plates and top with the broccoli and tomatoes. Use a slotted spoon to drain the eggs, then place on top. Sprinkle with the seeds and drizzle with the oil. Season with a little black pepper and the chilli flakes, and serve immediately."
+   ],
+   "macros_par_portion": {
+    "calories": 383.0,
+    "proteines": 22.0,
+    "glucides": 31.0,
+    "lipides": 17.0,
+    "fibres": 9.0,
+    "sucres": 4.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Pas de temps de préparation/cuisson séparés : total 11 min. Flatbreads complets comptés en pièces."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/saucy-bean-baked-eggs",
+   "nom_original": "Saucy bean baked eggs",
+   "type_propose": "petit-dejeuner",
+   "servings": 2,
+   "prep_min": 5,
+   "cook_min": 20,
+   "total_min": 25,
+   "ingredients": [
+    {
+     "texte": "2 x 400g cans cherry tomatoes",
+     "nom": "cans cherry tomatoes",
+     "quantite": 800.0,
+     "unite": "g"
+    },
+    {
+     "texte": "400g can mixed bean salad drained",
+     "nom": "can mixed bean salad drained",
+     "quantite": 400.0,
+     "unite": "g"
+    },
+    {
+     "texte": "200g baby spinach",
+     "nom": "baby spinach",
+     "quantite": 200.0,
+     "unite": "g"
+    },
+    {
+     "texte": "4 medium eggs",
+     "nom": "medium eggs",
+     "quantite": 4.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "50g thinly sliced smoked ham torn",
+     "nom": "thinly sliced smoked ham torn",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "wholemeal rye bread to serve (optional)",
+     "nom": "wholemeal rye bread to serve (optional)",
+     "quantite": null,
+     "unite": null
+    }
+   ],
+   "directions": [
+    "Tip the tomatoes and bean salad into an ovenproof frying pan or shallow flameproof casserole dish. Simmer for 10 mins, or until reduced. Stir in the spinach and cook for 5 mins more until wilted.",
+    "Heat the grill to medium. Make four indentations in the mixture using the back of a spoon, then crack one egg in each. Nestle the ham in the mixture, then grill for 4-5 mins, or until the whites are set and the yolks runny. Serve with rye bread, if you like."
+   ],
+   "macros_par_portion": {
+    "calories": 366.0,
+    "proteines": 32.0,
+    "glucides": 27.0,
+    "lipides": 12.0,
+    "fibres": 10.0,
+    "sucres": 15.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Pain de seigle optionnel, non inclus dans les quantités."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/mexican-beans-avocado-toast",
+   "nom_original": "Black beans & avocado on toast",
+   "type_propose": "petit-dejeuner",
+   "servings": 4,
+   "prep_min": 20,
+   "cook_min": 10,
+   "total_min": 30,
+   "ingredients": [
+    {
+     "texte": "270g cherry tomatoes quartered",
+     "nom": "cherry tomatoes quartered",
+     "quantite": 270.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 red or white onion finely chopped",
+     "nom": "red or white onion finely chopped",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "½ lime juiced",
+     "nom": "lime juiced",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "4 tbsp olive oil",
+     "nom": "olive oil",
+     "quantite": 60.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 4 tbsp = 60.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2 garlic cloves crushed",
+     "nom": "garlic cloves crushed",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 tsp ground cumin",
+     "nom": "ground cumin",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2 tsp chipotle paste or 1 tsp chilli flakes",
+     "nom": "chipotle paste or 1 tsp chilli flakes",
+     "quantite": 10.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tsp = 10.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2 x 400g cans black beans drained",
+     "nom": "cans black beans drained",
+     "quantite": 800.0,
+     "unite": "g"
+    },
+    {
+     "texte": "small bunch coriander chopped",
+     "nom": "small bunch coriander chopped",
+     "quantite": null,
+     "unite": null
+    },
+    {
+     "texte": "4 slices bread",
+     "nom": "bread",
+     "quantite": 4.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 avocado finely sliced",
+     "nom": "avocado finely sliced",
+     "quantite": 1.0,
+     "unite": "piece"
+    }
+   ],
+   "directions": [
+    "Mix the tomatoes, ¼ onion, lime juice and 1 tbsp oil and set aside. Fry the remaining onion in 2 tbsp oil until it starts to soften. Add the garlic, fry for 1 min, then add the cumin and chipotle and stir until fragrant. Tip in the beans and a splash of water, stir and cook gently until heated through. Stir in most of the tomato mixture and cook for 1 min, season well and add most of the coriander.",
+    "Toast the bread and drizzle with the remaining 1 tbsp oil. Put a slice on each plate and pile some beans on top. Arrange some slices of avocado on top, then sprinkle with the remaining tomato mixture and coriander leaves to serve."
+   ],
+   "macros_par_portion": {
+    "calories": 368.0,
+    "proteines": 12.0,
+    "glucides": 30.0,
+    "lipides": 19.0,
+    "fibres": 13.0,
+    "sucres": 6.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. 12 g de protéines/portion (seuil petit-déj ≥10 g). 4 tranches de pain non pesées."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/mushroom-hash-poached-eggs",
+   "nom_original": "Mushroom hash with poached eggs",
+   "type_propose": "petit-dejeuner",
+   "servings": 4,
+   "prep_min": 10,
+   "cook_min": 17,
+   "total_min": 27,
+   "ingredients": [
+    {
+     "texte": "1 ½ tbsp avocado oil",
+     "nom": "avocado oil",
+     "quantite": 22.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 ½ tbsp = 22.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2 large onions halved and sliced",
+     "nom": "large onions halved and sliced",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "500g closed cup mushrooms quartered",
+     "nom": "closed cup mushrooms quartered",
+     "quantite": 500.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 tbsp fresh thyme leaves plus extra for sprinkling",
+     "nom": "fresh thyme leaves plus extra for sprinkling",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tbsp = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "500g fresh tomatoes chopped",
+     "nom": "fresh tomatoes chopped",
+     "quantite": 500.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 tsp smoked paprika",
+     "nom": "smoked paprika",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "4 tsp omega seed mix (see tip)",
+     "nom": "omega seed mix (see tip)",
+     "quantite": 20.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 4 tsp = 20.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "4 large eggs",
+     "nom": "large eggs",
+     "quantite": 4.0,
+     "unite": "piece"
+    }
+   ],
+   "directions": [
+    "Heat the oil in a large non-stick frying pan and fry the onions for a few mins. Cover the pan and leave the onions to cook in their own steam for 5 mins more.",
+    "Tip in the mushrooms with the thyme and cook, stirring frequently, for 5 mins until softened. Add the tomatoes and paprika, cover the pan and cook for 5 mins until pulpy. Stir through the seed mix.",
+    "If you're making this recipe as part of our two-person Summer Healthy Diet Plan, poach two of the eggs in lightly simmering water to your liking. Serve on top of half the hash with a sprinkling of fresh thyme and some black pepper. Chill the remaining hash to warm in a pan and eat with freshly poached eggs on another day. If you're serving four people, poach all four eggs, divide the hash between four plates, sprinkle with thyme and black pepper and serve with the eggs on top."
+   ],
+   "macros_par_portion": {
+    "calories": 283.0,
+    "proteines": 15.0,
+    "glucides": 15.0,
+    "lipides": 17.0,
+    "fibres": 6.0,
+    "sucres": 11.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. 283 kcal. 'Omega seed mix' = mélange de graines (lin, tournesol, courge…)."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/smoky-beans-toast",
+   "nom_original": "Smoky beans on toast",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 30,
+   "total_min": 35,
+   "ingredients": [
+    {
+     "texte": "½ tbsp olive oil plus extra for drizzling",
+     "nom": "olive oil plus extra for drizzling",
+     "quantite": 7.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : ½ tbsp = 7.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "½ small onion sliced",
+     "nom": "small onion sliced",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "½ small red pepper thinly sliced into strips",
+     "nom": "small red pepper thinly sliced into strips",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 garlic clove halved",
+     "nom": "garlic clove halved",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "227g can chopped tomatoes",
+     "nom": "can chopped tomatoes",
+     "quantite": 227.0,
+     "unite": "g"
+    },
+    {
+     "texte": "½ tsp smoked paprika",
+     "nom": "smoked paprika",
+     "quantite": 2.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : ½ tsp = 2.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2 tsp red wine vinegar",
+     "nom": "red wine vinegar",
+     "quantite": 10.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tsp = 10.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "210g can butter beans or chickpeas, drained",
+     "nom": "can butter beans or chickpeas, drained",
+     "quantite": 210.0,
+     "unite": "g"
+    },
+    {
+     "texte": "¼ tsp sugar",
+     "nom": "sugar",
+     "quantite": 1.25,
+     "unite": "ml",
+     "remarque": "cuillère convertie : ¼ tsp = 1.25 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 slice seeded bread",
+     "nom": "seeded bread",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "a few parsley sprigs, finely chopped",
+     "nom": "a few parsley sprigs, finely chopped",
+     "quantite": null,
+     "unite": null
+    }
+   ],
+   "directions": [
+    "Heat the oil in a small pan, add the onion and pepper, and fry gently until soft, about 10-15 mins. Crush half the garlic and add this to the pan, along with the tomatoes, paprika, vinegar, beans, sugar and some seasoning. Bring to a simmer and cook for 10-15 mins or until slightly reduced and thickened.",
+    "Toast the bread, rub with the remaining garlic and drizzle with a little oil. Spoon the beans over the toast, drizzle with a little more oil and scatter over the parsley."
+   ],
+   "macros_par_portion": {
+    "calories": 380.0,
+    "proteines": 13.0,
+    "glucides": 42.0,
+    "lipides": 14.0,
+    "fibres": 15.0,
+    "sucres": 17.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Végétalien. 1/4 c. à café de sucre ajouté."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/breakfast-burrito",
+   "nom_original": "Breakfast burrito",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 10,
+   "total_min": 15,
+   "ingredients": [
+    {
+     "texte": "1 tsp chipotle paste",
+     "nom": "chipotle paste",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 egg",
+     "nom": "egg",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 tsp rapeseed oil",
+     "nom": "rapeseed oil",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "50g kale",
+     "nom": "kale",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "7 cherry tomatoes halved",
+     "nom": "cherry tomatoes halved",
+     "quantite": 7.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "½ small avocado sliced",
+     "nom": "small avocado sliced",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 wholemeal tortilla wrap warmed",
+     "nom": "wholemeal tortilla wrap warmed",
+     "quantite": 1.0,
+     "unite": "piece"
+    }
+   ],
+   "directions": [
+    "Whisk the chipotle paste with the egg and some seasoning in a jug. Heat the oil in a large frying pan, add the kale and tomatoes.",
+    "Cook until the kale is wilted and the tomatoes have softened, then push everything to the side of the pan. Pour the beaten egg into the cleared half of the pan and scramble. Layer everything into the centre of your wrap, topping with the avocado, then wrap up and eat immediately."
+   ],
+   "macros_par_portion": {
+    "calories": 366.0,
+    "proteines": 16.0,
+    "glucides": 26.0,
+    "lipides": 21.0,
+    "fibres": 5.0,
+    "sucres": 4.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Chou kale (50 g) ; proche du 'Wrap œuf et poivron' du catalogue."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/oeufs-a-la-turque-85g7cdutf176ju3o0aee",
+   "nom_original": "Œufs à la turque",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 2,
+   "cook_min": 6,
+   "total_min": 8,
+   "ingredients": [
+    {
+     "texte": "1/4 gou. Ail",
+     "nom": "Ail",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 Œuf",
+     "nom": "Œuf",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 tran. Pain de campagne (tranché)",
+     "nom": "Pain de campagne (tranché)",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 pinc. Piment d'Espelette",
+     "nom": "Piment d'Espelette",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1 pinc.)"
+    },
+    {
+     "texte": "1/10 bou. Coriandre (frais)",
+     "nom": "Coriandre (frais)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1/10 bou.)"
+    },
+    {
+     "texte": "150 g Yaourt Grec",
+     "nom": "Yaourt Grec",
+     "quantite": 150.0,
+     "unite": "g"
+    },
+    {
+     "texte": "Huile d'olive (2 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 30.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 2 càs = 30.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Dans une casserole d'eau bouillante cuire les oeufs pendant 6 minutes.",
+    "Coupez l'ail en fines lamelles.",
+    "Ajoutez l'ail dans une casserole avec 2 cuillères à soupe/personne d'huile d'olive. Faites revenir 1 à 2 minutes à feu moyen jusqu'à ce que l'ail commence légèrement à dorer.",
+    "Retirez la casserole du feu, ajoutez le piment et mélangez. Mettre de côté.",
+    "Une fois cuits, plongez les œufs dans un bol d'eau froide pour stopper la cuisson.",
+    "Coupez le pain en tranches et faites toaster les tranches de pain.",
+    "Écalez les oeufs délicatement.",
+    "Dans un plat étalez le yaourt. Ajoutez les œufs et l'huile pimentée.",
+    "Optionnel : ajoutez quelques herbes fraîches si vous en avez, coriandre, persil, ciboulette, aneth, menthe.",
+    "Servez avec le pain, à tremper dans le yaourt. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 476.0,
+    "proteines": 26.0,
+    "glucides": 47.0,
+    "lipides": 27.0,
+    "fibres": 4.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. 2 c. à soupe d'huile d'olive en placard."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/wrap-complet-oeuf-dinde-et-champignons-91oyc60x6pls02sg178h",
+   "nom_original": "Wrap complet œuf, dinde & champignons",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 9,
+   "total_min": 14,
+   "ingredients": [
+    {
+     "texte": "1 Tortilla (blé complet)",
+     "nom": "Tortilla (blé complet)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 tran. Blanc de dinde (tranches)",
+     "nom": "Blanc de dinde (tranches)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "60 g Champignons bruns",
+     "nom": "Champignons bruns",
+     "quantite": 60.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 Œuf",
+     "nom": "Œuf",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "15 g Mozzarella (râpée)",
+     "nom": "Mozzarella (râpée)",
+     "quantite": 15.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/2 càc Sauce pesto",
+     "nom": "Sauce pesto",
+     "quantite": 2.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/2 càc = 2.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Lavez puis coupez les champignons en lamelles.",
+    "Dans un bol, cassez les œufs. Salez, poivrez et ajoutez le pesto. Battez-les, à l'aide d'une fourchette.",
+    "Huilez une poêle chaude, sur feu doux, puis versez-y les œufs. Disposez la tortilla de blé par-dessus, en l'aplatissant légèrement. Faites cuire 2 à 3 minutes avant de la retourner.",
+    "Ajoutez les champignons*, le blanc de dinde en morceaux et la mozzarella râpée. Repliez la tortilla en deux et laissez dorer 30 secondes. Coupez le feu, couvrez et laissez reposer hors du feu pendant 1 minute. *Consultez nos tips pour cette étape"
+   ],
+   "macros_par_portion": {
+    "calories": 369.0,
+    "proteines": 22.0,
+    "glucides": 33.0,
+    "lipides": 16.0,
+    "fibres": 3.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Tranche de blanc de dinde non pesée. Astuce du site (retirée des étapes) : Pour un vrai moment de gourmandise, on vous conseille de faire poêler les champignons avec de la persillade ou de l'ail semoule avant de les ajouter au wrap."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/bowl-proteine-riz-et-poulet-96d5f0laaiez7pmj0e9e",
+   "nom_original": "Bowl protéiné riz & poulet",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 8,
+   "cook_min": 20,
+   "total_min": 28,
+   "ingredients": [
+    {
+     "texte": "1 Poulet (escalope)",
+     "nom": "Poulet (escalope)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "70 g Riz",
+     "nom": "Riz",
+     "quantite": 70.0,
+     "unite": "g"
+    },
+    {
+     "texte": "100 g Carotte (frais)",
+     "nom": "Carotte (frais)",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/4 Avocat",
+     "nom": "Avocat",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/2 Échalote",
+     "nom": "Échalote",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 càs Sauce soja sucrée",
+     "nom": "Sauce soja sucrée",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 càs Skyr",
+     "nom": "Skyr",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1/4 Ail",
+     "nom": "Ail",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 pinc. Piment d'Espelette",
+     "nom": "Piment d'Espelette",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1 pinc.)"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Dans une casserole d'eau bouillante salée, faites cuire le riz selon les instructions du paquet. En fin de cuisson, égouttez-le.",
+    "Pendant ce temps, épluchez puis râpez les carottes.",
+    "Coupez l'avocat en deux, retirez la peau puis coupez-le en fines lamelles.",
+    "Épluchez puis émincez les échalotes.",
+    "Coupez le poulet en morceaux.",
+    "Faites chauffer un filet d'huile d'olive dans une poêle, sur feu moyen. Ajoutez les échalotes et faites-les revenir 2 minutes.",
+    "Ajoutez le poulet, salez, poivrez puis ajoutez l'ail râpé. Faites-le revenir 6 à 8 minutes, jusqu'à ce qu'il soit cuit et bien doré.",
+    "Versez la sauce soja dans la poêle, avec le poulet, et poursuivez la cuisson 1 à 2 minutes.",
+    "Préparez la sauce au yaourt. Dans un bol, ajoutez le skyr. Salez, poivrez et ajoutez un filet d'huile d'olive et le piment d'Espelette. Mélangez le tout.",
+    "Servez le riz, dans un bol ou une assiette creuse avec le poulet, les carottes râpées et l'avocat. Nappez le tout de la sauce et re-assaisonnez selon vos goûts. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 614.0,
+    "proteines": 47.0,
+    "glucides": 71.0,
+    "lipides": 14.0,
+    "fibres": 7.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Escalope de poulet comptée en pièce (1), poids non indiqué. Sauce soja sucrée (kecap manis) 1 c. à soupe."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/saumon-a-la-harissa-8e0ghdodaffp0uqp0zre",
+   "nom_original": "Saumon à la harissa",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 11,
+   "total_min": 14,
+   "ingredients": [
+    {
+     "texte": "1 Saumon (frais)",
+     "nom": "Saumon (frais)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "60 g Semoule",
+     "nom": "Semoule",
+     "quantite": 60.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/4 càc Harissa (pâte)",
+     "nom": "Harissa (pâte)",
+     "quantite": 1.25,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/4 càc = 1.25 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "40 g Tomates séchées",
+     "nom": "Tomates séchées",
+     "quantite": 40.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/10 bou. Persil (frais)",
+     "nom": "Persil (frais)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1/10 bou.)"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Badigeonnez les saumons de harissa et d'un filet d'huile d'olive. Salez, poivrez et laissez mariner.",
+    "Pendant ce temps, versez la semoule dans un récipient et assaisonnez selon vos goûts.",
+    "Couvrez à hauteur d'eau chaude et couvrez le récipient. Laissez gonfler 5 minutes.",
+    "Égrainez la semoule et ajoutez les tomates séchées et le persil émincé. Mélangez grossièrement.",
+    "Pendant ce temps, faites cuire les saumons à feu vif 3 minutes de chaque côté.",
+    "Servez la semoule avec le saumon. Ajoutez du persil et des tomates séchées selon vos préférences. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 531.0,
+    "proteines": 34.0,
+    "glucides": 49.0,
+    "lipides": 21.0,
+    "fibres": 6.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Pavé de saumon compté en pièce (1), poids non indiqué."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/pates-tomates-et-crevettes-8dpbdodc7e9s9jc40qr9",
+   "nom_original": "Pâtes tomates & crevettes",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 2,
+   "cook_min": 10,
+   "total_min": 12,
+   "ingredients": [
+    {
+     "texte": "100 g Pâtes (Linguine)",
+     "nom": "Pâtes (Linguine)",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "100 g Crevette (cuite)",
+     "nom": "Crevette (cuite)",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "150 g Tomate pelée",
+     "nom": "Tomate pelée",
+     "quantite": 150.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/4 càc Mélange pour pâtes",
+     "nom": "Mélange pour pâtes",
+     "quantite": 1.25,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/4 càc = 1.25 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Dans une casserole d'eau bouillante salée, faites cuire les pâtes selon les instructions du paquet.",
+    "En parallèle, faites chauffer un filet d'huile d'olive dans une poêle, sur feu moyen. Ajoutes les crevettes et faites-les revenir 1 minute. Ajoutez les épices et poursuivez la cuisson 2 minutes, sur feu vif.",
+    "Ajoutez les tomates pelée. Poursuivez la cuisson, en écrasant les tomates délicatement, à l'aide d'une spatule. Salez et poivrez.",
+    "En fin de cuisson, égouttez les pâtes et ajoutez-les dans la poêle. Mélangez.",
+    "Servez les linguine aux tomates & crevettes dans une assiette. Ajoutez du basilic frais, si vous en avez et re-assaisonnez selon vos goûts. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 457.0,
+    "proteines": 32.0,
+    "glucides": 71.0,
+    "lipides": 3.0,
+    "fibres": 5.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. 'Mélange pour pâtes' = assaisonnement sec (herbes), 1/4 c. à café."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/pates-au-thon-8dtcesvb21e910lk0hur",
+   "nom_original": "Pâtes au thon",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 10,
+   "total_min": 15,
+   "ingredients": [
+    {
+     "texte": "60 g Thon (conserve)",
+     "nom": "Thon (conserve)",
+     "quantite": 60.0,
+     "unite": "g"
+    },
+    {
+     "texte": "100 g Pâtes (Linguine)",
+     "nom": "Pâtes (Linguine)",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "40 g Tomates séchées",
+     "nom": "Tomates séchées",
+     "quantite": 40.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/4 gou. Ail",
+     "nom": "Ail",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/10 bou. Persil (frais)",
+     "nom": "Persil (frais)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1/10 bou.)"
+    }
+   ],
+   "directions": [
+    "Dans une casserole d'eau bouillante salée, faites cuire les pâtes selon les instructions du paquet. En fin de cuisson, réservez 2 cuillères à soupe d'eau de cuisson par personne.",
+    "Pendant ce temps, faites chauffer un filet d'huile d'olive dans une poêle, sur feu moyen. Ajoutez l'ail râpé et les tomates séchées coupées en lamelles. Faites-les revenir 1 à 2 minutes.",
+    "Ajoutez le thon légèrement émietté dans la poêle avec l'eau de cuisson des pâtes réservée. Faites revenir le tout 1 à 2 minutes.",
+    "Une fois les pâtes cuites, égouttez-les. Ajoutez-les ensuite dans la poêle et mélangez."
+   ],
+   "macros_par_portion": {
+    "calories": 482.0,
+    "proteines": 30.0,
+    "glucides": 72.0,
+    "lipides": 7.0,
+    "fibres": 6.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Aucun ingrédient placard. Astuce du site (retirée des étapes) : Pour un vrai moment de gourmandise, on vous conseille d'ajouter des tomates cerises marinées, des câpres & quelques copeaux de parmesan."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/brochettes-dinde-haricots-et-semoule-8il409afg3eokpaf0p5b",
+   "nom_original": "Brochettes dinde, haricots & semoule",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 22,
+   "total_min": 27,
+   "ingredients": [
+    {
+     "texte": "1 Dinde (escalope)",
+     "nom": "Dinde (escalope)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "150 g Haricot vert (frais)",
+     "nom": "Haricot vert (frais)",
+     "quantite": 150.0,
+     "unite": "g"
+    },
+    {
+     "texte": "60 g Semoule",
+     "nom": "Semoule",
+     "quantite": 60.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 càs Yaourt Grec",
+     "nom": "Yaourt Grec",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1/2 càc Paprika",
+     "nom": "Paprika",
+     "quantite": 2.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/2 càc = 2.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2 Pics à brochette",
+     "nom": "Pics à brochette",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "Huile d'olive (1/2 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 7.5,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1/2 càs = 7.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Faites chauffer une casserole d'eau bouillante salée. Équeutez les haricots verts si besoin, et plongez-les dans la casserole d'eau bouillante pendant 10 minutes.",
+    "Pendant ce temps, coupez la dinde en lamelles de 2 à 3 cm.",
+    "Ajoutez les morceaux de dinde dans un récipient. Salez, poivrez, parsemez de paprika et versez un filet d'huile d'olive. Mélangez.",
+    "Enfilez les lamelles de dinde sur des pics à brochettes.* *Consultez nos tips pour cette étape",
+    "Une fois les haricots verts cuits, égouttez-les et réservez.",
+    "Faites revenir les brochettes à feu doux dans une poêle avec un filet d'huile d'olive pendant 10 à 12 minutes en les retournant régulièrement.",
+    "Pendant ce temps, faites bouillir de l'eau chaude. Versez la semoule dans un récipient et versez par-dessus le même volume de semoule en eau. Couvrez et laissez gonfler.",
+    "Retournez les brochettes pour les faire cuire de l'autre coté.",
+    "Égrainez la semoule.",
+    "Dans un petit récipient, mélangez le yaourt grec avec du sel, du poivre et un filet d'huile d'olive.",
+    "Retirez les brochettes du feu."
+   ],
+   "macros_par_portion": {
+    "calories": 450.0,
+    "proteines": 47.0,
+    "glucides": 52.0,
+    "lipides": 6.0,
+    "fibres": 7.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Escalope de dinde comptée en pièce (1), poids non indiqué. Astuce du site (retirée des étapes) : Si vous utilisez des brochettes en bois, trempez-les dans de l'eau pendant 30 minutes avant de griller (à la poêle ou au barbecue) pour éviter qu'elles ne brûlent."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/tofu-cacahuetes-riz-et-brocoli-8vrj3lffamsg03i60qh6",
+   "nom_original": "Tofu cacahuètes, riz & brocoli",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 8,
+   "cook_min": 19,
+   "total_min": 27,
+   "ingredients": [
+    {
+     "texte": "80 g Tofu (nature)",
+     "nom": "Tofu (nature)",
+     "quantite": 80.0,
+     "unite": "g"
+    },
+    {
+     "texte": "100 g Brocoli (frais)",
+     "nom": "Brocoli (frais)",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "70 g Riz",
+     "nom": "Riz",
+     "quantite": 70.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 càs Beurre de cacahuète",
+     "nom": "Beurre de cacahuète",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 càs Sauce soja sucrée",
+     "nom": "Sauce soja sucrée",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1/2 gou. Ail",
+     "nom": "Ail",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 càs Farine de blé",
+     "nom": "Farine de blé",
+     "quantite": 30.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 càs = 30.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Dans une casserole d’eau bouillante salée, faites cuire le riz selon les instructions du paquet. Égouttez-le en fin de cuisson.",
+    "Pendant ce temps, lavez puis coupez le brocoli en sommités.",
+    "Faites cuire le brocoli dans une casserole d’eau bouillante salée, pendant 6 minutes. En fin de cuisson, égouttez-le.",
+    "Pendant ce temps, coupez le tofu en petits dés.",
+    "Dans un assiette creuse, ajoutez la farine et enrobez-y le tofu, afin que la sauce y adhère mieux.",
+    "Faites chauffer une poêle avec de l'huile neutre. Ajoutez les dés de tofu et faites-les griller pendant 5 minutes, sur feu moyen.",
+    "En parallèle, préparez la sauce. Dans un bol, mélangez : le beurre de cacahuète, la sauce soja sucrée et l'ail râpé.* Ajoutez de l'eau pour diluer la sauce, jusqu'à obtenir la consistance désirée. * Consultez nos astuces pour cette étape",
+    "Une fois le tofu bien grillé, ajoutez la sauce cacahuète dans la poêle. Faites cuire 1 à 2 minutes supplémentaires, à feu doux, en mélangeant."
+   ],
+   "macros_par_portion": {
+    "calories": 613.0,
+    "proteines": 27.0,
+    "glucides": 78.0,
+    "lipides": 19.0,
+    "fibres": 6.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Sauce soja sucrée 1 c. à soupe ; farine pour paner le tofu. Astuce du site (retirée des étapes) : Pour un vrai moment de gourmandise, on vous conseille d'agrémenter la sauce de gingembre râpé, de cébettes émincées & de sésame."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/salade-lentilles-et-saumon-8j2261b3kxsgk9wp19zd",
+   "nom_original": "Salade lentilles & saumon",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 8,
+   "total_min": 13,
+   "ingredients": [
+    {
+     "texte": "1 Saumon (frais)",
+     "nom": "Saumon (frais)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "200 g Lentilles (cuites)",
+     "nom": "Lentilles (cuites)",
+     "quantite": 200.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/2 Échalote",
+     "nom": "Échalote",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/2 càc Moutarde",
+     "nom": "Moutarde",
+     "quantite": 2.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/2 càc = 2.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1/2 càs Vinaigre balsamique",
+     "nom": "Vinaigre balsamique",
+     "quantite": 7.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/2 càs = 7.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "Huile d'olive (1 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Si besoin, faites décongeler le saumon. Faites cuire le saumon dans une poêle bien chaude avec un filet d'huile d'olive.",
+    "Salez et poivrez. Laissez cuire 6 minutes côté peau.",
+    "Pendant ce temps, épluchez puis coupez l'échalote en fines lamelles.",
+    "Réalisez la vinaigrette en mélangeant la moutarde à l'ancienne, le vinaigre balsamique et 1 c. à soupe d'huile d'olive par personne. Salez et poivrez.",
+    "Retournez le saumon et faites cuire 1 minute de chaque côté. Débarrassez le saumon de la poêle et émiettez-le à l'aide d'une fourchette.",
+    "Déposez les lentilles préalablement égouttées et rincées dans une assiette ou un plat. Ajoutez le saumon émietté et les lamelles d'échalote.",
+    "Arrosez de sauce, mélangez si vous le souhaitez. Salez, poivrez, c'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 467.0,
+    "proteines": 43.0,
+    "glucides": 29.0,
+    "lipides": 16.0,
+    "fibres": 17.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Pavé de saumon compté en pièce. Lipides 16 g : l'huile placard (1 c. à soupe) n'est probablement pas comptée."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/salade-lyonnaise-81gnf3ccmf3k00tp0dw1",
+   "nom_original": "Salade Lyonnaise",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 6,
+   "total_min": 9,
+   "ingredients": [
+    {
+     "texte": "1 Œuf",
+     "nom": "Œuf",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "50 g Lardons",
+     "nom": "Lardons",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "2 poignées Salade (coeur de laitue)",
+     "nom": "Salade (coeur de laitue)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (2 poignées)"
+    },
+    {
+     "texte": "1 tran. Pain de campagne (tranché)",
+     "nom": "Pain de campagne (tranché)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 càc Moutarde à l'ancienne",
+     "nom": "Moutarde à l'ancienne",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "30 g Parmesan (morceaux)",
+     "nom": "Parmesan (morceaux)",
+     "quantite": 30.0,
+     "unite": "g"
+    },
+    {
+     "texte": "Huile d'olive (1 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Faites bouillir de l'eau dans une casserole. Une fois que l'eau bout, ajoutez délicatement vos oeufs. Faites cuire pendant 5 minutes 30, puis plongez-les immédiatement dans un bol d'eau froide pour stopper la cuisson.",
+    "Pendant ce temps, dans une poêle bien chaude, faites revenir les lardons 2 à 3 minutes.",
+    "Mettez les lardons de côté et utilisez la même poêle pour faire revenir les tranches de pain jusqu'à ce qu'elles soient bien dorées. Ajoutez une noisette de beurre si besoin.",
+    "Dans un petit bol, réalisez la vinaigrette en mélangeant la moutarde avec l'huile d'olive. Mélangez une cuillère à café de moutarde pour une cuillère à soupe d'huile d'olive.",
+    "Une fois l'œuf refroidi, écalez-le délicatement dans l'eau.",
+    "Dans chaque assiette, servez la salade, ajoutez les lardons et les tranches de pain cassées grossièrement, 1 œuf, les copeaux de parmesan, poivrez et ajoutez la vinaigrette, c'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 462.0,
+    "proteines": 29.0,
+    "glucides": 21.0,
+    "lipides": 28.0,
+    "fibres": 3.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Salade en 'poignées' (non métrique, négligeable en macros)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/salade-quinoa-poulet-et-brocoli-8y7kj0t9cju802zl1dq3",
+   "nom_original": "Salade quinoa, poulet & brocoli",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 8,
+   "cook_min": 13,
+   "total_min": 21,
+   "ingredients": [
+    {
+     "texte": "1 Poulet (escalope)",
+     "nom": "Poulet (escalope)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 Salade (sucrine)",
+     "nom": "Salade (sucrine)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "100 g Brocoli (frais)",
+     "nom": "Brocoli (frais)",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "2 tran. Lard (tranches)",
+     "nom": "Lard (tranches)",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "70 g Quinoa (cuit)",
+     "nom": "Quinoa (cuit)",
+     "quantite": 70.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/2 càc Moutarde",
+     "nom": "Moutarde",
+     "quantite": 2.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/2 càc = 2.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "Huile d'olive (1 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Lavez puis coupez le brocoli en sommités.",
+    "Faites cuire le brocoli dans une casserole d’eau bouillante salée, pendant 5 minutes. En fin de cuisson, égouttez-le.",
+    "Pendant ce temps, coupez le poulet en tranches et le lard en morceaux.",
+    "Faites chauffer un filet d'huile d'olive dans une poêle à feu moyen. Ajoutez le poulet et faites-le revenir 2 à 3 minutes sur chaque face. Salez et poivrez. Ajoutez ensuite le lard et faites revenir le tout 4 à 5 minutes supplémentaires.",
+    "En parallèle, préparez le quinoa selon les instructions du paquet.",
+    "Lavez la salade puis coupez-la en morceaux.",
+    "Préparez la vinaigrette. Dans un bol, mélangez : la moutarde avec une cuillère à soupe d'huile d'olive par personne. Salez et poivrez.",
+    "Dans une assiette ou un plat, ajoutez la salade suivie du quinoa, du poulet, des brocolis et du lard. Assaisonnez de vinaigrette à la moutarde et mélangez le tout. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 411.0,
+    "proteines": 48.0,
+    "glucides": 23.0,
+    "lipides": 12.0,
+    "fibres": 7.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Escalope comptée en pièce ; 2 tranches de lard non pesées ; 1 sucrine."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/poulet-a-la-grecque-et-melange-de-cereales-8bzlc113m4xw3iuw13mj",
+   "nom_original": "Poulet à la grecque & mélange de céréales",
+   "type_propose": "dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 10,
+   "total_min": 25,
+   "ingredients": [
+    {
+     "texte": "1 Poulet (escalope)",
+     "nom": "Poulet (escalope)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "100 g Concombre",
+     "nom": "Concombre",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "100 g Tomate",
+     "nom": "Tomate",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/4 Oignon rouge",
+     "nom": "Oignon rouge",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 càs Yaourt Grec",
+     "nom": "Yaourt Grec",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 pinc. Paprika fumé",
+     "nom": "Paprika fumé",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1 pinc.)"
+    },
+    {
+     "texte": "70 g Mélange céréales (cuites)",
+     "nom": "Mélange céréales (cuites)",
+     "quantite": 70.0,
+     "unite": "g"
+    },
+    {
+     "texte": "Huile d'olive (2 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 30.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 2 càs = 30.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Préparez la marinade. Dans un bol, mélangez : une cuillère à soupe d'huile d'olive par personne et le paprika. Salez et poivrez.",
+    "Ajoutez le poulet et laissez-le mariner 10 minutes au frais.",
+    "Pendant ce temps, épluchez puis coupez les oignons en fines lamelles.",
+    "Lavez puis coupez les concombre en cubes.",
+    "Lavez puis coupez les tomates en cubes.",
+    "Préparez la salade à la grecque. Dans un saladier, mélangez : le concombre, les tomates et les oignons rouges. Salez, poivrez et assaisonnez d'un filet d'huile d'olive.",
+    "Faites chauffer un filet d'huile d'olive dans une poêle, sur feu moyen. Ajoutez le poulet mariné et faites-le revenir 4 à 5 minutes sur chaque face, jusqu'à ce qu'il soit bien doré.",
+    "Pendant ce temps, préparez la sauce. Dans un bol, mélangez : le yaourt et un filet d'huile d'olive. Salez et poivrez.",
+    "Réchauffez le mélange de céréales selon les instructions du paquet. Servez-le dans une assiette avec la salade à la grecque et le poulet. Ajoutez la sauce au yaourt et re-assaisonnez selon vos goûts, c'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 613.0,
+    "proteines": 41.0,
+    "glucides": 23.0,
+    "lipides": 40.0,
+    "fibres": 4.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Lipides 40 g/613 kcal : ici l'huile placard (2 c. à soupe) semble comptée. Mélange de céréales précuit."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/chicken-red-pepper-almond-traybake",
+   "nom_original": "Chicken, red pepper & almond traybake",
+   "type_propose": "dejeuner",
+   "servings": 4,
+   "prep_min": 15,
+   "cook_min": 40,
+   "total_min": 55,
+   "ingredients": [
+    {
+     "texte": "500g boneless, skinless chicken thigh",
+     "nom": "boneless, skinless chicken thigh",
+     "quantite": 500.0,
+     "unite": "g"
+    },
+    {
+     "texte": "3 medium red onions cut into thick wedges",
+     "nom": "medium red onions cut into thick wedges",
+     "quantite": 3.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "500g small red potato cut into thick slices",
+     "nom": "small red potato cut into thick slices",
+     "quantite": 500.0,
+     "unite": "g"
+    },
+    {
+     "texte": "2 red peppers deseeded and cut into thick slices",
+     "nom": "red peppers deseeded and cut into thick slices",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 garlic clove finely chopped",
+     "nom": "garlic clove finely chopped",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 tsp each ground cumin, smoked paprika and fennel seeds slightly crushed",
+     "nom": "ground cumin, smoked paprika, fennel seeds (1 tsp each)",
+     "quantite": 15,
+     "unite": "ml",
+     "remarque": "1 c. à café de chacune des 3 épices = 3 x 5 ml"
+    },
+    {
+     "texte": "3 tbsp olive oil",
+     "nom": "olive oil",
+     "quantite": 45.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 3 tbsp = 45.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "zest and juice 1 lemon",
+     "nom": "lemon (zest and juice)",
+     "quantite": 1,
+     "unite": "piece"
+    },
+    {
+     "texte": "50g whole blanched almond roughly chopped",
+     "nom": "whole blanched almond roughly chopped",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "170g tub 0% Greek yogurt to serve",
+     "nom": "tub 0% Greek yogurt to serve",
+     "quantite": 170.0,
+     "unite": "g"
+    },
+    {
+     "texte": "small handful parsley or coriander, chopped, to serve",
+     "nom": "small handful parsley or coriander, chopped, to serve",
+     "quantite": null,
+     "unite": null
+    }
+   ],
+   "directions": [
+    "Heat oven to 200C/180C fan/gas 6. Place the chicken, onions, potatoes and peppers in a large bowl and season. in another bowl, mix together the garlic, spices, oil, and lemon zest and juice. Pour this over everything and spread the mixture between 2 baking trays.",
+    "Roast for 40 mins, turning over after 20 mins, until the chicken is cooked through. Add the almonds for the final 8 mins of cooking. Serve in bowls with a big dollop of Greek yogurt and some chopped parsley or coriander."
+   ],
+   "macros_par_portion": {
+    "calories": 442.0,
+    "proteines": 34.0,
+    "glucides": 34.0,
+    "lipides": 20.0,
+    "fibres": 5.0,
+    "sucres": 11.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Temps de cuisson four 40 min, préparation 15 min. Yaourt grec servi à côté (inclus dans la liste)."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/harissa-fish-with-bulgur-salad",
+   "nom_original": "Harissa fish with bulgur salad",
+   "type_propose": "dejeuner",
+   "servings": 2,
+   "prep_min": 15,
+   "cook_min": 20,
+   "total_min": 35,
+   "ingredients": [
+    {
+     "texte": "100g bulgur wheat",
+     "nom": "bulgur wheat",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "½ small cucumber deseeded and finely chopped",
+     "nom": "small cucumber deseeded and finely chopped",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "100g cherry tomatoes quartered",
+     "nom": "cherry tomatoes quartered",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "25g pitted green olives",
+     "nom": "pitted green olives",
+     "quantite": 25.0,
+     "unite": "g"
+    },
+    {
+     "texte": "small handful of parsley finely chopped",
+     "nom": "small handful of parsley finely chopped",
+     "quantite": null,
+     "unite": null
+    },
+    {
+     "texte": "2tbsp rose harissa",
+     "nom": "rose harissa",
+     "quantite": 30.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tbsp = 30.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2tsp honey",
+     "nom": "honey",
+     "quantite": 10.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tsp = 10.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 garlic clove crushed",
+     "nom": "garlic clove crushed",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "½ lemon juiced",
+     "nom": "lemon juiced",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "2tbsp olive oil",
+     "nom": "olive oil",
+     "quantite": 30.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tbsp = 30.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "½ red onion finely sliced",
+     "nom": "red onion finely sliced",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 x 120g skinless, boneless white fish fillets, such as cod or haddock",
+     "nom": "skinless, boneless white fish fillets, such as cod or haddock",
+     "quantite": 240.0,
+     "unite": "g"
+    }
+   ],
+   "directions": [
+    "Cook the bulgur following pack instructions, then rinse and drain well before tipping into a large bowl. Add the cucumber, tomatoes, olives and most of the parsley. Season well. Combine the harissa, honey, garlic, lemon juice, half the oil and 1 tbsp water in a bowl, then set aside.",
+    "Heat the remaining oil in a non-stick pan over a medium heat and cook the red onion for 4-5 mins until softened and lightly browned. Season the fish well, then add to the pan and cook for 3 mins before pouring in the harissa mixture. Turn the fish and cook for 2-4 mins more (depending on the thickness of the fish), basting the fish in the pan juices until cooked through – the flesh should be opaque.",
+    "Divide the bulgur salad between two plates, top with the fish and fried onions, then drizzle over any remaining pan juices and sprinkle over the remaining parsley to serve."
+   ],
+   "macros_par_portion": {
+    "calories": 430.0,
+    "proteines": 35.0,
+    "glucides": 35.0,
+    "lipides": 15.0,
+    "fibres": 5.0,
+    "sucres": 12.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. 2 c. à café de miel ; cabillaud ou haddock."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/poulet-legumes-rotis-et-sauce-yaourt-8w963wktezhc02tg0chs",
+   "nom_original": "Poulet, légumes rôtis & sauce yaourt",
+   "type_propose": "diner",
+   "servings": 1,
+   "prep_min": 8,
+   "cook_min": 40,
+   "total_min": 48,
+   "ingredients": [
+    {
+     "texte": "1 Poulet (escalope)",
+     "nom": "Poulet (escalope)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "150 g Carotte (frais)",
+     "nom": "Carotte (frais)",
+     "quantite": 150.0,
+     "unite": "g"
+    },
+    {
+     "texte": "150 g Chou-fleur (frais)",
+     "nom": "Chou-fleur (frais)",
+     "quantite": 150.0,
+     "unite": "g"
+    },
+    {
+     "texte": "60 g Pois chiches (cuits)",
+     "nom": "Pois chiches (cuits)",
+     "quantite": 60.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 càs Yaourt Grec",
+     "nom": "Yaourt Grec",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1/4 Citron jaune",
+     "nom": "Citron jaune",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "Huile d'olive (1 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Préchauffez le four à 180°C. Lavez puis coupez le chou-fleur en sommités. Coupez-les en 2 ou en 4 selon leur taille.",
+    "Épluchez les carottes, puis coupez-les en biseaux.",
+    "Déposez les carottes, le chou-fleur* et les pois chiches égouttés sur une plaque recouverte de papier cuisson. Badigeonnez d'un bon filet d'huile d'olive. Salez, poivrez et mélangez. Ajoutez un petit fond d'eau et si vous le souhaitez, ajoutez du thym ou de l'origan, puis enfournez 35 à 40 minutes à 180°C. *Consultez nos tips pour cette étape",
+    "Pendant ce temps, faites chauffer un filet d'huile d'olive dans une poêle. Ajoutez le poulet. Salez, poivrez et faites-le revenir 4-5 minutes sur chaque face à feu moyen, jusqu'à ce qu'il soit bien doré.",
+    "En parallèle, préparez la sauce au yaourt. Dans un bol, mélangez : le yaourt avec le zeste et le jus de citron. Si vous le souhaitez, vous pouvez ajouter de l'ail râpé. Salez, poivrez et ajoutez un filet d'huile d'olive."
+   ],
+   "macros_par_portion": {
+    "calories": 383.0,
+    "proteines": 45.0,
+    "glucides": 27.0,
+    "lipides": 9.0,
+    "fibres": 13.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Lipides 9 g : huile placard (1 c. à soupe) probablement non comptée. 40 min de four, 8 min actives. Astuce du site (retirée des étapes) : Faites pré-cuire les carottes & le chou-fleur quelques minutes à la vapeur, pour qu'ils soient plus tendres."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/saumon-pommes-de-terre-et-haricots-verts-8tnea80zkts16cux07aq",
+   "nom_original": "Saumon, pommes de terre & haricots verts",
+   "type_propose": "diner",
+   "servings": 1,
+   "prep_min": 6,
+   "cook_min": 35,
+   "total_min": 41,
+   "ingredients": [
+    {
+     "texte": "1 Saumon (frais)",
+     "nom": "Saumon (frais)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "150 g Pommes de terre",
+     "nom": "Pommes de terre",
+     "quantite": 150.0,
+     "unite": "g"
+    },
+    {
+     "texte": "150 g Haricot vert (surgelé)",
+     "nom": "Haricot vert (surgelé)",
+     "quantite": 150.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 càs Crème fraîche",
+     "nom": "Crème fraîche",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 quartiers Citron jaune",
+     "nom": "Citron jaune",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/10 bou. Ciboulette",
+     "nom": "Ciboulette",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1/10 bou.)"
+    },
+    {
+     "texte": "Huile d'olive (1 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Préchauffez le four à 190°C. Lavez et découpez les pommes de terre en fines lamelles.",
+    "Dans un plat allant au four, ajoutez les rondelles de pomme de terre. Ajoutez un filet d'huile d'olive & assaisonnez de sel, poivre et thym séché, si vous en avez. Enfournez 25 minutes à 190°C.",
+    "Pendant ce temps, dans une casserole d'eau bouillante, faites cuire les haricots verts pendant 3 minutes. Égouttez-les en fin de cuisson et réservez.",
+    "Au bout des 25 minutes de cuisson, sortez le plat du four et ajoutez-y le saumon. Salez, poivrez et ajoutez un filet d'huile d'olive. Enfournez de nouveau 8-10 minutes à 190°C.",
+    "Pendant ce temps, dans un bol, mélangez la crème fraîche, la ciboulette ciselée (optionnel), le zeste & jus de citron, du sel et du poivre. Réservez.",
+    "Servez le saumon avec les pommes de terre croustillantes, les haricots verts et la sauce. Parsemez le saumon de ciboulette si vous en avez et ré-assaisonnez selon vos goûts. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 504.0,
+    "proteines": 32.0,
+    "glucides": 33.0,
+    "lipides": 25.0,
+    "fibres": 9.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Pavé de saumon compté en pièce."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/cabillaud-en-papillote-et-agrumes-8ek9gb04f3i8kcx70dk7",
+   "nom_original": "Cabillaud en papillote & agrumes",
+   "type_propose": "diner",
+   "servings": 1,
+   "prep_min": 10,
+   "cook_min": 10,
+   "total_min": 20,
+   "ingredients": [
+    {
+     "texte": "1 Cabillaud (frais)",
+     "nom": "Cabillaud (frais)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "70 g Riz",
+     "nom": "Riz",
+     "quantite": 70.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/4 Citron jaune",
+     "nom": "Citron jaune",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/4 Orange",
+     "nom": "Orange",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/2 Échalote",
+     "nom": "Échalote",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "Huile d'olive (1/2 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 2.5,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1/2 càc = 2.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Si besoin, faites décongeler le cabillaud. Préchauffez votre four à 200°C. Lavez puis découpez l'orange et le citron en tranches. Réservez.",
+    "Éplucher puis hachez finement l'échalote. Réservez.",
+    "Étalez une feuille de papier sulfurisé sur votre plan de travail. Déposez le poisson, ajoutez l'échalote hachée et un bon filet d'huile d'olive, salez et poivrez.",
+    "Ajoutez les tranches d'agrumes en alternant citron et orange.",
+    "Fermez la papillote puis enfournez pendant 10 minutes.",
+    "Pendant ce temps, faites cuire le riz selon les instructions de préparation du paquet. Égouttez."
+   ],
+   "macros_par_portion": {
+    "calories": 371.0,
+    "proteines": 26.0,
+    "glucides": 61.0,
+    "lipides": 2.0,
+    "fibres": 3.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Pavé de cabillaud compté en pièce. Astuce du site (retirée des étapes) : Pour un vrai moment de gourmandise, on vous conseille d'ajouter des herbes de Provence ou une pincée de piment d'Espelette avant la cuisson du poisson"
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/veloute-de-haricots-et-haddock-8e4z21zolapt196f02kl",
+   "nom_original": "Velouté de haricots & haddock",
+   "type_propose": "diner",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 12,
+   "total_min": 15,
+   "ingredients": [
+    {
+     "texte": "300 g Haricots blancs nature (cuits)",
+     "nom": "Haricots blancs nature (cuits)",
+     "quantite": 300.0,
+     "unite": "g"
+    },
+    {
+     "texte": "50 g Haddock fumé",
+     "nom": "Haddock fumé",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "30 ml Crème liquide",
+     "nom": "Crème liquide",
+     "quantite": 30.0,
+     "unite": "ml"
+    },
+    {
+     "texte": "1/4 càc Curcuma (poudre)",
+     "nom": "Curcuma (poudre)",
+     "quantite": 1.25,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/4 càc = 1.25 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1/4 Oignon jaune",
+     "nom": "Oignon jaune",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Émincez les oignons puis ajoutez-les dans une casserole avec un filet d'huile d'olive  et le curcuma et faites-les revenir 1 minute.",
+    "Pendant ce temps, égouttez et rincez les haricots blancs.",
+    "Ajoutez-les dans la casserole, faites revenir 1 minute à feu vif, puis couvrez à hauteur avec de l'eau (150ml par personne environ).",
+    "Portez à ébullition, salez, poivrez, couvrez puis laissez mijoter à feu moyen pendant 10 minutes.",
+    "Une fois la cuisson terminée, ajoutez la crème et mixez le tout.",
+    "Optionnel : ajoutez un peu d'eau si la texture est trop épaisse.",
+    "Servez la soupe avec le haddock coupé en lamelles (retirez la peau au préalable), c'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 488.0,
+    "proteines": 33.0,
+    "glucides": 39.0,
+    "lipides": 13.0,
+    "fibres": 43.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Fibres affichées 43 g/portion (valeur de la page, paraît élevée). Astuce du site (retirée des étapes) : Optionnel : servez avec quelques herbes fraîches si vous en avez chez vous, estragon, persil, coriandre, selon vos goûts !"
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/boeuf-mijote-pommes-de-terre-et-agrumes-98lb0fkb2woumgqh1a8u",
+   "nom_original": "Bœuf mijoté, pommes de terre & agrumes",
+   "type_propose": "diner",
+   "servings": 1,
+   "prep_min": 7,
+   "cook_min": 161,
+   "total_min": 168,
+   "ingredients": [
+    {
+     "texte": "150 g Bœuf (bourguignon)",
+     "nom": "Bœuf (bourguignon)",
+     "quantite": 150.0,
+     "unite": "g"
+    },
+    {
+     "texte": "150 g Pommes de terre",
+     "nom": "Pommes de terre",
+     "quantite": 150.0,
+     "unite": "g"
+    },
+    {
+     "texte": "100 g Carotte (frais)",
+     "nom": "Carotte (frais)",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/4 Oignon rouge",
+     "nom": "Oignon rouge",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/2 Clémentine",
+     "nom": "Clémentine",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/4 Citron jaune",
+     "nom": "Citron jaune",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/4 Bouillon de bœuf (cube)",
+     "nom": "Bouillon de bœuf (cube)",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "Eau (200 ml)",
+     "nom": "Eau",
+     "quantite": 200.0,
+     "unite": "ml",
+     "placard_jow": true
+    }
+   ],
+   "directions": [
+    "Épluchez puis coupez les carottes en biseaux.",
+    "Épluchez puis coupez les oignons en quartiers fins.",
+    "Épluchez puis coupez les pommes de terre en cubes.",
+    "Si besoin, coupez la viande pour bourguignon en cubes.",
+    "Faites chauffer un filet d'huile d'olive dans une casserole, sur feu vif. Ajouter le bœuf. Salez et poivrez. Faites-le dorer 2 à 3 minutes sur chaque face. Réservez hors du feu.",
+    "Faites chauffer un filet d'huile d'olive dans la même casserole, sur feu moyen. Ajoutez les oignons et les carottes. Salez, poivrez et faites-les revenir 5 minutes en remuant régulièrement.",
+    "Remettez la viande dans la casserole.",
+    "Versez 200 ml d'eau chaude par personne puis ajoutez le bouillon, les pommes de terre, le zeste et le jus des clémentines et des citrons. Mélangez bien, couvrez et poursuivez la cuisson 2h, sur feu doux.",
+    "Vérifiez la cuisson de la viande et des légumes. Si besoin, poursuivez la cuisson 15 à 20 minutes. Si besoin, ajouter une cuillère à café de maïzena pour épaissir la sauce.",
+    "Servez le bœuf mijoté aux légumes d'hiver & agrumes dans un bol ou une assiette creuse. Re-assaisonnez selon vos goûts, c'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 504.0,
+    "proteines": 41.0,
+    "glucides": 39.0,
+    "lipides": 19.0,
+    "fibres": 7.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. 7 min actives mais 161 min de mijotage. Bœuf à bourguignon (hors table d'ingrédients : Bavette/Steak haché seulement)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/salade-concombre-et-maquereau-fume-8xrq7d376fc002uu16jr",
+   "nom_original": "Salade concombre & maquereau fumé",
+   "type_propose": "diner",
+   "servings": 1,
+   "prep_min": 6,
+   "cook_min": 3,
+   "total_min": 9,
+   "ingredients": [
+    {
+     "texte": "1/4 Concombre",
+     "nom": "Concombre",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 Maquereau fumé",
+     "nom": "Maquereau fumé",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "70 g Quinoa (cuit)",
+     "nom": "Quinoa (cuit)",
+     "quantite": 70.0,
+     "unite": "g"
+    },
+    {
+     "texte": "80 g Petits pois (surgelés)",
+     "nom": "Petits pois (surgelés)",
+     "quantite": 80.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/2 càc Moutarde à l'ancienne",
+     "nom": "Moutarde à l'ancienne",
+     "quantite": 2.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/2 càc = 2.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 càc Vinaigre de cidre",
+     "nom": "Vinaigre de cidre",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1/10 bou. Menthe (feuilles)",
+     "nom": "Menthe (feuilles)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1/10 bou.)"
+    },
+    {
+     "texte": "Huile d'olive (1 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Préparez le quinoa selon les instructions du paquet.",
+    "Pendant ce temps, sortez les petits pois du congélateur et ajoutez-les dans un saladier. Faites bouillir de l'eau dans une casserole ou une bouilloire et versez-la sur les petits pois. Réservez 4 à 5 minutes avant d'égoutter.",
+    "Pendant ce temps, lavez puis coupez le concombre en petits dés.",
+    "Enlevez la peau des maquereaux fumés, puis émiettez-les grossièrement.",
+    "Effeuillez puis émincez finement la menthe.",
+    "Préparez la vinaigrette. Dans un bol, mélangez : la moutarde à l'ancienne avec le vinaigre de cidre et une cuillère à soupe d'huile d'olive par personne. Salez et poivrez.",
+    "Déposez le quinoa dans une assiette ou un plat. Ajoutez le concombre, les petits pois, le maquereau fumé et la menthe fraîche ciselée. Assaisonnez de vinaigrette à la moutarde et mélangez le tout. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 474.0,
+    "proteines": 27.0,
+    "glucides": 28.0,
+    "lipides": 26.0,
+    "fibres": 8.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. 1 filet de maquereau fumé compté en pièce, poids non indiqué."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/poelee-de-pois-chiches-et-oeuf-au-plat-82hnbdjc8nrk00ua06bv",
+   "nom_original": "Poêlée de pois chiches & œuf au plat",
+   "type_propose": "diner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 10,
+   "total_min": 15,
+   "ingredients": [
+    {
+     "texte": "150 g Pois chiches (cuits)",
+     "nom": "Pois chiches (cuits)",
+     "quantite": 150.0,
+     "unite": "g"
+    },
+    {
+     "texte": "2 poignées Épinard (frais)",
+     "nom": "Épinard (frais)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (2 poignées)"
+    },
+    {
+     "texte": "1 Œuf",
+     "nom": "Œuf",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 Pain pita",
+     "nom": "Pain pita",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/2 Oignon rouge",
+     "nom": "Oignon rouge",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "20 g Feta",
+     "nom": "Feta",
+     "quantite": 20.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 pinc. Paprika",
+     "nom": "Paprika",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1 pinc.)"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Égouttez les pois chiches.",
+    "Épluchez puis émincez les oignons finement.",
+    "Dans une poêle, ajoutez un filet d'huile d'olive, le paprika et les oignons.",
+    "Faire revenir 2-3 minutes.",
+    "Ajoutez les pois chiches, les épinards, et cuire 2 minutes en remuant à feu moyen en ajoutant un fond d'eau.",
+    "Salez, poivrez, et mettre de côté.",
+    "Dans la même poêle, ajoutez un filet d'huile d'olive à feu et cuire les œufs selon vos préférences.",
+    "Servir les oeufs sur les légumes, ajoutez la feta émiettée sur le dessus, un filet d'huile d'olive.",
+    "Dégustez avec le pain pita, c'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 560.0,
+    "proteines": 30.0,
+    "glucides": 66.0,
+    "lipides": 16.0,
+    "fibres": 16.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Épinards en '2 poignées' (non métrique) : cas limite pour l'exigence métrique."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/bouchees-de-dinde-et-carottes-roties-au-yaourt-84su2orebri85u171719",
+   "nom_original": "Bouchées de dinde & carottes rôties au yaourt",
+   "type_propose": "diner",
+   "servings": 1,
+   "prep_min": 6,
+   "cook_min": 25,
+   "total_min": 31,
+   "ingredients": [
+    {
+     "texte": "1 Dinde (escalope)",
+     "nom": "Dinde (escalope)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/4 Œuf",
+     "nom": "Œuf",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 càs Chapelure",
+     "nom": "Chapelure",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "150 g Carotte (frais)",
+     "nom": "Carotte (frais)",
+     "quantite": 150.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 poignée Salade (roquette)",
+     "nom": "Salade (roquette)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1 poignée)"
+    },
+    {
+     "texte": "3 càs Yaourt Grec",
+     "nom": "Yaourt Grec",
+     "quantite": 45.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 3 càs = 45.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 quartiers Citron jaune",
+     "nom": "Citron jaune",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/2 càc Garam masala",
+     "nom": "Garam masala",
+     "quantite": 2.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/2 càc = 2.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Préchauffez le four à 220°C. Lavez, épluchez puis coupez les carottes en 2 dans le sens de la longueur.",
+    "Placez-les dans un plat allant au four*, ajoutez un filet d'huile d'olive, salez, poivrez. Enfournez pendant 20 à 25 minutes. *Consultez nos tips pour cette étape",
+    "Mixez (ou hachez) grossièrement la dinde.",
+    "Mélangez-la avec l'œuf, le garam masala, la chapelure, le zeste du citron, sel, poivre.",
+    "Ajoutez un filet d'huile d'olive dans une poêle à feu moyen. Réalisez de petit tas de viande et en les aplatissant légèrement avec une fourchette.",
+    "Cuire 4 minutes de chaque côté jusqu'à ce que ma viande soit légèrement dorée.",
+    "Pendant que la viande cuit, réalisez la sauce au yaourt en mélangeant : le yaourt, le jus de citron, sel, poivre.",
+    "À la fin de la cuisson de la dinde, ajoutez 1 cuillère à soupe d'eau/personne, mélangez et laissez s'évaporer.",
+    "Sortez les carottes du four. Elles doivent être tendres à coeur, plantez un couteau dedans pour vous en assurer. Si ce n'est pas le cas, prolongez la cuisson de quelques minutes.",
+    "Dressez les assiettes en tapissant le fond avec la sauce au yaourt, ajoutez les carottes, la viande, la roquette, (optionnel : le zeste de citron), salez, poivrez,"
+   ],
+   "macros_par_portion": {
+    "calories": 379.0,
+    "proteines": 45.0,
+    "glucides": 28.0,
+    "lipides": 13.0,
+    "fibres": 6.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Escalope comptée en pièce ; roquette en 'poignée' (non métrique). Astuce du site (retirée des étapes) : Faites pré-cuire les carottes quelques minutes à la vapeur, pour des légumes plus tendres."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/herbed-pork-fillet-roast-vegetables",
+   "nom_original": "Herbed pork fillet with roast vegetables",
+   "type_propose": "diner",
+   "servings": 4,
+   "prep_min": null,
+   "cook_min": null,
+   "total_min": 105,
+   "ingredients": [
+    {
+     "texte": "4 medium parsnips peeled and quartered lengthways",
+     "nom": "medium parsnips peeled and quartered lengthways",
+     "quantite": 4.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 butternut squash (about 650g/1lb 7oz), peeled, seeded and cut into chunks",
+     "nom": "butternut squash",
+     "quantite": 650,
+     "unite": "g",
+     "remarque": "la page donne \"about 650g\""
+    },
+    {
+     "texte": "2 red onions each cut into 8 wedges",
+     "nom": "red onions each cut into 8 wedges",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 tbsp olive oil",
+     "nom": "olive oil",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tbsp = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "grated zest of 1 lemon",
+     "nom": "lemon (zest)",
+     "quantite": 1,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 tsp pork seasoning or dried mixed Italian herbs",
+     "nom": "pork seasoning or dried mixed Italian herbs",
+     "quantite": 10.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tsp = 10.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "500g lean pork tenderloin in one or two pieces",
+     "nom": "lean pork tenderloin in one or two pieces",
+     "quantite": 500.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 medium Bramley apple",
+     "nom": "medium Bramley apple",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "400ml hot chicken stock",
+     "nom": "hot chicken stock",
+     "quantite": 400.0,
+     "unite": "ml"
+    }
+   ],
+   "directions": [
+    "Preheat the oven to 200C/ gas 6/fan 180C. Put all the vegetables into a roasting tin. Drizzle with the olive oil, season with salt and pepper, then toss everything together.",
+    "On a plate, mix together the lemon zest and pork seasoning or herbs. Roll the pork tenderloin in the mixture, then put it on top of the vegetables. Roast for 40 minutes.",
+    "Peel and core the apple and cut it into chunks. Scatter the pieces into the roasting tin, then pour in the hot stock and cook for a further 15-20 minutes. Slice the pork, arrange on a platter with the veg, then spoon the pan juices on top."
+   ],
+   "macros_par_portion": {
+    "calories": 396.0,
+    "proteines": 34.0,
+    "glucides": 38.0,
+    "lipides": 9.0,
+    "fibres": 13.0,
+    "sucres": 21.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Temps de préparation non détaillé (total 1 h 45, essentiellement four). Panais, butternut, pomme Bramley."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/spicy-cajun-chicken-quinoa",
+   "nom_original": "Spicy Cajun chicken quinoa",
+   "type_propose": "diner",
+   "servings": 4,
+   "prep_min": 10,
+   "cook_min": 25,
+   "total_min": 35,
+   "ingredients": [
+    {
+     "texte": "4 skinless chicken breasts cut into bite-sized pieces",
+     "nom": "skinless chicken breasts",
+     "quantite": 4.0,
+     "unite": "piece",
+     "remarque": "4 blancs, poids non indiqué par la page"
+    },
+    {
+     "texte": "1 tbsp Cajun seasoning",
+     "nom": "Cajun seasoning",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tbsp = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "100g quinoa",
+     "nom": "quinoa",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "600ml hot chicken stock",
+     "nom": "hot chicken stock",
+     "quantite": 600.0,
+     "unite": "ml"
+    },
+    {
+     "texte": "100g dried apricots sliced",
+     "nom": "dried apricots sliced",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "½ x 250g pouch ready-to-use Puy lentils",
+     "nom": "ready-to-use Puy lentils",
+     "quantite": 125,
+     "unite": "g",
+     "remarque": "½ sachet de 250 g"
+    },
+    {
+     "texte": "1 tbsp olive oil",
+     "nom": "olive oil",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tbsp = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2 red onions cut into thin wedges",
+     "nom": "red onions cut into thin wedges",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 bunch spring onions chopped",
+     "nom": "spring onions (1 bunch)",
+     "quantite": 1,
+     "unite": "piece",
+     "remarque": "1 botte, poids non indiqué"
+    },
+    {
+     "texte": "small bunch coriander chopped",
+     "nom": "small bunch coriander chopped",
+     "quantite": null,
+     "unite": null
+    }
+   ],
+   "directions": [
+    "Heat oven to 200C/180C fan/gas 6. Toss the chicken with the Cajun spice and arrange in a single layer in a roasting tin. Bake for 20 mins until the chicken is cooked. Set aside.",
+    "Meanwhile, cook the quinoa in the chicken stock for 15 mins until tender, adding the apricots and lentils for the final 5 mins. Drain and place into a large bowl with the chicken, toss together.",
+    "While the quinoa is cooking, heat the oil in a large frying pan and soften the onions for 10-15 mins. Toss the onions into the quinoa with the coriander and some seasoning, then mix well."
+   ],
+   "macros_par_portion": {
+    "calories": 386.0,
+    "proteines": 47.0,
+    "glucides": 35.0,
+    "lipides": 7.0,
+    "fibres": 5.0,
+    "sucres": 15.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Assaisonnement cajun 1 c. à soupe ; abricots secs 100 g (sucres 15 g/portion)."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/herb-garlic-baked-cod-romesco-sauce-spinach",
+   "nom_original": "Herb & garlic baked cod with romesco sauce & spinach",
+   "type_propose": "diner",
+   "servings": 2,
+   "prep_min": 10,
+   "cook_min": 20,
+   "total_min": 30,
+   "ingredients": [
+    {
+     "texte": "2 x 140g skinless cod loin or pollock fillets",
+     "nom": "skinless cod loin or pollock fillets",
+     "quantite": 280.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 tbsp rapeseed oil plus 2 tsp",
+     "nom": "rapeseed oil",
+     "quantite": 25,
+     "unite": "ml",
+     "remarque": "cuillères converties : 1 tbsp + 2 tsp = 25 ml"
+    },
+    {
+     "texte": "1 tsp fresh thyme leaves",
+     "nom": "fresh thyme leaves",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 large garlic clove finely grated",
+     "nom": "large garlic clove finely grated",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "½ lemon zested and juiced",
+     "nom": "lemon zested and juiced",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 large red pepper sliced",
+     "nom": "large red pepper sliced",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 leeks well washed and thinly sliced",
+     "nom": "leeks well washed and thinly sliced",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 tbsp flaked almonds",
+     "nom": "flaked almonds",
+     "quantite": 30.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tbsp = 30.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 tbsp tomato purée",
+     "nom": "tomato purée",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tbsp = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "¼ tsp vegetable bouillon powder",
+     "nom": "vegetable bouillon powder",
+     "quantite": 1.25,
+     "unite": "ml",
+     "remarque": "cuillère convertie : ¼ tsp = 1.25 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 tsp apple cider vinegar",
+     "nom": "apple cider vinegar",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "100g baby spinach wilted in a pan or the microwave",
+     "nom": "baby spinach wilted in a pan or the microwave",
+     "quantite": 100.0,
+     "unite": "g"
+    }
+   ],
+   "directions": [
+    "Heat oven to 220C/200C fan/ gas 7 and put the fish fillets in a shallow ovenproof dish so they fit quite snugly in a single layer. Mix 1 tbsp rapeseed oil with the thyme and garlic, spoon over the fish, then grate over the lemon zest. Bake for 10-12 mins until the fish is moist and flakes easily when tested.",
+    "Meanwhile, heat the remaining oil in a non-stick pan and fry the pepper and leeks for 5 mins until softened. Add the almonds and cook for 5 mins more. Tip in the tomato purée, 5 tbsp water, the bouillion powder and vinegar, and cook briefly to warm the mixture through.",
+    "Add the juice of up to half a lemon and blitz with a stick blender until it makes a thick, pesto-like sauce. Serve with the fish and the wilted spinach."
+   ],
+   "macros_par_portion": {
+    "calories": 409.0,
+    "proteines": 33.0,
+    "glucides": 11.0,
+    "lipides": 24.0,
+    "fibres": 8.0,
+    "sucres": 9.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Cabillaud ou lieu."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/tuna-mayo-wraps",
+   "nom_original": "Healthy tuna lettuce wraps",
+   "type_propose": "diner",
+   "servings": 2,
+   "prep_min": 15,
+   "cook_min": 2,
+   "total_min": 17,
+   "ingredients": [
+    {
+     "texte": "2 drops rapeseed oil for brushing",
+     "nom": "rapeseed oil (for brushing)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "2 gouttes, négligeable"
+    },
+    {
+     "texte": "2 x 140g fresh tuna fillets, defrosted",
+     "nom": "fresh tuna fillets, defrosted",
+     "quantite": 280.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 ripe avocado",
+     "nom": "ripe avocado",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "½ tsp English mustard powder",
+     "nom": "English mustard powder",
+     "quantite": 2.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : ½ tsp = 2.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 tsp cider vinegar",
+     "nom": "cider vinegar",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 tbsp capers",
+     "nom": "capers",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tbsp = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "8 romaine lettuce leaves",
+     "nom": "romaine lettuce leaves",
+     "quantite": 8.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "16 cherry tomatoes preferably on the vine, halved",
+     "nom": "cherry tomatoes preferably on the vine, halved",
+     "quantite": 16.0,
+     "unite": "piece"
+    }
+   ],
+   "directions": [
+    "Brush the tuna with a little oil. Heat a non-stick pan, add the tuna and cook for 1 min each side, or a min or so longer for a thicker fillet. Transfer to a plate to rest.",
+    "Halve and stone the avocado and scoop the flesh into a small bowl. Add the mustard powder and vinegar, then mash well so that the mixture is smooth like mayonnaise. Stir in the capers. Spoon into two small dishes and put on serving plates with the lettuce leaves, and tomatoes.",
+    "Slice the tuna (it should be slightly pink inside) and arrange on the plates. Spoon some ‘mayo’ on the lettuce leaves and top with tuna and cherry tomatoes and a few extra capers. To eat, roll up into little wraps."
+   ],
+   "macros_par_portion": {
+    "calories": 361.0,
+    "proteines": 40.0,
+    "glucides": 8.0,
+    "lipides": 17.0,
+    "fibres": 8.0,
+    "sucres": 7.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Thon FRAIS (steaks 2 x 140 g), pas de thon en conserve ; repas léger (361 kcal)."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/nutty-chicken-sate-strips",
+   "nom_original": "Nutty chicken satay strips",
+   "type_propose": "collation",
+   "servings": 2,
+   "prep_min": 10,
+   "cook_min": 10,
+   "total_min": 20,
+   "ingredients": [
+    {
+     "texte": "2 tbsp chunky peanut butter (without palm oil or sugar)",
+     "nom": "chunky peanut butter (without palm oil or sugar)",
+     "quantite": 30.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tbsp = 30.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 garlic clove finely grated",
+     "nom": "garlic clove finely grated",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 tsp Madras curry powder",
+     "nom": "Madras curry powder",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "few shakes soy sauce",
+     "nom": "soy sauce",
+     "quantite": null,
+     "unite": null
+    },
+    {
+     "texte": "2 tsp lime juice",
+     "nom": "lime juice",
+     "quantite": 10.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tsp = 10.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2 skinless, chicken breast fillets (about 300g) cut into thick strips",
+     "nom": "chicken breast fillets",
+     "quantite": 300,
+     "unite": "g",
+     "remarque": "la page donne \"2 fillets (about 300g)\" : poids de la page retenu"
+    },
+    {
+     "texte": "about 10cm cucumber cut into fingers",
+     "nom": "cucumber (about 10 cm)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "longueur, pas de poids"
+    },
+    {
+     "texte": "sweet chilli sauce to serve",
+     "nom": "sweet chilli sauce (to serve, optional)",
+     "quantite": null,
+     "unite": null
+    }
+   ],
+   "directions": [
+    "Heat oven to 200C/180C fan/gas 4 and line a baking tray with non-stick paper.",
+    "Mix 2 tbsp chunky peanut butter with 1 finely grated garlic clove, 1 tsp Madras curry powder, a few shakes of soy sauce and 2 tsp lime juice in a bowl. Some nut butters are thicker than others, so if necessary, add a dash of boiling water to get a coating consistency.",
+    "Add 2 skinless chicken breast fillets, cut into strips, and mix well. Arrange on the baking sheet, spaced apart, and bake in the oven for 8-10 mins until cooked, but still juicy.",
+    "Eat warm with roughly 10cm cucumber, cut into fingers, and sweet chilli sauce. Alternatively, leave to cool and keep in the fridge for up to 2 days."
+   ],
+   "macros_par_portion": {
+    "calories": 276.0,
+    "proteines": 41.0,
+    "glucides": 3.0,
+    "lipides": 10.0,
+    "fibres": 2.0,
+    "sucres": 2.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Sauce chili douce optionnelle 'to serve' non quantifiée ; beurre de cacahuète sans sucre ni huile de palme."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/salade-haricots-et-oeufs-85hxamt64gcmkgl10wb2",
+   "nom_original": "Salade haricots & œufs",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 2,
+   "cook_min": 12,
+   "total_min": 14,
+   "ingredients": [
+    {
+     "texte": "1 Œuf",
+     "nom": "Œuf",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "250 g Haricot vert (frais)",
+     "nom": "Haricot vert (frais)",
+     "quantite": 250.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 càc Moutarde",
+     "nom": "Moutarde",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 càc Vinaigre de vin blanc",
+     "nom": "Vinaigre de vin blanc",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1/10 bou. Persil (frais)",
+     "nom": "Persil (frais)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1/10 bou.)"
+    },
+    {
+     "texte": "Huile d'olive (1 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Lavez puis équeutez les haricots verts, si besoin.",
+    "Dans une casserole d'eau bouillante salée, ajoutez les haricots. Faites les cuire 10 à 12 minutes, puis égouttez-les.",
+    "Pendant ce temps, faites cuire les œufs pendant 10 minutes dans une casserole d'eau bouillante.",
+    "En parallèle, préparez la vinaigrette. Dans un bol, mélangez : le vinaigre blanc, 1 c. à soupe d'huile d'olive par personne, la moutarde et la moitié du persil ciselé (optionnel).",
+    "Une fois cuits, plongez-les dans de l'eau froide pour stopper la cuisson. Enlevez la coquille délicatement, puis coupez-les en petits cubes."
+   ],
+   "macros_par_portion": {
+    "calories": 179.0,
+    "proteines": 13.0,
+    "glucides": 11.0,
+    "lipides": 8.0,
+    "fibres": 7.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. Lipides 8 g : huile placard (1 c. à soupe) probablement non comptée. Astuce du site (retirée des étapes) : Pour un vrai moment de gourmandise, on vous conseille d'agrémenter votre salade de croutons, pignons de pin torréfiés & de lardons grillés."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/miniature-omelettes-ricotta",
+   "nom_original": "Miniature omelettes with ricotta",
+   "type_propose": "collation",
+   "servings": 6,
+   "prep_min": null,
+   "cook_min": null,
+   "total_min": 35,
+   "ingredients": [
+    {
+     "texte": "4 eggs",
+     "nom": "eggs",
+     "quantite": 4.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "small handful flatleaf parsley finely chopped, plus extra sprigs to serve",
+     "nom": "small handful flatleaf parsley finely chopped, plus extra sprigs to serve",
+     "quantite": null,
+     "unite": null
+    },
+    {
+     "texte": "handful chives finely snipped",
+     "nom": "handful chives finely snipped",
+     "quantite": null,
+     "unite": null
+    },
+    {
+     "texte": "1small garlic clove finely chopped",
+     "nom": "small garlic clove finely chopped",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "50g parmesan freshly grated",
+     "nom": "parmesan freshly grated",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "olive oil for frying",
+     "nom": "olive oil (for frying)",
+     "quantite": null,
+     "unite": null
+    },
+    {
+     "texte": "250g tub ricotta",
+     "nom": "tub ricotta",
+     "quantite": 250.0,
+     "unite": "g"
+    },
+    {
+     "texte": "handful fresh basil torn",
+     "nom": "handful fresh basil torn",
+     "quantite": null,
+     "unite": null
+    },
+    {
+     "texte": "50g parmesan freshly grated",
+     "nom": "parmesan freshly grated",
+     "quantite": 50.0,
+     "unite": "g"
+    }
+   ],
+   "directions": [
+    "Beat the eggs with 2 tbsp water, then season if you want to. Mix in the parsley, chives, garlic and parmesan.",
+    "Heat a 23cm heavy-based frying pan on a medium heat with a little oil. When the oil’s hot, add a ladleful (about a third) of the egg mixture and tip the mixture so it covers the base. Reduce the heat and cook the omelette until just firm, then flip it over and cook the other side. Keep warm. Repeat to make three omelettes, adding a little extra oil to the pan each time.",
+    "Make the filling by combining the ricotta, basil, parmesan and some pepper. Spread mixture over each omelette, roll up loosely like a cigar and cut into thickish slices. Can be made up to 5 hrs ahead. Serve garnished with parsley."
+   ],
+   "macros_par_portion": {
+    "calories": 233.0,
+    "proteines": 16.0,
+    "glucides": 1.0,
+    "lipides": 19.0,
+    "fibres": null
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Parmesan listé deux fois sur la page (50 g dans les omelettes + 50 g dans la garniture). Pas de fibres affichées."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/turkey-salad-rye",
+   "nom_original": "Turkey salad on rye",
+   "type_propose": "collation",
+   "servings": 2,
+   "prep_min": 8,
+   "cook_min": null,
+   "total_min": 8,
+   "ingredients": [
+    {
+     "texte": "6 very thin slices rye bread (about 75g)",
+     "nom": "rye bread (6 very thin slices)",
+     "quantite": 75,
+     "unite": "g",
+     "remarque": "la page donne \"about 75g\""
+    },
+    {
+     "texte": "3 small tomatoes sliced",
+     "nom": "small tomatoes sliced",
+     "quantite": 3.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "12 cucumber slices",
+     "nom": "cucumber slices",
+     "quantite": 12.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "100g thinly sliced turkey breast (look for carved turkey rather than pre-formed slices)",
+     "nom": "thinly sliced turkey breast (look for carved turkey rather than pre-formed slices)",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "6 Little Gem lettuce leaves, shredded",
+     "nom": "Little Gem lettuce leaves, shredded",
+     "quantite": 6.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 tbsp light mayonnaise",
+     "nom": "light mayonnaise",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tbsp = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "3 tbsp 0% bio-yogurt",
+     "nom": "0% bio-yogurt",
+     "quantite": 45.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 3 tbsp = 45.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "½ tsp Madras curry powder",
+     "nom": "Madras curry powder",
+     "quantite": 2.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : ½ tsp = 2.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 tbsp raisin",
+     "nom": "raisin",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tbsp = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2 spring onions finely chopped",
+     "nom": "spring onions finely chopped",
+     "quantite": 2.0,
+     "unite": "piece"
+    }
+   ],
+   "directions": [
+    "Mix the dressing ingredients and spread a little on each slice of bread. Pile on the tomato, cucumber and turkey slices, and the lettuce. Top with any remaining dressing. Best eaten the same day."
+   ],
+   "macros_par_portion": {
+    "calories": 284.0,
+    "proteines": 24.0,
+    "glucides": 35.0,
+    "lipides": 6.0,
+    "fibres": 5.0,
+    "sucres": 19.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. 1 c. à soupe de mayonnaise allégée. Proche des 'Curried turkey lettuce wraps' (même logique dinde-curry-raisins)."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/cinnamon-baked-oats-with-blueberries",
+   "nom_original": "Healthy baked oats",
+   "type_propose": "collation",
+   "servings": 2,
+   "prep_min": 5,
+   "cook_min": 10,
+   "total_min": 15,
+   "ingredients": [
+    {
+     "texte": "100ml almond milk or milk of your choice",
+     "nom": "almond milk or milk of your choice",
+     "quantite": 100.0,
+     "unite": "ml"
+    },
+    {
+     "texte": "1 large egg",
+     "nom": "large egg",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "50g porridge oats",
+     "nom": "porridge oats",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 tsp cinnamon",
+     "nom": "cinnamon",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "½ - 1 tsp vanilla essence",
+     "nom": "vanilla essence",
+     "quantite": 2.5,
+     "unite": "ml",
+     "remarque": "page : \"½-1 tsp\" ; borne basse 2,5 ml retenue"
+    },
+    {
+     "texte": "50g bio yogurt",
+     "nom": "bio yogurt",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "cinnamon for dusting",
+     "nom": "cinnamon for dusting",
+     "quantite": null,
+     "unite": null
+    },
+    {
+     "texte": "60g blueberries",
+     "nom": "blueberries",
+     "quantite": 60.0,
+     "unite": "g"
+    }
+   ],
+   "directions": [
+    "Heat the oven to 200C/180C fan/gas 6. Beat the milk, egg and oats together with 2 tbsp water, the cinnamon and vanilla essence. Divide between two 165ml ramekins, then bake in the oven for 10 mins until almost set. Top each one with half the yogurt, then dust with cinnamon and top with the berries."
+   ],
+   "macros_par_portion": {
+    "calories": 190.0,
+    "proteines": 9.0,
+    "glucides": 22.0,
+    "lipides": 6.0,
+    "fibres": 3.0,
+    "sucres": 5.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. 190 kcal/9 g protéines : classé collation. Lait d'amande ou autre lait."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/tartine-poire-et-brie-886kb8yw5cx1iths02ib",
+   "nom_original": "Tartine poire & brie",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 6,
+   "cook_min": 10,
+   "total_min": 16,
+   "ingredients": [
+    {
+     "texte": "1/2 Poire",
+     "nom": "Poire",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 tran. Pain de campagne (tranché)",
+     "nom": "Pain de campagne (tranché)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "40 g Brie (fondant)",
+     "nom": "Brie (fondant)",
+     "quantite": 40.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 càc Miel (liquide)",
+     "nom": "Miel (liquide)",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 càs Pignons de pin",
+     "nom": "Pignons de pin",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 poignée Salade (Mélange)",
+     "nom": "Salade (Mélange)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1 poignée)"
+    }
+   ],
+   "directions": [
+    "Préchauffez le four en mode grill. Lavez les poires et coupez-les en tranches.",
+    "Coupez le brie en tranches.* *Consultez nos tips pour cette recette",
+    "Placez les tranches de pain sur une plaque de cuisson. Ajoutez le brie sur le pain, puis les poires.",
+    "Versez un filet de miel sur les tartines. Salez et poivrez.",
+    "Enfournez pour 10 minutes en mode grill. Surveillez la cuisson. les poires doivent légèrement dorer sur les bords."
+   ],
+   "macros_par_portion": {
+    "calories": 295.0,
+    "proteines": 11.0,
+    "glucides": 34.0,
+    "lipides": 11.0,
+    "fibres": 4.0
+   },
+   "notes": "Jow : recette affichée pour 1 portion (sélecteur de portions du site, valeur par défaut) ; quantités = 1 portion. Macros 'valeurs estimées moyennes pour une portion'. Les ingrédients marqués placard_jow (bloc 'Assurez-vous d'avoir…', absents du JSON-LD) ne sont pas garantis inclus dans les macros. 'Glucides' = glucides affichés (convention UE, hors fibres a priori, non précisé). Pas de sucres affichés. 1 c. à café de miel ; salade en 'poignée'. Astuce du site (retirée des étapes) : Pour un vrai moment de gourmandise, on vous conseille de remplacer le brie par du Saint-Marcelin, du Morbier ou du Brie de Meaux."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/lighter-scotch-eggs",
+   "nom_original": "Lighter scotch eggs",
+   "type_propose": "collation",
+   "servings": 4,
+   "prep_min": 40,
+   "cook_min": 25,
+   "total_min": 65,
+   "ingredients": [
+    {
+     "texte": "5 tsp rapeseed oil",
+     "nom": "rapeseed oil",
+     "quantite": 25.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 5 tsp = 25.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 shallot finely chopped",
+     "nom": "shallot finely chopped",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "5 medium eggs",
+     "nom": "medium eggs",
+     "quantite": 5.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "85g green lentil (drained weight from a 400g can)",
+     "nom": "green lentil (drained weight from a 400g can)",
+     "quantite": 85.0,
+     "unite": "g"
+    },
+    {
+     "texte": "225g extra lean pork mince (less than 5% fat)",
+     "nom": "extra lean pork mince (less than 5% fat)",
+     "quantite": 225.0,
+     "unite": "g"
+    },
+    {
+     "texte": "2 tsp finely chopped sage",
+     "nom": "finely chopped sage",
+     "quantite": 10.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tsp = 10.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "3 tsp finely snipped chive",
+     "nom": "finely snipped chive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 3 tsp = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "½ tsp dry mustard powder",
+     "nom": "dry mustard powder",
+     "quantite": 2.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : ½ tsp = 2.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "good pinch of grated nutmeg",
+     "nom": "good pinch of grated nutmeg",
+     "quantite": null,
+     "unite": null
+    },
+    {
+     "texte": "1 tbsp plain flour",
+     "nom": "plain flour",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tbsp = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "25g panko crumbs (Japanese breadcrumbs)",
+     "nom": "panko crumbs (Japanese breadcrumbs)",
+     "quantite": 25.0,
+     "unite": "g"
+    }
+   ],
+   "directions": [
+    "Heat 1 tsp of the oil in a small non-stick frying pan. Tip in the shallot and fry for a few mins until softened. Transfer to a plate and set aside to cool. (No need to wash the pan, you can use it later.)",
+    "Meanwhile, put 4 of the eggs in a medium pan, covering well with cold water. Bring to the boil – as the water starts to bubble, set the timer and boil for 5 mins. When cooked, pour off the boiling water and cool the eggs under cold water to stop them from cooking further. Mash the lentils well in a medium bowl with the back of a fork, then stir in the pork mince, sage, 2 tsp of the chives, the mustard, nutmeg, cooled shallots, a pinch of salt and a generous grating of black pepper. Peel the shells from the eggs and pat dry with kitchen paper.",
+    "Divide the meat mix evenly into 4. Tip the flour onto a plate and roll in each egg to coat, tapping off any excess. Pat down a quarter of the meat mix on the work surface to a 12-13 cm circle, using the rest of the flour to keep it from sticking. Cup the circle in your hand and place one of the eggs in the centre. With both hands, pat, press and ease the meat mix around the egg until it is completely and evenly covered. Seal really well so there is no join, then pat and roll it into a good shape on the floured surface. Repeat with the rest of the meat mix and cooked eggs.",
+    "Mix the panko crumbs on a large plate with the remaining chives. Beat the remaining egg on a plate, brush some all over each coated egg (you won’t use it all), then roll the eggs in the panko crumbs, patting them on to stick. Lay the eggs on a baking parchment-lined baking tray and chill for 20-25 mins (but not overnight). Heat oven to 190C/170C fan/gas 5.",
+    "Heat 2 tsp of the remaining oil in the pan you used for the shallot. When quite hot (it is hot enough when a few panko crumbs dropped in sizzle immediately and start to brown), put in 2 of the scotch eggs and roll in the oil to coat them well. Set the timer for 2 mins, then fry, turning often, to brown all over. You are just browning, not fully cooking the eggs at this stage, so don’t overcook or the coating may start to split. Transfer to the lined baking tray and repeat with the remaining eggs, lowering the heat slightly if the pan gets too hot.",
+    "Bake the scotch eggs for 12 mins. Remove and lay them on kitchen paper to drain and leave to cool slightly. Halve the scotch eggs using a sharp knife and serve slightly warm or cold. Best eaten the same day or, when cold, can be stored overnight in the fridge in an airtight container."
+   ],
+   "macros_par_portion": {
+    "calories": 223.0,
+    "proteines": 21.0,
+    "glucides": 8.3,
+    "lipides": 11.7,
+    "fibres": 1.4,
+    "sucres": 0.3
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Préparation 40 min (à la limite). 4 pièces = 4 portions."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/tuna-nicoise-protein-pots",
+   "nom_original": "Tuna Niçoise protein pot",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 10,
+   "cook_min": 10,
+   "total_min": 20,
+   "ingredients": [
+    {
+     "texte": "1 large egg",
+     "nom": "large egg",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "80g green beans",
+     "nom": "green beans",
+     "quantite": 80.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 tomato amber or red, quartered",
+     "nom": "tomato amber or red, quartered",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "120g can tuna in spring water",
+     "nom": "tuna in spring water (can)",
+     "quantite": 120.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1½ -2 tbsp French dressing",
+     "nom": "French dressing",
+     "quantite": 22.5,
+     "unite": "ml",
+     "remarque": "page : \"1½-2 tbsp\" ; borne basse 1,5 c. à soupe = 22,5 ml retenue (vinaigrette du commerce)"
+    }
+   ],
+   "directions": [
+    "Boil the egg for 8-10 mins depending on if you want a soft or hard yolk, then at the same time steam the green beans for 6 mins above the pan until tender. Cool the egg and beans under running water then carefully shell and quarter the egg. Leave to cool.",
+    "Tip the beans into a large packed lunch pot. Top with the tomato, tuna and quartered egg and spoon on the French dressing. Seal until ready to eat (see tip below)."
+   ],
+   "macros_par_portion": {
+    "calories": 298.0,
+    "proteines": 30.0,
+    "glucides": 8.0,
+    "lipides": 15.0,
+    "fibres": 4.0,
+    "sucres": 6.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Vinaigrette 'French dressing' du commerce."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/bean-feta-spread-greek-salad-salsa-oatcakes",
+   "nom_original": "Bean & feta spread with Greek salad salsa & oatcakes",
+   "type_propose": "collation",
+   "servings": 4,
+   "prep_min": 10,
+   "cook_min": null,
+   "total_min": 10,
+   "ingredients": [
+    {
+     "texte": "400g can butter beans drained",
+     "nom": "can butter beans drained",
+     "quantite": 400.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 lemon ½ juiced, ½ cut into 4 wedges",
+     "nom": "lemon",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 tbsp ricotta or bio yogurt",
+     "nom": "ricotta or bio yogurt",
+     "quantite": 30.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tbsp = 30.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "85g feta crumbled",
+     "nom": "feta crumbled",
+     "quantite": 85.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 garlic clove",
+     "nom": "garlic clove",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "12 oatcakes",
+     "nom": "oatcakes",
+     "quantite": 12.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "4 tomatoes chopped",
+     "nom": "tomatoes chopped",
+     "quantite": 4.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 medium cucumber finely diced",
+     "nom": "medium cucumber finely diced",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 small red onion finely chopped",
+     "nom": "small red onion finely chopped",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "12 pitted Kalamata olives chopped",
+     "nom": "pitted Kalamata olives chopped",
+     "quantite": 12.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "a few chopped mint leaves (optional)",
+     "nom": "a few chopped mint leaves (optional)",
+     "quantite": null,
+     "unite": null
+    }
+   ],
+   "directions": [
+    "Tip the beans, lemon juice, ricotta, 50g feta and the garlic into a bowl and blitz with a hand blender or in a food processor to make a paste. Stir in the remaining feta and spoon the mixture into four small pots.",
+    "To make the salsa, stir all the ingredients together with the mint (if using) and divide into four more pots, topping with a lemon wedge. These will keep, chilled in an airtight container, for two-three days. To eat, spread the oatcakes with the bean mixture, squeeze the lemon wedges over the salads and pile generously onto the oatcakes."
+   ],
+   "macros_par_portion": {
+    "calories": 382.0,
+    "proteines": 14.0,
+    "glucides": 41.0,
+    "lipides": 16.0,
+    "fibres": 10.0,
+    "sucres": 8.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Oatcakes (galettes d'avoine écossaises) peu courantes en France."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/curried-turkey-lettuce-wraps",
+   "nom_original": "Curried turkey lettuce wraps",
+   "type_propose": "collation",
+   "servings": 2,
+   "prep_min": 5,
+   "cook_min": null,
+   "total_min": 5,
+   "ingredients": [
+    {
+     "texte": "100g natural yogurt",
+     "nom": "natural yogurt",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 tsp curry powder",
+     "nom": "curry powder",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 tsp tomato purée",
+     "nom": "tomato purée",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2 tbsp raisins",
+     "nom": "raisins",
+     "quantite": 30.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tbsp = 30.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "100g cooked skinless turkey or chicken breast meat",
+     "nom": "cooked skinless turkey or chicken breast meat",
+     "quantite": 100.0,
+     "unite": "g"
+    },
+    {
+     "texte": "8 Little Gem lettuces leaves",
+     "nom": "Little Gem lettuces leaves",
+     "quantite": 8.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 tsp sunflower seeds",
+     "nom": "sunflower seeds",
+     "quantite": 10.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tsp = 10.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "coriander leaves",
+     "nom": "coriander leaves",
+     "quantite": null,
+     "unite": null
+    }
+   ],
+   "directions": [
+    "Mix the natural yogurt with the curry powder, tomato purée and raisins. Stir in the cooked turkey or chicken, then spoon onto the lettuce leaves. Scatter over the sunflower seeds and the coriander leaves."
+   ],
+   "macros_par_portion": {
+    "calories": 235.0,
+    "proteines": 22.0,
+    "glucides": 25.0,
+    "lipides": 5.0,
+    "fibres": 2.0,
+    "sucres": 24.0
+   },
+   "notes": "BBC Good Food : macros 'per serving' (JSON-LD NutritionInformation) ; 'carbs' au sens UK = glucides hors fibres, fibres données à part ; sucres ajoutés dans le champ sucres. Sucres 24 g (raisins secs, pas de sucre ajouté). Dinde ou poulet cuit."
+  }
+ ]
+}

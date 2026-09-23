@@ -1,0 +1,2434 @@
+{
+ "recettes": [
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/breakfast-tacos-8lwn6tgg38g0jnle10wb",
+   "nom_original": "Breakfast tacos",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 6,
+   "cook_min": 3,
+   "total_min": 9,
+   "ingredients": [
+    {
+     "texte": "1 Tortilla (blé)",
+     "nom": "Tortilla (blé)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/2 Avocat",
+     "nom": "Avocat",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 Œuf",
+     "nom": "Œuf",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 tran. Jambon cru (Prosciutto)",
+     "nom": "Jambon cru (Prosciutto)",
+     "quantite": 1.0,
+     "unite": "piece",
+     "remarque": "pièce : tranche(s)"
+    },
+    {
+     "texte": "1/10 bou. Coriandre (frais)",
+     "nom": "Coriandre (frais)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1/10 bou.)"
+    },
+    {
+     "texte": "Huile d'olive (1/2 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 7.5,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1/2 càs = 7.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Réchauffez la tortilla : dans une poêle chaude, laissez-la cuire 30 secondes de chaque côté.",
+    "Déposez la tortilla dans une assiette. Coupez l'avocat en deux, détaillez des morceaux puis récupérez la chair à l'aide d'une fourchette ou d'une cuillère. Déposez-la sur la tortilla et écrasez le tout à l'aide d'une fourchette, assaisonnez.",
+    "Faites chauffer un filet d'huile d'olive dans une poêle puis ajoutez les œufs. Brouillez-les à l'aide d'une spatule, salez, poivrez et laissez cuire 2-3 minutes sur feu moyen.",
+    "Ajoutez les œufs brouillés puis le prosciutto sur l'avocat écrasé. Optionnel : ajoutez une pincée de piment d'Espelette ou de cayenne si vous en avez et quelques feuilles de coriandre. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 596.0,
+    "proteines": 25.0,
+    "glucides": 33.0,
+    "lipides": 39.0,
+    "fibres": 6.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres). Jambon cru (prosciutto) en tranche ; coriandre en 1/10 de botte (non métrique, garniture)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/tartines-oeufs-brouilles-fromage-frais-et-jambon-8uyz3rieelo3jgw60sfi",
+   "nom_original": "Tartines œufs brouillés, fromage frais & jambon",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 4,
+   "total_min": 7,
+   "ingredients": [
+    {
+     "texte": "2 Tartine de seigle",
+     "nom": "Tartine de seigle",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 càs Fromage frais",
+     "nom": "Fromage frais",
+     "quantite": 30.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 càs = 30.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "2 tran. Jambon blanc",
+     "nom": "Jambon blanc",
+     "quantite": 2.0,
+     "unite": "piece",
+     "remarque": "pièce : tranche(s)"
+    },
+    {
+     "texte": "2 Œuf",
+     "nom": "Œuf",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 poignée Salade (Mélange)",
+     "nom": "Salade (Mélange)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1 poignée)"
+    },
+    {
+     "texte": "1/10 bou. Ciboulette",
+     "nom": "Ciboulette",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1/10 bou.)"
+    },
+    {
+     "texte": "Huile d'olive (1 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Dans un bol, battez les œufs avec une pincée de sel et du poivre.",
+    "Dans une poêle à feu doux, ajoutez une noisette de beurre puis les œufs. Mélangez avec une spatule, puis faites cuire les œufs 4-5 minutes à feu très doux.",
+    "Etalez la fromage frais sur les tartines, ajoutez par-dessus les œufs brouillés, le jambon et quelques brins de ciboulette hachée.*\n*Consultez nos tips pour cette étape",
+    "Pour un vrai moment de gourmandise, on vous conseille de mélanger du piment d'Espelette ou des herbes de Provence dans le fromage frais"
+   ],
+   "macros_par_portion": {
+    "calories": 513.0,
+    "proteines": 39.0,
+    "glucides": 24.0,
+    "lipides": 29.0,
+    "fibres": 2.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/porridge-chocolat-et-kiwi-97m4fns1a956b9tr0n6e",
+   "nom_original": "Porridge chocolat & kiwi",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 4,
+   "total_min": 7,
+   "ingredients": [
+    {
+     "texte": "1 Kiwi jaune",
+     "nom": "Kiwi jaune",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "50 g Avoine (flocons)",
+     "nom": "Avoine (flocons)",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "240 ml Lait",
+     "nom": "Lait",
+     "quantite": 240.0,
+     "unite": "ml"
+    },
+    {
+     "texte": "1 càs Sirop d'érable",
+     "nom": "Sirop d'érable",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "10 g Chocolat noir",
+     "nom": "Chocolat noir",
+     "quantite": 10.0,
+     "unite": "g"
+    },
+    {
+     "texte": "10 g Noix",
+     "nom": "Noix",
+     "quantite": 10.0,
+     "unite": "g"
+    }
+   ],
+   "directions": [
+    "Faites chauffer le lait dans une casserole, sur feu doux. Ajoutez les flocons d'avoines, mélangez et laissez cuire 3 à 4 minutes.",
+    "Pendant ce temps, épluchez puis coupez le kiwi en rondelles.",
+    "Servez le porridge dans un bol ou une assiette creuse, avec le kiwi, le chocolat noir et les noix concassées, si vous en avez. Ajoutez un filet de sirop d'érable par-dessus. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 450.0,
+    "proteines": 16.0,
+    "glucides": 66.0,
+    "lipides": 11.0,
+    "fibres": 9.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/oeuf-a-la-coque-et-mouillettes-84b6bvxb7lwi1ijj04uu",
+   "nom_original": "Œuf à la coque & mouillettes",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 4,
+   "total_min": 7,
+   "ingredients": [
+    {
+     "texte": "1 Œuf",
+     "nom": "Œuf",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 English muffin",
+     "nom": "English muffin",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "5 g Beurre demi-sel",
+     "nom": "Beurre demi-sel",
+     "quantite": 5.0,
+     "unite": "g"
+    },
+    {
+     "texte": "20 g Comté",
+     "nom": "Comté",
+     "quantite": 20.0,
+     "unite": "g"
+    }
+   ],
+   "directions": [
+    "Portez à ébullition une casserole d’eau bouillante salée. A l’aide d’une cuillère, déposez délicatement les œufs dans la casserole .",
+    "Pour le cuisson : compter 3 minutes à ébullition pour un œuf coque avec un blanc pas tout-à-fait cuit, 4 minutes pour un blanc bien cuit et 5 minutes pour un œuf mollet.",
+    "Pendant ce temps, tranchez les muffins en 2 dans le sens de la longueur et faites les toaster. Beurrez-les et coupez-les en mouillettes. Coupez quelques tranches de comté par personne.",
+    "Égouttez les œufs et laissez-les refroidir quelques minutes. Coupez les chapeaux à l’aide d’un couteau. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 348.0,
+    "proteines": 20.0,
+    "glucides": 25.0,
+    "lipides": 18.0,
+    "fibres": 2.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres). English muffin compté en pièce."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/oeufs-cocotte-au-saumon-88r2maym3zlvmap804gn",
+   "nom_original": "Œufs cocotte au saumon",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 15,
+   "total_min": 18,
+   "ingredients": [
+    {
+     "texte": "2 Œuf",
+     "nom": "Œuf",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 càs Crème fraîche",
+     "nom": "Crème fraîche",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 tran. Saumon (fumé)",
+     "nom": "Saumon (fumé)",
+     "quantite": 1.0,
+     "unite": "piece",
+     "remarque": "pièce : tranche(s)"
+    },
+    {
+     "texte": "2 poignées Salade (mâche)",
+     "nom": "Salade (mâche)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (2 poignées)"
+    },
+    {
+     "texte": "1 tran. Pain de mie",
+     "nom": "Pain de mie",
+     "quantite": 1.0,
+     "unite": "piece",
+     "remarque": "pièce : tranche(s)"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Préchauffez le four à 180°C. Huilez des ramequins allant au four.",
+    "Ajoutez le saumon fumé et la crème fraîche dans chacun des ramequins.",
+    "Ajoutez les œufs délicatement par dessus.* Poivrez puis enfournez 10 à 15 minutes, selon la taille des ramequins, à 180°C.\n*consultez nos tips pour cette étape",
+    "Une fois les œufs cocotte cuits - le blanc ne doit plus être transparent - sortez-les du four.",
+    "Pour un vrai moment de gourmandise, on vous conseille d'agrémenter les œufs cocotte avec un filet de jus de citron, une pincée de baies rouges & des feuilles d'aneth ou de ciboulette ciselée."
+   ],
+   "macros_par_portion": {
+    "calories": 439.0,
+    "proteines": 28.0,
+    "glucides": 23.0,
+    "lipides": 26.0,
+    "fibres": 3.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres)."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/ham-and-cottage-cheese-sandwich-4967292",
+   "nom_original": "Ham and Cottage Cheese Sandwich",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 7,
+   "cook_min": 0,
+   "total_min": 7,
+   "ingredients": [
+    {
+     "texte": "2 slice Whole wheat bread or 56g",
+     "nom": "Whole wheat bread",
+     "quantite": 56.0,
+     "unite": "g",
+     "remarque": "la page donne \"2 slice or 56g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¼ cup Cottage cheese (1% milkfat) or 57g",
+     "nom": "Cottage cheese (1% milkfat)",
+     "quantite": 57.0,
+     "unite": "g",
+     "remarque": "la page donne \"¼ cup or 57g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "3 slice, medium Tomatoes (red, raw) or 60g",
+     "nom": "Tomatoes (red, raw)",
+     "quantite": 60.0,
+     "unite": "g",
+     "remarque": "la page donne \"3 slice, medium or 60g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "2 slice Ham (sliced, regular, 11% fat) or 56g",
+     "nom": "Ham (sliced, regular, 11% fat)",
+     "quantite": 56.0,
+     "unite": "g",
+     "remarque": "la page donne \"2 slice or 56g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Toast the bread slices.",
+    "Spread cottage cheese evenly onto each slice of bread",
+    "Layer ham and tomato slices on one piece of bread, then top with the other slice.",
+    "Serve immediately."
+   ],
+   "macros_par_portion": {
+    "calories": 283.9,
+    "proteines": 23.8,
+    "glucides": 29.9,
+    "lipides": 7.5,
+    "fibres": 4.8,
+    "sucres": 5.5
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 228.5 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 229.0 g ≈ 1 × 228.5 g (servingSize)."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/cottage-cheese-and-avocado-905891",
+   "nom_original": "Cottage Cheese and Avocado",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 0,
+   "total_min": 5,
+   "ingredients": [
+    {
+     "texte": "1 cup Cottage cheese (1% milkfat) or 226g",
+     "nom": "Cottage cheese (1% milkfat)",
+     "quantite": 226.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 cup or 226g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 fruit Avocado (raw) or 201g",
+     "nom": "Avocado (raw)",
+     "quantite": 201.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 fruit or 201g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 pinch Cayenne pepper or 0.4g",
+     "nom": "Cayenne pepper",
+     "quantite": 0.4,
+     "unite": "g",
+     "remarque": "la page donne \"1 pinch or 0.4g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Slice avocado. Mix with cottage cheese and enjoy! Sprinkle with cayenne if desired."
+   ],
+   "macros_par_portion": {
+    "calories": 485.5,
+    "proteines": 32.1,
+    "glucides": 23.5,
+    "lipides": 31.8,
+    "fibres": 13.5,
+    "sucres": 7.5
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 427.4 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 427.4 g ≈ 1 × 427.4 g (servingSize)."
+  },
+  {
+   "site": "jamieoliver.com",
+   "url": "https://www.jamieoliver.com/recipes/egg/smoked-salmon-and-rye-omelette/",
+   "nom_original": "Smoked salmon & rye omelette",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": null,
+   "cook_min": 9,
+   "total_min": 9,
+   "ingredients": [
+    {
+     "texte": "1 thick slice of rye bread (50g)",
+     "nom": "rye bread",
+     "quantite": 50,
+     "unite": "g",
+     "remarque": "la page donne \"1 thick slice (50g)\" : poids de la page retenu"
+    },
+    {
+     "texte": "olive oil",
+     "nom": "olive oil",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non indiquée sur la page (\"spritz\")"
+    },
+    {
+     "texte": "2 medium free-range eggs",
+     "nom": "free-range eggs (medium)",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "80g baby spinach",
+     "nom": "baby spinach",
+     "quantite": 80.0,
+     "unite": "g"
+    },
+    {
+     "texte": "50g smoked salmon, from sustainable sources",
+     "nom": "smoked salmon, from sustainable sources",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "½ a lemon",
+     "nom": "lemon",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 heaped tablespoon cottage cheese (30g)",
+     "nom": "cottage cheese",
+     "quantite": 30,
+     "unite": "g",
+     "remarque": "la page donne \"1 heaped tablespoon (30g)\" : poids de la page retenu"
+    },
+    {
+     "texte": "a few chives",
+     "nom": "chives",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (a few), herbe aromatique"
+    }
+   ],
+   "directions": [
+    "Put a large non-stick frying pan on a medium-high heat, finely crumble in the rye bread and spritz with olive oil. Add a sprinkle of black pepper and cook until crispy, while you whisk the eggs together in a bowl. Spoon out half the crispy crumbs for garnish, leaving the rest in the pan.",
+    "Add the spinach to the pan, stir until wilted, then turn the heat off. Pour in the beaten eggs and gently swirl to cover the base – they’ll cook in the residual heat of the pan. Tear over the salmon, finely grate over the lemon zest, sprinkle over the reserved crumbs and dot over the cottage cheese.",
+    "Finely chop and scatter over the chives, then slide the omelette on to your plate and roll it up. Serve with a wedge of lemon."
+   ],
+   "macros_par_portion": {
+    "calories": 380.0,
+    "proteines": 33.5,
+    "glucides": 20.5,
+    "lipides": 18.4,
+    "fibres": 4.3,
+    "sucres": 3.7
+   },
+   "notes": "Jamie Oliver : macros per serving (JSON-LD) ; carbs au sens UK (hors fibres). Jamie Oliver : huile d'olive et ciboulette sans quantité sur la page."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/chunky-monkey-overnight-oats-5058764",
+   "nom_original": "Chunky Monkey Overnight Oats",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 245,
+   "cook_min": 0,
+   "total_min": 245,
+   "ingredients": [
+    {
+     "texte": "⅓ cup Rolled oats (dry oatmeal, Quaker brand) or 27g",
+     "nom": "Rolled oats (dry oatmeal, Quaker brand)",
+     "quantite": 27.0,
+     "unite": "g",
+     "remarque": "la page donne \"⅓ cup or 27g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "⅓ cup Almond milk or 80g",
+     "nom": "Almond milk",
+     "quantite": 80.0,
+     "unite": "g",
+     "remarque": "la page donne \"⅓ cup or 80g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¾ cup Greek yogurt (plain, nonfat) or 180g",
+     "nom": "Greek yogurt (plain, nonfat)",
+     "quantite": 180.0,
+     "unite": "g",
+     "remarque": "la page donne \"¾ cup or 180g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 tbsp Peanut butter (smooth, unsalted) or 16g",
+     "nom": "Peanut butter (smooth, unsalted)",
+     "quantite": 16.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 tbsp or 16g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "½ medium Banana or 59g",
+     "nom": "Banana",
+     "quantite": 59.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ medium or 59g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¹⁄₁₆ cup chips (6 oz package) Semisweet chocolate chips or 11g",
+     "nom": "Semisweet chocolate chips",
+     "quantite": 11.0,
+     "unite": "g",
+     "remarque": "la page donne \"¹⁄₁₆ cup chips (6 oz package) or 11g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Combine oatmeal, almond milk, Greek yogurt, peanut butter, banana slices, and chocolate chips in a jar or bowl.",
+    "Cover and refrigerate overnight or for at least 4 hours.",
+    "Stir before serving."
+   ],
+   "macros_par_portion": {
+    "calories": 413.8,
+    "proteines": 26.7,
+    "glucides": 52.2,
+    "lipides": 13.8,
+    "fibres": 6.4,
+    "sucres": 21.1
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 372.2 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 373.0 g ≈ 1 × 372.2 g (servingSize). Temps de préparation 245 min = repos de nuit inclus (actif ~5 min). Pépites de chocolat mi-sucré 11 g."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/tartine-thon-fromage-frais-radis-et-salade-8sx65a9jkro0ma680ycq",
+   "nom_original": "Tartine thon, fromage frais, radis & salade",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 6,
+   "cook_min": 1,
+   "total_min": 7,
+   "ingredients": [
+    {
+     "texte": "1 tran. Pain de campagne (tranché)",
+     "nom": "Pain de campagne (tranché)",
+     "quantite": 1.0,
+     "unite": "piece",
+     "remarque": "pièce : tranche(s)"
+    },
+    {
+     "texte": "30 g Fromage frais",
+     "nom": "Fromage frais",
+     "quantite": 30.0,
+     "unite": "g"
+    },
+    {
+     "texte": "50 g Thon à l'ail",
+     "nom": "Thon à l'ail",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "50 g Radis",
+     "nom": "Radis",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/4 Concombre",
+     "nom": "Concombre",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 poignée Salade (Mélange)",
+     "nom": "Salade (Mélange)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1 poignée)"
+    },
+    {
+     "texte": "30 g Feta",
+     "nom": "Feta",
+     "quantite": 30.0,
+     "unite": "g"
+    },
+    {
+     "texte": "Huile d'olive (1 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Lavez les radis et coupez-les en fines tranches.",
+    "Lavez le concombre et coupez-le en fines rondelles.",
+    "Faites toaster les tranches de pain au grille-pain ou à la poêle.",
+    "Tartinez les tranches de pain de fromage frais.* Ajoutez ensuite le concombre et le radis par-dessus. Salez, poivrez et ajoutez un filet d'huile d'olive.\n*Consultez nos tips pour cette étape",
+    "Ajoutez l'émietté de thon sur les tartines.",
+    "Mélangez le thon émietté avec le fromage frais avant de l'étaler sur le pain grillé."
+   ],
+   "macros_par_portion": {
+    "calories": 383.0,
+    "proteines": 23.0,
+    "glucides": 25.0,
+    "lipides": 21.0,
+    "fibres": 4.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres). « Thon à l'ail » = thon en conserve aromatisé (conserve courante)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/galette-complete-81pfd91j1lkg00ws06qy",
+   "nom_original": "Galette complète",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 5,
+   "total_min": 8,
+   "ingredients": [
+    {
+     "texte": "1 tran. Jambon blanc",
+     "nom": "Jambon blanc",
+     "quantite": 1.0,
+     "unite": "piece",
+     "remarque": "pièce : tranche(s)"
+    },
+    {
+     "texte": "1 Œuf",
+     "nom": "Œuf",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 Galette bretonne",
+     "nom": "Galette bretonne",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "30 g Fromage râpé",
+     "nom": "Fromage râpé",
+     "quantite": 30.0,
+     "unite": "g"
+    },
+    {
+     "texte": "Beurre (1 Noisette)",
+     "nom": "Beurre",
+     "quantite": null,
+     "unite": null,
+     "placard_jow": true,
+     "remarque": "quantité non métrique (1 Noisette)"
+    }
+   ],
+   "directions": [
+    "Faites fondre un morceau de beurre dans la crêpière (ou une grande poêle). Déposez la galette et versez l'œuf au centre, attention à ne pas casser le jaune. Salez et poivrez.",
+    "Quand le blanc de l'œuf commence à cuire, ajoutez le jambon préalablement coupé en tranches et le fromage râpé.",
+    "Pour réaliser vos propres galettes de sarrasin, tapez “Galette de sarrasin\" dans la barre de recherche de l’application !"
+   ],
+   "macros_par_portion": {
+    "calories": 532.0,
+    "proteines": 35.0,
+    "glucides": 50.0,
+    "lipides": 21.0,
+    "fibres": 3.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres). Valeur de la page à vérifier : 532 kcal / 35 g de protéines annoncés pour 1 galette de sarrasin + 1 œuf + 1 tranche de jambon + 30 g de fromage râpé, ce qui paraît élevé au vu des ingrédients ; reporté tel quel. Galette bretonne (sarrasin) absente de la liste d'ingrédients disponibles."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/devilled-egg-toast-4932951",
+   "nom_original": "Devilled Egg Toast",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 10,
+   "cook_min": 10,
+   "total_min": 20,
+   "ingredients": [
+    {
+     "texte": "1 large Egg (whole) or 50g",
+     "nom": "Egg (whole)",
+     "quantite": 50.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 large or 50g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 tbsp Yellow mustard or 15g",
+     "nom": "Yellow mustard",
+     "quantite": 15.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 tbsp or 15g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 tbsp Mayonnaise (regular, salted) or 14g",
+     "nom": "Mayonnaise (regular, salted)",
+     "quantite": 14.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 tbsp or 14g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "2 slice Whole wheat bread or 56g",
+     "nom": "Whole wheat bread",
+     "quantite": 56.0,
+     "unite": "g",
+     "remarque": "la page donne \"2 slice or 56g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Place the egg in a pot and cover with water. Bring to a boil, then remove from heat, cover, and let sit for 10 minutes.",
+    "Drain the egg under cool water, peel, and mash it in a bowl.",
+    "Combine the mashed egg with mustard and mayonnaise, mixing well.",
+    "Toast the bread slices and top them with the egg mixture. Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 315.5,
+    "proteines": 14.0,
+    "glucides": 25.2,
+    "lipides": 17.5,
+    "fibres": 4.0,
+    "sucres": 2.8
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 134.8 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 135.0 g ≈ 1 × 134.8 g (servingSize)."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/breakfast-pita-pizza-34083",
+   "nom_original": "Breakfast pita pizza",
+   "type_propose": "petit-dejeuner",
+   "servings": 2,
+   "prep_min": 5,
+   "cook_min": 10,
+   "total_min": 15,
+   "ingredients": [
+    {
+     "texte": "2 pita, large Whole wheat pita bread or 128g",
+     "nom": "Whole wheat pita bread",
+     "quantite": 128.0,
+     "unite": "g",
+     "remarque": "la page donne \"2 pita, large or 128g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 cup, diced Mozzarella cheese (part-skim) or 132g",
+     "nom": "Mozzarella cheese (part-skim)",
+     "quantite": 132.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 cup, diced or 132g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 cup Spinach (raw) or 30g",
+     "nom": "Spinach (raw)",
+     "quantite": 30.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 cup or 30g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "2 extra large Egg (whole) or 112g",
+     "nom": "Egg (whole)",
+     "quantite": 112.0,
+     "unite": "g",
+     "remarque": "la page donne \"2 extra large or 112g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 dash Salt (table) or 0.4g",
+     "nom": "Salt (table)",
+     "quantite": 0.4,
+     "unite": "g",
+     "remarque": "la page donne \"1 dash or 0.4g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 dash Black pepper (ground) or 0.1g",
+     "nom": "Black pepper (ground)",
+     "quantite": 0.1,
+     "unite": "g",
+     "remarque": "la page donne \"1 dash or 0.1g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¼ tsp, ground Oregano (dried) or 0.5g",
+     "nom": "Oregano (dried)",
+     "quantite": 0.5,
+     "unite": "g",
+     "remarque": "la page donne \"¼ tsp, ground or 0.5g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¼ tbsp Cayenne pepper or 1g",
+     "nom": "Cayenne pepper",
+     "quantite": 1.0,
+     "unite": "g",
+     "remarque": "la page donne \"¼ tbsp or 1g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 tbsp Parmesan cheese (shredded) or 5g",
+     "nom": "Parmesan cheese (shredded)",
+     "quantite": 5.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 tbsp or 5g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Heat the oven to broil and arrange a rack in the middle. Line a baking sheet with aluminum foil and place it under the broiler while the oven is heating.",
+    "Meanwhile, place the pitas on a work surface and sprinkle with the mozzarella, oregano, and cayenne pepper. Arrange the spinach over the cheese, leaving a small nest about 1 1/2 inches wide in the center of each pita.",
+    "When the oven is ready, remove the baking sheet and place the pitas on it. Crack 1 egg into the nest of each pita and season it with salt and pepper. Broil until the egg whites are set, about 6 to 7 minutes (the yolks will still be runny).",
+    "Remove the baking sheet from the oven and transfer the pitas to a cutting board. Sprinkle with the Parmesan, cut each pita into 4 wedges, and serve immediately."
+   ],
+   "macros_par_portion": {
+    "calories": 434.6,
+    "proteines": 30.8,
+    "glucides": 38.6,
+    "lipides": 18.3,
+    "fibres": 5.4,
+    "sucres": 1.6
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (2 portion(s)), macros par portion (JSON-LD, servingSize 204.6 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 409.0 g ≈ 2 × 204.6 g (servingSize)."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/hummus-eggs-5174636",
+   "nom_original": "Hummus Eggs",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 7,
+   "total_min": 10,
+   "ingredients": [
+    {
+     "texte": "2 tbsp Hummus (commercially prepared) or 30g",
+     "nom": "Hummus (commercially prepared)",
+     "quantite": 30.0,
+     "unite": "g",
+     "remarque": "la page donne \"2 tbsp or 30g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "3 extra large Egg (whole) or 168g",
+     "nom": "Egg (whole)",
+     "quantite": 168.0,
+     "unite": "g",
+     "remarque": "la page donne \"3 extra large or 168g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "½ tbsp Coconut oil or 7g",
+     "nom": "Coconut oil",
+     "quantite": 7.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ tbsp or 7g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Heat the coconut oil in a nonstick skillet over medium heat until shimmering.",
+    "Pour in the beaten eggs and gently scramble, pushing from the edges toward the center, until mostly set but still slightly glossy.",
+    "Fold in the hummus and cook just until warmed through and the eggs reach your preferred doneness. Serve immediately."
+   ],
+   "macros_par_portion": {
+    "calories": 348.7,
+    "proteines": 23.5,
+    "glucides": 5.5,
+    "lipides": 25.7,
+    "fibres": 1.8,
+    "sucres": 0.6
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 204.8 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 205.0 g ≈ 1 × 204.8 g (servingSize). Cuisson à l'huile de coco (7 g)."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/peach-yogurt-breakfast-smoothie-5064457",
+   "nom_original": "Peach Yogurt Breakfast Smoothie",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 0,
+   "total_min": 5,
+   "ingredients": [
+    {
+     "texte": "1 medium Peach or 150g",
+     "nom": "Peach",
+     "quantite": 150.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 medium or 150g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 tbsp Honey or 21g",
+     "nom": "Honey",
+     "quantite": 21.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 tbsp or 21g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 tsp Cinnamon (ground) or 3g",
+     "nom": "Cinnamon (ground)",
+     "quantite": 3.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 tsp or 3g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 cup 2% milk or 244g",
+     "nom": "2% milk",
+     "quantite": 244.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 cup or 244g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 ½ cup Greek yogurt (plain, nonfat) or 360g",
+     "nom": "Greek yogurt (plain, nonfat)",
+     "quantite": 360.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 ½ cup or 360g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "3 cube Ice cubes or 67g",
+     "nom": "Ice cubes",
+     "quantite": 67.0,
+     "unite": "g",
+     "remarque": "la page donne \"3 cube or 67g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Place the peach, honey, cinnamon, milk, yogurt, and ice cubes in a blender. Blend until the mixture is smooth.",
+    "Serve immediately and enjoy your smoothie."
+   ],
+   "macros_par_portion": {
+    "calories": 463.1,
+    "proteines": 46.3,
+    "glucides": 58.5,
+    "lipides": 6.6,
+    "fibres": 3.6,
+    "sucres": 53.9
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 844.2 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 845.0 g ≈ 1 × 844.2 g (servingSize). Sans protéine en poudre ; miel 21 g (1 c. à soupe) pour la portion."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/cottage-fruit-salad-4948704",
+   "nom_original": "Cottage Fruit Salad",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 0,
+   "total_min": 5,
+   "ingredients": [
+    {
+     "texte": "1 cup Cottage cheese (1% milkfat) or 226g",
+     "nom": "Cottage cheese (1% milkfat)",
+     "quantite": 226.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 cup or 226g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "½ cup European grapes (raw, red or green) or 76g",
+     "nom": "European grapes (raw, red or green)",
+     "quantite": 76.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ cup or 76g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "½ cup, quartered or chopped Apple (with skin) or 63g",
+     "nom": "Apple (with skin)",
+     "quantite": 63.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ cup, quartered or chopped or 63g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "⅛ cup, chopped English walnuts or 15g",
+     "nom": "English walnuts",
+     "quantite": 15.0,
+     "unite": "g",
+     "remarque": "la page donne \"⅛ cup, chopped or 15g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 tsp Cinnamon (ground) or 3g",
+     "nom": "Cinnamon (ground)",
+     "quantite": 3.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 tsp or 3g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Core and chop the apple into 1-inch chunks.",
+    "In a bowl, combine the cottage cheese, grapes, apple chunks, walnuts, and cinnamon.",
+    "Stir until well mixed and serve."
+   ],
+   "macros_par_portion": {
+    "calories": 349.4,
+    "proteines": 31.0,
+    "glucides": 32.5,
+    "lipides": 12.1,
+    "fibres": 4.5,
+    "sucres": 24.7
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 381.2 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 383.0 g ≈ 1 × 381.2 g (servingSize). Raisin frais (hors liste d'ingrédients disponibles)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/poelee-de-patates-douces-feta-et-oeuf-au-plat-88cjj8y07cvkioqn174z",
+   "nom_original": "Poêlée de patates douces, feta & œuf au plat",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 6,
+   "cook_min": 22,
+   "total_min": 28,
+   "ingredients": [
+    {
+     "texte": "200 g Patate douce",
+     "nom": "Patate douce",
+     "quantite": 200.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 Œuf",
+     "nom": "Œuf",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "40 g Feta",
+     "nom": "Feta",
+     "quantite": 40.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/4 gou. Ail",
+     "nom": "Ail",
+     "quantite": 0.25,
+     "unite": "piece",
+     "remarque": "pièce : gousse(s)"
+    },
+    {
+     "texte": "1/2 pinc. Piment d'Espelette",
+     "nom": "Piment d'Espelette",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1/2 pinc.)"
+    },
+    {
+     "texte": "1/10 bou. Persil (frais)",
+     "nom": "Persil (frais)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1/10 bou.)"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "Beurre (1 Noisette)",
+     "nom": "Beurre",
+     "quantite": null,
+     "unite": null,
+     "placard_jow": true,
+     "remarque": "quantité non métrique (1 Noisette)"
+    }
+   ],
+   "directions": [
+    "Épluchez puis coupez les patates douces en petits dés.",
+    "Faites chauffer un filet d'huile d'olive dans une poêle, sur feu moyen. Ajoutez les patates douces et faites-les revenir 10 à 12 minutes.",
+    "Pendant ce temps, épluchez puis émincez finement l'ail.",
+    "Dans la poêle, ajoutez : l'ail, le piment d'Espelette et un petit fond d'eau, Couvrez et poursuivez la cuisson 10 minutes.",
+    "Pendant ce temps, préparez les œufs au plat. Faites fondre une noisette de beurre dans une second poêle. Cassez-y délicatement les œufs et faites-les cuire 4 minutes.",
+    "Vérifiez la cuisson des patates douces.",
+    "Pour un vrai moment de gourmandise, variez les plaisirs en remplaçant la feta par du chèvre frais & en ajoutant des oignons rouges & des champignons poêlés"
+   ],
+   "macros_par_portion": {
+    "calories": 372.0,
+    "proteines": 17.0,
+    "glucides": 38.0,
+    "lipides": 15.0,
+    "fibres": 6.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/bagel-aux-oeufs-et-bacon-8uzkdqfaelo3jgw70o0t",
+   "nom_original": "Bagel aux œufs & bacon",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 6,
+   "total_min": 9,
+   "ingredients": [
+    {
+     "texte": "1 Pain bagel",
+     "nom": "Pain bagel",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 tran. Cheddar (tranches)",
+     "nom": "Cheddar (tranches)",
+     "quantite": 1.0,
+     "unite": "piece",
+     "remarque": "pièce : tranche(s)"
+    },
+    {
+     "texte": "2 Œuf",
+     "nom": "Œuf",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 tran. Lard (tranches)",
+     "nom": "Lard (tranches)",
+     "quantite": 2.0,
+     "unite": "piece",
+     "remarque": "pièce : tranche(s)"
+    }
+   ],
+   "directions": [
+    "Dans une poêle bien chaude, ajoutez les tranches de lard. Faites-les griller 2 minutes de chaque côté sur feu vif, jusqu'à ce qu'elles soient légèrement croustillantes. Débarrassez-les sur une feuille de papier essuie-tout.",
+    "Pendant ce temps, dans un bol, cassez les œufs. Salez, poivrez et fouettez-les.",
+    "Dans la même poêle, versez les œufs. Faites tourner la poêle pour répartir le mélange uniformément, puis laissez cuire 30 secondes. Ajoutez une tranche de fromage au centre, puis repliez les 4 bords de l'omelette sur le fromage. Couvrez la poêle et laissez fondre 30 secondes à 1 minute.",
+    "Coupez le pain bagel en deux et faites toaster les tranches au grille-pain ou au four sur le mode grill.",
+    "Sur la moitié inférieure du bagel, ajoutez le lard et les œufs au fromage. Si vous le souhaitez, ajoutez du ketchup ou de la sauce piquante (optionnel). Refermez le bagel et coupez-le en deux. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 550.0,
+    "proteines": 32.0,
+    "glucides": 38.0,
+    "lipides": 29.0,
+    "fibres": 3.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres). Plus gras que la moyenne (lard + cheddar, 29 g de lipides)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/wrap-saumon-818imdydbxgg00zb131u",
+   "nom_original": "Wrap Saumon",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 0,
+   "total_min": 5,
+   "ingredients": [
+    {
+     "texte": "2 tran. Saumon (fumé)",
+     "nom": "Saumon (fumé)",
+     "quantite": 2.0,
+     "unite": "piece",
+     "remarque": "pièce : tranche(s)"
+    },
+    {
+     "texte": "1 Tortilla (blé)",
+     "nom": "Tortilla (blé)",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/10 Concombre",
+     "nom": "Concombre",
+     "quantite": 0.1,
+     "unite": "piece"
+    },
+    {
+     "texte": "40 g Fromage frais",
+     "nom": "Fromage frais",
+     "quantite": 40.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/2 poignée Épinard (frais)",
+     "nom": "Épinard (frais)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1/2 poignée)"
+    },
+    {
+     "texte": "1 quartiers Citron jaune",
+     "nom": "Citron jaune",
+     "quantite": 1.0,
+     "unite": "piece",
+     "remarque": "pièce : quartier(s)"
+    }
+   ],
+   "directions": [
+    "Découpez le concombre en fines tranches.",
+    "Étalez le fromage frais sur les tortilla à l'aide d'un couteau, ajoutez le saumon, les pousses d'épinard, les tranches de concombre et un trait de jus de citron.",
+    "Roulez le tout. Coupez votre wrap en deux, dégustez !"
+   ],
+   "macros_par_portion": {
+    "calories": 425.0,
+    "proteines": 24.0,
+    "glucides": 34.0,
+    "lipides": 20.0,
+    "fibres": 3.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/tartine-caprese-au-pesto-8t7p43evbdmohqfn08un",
+   "nom_original": "Tartine caprese au pesto",
+   "type_propose": "petit-dejeuner",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 1,
+   "total_min": 4,
+   "ingredients": [
+    {
+     "texte": "1 tran. Pain de campagne (tranché)",
+     "nom": "Pain de campagne (tranché)",
+     "quantite": 1.0,
+     "unite": "piece",
+     "remarque": "pièce : tranche(s)"
+    },
+    {
+     "texte": "1 Tomate",
+     "nom": "Tomate",
+     "quantite": 1.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/2 Mozzarella (boule)",
+     "nom": "Mozzarella (boule)",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 càs Sauce pesto",
+     "nom": "Sauce pesto",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 càc Crème balsamique",
+     "nom": "Crème balsamique",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 poignée Salade (Mélange)",
+     "nom": "Salade (Mélange)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (1 poignée)"
+    },
+    {
+     "texte": "Huile d'olive (1/2 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 7.5,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1/2 càs = 7.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Lavez puis coupez les tomates en rondelles.",
+    "Coupez la mozzarella en tranches.",
+    "Si vous le souhaitez, faites toaster les tranches de pain de mie au grille-pain ou au four sur le mode grill. Tartinez les tranches de pain de pesto.",
+    "Ajoutez les tomates et la mozzarella. Salez, poivrez, puis ajoutez un filet d'huile d'olive et de crème balsamique sur le dessus.",
+    "Pour réaliser votre propre sauce pesto, tapez “Pesto maison\" dans la barre de recherche de l’application !"
+   ],
+   "macros_par_portion": {
+    "calories": 373.0,
+    "proteines": 16.0,
+    "glucides": 27.0,
+    "lipides": 21.0,
+    "fibres": 4.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres). 1/2 boule de mozzarella comptée en pièce (poids non indiqué) ; crème balsamique."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/creamy-yogurt-porridge",
+   "nom_original": "Creamy yogurt porridge",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 1,
+   "cook_min": 3,
+   "total_min": 4,
+   "ingredients": [
+    {
+     "texte": "3 tbsp (25g) porridge oat",
+     "nom": "porridge oat",
+     "quantite": 25,
+     "unite": "g",
+     "remarque": "la page donne \"3 tbsp (25g)\" : poids de la page retenu"
+    },
+    {
+     "texte": "150g pot 0% fat probiotic yogurt",
+     "nom": "0% fat probiotic yogurt (pot)",
+     "quantite": 150.0,
+     "unite": "g"
+    }
+   ],
+   "directions": [
+    "Tip 200ml water into a small non-stick pan and stir in porridge oats.",
+    "Cook over a low heat until bubbling and thickened. (To make in a microwave, use a deep container to prevent spillage as the mixture will rise up as it cooks, and cook for 3 mins on High.)",
+    "Stir in yogurt – or swirl in half and top with the rest. Serve plain or with one of our toppings (see 'goes well with')."
+   ],
+   "macros_par_portion": {
+    "calories": 184.0,
+    "proteines": 13.0,
+    "glucides": 26.0,
+    "lipides": 2.0,
+    "fibres": 3.0,
+    "sucres": 13.0
+   },
+   "notes": "BBC Good Food : macros per serving (JSON-LD) ; carbs au sens UK (hors fibres), fibres à part."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/houmous-a-la-betterave-8i3xh7rojp6ok6vq1eh5",
+   "nom_original": "Houmous à la betterave",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 6,
+   "cook_min": 0,
+   "total_min": 6,
+   "ingredients": [
+    {
+     "texte": "60 g Pois chiches (cuits)",
+     "nom": "Pois chiches (cuits)",
+     "quantite": 60.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1 quartiers Citron jaune",
+     "nom": "Citron jaune",
+     "quantite": 1.0,
+     "unite": "piece",
+     "remarque": "pièce : quartier(s)"
+    },
+    {
+     "texte": "1/4 gou. Ail",
+     "nom": "Ail",
+     "quantite": 0.25,
+     "unite": "piece",
+     "remarque": "pièce : gousse(s)"
+    },
+    {
+     "texte": "1/4 càc Cumin (moulu)",
+     "nom": "Cumin (moulu)",
+     "quantite": 1.25,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/4 càc = 1.25 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1/2 Betterave (cuite)",
+     "nom": "Betterave (cuite)",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 càs Huile d'olive",
+     "nom": "Huile d'olive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 càc Tahini",
+     "nom": "Tahini",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Dans un mixeur versez : les pois chiches, l'ail, l'huile d'olive, le tahini si vous en avez, le cumin et la betterave coupée grossièrement. Ajoutez ensuite le jus de citron. Salez et poivrez.",
+    "Mixez le tout jusqu'à l'obtention d'une texture lisse et mousseuse, ajoutez un peu d'eau si besoin et ajustez l'assaisonnement.",
+    "Servez le houmous, ajoutez un filet d'huile d'olive, parsemez de graines de sésame si vous en avez et assaisonnez à votre convenance. À déguster avec du pain ou des pitas, c'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 309.0,
+    "proteines": 8.0,
+    "glucides": 22.0,
+    "lipides": 19.0,
+    "fibres": 8.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres)."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/roasted-chickpeas",
+   "nom_original": "Roasted chickpeas",
+   "type_propose": "collation",
+   "servings": 2,
+   "prep_min": 5,
+   "cook_min": 15,
+   "total_min": 20,
+   "ingredients": [
+    {
+     "texte": "400g can chickpeas",
+     "nom": "chickpeas (can)",
+     "quantite": 400.0,
+     "unite": "g",
+     "remarque": "boîte de 400 g (poids brut indiqué par la page ; poids égoutté non précisé)"
+    },
+    {
+     "texte": "2 tsp olive oil",
+     "nom": "olive oil",
+     "quantite": 10.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 2 tsp = 10.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "pinch of ground cumin",
+     "nom": "ground cumin",
+     "quantite": null,
+     "unite": null,
+     "remarque": "pincée, non métrique (négligeable)"
+    },
+    {
+     "texte": "pinch of paprika",
+     "nom": "paprika",
+     "quantite": null,
+     "unite": null,
+     "remarque": "pincée, non métrique (négligeable)"
+    }
+   ],
+   "directions": [
+    "Heat oven to 180C/160C fan/gas 4. Drain the chickpeas in a sieve and rinse well. Shake off the excess water and tip onto a baking tray lined with baking parchment. Drizzle with the oil, sprinkle with cumin and paprika, and season with a generous pinch of salt. Toss the chickpeas until evenly coated. Bake for 15 mins, stirring half way through, until crispy. Enjoy warm or cold."
+   ],
+   "macros_par_portion": {
+    "calories": 181.0,
+    "proteines": 9.0,
+    "glucides": 18.0,
+    "lipides": 7.0,
+    "fibres": 7.0,
+    "sucres": 1.0
+   },
+   "notes": "BBC Good Food : macros per serving (JSON-LD) ; carbs au sens UK (hors fibres), fibres à part. Boîte de 400 g : la page ne précise pas le poids égoutté."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/yogurt-with-cucumber-lox-4823238",
+   "nom_original": "Yogurt with Cucumber & Lox",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 0,
+   "total_min": 3,
+   "ingredients": [
+    {
+     "texte": "8 oz Greek yogurt (plain, nonfat) or 227g",
+     "nom": "Greek yogurt (plain, nonfat)",
+     "quantite": 227.0,
+     "unite": "g",
+     "remarque": "la page donne \"8 oz or 227g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "½ cup slices Cucumber (raw, with peel) or 52g",
+     "nom": "Cucumber (raw, with peel)",
+     "quantite": 52.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ cup slices or 52g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "3 oz, boneless Smoked salmon (Chinook salmon) or 85g",
+     "nom": "Smoked salmon (Chinook salmon)",
+     "quantite": 85.0,
+     "unite": "g",
+     "remarque": "la page donne \"3 oz, boneless or 85g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Chop cucumber and mix with lox and yogurt. Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 241.0,
+    "proteines": 39.0,
+    "glucides": 10.0,
+    "lipides": 4.6,
+    "fibres": 0.3,
+    "sucres": 8.2
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 363.7 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 364.0 g ≈ 1 × 363.7 g (servingSize)."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/basil-olive-eggs",
+   "nom_original": "Basil & olive eggs",
+   "type_propose": "collation",
+   "servings": 3,
+   "prep_min": 5,
+   "cook_min": 8,
+   "total_min": 13,
+   "ingredients": [
+    {
+     "texte": "3 large eggs",
+     "nom": "large eggs",
+     "quantite": 3.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "½ small pack basil",
+     "nom": "basil",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (½ small pack), herbe aromatique"
+    },
+    {
+     "texte": "6 pitted Kalamata olives",
+     "nom": "pitted Kalamata olives",
+     "quantite": 6.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 tbsp extra virgin olive oil",
+     "nom": "extra virgin olive oil",
+     "quantite": 15.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tbsp = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "1 tsp cider vinegar",
+     "nom": "cider vinegar",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 tsp = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Boil the eggs for 8 mins then cool in cold water. Peel and halve. Scoop out the yolks.",
+    "Put the basil, olives, oil, vinegar and a grinding of pepper in a small bowl. Blitz with a hand blender then add the yolk and roughly mash together. Spoon back into the eggs and keep in the fridge."
+   ],
+   "macros_par_portion": {
+    "calories": 137.0,
+    "proteines": 10.0,
+    "glucides": 0.3,
+    "lipides": 12.0,
+    "fibres": 0.2
+   },
+   "notes": "BBC Good Food : macros per serving (JSON-LD) ; carbs au sens UK (hors fibres), fibres à part. Œufs durs farcis au basilic et aux olives (type œufs mimosa)."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/spicy-tuna-and-cottage-cheese-bowl-4869200",
+   "nom_original": "Spicy Tuna and Cottage Cheese Bowl",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 8,
+   "cook_min": 0,
+   "total_min": 8,
+   "ingredients": [
+    {
+     "texte": "1 can Light tuna (canned in water, drained) or 165g",
+     "nom": "Light tuna (canned in water, drained)",
+     "quantite": 165.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 can or 165g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¼ cup, chopped or diced Dill pickles or 36g",
+     "nom": "Dill pickles",
+     "quantite": 36.0,
+     "unite": "g",
+     "remarque": "la page donne \"¼ cup, chopped or diced or 36g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¼ cup, sliced Jalapeno peppers (raw) or 23g",
+     "nom": "Jalapeno peppers (raw)",
+     "quantite": 23.0,
+     "unite": "g",
+     "remarque": "la page donne \"¼ cup, sliced or 23g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "½ cup Cottage cheese (1% milkfat) or 113g",
+     "nom": "Cottage cheese (1% milkfat)",
+     "quantite": 113.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ cup or 113g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 tsp Sriracha or 5g",
+     "nom": "Sriracha",
+     "quantite": 5.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 tsp or 5g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Drain the tuna.",
+    "Chop the pickles and jalapeños.",
+    "Mix all ingredients in a bowl and enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 238.7,
+    "proteines": 46.5,
+    "glucides": 6.3,
+    "lipides": 2.9,
+    "fibres": 1.1,
+    "sucres": 5.1
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 341.3 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 342.0 g ≈ 1 × 341.3 g (servingSize). Sriracha 5 g et jalapeños (piment frais) ; cornichons à l'aneth."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/curry-tuna-salad-4930931",
+   "nom_original": "Curry Tuna Salad",
+   "type_propose": "collation",
+   "servings": 2,
+   "prep_min": 7,
+   "cook_min": 0,
+   "total_min": 7,
+   "ingredients": [
+    {
+     "texte": "1 can Light tuna (canned in water, drained) or 165g",
+     "nom": "Light tuna (canned in water, drained)",
+     "quantite": 165.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 can or 165g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "2 tbsp Mayonnaise (regular, salted) or 28g",
+     "nom": "Mayonnaise (regular, salted)",
+     "quantite": 28.0,
+     "unite": "g",
+     "remarque": "la page donne \"2 tbsp or 28g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "2 tbsp chopped Onion (raw) or 20g",
+     "nom": "Onion (raw)",
+     "quantite": 20.0,
+     "unite": "g",
+     "remarque": "la page donne \"2 tbsp chopped or 20g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 dash Salt (table) or 0.4g",
+     "nom": "Salt (table)",
+     "quantite": 0.4,
+     "unite": "g",
+     "remarque": "la page donne \"1 dash or 0.4g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "½ tsp Curry powder or 1g",
+     "nom": "Curry powder",
+     "quantite": 1.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ tsp or 1g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Chop the onions. Drain the tuna.",
+    "Combine all ingredients in a bowl and mix well.",
+    "Enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 170.4,
+    "proteines": 16.3,
+    "glucides": 1.3,
+    "lipides": 11.2,
+    "fibres": 0.4,
+    "sucres": 0.5
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (2 portion(s)), macros par portion (JSON-LD, servingSize 107.0 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 214.4 g ≈ 2 × 107.0 g (servingSize)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/tartines-au-cottage-cheese-et-truite-fumee-97i3gaoh81k2dr0o11kc",
+   "nom_original": "Tartines au cottage cheese & truite fumée",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 3,
+   "cook_min": 0,
+   "total_min": 3,
+   "ingredients": [
+    {
+     "texte": "2 Tartine de seigle",
+     "nom": "Tartine de seigle",
+     "quantite": 2.0,
+     "unite": "piece"
+    },
+    {
+     "texte": "2 tran. Truite fumée",
+     "nom": "Truite fumée",
+     "quantite": 2.0,
+     "unite": "piece",
+     "remarque": "pièce : tranche(s)"
+    },
+    {
+     "texte": "30 g Cottage cheese",
+     "nom": "Cottage cheese",
+     "quantite": 30.0,
+     "unite": "g"
+    },
+    {
+     "texte": "2 poignées Salade (Mélange)",
+     "nom": "Salade (Mélange)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (2 poignées)"
+    },
+    {
+     "texte": "10 g Tomates séchées",
+     "nom": "Tomates séchées",
+     "quantite": 10.0,
+     "unite": "g"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Égouttez puis coupez les tomates séchées en morceaux.",
+    "Prenez les tartines et étalez le cottage cheese dessus.",
+    "Ajoutez la truite fumée et les morceaux de tomates séchées.",
+    "Servez les tartines au cottage cheese & truite fumée dans une assiette avec la salade assaisonnée selon vos goûts. C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 339.0,
+    "proteines": 25.0,
+    "glucides": 24.0,
+    "lipides": 15.0,
+    "fibres": 3.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/samoussas-aux-rillettes-de-maquereaux-8pudbsvh6gsw8yr515mz",
+   "nom_original": "Samoussas aux rillettes de maquereaux",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 10,
+   "cook_min": 15,
+   "total_min": 25,
+   "ingredients": [
+    {
+     "texte": "30 g Filet de maquereau aux tomates séchées (boîte)",
+     "nom": "Filet de maquereau aux tomates séchées (boîte)",
+     "quantite": 30.0,
+     "unite": "g"
+    },
+    {
+     "texte": "2 poignées Salade (Mélange)",
+     "nom": "Salade (Mélange)",
+     "quantite": null,
+     "unite": null,
+     "remarque": "quantité non métrique (2 poignées)"
+    },
+    {
+     "texte": "75 g Fromage frais",
+     "nom": "Fromage frais",
+     "quantite": 75.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1.5 Feuille de brick",
+     "nom": "Feuille de brick",
+     "quantite": 1.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "1 quartiers Citron jaune",
+     "nom": "Citron jaune",
+     "quantite": 1.0,
+     "unite": "piece",
+     "remarque": "pièce : quartier(s)"
+    },
+    {
+     "texte": "20 g Tomates séchées",
+     "nom": "Tomates séchées",
+     "quantite": 20.0,
+     "unite": "g"
+    },
+    {
+     "texte": "Huile d'olive (1 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 15.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càs = 15.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Préchauffez le four à 200°C. Égouttez puis coupez finement les tomates séchées.",
+    "Dans un bol, mélangez le maquereau, le fromage frais, les tomates séchées, le jus et les zestes du citron. Optionnel : vous pouvez ajouter de la ciboulette si vous en avez. Salez, poivrez et mélangez le tout à l'aide d'une fourchette.",
+    "Coupez les feuilles de brick en deux. Utilisez une feuille pour deux samoussas.",
+    "Prenez une demi-feuille de brick et huilez-la légèrement. Divisez la farce pour que vous en ayez suffisamment pour faire vos samoussas : 3 par personne. Ajoutez un peu de farce dans la brick sur un bord de la demi-feuille.",
+    "Rabattez la feuille par le bas puis formez un triangle. Renouvelez le geste consistant à reporter successivement le triangle de bas en haut et de haut en bas. Recommencez autant de fois que de bricks nécessaires.",
+    "Une fois vos samoussas pliés, placez-les sur une plaque de cuisson. Enfournez à 200°C pendant 15 minutes.",
+    "Une fois bien dorés, servez-les avec une salade assaisonnée avec la vinaigrette de votre choix, c'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 344.0,
+    "proteines": 15.0,
+    "glucides": 19.0,
+    "lipides": 23.0,
+    "fibres": 3.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres). Filet de maquereau aux tomates séchées en boîte ; 1,5 feuille de brick comptée en pièces."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/veloute-de-petits-pois-epice-84frc8ipez1umgmo07c7",
+   "nom_original": "Velouté de petits pois épicé",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 4,
+   "cook_min": 10,
+   "total_min": 14,
+   "ingredients": [
+    {
+     "texte": "200 g Petits pois (surgelés)",
+     "nom": "Petits pois (surgelés)",
+     "quantite": 200.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/4 Oignon rouge",
+     "nom": "Oignon rouge",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "1/4 gou. Ail",
+     "nom": "Ail",
+     "quantite": 0.25,
+     "unite": "piece",
+     "remarque": "pièce : gousse(s)"
+    },
+    {
+     "texte": "1 càc Pâte de curry (vert)",
+     "nom": "Pâte de curry (vert)",
+     "quantite": 5.0,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "50 ml Lait de coco",
+     "nom": "Lait de coco",
+     "quantite": 50.0,
+     "unite": "ml"
+    },
+    {
+     "texte": "Huile d'olive (1 càc)",
+     "nom": "Huile d'olive",
+     "quantite": 5.0,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1 càc = 5.0 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Épluchez et émincez finement les oignons et l'ail.",
+    "Faites-les revenir 2 minutes dans une casserole avec un filet d'huile d'olive.",
+    "Ajoutez les petits pois, le lait de coco, la pâte de curry vert, 1/2 tasse d'eau par personne, salez, mélangez.",
+    "Couvrez et laissez mijoter pendant 8 minutes.",
+    "Mixez jusqu'à obtenir un velouté.",
+    "Servez, (Optionnel : ajoutez des feuilles de coriandre, du lait de coco et du citron vert). C'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 245.0,
+    "proteines": 12.0,
+    "glucides": 21.0,
+    "lipides": 10.0,
+    "fibres": 12.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres). Pâte de curry vert (1 càc) : produit d'épicerie courant."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/toast-with-pear-ricotta-honey-331906",
+   "nom_original": "Toast with Pear, Ricotta, & Honey",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 0,
+   "total_min": 5,
+   "ingredients": [
+    {
+     "texte": "1 slice Whole wheat bread or 28g",
+     "nom": "Whole wheat bread",
+     "quantite": 28.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 slice or 28g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "½ medium Pears (raw) or 89g",
+     "nom": "Pears (raw)",
+     "quantite": 89.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ medium or 89g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 tsp Honey or 7g",
+     "nom": "Honey",
+     "quantite": 7.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 tsp or 7g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¼ cup Ricotta cheese (part-skim milk) or 62g",
+     "nom": "Ricotta cheese (part-skim milk)",
+     "quantite": 62.0,
+     "unite": "g",
+     "remarque": "la page donne \"¼ cup or 62g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Core and slice half of a pear. Toast bread to your liking. Spread ricotta on toast and top with sliced pears and honey. Serve."
+   ],
+   "macros_par_portion": {
+    "calories": 227.6,
+    "proteines": 10.8,
+    "glucides": 34.5,
+    "lipides": 6.0,
+    "fibres": 4.5,
+    "sucres": 15.9
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 185.6 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 186.0 g ≈ 1 × 185.6 g (servingSize)."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/cucumber-snack-sandwiches-332354",
+   "nom_original": "Cucumber Snack Sandwiches",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 0,
+   "total_min": 5,
+   "ingredients": [
+    {
+     "texte": "⅓ cup Cream cheese (low fat) or 80g",
+     "nom": "Cream cheese (low fat)",
+     "quantite": 80.0,
+     "unite": "g",
+     "remarque": "la page donne \"⅓ cup or 80g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "2 oz Turkey (deli-sliced, rotisserie, white meat) or 57g",
+     "nom": "Turkey (deli-sliced, rotisserie, white meat)",
+     "quantite": 57.0,
+     "unite": "g",
+     "remarque": "la page donne \"2 oz or 57g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "½ cucumber Cucumber (raw, with peel) or 151g",
+     "nom": "Cucumber (raw, with peel)",
+     "quantite": 151.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ cucumber or 151g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Cut cucumber in half, then in half length-wise. Scoop seeds out of inside of cucumber and discard.",
+    "Spread cream cheese on insides of cucumber. Roll up turkey slices and place on top of cream cheese. Top with other side of cucumber and enjoy!"
+   ],
+   "macros_par_portion": {
+    "calories": 246.9,
+    "proteines": 14.9,
+    "glucides": 16.3,
+    "lipides": 14.1,
+    "fibres": 1.0,
+    "sucres": 9.4
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 287.2 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 288.0 g ≈ 1 × 287.2 g (servingSize). Fromage frais allégé + blanc de dinde en tranches dans des barquettes de concombre."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/chickpea-snack-sandwich-386723",
+   "nom_original": "Chickpea Snack Sandwich",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 0,
+   "total_min": 5,
+   "ingredients": [
+    {
+     "texte": "½ cup Chickpeas (canned) or 120g",
+     "nom": "Chickpeas (canned)",
+     "quantite": 120.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ cup or 120g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "2 slice Whole wheat bread or 56g",
+     "nom": "Whole wheat bread",
+     "quantite": 56.0,
+     "unite": "g",
+     "remarque": "la page donne \"2 slice or 56g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "⅓ large Cucumber (raw, peeled) or 93g",
+     "nom": "Cucumber (raw, peeled)",
+     "quantite": 93.0,
+     "unite": "g",
+     "remarque": "la page donne \"⅓ large or 93g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "½ medium Red bell pepper (raw) or 60g",
+     "nom": "Red bell pepper (raw)",
+     "quantite": 60.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ medium or 60g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Mash chickpeas with fork.",
+    "Slice bell pepper and cucumber.",
+    "Toast bread and assemble sandwich with veggies, chikpeas mash, and toast."
+   ],
+   "macros_par_portion": {
+    "calories": 276.4,
+    "proteines": 14.0,
+    "glucides": 45.7,
+    "lipides": 4.6,
+    "fibres": 10.6,
+    "sucres": 6.2
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 328.8 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 329.0 g ≈ 1 × 328.8 g (servingSize)."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/sweet-savory-snack-box-4680877",
+   "nom_original": "Sweet & Savory Snack Box",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 0,
+   "total_min": 5,
+   "ingredients": [
+    {
+     "texte": "¼ cup Cottage cheese (1% milkfat) or 57g",
+     "nom": "Cottage cheese (1% milkfat)",
+     "quantite": 57.0,
+     "unite": "g",
+     "remarque": "la page donne \"¼ cup or 57g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "3 tbsp Pistachios (raw) or 23g",
+     "nom": "Pistachios (raw)",
+     "quantite": 23.0,
+     "unite": "g",
+     "remarque": "la page donne \"3 tbsp or 23g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "⅛ cup, chips Dark chocolate (70-85% cacao solids) or 21g",
+     "nom": "Dark chocolate (70-85% cacao solids)",
+     "quantite": 21.0,
+     "unite": "g",
+     "remarque": "la page donne \"⅛ cup, chips or 21g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "3 medium Strawberries (raw) or 36g",
+     "nom": "Strawberries (raw)",
+     "quantite": 36.0,
+     "unite": "g",
+     "remarque": "la page donne \"3 medium or 36g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¼ cup Blueberries (raw) or 37g",
+     "nom": "Blueberries (raw)",
+     "quantite": 37.0,
+     "unite": "g",
+     "remarque": "la page donne \"¼ cup or 37g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Arrange the cottage cheese, pistachio nuts, dark chocolate, strawberries, and blueberries in a snack box or on a plate."
+   ],
+   "macros_par_portion": {
+    "calories": 328.5,
+    "proteines": 13.8,
+    "glucides": 25.7,
+    "lipides": 20.2,
+    "fibres": 6.3,
+    "sucres": 13.8
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 173.6 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 174.0 g ≈ 1 × 173.6 g (servingSize). Pistaches hors liste d'ingrédients disponibles."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/fruit-vegetable-plate-with-almonds-cheese-5020823",
+   "nom_original": "Fruit & Vegetable Plate with Almonds & Cheese",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 0,
+   "total_min": 5,
+   "ingredients": [
+    {
+     "texte": "1 cup strips or slices Carrots (raw) or 122g",
+     "nom": "Carrots (raw)",
+     "quantite": 122.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 cup strips or slices or 122g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "½ medium Apple (with skin) or 91g",
+     "nom": "Apple (with skin)",
+     "quantite": 91.0,
+     "unite": "g",
+     "remarque": "la page donne \"½ medium or 91g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 oz Cheddar cheese or 28g",
+     "nom": "Cheddar cheese",
+     "quantite": 28.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 oz or 28g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "20 almond Almonds (raw) or 24g",
+     "nom": "Almonds (raw)",
+     "quantite": 24.0,
+     "unite": "g",
+     "remarque": "la page donne \"20 almond or 24g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Slice the apple and arrange it on a plate with the cheddar cheese, carrots, and almonds."
+   ],
+   "macros_par_portion": {
+    "calories": 351.4,
+    "proteines": 13.3,
+    "glucides": 29.8,
+    "lipides": 22.0,
+    "fibres": 8.6,
+    "sucres": 16.3
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 265.4 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 265.0 g ≈ 1 × 265.4 g (servingSize)."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/sea-salt-edamame-3256070",
+   "nom_original": "Sea Salt Edamame",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 1,
+   "cook_min": 2,
+   "total_min": 3,
+   "ingredients": [
+    {
+     "texte": "1 dash Salt (table) or 0.4g",
+     "nom": "Salt (table)",
+     "quantite": 0.4,
+     "unite": "g",
+     "remarque": "la page donne \"1 dash or 0.4g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "100g Edamame (raw)",
+     "nom": "Edamame (raw)",
+     "quantite": 100.0,
+     "unite": "g"
+    }
+   ],
+   "directions": [
+    "Cook edamame in microwave, about 2 minutes.",
+    "Sprinkle salt over.",
+    "Just eat the beans, not the pods."
+   ],
+   "macros_par_portion": {
+    "calories": 147.0,
+    "proteines": 13.0,
+    "glucides": 11.1,
+    "lipides": 6.8,
+    "fibres": 4.2,
+    "sucres": 0.0
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 100.4 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 100.4 g ≈ 1 × 100.4 g (servingSize). Edamame surgelés (hors liste d'ingrédients disponibles)."
+  },
+  {
+   "site": "jow.fr",
+   "url": "https://jow.fr/recipes/creme-de-feta-et-miel-8qetfd8idpjnjfto0tf7",
+   "nom_original": "Crème de feta & miel",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 5,
+   "cook_min": 0,
+   "total_min": 5,
+   "ingredients": [
+    {
+     "texte": "50 g Feta",
+     "nom": "Feta",
+     "quantite": 50.0,
+     "unite": "g"
+    },
+    {
+     "texte": "20 g Yaourt Grec",
+     "nom": "Yaourt Grec",
+     "quantite": 20.0,
+     "unite": "g"
+    },
+    {
+     "texte": "1/8 gou. Ail",
+     "nom": "Ail",
+     "quantite": 0.125,
+     "unite": "piece",
+     "remarque": "pièce : gousse(s)"
+    },
+    {
+     "texte": "1/2 càs Miel (liquide)",
+     "nom": "Miel (liquide)",
+     "quantite": 7.5,
+     "unite": "ml",
+     "remarque": "cuillère convertie : 1/2 càs = 7.5 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    },
+    {
+     "texte": "10 g Pistaches (émondées)",
+     "nom": "Pistaches (émondées)",
+     "quantite": 10.0,
+     "unite": "g"
+    },
+    {
+     "texte": "Huile d'olive (1/4 càs)",
+     "nom": "Huile d'olive",
+     "quantite": 3.75,
+     "unite": "ml",
+     "placard_jow": true,
+     "remarque": "cuillère convertie : 1/4 càs = 3.75 ml (1 c. à soupe = 15 ml, 1 c. à café = 5 ml)"
+    }
+   ],
+   "directions": [
+    "Déposez la feta et le yaourt grec dans la cuve de votre robot mixeur. (Vous pouvez aussi le faire au batteur, le mélange sera juste un peu moins lisse).",
+    "Ajoutez la gousse d'ail préalablement épluchée et la moitié du miel. Mixez jusqu'à l'obtention d'un mélange lisse et onctueux.",
+    "Dressez la crème de feta sur un bol ou une assiette creuse. Ajoutez sur le dessus les pistaches préalablement concassées, le miel restant, un filet d'huile d'olive et dégustez avec un bon pain, c'est prêt !"
+   ],
+   "macros_par_portion": {
+    "calories": 278.0,
+    "proteines": 10.0,
+    "glucides": 11.0,
+    "lipides": 22.0,
+    "fibres": 1.0
+   },
+   "notes": "Jow : macros par portion (JSON-LD) ; ingrédients « placard » (Assurez-vous d'avoir…) hors JSON-LD, marqués placard_jow ; glucides au sens FR (hors fibres)."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/cinnamon-roll-smoothie-5054671",
+   "nom_original": "Cinnamon Roll Smoothie",
+   "type_propose": "collation",
+   "servings": 2,
+   "prep_min": 2,
+   "cook_min": 2,
+   "total_min": 4,
+   "ingredients": [
+    {
+     "texte": "1 cup Almond milk or 240g",
+     "nom": "Almond milk",
+     "quantite": 240.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 cup or 240g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 cup Greek yogurt (plain, nonfat) or 240g",
+     "nom": "Greek yogurt (plain, nonfat)",
+     "quantite": 240.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 cup or 240g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¼ cup Rolled oats (dry oatmeal) or 20g",
+     "nom": "Rolled oats (dry oatmeal)",
+     "quantite": 20.0,
+     "unite": "g",
+     "remarque": "la page donne \"¼ cup or 20g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 tbsp Brown sugar or 9g",
+     "nom": "Brown sugar",
+     "quantite": 9.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 tbsp or 9g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¼ tsp Cinnamon (ground) or 0.6g",
+     "nom": "Cinnamon (ground)",
+     "quantite": 0.6,
+     "unite": "g",
+     "remarque": "la page donne \"¼ tsp or 0.6g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "1 medium Banana or 118g",
+     "nom": "Banana",
+     "quantite": 118.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 medium or 118g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Combine almond milk, Greek yogurt, rolled oats, brown sugar, cinnamon, and banana in a blender. Blend until smooth and creamy. Serve immediately."
+   ],
+   "macros_par_portion": {
+    "calories": 204.5,
+    "proteines": 14.5,
+    "glucides": 33.8,
+    "lipides": 2.1,
+    "fibres": 3.4,
+    "sucres": 15.5
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (2 portion(s)), macros par portion (JSON-LD, servingSize 313.8 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 627.6 g ≈ 2 × 313.8 g (servingSize). Sucre roux 9 g pour 2 portions (4,5 g par portion)."
+  },
+  {
+   "site": "eatthismuch.com",
+   "url": "https://www.eatthismuch.com/calories/pizza-roll-up-5003800",
+   "nom_original": "Pizza Roll-Up",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 7,
+   "cook_min": 1,
+   "total_min": 8,
+   "ingredients": [
+    {
+     "texte": "1 tortilla, medium Flour tortillas or 46g",
+     "nom": "Flour tortillas",
+     "quantite": 46.0,
+     "unite": "g",
+     "remarque": "la page donne \"1 tortilla, medium or 46g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "2 tbsp Marinara sauce or 32g",
+     "nom": "Marinara sauce",
+     "quantite": 32.0,
+     "unite": "g",
+     "remarque": "la page donne \"2 tbsp or 32g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "12 leaf Spinach (raw) or 120g",
+     "nom": "Spinach (raw)",
+     "quantite": 120.0,
+     "unite": "g",
+     "remarque": "la page donne \"12 leaf or 120g\" : poids de la page retenu (quantité pour la recette entière)"
+    },
+    {
+     "texte": "¼ cup, shredded Mozzarella cheese (part-skim) or 28g",
+     "nom": "Mozzarella cheese (part-skim)",
+     "quantite": 28.0,
+     "unite": "g",
+     "remarque": "la page donne \"¼ cup, shredded or 28g\" : poids de la page retenu (quantité pour la recette entière)"
+    }
+   ],
+   "directions": [
+    "Place the tortilla on a plate and spread the pasta sauce evenly over it. Top with spinach leaves and sprinkle with mozzarella cheese. Microwave on High until the cheese is melted, about 45 seconds. Carefully roll up the tortilla and let it cool for 5-10 minutes before slicing into pieces, if desired."
+   ],
+   "macros_par_portion": {
+    "calories": 249.3,
+    "proteines": 14.3,
+    "glucides": 31.1,
+    "lipides": 8.1,
+    "fibres": 4.4,
+    "sucres": 4.1
+   },
+   "notes": "Eat This Much : quantités métriques affichées « or Xg » pour la recette entière (1 portion(s)), macros par portion (JSON-LD, servingSize 226.1 g) ; glucides = glucides totaux US (fibres incluses). Contrôle : somme des ingrédients 226.0 g ≈ 1 × 226.1 g (servingSize). « Marinara sauce » = sauce tomate cuisinée."
+  },
+  {
+   "site": "bbcgoodfood.com",
+   "url": "https://www.bbcgoodfood.com/recipes/pitta-pocket",
+   "nom_original": "Pitta pocket",
+   "type_propose": "collation",
+   "servings": 1,
+   "prep_min": 2,
+   "cook_min": null,
+   "total_min": 2,
+   "ingredients": [
+    {
+     "texte": "½ wholemeal pitta bread",
+     "nom": "wholemeal pitta bread",
+     "quantite": 0.5,
+     "unite": "piece"
+    },
+    {
+     "texte": "25g cooked skinless chicken breast",
+     "nom": "cooked skinless chicken breast",
+     "quantite": 25.0,
+     "unite": "g"
+    },
+    {
+     "texte": "¼ cucumber cut into chunks",
+     "nom": "cucumber cut into chunks",
+     "quantite": 0.25,
+     "unite": "piece"
+    },
+    {
+     "texte": "4 cherry tomatoes halved",
+     "nom": "cherry tomatoes halved",
+     "quantite": 4.0,
+     "unite": "piece"
+    }
+   ],
+   "directions": [
+    "Fill the pitta half with the chicken breast, cucumber and cherry tomatoes."
+   ],
+   "macros_par_portion": {
+    "calories": 146.0,
+    "proteines": 13.0,
+    "glucides": 17.0,
+    "lipides": 2.0,
+    "fibres": 3.0,
+    "sucres": 4.0
+   },
+   "notes": "BBC Good Food : macros per serving (JSON-LD) ; carbs au sens UK (hors fibres), fibres à part."
+  }
+ ]
+}

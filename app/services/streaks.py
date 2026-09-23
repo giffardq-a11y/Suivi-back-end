@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from typing import List
 
 from sqlalchemy.orm import Session
@@ -32,7 +32,18 @@ def current_streak_days(db: Session, substance: models.Substance, now: datetime 
         .order_by(models.ConsumptionEntry.occurred_at.desc())
         .first()
     )
-    reference = last_entry.occurred_at if last_entry else substance.user.created_at
+    if last_entry:
+        reference = last_entry.occurred_at
+    elif substance.quit_date:
+        # Date d'arrêt déclarée : elle prime sur la création du compte, sinon
+        # quelqu'un qui a arrêté six mois avant d'installer l'app repart de zéro.
+        try:
+            jour = date.fromisoformat(substance.quit_date)
+            reference = datetime(jour.year, jour.month, jour.day, tzinfo=timezone.utc)
+        except ValueError:
+            reference = substance.user.created_at
+    else:
+        reference = substance.user.created_at
     return _days_between(reference, now)
 
 

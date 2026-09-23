@@ -74,6 +74,10 @@ class Substance(Base):
     # plutôt que dupliqué dans une table à part).
     unit = Column(String, nullable=True)
     note = Column(String, nullable=True)
+    # Date d'arrêt déclarée ('YYYY-MM-DD'). Sans elle, le compteur de jours
+    # sans consommation part de la création du compte, ce qui est faux pour
+    # quelqu'un qui a arrêté avant d'installer l'app (voir services/streaks.py).
+    quit_date = Column(String, nullable=True)
 
     user = relationship("User", back_populates="substances")
     entries = relationship("ConsumptionEntry", back_populates="substance", cascade="all, delete-orphan")
@@ -132,6 +136,20 @@ class Habit(Base):
     # Unité affichée après la valeur du palier ("km / semaine", "pompes /
     # semaine"...) quand habit_type ne correspond à aucun format connu.
     progressive_unit = Column(String, nullable=True)
+    # Jours où l'habitude s'applique : "0,3" = lundi et jeudi (0 = lundi ...
+    # 6 = dimanche), NULL = tous les jours. Elle n'est proposée que ces
+    # jours-là, mais une validation un autre jour compte quand même pour la
+    # semaine — on ne punit pas quelqu'un qui a nagé mercredi.
+    days_of_week = Column(String, nullable=True)
+    # 'sessions' : viser un nombre de séances par semaine (weekly_target),
+    #              chacune d'un volume fixe facultatif (session_quantity).
+    # 'volume'   : viser un volume hebdomadaire (weekly_volume_target), rempli
+    #              en autant de fois qu'on veut, chaque validation portant sa
+    #              quantité (HabitLog.quantity).
+    tracking_mode = Column(String, nullable=False, default="sessions", server_default="sessions")
+    session_quantity = Column(Float, nullable=True)
+    weekly_volume_target = Column(Float, nullable=True)
+    unit = Column(String, nullable=True)  # 'm', 'km', 'min', 'pompes'...
 
     user = relationship("User", back_populates="habits")
     logs = relationship("HabitLog", back_populates="habit", cascade="all, delete-orphan")
@@ -204,6 +222,9 @@ class HabitLog(Base):
     habit_id = Column(String, ForeignKey("habits.id"), nullable=False)
     occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
     note = Column(String, nullable=True)  # "comment ça s'est passé ?" (Accueil)
+    # Quantité faite lors de cette validation (500 m, 20 min...), pour les
+    # habitudes suivies en volume. NULL pour une simple case cochée.
+    quantity = Column(Float, nullable=True)
 
     habit = relationship("Habit", back_populates="logs")
 

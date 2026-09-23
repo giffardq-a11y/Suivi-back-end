@@ -226,6 +226,26 @@ INGREDIENTS = [
     ("pois_casse", "Pois cassés (secs)", r"code:20515", "epicerie", "g", 500),
     ("kale", "Chou frisé (kale)", r"code:20218", "primeur", "g", 400),
     ("feuille_brick", "Feuilles de brick", r"code:23430", "epicerie", "piece", 10),
+    # --- Complément du 23/09/2026 (4) : import BBC Good Food et Jow -------------
+    ("brie", "Brie", r"code:12020", "frais", "g", 200),
+    ("maquereau_fume", "Maquereau fumé", r"code:26087", "poissonnerie", "g", 200),
+    ("pain_seigle", "Pain de seigle", r"code:7125", "boulangerie", "g", 400),
+    ("olive_verte", "Olives vertes", r"code:13033", "epicerie", "g", 150),
+    # --- Complément du 23/09/2026 (5) : petits-déjeuners et collations importés --
+    ("jambon_cru", "Jambon cru", r"code:28800", "charcuterie", "g", 100),
+    ("fromage_frais", "Fromage frais à tartiner", r"code:12340", "frais", "g", 150),
+    ("comte", "Comté", r"code:12110", "frais", "g", 200),
+    ("truite_fumee", "Truite fumée", r"code:27029", "poissonnerie", "g", 120),
+    ("pain_mie", "Pain de mie complet", r"code:7111", "boulangerie", "g", 500),
+    ("pain_pita", "Pain pita", r"code:7180", "boulangerie", "piece", 6),
+    ("muffin_anglais", "Muffin anglais", r"code:7257", "boulangerie", "piece", 6),
+    ("bagel", "Bagel", r"code:7258", "boulangerie", "piece", 4),
+    ("galette_sarrasin", "Galettes de sarrasin", r"code:23801", "frais", "piece", 6),
+    ("pistache", "Pistaches", r"code:15044", "epicerie", "g", 125),
+    ("raisin", "Raisin", r"code:13112", "primeur", "g", 500),
+    ("peche", "Pêche", r"code:13043", "primeur", "g", 500),
+    ("sirop_erable", "Sirop d'érable", r"code:31034", "epicerie", "ml", 250),
+    ("sauce_tomate", "Sauce tomate", r"code:11107", "epicerie", "g", 400),
 ]
 
 # Poids net moyen d'une pièce, pour les ingrédients qui s'achètent à l'unité :
@@ -246,6 +266,10 @@ POIDS_PIECE_G = {
     "citron_vert": 50,
     "galette_riz": 9,
     "pain_burger": 45,
+    "pain_pita": 60,
+    "muffin_anglais": 60,
+    "bagel": 90,
+    "galette_sarrasin": 60,
     "feuille_brick": 12,
 }
 

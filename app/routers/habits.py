@@ -28,6 +28,12 @@ class HabitCreate(BaseModel):
     target: str | None = None
     note: str | None = None
     weekly_target: int = 7
+    # "0,3" = lundi et jeudi ; None = tous les jours.
+    days_of_week: str | None = None
+    tracking_mode: str = "sessions"  # 'sessions' | 'volume'
+    session_quantity: float | None = None
+    weekly_volume_target: float | None = None
+    unit: str | None = None
     linked_activity: str | None = None
     progressive: ProgressiveIn | None = None
     scheduled_time: str | None = None
@@ -41,6 +47,18 @@ class HabitOut(BaseModel):
     percent: int
     progressive: bool
     linked_activity: str | None
+    # Progression de la semaine : sans ces champs, l'app ne peut afficher
+    # qu'un pourcentage sans savoir ce qu'il compte (2 séances sur 3 ? 600 m
+    # sur 1000 ?), ni proposer de valider plusieurs fois.
+    tracking_mode: str = "sessions"
+    weekly_target: int = 7
+    done_this_week: int = 0
+    weekly_volume_target: float | None = None
+    volume_this_week: float | None = None
+    session_quantity: float | None = None
+    unit: str | None = None
+    days_of_week: str | None = None
+    scheduled_today: bool = True
 
 
 def _week_start(now: datetime) -> datetime:
@@ -50,23 +68,52 @@ def _week_start(now: datetime) -> datetime:
     return monday.replace(hour=0, minute=0, second=0, microsecond=0)
 
 
+def jours_actifs(habit: models.Habit) -> list[int] | None:
+    """Jours où l'habitude s'applique (0 = lundi), None = tous les jours."""
+    if not habit.days_of_week:
+        return None
+    jours = [int(j) for j in str(habit.days_of_week).split(",") if j.strip().isdigit()]
+    return sorted({j for j in jours if 0 <= j <= 6}) or None
+
+
 def _serialize(db: Session, habit: models.Habit) -> HabitOut:
-    week_start = _week_start(datetime.now(timezone.utc))
-    done_this_week = (
+    maintenant = datetime.now(timezone.utc)
+    week_start = _week_start(maintenant)
+    logs_semaine = (
         db.query(models.HabitLog)
         .filter(models.HabitLog.habit_id == habit.id, models.HabitLog.occurred_at >= week_start)
-        .count()
+        .all()
     )
-    target = habit.weekly_target or 7
-    percent = min(100, round(100 * done_this_week / target)) if target else 0
+    done_this_week = len(logs_semaine)
 
+    if habit.tracking_mode == "volume" and habit.weekly_volume_target:
+        # Une validation sans quantité vaut la quantité d'une séance type, à
+        # défaut 0 : mieux vaut sous-compter que gonfler la progression.
+        volume = sum((log.quantity if log.quantity is not None else (habit.session_quantity or 0))
+                     for log in logs_semaine)
+        percent = min(100, round(100 * volume / habit.weekly_volume_target))
+    else:
+        volume = None
+        cible = habit.weekly_target or 7
+        percent = min(100, round(100 * done_this_week / cible)) if cible else 0
+
+    jours = jours_actifs(habit)
     return HabitOut(
         id=habit.id,
         label=habit.label,
-        target=effective_habit_target(habit, datetime.now(timezone.utc)),
+        target=effective_habit_target(habit, maintenant),
         percent=percent,
         progressive=is_progressive(habit),
         linked_activity=habit.linked_activity,
+        tracking_mode=habit.tracking_mode or "sessions",
+        weekly_target=habit.weekly_target or 7,
+        done_this_week=done_this_week,
+        weekly_volume_target=habit.weekly_volume_target,
+        volume_this_week=round(volume, 1) if volume is not None else None,
+        session_quantity=habit.session_quantity,
+        unit=habit.unit,
+        days_of_week=habit.days_of_week,
+        scheduled_today=(jours is None or maintenant.weekday() in jours),
     )
 
 
@@ -99,6 +146,11 @@ def create_habit(
         linked_activity=payload.linked_activity,
         scheduled_time=payload.scheduled_time,
         notifications_enabled=payload.notifications_enabled,
+        days_of_week=payload.days_of_week,
+        tracking_mode=payload.tracking_mode or "sessions",
+        session_quantity=payload.session_quantity,
+        weekly_volume_target=payload.weekly_volume_target,
+        unit=payload.unit,
     )
     if payload.progressive:
         habit.habit_type = payload.type
@@ -119,8 +171,57 @@ def create_habit(
     return _serialize(db, habit)
 
 
+class HabitUpdate(BaseModel):
+    """Modification d'une habitude existante. Tout est optionnel : un champ
+    absent n'est pas touché, ce qui permet de ne régler que les jours ou que
+    le volume sans renvoyer toute l'habitude."""
+    label: str | None = None
+    target: str | None = None
+    note: str | None = None
+    weekly_target: int | None = None
+    days_of_week: str | None = None
+    tracking_mode: str | None = None
+    session_quantity: float | None = None
+    weekly_volume_target: float | None = None
+    unit: str | None = None
+    scheduled_time: str | None = None
+    notifications_enabled: bool | None = None
+
+
+@router.put("/{habit_id}", response_model=HabitOut)
+def update_habit(
+    habit_id: str,
+    payload: HabitUpdate,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    habit = (
+        db.query(models.Habit)
+        .filter(models.Habit.id == habit_id, models.Habit.user_id == user.id)
+        .first()
+    )
+    if not habit:
+        raise HTTPException(status_code=404, detail="Habitude introuvable")
+
+    if payload.tracking_mode and payload.tracking_mode not in ("sessions", "volume"):
+        raise HTTPException(status_code=422, detail="tracking_mode doit valoir 'sessions' ou 'volume'")
+
+    for champ, valeur in payload.model_dump(exclude_unset=True).items():
+        # Une habitude progressive recalcule sa cible toute seule : un
+        # `target` saisi à la main l'écraserait jusqu'au prochain palier.
+        if champ == "target" and is_progressive(habit):
+            continue
+        setattr(habit, champ, valeur)
+
+    db.commit()
+    db.refresh(habit)
+    return _serialize(db, habit)
+
+
 class HabitLogCreate(BaseModel):
     note: str | None = None
+    # Quantité faite (500 m, 20 min...) pour une habitude suivie en volume.
+    quantity: float | None = None
 
 
 @router.post("/{habit_id}/log", status_code=201)
@@ -142,6 +243,7 @@ def log_habit(
         habit_id=habit.id,
         occurred_at=datetime.now(timezone.utc),
         note=(payload.note or None) if payload else None,
+        quantity=(payload.quantity if payload else None),
     )
     db.add(log)
     db.commit()
