@@ -91,6 +91,12 @@ class HabitTodayOut(BaseModel):
     label: str
     target: Optional[str]
     done_today: bool
+    # Une habitude visée 2 fois par semaine ne se lit pas en « fait / pas fait
+    # aujourd'hui » : l'Accueil a besoin de la progression de la semaine.
+    done_this_week: int = 0
+    weekly_target: int = 7
+    weekly: bool = False
+    days_of_week: Optional[str] = None
 
 
 class GoalSummaryOut(BaseModel):

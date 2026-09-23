@@ -9,7 +9,8 @@ from .. import models
 from .streaks import current_streak_days, personal_best_days
 from .savings import compute_savings
 from .rewards import compute_reward_budget
-from .habit_progress import effective_habit_target
+from .common import start_of_week
+from .habit_progress import effective_habit_target, jours_actifs
 
 THOUGHTS = [
     "Un jour à la fois.",
@@ -38,6 +39,7 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
     total_savings, delta_week = compute_savings(db, user, now=now)
 
     habits_today = []
+    semaine_debut = start_of_week(now)
     for habit in user.habits:
         if not habit.active:
             continue
@@ -48,9 +50,25 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
             (log.occurred_at if log.occurred_at.tzinfo else log.occurred_at.replace(tzinfo=timezone.utc)) >= today_start
             for log in habit.logs
         )
+        # Une habitude n'apparaît à l'Accueil que les jours où elle
+        # s'applique : sinon une natation du mardi traîne dans la liste du
+        # jour toute la semaine et compte comme ratée six jours sur sept.
+        jours = jours_actifs(habit)
+        if jours is not None and now.weekday() not in jours:
+            continue
+
+        # Progression de la semaine : une habitude visée 2 fois par semaine ne
+        # se lit pas en « fait / pas fait aujourd'hui ».
+        faites = sum(
+            1 for log in habit.logs
+            if (log.occurred_at if log.occurred_at.tzinfo else log.occurred_at.replace(tzinfo=timezone.utc)) >= semaine_debut
+        )
+        cible = habit.weekly_target or 7
         habits_today.append({
             "id": habit.id, "label": habit.label,
             "target": effective_habit_target(habit, now), "done_today": done_today,
+            "done_this_week": faites, "weekly_target": cible, "weekly": cible < 7,
+            "days_of_week": habit.days_of_week,
         })
 
     active_goals = [g for g in user.goals if g.completed_at is None]

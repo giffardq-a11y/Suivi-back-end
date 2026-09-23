@@ -56,3 +56,15 @@ def effective_habit_target(habit: "models.Habit", now: datetime) -> str | None:
     decimals = habit.habit_type == "hydratation" or (habit.progressive_unit or "").startswith("km")
     rounded = round(raw_value * 10) / 10 if decimals else round(raw_value)
     return format_habit_target(habit.habit_type, rounded, habit.progressive_unit)
+
+def jours_actifs(habit) -> list[int] | None:
+    """Jours où l'habitude s'applique (0 = lundi), None = tous les jours.
+
+    Partagé par le router habits et le fil de la journée : une habitude qui
+    n'est pas prévue aujourd'hui ne doit apparaître ni dans la liste du jour,
+    ni dans le fil, sans quoi elle compte comme ratée tous les autres jours."""
+    valeur = getattr(habit, "days_of_week", None)
+    if not valeur:
+        return None
+    jours = [int(j) for j in str(valeur).split(",") if j.strip().isdigit()]
+    return sorted({j for j in jours if 0 <= j <= 6}) or None

@@ -17,7 +17,7 @@ from ..services.common import now_utc, to_ms, from_ms, relative_time, is_same_da
 from ..services.savings import compute_savings
 from ..services.streaks import current_streak_days
 from ..services.sport import calories_burned_on
-from ..services.habit_progress import effective_habit_target
+from ..services.habit_progress import effective_habit_target, jours_actifs
 from .diet import _meals_calories_on
 
 router = APIRouter(tags=["journal-stats"])
@@ -244,6 +244,9 @@ def get_day_detail(dateMs: int, db: Session = Depends(get_db), user: models.User
     for h in user.habits:
         if not h.active:
             continue
+        jours = jours_actifs(h)
+        if jours is not None and date_dt.weekday() not in jours:
+            continue
         done = any(is_same_day(l.occurred_at, date_dt) for l in h.logs)
         habits_out.append({"id": h.id, "label": h.label, "done": done})
 
@@ -255,10 +258,27 @@ def get_journal_overview(db: Session = Depends(get_db), user: models.User = Depe
     now = now_utc()
 
     planned = []
+    semaine_debut = start_of_week(now)
     for h in user.habits:
-        if h.active and h.scheduled_time:
-            done = any(is_same_day(l.occurred_at, now) for l in h.logs)
-            planned.append({"type": "habit", "id": h.id, "label": h.label, "scheduledTime": h.scheduled_time, "done": done})
+        if not h.active:
+            continue
+        # Une habitude n'est proposée que les jours où elle s'applique : sans
+        # ce filtre, une natation du mardi encombre le fil tous les jours.
+        jours = jours_actifs(h)
+        if jours is not None and now.weekday() not in jours:
+            continue
+        done = any(is_same_day(l.occurred_at, now) for l in h.logs)
+        faites = sum(1 for l in h.logs if aware(l.occurred_at) >= semaine_debut)
+        cible = h.weekly_target or 7
+        # Avant, seules les habitudes ayant un horaire entraient dans le fil :
+        # une habitude hebdomadaire sans heure n'y apparaissait jamais.
+        planned.append({
+            "type": "habit", "id": h.id, "label": h.label,
+            "scheduledTime": h.scheduled_time, "done": done,
+            "done_this_week": faites, "weekly_target": cible,
+            "weekly": cible < 7,
+            "days_of_week": h.days_of_week,
+        })
 
     templates = (
         db.query(models.WorkoutTemplate)

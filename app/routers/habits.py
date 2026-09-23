@@ -8,7 +8,7 @@ from .. import models
 from ..database import get_db
 from ..deps import get_current_user
 from ..services.common import now_utc, is_same_day, today_key
-from ..services.habit_progress import effective_habit_target, is_progressive
+from ..services.habit_progress import effective_habit_target, is_progressive, jours_actifs
 
 router = APIRouter(prefix="/habits", tags=["habits"])
 
@@ -66,14 +66,6 @@ def _week_start(now: datetime) -> datetime:
     # dateKey dans mockData.js : "lundi = 0").
     monday = now - timedelta(days=now.weekday())
     return monday.replace(hour=0, minute=0, second=0, microsecond=0)
-
-
-def jours_actifs(habit: models.Habit) -> list[int] | None:
-    """Jours où l'habitude s'applique (0 = lundi), None = tous les jours."""
-    if not habit.days_of_week:
-        return None
-    jours = [int(j) for j in str(habit.days_of_week).split(",") if j.strip().isdigit()]
-    return sorted({j for j in jours if 0 <= j <= 6}) or None
 
 
 def _serialize(db: Session, habit: models.Habit) -> HabitOut:
