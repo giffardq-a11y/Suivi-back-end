@@ -10,7 +10,7 @@ saisies ici portent source 'manual'. Conséquences voulues :
     suivante si la montre l'a toujours. C'est l'app qui doit le dire.
 """
 import statistics
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field, field_validator
@@ -21,7 +21,7 @@ from .. import models
 from ..database import get_db
 from ..deps import get_current_user
 from ..services import personnage_hooks
-from ..services.common import aware, date_key, from_ms, now_utc, to_ms
+from ..services.common import aware, date_key, from_ms, fuseau_utilisateur, now_utc, to_ms
 from .health_sync import _mark_sleep_habits
 
 router = APIRouter(prefix="/sleep", tags=["sleep"])
@@ -70,17 +70,6 @@ class SleepSettingsIn(BaseModel):
     @classmethod
     def _heures(cls, v):
         return _heure_valide(v)
-
-
-def _fuseau(user: models.User):
-    """Fuseau de l'utilisateur pour les heures de coucher. Sans base tzdata
-    (Windows sans le paquet tzdata), on retombe sur UTC : la régularité
-    (écart-type) n'en dépend pas, seule l'heure moyenne affichée serait décalée."""
-    try:
-        from zoneinfo import ZoneInfo
-        return ZoneInfo(user.timezone or "UTC")
-    except Exception:
-        return timezone.utc
 
 
 def _reglages(db: Session, user: models.User) -> models.SleepSettings:
@@ -296,7 +285,7 @@ def sleep_stats(
     reglages = _reglages(db, user)
     nuits = _nuits(db, user, depuis=now_utc() - timedelta(days=days))
     cible_min = reglages.target_hours * 60
-    fuseau = _fuseau(user)
+    fuseau = fuseau_utilisateur(user)
 
     couchers = [_minutes_depuis_midi(n.started_at, fuseau) for n in nuits]
     qualites = [n.quality for n in nuits if n.quality is not None]

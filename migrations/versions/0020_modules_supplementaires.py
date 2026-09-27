@@ -71,8 +71,44 @@ def upgrade() -> None:
     sa.UniqueConstraint('user_id')
     )
 
+    # --- Humeur et journal ---
+    creer_table('mood_entries',
+    sa.Column('id', sa.String(), nullable=False),
+    sa.Column('user_id', sa.String(), nullable=False),
+    sa.Column('occurred_at', sa.DateTime(timezone=True), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=False),
+    sa.Column('mood', sa.Integer(), nullable=False),
+    sa.Column('energy', sa.Integer(), nullable=True),
+    sa.Column('tags', sa.JSON(), nullable=False),
+    sa.Column('note', sa.Text(), nullable=True),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    creer_table('craving_entries',
+    sa.Column('id', sa.String(), nullable=False),
+    sa.Column('user_id', sa.String(), nullable=False),
+    sa.Column('occurred_at', sa.DateTime(timezone=True), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=False),
+    sa.Column('substance_id', sa.String(), nullable=True),
+    sa.Column('intensity', sa.Integer(), nullable=False),
+    sa.Column('triggers', sa.JSON(), nullable=False),
+    sa.Column('note', sa.Text(), nullable=True),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    creer_table('gratitude_entries',
+    sa.Column('id', sa.String(), nullable=False),
+    sa.Column('user_id', sa.String(), nullable=False),
+    sa.Column('date_key', sa.String(), nullable=False),
+    sa.Column('items', sa.JSON(), nullable=False),
+    sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=False),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+
 
 def downgrade() -> None:
+    op.drop_table('gratitude_entries')
+    op.drop_table('craving_entries')
+    op.drop_table('mood_entries')
     op.drop_table('sleep_settings')
     with op.batch_alter_table('sleep_logs', schema=None) as batch_op:
         batch_op.drop_column('note')

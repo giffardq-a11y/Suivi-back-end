@@ -80,3 +80,15 @@ def relative_time(dt: datetime, now: datetime | None = None) -> str:
         return f"il y a {hours} h"
     days = hours // 24
     return f"il y a {days} j"
+
+
+def fuseau_utilisateur(user):
+    """Fuseau de l'utilisateur (User.timezone), pour les heures de la journée
+    (heure de coucher, heure des envies). Sans base tzdata (Windows sans le
+    paquet tzdata), on retombe sur UTC plutôt que d'échouer : les découpages
+    en jours de l'app restent de toute façon en UTC (date_key)."""
+    try:
+        from zoneinfo import ZoneInfo
+        return ZoneInfo(user.timezone or "UTC")
+    except Exception:
+        return timezone.utc

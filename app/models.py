@@ -743,3 +743,54 @@ class SleepSettings(Base):
     wake_target = Column(String, nullable=True)               # 'HH:MM'
     routine_reminder_enabled = Column(Boolean, nullable=False, default=False, server_default=sa_false())
     routine_reminder_time = Column(String, nullable=True)     # 'HH:MM'
+
+
+class MoodEntry(Base):
+    """Humeur notée en un geste (1 à 5), avec l'énergie et des tags libres
+    en option. Plusieurs par jour possibles : les statistiques raisonnent
+    sur la moyenne du jour."""
+    __tablename__ = "mood_entries"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    mood = Column(Integer, nullable=False)            # 1 à 5
+    energy = Column(Integer, nullable=True)           # 1 à 5
+    tags = Column(JSON, nullable=False, default=list)  # ['travail', 'sport', 'stress'...]
+    note = Column(Text, nullable=True)
+
+
+class CravingEntry(Base):
+    """Envie notée (« J'ai une envie »).
+
+    `resisted` n'est pas une colonne : au moment de la saisie on ne sait pas
+    encore si l'envie sera résistée. Il se calcule à la lecture (pas de
+    consommation de la substance dans les 2 h qui suivent, voir
+    routers/mood.py) et ne peut donc jamais être faux parce que figé trop tôt.
+
+    substance_id sans clé étrangère, comme Goal.linked_habit_id : supprimer
+    une substance ne doit ni échouer (contrainte) ni effacer l'historique des
+    envies. Une envie dont la substance a disparu reste listée, sans elle.
+    Colonne `triggers` (au pluriel) : TRIGGER est un mot réservé SQL ; l'API
+    l'expose sous le nom `trigger` du cahier."""
+    __tablename__ = "craving_entries"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    substance_id = Column(String, nullable=True)
+    intensity = Column(Integer, nullable=False)          # 1 à 5
+    triggers = Column(JSON, nullable=False, default=list)
+    note = Column(Text, nullable=True)
+
+
+class GratitudeEntry(Base):
+    """Journal de gratitude : 1 à 3 lignes par jour, une entrée par jour
+    (une nouvelle saisie le même jour remplace la précédente)."""
+    __tablename__ = "gratitude_entries"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    date_key = Column(String, nullable=False)          # 'YYYY-MM-DD'
+    items = Column(JSON, nullable=False, default=list)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
