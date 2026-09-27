@@ -105,7 +105,7 @@ def forgot_password(payload: schemas.ForgotPasswordRequest, db: Session = Depend
             try:
                 envoyer_email(
                     user.email,
-                    "Suivi : réinitialisation du mot de passe",
+                    "Tanren : réinitialisation du mot de passe",
                     "Bonjour,\n\nPour choisir un nouveau mot de passe, ouvre ce lien (valable 30 minutes, "
                     f"une seule fois) :\n{lien}\n\nSi tu n'as rien demandé, ignore ce message : "
                     "ton mot de passe actuel reste valable.\n",

@@ -1,5 +1,12 @@
 # Données personnelles : inventaire pour Google Play (Data safety, Health apps)
 
+App publiée sous le nom **Tanren** (dépôts `Suivi-back-end` / `Suivi-mobile`).
+Pages publiques servies par le backend : `/legal/privacy.html` (raccourci
+`/privacy`), `/legal/delete-account.html` (raccourci `/delete-account`),
+`/compte/suppression`. Sources des deux premières : `app/legal/`, reprises du
+kit de publication (`suivi-app/publication/tanren-kit/`) et corrigées pour
+coller au code ; l'adresse de contact vient de la variable `CONTACT_EMAIL`.
+
 État du code au 27/09/2026 (backend `Suivi-back-end`, app `Suivi-mobile`). Ce
 document sert à remplir le formulaire **Data safety** et la déclaration
 **Health apps** de la Play Console. Il décrit ce que fait le code : les points

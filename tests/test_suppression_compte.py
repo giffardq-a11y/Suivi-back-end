@@ -107,3 +107,16 @@ def test_suppression_par_la_page_web(client, nouveau_compte, emails):
     assert client.post("/auth/login", json={"email": email, "password": mdp}).status_code == 401
     # Jeton à usage unique.
     assert "Lien expiré" in client.post("/compte/suppression/confirmer", data={"token": jeton}).text
+
+
+def test_pages_legales(client, monkeypatch):
+    for chemin in ("/legal/privacy.html", "/legal/delete-account.html"):
+        r = client.get(chemin)
+        assert r.status_code == 200 and "Tanren" in r.text
+        assert "fonts.googleapis" not in r.text
+    assert "/compte/suppression" in client.get("/legal/delete-account.html").text
+    assert client.get("/legal/../main.py").status_code == 404
+    assert client.get("/privacy", follow_redirects=False).headers["location"] == "/legal/privacy.html"
+    monkeypatch.setenv("CONTACT_EMAIL", "contact@exemple.app")
+    page = client.get("/legal/privacy.html").text
+    assert "[ADRESSE-CONTACT]" not in page and "contact@exemple.app" in page

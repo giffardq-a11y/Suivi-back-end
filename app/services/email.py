@@ -5,7 +5,7 @@ Fournisseur choisi par variable d'environnement, sans toucher au code :
     EMAIL_PROVIDER   brevo | resend | console (défaut : console)
     EMAIL_API_KEY    clé API du fournisseur
     EMAIL_FROM       adresse d'expédition (vérifiée chez le fournisseur)
-    EMAIL_FROM_NAME  nom affiché (défaut : Suivi)
+    EMAIL_FROM_NAME  nom affiché (défaut : Tanren)
 
 - Brevo : envoi possible depuis une adresse simplement vérifiée, sans nom de
   domaine à soi ; offre gratuite 300 e-mails/jour ; serveurs en UE.
@@ -30,7 +30,7 @@ def envoyer_email(destinataire: str, sujet: str, texte: str, html: str | None = 
     fournisseur = os.environ.get("EMAIL_PROVIDER", "console").lower()
     cle = os.environ.get("EMAIL_API_KEY", "")
     expediteur = os.environ.get("EMAIL_FROM", "")
-    nom = os.environ.get("EMAIL_FROM_NAME", "Suivi")
+    nom = os.environ.get("EMAIL_FROM_NAME", "Tanren")
 
     if fournisseur == "console":
         if os.environ.get("RENDER"):

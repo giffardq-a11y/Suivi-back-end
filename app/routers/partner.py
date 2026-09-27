@@ -125,7 +125,7 @@ def invite_partner(
 
     target = db.query(models.User).filter(models.User.email == email).first()
     if not target:
-        raise HTTPException(status_code=404, detail="Aucun compte Suivi n’est associé à cet email.")
+        raise HTTPException(status_code=404, detail="Aucun compte Tanren n’est associé à cet email.")
 
     if _my_active_link(db, user.id):
         raise HTTPException(status_code=400, detail="Tu es déjà connecté·e à un proche — retire le lien actuel avant d’en inviter un autre.")

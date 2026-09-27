@@ -61,7 +61,7 @@ button.danger{background:var(--danger)}ul{padding-left:20px}
 def _page(titre: str, corps: str) -> HTMLResponse:
     return HTMLResponse(f"""<!doctype html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
-<title>{html.escape(titre)} · Suivi</title><style>{STYLE}</style></head>
+<title>{html.escape(titre)} · Tanren</title><style>{STYLE}</style></head>
 <body><main><h1>{html.escape(titre)}</h1><div class="card">{corps}</div></main></body></html>""")
 
 
@@ -75,10 +75,11 @@ CE_QUI_EST_SUPPRIME = """<ul class="muted">
 
 @router.get("/compte/suppression", response_class=HTMLResponse)
 def page_demande_suppression():
-    return _page("Supprimer mon compte Suivi", f"""
+    return _page("Supprimer mon compte Tanren", f"""
 <p>Indique l'adresse e-mail de ton compte. Tu recevras un lien de confirmation
 (valable 30 minutes) : rien n'est supprimé avant que tu aies cliqué dessus.</p>
-<p>Tu peux aussi supprimer ton compte directement dans l'app : Paramètres → Supprimer mon compte.</p>
+<p>Tu peux aussi supprimer ton compte directement dans l'app : Paramètres → Compte → Supprimer mon compte.
+Voir aussi la <a href="/legal/privacy.html">politique de confidentialité</a>.</p>
 {CE_QUI_EST_SUPPRIME}
 <form method="post" action="/compte/suppression">
 <label for="email">Adresse e-mail</label>
@@ -96,8 +97,8 @@ def demande_suppression(email: str = Form(...), db: Session = Depends(get_db)):
             lien = f"{BACKEND_BASE_URL}/compte/suppression/confirmer?token={jeton}"
             try:
                 envoyer_email(
-                    user.email, "Suivi : confirmer la suppression de ton compte",
-                    "Bonjour,\n\nTu as demandé la suppression de ton compte Suivi et de toutes ses données.\n"
+                    user.email, "Tanren : confirmer la suppression de ton compte",
+                    "Bonjour,\n\nTu as demandé la suppression de ton compte Tanren et de toutes ses données.\n"
                     f"Pour confirmer, ouvre ce lien (valable 30 minutes, une seule fois) :\n{lien}\n\n"
                     "Si tu n'as rien demandé, ignore ce message : ton compte reste intact.\n",
                 )
