@@ -34,7 +34,7 @@ from ..services.common import now_utc, to_ms, relative_time
 
 router = APIRouter(prefix="/diet/pantry", tags=["pantry"])
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
 TAILLE_MAX_IMAGE = 8 * 1024 * 1024
 
 # Emplacement par défaut d'un produit acheté, selon son rayon.

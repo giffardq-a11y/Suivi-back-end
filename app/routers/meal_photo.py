@@ -132,7 +132,7 @@ async def _estimate_via_logmeal(image_bytes: bytes, filename: str, content_type:
 
 # ---------- Gemini (reconnaissance) + FatSecret (calories) ----------
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
 
 
 async def _identify_dish_with_gemini(image_bytes: bytes, mime_type: str, client: httpx.AsyncClient) -> str:
