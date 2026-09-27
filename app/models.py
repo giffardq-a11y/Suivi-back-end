@@ -453,6 +453,26 @@ class OtherSportLog(Base):
     heart_rate_max = Column(Integer, nullable=True)
 
 
+class FlexibilitySession(Base):
+    """Séance du module Souplesse (étirements et/ou yoga), guidée par la voix
+    ou par vidéo. La composition de la séance se fait côté app
+    (mobile/src/screens/souplesse/composerSeance.js) : on ne garde ici que
+    les réglages et le temps réellement pratiqué."""
+    __tablename__ = "flexibility_sessions"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    activity = Column(String, nullable=False)       # 'etirements' | 'yoga' | 'les_deux'
+    zone = Column(String, nullable=True)            # étirements : 'dos', 'hanches'... | 'corps_entier'
+    yoga_type = Column(String, nullable=True)       # yoga : 'doux' | 'dynamique' | 'souplesse' | 'matin' | 'soir'
+    mode = Column(String, nullable=False, default="guide")  # 'guide' | 'video'
+    planned_duration_min = Column(Float, nullable=False)
+    duration_min = Column(Float, nullable=False)    # temps réellement pratiqué (séance arrêtée avant la fin)
+    calories_burned = Column(Integer, nullable=False, default=0)
+    video_ids = Column(JSON, nullable=True)         # mode vidéo : identifiants YouTube enchaînés
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
 class WorkoutTemplate(Base):
     """Modèle de séance de muscu. `exercises` en JSON plutôt que normalisé
     (table à part) : structure imbriquée (exercices → séries) éditée en bloc

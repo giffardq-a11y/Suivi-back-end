@@ -9,6 +9,7 @@ from ..deps import get_current_user
 from ..services.common import now_utc, to_ms, relative_time, start_of_week, start_of_day
 from ..services.sport import (
     estimate_run_calories, estimate_strength_calories, estimate_other_sport_calories,
+    estimate_flexibility_calories,
     calories_burned_on, increment_session_goals, mark_sport_habits_done_today,
 )
 
@@ -82,6 +83,20 @@ class OtherSportCreate(BaseModel):
     intensity: str | None = None
     distanceKm: float | None = None
     caloriesOverride: int | None = None
+
+
+FLEXIBILITY_ACTIVITIES = {"etirements", "yoga", "les_deux"}
+FLEXIBILITY_MODES = {"guide", "video"}
+
+
+class FlexibilitySessionCreate(BaseModel):
+    activity: str
+    zone: str | None = None
+    yogaType: str | None = None
+    mode: str = "guide"
+    plannedDurationMin: float
+    durationMin: float
+    videoIds: list[str] | None = None
 
 
 class WorkoutTemplateCreate(BaseModel):
@@ -170,6 +185,60 @@ def log_other_sport(
     increment_session_goals(db, user)
     mark_sport_habits_done_today(db, user)
     return {"ok": True}
+
+
+@router.post("/training/flexibility", status_code=201)
+def log_flexibility_session(
+    payload: FlexibilitySessionCreate,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    if payload.activity not in FLEXIBILITY_ACTIVITIES:
+        raise HTTPException(status_code=422, detail=f"Activité inconnue : {payload.activity}")
+    if payload.mode not in FLEXIBILITY_MODES:
+        raise HTTPException(status_code=422, detail=f"Mode inconnu : {payload.mode}")
+    if payload.durationMin <= 0:
+        raise HTTPException(status_code=422, detail="Durée pratiquée nulle : rien à enregistrer.")
+    db.add(models.FlexibilitySession(
+        user_id=user.id, activity=payload.activity, zone=payload.zone, yoga_type=payload.yogaType,
+        mode=payload.mode, planned_duration_min=payload.plannedDurationMin,
+        duration_min=payload.durationMin, video_ids=payload.videoIds,
+        calories_burned=estimate_flexibility_calories(payload.activity, payload.yogaType, payload.durationMin),
+        occurred_at=now_utc(),
+    ))
+    db.commit()
+    increment_session_goals(db, user)
+    mark_sport_habits_done_today(db, user)
+    return {"ok": True}
+
+
+@router.get("/training/flexibility")
+def get_flexibility_sessions(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
+    sessions = (
+        db.query(models.FlexibilitySession)
+        .filter(models.FlexibilitySession.user_id == user.id)
+        .order_by(models.FlexibilitySession.occurred_at.desc())
+        .all()
+    )
+    week_start = start_of_week(now_utc())
+
+    def tz_aware(dt):
+        return dt if dt.tzinfo else dt.replace(tzinfo=week_start.tzinfo)
+
+    this_week = [s for s in sessions if tz_aware(s.occurred_at) >= week_start]
+    return {
+        "minutes_this_week": round(sum(s.duration_min for s in this_week)),
+        "sessions_this_week": len(this_week),
+        "recent": [
+            {
+                "id": s.id, "activity": s.activity, "zone": s.zone, "yogaType": s.yoga_type,
+                "mode": s.mode, "durationMin": s.duration_min, "plannedDurationMin": s.planned_duration_min,
+                "caloriesBurned": s.calories_burned, "occurredAt": to_ms(s.occurred_at),
+                "relativeTime": relative_time(s.occurred_at),
+            }
+            for s in sessions[:10]
+        ],
+    }
 
 
 @router.get("/workout-templates")
@@ -286,11 +355,13 @@ def get_sport_stats(db: Session = Depends(get_db), user: models.User = Depends(g
     runs = db.query(models.Run).filter(models.Run.user_id == user.id).all()
     strength = db.query(models.StrengthSession).filter(models.StrengthSession.user_id == user.id).all()
     other = db.query(models.OtherSportLog).filter(models.OtherSportLog.user_id == user.id).all()
+    flexibility = db.query(models.FlexibilitySession).filter(models.FlexibilitySession.user_id == user.id).all()
 
     all_sessions = (
         [("course", r.occurred_at, r.calories_burned or 0) for r in runs]
         + [("muscu", s.occurred_at, s.calories_burned or 0) for s in strength]
         + [("autre", o.occurred_at, o.calories_burned or 0) for o in other]
+        + [("souplesse", f.occurred_at, f.calories_burned or 0) for f in flexibility]
     )
 
     def tz_aware(dt):
@@ -303,7 +374,7 @@ def get_sport_stats(db: Session = Depends(get_db), user: models.User = Depends(g
     calories_month = sum(s[2] for s in sessions_month)
     distance_week_km = sum(r.distance_km for r in runs if tz_aware(r.occurred_at) >= week_start)
 
-    by_type_week = {"course": 0, "muscu": 0, "autre": 0}
+    by_type_week = {"course": 0, "muscu": 0, "autre": 0, "souplesse": 0}
     for t, _, _ in sessions_week:
         by_type_week[t] = by_type_week.get(t, 0) + 1
 

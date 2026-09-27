@@ -321,6 +321,12 @@ def get_journal_overview(db: Session = Depends(get_db), user: models.User = Depe
         if is_same_day(s.occurred_at, now):
             unplanned.append({"type": "sport", "label": s.sport_label, "detail": f"{s.duration_min} min"})
 
+    flexibility_today = db.query(models.FlexibilitySession).filter(models.FlexibilitySession.user_id == user.id).all()
+    for f in flexibility_today:
+        if is_same_day(f.occurred_at, now):
+            label = {"etirements": "Étirements", "yoga": "Yoga", "les_deux": "Yoga + étirements"}.get(f.activity, "Souplesse")
+            unplanned.append({"type": "sport", "label": label, "detail": f"{round(f.duration_min)} min"})
+
     consumed = _meals_calories_on(db, user.id, now)
     burned = calories_burned_on(db, user.id, now)
     profile = db.query(models.Profile).filter(models.Profile.user_id == user.id).first()

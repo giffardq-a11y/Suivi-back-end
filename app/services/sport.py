@@ -1,5 +1,5 @@
 """Logique partagée entre Entraînement (training.py) et Diète (diet.py) —
-toute séance de sport enregistrée (course, muscu, autre sport) alimente à la
+toute séance de sport enregistrée (course, muscu, autre sport, souplesse) alimente à la
 fois le bilan calorique du jour ET les objectifs/habitudes liés au sport.
 Traduction directe de caloriesBurnedOn / incrementSessionGoals /
 markSportHabitsDoneToday côté mockData.js.
@@ -17,6 +17,10 @@ KCAL_PER_MIN_RUNNING = 10
 KCAL_PER_MIN_STRENGTH = {"live": 6, "quick_detailed": 6, "quick_duration": 5}
 KCAL_PER_MIN_SPORT_INTENSITY = {"faible": 4, "moyenne": 7, "forte": 10}
 KCAL_PER_MIN_SPORT_DEFAULT = 8
+# Souplesse : étirements ~2,5 MET, yoga doux ~3, yoga dynamique ~4 (ordre de
+# grandeur pour ~75 kg, même esprit que les taux ci-dessus).
+KCAL_PER_MIN_FLEXIBILITY = {"etirements": 3, "yoga": 4, "les_deux": 3.5}
+KCAL_PER_MIN_YOGA_DYNAMIC = 5
 
 
 def estimate_run_calories(duration_min: float) -> int:
@@ -33,10 +37,18 @@ def estimate_other_sport_calories(duration_min: float, intensity: str | None) ->
     return round(duration_min * rate)
 
 
+def estimate_flexibility_calories(activity: str, yoga_type: str | None, duration_min: float) -> int:
+    rate = KCAL_PER_MIN_FLEXIBILITY.get(activity, KCAL_PER_MIN_FLEXIBILITY["etirements"])
+    if activity == "yoga" and yoga_type == "dynamique":
+        rate = KCAL_PER_MIN_YOGA_DYNAMIC
+    return round(duration_min * rate)
+
+
 def calories_burned_on(db: Session, user_id: str, date_dt: datetime) -> int:
     runs = db.query(models.Run).filter(models.Run.user_id == user_id).all()
     strength = db.query(models.StrengthSession).filter(models.StrengthSession.user_id == user_id).all()
     other = db.query(models.OtherSportLog).filter(models.OtherSportLog.user_id == user_id).all()
+    flexibility = db.query(models.FlexibilitySession).filter(models.FlexibilitySession.user_id == user_id).all()
 
     total = 0
     for r in runs:
@@ -48,6 +60,9 @@ def calories_burned_on(db: Session, user_id: str, date_dt: datetime) -> int:
     for o in other:
         if is_same_day(o.occurred_at, date_dt):
             total += o.calories_burned or 0
+    for f in flexibility:
+        if is_same_day(f.occurred_at, date_dt):
+            total += f.calories_burned or 0
     return total
 
 
