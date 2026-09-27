@@ -1,7 +1,7 @@
 """modules supplementaires : hydratation, sommeil, humeur et journal, budget
 
 Revision ID: 0020
-Revises: 0011
+Revises: 0012
 Create Date: 2026-09-27
 
 Numérotée 0020 et non 0012 : un chantier parallèle (sécurité) ajoute 0012 sur
@@ -18,7 +18,7 @@ from app.schema_rattrapage import ajouter_colonnes, creer_table
 
 # revision identifiers, used by Alembic.
 revision: str = '0020'
-down_revision: Union[str, None] = '0011'
+down_revision: Union[str, None] = '0012'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
