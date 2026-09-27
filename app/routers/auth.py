@@ -1,18 +1,15 @@
 import logging
 import os
 
-from fastapi import APIRouter, Depends, HTTPException, status
-from jose import JWTError
+from fastapi import APIRouter, Depends, HTTPException, Request, status
 from sqlalchemy.orm import Session
 
 from .. import models, schemas
 from ..database import get_db
+from ..services import jetons, limite
 from ..services.compte import consommer_jeton, creer_jeton
 from ..services.email import envoyer_email
-from ..security import (
-    hash_password, verify_password,
-    create_access_token, create_refresh_token, decode_token,
-)
+from ..security import hash_password, verify_password
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -20,7 +17,8 @@ BACKEND_BASE_URL = os.environ.get("BACKEND_BASE_URL", "http://localhost:8000")
 
 
 @router.post("/signup", response_model=schemas.AuthResponse, status_code=status.HTTP_201_CREATED)
-def signup(payload: schemas.SignupRequest, db: Session = Depends(get_db)):
+def signup(payload: schemas.SignupRequest, request: Request, db: Session = Depends(get_db)):
+    limite.verifier(f"inscription:{limite.ip_client(request)}", *limite.INSCRIPTION_PAR_IP)
     existing = db.query(models.User).filter(models.User.email == payload.email).first()
     if existing:
         raise HTTPException(status_code=400, detail="Un compte existe déjà avec cet email")
@@ -50,41 +48,40 @@ def signup(payload: schemas.SignupRequest, db: Session = Depends(get_db)):
     ])
     db.commit()
 
-    return schemas.AuthResponse(
-        user=schemas.UserOut.model_validate(user),
-        access_token=create_access_token(user.id),
-        refresh_token=create_refresh_token(user.id),
-    )
+    return schemas.AuthResponse(user=schemas.UserOut.model_validate(user), **jetons.emettre(db, user.id))
 
 
 @router.post("/login", response_model=schemas.AuthResponse)
-def login(payload: schemas.LoginRequest, db: Session = Depends(get_db)):
+def login(payload: schemas.LoginRequest, request: Request, db: Session = Depends(get_db)):
+    # Par IP (un attaquant qui essaie beaucoup de comptes) et par compte visé
+    # (beaucoup d'IP sur un même compte). Contrepartie assumée : quelqu'un
+    # peut bloquer 15 min la connexion d'un compte dont il connaît l'adresse.
+    limite.verifier(f"connexion-ip:{limite.ip_client(request)}", *limite.CONNEXION_PAR_IP)
+    limite.verifier(f"connexion-compte:{payload.email.lower()}", *limite.CONNEXION_PAR_COMPTE)
     user = db.query(models.User).filter(models.User.email == payload.email).first()
     if not user or not verify_password(payload.password, user.password_hash):
         raise HTTPException(status_code=401, detail="Email ou mot de passe incorrect")
 
-    return schemas.AuthResponse(
-        user=schemas.UserOut.model_validate(user),
-        access_token=create_access_token(user.id),
-        refresh_token=create_refresh_token(user.id),
-    )
+    return schemas.AuthResponse(user=schemas.UserOut.model_validate(user), **jetons.emettre(db, user.id))
 
 
 @router.post("/refresh", response_model=schemas.TokenPair)
-def refresh(payload: schemas.RefreshRequest, db: Session = Depends(get_db)):
+def refresh(payload: schemas.RefreshRequest, request: Request, db: Session = Depends(get_db)):
+    """Rotation : le jeton présenté est révoqué et remplacé (services/jetons.py)."""
+    limite.verifier(f"rafraichissement:{limite.ip_client(request)}", *limite.RAFRAICHISSEMENT_PAR_IP)
     try:
-        user_id = decode_token(payload.refresh_token, expected_type="refresh")
-    except JWTError:
-        raise HTTPException(status_code=401, detail="Refresh token invalide ou expiré")
+        _, paire = jetons.rotation(db, payload.refresh_token)
+    except jetons.JetonRefuse as erreur:
+        raise HTTPException(status_code=401, detail=str(erreur))
+    return schemas.TokenPair(**paire)
 
-    user = db.query(models.User).filter(models.User.id == user_id).first()
-    if not user:
-        raise HTTPException(status_code=401, detail="Utilisateur introuvable")
 
-    return schemas.TokenPair(
-        access_token=create_access_token(user.id),
-        refresh_token=create_refresh_token(user.id),
-    )
+@router.post("/logout", status_code=204)
+def logout(payload: schemas.RefreshRequest, db: Session = Depends(get_db)):
+    """Révoque le jeton de rafraîchissement de cet appareil. Pas d'auth
+    exigée : détenir le jeton suffit à prouver qu'on peut le révoquer, et la
+    déconnexion doit marcher même avec un jeton d'accès expiré."""
+    jetons.revoquer(db, payload.refresh_token)
 
 
 # ---------- Mot de passe oublié ----------
@@ -92,9 +89,10 @@ def refresh(payload: schemas.RefreshRequest, db: Session = Depends(get_db)):
 # appelle /auth/reset-password : pas besoin de lien profond vers l'app.
 
 @router.post("/forgot-password", status_code=202)
-def forgot_password(payload: schemas.ForgotPasswordRequest, db: Session = Depends(get_db)):
+def forgot_password(payload: schemas.ForgotPasswordRequest, request: Request, db: Session = Depends(get_db)):
     """Répond toujours 202, que le compte existe ou non : la réponse ne doit
     pas permettre de savoir quelles adresses ont un compte."""
+    limite.verifier(f"oubli:{limite.ip_client(request)}", *limite.OUBLI_PAR_IP)
     user = db.query(models.User).filter(models.User.email == payload.email).first()
     if user is not None:
         jeton = creer_jeton(db, user, "reset_password")
@@ -122,4 +120,6 @@ def reset_password(payload: schemas.ResetPasswordRequest, db: Session = Depends(
         raise HTTPException(status_code=400, detail="Lien invalide ou expiré : refais une demande depuis l'app.")
     user.password_hash = hash_password(payload.password)
     db.commit()
+    # Nouveau mot de passe : toutes les sessions ouvertes sont fermées.
+    jetons.revoquer_tout(db, user.id)
     return {"ok": True}

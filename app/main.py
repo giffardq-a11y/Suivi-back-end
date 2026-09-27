@@ -86,6 +86,23 @@ def _ensure_danish_deck():
 
 _ensure_danish_deck()
 
+
+# Jetons OAuth encore en clair (écrits avant le chiffrement, ou pendant qu'il
+# manquait la clé) : chiffrés dès que INTEGRATION_ENCRYPTION_KEY est posée.
+def _chiffrer_jetons_oauth():
+    from .database import SessionLocal
+    from .services.chiffrement import chiffrer_restants, verifier_configuration
+
+    verifier_configuration()
+    db = SessionLocal()
+    try:
+        chiffrer_restants(db)
+    finally:
+        db.close()
+
+
+_chiffrer_jetons_oauth()
+
 app = FastAPI(title="Tanren — API", version="0.1.0")
 
 # CORS ouvert pour le dev de l'app mobile (Expo Go / simulateur).
@@ -112,11 +129,21 @@ async def log_validation_error(request, exc: RequestValidationError):
     return JSONResponse(status_code=422, content={"detail": jsonable_encoder(exc.errors())})
 
 
+# CORS : ne concerne que l'app lancée dans un navigateur (Expo Web) ; l'app
+# Android n'envoie pas d'en-tête Origin et n'est pas concernée. Origines
+# autorisées dans CORS_ORIGINS (séparées par des virgules) ; par défaut, les
+# ports de développement locaux. Pas de cookies : l'auth passe par l'en-tête
+# Authorization, donc allow_credentials reste à False.
+CORS_ORIGINS = [
+    o.strip() for o in os.environ.get(
+        "CORS_ORIGINS", "http://localhost:8090,http://localhost:8081,http://localhost:19006",
+    ).split(",") if o.strip()
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=CORS_ORIGINS,
+    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE"],
+    allow_headers=["Authorization", "Content-Type"],
 )
 
 app.include_router(auth.router)

@@ -44,6 +44,7 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import urlencode
 
 import httpx
+from jose import JWTError
 from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import HTMLResponse
 from sqlalchemy.orm import Session
@@ -51,6 +52,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
+from ..security import create_oauth_state, decode_oauth_state
 
 router = APIRouter(prefix="/integrations", tags=["integrations"])
 
@@ -123,10 +125,10 @@ def get_authorize_url(
         "redirect_uri": _redirect_uri(provider),
         "response_type": "code",
         "scope": config["scope"],
-        # On fait transiter l'id utilisateur dans `state` pour savoir à qui
-        # associer le token une fois revenu sur /callback (pas de session
-        # de navigateur partagée entre mobile et backend).
-        "state": user.id,
+        # `state` dit à qui rattacher le jeton au retour sur /callback (pas de
+        # session navigateur partagée avec l'app) : jeton signé, lié au
+        # fournisseur, valable 10 minutes (security.create_oauth_state).
+        "state": create_oauth_state(user.id, provider),
         **config["extra_authorize_params"],
     }
     query = urlencode(params)
@@ -137,7 +139,7 @@ def get_authorize_url(
 async def oauth_callback(
     provider: str,
     code: str = Query(...),
-    state: str = Query(...),  # user_id transmis dans authorize()
+    state: str = Query(...),  # jeton signé émis par authorize()
     db: Session = Depends(get_db),
 ):
     config = _require_provider(provider)
@@ -146,7 +148,11 @@ async def oauth_callback(
     if not client_id or not client_secret:
         raise HTTPException(status_code=501, detail=f"{config['label']} n'est pas configuré côté serveur.")
 
-    user = db.query(models.User).filter(models.User.id == state).first()
+    try:
+        user_id = decode_oauth_state(state, provider)
+    except JWTError:
+        raise HTTPException(status_code=400, detail="Lien de connexion expiré ou invalide : recommence depuis l'app.")
+    user = db.query(models.User).filter(models.User.id == user_id).first()
     if not user:
         raise HTTPException(status_code=400, detail="Utilisateur introuvable pour ce callback OAuth.")
 

@@ -9,6 +9,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
 from .database import Base
+from .services.chiffrement import ChaineChiffree
 
 
 def gen_uuid() -> str:
@@ -419,6 +420,22 @@ class MealPlanEntry(Base):
     created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
 
 
+class RefreshToken(Base):
+    """Jeton de rafraîchissement émis : c'est ce qui le rend révocable. Le
+    JWT porte l'identifiant (claim « jti ») ; /auth/refresh exige une ligne
+    non révoquée, la révoque et en émet une nouvelle (rotation). Un jeton
+    déjà remplacé qui revient signale un vol probable : toute la session de
+    l'utilisateur est alors révoquée (voir services/jetons.py)."""
+    __tablename__ = "refresh_tokens"
+
+    id = Column(String, primary_key=True)  # jti
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    expires_at = Column(DateTime(timezone=True), nullable=False)
+    revoked_at = Column(DateTime(timezone=True), nullable=True)
+    replaced_by = Column(String, nullable=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
 class AccountToken(Base):
     """Jeton à usage unique envoyé par e-mail : réinitialisation du mot de
     passe ou confirmation de suppression du compte (page web publique). Seul
@@ -659,17 +676,15 @@ class PartnerReminder(Base):
 
 class ExternalIntegration(Base):
     """Connexion OAuth à un service tiers (calendrier pour l'instant —
-    Google Calendar, Outlook). Un token en clair en base est acceptable
-    pour ce projet de démo ; en production, chiffrer access_token/
-    refresh_token au repos (ex. via une clé KMS) plutôt que de les stocker
-    tels quels."""
+    Google Calendar, Outlook). access_token et refresh_token sont chiffrés au
+    repos (services/chiffrement.py, clé INTEGRATION_ENCRYPTION_KEY)."""
     __tablename__ = "external_integrations"
 
     id = Column(String, primary_key=True, default=gen_uuid)
     user_id = Column(String, ForeignKey("users.id"), nullable=False)
     provider = Column(String, nullable=False)  # 'google_calendar' | 'microsoft_calendar'
-    access_token = Column(String, nullable=False)
-    refresh_token = Column(String, nullable=True)
+    access_token = Column(ChaineChiffree, nullable=False)
+    refresh_token = Column(ChaineChiffree, nullable=True)
     expires_at = Column(DateTime(timezone=True), nullable=True)
     connected_at = Column(DateTime(timezone=True), server_default=func.now())
 

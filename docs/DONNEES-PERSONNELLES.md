@@ -23,7 +23,10 @@ fournisseur) et doivent être vérifiés avant de répondre.
 
 Tout échange app ↔ API passe en HTTPS (Render impose TLS). Les mots de passe
 sont hachés (bcrypt, `app/security.py`), jamais stockés en clair. Les jetons
-de réinitialisation et de suppression sont stockés hachés (SHA-256).
+de réinitialisation et de suppression sont stockés hachés (SHA-256). Les sessions
+(jetons de rafraîchissement) sont révocables : rotation à chaque usage, déconnexion
+côté serveur, révocation de toutes les sessions au changement de mot de passe.
+Tentatives de connexion, d'inscription et de réinitialisation limitées.
 
 Tant que l'hébergement reste aux États-Unis, les données de santé d'utilisateurs
 européens quittent l'UE : à régler (lot C) avant le test fermé, ou à mentionner
@@ -43,7 +46,7 @@ dans la politique de confidentialité.
 | Santé et remise en forme → Informations de santé | repas, calories, macros, plan alimentaire, stock du placard | `meals`, `meal_plan_entries`, `pantry_items`, `cooking_logs` | Non | Suivi nutritionnel |
 | Activité dans l'app → Autres actions | habitudes et leurs coches, objectifs, récompenses, journal, cartes de révision | `habits`, `habit_logs`, `goals`, `rewards`, `flash_cards`... | Non | Fonctions de l'app |
 | Informations personnelles → Autres | lien de partage avec un proche (son compte, rappels envoyés) | `partner_links`, `partner_reminders` | Non | Partage des progrès |
-| Identifiants d'accès tiers | jetons OAuth Google Agenda / Outlook | `external_integrations` | Non | Synchro des habitudes avec l'agenda. **Stockés en clair aujourd'hui** : chiffrement prévu (lot B) |
+| Identifiants d'accès tiers | jetons OAuth Google Agenda / Outlook | `external_integrations` | Non | Synchro des habitudes avec l'agenda. Chiffrés au repos (Fernet, clé `INTEGRATION_ENCRYPTION_KEY` dans Render) |
 
 Aucune donnée n'est vendue, ni utilisée pour de la publicité. Il n'y a ni
 publicité ni outil d'analyse d'audience dans l'app à ce jour (PostHog prévu au

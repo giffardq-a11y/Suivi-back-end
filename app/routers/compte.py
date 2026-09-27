@@ -16,7 +16,7 @@ import html
 import logging
 import os
 
-from fastapi import APIRouter, Depends, Form, HTTPException
+from fastapi import APIRouter, Depends, Form, HTTPException, Request
 from fastapi.responses import HTMLResponse
 from sqlalchemy.orm import Session
 
@@ -24,6 +24,7 @@ from .. import models, schemas
 from ..database import get_db
 from ..deps import get_current_user
 from ..security import hash_password, verify_password
+from ..services import jetons, limite
 from ..services.compte import consommer_jeton, creer_jeton, supprimer_utilisateur
 from ..services.email import envoyer_email
 
@@ -88,7 +89,8 @@ Voir aussi la <a href="/legal/privacy.html">politique de confidentialité</a>.</
 
 
 @router.post("/compte/suppression", response_class=HTMLResponse)
-def demande_suppression(email: str = Form(...), db: Session = Depends(get_db)):
+def demande_suppression(request: Request, email: str = Form(...), db: Session = Depends(get_db)):
+    limite.verifier(f"suppression-web:{limite.ip_client(request)}", *limite.SUPPRESSION_WEB_PAR_IP)
     user = db.query(models.User).filter(models.User.email == email.strip().lower()).first() \
         or db.query(models.User).filter(models.User.email == email.strip()).first()
     if user is not None:
@@ -157,4 +159,5 @@ def enregistrer_mot_de_passe(token: str = Form(...), password: str = Form(...),
         return _page("Lien expiré", "<p>Ce lien n'est plus valable. Refais une demande depuis l'app.</p>")
     user.password_hash = hash_password(password)
     db.commit()
+    jetons.revoquer_tout(db, user.id)
     return _page("Mot de passe changé", "<p>C'est fait : reconnecte-toi dans l'app avec ton nouveau mot de passe.</p>")

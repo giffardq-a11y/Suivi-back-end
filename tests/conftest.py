@@ -28,6 +28,15 @@ def client():
         yield c
 
 
+@pytest.fixture(autouse=True)
+def _limites_neuves():
+    """Compteurs de tentatives remis à zéro : tous les tests partagent l'IP
+    « testclient », ils se bloqueraient les uns les autres."""
+    from app.services import limite
+    limite.reinitialiser()
+    yield
+
+
 @pytest.fixture
 def emails(monkeypatch):
     """Liste des e-mails « envoyés » pendant le test."""

@@ -27,9 +27,9 @@ def verify_password(plain: str, hashed: str) -> bool:
     return pwd_context.verify(plain, hashed)
 
 
-def _create_token(subject: str, expires_delta: timedelta, token_type: str) -> str:
+def _create_token(subject: str, expires_delta: timedelta, token_type: str, **extra) -> str:
     now = datetime.now(timezone.utc)
-    payload = {"sub": subject, "type": token_type, "iat": now, "exp": now + expires_delta}
+    payload = {"sub": subject, "type": token_type, "iat": now, "exp": now + expires_delta, **extra}
     return jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
 
 
@@ -37,8 +37,37 @@ def create_access_token(user_id: str) -> str:
     return _create_token(user_id, timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES), "access")
 
 
-def create_refresh_token(user_id: str) -> str:
-    return _create_token(user_id, timedelta(days=REFRESH_TOKEN_EXPIRE_DAYS), "refresh")
+def create_refresh_token(user_id: str, jti: str) -> str:
+    """Toujours émis via services/jetons.py, qui enregistre le jti en base
+    (sans ligne en base, le jeton est refusé par /auth/refresh)."""
+    return _create_token(user_id, timedelta(days=REFRESH_TOKEN_EXPIRE_DAYS), "refresh", jti=jti)
+
+
+def decode_refresh_token(token: str) -> tuple[str, str | None]:
+    """(user_id, jti). jti vaut None pour un jeton émis avant la rotation."""
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+    if payload.get("type") != "refresh":
+        raise JWTError("Wrong token type")
+    return payload["sub"], payload.get("jti")
+
+
+OAUTH_STATE_EXPIRE_MINUTES = 10
+
+
+def create_oauth_state(user_id: str, provider: str) -> str:
+    """`state` OAuth : signé, lié au fournisseur, valable 10 minutes. Un
+    simple user_id (ancien fonctionnement) permettait à n'importe qui de
+    rattacher son propre agenda au compte d'un autre en forgeant le callback."""
+    import secrets
+    return _create_token(user_id, timedelta(minutes=OAUTH_STATE_EXPIRE_MINUTES), "oauth_state",
+                         provider=provider, nonce=secrets.token_urlsafe(8))
+
+
+def decode_oauth_state(state: str, provider: str) -> str:
+    payload = jwt.decode(state, SECRET_KEY, algorithms=[ALGORITHM])
+    if payload.get("type") != "oauth_state" or payload.get("provider") != provider:
+        raise JWTError("state OAuth invalide")
+    return payload["sub"]
 
 
 def decode_token(token: str, expected_type: str) -> str:
