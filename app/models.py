@@ -4,6 +4,7 @@ import uuid
 from sqlalchemy import (
     Column, String, Float, Boolean, DateTime, ForeignKey, Enum, Integer, Text, JSON
 )
+from sqlalchemy import false as sa_false
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
@@ -416,6 +417,44 @@ class MealPlanEntry(Base):
     glucides = Column(Integer, nullable=False, default=0)
     lipides = Column(Integer, nullable=False, default=0)
     created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class PantryItem(Base):
+    """Un article du placard, du frigo ou du congélateur (voir app/placard.py
+    pour la façon dont les quantités sont estimées).
+
+    ingredient_key pointe app/data/ingredients.json quand l'article est
+    reconnu : c'est ce qui le rend utilisable par les recettes. Un article non
+    reconnu (produit hors catalogue) reste listé avec son seul libellé.
+    quantity_g, quand elle est connue (ticket, reste après recette), prime sur
+    level x packages (estimation sur photo)."""
+    __tablename__ = "pantry_items"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    ingredient_key = Column(String, nullable=True)
+    label = Column(String, nullable=False)
+    location = Column(String, nullable=False, default="placard")  # placard | frigo | congelateur
+    level = Column(String, nullable=True)       # plein | entame | presque_fini
+    packages = Column(Integer, nullable=False, default=1, server_default="1")
+    quantity_g = Column(Float, nullable=True)
+    source = Column(String, nullable=True)      # photo | ticket | manuel | recette
+    updated_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class CookingLog(Base):
+    """Recette cuisinée et ce qu'elle a retiré du stock : `changes` garde
+    l'état d'avant de chaque article touché, pour pouvoir annuler."""
+    __tablename__ = "cooking_logs"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    recipe_id = Column(String, nullable=False)
+    recipe_name = Column(String, nullable=True)
+    portions = Column(Float, nullable=False, default=1.0)
+    changes = Column(JSON, nullable=False, default=list)
+    undone = Column(Boolean, nullable=False, default=False, server_default=sa_false())
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
 
 
 class Run(Base):

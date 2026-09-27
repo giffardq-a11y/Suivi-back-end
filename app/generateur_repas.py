@@ -61,7 +61,7 @@ def _par_type() -> dict[str, list[dict]]:
 
 
 def _score(recette: dict, cible_creneau: float, utilisations: int,
-           deficit_proteines: float) -> float:
+           deficit_proteines: float, bonus_stock: dict[str, float] | None = None) -> float:
     macros = recette["macros"]
     ecart = abs(macros["calories"] - cible_creneau) / max(cible_creneau, 1)
     penalite = 0.20 * utilisations  # revenir une 2e fois coûte, sans l'interdire
@@ -71,12 +71,15 @@ def _score(recette: dict, cible_creneau: float, utilisations: int,
         # apportent beaucoup par calorie.
         densite = macros["proteines"] / max(macros["calories"], 1)
         bonus = min(0.30, densite * 15)
+    # Recette qui utilise ce qu'on a déjà au placard / frigo (placard.bonus_stock).
+    if bonus_stock:
+        bonus += bonus_stock.get(recette["id"], 0.0)
     return ecart + penalite - bonus
 
 
 def _choisir(candidats: list[dict], cible_creneau: float, compteurs: dict[str, int],
              interdits: set[str], max_repetitions: int, deficit_proteines: float,
-             tirage: random.Random) -> dict | None:
+             tirage: random.Random, bonus_stock: dict[str, float] | None = None) -> dict | None:
     eligibles = [r for r in candidats
                  if r["id"] not in interdits
                  and compteurs.get(r["id"], 0) < max_repetitions]
@@ -86,7 +89,7 @@ def _choisir(candidats: list[dict], cible_creneau: float, compteurs: dict[str, i
         # incomplet — l'appelant en est informé par `assouplissements`.
         eligibles = [r for r in candidats if r["id"] not in interdits] or candidats
     classes = sorted(eligibles, key=lambda r: _score(
-        r, cible_creneau, compteurs.get(r["id"], 0), deficit_proteines))
+        r, cible_creneau, compteurs.get(r["id"], 0), deficit_proteines, bonus_stock))
     return tirage.choice(classes[:6]) if classes else None
 
 
@@ -96,7 +99,7 @@ def _macros_ajustees(recette: dict, portions: float) -> dict:
 
 
 def _construire_jour(catalogue, parts, cible_kcal, cible_proteines, compteurs,
-                     interdits, max_repetitions, tirage):
+                     interdits, max_repetitions, tirage, bonus_stock=None):
     """Meilleure combinaison de repas pour une journée, portions ajustées."""
     meilleure, meilleur_ecart = None, None
 
@@ -105,7 +108,7 @@ def _construire_jour(catalogue, parts, cible_kcal, cible_proteines, compteurs,
         for creneau, part in parts:
             deficit = cible_proteines - proteines_cumulees - (cible_proteines * part)
             recette = _choisir(catalogue.get(creneau, []), cible_kcal * part, compteurs,
-                               interdits, max_repetitions, deficit, tirage)
+                               interdits, max_repetitions, deficit, tirage, bonus_stock)
             if recette is None:
                 break
             choix.append((creneau, recette))
@@ -139,6 +142,7 @@ def generer_plan(
     max_repetitions_semaine: int = 2,
     repetitions_entre_semaines: bool = True,
     graine: int | None = None,
+    bonus_stock: dict[str, float] | None = None,
 ) -> dict:
     """Plan proposé, non enregistré. Voir l'en-tête du module pour la méthode."""
     if not 1 <= nb_semaines <= 4:
@@ -163,7 +167,7 @@ def generer_plan(
         for jour in range(7):
             resultat, ecart = _construire_jour(
                 catalogue, parts, cible_kcal, cible_proteines, compteurs,
-                interdits, max_repetitions_semaine, tirage)
+                interdits, max_repetitions_semaine, tirage, bonus_stock)
             if resultat is None:
                 raise ValueError("catalogue insuffisant pour générer ce plan")
             (choix, portions) = resultat

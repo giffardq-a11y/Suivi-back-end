@@ -11,7 +11,7 @@ from .migrate import run_migrations
 from .routers import (
     auth, dashboard, entries, habits, meal_photo, integrations, food_search, recipes,
     bad_habits, goals, substances, profile, cycle, training, diet, journal_stats, settings,
-    partner, flashcards, health_sync,
+    partner, flashcards, health_sync, pantry,
 )
 
 # Schéma à jour avant tout accès à la base (migrations Alembic, voir
@@ -133,6 +133,7 @@ app.include_router(substances.router)
 app.include_router(profile.router)
 app.include_router(cycle.router)
 app.include_router(training.router)
+app.include_router(pantry.router)
 app.include_router(diet.router)
 app.include_router(journal_stats.router)
 app.include_router(settings.router)

@@ -10,6 +10,7 @@ from ..database import get_db
 from ..deps import get_current_user
 from ..generateur_repas import generer_plan
 from ..liste_courses import liste_de_courses
+from ..placard import bonus_stock, retrancher_stock, stock_par_ingredient
 from ..plan_alimentation import JOURS, PLAN_NOM, SEMAINE_TYPE
 from ..services.common import now_utc, to_ms, relative_time, is_same_day
 from ..services.sport import calories_burned_on
@@ -74,6 +75,8 @@ class GenerationIn(BaseModel):
     # de masse. Ignoré si cible_proteines est donnée directement.
     proteines_par_kg: float = 1.8
     graine: int | None = None
+    # Favoriser les recettes qui utilisent ce qu'on a au placard / frigo.
+    utiliser_stock: bool = True
 
 
 class PlanGenereIn(BaseModel):
@@ -82,6 +85,14 @@ class PlanGenereIn(BaseModel):
     semaines: list[dict]
     nb_personnes: int = 1
     date_debut: str | None = None
+
+
+def _stock(db: Session, user: models.User) -> dict[str, float]:
+    items = db.query(models.PantryItem).filter(models.PantryItem.user_id == user.id).all()
+    return stock_par_ingredient([
+        {"ingredient_key": i.ingredient_key, "quantity_g": i.quantity_g, "level": i.level, "packages": i.packages}
+        for i in items
+    ])
 
 
 def _meals_calories_on(db: Session, user_id: str, date_dt) -> int:
@@ -295,6 +306,7 @@ def get_plan_week(semaine: int | None = None, db: Session = Depends(get_db),
 @router.post("/plan/{entry_id}/log", status_code=201)
 def log_plan_meal(
     entry_id: str,
+    deduire_placard: bool = False,
     db: Session = Depends(get_db),
     user: models.User = Depends(get_current_user),
 ):
@@ -332,7 +344,14 @@ def log_plan_meal(
         proteines=repas["proteines"], glucides=repas["glucides"], lipides=repas["lipides"],
     ))
     db.commit()
-    return {"ok": True, "meal": repas}
+    deduction = None
+    # « Je l'ai cuisiné » : on retire aussi les ingrédients du placard, pour
+    # toutes les personnes du plan.
+    if deduire_placard and entry is not None and entry.recipe_id:
+        from .pantry import cuisiner
+        profile = _get_or_create_profile(db, user)
+        deduction = cuisiner(db, user, entry.recipe_id, (entry.portions or 1) * (profile.plan_persons or 1))
+    return {"ok": True, "meal": repas, "deduction": deduction}
 
 
 @router.put("/plan")
@@ -409,6 +428,7 @@ def generate_plan(
             max_repetitions_semaine=payload.max_repetitions_semaine,
             repetitions_entre_semaines=payload.repetitions_entre_semaines,
             graine=payload.graine,
+            bonus_stock=bonus_stock(_stock(db, user)) if payload.utiliser_stock else None,
         )
     except ValueError as erreur:
         raise HTTPException(status_code=422, detail=str(erreur))
@@ -467,6 +487,7 @@ def apply_plan(
 def get_shopping_list(
     semaine: int | None = None,
     nb_personnes: int | None = None,
+    deduire_stock: bool = True,
     db: Session = Depends(get_db),
     user: models.User = Depends(get_current_user),
 ):
@@ -487,5 +508,8 @@ def get_shopping_list(
     repas = [{"recipe_id": e.recipe_id, "portions": e.portions or 1, "label": e.label}
              for e in entries]
     resultat = liste_de_courses(repas, nb_personnes or profile.plan_persons or 1)
+    # Ce qu'on a déjà au placard / frigo ne va pas sur la liste.
+    stock = _stock(db, user) if deduire_stock else {}
+    resultat = retrancher_stock(resultat, stock) if stock else {**resultat, "deja_en_stock": []}
     resultat["week_index"] = semaine
     return resultat

@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends
 from pydantic import BaseModel
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from .. import models
@@ -55,10 +56,17 @@ class MealPhotoProviderUpdate(BaseModel):
 def _get_or_create_profile(db: Session, user: models.User) -> models.Profile:
     profile = db.query(models.Profile).filter(models.Profile.user_id == user.id).first()
     if not profile:
-        profile = models.Profile(user_id=user.id)
-        db.add(profile)
-        db.commit()
-        db.refresh(profile)
+        # Deux requêtes simultanées d'un compte neuf (ouverture de Diète :
+        # /diet et /diet/plan en parallèle) créent chacune le profil ; la
+        # seconde bute sur l'unicité de user_id et relit celui de la première.
+        try:
+            profile = models.Profile(user_id=user.id)
+            db.add(profile)
+            db.commit()
+            db.refresh(profile)
+        except IntegrityError:
+            db.rollback()
+            profile = db.query(models.Profile).filter(models.Profile.user_id == user.id).one()
     return profile
 
 
