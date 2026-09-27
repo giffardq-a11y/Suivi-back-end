@@ -2,7 +2,7 @@ import enum
 import uuid
 
 from sqlalchemy import (
-    Column, String, Float, Boolean, DateTime, ForeignKey, Enum, Integer, Text, JSON
+    Column, String, Float, Boolean, DateTime, ForeignKey, Enum, Integer, Text, JSON, UniqueConstraint
 )
 from sqlalchemy import false as sa_false
 from sqlalchemy.orm import relationship
@@ -794,3 +794,72 @@ class GratitudeEntry(Base):
     date_key = Column(String, nullable=False)          # 'YYYY-MM-DD'
     items = Column(JSON, nullable=False, default=list)
     created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class BudgetCategory(Base):
+    """Catégorie de dépenses de l'utilisateur. Les huit catégories par
+    défaut sont créées à la première lecture (routers/budget.py), puis
+    librement renommées, limitées ou retirées. Une dépense référence sa
+    catégorie par `key` et non par id : retirer une catégorie ne supprime ni
+    ne réaffecte ses dépenses passées, elles restent comptées sous leur clé."""
+    __tablename__ = "budget_categories"
+    __table_args__ = (UniqueConstraint("user_id", "key", name="uq_budget_categories_user_key"),)
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    key = Column(String, nullable=False)
+    label = Column(String, nullable=False)
+    icon = Column(String, nullable=True)            # emoji, comme la barre d'onglets de l'app
+    monthly_limit = Column(Float, nullable=True)    # NULL = pas de limite pour cette catégorie
+    position = Column(Integer, nullable=False, default=0, server_default="0")
+
+
+class Expense(Base):
+    """Dépense saisie à la main. Aucune connexion bancaire : ni numéro de
+    compte ni de carte, seulement un montant, une catégorie et une note."""
+    __tablename__ = "expenses"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    amount = Column(Float, nullable=False)
+    currency = Column(String, nullable=False, default="EUR", server_default="EUR")
+    category_key = Column(String, nullable=False)
+    note = Column(String, nullable=True)
+
+
+class SavingsPot(Base):
+    """Cagnotte vers un objectif. current_amount est la somme des versements
+    (SavingsTransfer), tenue à jour à chaque versement pour ne pas relire tout
+    l'historique à chaque affichage.
+
+    source 'sobriety_savings' : cagnotte pensée pour recevoir l'argent
+    économisé sur l'alcool et le tabac (services/savings.py) ; 'manual' :
+    versements libres. reward_id relie la cagnotte à une récompense (catalogue
+    de routers/goals.py ou Reward perso) qu'elle sert à financer ; sans clé
+    étrangère, car les récompenses du catalogue ne sont pas en base."""
+    __tablename__ = "savings_pots"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    label = Column(String, nullable=False)
+    target_amount = Column(Float, nullable=False)
+    current_amount = Column(Float, nullable=False, default=0, server_default="0")
+    source = Column(String, nullable=False, default="manual", server_default="manual")
+    reward_id = Column(String, nullable=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    achieved_at = Column(DateTime(timezone=True), nullable=True)
+
+
+class SavingsTransfer(Base):
+    """Versement dans une cagnotte. Ceux de source 'sobriety_savings' sont
+    déduits des économies disponibles : on ne verse pas deux fois le même
+    argent économisé."""
+    __tablename__ = "savings_transfers"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    pot_id = Column(String, ForeignKey("savings_pots.id"), nullable=False)
+    amount = Column(Float, nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    source = Column(String, nullable=False, default="manual", server_default="manual")

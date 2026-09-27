@@ -104,8 +104,61 @@ def upgrade() -> None:
     sa.PrimaryKeyConstraint('id')
     )
 
+    # --- Budget et cagnottes ---
+    creer_table('budget_categories',
+    sa.Column('id', sa.String(), nullable=False),
+    sa.Column('user_id', sa.String(), nullable=False),
+    sa.Column('key', sa.String(), nullable=False),
+    sa.Column('label', sa.String(), nullable=False),
+    sa.Column('icon', sa.String(), nullable=True),
+    sa.Column('monthly_limit', sa.Float(), nullable=True),
+    sa.Column('position', sa.Integer(), server_default='0', nullable=False),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('user_id', 'key', name='uq_budget_categories_user_key')
+    )
+    creer_table('expenses',
+    sa.Column('id', sa.String(), nullable=False),
+    sa.Column('user_id', sa.String(), nullable=False),
+    sa.Column('occurred_at', sa.DateTime(timezone=True), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=False),
+    sa.Column('amount', sa.Float(), nullable=False),
+    sa.Column('currency', sa.String(), server_default='EUR', nullable=False),
+    sa.Column('category_key', sa.String(), nullable=False),
+    sa.Column('note', sa.String(), nullable=True),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    creer_table('savings_pots',
+    sa.Column('id', sa.String(), nullable=False),
+    sa.Column('user_id', sa.String(), nullable=False),
+    sa.Column('label', sa.String(), nullable=False),
+    sa.Column('target_amount', sa.Float(), nullable=False),
+    sa.Column('current_amount', sa.Float(), server_default='0', nullable=False),
+    sa.Column('source', sa.String(), server_default='manual', nullable=False),
+    sa.Column('reward_id', sa.String(), nullable=True),
+    sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=False),
+    sa.Column('achieved_at', sa.DateTime(timezone=True), nullable=True),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    creer_table('savings_transfers',
+    sa.Column('id', sa.String(), nullable=False),
+    sa.Column('user_id', sa.String(), nullable=False),
+    sa.Column('pot_id', sa.String(), nullable=False),
+    sa.Column('amount', sa.Float(), nullable=False),
+    sa.Column('occurred_at', sa.DateTime(timezone=True), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=False),
+    sa.Column('source', sa.String(), server_default='manual', nullable=False),
+    sa.ForeignKeyConstraint(['pot_id'], ['savings_pots.id'], ),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+
 
 def downgrade() -> None:
+    op.drop_table('savings_transfers')
+    op.drop_table('savings_pots')
+    op.drop_table('expenses')
+    op.drop_table('budget_categories')
     op.drop_table('gratitude_entries')
     op.drop_table('craving_entries')
     op.drop_table('mood_entries')
