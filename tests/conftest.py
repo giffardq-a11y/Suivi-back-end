@@ -57,3 +57,15 @@ def nouveau_compte(client):
         corps = r.json()
         return email, "motdepasse123", {"Authorization": f"Bearer {corps['access_token']}"}, corps["user"]["id"]
     return creer
+
+
+@pytest.fixture
+def evenements(monkeypatch):
+    """Événements envoyés au (futur) module Personnage pendant le test, sous
+    la forme (source, source_id). Voir app/services/personnage_hooks.py."""
+    from app.services import personnage_hooks
+
+    recus = []
+    monkeypatch.setattr(personnage_hooks, "evenement",
+                        lambda db, user, source, source_id, payload=None: recus.append((source, source_id)))
+    return recus

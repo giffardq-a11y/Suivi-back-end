@@ -674,3 +674,46 @@ class ExternalIntegration(Base):
     connected_at = Column(DateTime(timezone=True), server_default=func.now())
 
     user = relationship("User")
+
+
+# ---------------------------------------------------------------------------
+# Modules supplémentaires (specs/tanren-rpg/PROMPT-modules-supplementaires.md) :
+# hydratation, sommeil, humeur et journal, budget. Migration 0020.
+# ---------------------------------------------------------------------------
+
+
+class WaterLog(Base):
+    """Un verre (ou une gourde) bu. Le total du jour est recalculé à la
+    lecture plutôt que stocké : supprimer un verre saisi par erreur corrige
+    alors le total sans rien d'autre à tenir à jour."""
+    __tablename__ = "water_logs"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    amount_ml = Column(Integer, nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class HydrationSettings(Base):
+    """Réglages d'hydratation, 1:1 avec User.
+
+    Le cahier les place « dans profile » ; une table à part est plus simple :
+    Profile porte déjà le poids, les calories et le plan d'alimentation, et y
+    ajouter six colonnes d'un module désactivable l'alourdirait pour tout le
+    monde. Ici la ligne n'existe que si le module sert, se crée à la première
+    lecture (même logique que CycleSettings) et part avec le compte par son
+    user_id.
+
+    daily_goal_ml NULL = pas d'objectif choisi : on propose alors une
+    suggestion calculée sur le poids (voir routers/hydration.py), recalculée
+    à chaque pesée plutôt que figée."""
+    __tablename__ = "hydration_settings"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, unique=True)
+    daily_goal_ml = Column(Integer, nullable=True)
+    glass_sizes = Column(JSON, nullable=False, default=lambda: [250, 330, 500])
+    reminders_enabled = Column(Boolean, nullable=False, default=False, server_default=sa_false())
+    reminder_start = Column(String, nullable=True)         # 'HH:MM'
+    reminder_end = Column(String, nullable=True)           # 'HH:MM'
+    reminder_interval_min = Column(Integer, nullable=True)
