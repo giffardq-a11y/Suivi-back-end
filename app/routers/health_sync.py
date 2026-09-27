@@ -219,7 +219,11 @@ def health_summary(db: Session = Depends(get_db), user: models.User = Depends(ge
         if ligne:
             dernieres.append(ligne.occurred_at)
 
-    nuits = db.query(models.SleepLog).filter(models.SleepLog.user_id == user.id).all()
+    # Nuits importées seulement : depuis le module Sommeil, la table porte
+    # aussi des nuits saisies à la main (source 'manual').
+    nuits = db.query(models.SleepLog).filter(
+        models.SleepLog.user_id == user.id, models.SleepLog.source == SOURCE
+    ).all()
     pas = db.query(models.DailySteps).filter(models.DailySteps.user_id == user.id).all()
     derniere_nuit = max(nuits, key=lambda n: n.ended_at, default=None)
     aujourdhui = date_key(now_utc())

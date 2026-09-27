@@ -12,6 +12,7 @@ from .routers import (
     auth, dashboard, entries, habits, meal_photo, integrations, food_search, recipes,
     bad_habits, goals, substances, profile, cycle, training, diet, journal_stats, settings,
     partner, flashcards, health_sync, pantry, compte, legal,
+    hydration, sleep, mood, budget,
 )
 
 # Schéma à jour avant tout accès à la base (migrations Alembic, voir
@@ -169,6 +170,10 @@ app.include_router(settings.router)
 app.include_router(partner.router)
 app.include_router(flashcards.router)
 app.include_router(health_sync.router)
+app.include_router(hydration.router)
+app.include_router(sleep.router)
+app.include_router(mood.router)
+app.include_router(budget.router)
 
 
 @app.get("/health")

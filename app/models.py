@@ -2,7 +2,7 @@ import enum
 import uuid
 
 from sqlalchemy import (
-    Column, String, Float, Boolean, DateTime, ForeignKey, Enum, Integer, Text, JSON
+    Column, String, Float, Boolean, DateTime, ForeignKey, Enum, Integer, Text, JSON, UniqueConstraint
 )
 from sqlalchemy import false as sa_false
 from sqlalchemy.orm import relationship
@@ -581,9 +581,17 @@ class StrengthSession(Base):
 
 
 class SleepLog(Base):
-    """Nuit remontée par la montre (Health Connect). Une nuit = une ligne,
-    rattachée au jour du RÉVEIL (dormir de 23h à 7h compte pour le lendemain,
-    comme le fait Samsung Health)."""
+    """Nuit remontée par la montre (Health Connect) ou saisie à la main
+    (module Sommeil). Une nuit = une ligne, rattachée au jour du RÉVEIL
+    (dormir de 23h à 7h compte pour le lendemain, comme le fait Samsung
+    Health).
+
+    source : 'health_connect' (import, avec external_id pour l'anti-doublon)
+    ou 'manual'. L'import ne regarde que ses propres lignes (source +
+    external_id), une nuit saisie à la main n'est donc jamais écrasée par une
+    synchronisation. quality et note sont propres à l'app : la montre ne les
+    fournit pas, et l'import ne les touche pas, on peut donc noter une nuit
+    importée."""
     __tablename__ = "sleep_logs"
 
     id = Column(String, primary_key=True, default=gen_uuid)
@@ -592,8 +600,10 @@ class SleepLog(Base):
     started_at = Column(DateTime(timezone=True), nullable=False)
     ended_at = Column(DateTime(timezone=True), nullable=False)
     duration_min = Column(Float, nullable=False)
-    source = Column(String, nullable=True)
+    source = Column(String, nullable=True)     # 'health_connect' | 'manual'
     external_id = Column(String, nullable=True)
+    quality = Column(Integer, nullable=True)   # 1 à 5
+    note = Column(String, nullable=True)
 
 
 class DailySteps(Base):
@@ -689,3 +699,182 @@ class ExternalIntegration(Base):
     connected_at = Column(DateTime(timezone=True), server_default=func.now())
 
     user = relationship("User")
+
+
+# ---------------------------------------------------------------------------
+# Modules supplémentaires (specs/tanren-rpg/PROMPT-modules-supplementaires.md) :
+# hydratation, sommeil, humeur et journal, budget. Migration 0020.
+# ---------------------------------------------------------------------------
+
+
+class WaterLog(Base):
+    """Un verre (ou une gourde) bu. Le total du jour est recalculé à la
+    lecture plutôt que stocké : supprimer un verre saisi par erreur corrige
+    alors le total sans rien d'autre à tenir à jour."""
+    __tablename__ = "water_logs"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    amount_ml = Column(Integer, nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class HydrationSettings(Base):
+    """Réglages d'hydratation, 1:1 avec User.
+
+    Le cahier les place « dans profile » ; une table à part est plus simple :
+    Profile porte déjà le poids, les calories et le plan d'alimentation, et y
+    ajouter six colonnes d'un module désactivable l'alourdirait pour tout le
+    monde. Ici la ligne n'existe que si le module sert, se crée à la première
+    lecture (même logique que CycleSettings) et part avec le compte par son
+    user_id.
+
+    daily_goal_ml NULL = pas d'objectif choisi : on propose alors une
+    suggestion calculée sur le poids (voir routers/hydration.py), recalculée
+    à chaque pesée plutôt que figée."""
+    __tablename__ = "hydration_settings"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, unique=True)
+    daily_goal_ml = Column(Integer, nullable=True)
+    glass_sizes = Column(JSON, nullable=False, default=lambda: [250, 330, 500])
+    reminders_enabled = Column(Boolean, nullable=False, default=False, server_default=sa_false())
+    reminder_start = Column(String, nullable=True)         # 'HH:MM'
+    reminder_end = Column(String, nullable=True)           # 'HH:MM'
+    reminder_interval_min = Column(Integer, nullable=True)
+
+
+class SleepSettings(Base):
+    """Réglages du module Sommeil, 1:1 avec User, créés à la première
+    lecture. Les heures sont des 'HH:MM' locales, telles que l'utilisateur
+    les choisit : le rappel de routine est une notification locale
+    programmée par l'app, le serveur ne fait que les garder."""
+    __tablename__ = "sleep_settings"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, unique=True)
+    target_hours = Column(Float, nullable=False, default=8.0, server_default="8")
+    bedtime_target = Column(String, nullable=True)            # 'HH:MM'
+    wake_target = Column(String, nullable=True)               # 'HH:MM'
+    routine_reminder_enabled = Column(Boolean, nullable=False, default=False, server_default=sa_false())
+    routine_reminder_time = Column(String, nullable=True)     # 'HH:MM'
+
+
+class MoodEntry(Base):
+    """Humeur notée en un geste (1 à 5), avec l'énergie et des tags libres
+    en option. Plusieurs par jour possibles : les statistiques raisonnent
+    sur la moyenne du jour."""
+    __tablename__ = "mood_entries"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    mood = Column(Integer, nullable=False)            # 1 à 5
+    energy = Column(Integer, nullable=True)           # 1 à 5
+    tags = Column(JSON, nullable=False, default=list)  # ['travail', 'sport', 'stress'...]
+    note = Column(Text, nullable=True)
+
+
+class CravingEntry(Base):
+    """Envie notée (« J'ai une envie »).
+
+    `resisted` n'est pas une colonne : au moment de la saisie on ne sait pas
+    encore si l'envie sera résistée. Il se calcule à la lecture (pas de
+    consommation de la substance dans les 2 h qui suivent, voir
+    routers/mood.py) et ne peut donc jamais être faux parce que figé trop tôt.
+
+    substance_id sans clé étrangère, comme Goal.linked_habit_id : supprimer
+    une substance ne doit ni échouer (contrainte) ni effacer l'historique des
+    envies. Une envie dont la substance a disparu reste listée, sans elle.
+    Colonne `triggers` (au pluriel) : TRIGGER est un mot réservé SQL ; l'API
+    l'expose sous le nom `trigger` du cahier."""
+    __tablename__ = "craving_entries"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    substance_id = Column(String, nullable=True)
+    intensity = Column(Integer, nullable=False)          # 1 à 5
+    triggers = Column(JSON, nullable=False, default=list)
+    note = Column(Text, nullable=True)
+
+
+class GratitudeEntry(Base):
+    """Journal de gratitude : 1 à 3 lignes par jour, une entrée par jour
+    (une nouvelle saisie le même jour remplace la précédente)."""
+    __tablename__ = "gratitude_entries"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    date_key = Column(String, nullable=False)          # 'YYYY-MM-DD'
+    items = Column(JSON, nullable=False, default=list)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class BudgetCategory(Base):
+    """Catégorie de dépenses de l'utilisateur. Les huit catégories par
+    défaut sont créées à la première lecture (routers/budget.py), puis
+    librement renommées, limitées ou retirées. Une dépense référence sa
+    catégorie par `key` et non par id : retirer une catégorie ne supprime ni
+    ne réaffecte ses dépenses passées, elles restent comptées sous leur clé."""
+    __tablename__ = "budget_categories"
+    __table_args__ = (UniqueConstraint("user_id", "key", name="uq_budget_categories_user_key"),)
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    key = Column(String, nullable=False)
+    label = Column(String, nullable=False)
+    icon = Column(String, nullable=True)            # emoji, comme la barre d'onglets de l'app
+    monthly_limit = Column(Float, nullable=True)    # NULL = pas de limite pour cette catégorie
+    position = Column(Integer, nullable=False, default=0, server_default="0")
+
+
+class Expense(Base):
+    """Dépense saisie à la main. Aucune connexion bancaire : ni numéro de
+    compte ni de carte, seulement un montant, une catégorie et une note."""
+    __tablename__ = "expenses"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    amount = Column(Float, nullable=False)
+    currency = Column(String, nullable=False, default="EUR", server_default="EUR")
+    category_key = Column(String, nullable=False)
+    note = Column(String, nullable=True)
+
+
+class SavingsPot(Base):
+    """Cagnotte vers un objectif. current_amount est la somme des versements
+    (SavingsTransfer), tenue à jour à chaque versement pour ne pas relire tout
+    l'historique à chaque affichage.
+
+    source 'sobriety_savings' : cagnotte pensée pour recevoir l'argent
+    économisé sur l'alcool et le tabac (services/savings.py) ; 'manual' :
+    versements libres. reward_id relie la cagnotte à une récompense (catalogue
+    de routers/goals.py ou Reward perso) qu'elle sert à financer ; sans clé
+    étrangère, car les récompenses du catalogue ne sont pas en base."""
+    __tablename__ = "savings_pots"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    label = Column(String, nullable=False)
+    target_amount = Column(Float, nullable=False)
+    current_amount = Column(Float, nullable=False, default=0, server_default="0")
+    source = Column(String, nullable=False, default="manual", server_default="manual")
+    reward_id = Column(String, nullable=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    achieved_at = Column(DateTime(timezone=True), nullable=True)
+
+
+class SavingsTransfer(Base):
+    """Versement dans une cagnotte. Ceux de source 'sobriety_savings' sont
+    déduits des économies disponibles : on ne verse pas deux fois le même
+    argent économisé."""
+    __tablename__ = "savings_transfers"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    pot_id = Column(String, ForeignKey("savings_pots.id"), nullable=False)
+    amount = Column(Float, nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    source = Column(String, nullable=False, default="manual", server_default="manual")
