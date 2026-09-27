@@ -1,15 +1,22 @@
+import logging
+import os
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from jose import JWTError
 from sqlalchemy.orm import Session
 
 from .. import models, schemas
 from ..database import get_db
+from ..services.compte import consommer_jeton, creer_jeton
+from ..services.email import envoyer_email
 from ..security import (
     hash_password, verify_password,
     create_access_token, create_refresh_token, decode_token,
 )
 
 router = APIRouter(prefix="/auth", tags=["auth"])
+
+BACKEND_BASE_URL = os.environ.get("BACKEND_BASE_URL", "http://localhost:8000")
 
 
 @router.post("/signup", response_model=schemas.AuthResponse, status_code=status.HTTP_201_CREATED)
@@ -78,3 +85,41 @@ def refresh(payload: schemas.RefreshRequest, db: Session = Depends(get_db)):
         access_token=create_access_token(user.id),
         refresh_token=create_refresh_token(user.id),
     )
+
+
+# ---------- Mot de passe oublié ----------
+# Le lien envoyé ouvre une page web du backend (routers/compte_web.py) qui
+# appelle /auth/reset-password : pas besoin de lien profond vers l'app.
+
+@router.post("/forgot-password", status_code=202)
+def forgot_password(payload: schemas.ForgotPasswordRequest, db: Session = Depends(get_db)):
+    """Répond toujours 202, que le compte existe ou non : la réponse ne doit
+    pas permettre de savoir quelles adresses ont un compte."""
+    user = db.query(models.User).filter(models.User.email == payload.email).first()
+    if user is not None:
+        jeton = creer_jeton(db, user, "reset_password")
+        if jeton is not None:
+            lien = f"{BACKEND_BASE_URL}/compte/mot-de-passe?token={jeton}"
+            # Un échec d'envoi est journalisé, pas renvoyé : la réponse doit
+            # rester la même que le compte existe ou non.
+            try:
+                envoyer_email(
+                    user.email,
+                    "Suivi : réinitialisation du mot de passe",
+                    "Bonjour,\n\nPour choisir un nouveau mot de passe, ouvre ce lien (valable 30 minutes, "
+                    f"une seule fois) :\n{lien}\n\nSi tu n'as rien demandé, ignore ce message : "
+                    "ton mot de passe actuel reste valable.\n",
+                )
+            except Exception:
+                logging.getLogger("suivi.auth").exception("Échec d'envoi du lien de réinitialisation")
+    return {"ok": True}
+
+
+@router.post("/reset-password")
+def reset_password(payload: schemas.ResetPasswordRequest, db: Session = Depends(get_db)):
+    user = consommer_jeton(db, payload.token, "reset_password")
+    if user is None:
+        raise HTTPException(status_code=400, detail="Lien invalide ou expiré : refais une demande depuis l'app.")
+    user.password_hash = hash_password(payload.password)
+    db.commit()
+    return {"ok": True}

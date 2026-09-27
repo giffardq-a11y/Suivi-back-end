@@ -419,6 +419,22 @@ class MealPlanEntry(Base):
     created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
 
 
+class AccountToken(Base):
+    """Jeton à usage unique envoyé par e-mail : réinitialisation du mot de
+    passe ou confirmation de suppression du compte (page web publique). Seul
+    le hachage SHA-256 est stocké : une fuite de la base ne donne pas de
+    jeton utilisable. Voir app/services/compte.py."""
+    __tablename__ = "account_tokens"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    purpose = Column(String, nullable=False)  # 'reset_password' | 'delete_account'
+    token_hash = Column(String, nullable=False, unique=True)
+    expires_at = Column(DateTime(timezone=True), nullable=False)
+    used_at = Column(DateTime(timezone=True), nullable=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
 class PantryItem(Base):
     """Un article du placard, du frigo ou du congélateur (voir app/placard.py
     pour la façon dont les quantités sont estimées).

@@ -138,3 +138,16 @@ class DashboardOut(BaseModel):
     goals_summary: GoalSummaryOut
     reward_budget: RewardBudgetOut
     thought_of_the_day: str
+
+
+class ForgotPasswordRequest(BaseModel):
+    email: EmailStr
+
+
+class ResetPasswordRequest(BaseModel):
+    token: str
+    password: str = Field(min_length=8)
+
+
+class DeleteAccountRequest(BaseModel):
+    password: str
