@@ -31,10 +31,10 @@ from ..placard import (
 )
 from ..recettes import ingredients, recettes
 from ..services.common import now_utc, to_ms, relative_time
+from ..services import gemini
 
 router = APIRouter(prefix="/diet/pantry", tags=["pantry"])
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
 TAILLE_MAX_IMAGE = 8 * 1024 * 1024
 
 # Emplacement par défaut d'un produit acheté, selon son rayon.
@@ -201,17 +201,15 @@ async def _gemini_json(image: bytes, mime: str, consigne: str) -> list[dict]:
     if not cle_api:
         raise HTTPException(status_code=501, detail="Gemini pas configuré côté serveur : variable GEMINI_API_KEY manquante.")
     async with httpx.AsyncClient(timeout=60) as client:
-        resp = await client.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent",
-            headers={"x-goog-api-key": cle_api, "Content-Type": "application/json"},
-            json={
-                "contents": [{"parts": [
-                    {"inline_data": {"mime_type": mime, "data": base64.b64encode(image).decode()}},
-                    {"text": consigne},
-                ]}],
-                "generationConfig": {"responseMimeType": "application/json", "temperature": 0.1},
-            },
-        )
+        resp = await gemini.generer(client, cle_api, {
+            "contents": [{"parts": [
+                {"inline_data": {"mime_type": mime, "data": base64.b64encode(image).decode()}},
+                {"text": consigne},
+            ]}],
+            "generationConfig": {"responseMimeType": "application/json", "temperature": 0.1},
+        })
+    if resp.status_code in gemini.SURCHARGE:
+        raise HTTPException(status_code=503, detail="Gemini est saturé en ce moment : réessaie dans une minute.")
     if resp.status_code != 200:
         raise HTTPException(status_code=502, detail=f"Échec de l'analyse Gemini : {resp.text[:300]}")
     try:

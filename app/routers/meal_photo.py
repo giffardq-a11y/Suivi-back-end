@@ -50,6 +50,8 @@ import httpx
 from fastapi import APIRouter, UploadFile, File, HTTPException, Query
 from pydantic import BaseModel
 
+from ..services import gemini
+
 router = APIRouter(prefix="/meals", tags=["meals"])
 
 
@@ -132,27 +134,22 @@ async def _estimate_via_logmeal(image_bytes: bytes, filename: str, content_type:
 
 # ---------- Gemini (reconnaissance) + FatSecret (calories) ----------
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
-
-
 async def _identify_dish_with_gemini(image_bytes: bytes, mime_type: str, client: httpx.AsyncClient) -> str:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise HTTPException(status_code=501, detail="Gemini pas configuré côté serveur : variable GEMINI_API_KEY manquante.")
 
     b64_image = base64.b64encode(image_bytes).decode()
-    resp = await client.post(
-        f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent",
-        headers={"x-goog-api-key": api_key, "Content-Type": "application/json"},
-        json={
-            "contents": [{
-                "parts": [
-                    {"inline_data": {"mime_type": mime_type, "data": b64_image}},
-                    {"text": "Identifie le plat principal sur cette photo. Réponds uniquement par son nom (2 à 4 mots), sans phrase ni ponctuation."},
-                ]
-            }]
-        },
-    )
+    resp = await gemini.generer(client, api_key, {
+        "contents": [{
+            "parts": [
+                {"inline_data": {"mime_type": mime_type, "data": b64_image}},
+                {"text": "Identifie le plat principal sur cette photo. Réponds uniquement par son nom (2 à 4 mots), sans phrase ni ponctuation."},
+            ]
+        }]
+    })
+    if resp.status_code in gemini.SURCHARGE:
+        raise HTTPException(status_code=503, detail="Gemini est saturé en ce moment : réessaie dans une minute.")
     if resp.status_code != 200:
         raise HTTPException(status_code=502, detail=f"Échec de la reconnaissance Gemini : {resp.text}")
 
