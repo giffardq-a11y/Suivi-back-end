@@ -50,7 +50,32 @@ def upgrade() -> None:
     sa.UniqueConstraint('user_id')
     )
 
+    # --- Sommeil ---
+    # sleep_logs existe depuis 0004 (import de la montre) : seules les
+    # colonnes de la saisie manuelle s'ajoutent. source 'manual' ne demande
+    # rien, la colonne est un texte libre.
+    ajouter_colonnes('sleep_logs', [
+        sa.Column('quality', sa.Integer(), nullable=True),
+        sa.Column('note', sa.String(), nullable=True),
+    ])
+    creer_table('sleep_settings',
+    sa.Column('id', sa.String(), nullable=False),
+    sa.Column('user_id', sa.String(), nullable=False),
+    sa.Column('target_hours', sa.Float(), server_default='8', nullable=False),
+    sa.Column('bedtime_target', sa.String(), nullable=True),
+    sa.Column('wake_target', sa.String(), nullable=True),
+    sa.Column('routine_reminder_enabled', sa.Boolean(), server_default=sa.false(), nullable=False),
+    sa.Column('routine_reminder_time', sa.String(), nullable=True),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('user_id')
+    )
+
 
 def downgrade() -> None:
+    op.drop_table('sleep_settings')
+    with op.batch_alter_table('sleep_logs', schema=None) as batch_op:
+        batch_op.drop_column('note')
+        batch_op.drop_column('quality')
     op.drop_table('hydration_settings')
     op.drop_table('water_logs')

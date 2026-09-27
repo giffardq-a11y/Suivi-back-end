@@ -1,6 +1,7 @@
 """Module Hydratation : verres, objectif, séries, cloisonnement."""
 from datetime import datetime, timedelta, timezone
 
+
 def _ms(dt: datetime) -> int:
     return int(dt.timestamp() * 1000)
 

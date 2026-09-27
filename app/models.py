@@ -564,9 +564,17 @@ class StrengthSession(Base):
 
 
 class SleepLog(Base):
-    """Nuit remontée par la montre (Health Connect). Une nuit = une ligne,
-    rattachée au jour du RÉVEIL (dormir de 23h à 7h compte pour le lendemain,
-    comme le fait Samsung Health)."""
+    """Nuit remontée par la montre (Health Connect) ou saisie à la main
+    (module Sommeil). Une nuit = une ligne, rattachée au jour du RÉVEIL
+    (dormir de 23h à 7h compte pour le lendemain, comme le fait Samsung
+    Health).
+
+    source : 'health_connect' (import, avec external_id pour l'anti-doublon)
+    ou 'manual'. L'import ne regarde que ses propres lignes (source +
+    external_id), une nuit saisie à la main n'est donc jamais écrasée par une
+    synchronisation. quality et note sont propres à l'app : la montre ne les
+    fournit pas, et l'import ne les touche pas, on peut donc noter une nuit
+    importée."""
     __tablename__ = "sleep_logs"
 
     id = Column(String, primary_key=True, default=gen_uuid)
@@ -575,8 +583,10 @@ class SleepLog(Base):
     started_at = Column(DateTime(timezone=True), nullable=False)
     ended_at = Column(DateTime(timezone=True), nullable=False)
     duration_min = Column(Float, nullable=False)
-    source = Column(String, nullable=True)
+    source = Column(String, nullable=True)     # 'health_connect' | 'manual'
     external_id = Column(String, nullable=True)
+    quality = Column(Integer, nullable=True)   # 1 à 5
+    note = Column(String, nullable=True)
 
 
 class DailySteps(Base):
@@ -717,3 +727,19 @@ class HydrationSettings(Base):
     reminder_start = Column(String, nullable=True)         # 'HH:MM'
     reminder_end = Column(String, nullable=True)           # 'HH:MM'
     reminder_interval_min = Column(Integer, nullable=True)
+
+
+class SleepSettings(Base):
+    """Réglages du module Sommeil, 1:1 avec User, créés à la première
+    lecture. Les heures sont des 'HH:MM' locales, telles que l'utilisateur
+    les choisit : le rappel de routine est une notification locale
+    programmée par l'app, le serveur ne fait que les garder."""
+    __tablename__ = "sleep_settings"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, unique=True)
+    target_hours = Column(Float, nullable=False, default=8.0, server_default="8")
+    bedtime_target = Column(String, nullable=True)            # 'HH:MM'
+    wake_target = Column(String, nullable=True)               # 'HH:MM'
+    routine_reminder_enabled = Column(Boolean, nullable=False, default=False, server_default=sa_false())
+    routine_reminder_time = Column(String, nullable=True)     # 'HH:MM'
