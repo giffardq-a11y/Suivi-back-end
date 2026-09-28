@@ -20,7 +20,7 @@
     },
     "medieval": {
       "nom": "Médiéval",
-      "disponible": false,
+      "disponible": true,
       "stats": {"hp": "Vitalité", "end": "Endurance", "str": "Force", "agi": "Dextérité", "int": "Savoir", "spi": "Foi", "wil": "Honneur", "cha": "Prestige"},
       "classes": [
         {"cle": "chevalier", "nom": "Chevalier", "archetype": "colosse"},

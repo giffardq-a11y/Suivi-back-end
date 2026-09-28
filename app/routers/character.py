@@ -67,6 +67,9 @@ class AppearanceIn(BaseModel):
 
 class ClassIn(BaseModel):
     class_key: str
+    # Absent = même univers. Changer d'univers compte comme un changement de
+    # classe (même délai).
+    universe: str | None = None
 
 
 def _classe_valide(universe: str, class_key: str) -> dict:
@@ -210,11 +213,12 @@ def change_class(
 ):
     """Premier changement gratuit, puis un tous les 30 jours. Les points sont
     conservés, seules les valeurs affichées changent (coefficients de la
-    nouvelle classe). Même univers : le changement d'univers viendra avec les
-    autres univers."""
+    nouvelle classe). `universe` permet de changer d'univers en même temps :
+    même règle, même délai."""
     perso = _mon_personnage(db, user)
-    _classe_valide(perso.universe, payload.class_key)
-    if payload.class_key == perso.class_key:
+    univers = payload.universe or perso.universe
+    _classe_valide(univers, payload.class_key)
+    if univers == perso.universe and payload.class_key == perso.class_key:
         raise HTTPException(status_code=400, detail="C'est déjà ta classe.")
     disponible = _changement_disponible_le(perso)
     if disponible is not None and now_utc() < disponible:
@@ -223,6 +227,9 @@ def change_class(
             "available_at": to_ms(disponible),
             "available_date": disponible.date().isoformat(),
         })
+    if univers != perso.universe:
+        perso.universe = univers
+        perso.universe_changed_at = now_utc()
     perso.class_key = payload.class_key
     perso.class_changed_at = now_utc()
     db.commit()
