@@ -341,7 +341,7 @@ def test_404_sans_personnage_et_config(client, nouveau_compte):
     anime = next(u for u in conf["universes"] if u["key"] == "anime")
     assert anime["available"] is True
     assert [c["key"] for c in anime["classes"]] == ["combattant", "ninja", "soigneur", "moine", "stratege", "samourai"]
-    assert [u["key"] for u in conf["universes"] if not u["available"]] == ["moderne", "sf"]
+    assert [u["key"] for u in conf["universes"] if not u["available"]] == ["sf"]
     assert all(abs(sum(a["coefficients"].values()) - 8.0) < 1e-9 for a in conf["archetypes"].values())
     assert [r["name"] for r in conf["ranks"]] == ["Apprenti", "Initié", "Guerrier", "Maître", "Légende"]
 
@@ -349,7 +349,7 @@ def test_404_sans_personnage_et_config(client, nouveau_compte):
 def test_creation_validations(client, nouveau_compte):
     _, _, h, _ = nouveau_compte()
     base = {"universe": "anime", "class_key": "ninja", "name": "Kaze"}
-    assert client.post("/character", json={**base, "universe": "moderne", "class_key": "yogi"},
+    assert client.post("/character", json={**base, "universe": "sf", "class_key": "psion"},
                        headers=h).status_code == 422
     assert client.post("/character", json={**base, "class_key": "chevalier"}, headers=h).status_code == 422
     assert client.post("/character", json={**base, "name": "   "}, headers=h).status_code == 422

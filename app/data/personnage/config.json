@@ -46,7 +46,7 @@
     },
     "moderne": {
       "nom": "Moderne",
-      "disponible": false,
+      "disponible": true,
       "stats": {"hp": "Santé", "end": "Cardio", "str": "Force", "agi": "Mobilité", "int": "Culture", "spi": "Sérénité", "wil": "Discipline", "cha": "Influence"},
       "classes": [
         {"cle": "athlete", "nom": "Athlète", "archetype": "colosse"},
