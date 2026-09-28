@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 
 from .. import models, schemas
 from ..database import get_db
+from ..modules import MODULES, est_actif
 from ..services import jetons, limite
 from ..services.compte import consommer_jeton, creer_jeton
 from ..services.email import envoyer_email
@@ -23,10 +24,20 @@ def signup(payload: schemas.SignupRequest, request: Request, db: Session = Depen
     if existing:
         raise HTTPException(status_code=400, detail="Un compte existe déjà avec cet email")
 
+    # Modules cochés à l'onboarding, filtrés aux clés connues (une clé
+    # obsolète ou mal orthographiée envoyée par une vieille version de l'app
+    # est ignorée plutôt que de faire échouer l'inscription). Absent = None
+    # = tout actif (voir modules.modules_actifs), comportement inchangé pour
+    # les clients qui n'envoient pas encore ce champ.
+    enabled_modules = None
+    if payload.modules is not None:
+        enabled_modules = [m for m in payload.modules if m in MODULES]
+
     user = models.User(
         email=payload.email,
         password_hash=hash_password(payload.password),
         display_name=payload.display_name or payload.email.split("@")[0],
+        enabled_modules=enabled_modules,
     )
     db.add(user)
     db.commit()
@@ -36,17 +47,20 @@ def signup(payload: schemas.SignupRequest, request: Request, db: Session = Depen
     # (streaks Accueil, économies, bénéfices santé) — sans elles un nouveau
     # compte réel se retrouverait avec un dashboard vide. Coût par défaut
     # neutre, éditable ensuite dans Paramètres (voir routers/settings.py).
-    db.add_all([
-        models.Substance(
-            user_id=user.id, label="Alcool", unit="1 verre",
-            category=models.SubstanceCategory.ALCOHOL, unit_cost=6.0, usual_frequency_per_day=1.0,
-        ),
-        models.Substance(
-            user_id=user.id, label="Tabac", unit="1 cigarette",
-            category=models.SubstanceCategory.TOBACCO, unit_cost=0.6, usual_frequency_per_day=1.0,
-        ),
-    ])
-    db.commit()
+    # Créées seulement si le module addictions est actif (toujours vrai tant
+    # qu'un client n'envoie pas encore `modules`).
+    if est_actif(user, "addictions"):
+        db.add_all([
+            models.Substance(
+                user_id=user.id, label="Alcool", unit="1 verre",
+                category=models.SubstanceCategory.ALCOHOL, unit_cost=6.0, usual_frequency_per_day=1.0,
+            ),
+            models.Substance(
+                user_id=user.id, label="Tabac", unit="1 cigarette",
+                category=models.SubstanceCategory.TOBACCO, unit_cost=0.6, usual_frequency_per_day=1.0,
+            ),
+        ])
+        db.commit()
 
     return schemas.AuthResponse(user=schemas.UserOut.model_validate(user), **jetons.emettre(db, user.id))
 
