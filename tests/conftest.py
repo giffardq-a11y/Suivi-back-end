@@ -69,6 +69,20 @@ def nouveau_compte(client):
 
 
 @pytest.fixture
+def nouveau_compte_avec_modules(client):
+    """Comme `nouveau_compte`, mais avec un sous-ensemble de modules choisi à
+    l'inscription (voir SignupRequest.modules, app/modules.py)."""
+    def creer(modules):
+        _compteur[0] += 1
+        email = f"test{_compteur[0]}-{os.getpid()}@example.com"
+        r = client.post("/auth/signup", json={"email": email, "password": "motdepasse123", "modules": modules})
+        assert r.status_code == 201, r.text
+        corps = r.json()
+        return email, "motdepasse123", {"Authorization": f"Bearer {corps['access_token']}"}, corps["user"]["id"]
+    return creer
+
+
+@pytest.fixture
 def evenements(monkeypatch):
     """Événements envoyés au (futur) module Personnage pendant le test, sous
     la forme (source, source_id). Voir app/services/personnage_hooks.py."""
