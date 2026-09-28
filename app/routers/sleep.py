@@ -241,6 +241,7 @@ def delete_sleep(
     nuit = _nuit_de(db, user, nuit_id)
     db.delete(nuit)
     db.commit()
+    personnage_hooks.retrait(db, user, "sleep_7h", nuit_id)
 
 
 def _minutes_depuis_midi(dt: datetime, fuseau) -> int:

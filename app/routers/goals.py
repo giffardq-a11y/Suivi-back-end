@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
+from ..services import personnage_hooks
 from ..services.common import now_utc, is_same_day
 from ..services.savings import compute_savings
 from ..services.rewards import compute_reward_budget
@@ -157,6 +158,13 @@ def get_goals(db: Session = Depends(get_db), user: models.User = Depends(get_cur
     multiplier, reward_budget, available_balance = compute_reward_budget(db, user, total_savings, now=now)
 
     goals = db.query(models.Goal).filter(models.Goal.user_id == user.id).all()
+    goals_out = [_serialize_goal(db, user, g, now) for g in goals]
+    # Objectif atteint (wil +10) : les objectifs liés à une métrique (série,
+    # poids, record...) ne sont « atteints » qu'au calcul, d'où ce constat à
+    # la lecture ; le Personnage dédoublonne par id d'objectif.
+    for g in goals_out:
+        if g["completed"]:
+            personnage_hooks.evenement(db, user, "goal_completed", g["id"])
     perso = (
         db.query(models.Reward)
         .filter(models.Reward.user_id == user.id)
@@ -182,7 +190,7 @@ def get_goals(db: Session = Depends(get_db), user: models.User = Depends(get_cur
             "available_balance": available_balance,
         },
         "savings_total": total_savings,
-        "goals": [_serialize_goal(db, user, g, now) for g in goals],
+        "goals": goals_out,
         "rewards": rewards,
     }
 

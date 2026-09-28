@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
+from ..services import personnage_hooks
 
 router = APIRouter(prefix="/substances", tags=["substances"])
 
@@ -88,6 +89,9 @@ def update_substance(
     for champ, valeur in payload.model_dump(exclude_unset=True).items():
         setattr(sub, champ, valeur)
     db.commit()
+    if "quit_date" in payload.model_fields_set:
+        # Paliers de santé déjà atteints depuis la date d'arrêt déclarée.
+        personnage_hooks.constater(db, user)
     return {"ok": True}
 
 

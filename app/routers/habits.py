@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
+from ..services import personnage_hooks
 from ..services.common import now_utc, is_same_day, today_key
 from ..services.habit_progress import effective_habit_target, is_progressive, jours_actifs
 
@@ -239,7 +240,10 @@ def log_habit(
     )
     db.add(log)
     db.commit()
-    return {"ok": True, "habit_id": habit.id, "logged_at": log.occurred_at}
+    logged_at = log.occurred_at
+    # Habitude tenue (wil +1) et paliers de série 7 / 30 / 100 jours.
+    personnage_hooks.habitudes(db, user)
+    return {"ok": True, "habit_id": habit.id, "logged_at": logged_at}
 
 
 @router.delete("/{habit_id}", status_code=204)
@@ -296,11 +300,15 @@ def unlog_habit(
         .all()
     )
     now = now_utc()
+    retire = None
     for log in today_log:
         if is_same_day(log.occurred_at, now):
+            retire = log.id
             db.delete(log)
             break
     db.commit()
+    if retire:
+        personnage_hooks.retrait(db, user, "habit_done", retire)
 
 
 @router.get("/reminders/pending")

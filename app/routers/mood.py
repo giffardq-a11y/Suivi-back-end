@@ -149,6 +149,7 @@ def delete_mood(
         raise HTTPException(status_code=404, detail="Humeur introuvable")
     db.delete(e)
     db.commit()
+    personnage_hooks.retrait(db, user, "mood_entry", entry_id)
 
 
 # ---------- Envies ----------

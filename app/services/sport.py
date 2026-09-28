@@ -72,11 +72,17 @@ def increment_session_goals(db: Session, user: models.User) -> None:
         .filter(models.Goal.user_id == user.id, models.Goal.linked_metric == "sport_sessions", models.Goal.completed_at.is_(None))
         .all()
     )
+    atteints = []
     for g in goals:
         g.current_value = min(g.target_value, g.current_value + 1)
         if g.current_value >= g.target_value:
             g.completed_at = now_utc()
+            atteints.append(g.id)
     db.commit()
+    if atteints:
+        from . import personnage_hooks
+        for goal_id in atteints:
+            personnage_hooks.evenement(db, user, "goal_completed", goal_id)
 
 
 def mark_sport_habits_done_today(db: Session, user: models.User) -> None:

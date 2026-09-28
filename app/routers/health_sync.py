@@ -22,6 +22,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
+from ..services import personnage_hooks
 from ..services.common import date_key, from_ms, is_same_day, now_utc
 from ..services.sport import increment_session_goals, mark_sport_habits_done_today
 
@@ -79,8 +80,9 @@ def _existing(db: Session, model, user_id: str, external_id: str):
     )
 
 
-def _import_exercise(db: Session, user: models.User, ex: ExerciseIn) -> str:
-    """Range une séance dans la bonne table. Renvoie 'cree' ou 'maj'."""
+def _import_exercise(db: Session, user: models.User, ex: ExerciseIn, crees: list | None = None) -> str:
+    """Range une séance dans la bonne table. Renvoie 'cree' ou 'maj' ; les
+    séances créées sont ajoutées à `crees` (genre Personnage, ligne)."""
     occurred = from_ms(ex.startMs)
     kind = (ex.type or "").lower()
 
@@ -120,7 +122,11 @@ def _import_exercise(db: Session, user: models.User, ex: ExerciseIn) -> str:
             setattr(ligne, k, v)
         return "maj"
 
-    db.add(model(user_id=user.id, source=SOURCE, external_id=ex.externalId, **champs))
+    ligne = model(user_id=user.id, source=SOURCE, external_id=ex.externalId, **champs)
+    db.add(ligne)
+    if crees is not None:
+        genre = {models.Run: "course", models.StrengthSession: "muscu"}.get(model, "autre_sport")
+        crees.append((genre, ligne))
     return "cree"
 
 
@@ -145,8 +151,12 @@ def import_health(
     resume = {"seances_creees": 0, "seances_mises_a_jour": 0, "nuits": 0, "jours_de_pas": 0, "pesees": 0}
 
     seances_nouvelles = 0
+    # Pour le Personnage, après l'enregistrement : séances créées, nuits,
+    # jours de pas et pesées de cette synchronisation.
+    crees: list = []
+    nuits_vues, pas_vus, pesees_vues = [], [], []
     for ex in payload.exercises:
-        resultat = _import_exercise(db, user, ex)
+        resultat = _import_exercise(db, user, ex, crees)
         if resultat == "cree":
             resume["seances_creees"] += 1
             seances_nouvelles += 1
@@ -168,6 +178,7 @@ def import_health(
             db.add(ligne)
             resume["nuits"] += 1
         _mark_sleep_habits(db, user, ligne)
+        nuits_vues.append(ligne)
 
     for jour in payload.steps:
         ligne = (
@@ -178,17 +189,21 @@ def import_health(
         if ligne:
             ligne.steps = jour.steps
         else:
-            db.add(models.DailySteps(user_id=user.id, date_key=jour.dateKey, steps=jour.steps, source=SOURCE))
+            ligne = models.DailySteps(user_id=user.id, date_key=jour.dateKey, steps=jour.steps, source=SOURCE)
+            db.add(ligne)
+        pas_vus.append(ligne)
         resume["jours_de_pas"] += 1
 
     for pesee in payload.weights:
         if _existing(db, models.WeightEntry, user.id, pesee.externalId):
             continue
-        db.add(models.WeightEntry(
+        nouvelle = models.WeightEntry(
             user_id=user.id, source=SOURCE, external_id=pesee.externalId,
             weight_kg=pesee.weightKg, occurred_at=from_ms(pesee.occurredMs),
             note="Importé de la montre",
-        ))
+        )
+        db.add(nouvelle)
+        pesees_vues.append(nouvelle)
         resume["pesees"] += 1
 
     db.commit()
@@ -201,6 +216,22 @@ def import_health(
         mark_sport_habits_done_today(db, user)
     else:
         db.commit()
+
+    # Personnage (idempotent : une synchro qui renvoie les mêmes éléments ne
+    # rapporte rien de plus). Les pas sont signalés à chaque synchro : le
+    # total du jour grossit au fil des heures jusqu'à l'objectif.
+    for genre, ligne in crees:
+        personnage_hooks.action(db, user, genre, ligne)
+    for ligne in pas_vus:
+        personnage_hooks.action(db, user, "pas", ligne)
+    for ligne in pesees_vues:
+        personnage_hooks.action(db, user, "pesee", ligne)
+    for nuit in nuits_vues:
+        # Seuil du module Sommeil (import local : sleep.py importe déjà ce fichier).
+        from .sleep import SEUIL_NUIT_COMPLETE_MIN
+        if nuit.duration_min >= SEUIL_NUIT_COMPLETE_MIN:
+            personnage_hooks.evenement(db, user, "sleep_7h", nuit.id, {"dateKey": nuit.date_key})
+    personnage_hooks.habitudes(db, user)
 
     return {"ok": True, **resume}
 

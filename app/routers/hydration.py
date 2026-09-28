@@ -166,7 +166,7 @@ def add_water(
     # Seul le verre qui fait franchir l'objectif le signale : les suivants
     # du même jour n'ajoutent rien (le cahier plafonne à 1 par jour).
     if avant < objectif <= apres:
-        personnage_hooks.evenement(db, user, "hydration_goal", jour, {"totalMl": apres, "goalMl": objectif})
+        personnage_hooks.evenement(db, user, "hydration_goal", jour, {"totalMl": apres, "goalMl": objectif, "dateKey": jour})
     return {**_serialiser_log(log), "dayTotalMl": apres, "goalMl": objectif, "goalReached": apres >= objectif}
 
 
@@ -179,8 +179,13 @@ def delete_water(
     log = db.query(models.WaterLog).filter(models.WaterLog.id == log_id, models.WaterLog.user_id == user.id).first()
     if log is None:
         raise HTTPException(status_code=404, detail="Verre introuvable")
+    jour = date_key(aware(log.occurred_at))
     db.delete(log)
     db.commit()
+    # Verre saisi par erreur qui repasse le jour sous l'objectif : le point
+    # d'hydratation du jour est retiré (le niveau, lui, reste).
+    if _totaux_par_jour(_logs(db, user)).get(jour, 0) < _objectif(db, user, _reglages(db, user)):
+        personnage_hooks.retrait(db, user, "hydration_goal", jour)
 
 
 @router.get("/stats")

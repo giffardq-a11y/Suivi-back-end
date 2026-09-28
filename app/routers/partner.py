@@ -20,6 +20,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
+from ..services import personnage_hooks
 from ..services.common import now_utc, days_since, to_ms, relative_time
 
 router = APIRouter(prefix="/partner", tags=["partner"])
@@ -228,6 +229,8 @@ def send_reminder(
     text = payload.text.strip()
     if not text:
         raise HTTPException(status_code=400, detail="Message vide.")
-    db.add(models.PartnerReminder(link_id=active.id, from_user_id=user.id, text=text))
+    message = models.PartnerReminder(link_id=active.id, from_user_id=user.id, text=text)
+    db.add(message)
     db.commit()
+    personnage_hooks.evenement(db, user, "partner_encouragement", message.id)
     return {"ok": True}

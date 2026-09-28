@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
+from ..services import personnage_hooks
 from ..services.common import now_utc, to_ms
 
 router = APIRouter(tags=["profile"])
@@ -184,10 +185,12 @@ def add_weight_entry(
     db: Session = Depends(get_db),
     user: models.User = Depends(get_current_user),
 ):
-    db.add(models.WeightEntry(
+    pesee = models.WeightEntry(
         user_id=user.id, weight_kg=payload.weightKg, note=payload.note, occurred_at=now_utc(),
-    ))
+    )
+    db.add(pesee)
     db.commit()
+    personnage_hooks.action(db, user, "pesee", pesee)
     return {"ok": True}
 
 

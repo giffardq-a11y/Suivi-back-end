@@ -233,3 +233,98 @@ def test_soigneur_paliers_plus_20_pourcent(joueur, db):
     db.commit()
     stats.constater_sobriete(db, user, now=maintenant)
     assert _hp_par_source(db, user, "health_milestone") == [9.0]           # 5 × 1,5 × 1,2
+
+
+# ---------- Branchements dans les routes existantes ----------
+
+def _par_source(db, user):
+    db.expire_all()
+    resultat: dict = {}
+    for e in _evenements(db, user):
+        resultat.setdefault(e.source, {}).setdefault(e.stat, 0)
+        resultat[e.source][e.stat] += e.base_points
+    return resultat
+
+
+def test_seances_de_sport(client, joueur, db):
+    user, h = joueur()
+    assert client.post("/training/runs", json={"distanceKm": 5.2, "durationMin": 30}, headers=h).status_code == 201
+    serie = {"reps": 10, "weight": 60, "done": True}
+    seance = {"mode": "live", "durationMin": 45,
+              "exercises": [{"name": "Squat", "sets": [serie, serie]}]}
+    assert client.post("/strength-sessions", json=seance, headers=h).status_code == 201
+    plus_lourd = {**seance, "exercises": [{"name": "Squat", "sets": [serie, {**serie, "weight": 80}]}]}
+    assert client.post("/strength-sessions", json=plus_lourd, headers=h).status_code == 201
+    assert client.post("/training/other-sports", json={"sportLabel": "Escalade", "durationMin": 60},
+                       headers=h).status_code == 201
+    assert client.post("/training/other-sports", json={"sportLabel": "Yoga", "durationMin": 30},
+                       headers=h).status_code == 201
+    assert client.post("/training/flexibility", json={"activity": "etirements", "plannedDurationMin": 15,
+                                                      "durationMin": 15}, headers=h).status_code == 201
+
+    points = _par_source(db, user)
+    assert points["run"] == {"end": 5}
+    assert points["strength_session"] == {"str": 4}              # 2 séances
+    assert points["strength_volume"] == {"str": 2}               # 1 200 kg puis 1 400 kg
+    assert points["strength_pr"] == {"str": 5}                   # 80 kg > 60 kg au squat
+    assert points["cardio"] == {"end": 6}                        # escalade 60 min, pas le yoga
+    assert points["technical_sport"] == {"agi": 2}
+    assert points["flexibility_session"] == {"agi": 4}           # yoga + étirements
+
+
+def test_habitude_tenue_puis_decochee(client, joueur, db):
+    user, h = joueur()
+    habit_id = client.post("/habits", json={"label": "Lire"}, headers=h).json()["id"]
+    assert client.post(f"/habits/{habit_id}/log", headers=h).status_code == 201
+    assert _par_source(db, user) == {"habit_done": {"wil": 1}}
+    xp = _perso(db, user).total_xp
+    assert client.delete(f"/habits/{habit_id}/log", headers=h).status_code == 204
+    assert _par_source(db, user) == {}
+    assert _perso(db, user).total_xp == xp
+
+
+def test_serie_de_7_jours(joueur, db):
+    user, _ = joueur("samourai")
+    habit = models.Habit(user_id=user.id, key="lire", label="Lire")
+    db.add(habit)
+    db.commit()
+    debut = datetime(2026, 8, 1, 9, tzinfo=timezone.utc)
+    for i in range(8):
+        db.add(models.HabitLog(habit_id=habit.id, occurred_at=debut + timedelta(days=i)))
+    db.commit()
+    stats.constater_habitudes(db, user)
+    serie = _evenements(db, user, "habit_streak")
+    assert len(serie) == 1 and serie[0].base_points == 5 and serie[0].date_key == "2026-08-07"
+    assert serie[0].points == 5 * 1.5 * 1.25                     # Gardien : +25 %
+    assert len(_evenements(db, user, "habit_done")) == 8
+
+
+def test_suppression_d_une_nuit(client, joueur, db):
+    user, h = joueur()
+    fin = datetime.now(timezone.utc).replace(microsecond=0)
+    debut = fin - timedelta(hours=8)
+    nuit = client.post("/sleep", json={"startMs": int(debut.timestamp() * 1000), "endMs": int(fin.timestamp() * 1000)},
+                       headers=h).json()
+    assert _par_source(db, user) == {"sleep_7h": {"hp": 1}}
+    assert client.delete(f"/sleep/{nuit['id']}", headers=h).status_code == 204
+    assert _par_source(db, user) == {}
+
+
+def test_un_echec_du_moteur_ne_bloque_pas_l_action(client, joueur, db, monkeypatch):
+    user, h = joueur()
+
+    def panne(*args, **kwargs):
+        raise RuntimeError("panne simulée")
+
+    monkeypatch.setattr(stats, "award", panne)
+    assert client.post("/training/runs", json={"distanceKm": 3, "durationMin": 20}, headers=h).status_code == 201
+    assert client.post("/hydration", json={"amountMl": 5000}, headers=h).status_code == 201
+    assert db.query(models.Run).filter(models.Run.user_id == user.id).count() == 1
+    assert _evenements(db, user) == []
+
+
+def test_sans_personnage_les_routes_n_attribuent_rien(client, joueur, db):
+    user, h = joueur(personnage=False)
+    assert client.post("/training/runs", json={"distanceKm": 3, "durationMin": 20}, headers=h).status_code == 201
+    assert client.get("/me/dashboard", headers=h).status_code == 200
+    assert _evenements(db, user) == []

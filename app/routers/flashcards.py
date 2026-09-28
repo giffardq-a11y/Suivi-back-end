@@ -21,7 +21,8 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
-from ..services.common import aware, is_same_day, now_utc
+from ..services import personnage_hooks
+from ..services.common import aware, date_key, is_same_day, now_utc
 
 router = APIRouter(prefix="/flashcards", tags=["flashcards"])
 
@@ -179,10 +180,20 @@ def review_card(
 
     habit_marked = _mark_danish_habits(db, user)
     revues = _reviewed_today(db, user)
+    box, due_at = review.box, review.due_at
+    # Personnage : tranche de 10 cartes du jour (int +1), carte arrivée en
+    # dernière boîte (int +1, une fois par carte), habitude Danois cochée.
+    if revues and revues % 10 == 0:
+        personnage_hooks.evenement(db, user, "cards_reviewed", f"{date_key(now)}:{revues // 10}",
+                                   {"dateKey": date_key(now)})
+    if box >= MAX_BOX:
+        personnage_hooks.evenement(db, user, "card_mastered", card.id, {"dateKey": date_key(now)})
+    if habit_marked:
+        personnage_hooks.habitudes(db, user)
     return {
         "ok": True,
-        "box": review.box,
-        "next_due_at": review.due_at,
+        "box": box,
+        "next_due_at": due_at,
         "reviewed_today": revues,
         "daily_target": DAILY_REVIEW_TARGET,
         "habit_marked": habit_marked,

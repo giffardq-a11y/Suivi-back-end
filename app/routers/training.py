@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
+from ..services import personnage_hooks
 from ..services.common import now_utc, to_ms, relative_time, start_of_week, start_of_day
 from ..services.sport import (
     estimate_run_calories, estimate_strength_calories, estimate_other_sport_calories,
@@ -159,13 +160,15 @@ def add_run(
     user: models.User = Depends(get_current_user),
 ):
     calories = payload.caloriesOverride or estimate_run_calories(payload.durationMin)
-    db.add(models.Run(
+    run = models.Run(
         user_id=user.id, distance_km=payload.distanceKm, duration_min=payload.durationMin,
         calories_burned=calories, occurred_at=now_utc(),
-    ))
+    )
+    db.add(run)
     db.commit()
     increment_session_goals(db, user)
     mark_sport_habits_done_today(db, user)
+    personnage_hooks.action(db, user, "course", run)
     return {"ok": True}
 
 
@@ -176,14 +179,16 @@ def log_other_sport(
     user: models.User = Depends(get_current_user),
 ):
     calories = payload.caloriesOverride or estimate_other_sport_calories(payload.durationMin, payload.intensity)
-    db.add(models.OtherSportLog(
+    seance = models.OtherSportLog(
         user_id=user.id, sport_label=payload.sportLabel, duration_min=payload.durationMin,
         intensity=payload.intensity, distance_km=payload.distanceKm,
         calories_burned=calories, occurred_at=now_utc(),
-    ))
+    )
+    db.add(seance)
     db.commit()
     increment_session_goals(db, user)
     mark_sport_habits_done_today(db, user)
+    personnage_hooks.action(db, user, "autre_sport", seance)
     return {"ok": True}
 
 
@@ -199,16 +204,18 @@ def log_flexibility_session(
         raise HTTPException(status_code=422, detail=f"Mode inconnu : {payload.mode}")
     if payload.durationMin <= 0:
         raise HTTPException(status_code=422, detail="Durée pratiquée nulle : rien à enregistrer.")
-    db.add(models.FlexibilitySession(
+    seance = models.FlexibilitySession(
         user_id=user.id, activity=payload.activity, zone=payload.zone, yoga_type=payload.yogaType,
         mode=payload.mode, planned_duration_min=payload.plannedDurationMin,
         duration_min=payload.durationMin, video_ids=payload.videoIds,
         calories_burned=estimate_flexibility_calories(payload.activity, payload.yogaType, payload.durationMin),
         occurred_at=now_utc(),
-    ))
+    )
+    db.add(seance)
     db.commit()
     increment_session_goals(db, user)
     mark_sport_habits_done_today(db, user)
+    personnage_hooks.action(db, user, "souplesse", seance)
     return {"ok": True}
 
 
@@ -311,14 +318,17 @@ def log_strength_session(
     user: models.User = Depends(get_current_user),
 ):
     calories = payload.caloriesBurned or estimate_strength_calories(payload.mode, payload.durationMin)
-    db.add(models.StrengthSession(
+    seance = models.StrengthSession(
         user_id=user.id, template_id=payload.templateId, template_name=payload.templateName,
         mode=payload.mode, duration_min=payload.durationMin, calories_burned=calories,
         exercises=payload.exercises, occurred_at=now_utc(),
-    ))
+    )
+    db.add(seance)
     db.commit()
     increment_session_goals(db, user)
     mark_sport_habits_done_today(db, user)
+    # Séance (str +2), volume soulevé, records personnels.
+    personnage_hooks.action(db, user, "muscu", seance)
     return {"ok": True}
 
 
