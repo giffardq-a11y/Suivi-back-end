@@ -47,6 +47,9 @@ class User(Base):
     display_name = Column(String, nullable=False, default="")
     timezone = Column(String, nullable=False, default="Europe/Paris")
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+    # Modules choisis (clés de app/modules.py). NULL = tout actif, voir
+    # modules.modules_actifs.
+    enabled_modules = Column(JSON, nullable=True)
 
     substances = relationship("Substance", back_populates="user", cascade="all, delete-orphan")
     habits = relationship("Habit", back_populates="user", cascade="all, delete-orphan")

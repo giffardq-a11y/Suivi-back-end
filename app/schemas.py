@@ -12,6 +12,9 @@ class SignupRequest(BaseModel):
     email: EmailStr
     password: str = Field(min_length=8)
     display_name: str = ""
+    # Modules cochés à l'onboarding ; absent (ancienne version de l'app) =
+    # tous les modules.
+    modules: Optional[List[str]] = None
 
 
 class LoginRequest(BaseModel):
@@ -129,6 +132,7 @@ class RewardBudgetOut(BaseModel):
 
 class DashboardOut(BaseModel):
     display_name: str
+    enabled_modules: List[str] = []
     date: str
     streaks: List[StreakOut]
     savings: SavingsOut
