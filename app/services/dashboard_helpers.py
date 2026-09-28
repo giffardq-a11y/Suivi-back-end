@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from sqlalchemy.orm import Session
 
 from .. import models
+from ..modules import est_actif, modules_actifs
 from .streaks import current_streak_days, personal_best_days
 from .savings import compute_savings
 from .rewards import compute_reward_budget
@@ -28,95 +29,106 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
     now = datetime.now(timezone.utc)
     today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
 
-    streaks = [
-        {
-            "substance_id": s.id, "label": s.label, "category": s.category.value,
-            "days": current_streak_days(db, s, now=now),
-            "personal_best_days": personal_best_days(db, s, now=now),
-        }
-        for s in user.substances
-    ]
+    # Un module désactivé masque ses sections (les données restent en base,
+    # voir modules.py) : chaque bloc ci-dessous est gardé par est_actif().
+    modules_utilisateur = modules_actifs(user)
 
-    total_savings, delta_week = compute_savings(db, user, now=now)
+    streaks = []
+    total_savings, delta_week = 0.0, 0.0
+    if est_actif(user, "addictions"):
+        streaks = [
+            {
+                "substance_id": s.id, "label": s.label, "category": s.category.value,
+                "days": current_streak_days(db, s, now=now),
+                "personal_best_days": personal_best_days(db, s, now=now),
+            }
+            for s in user.substances
+        ]
+        total_savings, delta_week = compute_savings(db, user, now=now)
 
     habits_today = []
-    semaine_debut = start_of_week(now)
-    for habit in user.habits:
-        if not habit.active:
-            continue
-        # occurred_at revient naif depuis SQLite (DateTime(timezone=True) n'y
-        # est pas vraiment tz-aware, contrairement a Postgres/TIMESTAMPTZ en
-        # prod) -- meme garde que _days_between() dans services/streaks.py.
-        done_today = any(
-            (log.occurred_at if log.occurred_at.tzinfo else log.occurred_at.replace(tzinfo=timezone.utc)) >= today_start
-            for log in habit.logs
-        )
-        # Une habitude n'apparaît à l'Accueil que les jours où elle
-        # s'applique : sinon une natation du mardi traîne dans la liste du
-        # jour toute la semaine et compte comme ratée six jours sur sept.
-        jours = jours_actifs(habit)
-        if jours is not None and now.weekday() not in jours:
-            continue
+    if est_actif(user, "habitudes"):
+        semaine_debut = start_of_week(now)
+        for habit in user.habits:
+            if not habit.active:
+                continue
+            # occurred_at revient naif depuis SQLite (DateTime(timezone=True) n'y
+            # est pas vraiment tz-aware, contrairement a Postgres/TIMESTAMPTZ en
+            # prod) -- meme garde que _days_between() dans services/streaks.py.
+            done_today = any(
+                (log.occurred_at if log.occurred_at.tzinfo else log.occurred_at.replace(tzinfo=timezone.utc)) >= today_start
+                for log in habit.logs
+            )
+            # Une habitude n'apparaît à l'Accueil que les jours où elle
+            # s'applique : sinon une natation du mardi traîne dans la liste du
+            # jour toute la semaine et compte comme ratée six jours sur sept.
+            jours = jours_actifs(habit)
+            if jours is not None and now.weekday() not in jours:
+                continue
 
-        # Progression de la semaine : une habitude visée 2 fois par semaine ne
-        # se lit pas en « fait / pas fait aujourd'hui ».
-        faites = sum(
-            1 for log in habit.logs
-            if (log.occurred_at if log.occurred_at.tzinfo else log.occurred_at.replace(tzinfo=timezone.utc)) >= semaine_debut
-        )
-        cible = habit.weekly_target or 7
-        habits_today.append({
-            "id": habit.id, "label": habit.label,
-            "target": effective_habit_target(habit, now), "done_today": done_today,
-            "done_this_week": faites, "weekly_target": cible, "weekly": cible < 7,
-            "days_of_week": habit.days_of_week,
-        })
+            # Progression de la semaine : une habitude visée 2 fois par semaine ne
+            # se lit pas en « fait / pas fait aujourd'hui ».
+            faites = sum(
+                1 for log in habit.logs
+                if (log.occurred_at if log.occurred_at.tzinfo else log.occurred_at.replace(tzinfo=timezone.utc)) >= semaine_debut
+            )
+            cible = habit.weekly_target or 7
+            habits_today.append({
+                "id": habit.id, "label": habit.label,
+                "target": effective_habit_target(habit, now), "done_today": done_today,
+                "done_this_week": faites, "weekly_target": cible, "weekly": cible < 7,
+                "days_of_week": habit.days_of_week,
+            })
 
     # Séances de musculation programmées : elles n'apparaissaient que dans le
     # fil, alors qu'une séance à heure fixe est un rendez-vous du jour au même
     # titre qu'une habitude.
     planned_workouts = []
-    modeles = (
-        db.query(models.WorkoutTemplate)
-        .filter(models.WorkoutTemplate.user_id == user.id,
-                models.WorkoutTemplate.scheduled_time.isnot(None))
-        .all()
-    )
-    for modele in modeles:
-        faite = (
-            db.query(models.StrengthSession)
-            .filter(models.StrengthSession.user_id == user.id,
-                    models.StrengthSession.template_id == modele.id)
+    if est_actif(user, "sport"):
+        modeles = (
+            db.query(models.WorkoutTemplate)
+            .filter(models.WorkoutTemplate.user_id == user.id,
+                    models.WorkoutTemplate.scheduled_time.isnot(None))
             .all()
         )
-        planned_workouts.append({
-            "id": modele.id,
-            "label": modele.name,
-            "scheduled_time": modele.scheduled_time,
-            "done_today": any(is_same_day(s.occurred_at, now) for s in faite),
-        })
-    planned_workouts.sort(key=lambda w: w["scheduled_time"] or "")
+        for modele in modeles:
+            faite = (
+                db.query(models.StrengthSession)
+                .filter(models.StrengthSession.user_id == user.id,
+                        models.StrengthSession.template_id == modele.id)
+                .all()
+            )
+            planned_workouts.append({
+                "id": modele.id,
+                "label": modele.name,
+                "scheduled_time": modele.scheduled_time,
+                "done_today": any(is_same_day(s.occurred_at, now) for s in faite),
+            })
+        planned_workouts.sort(key=lambda w: w["scheduled_time"] or "")
 
     # Bilan calorique du jour, repris du fil : mangé, dépensé en sport, net et
-    # reste à manger selon le budget du profil.
-    profil = next((p for p in [getattr(user, "profile", None)] if p), None)
-    if profil is None:
-        profil = db.query(models.Profile).filter(models.Profile.user_id == user.id).first()
-    budget = profil.daily_calorie_budget if profil else 2000
-    repas_du_jour = [
-        m for m in db.query(models.Meal).filter(models.Meal.user_id == user.id).all()
-        if is_same_day(m.occurred_at, now)
-    ]
-    consomme = sum(m.calories for m in repas_du_jour)
-    depense = calories_burned_on(db, user.id, now)
-    calorie_balance = {
-        "budget": budget,
-        "consumed": consomme,
-        "burned": depense,
-        "net": consomme - depense,
-        "remaining": budget - (consomme - depense),
-        "meals_logged": len(repas_du_jour),
-    }
+    # reste à manger selon le budget du profil. Section rattachée à la
+    # nutrition (repas) : sans ce module, pas de bilan à afficher.
+    calorie_balance = None
+    if est_actif(user, "nutrition"):
+        profil = next((p for p in [getattr(user, "profile", None)] if p), None)
+        if profil is None:
+            profil = db.query(models.Profile).filter(models.Profile.user_id == user.id).first()
+        budget = profil.daily_calorie_budget if profil else 2000
+        repas_du_jour = [
+            m for m in db.query(models.Meal).filter(models.Meal.user_id == user.id).all()
+            if is_same_day(m.occurred_at, now)
+        ]
+        consomme = sum(m.calories for m in repas_du_jour)
+        depense = calories_burned_on(db, user.id, now)
+        calorie_balance = {
+            "budget": budget,
+            "consumed": consomme,
+            "burned": depense,
+            "net": consomme - depense,
+            "remaining": budget - (consomme - depense),
+            "meals_logged": len(repas_du_jour),
+        }
 
     active_goals = [g for g in user.goals if g.completed_at is None]
     top_goal = max(active_goals, key=lambda g: (g.current_value / g.target_value if g.target_value else 0), default=None)
@@ -130,6 +142,7 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
 
     return {
         "display_name": user.display_name,
+        "enabled_modules": modules_utilisateur,
         "date": now.date().isoformat(),
         "streaks": streaks,
         "savings": {"total": total_savings, "delta_week": delta_week, "currency": "EUR"},
