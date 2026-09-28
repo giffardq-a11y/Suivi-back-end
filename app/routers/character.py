@@ -1,6 +1,7 @@
 """Module Personnage : création, lecture, apparence, changement de classe,
 historique des points (cahier : mobile/docs/tanren-rpg/PROMPT-module-personnage.md
-§9, première version sans boutique, équipement, coffres ni quêtes).
+§9). Boutique, équipement, coffres et quêtes du jour : fin du fichier, mécanique
+dans services/equipement.py.
 
 Le moteur (XP, stats, paliers) est dans services/stats.py ; la configuration
 (univers, classes, noms de stats, rangs) dans app/data/personnage/config.json.
@@ -21,7 +22,7 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
-from ..services import personnage_hooks, stats
+from ..services import equipement, personnage_hooks, stats
 from ..services.common import aware, date_key, now_utc, to_ms
 
 router = APIRouter(prefix="/character", tags=["character"])
@@ -157,6 +158,8 @@ def get_config(user: models.User = Depends(get_current_user)):
         },
         "ranks": [{"rank": r["rang"], "name": r["nom"], "min_level": r["niveau_min"]} for r in conf["rangs"]],
         "class_change_days": conf["changement_classe"]["delai_jours"],
+        # Probabilités de rareté à l'ouverture d'un coffre (§5, transparence).
+        "chest_odds": equipement.probabilites(),
     }
 
 
@@ -258,3 +261,73 @@ def get_events(
     for l in lignes:
         l["points"] = round(l["points"], 2)
     return {"days": days, "from": debut, "events": lignes}
+
+
+# ---------- Boutique, équipement, coffres, quêtes du jour ----------
+
+class EquipIn(BaseModel):
+    slot: str
+    item_key: str
+
+
+def _appel(fonction, *args):
+    """Traduit les erreurs métier du service en réponses HTTP."""
+    try:
+        return fonction(*args)
+    except equipement.ErreurEquipement as e:
+        raise HTTPException(status_code=e.statut, detail=e.message)
+
+
+@router.get("/catalog")
+def get_catalog(
+    universe: str | None = Query(None),
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    """Catalogue d'un univers (défaut : celui du personnage), avec pour chaque
+    objet possédé / équipé / raison du verrou (rang, classe)."""
+    perso = _mon_personnage(db, user)
+    return _appel(equipement.catalogue_pour, db, perso, universe or perso.universe)
+
+
+@router.post("/shop/buy/{item_key}", status_code=201)
+def buy_item(item_key: str, db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
+    """402 éclats insuffisants, 409 déjà possédé, 422 objet inconnu, d'un
+    autre univers, ou rang / classe non respectés."""
+    return _appel(equipement.acheter, db, _mon_personnage(db, user), item_key)
+
+
+@router.get("/equipment")
+def get_equipment(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
+    return equipement.equipement_de(db, _mon_personnage(db, user))
+
+
+@router.put("/equip")
+def equip_item(payload: EquipIn, db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
+    """403 objet non possédé (dans l'univers courant), 422 emplacement qui ne
+    correspond pas, objet inconnu, ou rang / classe non respectés."""
+    return _appel(equipement.equiper, db, _mon_personnage(db, user), payload.slot, payload.item_key)
+
+
+@router.delete("/equip/{slot}")
+def unequip_slot(slot: str, db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
+    return _appel(equipement.desequiper, db, _mon_personnage(db, user), slot)
+
+
+@router.get("/chests")
+def get_chests(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
+    return equipement.lister_coffres(db, _mon_personnage(db, user))
+
+
+@router.post("/chests/{chest_id}/open")
+def open_chest(chest_id: str, db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
+    """404 coffre inconnu, 409 déjà ouvert."""
+    return _appel(equipement.ouvrir, db, _mon_personnage(db, user), chest_id)
+
+
+@router.get("/quests/today")
+def get_quests_today(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
+    """Les 3 quêtes du jour (tirées au premier appel, stables ensuite), avec
+    leur état : validées automatiquement quand l'action est faite."""
+    perso = _mon_personnage(db, user)
+    return equipement.quetes_du_jour(db, user, perso)

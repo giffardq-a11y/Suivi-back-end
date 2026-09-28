@@ -163,7 +163,14 @@ def award(db: Session, user: models.User, source: str, source_id, date_key: str 
           payload: dict | None = None, *, commit: bool = True) -> dict | None:
     """Attribue les points d'une action. None si l'utilisateur n'a pas de
     personnage (ou source inconnue du barème). Sinon :
-    {points_par_stat, xp, level, level_up, new_rank, milestones}."""
+    {points_par_stat, xp, level, level_up, new_rank, milestones, chests,
+    quests_done}.
+
+    Bonus : capacité passive de la classe + bonus d'équipement de la stat
+    (déjà plafonné à +15 % par services/equipement.bonus_equipement),
+    additionnés ; le total va dans stat_events.bonus_pct. Coffres (rang,
+    série) et quêtes du jour : services/equipement.apres_award."""
+    from . import equipement
     perso = personnage(db, user)
     if perso is None:
         return None
@@ -178,6 +185,7 @@ def award(db: Session, user: models.User, source: str, source_id, date_key: str 
     passif = arch["passif"]
     bonus = float(passif["bonus_pct"]) if source in passif.get("sources", []) else 0.0
     xp_par_point = config()["xp_par_point"]
+    bonus_equip = equipement.bonus_equipement(db, perso)
 
     points_par_stat: dict[str, float] = {}
     xp_total = 0
@@ -200,11 +208,12 @@ def award(db: Session, user: models.User, source: str, source_id, date_key: str 
         if base <= 0:
             continue
         mult = float(arch["coefficients"].get(stat, 1.0))
-        points = round(base * mult * (1 + bonus / 100), 4)
+        bonus_stat = bonus + bonus_equip.get(stat, 0.0)
+        points = round(base * mult * (1 + bonus_stat / 100), 4)
         xp = round(points * xp_par_point)
         db.add(models.StatEvent(
             user_id=user.id, source=source, source_id=source_id, stat=stat, base_points=base,
-            class_mult=mult, bonus_pct=bonus, points=points, xp=xp, date_key=jour, created_at=now_utc(),
+            class_mult=mult, bonus_pct=bonus_stat, points=points, xp=xp, date_key=jour, created_at=now_utc(),
         ))
         points_par_stat[stat] = round(points, 2)
         xp_total += xp
@@ -212,9 +221,11 @@ def award(db: Session, user: models.User, source: str, source_id, date_key: str 
     milestones = [payload["milestone"]] if source == "health_milestone" and payload.get("milestone") else []
     if not points_par_stat:
         return {"points_par_stat": {}, "xp": 0, "level": perso.level, "level_up": False,
-                "new_rank": None, "milestones": []}
+                "new_rank": None, "milestones": [], "chests": [], "quests_done": []}
     db.flush()
+    ancien_rang = rang_pour_niveau(perso.level or 1)["rang"]
     resultat = {"points_par_stat": points_par_stat, **_crediter(perso, xp_total), "milestones": milestones}
+    resultat.update(equipement.apres_award(db, user, perso, source, source_id, jour, payload, ancien_rang))
     if commit:
         db.commit()
     return resultat
@@ -641,7 +652,7 @@ def valeurs_stats(db: Session, perso: models.Character, now: datetime | None = N
     """Valeur affichée de chaque stat (§3.4) et indicateur de forme.
 
     Points pondérés recalculés avec le coefficient de la classe ACTUELLE
-    (base × (1 + bonus passif) × coefficient) : changer de classe garde les
+    (base × (1 + bonus passif et d'équipement) × coefficient) : changer de classe garde les
     points et ne change que la valeur affichée, comme le veut le cahier.
     Forme : points des 7 derniers jours comparés à la moyenne hebdomadaire
     des 4 semaines précédentes."""
