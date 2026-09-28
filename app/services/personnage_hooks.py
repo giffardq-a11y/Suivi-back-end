@@ -28,6 +28,8 @@ Fonctions :
   - habitudes(db, user)  validations d'habitudes récentes et séries.
   - constater(db, user)  constats à la lecture : journées sans tabac/alcool,
     paliers de santé, habitudes cochées automatiquement.
+  - rattrapage(db, user)  à la création du personnage : tout l'historique
+    rejoué à travers les mêmes règles (stats.rattraper).
 
 Sources émises (barème complet dans app/data/personnage/config.json) :
   - 'hydration_goal'       objectif d'eau du jour atteint (source_id = 'YYYY-MM-DD')
@@ -99,6 +101,11 @@ def habitudes(db: Session, user: models.User) -> list[dict]:
     from datetime import timedelta
     depuis = (now_utc() - timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
     return _isoler("habitudes", db, stats.constater_habitudes, db, user, depuis, defaut=[])
+
+
+def rattrapage(db: Session, user: models.User) -> dict | None:
+    """Historique existant rejoué à la création du personnage (idempotent)."""
+    return _isoler("rattrapage", db, stats.rattraper, db, user)
 
 
 def constater(db: Session, user: models.User) -> list[dict]:

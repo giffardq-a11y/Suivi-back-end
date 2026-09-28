@@ -4,15 +4,17 @@ load_dotenv()  # doit s'exécuter avant tout import qui lit os.environ (integrat
 from fastapi import FastAPI
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 import os
+from pathlib import Path
 
 from .migrate import run_migrations
 from .routers import (
     auth, dashboard, entries, habits, meal_photo, integrations, food_search, recipes,
     bad_habits, goals, substances, profile, cycle, training, diet, journal_stats, settings,
     partner, flashcards, health_sync, pantry, compte, legal,
-    hydration, sleep, mood, budget,
+    hydration, sleep, mood, budget, character,
 )
 
 # Schéma à jour avant tout accès à la base (migrations Alembic, voir
@@ -174,6 +176,12 @@ app.include_router(hydration.router)
 app.include_router(sleep.router)
 app.include_router(mood.router)
 app.include_router(budget.router)
+app.include_router(character.router)
+
+# Fichiers statiques publics : illustrations du module Personnage
+# (/static/personnages/{univers}/{classe}_r{rang}.webp), chargées à la demande
+# par l'app et mises en cache, plutôt qu'embarquées dans l'APK.
+app.mount("/static", StaticFiles(directory=Path(__file__).resolve().parent / "static"), name="static")
 
 
 @app.get("/health")

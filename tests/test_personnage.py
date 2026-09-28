@@ -328,3 +328,114 @@ def test_sans_personnage_les_routes_n_attribuent_rien(client, joueur, db):
     assert client.post("/training/runs", json={"distanceKm": 3, "durationMin": 20}, headers=h).status_code == 201
     assert client.get("/me/dashboard", headers=h).status_code == 200
     assert _evenements(db, user) == []
+
+
+# ---------- Endpoints /character ----------
+
+def test_404_sans_personnage_et_config(client, nouveau_compte):
+    _, _, h, _ = nouveau_compte()
+    assert client.get("/character", headers=h).status_code == 404
+    assert client.get("/character/events", headers=h).status_code == 404
+    assert client.get("/character/config").status_code in (401, 403)
+    conf = client.get("/character/config", headers=h).json()
+    anime = next(u for u in conf["universes"] if u["key"] == "anime")
+    assert anime["available"] is True
+    assert [c["key"] for c in anime["classes"]] == ["combattant", "ninja", "soigneur", "moine", "stratege", "samourai"]
+    assert [u["key"] for u in conf["universes"] if not u["available"]] == ["medieval", "fantasy", "moderne", "sf"]
+    assert all(abs(sum(a["coefficients"].values()) - 8.0) < 1e-9 for a in conf["archetypes"].values())
+    assert [r["name"] for r in conf["ranks"]] == ["Apprenti", "Initié", "Guerrier", "Maître", "Légende"]
+
+
+def test_creation_validations(client, nouveau_compte):
+    _, _, h, _ = nouveau_compte()
+    base = {"universe": "anime", "class_key": "ninja", "name": "Kaze"}
+    assert client.post("/character", json={**base, "universe": "medieval", "class_key": "archer"},
+                       headers=h).status_code == 422
+    assert client.post("/character", json={**base, "class_key": "chevalier"}, headers=h).status_code == 422
+    assert client.post("/character", json={**base, "name": "   "}, headers=h).status_code == 422
+    assert client.post("/character", json={**base, "name": "x" * 31}, headers=h).status_code == 422
+    r = client.post("/character", json={**base, "appearance": {"hair": "court", "hairColor": "#ff00aa"}}, headers=h)
+    assert r.status_code == 201, r.text
+    perso = r.json()
+    assert perso["class_name"] == "Ninja" and perso["archetype"] == "eclaireur"
+    assert perso["level"] == 1 and perso["rank"] == 1 and perso["rank_name"] == "Apprenti"
+    assert perso["image"] == "/static/personnages/anime/ninja_r1.webp"
+    assert perso["appearance"]["hairColor"] == "#ff00aa"
+    assert perso["xp_prochain"] == 80 and perso["class_change_available_at"] is None
+    valeurs = {s["key"]: s for s in perso["stats"]}
+    assert (valeurs["end"]["value"], valeurs["agi"]["value"], valeurs["hp"]["value"]) == (15, 12, 10)
+    assert valeurs["end"]["label"] == "Endurance" and valeurs["spi"]["label"] == "Ki"
+    assert client.post("/character", json=base, headers=h).status_code == 409
+    assert client.get(perso["image"]).status_code == 200
+
+
+def test_creation_rejoue_l_historique(client, nouveau_compte, db):
+    _, _, h, uid = nouveau_compte()
+    user = db.query(models.User).filter(models.User.id == uid).one()
+    for _ in range(2):
+        assert client.post("/training/runs", json={"distanceKm": 10, "durationMin": 60}, headers=h).status_code == 201
+    # Une des deux courses date d'hier : les plafonds suivent la date d'origine.
+    course = db.query(models.Run).filter(models.Run.user_id == uid).first()
+    course.occurred_at = course.occurred_at - timedelta(days=1)
+    db.commit()
+    habit_id = client.post("/habits", json={"label": "Lire"}, headers=h).json()["id"]
+    client.post(f"/habits/{habit_id}/log", headers=h)
+    assert client.post("/mood", json={"mood": 4}, headers=h).status_code == 201
+    # Rien n'est attribué sans personnage.
+    assert _evenements(db, user) == []
+
+    r = client.post("/character", json={"universe": "anime", "class_key": "samourai", "name": "Ren"}, headers=h)
+    assert r.status_code == 201
+    points = _par_source(db, user)
+    assert points["run"] == {"end": 20}                  # 10 + 10, deux jours différents
+    assert points["habit_done"] == {"wil": 1}
+    assert points["mood_entry"] == {"spi": 1}
+    perso = r.json()
+    assert perso["total_xp"] == sum(e.xp for e in _evenements(db, user)) and perso["total_xp"] > 0
+    # Rejouer le rattrapage ne rapporte rien de plus.
+    nb = len(_evenements(db, user))
+    stats.rattraper(db, user)
+    assert len(_evenements(db, user)) == nb
+    assert client.get("/character", headers=h).json()["total_xp"] == perso["total_xp"]
+
+    evenements = client.get("/character/events?days=7", headers=h).json()["events"]
+    assert {(e["stat"]) for e in evenements} == {"end", "wil", "spi"}
+    assert sum(e["xp"] for e in evenements) == perso["total_xp"]
+
+
+def test_changement_de_classe_limite(client, nouveau_compte, db):
+    _, _, h, uid = nouveau_compte()
+    client.post("/character", json={"universe": "anime", "class_key": "combattant", "name": "Taro"}, headers=h)
+    user = db.query(models.User).filter(models.User.id == uid).one()
+    stats.award(db, user, "strength_session", "s", JOUR)             # 2 points de base en force
+    force = lambda p: next(s for s in p["stats"] if s["key"] == "str")
+    avant = client.get("/character", headers=h).json()
+    assert force(avant)["points"] == 3.0 and force(avant)["value"] == 15 + round(4 * 3 ** 0.5)
+
+    # Premier changement gratuit : les points restent, la valeur est recalculée.
+    r = client.put("/character/class", json={"class_key": "stratege"}, headers=h)
+    assert r.status_code == 200
+    apres = r.json()
+    assert apres["class_name"] == "Stratège" and apres["total_xp"] == avant["total_xp"]
+    assert force(apres)["points"] == 1.4 and force(apres)["value"] == 10 + round(4 * 1.4 ** 0.5)
+    assert apres["class_change_available_at"] is not None
+
+    refus = client.put("/character/class", json={"class_key": "ninja"}, headers=h)
+    assert refus.status_code == 409 and "available_date" in refus.json()["detail"]
+    assert client.put("/character/class", json={"class_key": "chevalier"}, headers=h).status_code == 422
+
+    # 30 jours plus tard, c'est de nouveau possible.
+    perso = _perso(db, user)
+    perso.class_changed_at = datetime.now(timezone.utc) - timedelta(days=31)
+    db.commit()
+    assert client.put("/character/class", json={"class_key": "ninja"}, headers=h).status_code == 200
+
+
+def test_apparence(client, nouveau_compte):
+    _, _, h, _ = nouveau_compte()
+    assert client.put("/character/appearance", json={"appearance": {}}, headers=h).status_code == 404
+    client.post("/character", json={"universe": "anime", "class_key": "moine", "name": "Sora"}, headers=h)
+    r = client.put("/character/appearance", json={"appearance": {"skin": 3, "glasses": True}}, headers=h)
+    assert r.status_code == 200 and r.json()["appearance"] == {"skin": 3, "glasses": True}
+    trop = {"appearance": {"note": "x" * 5000}}
+    assert client.put("/character/appearance", json=trop, headers=h).status_code == 422
