@@ -886,7 +886,7 @@ class SavingsTransfer(Base):
 # ---------------------------------------------------------------------------
 # Module Personnage (mobile/docs/tanren-rpg/PROMPT-module-personnage.md §9).
 # Première version : personnage, événements de stats, paliers de santé.
-# Boutique, inventaire, équipement, coffres et quêtes viendront ensuite.
+# Boutique, inventaire, équipement, coffres et quêtes : plus bas (migration 0023).
 # Migration 0022.
 # ---------------------------------------------------------------------------
 
@@ -922,7 +922,8 @@ class StatEvent(Base):
     de table cache des stats : la somme de ces lignes suffit.
 
     base_points : points du barème après plafonds ; class_mult : coefficient
-    de la classe au moment du gain ; bonus_pct : capacité passive ; points =
+    de la classe au moment du gain ; bonus_pct : capacité passive + bonus
+    d'équipement (plafonné à 15 %, services/equipement.py) ; points =
     base × coefficient × (1 + bonus). date_key : jour de l'action d'origine
     (pas celui du calcul), c'est lui qui porte les plafonds journaliers."""
     __tablename__ = "stat_events"
@@ -956,3 +957,68 @@ class HealthMilestone(Base):
     quit_date = Column(String, nullable=False)       # 'YYYY-MM-DDTHH:MM' (UTC)
     earned_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
     ratio = Column(Float, nullable=False, default=1.0)
+
+
+# ---------------------------------------------------------------------------
+# Module Personnage, suite : inventaire, équipement, coffres, quêtes du jour
+# (§5-6 du cahier). Catalogue : app/data/personnage/catalogue_equipement.json ;
+# mécanique : services/equipement.py. Migration 0023.
+# ---------------------------------------------------------------------------
+
+
+class InventoryItem(Base):
+    """Objet possédé. L'inventaire est tenu par univers : changer d'univers
+    ne fait rien perdre, on retrouve ses objets en y revenant. universe est
+    celui de l'objet (redondant avec la clé, gardé pour filtrer simplement)."""
+    __tablename__ = "inventory_items"
+    __table_args__ = (UniqueConstraint("user_id", "universe", "item_key", name="uq_inventory_items_objet"),)
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    universe = Column(String, nullable=False)
+    item_key = Column(String, nullable=False)
+    source = Column(String, nullable=False)          # 'shop' | 'chest' | 'rank' | 'starter'
+    acquired_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class EquippedItem(Base):
+    """Un objet par emplacement et par univers."""
+    __tablename__ = "equipped_items"
+    __table_args__ = (UniqueConstraint("user_id", "universe", "slot", name="uq_equipped_items_slot"),)
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    universe = Column(String, nullable=False)
+    slot = Column(String, nullable=False)            # 'tete' ... 'fond' (catalogue)
+    item_key = Column(String, nullable=False)
+
+
+class Chest(Base):
+    """Coffre gagné (jamais acheté). ref rend la création idempotente : rang
+    atteint ('2'), série d'habitude (source_id du stat_event habit_streak),
+    semaine ('2026-09-21', lundi). contents : NULL tant que le coffre est
+    fermé, puis {"shards": n, "item_key": clé | null}."""
+    __tablename__ = "chests"
+    __table_args__ = (UniqueConstraint("user_id", "kind", "ref", name="uq_chests_ref"),)
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    kind = Column(String, nullable=False)            # 'rank' | 'streak_7' | 'streak_30' | 'streak_100' | 'weekly'
+    ref = Column(String, nullable=False)
+    earned_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    opened_at = Column(DateTime(timezone=True), nullable=True)
+    contents = Column(JSON, nullable=True)
+
+
+class DailyQuest(Base):
+    """Quête du jour tirée pour un utilisateur (3 par jour). done_at : quand
+    elle a été constatée faite (son XP est versée à ce moment, une fois)."""
+    __tablename__ = "daily_quests"
+    __table_args__ = (UniqueConstraint("user_id", "date_key", "quest_key", name="uq_daily_quests_jour"),)
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    date_key = Column(String, nullable=False)        # 'YYYY-MM-DD'
+    quest_key = Column(String, nullable=False)       # clé d'un modèle (config.json, « quetes »)
+    xp = Column(Integer, nullable=False)
+    done_at = Column(DateTime(timezone=True), nullable=True)
