@@ -33,7 +33,7 @@
     },
     "fantasy": {
       "nom": "Fantasy",
-      "disponible": false,
+      "disponible": true,
       "stats": {"hp": "PV", "end": "Endurance", "str": "Force", "agi": "Agilité", "int": "Intelligence", "spi": "Mana", "wil": "Volonté", "cha": "Charisme"},
       "classes": [
         {"cle": "barbare", "nom": "Barbare", "archetype": "colosse"},
