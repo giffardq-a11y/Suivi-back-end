@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "_note": "Configuration du module Personnage (cahier : mobile/docs/tanren-rpg/PROMPT-module-personnage.md, sections 2 à 4). Lue par app/services/stats.py. Les plafonds du barème sont exprimés en POINTS DE BASE (avant coefficient de classe et capacité passive) : « 3 records par jour » à +5 = plafond_jour 15.",
+
+  "stats": ["hp", "end", "str", "agi", "int", "spi", "wil", "cha"],
+
+  "univers": {
+    "anime": {
+      "nom": "Anime",
+      "disponible": true,
+      "stats": {"hp": "PV", "end": "Endurance", "str": "Force", "agi": "Vitesse", "int": "Technique", "spi": "Ki", "wil": "Volonté", "cha": "Aura"},
+      "classes": [
+        {"cle": "combattant", "nom": "Combattant", "archetype": "colosse"},
+        {"cle": "ninja", "nom": "Ninja", "archetype": "eclaireur"},
+        {"cle": "soigneur", "nom": "Soigneur", "archetype": "soigneur"},
+        {"cle": "moine", "nom": "Moine du ki", "archetype": "mystique"},
+        {"cle": "stratege", "nom": "Stratège", "archetype": "erudit"},
+        {"cle": "samourai", "nom": "Samouraï", "archetype": "gardien"}
+      ]
+    },
+    "medieval": {
+      "nom": "Médiéval",
+      "disponible": false,
+      "stats": {"hp": "Vitalité", "end": "Endurance", "str": "Force", "agi": "Dextérité", "int": "Savoir", "spi": "Foi", "wil": "Honneur", "cha": "Prestige"},
+      "classes": [
+        {"cle": "chevalier", "nom": "Chevalier", "archetype": "colosse"},
+        {"cle": "archer", "nom": "Archer", "archetype": "eclaireur"},
+        {"cle": "herboriste", "nom": "Herboriste", "archetype": "soigneur"},
+        {"cle": "moine", "nom": "Moine", "archetype": "mystique"},
+        {"cle": "erudit", "nom": "Érudit", "archetype": "erudit"},
+        {"cle": "garde_royal", "nom": "Garde royal", "archetype": "gardien"}
+      ]
+    },
+    "fantasy": {
+      "nom": "Fantasy",
+      "disponible": false,
+      "stats": {"hp": "PV", "end": "Endurance", "str": "Force", "agi": "Agilité", "int": "Intelligence", "spi": "Mana", "wil": "Volonté", "cha": "Charisme"},
+      "classes": [
+        {"cle": "barbare", "nom": "Barbare", "archetype": "colosse"},
+        {"cle": "rodeur", "nom": "Rôdeur", "archetype": "eclaireur"},
+        {"cle": "druide", "nom": "Druide", "archetype": "soigneur"},
+        {"cle": "clerc", "nom": "Clerc", "archetype": "mystique"},
+        {"cle": "mage", "nom": "Mage", "archetype": "erudit"},
+        {"cle": "paladin", "nom": "Paladin", "archetype": "gardien"}
+      ]
+    },
+    "moderne": {
+      "nom": "Moderne",
+      "disponible": false,
+      "stats": {"hp": "Santé", "end": "Cardio", "str": "Force", "agi": "Mobilité", "int": "Culture", "spi": "Sérénité", "wil": "Discipline", "cha": "Influence"},
+      "classes": [
+        {"cle": "athlete", "nom": "Athlète", "archetype": "colosse"},
+        {"cle": "traceur", "nom": "Traceur", "archetype": "eclaireur"},
+        {"cle": "yogi", "nom": "Yogi", "archetype": "soigneur"},
+        {"cle": "meditant", "nom": "Méditant", "archetype": "mystique"},
+        {"cle": "chercheur", "nom": "Chercheur", "archetype": "erudit"},
+        {"cle": "pompier", "nom": "Pompier", "archetype": "gardien"}
+      ]
+    },
+    "sf": {
+      "nom": "Science-fiction",
+      "disponible": false,
+      "stats": {"hp": "Intégrité", "end": "Énergie", "str": "Puissance", "agi": "Réflexes", "int": "Données", "spi": "Psi", "wil": "Protocole", "cha": "Réseau"},
+      "classes": [
+        {"cle": "exo_soldat", "nom": "Exo-soldat", "archetype": "colosse"},
+        {"cle": "pilote_stellaire", "nom": "Pilote stellaire", "archetype": "eclaireur"},
+        {"cle": "bio_medic", "nom": "Bio-médic", "archetype": "soigneur"},
+        {"cle": "psion", "nom": "Psion", "archetype": "mystique"},
+        {"cle": "ingenieur", "nom": "Ingénieur", "archetype": "erudit"},
+        {"cle": "commandant", "nom": "Commandant", "archetype": "gardien"}
+      ]
+    }
+  },
+
+  "archetypes": {
+    "colosse": {
+      "nom": "Colosse",
+      "coefficients": {"hp": 1.1, "end": 0.9, "str": 1.5, "agi": 0.8, "int": 0.7, "spi": 0.8, "wil": 1.2, "cha": 1.0},
+      "base": {"hp": 10, "end": 10, "str": 15, "agi": 10, "int": 10, "spi": 10, "wil": 12, "cha": 10},
+      "passif": {"libelle": "Les records personnels rapportent le double", "sources": ["strength_pr"], "bonus_pct": 100}
+    },
+    "eclaireur": {
+      "nom": "Éclaireur",
+      "coefficients": {"hp": 1.0, "end": 1.5, "str": 0.8, "agi": 1.4, "int": 0.8, "spi": 0.8, "wil": 0.9, "cha": 0.8},
+      "base": {"hp": 10, "end": 15, "str": 10, "agi": 12, "int": 10, "spi": 10, "wil": 10, "cha": 10},
+      "passif": {"libelle": "L'objectif de pas quotidien rapporte le double", "sources": ["steps_goal"], "bonus_pct": 100}
+    },
+    "soigneur": {
+      "nom": "Soigneur",
+      "coefficients": {"hp": 1.5, "end": 1.0, "str": 0.7, "agi": 0.8, "int": 1.0, "spi": 1.1, "wil": 0.9, "cha": 1.0},
+      "base": {"hp": 15, "end": 10, "str": 10, "agi": 10, "int": 10, "spi": 10, "wil": 10, "cha": 10},
+      "passif": {"libelle": "Les paliers de santé (tabac, alcool) rapportent +20 %", "sources": ["health_milestone"], "bonus_pct": 20}
+    },
+    "mystique": {
+      "nom": "Mystique",
+      "coefficients": {"hp": 1.0, "end": 0.8, "str": 0.7, "agi": 1.0, "int": 1.0, "spi": 1.5, "wil": 1.2, "cha": 0.8},
+      "base": {"hp": 10, "end": 10, "str": 10, "agi": 10, "int": 10, "spi": 15, "wil": 12, "cha": 10},
+      "passif": {"libelle": "Les envies résistées rapportent +50 %", "sources": ["craving_resisted"], "bonus_pct": 50}
+    },
+    "erudit": {
+      "nom": "Érudit",
+      "coefficients": {"hp": 0.9, "end": 0.8, "str": 0.7, "agi": 0.8, "int": 1.5, "spi": 1.1, "wil": 1.0, "cha": 1.2},
+      "base": {"hp": 10, "end": 10, "str": 10, "agi": 10, "int": 15, "spi": 10, "wil": 10, "cha": 12},
+      "passif": {"libelle": "Les cartes maîtrisées rapportent le double", "sources": ["card_mastered"], "bonus_pct": 100}
+    },
+    "gardien": {
+      "nom": "Gardien",
+      "coefficients": {"hp": 1.1, "end": 1.0, "str": 1.1, "agi": 0.8, "int": 0.8, "spi": 0.9, "wil": 1.5, "cha": 0.8},
+      "base": {"hp": 10, "end": 10, "str": 10, "agi": 10, "int": 10, "spi": 10, "wil": 15, "cha": 10},
+      "passif": {"libelle": "Les paliers de série rapportent +25 %", "sources": ["habit_streak"], "bonus_pct": 25}
+    }
+  },
+
+  "_bareme_note": "points : points de base par stat. par + diviseur : points × floor(payload[par] / diviseur). paliers : points selon payload['palier']. points = 'payload' : points fournis par l'appelant (paliers de santé). Plafonds en points de base, par source, stat et jour (date_key) ou semaine (lundi à dimanche) ; plafond_evenement : par action.",
+  "bareme": {
+    "tobacco_free_day":     {"libelle": "Journée sans tabac", "points": {"hp": 3}, "plafond_jour": 3},
+    "alcohol_free_day":     {"libelle": "Journée sans alcool", "points": {"hp": 3}, "plafond_jour": 3},
+    "sleep_7h":             {"libelle": "Nuit de 7 h ou plus", "points": {"hp": 1}, "plafond_jour": 1},
+    "hydration_goal":       {"libelle": "Objectif d'hydratation atteint", "points": {"hp": 1}, "plafond_jour": 1},
+    "calorie_budget":       {"libelle": "Budget calorique respecté", "points": {"hp": 1}, "plafond_jour": 1},
+    "weight_progress":      {"libelle": "Pesée qui se rapproche de l'objectif", "points": {"hp": 2}, "plafond_semaine": 2},
+    "run":                  {"libelle": "Course ou marche sportive", "points": {"end": 1}, "par": "distanceKm", "diviseur": 1, "plafond_jour": 15},
+    "cardio":               {"libelle": "Cardio (vélo, natation, autre sport)", "points": {"end": 1}, "par": "durationMin", "diviseur": 10, "plafond_jour": 12},
+    "steps_goal":           {"libelle": "Objectif de pas atteint", "points": {"end": 1}, "plafond_jour": 1},
+    "strength_session":     {"libelle": "Séance de musculation", "points": {"str": 2}, "plafond_jour": 4},
+    "strength_volume":      {"libelle": "Volume soulevé", "points": {"str": 1}, "par": "volumeKg", "diviseur": 1000, "plafond_evenement": 5},
+    "strength_pr":          {"libelle": "Record personnel", "points": {"str": 5}, "plafond_jour": 15},
+    "flexibility_session":  {"libelle": "Yoga, étirements, mobilité", "points": {"agi": 2}, "plafond_jour": 4},
+    "technical_sport":      {"libelle": "Sport technique", "points": {"agi": 2}, "plafond_jour": 4},
+    "run_pace_record":      {"libelle": "Record d'allure en course", "points": {"agi": 3}, "plafond_jour": 3},
+    "cards_reviewed":       {"libelle": "10 cartes révisées", "points": {"int": 1}, "plafond_jour": 3},
+    "card_mastered":        {"libelle": "Carte maîtrisée", "points": {"int": 1}, "plafond_jour": 10},
+    "pages_read":           {"libelle": "20 pages lues", "points": {"int": 1}, "plafond_jour": 3},
+    "meditation":           {"libelle": "Méditation ou respiration", "points": {"spi": 1}, "plafond_jour": 3},
+    "mood_entry":           {"libelle": "Humeur ou entrée de journal", "points": {"spi": 1}, "plafond_jour": 1},
+    "craving_resisted":     {"libelle": "Envie résistée", "points": {"spi": 3}, "plafond_jour": 9},
+    "habit_done":           {"libelle": "Habitude tenue", "points": {"wil": 1}},
+    "habit_streak":         {"libelle": "Série d'une habitude", "paliers": {"7": {"wil": 5}, "30": {"wil": 15}, "100": {"wil": 50}}},
+    "habit_step":           {"libelle": "Palier d'une habitude progressive", "points": {"wil": 3}},
+    "goal_completed":       {"libelle": "Objectif atteint", "points": {"wil": 10}},
+    "budget_month_under":   {"libelle": "Mois terminé sous le budget", "points": {"wil": 5}, "_choix": "Pas dans le cahier : volonté, moitié d'un objectif atteint (un mois tenu, mais sans cible choisie à l'avance). Un par mois par nature (source_id = 'YYYY-MM')."},
+    "savings_pot_achieved": {"libelle": "Cagnotte remplie", "points": {"wil": 10}, "_choix": "Pas dans le cahier : volonté, comme un objectif atteint (la cagnotte est un objectif chiffré)."},
+    "partner_encouragement":{"libelle": "Encouragement envoyé au partenaire", "points": {"cha": 1}, "plafond_jour": 2},
+    "duo_challenge":        {"libelle": "Défi à deux réussi", "points": {"cha": 5}},
+    "health_milestone":     {"libelle": "Palier de santé", "points": "payload"}
+  },
+
+  "series_habitudes": [7, 30, 100],
+
+  "objectif_pas_defaut": 10000,
+
+  "sports": {
+    "_note": "Classement des « autres sports » par libellé (minuscules, sans accents, recherche de sous-chaîne). Souplesse : agi comme une séance de souplesse. Technique : agi +2 ET endurance à la durée (c'est aussi du cardio). Le reste : endurance à la durée.",
+    "souplesse": ["yoga", "pilates", "etirement", "stretching", "mobilite"],
+    "techniques": ["escalade", "bloc", "danse", "boxe", "tennis", "badminton", "squash", "padel", "ping", "judo", "karate", "taekwondo", "aikido", "jiu", "lutte", "escrime", "arts martiaux", "kung fu", "mma", "capoeira", "golf"]
+  },
+
+  "paliers_sante": {
+    "_note": "Durées en heures. Texte : bénéfice publié (OMS pour le tabac), sans promesse médicale personnelle. Après une rechute, un palier regagné rapporte reprise_ratio du bonus ; les paliers acquis ne sont jamais retirés.",
+    "reprise_ratio": 0.5,
+    "tobacco": [
+      {"cle": "h12", "heures": 12, "libelle": "12 heures", "texte": "Le taux de monoxyde de carbone dans le sang redevient normal.", "points": {"hp": 5}},
+      {"cle": "w2", "heures": 336, "libelle": "2 semaines", "texte": "La circulation s'améliore et la fonction pulmonaire augmente (2 à 12 semaines).", "points": {"hp": 15, "end": 10}},
+      {"cle": "m3", "heures": 2160, "libelle": "3 mois", "texte": "Fin de la fenêtre d'amélioration pulmonaire.", "points": {"hp": 30, "end": 20}},
+      {"cle": "m9", "heures": 6480, "libelle": "9 mois", "texte": "La toux et l'essoufflement diminuent (1 à 9 mois).", "points": {"hp": 40, "end": 20}},
+      {"cle": "y1", "heures": 8760, "libelle": "1 an", "texte": "Le risque de maladie coronarienne est réduit de moitié environ.", "points": {"hp": 100, "wil": 30}}
+    ],
+    "alcohol": [
+      {"cle": "w1", "heures": 168, "libelle": "1 semaine", "texte": "Une première semaine tenue : ton corps commence déjà à récupérer.", "points": {"hp": 10, "wil": 5}},
+      {"cle": "m1", "heures": 720, "libelle": "1 mois", "texte": "Un mois entier : le sommeil et l'énergie en profitent souvent.", "points": {"hp": 30, "wil": 10}},
+      {"cle": "m3", "heures": 2160, "libelle": "3 mois", "texte": "Trois mois : une nouvelle habitude est bien installée.", "points": {"hp": 60, "wil": 20}},
+      {"cle": "y1", "heures": 8760, "libelle": "1 an", "texte": "Un an sans alcool : une vraie victoire, sur la durée.", "points": {"hp": 150, "wil": 50}}
+    ]
+  },
+
+  "xp_par_point": 10,
+  "xp_par_eclat": 10,
+  "niveaux": {"_note": "XP pour passer du niveau n à n+1 = round(base × n^exposant)", "base": 80, "exposant": 1.35},
+
+  "rangs": [
+    {"rang": 1, "nom": "Apprenti", "niveau_min": 1},
+    {"rang": 2, "nom": "Initié", "niveau_min": 10},
+    {"rang": 3, "nom": "Guerrier", "niveau_min": 25},
+    {"rang": 4, "nom": "Maître", "niveau_min": 50},
+    {"rang": 5, "nom": "Légende", "niveau_min": 80}
+  ],
+
+  "valeur_stat": {"_note": "Valeur affichée = base de classe + round(facteur × racine(points pondérés))", "facteur": 4},
+
+  "forme": {"_note": "7 derniers jours comparés à la moyenne hebdomadaire des 4 semaines précédentes ; écart relatif au-delà du seuil = up / down.", "seuil": 0.1},
+
+  "changement_classe": {"delai_jours": 30}
+}

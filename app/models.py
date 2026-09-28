@@ -881,3 +881,78 @@ class SavingsTransfer(Base):
     amount = Column(Float, nullable=False)
     occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
     source = Column(String, nullable=False, default="manual", server_default="manual")
+
+
+# ---------------------------------------------------------------------------
+# Module Personnage (mobile/docs/tanren-rpg/PROMPT-module-personnage.md §9).
+# Première version : personnage, événements de stats, paliers de santé.
+# Boutique, inventaire, équipement, coffres et quêtes viendront ensuite.
+# Migration 0022.
+# ---------------------------------------------------------------------------
+
+
+class Character(Base):
+    """Le personnage de l'utilisateur (un seul par compte).
+
+    level et total_xp ne redescendent jamais : supprimer un log retire son
+    StatEvent (donc ses points de stat), pas l'XP déjà gagnée. xp_avance
+    garde la trace de cette XP « sans événement » : elle est reprise sur les
+    gains suivants, sinon saisir puis supprimer puis ressaisir la même action
+    rapporterait de l'XP à chaque tour (voir services/stats.py)."""
+    __tablename__ = "characters"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, unique=True)
+    universe = Column(String, nullable=False)
+    class_key = Column(String, nullable=False)
+    name = Column(String, nullable=False)
+    appearance = Column(JSON, nullable=True)
+    level = Column(Integer, nullable=False, default=1, server_default="1")
+    total_xp = Column(Integer, nullable=False, default=0, server_default="0")
+    shards = Column(Integer, nullable=False, default=0, server_default="0")
+    xp_avance = Column(Integer, nullable=False, default=0, server_default="0")
+    class_changed_at = Column(DateTime(timezone=True), nullable=True)
+    universe_changed_at = Column(DateTime(timezone=True), nullable=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class StatEvent(Base):
+    """Points de stat gagnés par une action réelle. Une ligne par (source,
+    source_id, stat) : c'est l'unicité qui rend stats.award idempotent. Pas
+    de table cache des stats : la somme de ces lignes suffit.
+
+    base_points : points du barème après plafonds ; class_mult : coefficient
+    de la classe au moment du gain ; bonus_pct : capacité passive ; points =
+    base × coefficient × (1 + bonus). date_key : jour de l'action d'origine
+    (pas celui du calcul), c'est lui qui porte les plafonds journaliers."""
+    __tablename__ = "stat_events"
+    __table_args__ = (UniqueConstraint("user_id", "source", "source_id", "stat", name="uq_stat_events_source"),)
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    source = Column(String, nullable=False)
+    source_id = Column(String, nullable=False)
+    stat = Column(String, nullable=False)          # 'hp' | 'end' | 'str' | 'agi' | 'int' | 'spi' | 'wil' | 'cha'
+    base_points = Column(Float, nullable=False)
+    class_mult = Column(Float, nullable=False, default=1.0)
+    bonus_pct = Column(Float, nullable=False, default=0.0)
+    points = Column(Float, nullable=False)
+    xp = Column(Integer, nullable=False, default=0)
+    date_key = Column(String, nullable=False)      # 'YYYY-MM-DD'
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class HealthMilestone(Base):
+    """Palier de santé obtenu (tabac, alcool). Jamais supprimé : une rechute
+    remet le compteur à zéro, pas les paliers. quit_date : début de la
+    période d'arrêt qui a permis le palier ; le même palier regagné sur une
+    nouvelle période (après rechute) a ratio 0,5."""
+    __tablename__ = "health_milestones"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    substance = Column(String, nullable=False)       # 'tobacco' | 'alcohol'
+    milestone_key = Column(String, nullable=False)   # 'h12', 'w2'... (config.json)
+    quit_date = Column(String, nullable=False)       # 'YYYY-MM-DDTHH:MM' (UTC)
+    earned_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    ratio = Column(Float, nullable=False, default=1.0)

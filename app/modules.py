@@ -35,6 +35,10 @@ MODULES: dict[str, dict] = {
                "tables": ["mood_entries", "craving_entries", "gratitude_entries"]},
     "budget": {"label": "Budget",
                "tables": ["expenses", "budget_categories", "savings_pots", "savings_transfers"]},
+    # Supprimer ses données efface le personnage, ses points et ses paliers de
+    # santé ; les actions d'origine (séances, habitudes...) restent.
+    "personnage": {"label": "Personnage",
+                   "tables": ["characters", "stat_events", "health_milestones"]},
 }
 
 # Toujours actif, jamais supprimé par module (seulement avec le compte).
