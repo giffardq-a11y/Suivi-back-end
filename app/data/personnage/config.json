@@ -59,7 +59,7 @@
     },
     "sf": {
       "nom": "Science-fiction",
-      "disponible": false,
+      "disponible": true,
       "stats": {"hp": "Intégrité", "end": "Énergie", "str": "Puissance", "agi": "Réflexes", "int": "Données", "spi": "Psi", "wil": "Protocole", "cha": "Réseau"},
       "classes": [
         {"cle": "exo_soldat", "nom": "Exo-soldat", "archetype": "colosse"},
