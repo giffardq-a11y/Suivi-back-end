@@ -189,5 +189,30 @@
 
   "forme": {"_note": "7 derniers jours comparés à la moyenne hebdomadaire des 4 semaines précédentes ; écart relatif au-delà du seuil = up / down.", "seuil": 0.1},
 
-  "changement_classe": {"delai_jours": 30}
+  "changement_classe": {"delai_jours": 30},
+
+  "coffres": {
+    "_note": "Coffres gagnés, jamais achetés (§5). Ouverture : une rareté tirée selon probabilites (affichées dans l'app, GET /character/config → chest_odds), puis un objet de cette rareté pas encore possédé dans l'univers actif et équipable (rang, classe) ; aucun disponible → rareté inférieure, puis éclats seuls. Les éclats du coffre sont versés dans tous les cas.",
+    "probabilites": {"commun": 0.60, "rare": 0.25, "epique": 0.12, "legendaire": 0.03},
+    "eclats": {"rank": 20, "streak_7": 5, "streak_30": 10, "streak_100": 20, "weekly": 10}
+  },
+
+  "quetes": {
+    "_note": "Quêtes du jour (§5) : 3 modèles tirés chaque jour parmi ceux des modules actifs (tirage stable par utilisateur et par jour). Une quête est faite dès qu'un stat_event d'une de ses sources existe pour ce jour ; elle rapporte son XP une fois. Coffre hebdomadaire : jours_hebdo jours distincts de la semaine calendaire (lundi à dimanche) avec au moins une quête faite.",
+    "par_jour": 3,
+    "jours_hebdo": 5,
+    "modeles": [
+      {"cle": "habitude", "libelle": "Tenir une habitude", "module": "habitudes", "sources": ["habit_done"], "xp": 30},
+      {"cle": "course", "libelle": "Course ou marche sportive", "module": "sport", "sources": ["run"], "xp": 40},
+      {"cle": "muscu", "libelle": "Séance de muscu", "module": "sport", "sources": ["strength_session"], "xp": 40},
+      {"cle": "souplesse", "libelle": "Séance de souplesse ou de yoga", "module": "sport", "sources": ["flexibility_session"], "xp": 30},
+      {"cle": "cardio", "libelle": "Une séance de cardio ou de sport", "module": "sport", "sources": ["cardio", "technical_sport"], "xp": 30},
+      {"cle": "pas", "libelle": "Atteindre l'objectif de pas", "module": "sport", "sources": ["steps_goal"], "xp": 30},
+      {"cle": "cartes", "libelle": "Réviser 10 cartes", "module": "langues", "sources": ["cards_reviewed"], "xp": 30},
+      {"cle": "eau", "libelle": "Atteindre l'objectif d'eau", "module": "hydratation", "sources": ["hydration_goal"], "xp": 20},
+      {"cle": "sommeil", "libelle": "Dormir 7 h ou plus", "module": "sommeil", "sources": ["sleep_7h"], "xp": 20},
+      {"cle": "humeur", "libelle": "Noter ton humeur ou ton journal", "module": "humeur", "sources": ["mood_entry"], "xp": 20},
+      {"cle": "envie", "libelle": "Résister à une envie", "module": "humeur", "sources": ["craving_resisted"], "xp": 30}
+    ]
+  }
 }
