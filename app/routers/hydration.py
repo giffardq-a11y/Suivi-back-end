@@ -165,9 +165,13 @@ def add_water(
     apres = avant + payload.amountMl
     # Seul le verre qui fait franchir l'objectif le signale : les suivants
     # du même jour n'ajoutent rien (le cahier plafonne à 1 par jour).
+    resultat = None
     if avant < objectif <= apres:
-        personnage_hooks.evenement(db, user, "hydration_goal", jour, {"totalMl": apres, "goalMl": objectif, "dateKey": jour})
-    return {**_serialiser_log(log), "dayTotalMl": apres, "goalMl": objectif, "goalReached": apres >= objectif}
+        resultat = personnage_hooks.evenement(db, user, "hydration_goal", jour, {"totalMl": apres, "goalMl": objectif, "dateKey": jour})
+    return {
+        **_serialiser_log(log), "dayTotalMl": apres, "goalMl": objectif, "goalReached": apres >= objectif,
+        "personnage": personnage_hooks.resumer([resultat]),
+    }
 
 
 @router.delete("/{log_id}", status_code=204)

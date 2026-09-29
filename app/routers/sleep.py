@@ -132,10 +132,11 @@ def _horaires(debut: datetime, fin: datetime) -> float:
     return duree
 
 
-def _signaler_si_complete(db: Session, user: models.User, nuit: models.SleepLog) -> None:
+def _signaler_si_complete(db: Session, user: models.User, nuit: models.SleepLog) -> dict | None:
     if nuit.duration_min >= SEUIL_NUIT_COMPLETE_MIN:
-        personnage_hooks.evenement(db, user, "sleep_7h", nuit.id,
-                                   {"dateKey": nuit.date_key, "durationMin": round(nuit.duration_min)})
+        return personnage_hooks.evenement(db, user, "sleep_7h", nuit.id,
+                                          {"dateKey": nuit.date_key, "durationMin": round(nuit.duration_min)})
+    return None
 
 
 @router.get("")
@@ -176,8 +177,8 @@ def add_sleep(
     _mark_sleep_habits(db, user, nuit)
     db.commit()
     db.refresh(nuit)
-    _signaler_si_complete(db, user, nuit)
-    return _serialiser_nuit(nuit)
+    resultat = _signaler_si_complete(db, user, nuit)
+    return {**_serialiser_nuit(nuit), "personnage": personnage_hooks.resumer([resultat])}
 
 
 @router.put("/settings")
@@ -227,9 +228,8 @@ def update_sleep(
         nuit.note = champs["note"]
     db.commit()
     db.refresh(nuit)
-    if horaires_modifies:
-        _signaler_si_complete(db, user, nuit)
-    return _serialiser_nuit(nuit)
+    resultat = _signaler_si_complete(db, user, nuit) if horaires_modifies else None
+    return {**_serialiser_nuit(nuit), "personnage": personnage_hooks.resumer([resultat])}
 
 
 @router.delete("/{nuit_id}", status_code=204)
