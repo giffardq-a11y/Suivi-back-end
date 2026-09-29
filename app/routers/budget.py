@@ -330,9 +330,13 @@ def transfer_to_pot(
         p.achieved_at = now_utc()
     db.commit()
     db.refresh(p)
+    resultat = None
     if not atteint_avant and p.achieved_at is not None:
-        personnage_hooks.evenement(db, user, "savings_pot_achieved", p.id, {"targetAmount": p.target_amount})
-    return {**_serialiser_cagnotte(db, user, p), "transferred": montant, "sobrietySavings": _economies(db, user)}
+        resultat = personnage_hooks.evenement(db, user, "savings_pot_achieved", p.id, {"targetAmount": p.target_amount})
+    return {
+        **_serialiser_cagnotte(db, user, p), "transferred": montant, "sobrietySavings": _economies(db, user),
+        "personnage": personnage_hooks.resumer([resultat]),
+    }
 
 
 # ---------- Résumé du mois ----------
@@ -372,10 +376,11 @@ def budget_summary(
     budget_total = round(sum(limites), 2) if limites else None
     mois_termine = now_utc() >= fin
     sous_budget = total <= budget_total if budget_total is not None else None
+    resultat = None
     if mois_termine and sous_budget:
         # Constaté à la lecture, une fois le mois fini ; dédoublonné par le
         # Personnage sur (source, 'YYYY-MM'), voir services/personnage_hooks.py.
-        personnage_hooks.evenement(db, user, "budget_month_under", mois, {"spent": total, "budget": budget_total})
+        resultat = personnage_hooks.evenement(db, user, "budget_month_under", mois, {"spent": total, "budget": budget_total})
 
     devises = Counter(e.currency for e in depenses)
     return {
@@ -388,4 +393,5 @@ def budget_summary(
         "monthComplete": mois_termine,
         "expensesCount": len(depenses),
         "byCategory": lignes,
+        "personnage": personnage_hooks.resumer([resultat]),
     }

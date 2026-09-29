@@ -134,8 +134,8 @@ def add_mood(
     db.add(e)
     db.commit()
     db.refresh(e)
-    personnage_hooks.evenement(db, user, "mood_entry", e.id, {"kind": "mood", "dateKey": date_key(aware(e.occurred_at))})
-    return _serialiser_humeur(e)
+    resultat = personnage_hooks.evenement(db, user, "mood_entry", e.id, {"kind": "mood", "dateKey": date_key(aware(e.occurred_at))})
+    return {**_serialiser_humeur(e), "personnage": personnage_hooks.resumer([resultat])}
 
 
 @router.delete("/mood/{entry_id}", status_code=204)
@@ -290,8 +290,8 @@ def save_gratitude(
     db.refresh(g)
     # Le journal compte comme l'humeur pour le Personnage (« humeur ou
     # journal » : spi +1, 1 par jour, plafond géré côté Personnage).
-    personnage_hooks.evenement(db, user, "mood_entry", g.id, {"kind": "gratitude", "dateKey": jour})
-    return _serialiser_gratitude(g)
+    resultat = personnage_hooks.evenement(db, user, "mood_entry", g.id, {"kind": "gratitude", "dateKey": jour})
+    return {**_serialiser_gratitude(g), "personnage": personnage_hooks.resumer([resultat])}
 
 
 # ---------- Statistiques ----------
