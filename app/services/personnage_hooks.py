@@ -30,6 +30,10 @@ Fonctions :
     paliers de santé, habitudes cochées automatiquement.
   - rattrapage(db, user)  à la création du personnage : tout l'historique
     rejoué à travers les mêmes règles (stats.rattraper).
+  - resumer(resultats)  agrège une liste de résultats (evenement/habitudes/
+    action/constater) en un seul résumé pour la réponse HTTP (champ
+    « personnage » : toast mobile « +40 XP · Force »), ou None si rien à
+    afficher.
 
 Sources émises (barème complet dans app/data/personnage/config.json) :
   - 'hydration_goal'       objectif d'eau du jour atteint (source_id = 'YYYY-MM-DD')
@@ -114,3 +118,59 @@ def constater(db: Session, user: models.User) -> list[dict]:
         return []
     resultats = _isoler("sobriété", db, stats.constater_sobriete, db, user, defaut=[])
     return resultats + habitudes(db, user)
+
+
+def resumer(resultats: list[dict | None]) -> dict | None:
+    """Agrège une liste de résultats de `stats.award` (tels que renvoyés par
+    `evenement()`, `habitudes()`, `action()` ou `constater()`) en un seul
+    résumé destiné au mobile — le petit toast « +40 XP · Force » affiché
+    après une action qui rapporte de l'XP au personnage.
+
+    Méthode d'agrégation (un routeur peut passer aussi bien un résultat
+    unique `[evenement(...)]` qu'une liste de plusieurs événements) :
+      - `xp` : somme des `xp` de chaque résultat ;
+      - `points_par_stat` : fusion par stat, points sommés (arrondi à 2
+        décimales) ;
+      - `level_up` : vrai si au moins un résultat de la liste l'est ;
+      - `new_rank` : celui du dernier résultat de la liste qui en a un (les
+        résultats sont dans l'ordre chronologique des événements traités,
+        donc c'est le rang le plus récemment atteint) ;
+      - `chests` / `quests_done` : concaténés dans l'ordre.
+    Les résultats `None` ou `falsy` (pas de personnage, source inconnue,
+    plafond déjà atteint) sont ignorés. Renvoie `None` si la liste est vide,
+    ne contient que des `None`, ou si rien de notable n'en ressort (aucune
+    XP, aucun coffre, aucune quête, pas de montée de niveau) : pas de toast à
+    afficher plutôt qu'un toast « +0 XP ».
+    """
+    xp_total = 0
+    points_par_stat: dict[str, float] = {}
+    level_up = False
+    new_rank = None
+    chests: list = []
+    quests_done: list = []
+    vu = False
+    for r in resultats or []:
+        if not r:
+            continue
+        vu = True
+        xp_total += r.get("xp") or 0
+        for stat, points in (r.get("points_par_stat") or {}).items():
+            points_par_stat[stat] = round(points_par_stat.get(stat, 0) + points, 2)
+        if r.get("level_up"):
+            level_up = True
+        if r.get("new_rank"):
+            new_rank = r["new_rank"]
+        chests.extend(r.get("chests") or [])
+        quests_done.extend(r.get("quests_done") or [])
+
+    if not vu or not (xp_total or points_par_stat or level_up or chests or quests_done):
+        return None
+
+    return {
+        "points_par_stat": points_par_stat,
+        "xp": xp_total,
+        "level_up": level_up,
+        "new_rank": new_rank,
+        "chests": chests,
+        "quests_done": quests_done,
+    }
