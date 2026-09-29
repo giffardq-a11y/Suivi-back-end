@@ -220,20 +220,21 @@ def import_health(
     # Personnage (idempotent : une synchro qui renvoie les mêmes éléments ne
     # rapporte rien de plus). Les pas sont signalés à chaque synchro : le
     # total du jour grossit au fil des heures jusqu'à l'objectif.
+    resultats_personnage: list = []
     for genre, ligne in crees:
-        personnage_hooks.action(db, user, genre, ligne)
+        resultats_personnage += personnage_hooks.action(db, user, genre, ligne)
     for ligne in pas_vus:
-        personnage_hooks.action(db, user, "pas", ligne)
+        resultats_personnage += personnage_hooks.action(db, user, "pas", ligne)
     for ligne in pesees_vues:
-        personnage_hooks.action(db, user, "pesee", ligne)
+        resultats_personnage += personnage_hooks.action(db, user, "pesee", ligne)
     for nuit in nuits_vues:
         # Seuil du module Sommeil (import local : sleep.py importe déjà ce fichier).
         from .sleep import SEUIL_NUIT_COMPLETE_MIN
         if nuit.duration_min >= SEUIL_NUIT_COMPLETE_MIN:
-            personnage_hooks.evenement(db, user, "sleep_7h", nuit.id, {"dateKey": nuit.date_key})
-    personnage_hooks.habitudes(db, user)
+            resultats_personnage.append(personnage_hooks.evenement(db, user, "sleep_7h", nuit.id, {"dateKey": nuit.date_key}))
+    resultats_personnage += personnage_hooks.habitudes(db, user)
 
-    return {"ok": True, **resume}
+    return {"ok": True, **resume, "personnage": personnage_hooks.resumer(resultats_personnage)}
 
 
 @router.get("/summary")

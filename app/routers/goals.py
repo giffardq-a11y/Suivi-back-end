@@ -162,9 +162,10 @@ def get_goals(db: Session = Depends(get_db), user: models.User = Depends(get_cur
     # Objectif atteint (wil +10) : les objectifs liés à une métrique (série,
     # poids, record...) ne sont « atteints » qu'au calcul, d'où ce constat à
     # la lecture ; le Personnage dédoublonne par id d'objectif.
-    for g in goals_out:
-        if g["completed"]:
-            personnage_hooks.evenement(db, user, "goal_completed", g["id"])
+    resultats_personnage = [
+        personnage_hooks.evenement(db, user, "goal_completed", g["id"])
+        for g in goals_out if g["completed"]
+    ]
     perso = (
         db.query(models.Reward)
         .filter(models.Reward.user_id == user.id)
@@ -192,6 +193,7 @@ def get_goals(db: Session = Depends(get_db), user: models.User = Depends(get_cur
         "savings_total": total_savings,
         "goals": goals_out,
         "rewards": rewards,
+        "personnage": personnage_hooks.resumer(resultats_personnage),
     }
 
 

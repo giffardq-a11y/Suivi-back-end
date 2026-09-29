@@ -232,5 +232,5 @@ def send_reminder(
     message = models.PartnerReminder(link_id=active.id, from_user_id=user.id, text=text)
     db.add(message)
     db.commit()
-    personnage_hooks.evenement(db, user, "partner_encouragement", message.id)
-    return {"ok": True}
+    resultat = personnage_hooks.evenement(db, user, "partner_encouragement", message.id)
+    return {"ok": True, "personnage": personnage_hooks.resumer([resultat])}
