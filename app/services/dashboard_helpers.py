@@ -67,16 +67,33 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
                 continue
 
             # Progression de la semaine : une habitude visée 2 fois par semaine ne
-            # se lit pas en « fait / pas fait aujourd'hui ».
-            faites = sum(
-                1 for log in habit.logs
+            # se lit pas en « fait / pas fait aujourd'hui ». Une habitude en mode
+            # 'volume' (ex. 20 km/semaine) porte sa cible dans weekly_volume_target,
+            # pas weekly_target -- AddHabitScreen.js envoie explicitement
+            # weekly_target=null (donc 7 par défaut côté serveur, voir client.js)
+            # pour ce mode. Sans ce branchement, cible restait à 7, weekly valait
+            # toujours False et ces habitudes n'affichaient jamais le compteur sur
+            # l'Accueil, alors qu'il apparaît bien dans l'onglet Habitudes (même
+            # logique que _serialize() dans routers/habits.py).
+            logs_semaine = [
+                log for log in habit.logs
                 if (log.occurred_at if log.occurred_at.tzinfo else log.occurred_at.replace(tzinfo=timezone.utc)) >= semaine_debut
-            )
-            cible = habit.weekly_target or 7
+            ]
+            if habit.tracking_mode == "volume" and habit.weekly_volume_target:
+                faites = round(sum(
+                    (log.quantity if log.quantity is not None else (habit.session_quantity or 0))
+                    for log in logs_semaine
+                ), 1)
+                cible = habit.weekly_volume_target
+                weekly = True
+            else:
+                faites = len(logs_semaine)
+                cible = habit.weekly_target or 7
+                weekly = cible < 7
             habits_today.append({
                 "id": habit.id, "label": habit.label,
                 "target": effective_habit_target(habit, now), "done_today": done_today,
-                "done_this_week": faites, "weekly_target": cible, "weekly": cible < 7,
+                "done_this_week": faites, "weekly_target": cible, "weekly": weekly,
                 "days_of_week": habit.days_of_week,
             })
 
