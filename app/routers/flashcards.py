@@ -183,13 +183,14 @@ def review_card(
     box, due_at = review.box, review.due_at
     # Personnage : tranche de 10 cartes du jour (int +1), carte arrivée en
     # dernière boîte (int +1, une fois par carte), habitude Danois cochée.
+    resultats_personnage = []
     if revues and revues % 10 == 0:
-        personnage_hooks.evenement(db, user, "cards_reviewed", f"{date_key(now)}:{revues // 10}",
-                                   {"dateKey": date_key(now)})
+        resultats_personnage.append(personnage_hooks.evenement(
+            db, user, "cards_reviewed", f"{date_key(now)}:{revues // 10}", {"dateKey": date_key(now)}))
     if box >= MAX_BOX:
-        personnage_hooks.evenement(db, user, "card_mastered", card.id, {"dateKey": date_key(now)})
+        resultats_personnage.append(personnage_hooks.evenement(db, user, "card_mastered", card.id, {"dateKey": date_key(now)}))
     if habit_marked:
-        personnage_hooks.habitudes(db, user)
+        resultats_personnage += personnage_hooks.habitudes(db, user)
     return {
         "ok": True,
         "box": box,
@@ -197,6 +198,7 @@ def review_card(
         "reviewed_today": revues,
         "daily_target": DAILY_REVIEW_TARGET,
         "habit_marked": habit_marked,
+        "personnage": personnage_hooks.resumer(resultats_personnage),
     }
 
 

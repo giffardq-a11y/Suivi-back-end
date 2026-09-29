@@ -89,10 +89,11 @@ def update_substance(
     for champ, valeur in payload.model_dump(exclude_unset=True).items():
         setattr(sub, champ, valeur)
     db.commit()
+    resultats = []
     if "quit_date" in payload.model_fields_set:
         # Paliers de santé déjà atteints depuis la date d'arrêt déclarée.
-        personnage_hooks.constater(db, user)
-    return {"ok": True}
+        resultats = personnage_hooks.constater(db, user)
+    return {"ok": True, "personnage": personnage_hooks.resumer(resultats)}
 
 
 @router.delete("/{substance_id}", status_code=204)

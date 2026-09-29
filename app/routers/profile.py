@@ -190,8 +190,8 @@ def add_weight_entry(
     )
     db.add(pesee)
     db.commit()
-    personnage_hooks.action(db, user, "pesee", pesee)
-    return {"ok": True}
+    resultats = personnage_hooks.action(db, user, "pesee", pesee)
+    return {"ok": True, "personnage": personnage_hooks.resumer(resultats)}
 
 
 @router.put("/weight/goal")
