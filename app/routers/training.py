@@ -168,8 +168,8 @@ def add_run(
     db.commit()
     increment_session_goals(db, user)
     mark_sport_habits_done_today(db, user)
-    personnage_hooks.action(db, user, "course", run)
-    return {"ok": True}
+    resultats = personnage_hooks.action(db, user, "course", run)
+    return {"ok": True, "personnage": personnage_hooks.resumer(resultats)}
 
 
 @router.post("/training/other-sports", status_code=201)
@@ -188,8 +188,8 @@ def log_other_sport(
     db.commit()
     increment_session_goals(db, user)
     mark_sport_habits_done_today(db, user)
-    personnage_hooks.action(db, user, "autre_sport", seance)
-    return {"ok": True}
+    resultats = personnage_hooks.action(db, user, "autre_sport", seance)
+    return {"ok": True, "personnage": personnage_hooks.resumer(resultats)}
 
 
 @router.post("/training/flexibility", status_code=201)
@@ -215,8 +215,8 @@ def log_flexibility_session(
     db.commit()
     increment_session_goals(db, user)
     mark_sport_habits_done_today(db, user)
-    personnage_hooks.action(db, user, "souplesse", seance)
-    return {"ok": True}
+    resultats = personnage_hooks.action(db, user, "souplesse", seance)
+    return {"ok": True, "personnage": personnage_hooks.resumer(resultats)}
 
 
 @router.get("/training/flexibility")
@@ -328,8 +328,8 @@ def log_strength_session(
     increment_session_goals(db, user)
     mark_sport_habits_done_today(db, user)
     # Séance (str +2), volume soulevé, records personnels.
-    personnage_hooks.action(db, user, "muscu", seance)
-    return {"ok": True}
+    resultats = personnage_hooks.action(db, user, "muscu", seance)
+    return {"ok": True, "personnage": personnage_hooks.resumer(resultats)}
 
 
 @router.get("/strength-sessions")

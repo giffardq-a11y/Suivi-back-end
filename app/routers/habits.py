@@ -242,8 +242,11 @@ def log_habit(
     db.commit()
     logged_at = log.occurred_at
     # Habitude tenue (wil +1) et paliers de série 7 / 30 / 100 jours.
-    personnage_hooks.habitudes(db, user)
-    return {"ok": True, "habit_id": habit.id, "logged_at": logged_at}
+    resultats = personnage_hooks.habitudes(db, user)
+    return {
+        "ok": True, "habit_id": habit.id, "logged_at": logged_at,
+        "personnage": personnage_hooks.resumer(resultats),
+    }
 
 
 @router.delete("/{habit_id}", status_code=204)
