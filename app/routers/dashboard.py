@@ -17,5 +17,5 @@ def get_dashboard(
 ):
     # Journées sans tabac / alcool, paliers de santé, habitudes cochées
     # automatiquement : constatés ici, l'Accueil étant ouvert chaque jour.
-    personnage_hooks.constater(db, user)
-    return build_dashboard_dict(db, user)
+    resultats = personnage_hooks.constater(db, user)
+    return {**build_dashboard_dict(db, user), "personnage": personnage_hooks.resumer(resultats)}

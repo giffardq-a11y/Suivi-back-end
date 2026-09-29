@@ -142,6 +142,11 @@ class DashboardOut(BaseModel):
     goals_summary: GoalSummaryOut
     reward_budget: RewardBudgetOut
     thought_of_the_day: str
+    # Constats faits à l'ouverture de l'Accueil (journées sans tabac/alcool,
+    # paliers de santé, habitudes cochées automatiquement) : toast mobile
+    # « +X XP » si personnage_hooks.resumer() y trouve quelque chose, sinon
+    # None (voir services/personnage_hooks.py).
+    personnage: Optional[dict] = None
 
 
 class ForgotPasswordRequest(BaseModel):
