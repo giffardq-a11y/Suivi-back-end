@@ -14,7 +14,7 @@ from .. import models
 from ..database import get_db
 from ..deps import get_current_user
 from ..services.common import now_utc, to_ms, from_ms, relative_time, is_same_day, start_of_week, aware
-from ..services.savings import compute_savings
+from ..services.savings import compute_savings, savings_delta
 from ..services.streaks import current_streak_days
 from ..services.sport import calories_burned_on
 from ..services.habit_progress import effective_habit_target, jours_actifs
@@ -78,6 +78,11 @@ def get_stats(period: str = "week", db: Session = Depends(get_db), user: models.
     tobacco = next((s for s in user.substances if s.category == models.SubstanceCategory.TOBACCO), None)
 
     total_savings, _delta = compute_savings(db, user, now=now)
+    # Le total est une valeur historique (depuis l'arrêt), donc identique en
+    # semaine/mois -- ce qui change avec le sélecteur, c'est ce qui a été
+    # économisé PENDANT la période affichée (même principe que delta_week
+    # sur l'Accueil, généralisé à 30 jours pour le mode mois).
+    period_savings_delta = savings_delta(db, user, now, 30 if is_month else 7)
 
     craving_entries = (
         db.query(models.ConsumptionEntry)
@@ -138,6 +143,7 @@ def get_stats(period: str = "week", db: Session = Depends(get_db), user: models.
         "tobacco_smoke_free_days_month": tobacco_days,
         "savings": {
             "total": total_savings,
+            "period_delta": period_savings_delta,
             "alcohol_progress": min(1, alcohol_days / 90),
             "tobacco_progress": min(1, tobacco_days / 90),
             "monthly_projection": round(total_savings * (30 / max(1, alcohol_days))) if alcohol_days else total_savings,

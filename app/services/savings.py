@@ -29,3 +29,15 @@ def compute_savings(db: Session, user: models.User, now: datetime = None) -> Tup
         total_week_ago += _substance_savings(db, substance, now, days_back=7)
 
     return round(total, 2), round(total - total_week_ago, 2)
+
+
+def savings_delta(db: Session, user: models.User, now: datetime, days_back: int) -> float:
+    """Économies réalisées sur les `days_back` derniers jours (total actuel
+    moins total il y a `days_back` jours) -- généralisation du delta_week de
+    compute_savings pour servir aussi une fenêtre mensuelle (GET /stats)."""
+    total = 0.0
+    total_days_ago = 0.0
+    for substance in user.substances:
+        total += _substance_savings(db, substance, now, days_back=0)
+        total_days_ago += _substance_savings(db, substance, now, days_back=days_back)
+    return round(total - total_days_ago, 2)
