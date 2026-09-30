@@ -27,6 +27,7 @@ from ..security import hash_password, verify_password
 from ..services import jetons, limite
 from ..services.compte import consommer_jeton, creer_jeton, supprimer_utilisateur
 from ..services.email import envoyer_email
+from ..services.reset import remettre_progression_a_zero, tout_effacer
 
 router = APIRouter(tags=["compte"])
 log = logging.getLogger("suivi.compte")
@@ -43,6 +44,29 @@ def delete_me(payload: schemas.DeleteAccountRequest, db: Session = Depends(get_d
         raise HTTPException(status_code=403, detail="Mot de passe incorrect.")
     compte = supprimer_utilisateur(db, user.id)
     log.info("Compte supprimé depuis l'app : %s lignes", sum(compte.values()))
+
+
+@router.post("/me/reset/progression", status_code=204)
+def reset_progression(payload: schemas.DeleteAccountRequest, db: Session = Depends(get_db),
+                       user: models.User = Depends(get_current_user)):
+    """Niveau 1 : efface l'historique et les gains, garde la configuration
+    (habitudes, substances, objectifs...). Mot de passe redemandé, même
+    logique que la suppression de compte : irréversible."""
+    if not verify_password(payload.password, user.password_hash):
+        raise HTTPException(status_code=403, detail="Mot de passe incorrect.")
+    compte = remettre_progression_a_zero(db, user.id)
+    log.info("Progression remise à zéro : %s lignes", sum(compte.values()))
+
+
+@router.post("/me/reset/tout", status_code=204)
+def reset_tout(payload: schemas.DeleteAccountRequest, db: Session = Depends(get_db),
+               user: models.User = Depends(get_current_user)):
+    """Niveau 2 : efface tout sauf le compte lui-même (reste connecté,
+    contrairement à DELETE /me)."""
+    if not verify_password(payload.password, user.password_hash):
+        raise HTTPException(status_code=403, detail="Mot de passe incorrect.")
+    compte = tout_effacer(db, user.id)
+    log.info("Tout effacé (compte gardé) : %s lignes", sum(compte.values()))
 
 
 # ---------- Pages web ----------
