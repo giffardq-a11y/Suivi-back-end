@@ -2,7 +2,7 @@ import enum
 import uuid
 
 from sqlalchemy import (
-    Column, String, Float, Boolean, DateTime, ForeignKey, Enum, Integer, Text, JSON, UniqueConstraint
+    Column, String, Float, Boolean, Date, DateTime, ForeignKey, Enum, Integer, Text, JSON, UniqueConstraint
 )
 from sqlalchemy import false as sa_false
 from sqlalchemy.orm import relationship
@@ -83,6 +83,13 @@ class Substance(Base):
     # sans consommation part de la création du compte, ce qui est faux pour
     # quelqu'un qui a arrêté avant d'installer l'app (voir services/streaks.py).
     quit_date = Column(String, nullable=True)
+    # Réduction progressive (tabac/alcool) : limite de départ par jour, baisse
+    # chaque semaine complète écoulée depuis reduction_start_date. La limite du
+    # jour n'est pas stockée : recalculée à la lecture, voir
+    # services/substance_progress.py. Les trois à null = pas de réduction.
+    reduction_start_value = Column(Float, nullable=True)
+    reduction_step_per_week = Column(Float, nullable=True)
+    reduction_start_date = Column(Date, nullable=True)
 
     user = relationship("User", back_populates="substances")
     entries = relationship("ConsumptionEntry", back_populates="substance", cascade="all, delete-orphan")
