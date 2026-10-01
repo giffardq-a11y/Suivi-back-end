@@ -50,6 +50,13 @@ class SubstanceUpdate(BaseModel):
     # compteur de jours sans consommation, à la place de la date de création
     # du compte (voir services/streaks.py).
     quit_date: str | None = None
+    # Recatégoriser une consommation "autre" en alcool/tabac (ou l'inverse) :
+    # un compte créé avant la distinction alcohol/tobacco a pu suivre ces
+    # deux-là comme des consommations personnalisées (category=other), ce qui
+    # les exclut silencieusement des compteurs de streak/économies de
+    # l'Accueil (filtrés par catégorie). Au plus une consommation par
+    # catégorie alcohol/tobacco : voir la vérification plus bas.
+    category: str | None = None
 
 
 @router.get("")
@@ -86,8 +93,24 @@ def update_substance(
         except ValueError:
             raise HTTPException(status_code=422, detail="quit_date doit être au format AAAA-MM-JJ")
 
-    for champ, valeur in payload.model_dump(exclude_unset=True).items():
+    nouvelle_categorie = None
+    if payload.category is not None:
+        try:
+            nouvelle_categorie = models.SubstanceCategory(payload.category)
+        except ValueError:
+            raise HTTPException(status_code=422, detail="Catégorie invalide")
+        if nouvelle_categorie != models.SubstanceCategory.OTHER:
+            doublon = next(
+                (s for s in user.substances if s.category == nouvelle_categorie and s.id != substance_id), None)
+            if doublon:
+                raise HTTPException(
+                    status_code=409,
+                    detail=f"« {doublon.label} » a déjà la catégorie {nouvelle_categorie.value}")
+
+    for champ, valeur in payload.model_dump(exclude_unset=True, exclude={"category"}).items():
         setattr(sub, champ, valeur)
+    if nouvelle_categorie is not None:
+        sub.category = nouvelle_categorie
     db.commit()
     resultats = []
     if "quit_date" in payload.model_fields_set:
