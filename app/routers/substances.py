@@ -17,6 +17,38 @@ class SubstanceCreate(BaseModel):
     unit: str | None = None
     unit_cost: float = 0
     note: str | None = None
+    # Choisies à la création (écran "Ajouter une consommation") plutôt que de
+    # forcer un aller-retour ultérieur dans Paramètres pour recatégoriser et
+    # fixer la date d'arrêt : voir _valider_categorie et son usage ci-dessous.
+    category: str | None = None
+    quit_date: str | None = None
+
+
+def _valider_categorie(categorie: str | None, user: models.User, substance_id_a_exclure: str | None = None):
+    """Catégorie validée (ou OTHER si non fournie) ; lève 422/409 sinon. Au
+    plus une consommation par catégorie alcohol/tobacco pour un compte."""
+    if categorie is None:
+        return models.SubstanceCategory.OTHER
+    try:
+        validee = models.SubstanceCategory(categorie)
+    except ValueError:
+        raise HTTPException(status_code=422, detail="Catégorie invalide")
+    if validee != models.SubstanceCategory.OTHER:
+        doublon = next(
+            (s for s in user.substances if s.category == validee and s.id != substance_id_a_exclure), None)
+        if doublon:
+            raise HTTPException(
+                status_code=409,
+                detail=f"« {doublon.label} » a déjà la catégorie {validee.value}")
+    return validee
+
+
+def _valider_quit_date(quit_date: str | None) -> None:
+    if quit_date:
+        try:
+            date.fromisoformat(quit_date)
+        except ValueError:
+            raise HTTPException(status_code=422, detail="quit_date doit être au format AAAA-MM-JJ")
 
 
 @router.post("", status_code=201)
@@ -25,13 +57,16 @@ def create_substance(
     db: Session = Depends(get_db),
     user: models.User = Depends(get_current_user),
 ):
+    categorie = _valider_categorie(payload.category, user)
+    _valider_quit_date(payload.quit_date)
     sub = models.Substance(
         user_id=user.id,
         label=payload.label,
-        category=models.SubstanceCategory.OTHER,
+        category=categorie,
         unit_cost=payload.unit_cost,
         unit=payload.unit,
         note=payload.note,
+        quit_date=payload.quit_date,
     )
     db.add(sub)
     db.commit()
@@ -87,25 +122,11 @@ def update_substance(
     if not sub:
         raise HTTPException(status_code=404, detail="Consommation introuvable")
 
-    if payload.quit_date:
-        try:
-            date.fromisoformat(payload.quit_date)
-        except ValueError:
-            raise HTTPException(status_code=422, detail="quit_date doit être au format AAAA-MM-JJ")
-
-    nouvelle_categorie = None
-    if payload.category is not None:
-        try:
-            nouvelle_categorie = models.SubstanceCategory(payload.category)
-        except ValueError:
-            raise HTTPException(status_code=422, detail="Catégorie invalide")
-        if nouvelle_categorie != models.SubstanceCategory.OTHER:
-            doublon = next(
-                (s for s in user.substances if s.category == nouvelle_categorie and s.id != substance_id), None)
-            if doublon:
-                raise HTTPException(
-                    status_code=409,
-                    detail=f"« {doublon.label} » a déjà la catégorie {nouvelle_categorie.value}")
+    _valider_quit_date(payload.quit_date)
+    nouvelle_categorie = (
+        _valider_categorie(payload.category, user, substance_id_a_exclure=substance_id)
+        if payload.category is not None else None
+    )
 
     for champ, valeur in payload.model_dump(exclude_unset=True, exclude={"category"}).items():
         setattr(sub, champ, valeur)

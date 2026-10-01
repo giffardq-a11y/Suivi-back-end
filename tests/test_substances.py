@@ -40,3 +40,25 @@ def test_recategorise_avec_categorie_invalide(client, nouveau_compte):
     autre = client.post("/substances", json={"label": "Test"}, headers=h).json()
     r = client.put(f"/substances/{autre['id']}", json={"category": "whisky"}, headers=h)
     assert r.status_code == 422
+
+
+def test_cree_directement_en_alcool_avec_date_arret(client, nouveau_compte):
+    _, _, h, _ = nouveau_compte()
+    defaut = next(s for s in client.get("/substances", headers=h).json() if s["category"] == "alcohol")
+    assert client.delete(f"/substances/{defaut['id']}", headers=h).status_code == 204
+
+    r = client.post(
+        "/substances",
+        json={"label": "Alcool", "unit": "verre", "category": "alcohol", "quit_date": "2026-09-01"},
+        headers=h,
+    )
+    assert r.status_code == 201, r.text
+    cree = next(s for s in client.get("/substances", headers=h).json() if s["id"] == r.json()["id"])
+    assert cree["category"] == "alcohol" and cree["quit_date"] == "2026-09-01"
+
+
+def test_cree_refuse_doublon_alcool(client, nouveau_compte):
+    _, _, h, _ = nouveau_compte()
+    # Le compte a déjà un "alcohol" créé à l'inscription.
+    r = client.post("/substances", json={"label": "Vin", "category": "alcohol"}, headers=h)
+    assert r.status_code == 409
