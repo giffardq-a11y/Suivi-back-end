@@ -64,7 +64,7 @@ def log_occurrence(
         .first()
     )
     if not bad:
-        return {"ok": False}
+        raise HTTPException(status_code=404, detail="Habitude introuvable")
     bad.last_occurrence_at = now_utc()
     if payload.note:
         bad.note = payload.note
