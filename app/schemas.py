@@ -81,6 +81,7 @@ class StreakOut(BaseModel):
     category: str
     days: int
     personal_best_days: int
+    today_count: float = 0
 
 
 class SavingsOut(BaseModel):
@@ -100,6 +101,15 @@ class HabitTodayOut(BaseModel):
     weekly_target: int = 7
     weekly: bool = False
     days_of_week: Optional[str] = None
+    # Carte d'habitude (Accueil) : unité du volume, 7 pastilles lundi →
+    # dimanche ('done'|'today'|'missed'|'off'|'todo'), série et semaine du
+    # plan (habitude progressive à durée explicite).
+    unit: Optional[str] = None
+    week_days: List[str] = []
+    streak: int = 0
+    streak_unit: str = "days"
+    plan_week: Optional[int] = None
+    plan_weeks: Optional[int] = None
 
 
 class PlannedWorkoutOut(BaseModel):

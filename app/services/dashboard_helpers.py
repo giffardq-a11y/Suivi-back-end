@@ -11,7 +11,10 @@ from .streaks import current_streak_days, personal_best_days
 from .savings import compute_savings
 from .rewards import compute_reward_budget
 from .common import start_of_week, is_same_day
-from .habit_progress import effective_habit_target, jours_actifs
+from .habit_progress import (
+    effective_habit_target, jours_actifs, jours_valides, bande_semaine,
+    serie_jours, serie_semaines, semaine_du_plan,
+)
 from .sport import calories_burned_on
 
 THOUGHTS = [
@@ -41,6 +44,17 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
                 "substance_id": s.id, "label": s.label, "category": s.category.value,
                 "days": current_streak_days(db, s, now=now),
                 "personal_best_days": personal_best_days(db, s, now=now),
+                # Consommé aujourd'hui (somme des quantités) : affiché sur le
+                # bouton « +1 » de l'Accueil, mis à jour en optimiste côté app.
+                # Filtre de date en Python : SQLite rend des dates naïves
+                # (même garde que pour les habitudes plus bas).
+                "today_count": round(sum(
+                    (e.quantity or 1) for e in db.query(models.ConsumptionEntry).filter(
+                        models.ConsumptionEntry.substance_id == s.id,
+                        models.ConsumptionEntry.type == models.EntryType.CONSUMPTION,
+                    ).all()
+                    if (e.occurred_at if e.occurred_at.tzinfo else e.occurred_at.replace(tzinfo=timezone.utc)) >= today_start
+                ), 1),
             }
             for s in user.substances
         ]
@@ -90,11 +104,21 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
                 faites = len(logs_semaine)
                 cible = habit.weekly_target or 7
                 weekly = cible < 7
+            # Carte d'habitude : bande des 7 jours, série (en jours pour une
+            # habitude quotidienne, en semaines atteintes sinon) et semaine du
+            # plan pour une habitude progressive à durée explicite.
+            faits = jours_valides(habit.logs)
+            semaine_plan, semaines_plan = semaine_du_plan(habit, now)
             habits_today.append({
                 "id": habit.id, "label": habit.label,
                 "target": effective_habit_target(habit, now), "done_today": done_today,
                 "done_this_week": faites, "weekly_target": cible, "weekly": weekly,
                 "days_of_week": habit.days_of_week,
+                "unit": habit.unit if habit.tracking_mode == "volume" else None,
+                "week_days": bande_semaine(habit, faits, now, hebdo=weekly),
+                "streak": serie_semaines(habit.logs, habit, now) if weekly else serie_jours(habit, faits, now),
+                "streak_unit": "weeks" if weekly else "days",
+                "plan_week": semaine_plan, "plan_weeks": semaines_plan,
             })
 
     # Séances de musculation programmées : elles n'apparaissaient que dans le
