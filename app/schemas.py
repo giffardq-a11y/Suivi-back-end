@@ -97,10 +97,17 @@ class HabitTodayOut(BaseModel):
     done_today: bool
     # Une habitude visée 2 fois par semaine ne se lit pas en « fait / pas fait
     # aujourd'hui » : l'Accueil a besoin de la progression de la semaine.
-    done_this_week: int = 0
-    weekly_target: int = 7
+    # Nombres décimaux : en mode volume, ce sont des km, des litres... (2,5 km
+    # cette semaine sur 20,5) ; en entier, le tableau de bord tombait en 500
+    # dès la première validation fractionnaire.
+    done_this_week: float = 0
+    weekly_target: float = 7
     weekly: bool = False
     days_of_week: Optional[str] = None
+    # Bouton + optimiste de la carte : il doit savoir s'il ajoute une séance
+    # ou une quantité (mode volume, séance type `session_quantity`).
+    tracking_mode: str = "sessions"
+    session_quantity: Optional[float] = None
     # Carte d'habitude (Accueil) : unité du volume, 7 pastilles lundi →
     # dimanche ('done'|'today'|'missed'|'off'|'todo'), série et semaine du
     # plan (habitude progressive à durée explicite).

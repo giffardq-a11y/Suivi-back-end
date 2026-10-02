@@ -93,3 +93,34 @@ def test_dashboard_expose_carte_et_compteur(client, nouveau_compte):
     assert len(carte["week_days"]) == 7 and "done" in carte["week_days"]
     serie_tabac = next(s for s in d["streaks"] if s["category"] == "tobacco")
     assert serie_tabac["today_count"] == 3
+
+
+def test_dashboard_volume_decimal_et_mode(client, nouveau_compte):
+    # Volume fractionnaire (2,5 km sur 20,5) : le tableau de bord tombait en
+    # 500 (done_this_week et weekly_target typés en entier).
+    _, _, h, _ = nouveau_compte()
+    r = client.post("/habits", json={"label": "Course", "tracking_mode": "volume", "weekly_volume_target": 20.5,
+                                     "session_quantity": 5, "unit": "km"}, headers=h)
+    assert r.status_code == 201, r.text
+    hid = r.json()["id"]
+    assert client.post(f"/habits/{hid}/log", json={"quantity": 2.5}, headers=h).status_code == 201
+    r = client.get("/me/dashboard", headers=h)
+    assert r.status_code == 200, r.text
+    carte = next(x for x in r.json()["habits_today"] if x["id"] == hid)
+    assert carte["done_this_week"] == 2.5 and carte["weekly_target"] == 20.5 and carte["weekly"] is True
+    # Le + de la carte sait qu'il ajoute une quantité, et laquelle.
+    assert carte["tracking_mode"] == "volume" and carte["session_quantity"] == 5
+
+
+def test_liste_habitudes_expose_la_carte(client, nouveau_compte):
+    _, _, h, _ = nouveau_compte()
+    quotidienne = client.post("/habits", json={"label": "Méditer", "weekly_target": 7}, headers=h).json()
+    hebdo = client.post("/habits", json={"label": "Natation", "weekly_target": 2}, headers=h).json()
+    assert quotidienne["done_today"] is False and len(quotidienne["week_days"]) == 7
+    assert client.post(f"/habits/{quotidienne['id']}/log", json={}, headers=h).status_code == 201
+    liste = {x["id"]: x for x in client.get("/habits", headers=h).json()}
+    q = liste[quotidienne["id"]]
+    assert q["done_today"] is True and q["streak"] == 1 and q["streak_unit"] == "days"
+    assert q["week_days"].count("done") == 1
+    w = liste[hebdo["id"]]
+    assert w["done_today"] is False and w["streak_unit"] == "weeks" and "missed" not in w["week_days"]

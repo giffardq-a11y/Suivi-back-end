@@ -9,7 +9,10 @@ from ..database import get_db
 from ..deps import get_current_user
 from ..services import personnage_hooks
 from ..services.common import now_utc, is_same_day, today_key
-from ..services.habit_progress import effective_habit_target, is_progressive, jours_actifs
+from ..services.habit_progress import (
+    effective_habit_target, is_progressive, jours_actifs,
+    jours_valides, bande_semaine, serie_jours, serie_semaines,
+)
 
 router = APIRouter(prefix="/habits", tags=["habits"])
 
@@ -60,6 +63,13 @@ class HabitOut(BaseModel):
     unit: str | None = None
     days_of_week: str | None = None
     scheduled_today: bool = True
+    # Carte d'habitude de l'onglet Habitudes (même carte que l'Accueil) :
+    # fait aujourd'hui, 7 pastilles lundi -> dimanche et série, calculés
+    # comme dans le tableau de bord (services/dashboard_helpers.py).
+    done_today: bool = False
+    week_days: list[str] = []
+    streak: int = 0
+    streak_unit: str = "days"
 
 
 def _week_start(now: datetime) -> datetime:
@@ -91,6 +101,10 @@ def _serialize(db: Session, habit: models.Habit) -> HabitOut:
         percent = min(100, round(100 * done_this_week / cible)) if cible else 0
 
     jours = jours_actifs(habit)
+    # Même définition de « hebdomadaire » que le tableau de bord : volume avec
+    # cible, ou moins de 7 séances visées par semaine.
+    hebdo = volume is not None or (habit.weekly_target or 7) < 7
+    faits = jours_valides(habit.logs)
     return HabitOut(
         id=habit.id,
         label=habit.label,
@@ -107,6 +121,10 @@ def _serialize(db: Session, habit: models.Habit) -> HabitOut:
         unit=habit.unit,
         days_of_week=habit.days_of_week,
         scheduled_today=(jours is None or maintenant.weekday() in jours),
+        done_today=maintenant.date() in faits,
+        week_days=bande_semaine(habit, faits, maintenant, hebdo=hebdo),
+        streak=serie_semaines(habit.logs, habit, maintenant) if hebdo else serie_jours(habit, faits, maintenant),
+        streak_unit="weeks" if hebdo else "days",
     )
 
 

@@ -114,6 +114,10 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
                 "target": effective_habit_target(habit, now), "done_today": done_today,
                 "done_this_week": faites, "weekly_target": cible, "weekly": weekly,
                 "days_of_week": habit.days_of_week,
+                # Mode effectif, celui des compteurs ci-dessus (un volume sans
+                # cible se compte en séances).
+                "tracking_mode": "volume" if habit.tracking_mode == "volume" and habit.weekly_volume_target else "sessions",
+                "session_quantity": habit.session_quantity,
                 "unit": habit.unit if habit.tracking_mode == "volume" else None,
                 "week_days": bande_semaine(habit, faits, now, hebdo=weekly),
                 "streak": serie_semaines(habit.logs, habit, now) if weekly else serie_jours(habit, faits, now),
