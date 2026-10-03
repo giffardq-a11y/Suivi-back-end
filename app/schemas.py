@@ -1,9 +1,9 @@
 from datetime import datetime
 from typing import Optional, List
 
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, EmailStr, Field, field_validator
 
-from .models import EntryType, Mood
+from .models import CravingOutcome, EntryType, Mood
 
 
 # ---------- Auth ----------
@@ -177,3 +177,93 @@ class ResetPasswordRequest(BaseModel):
 
 class DeleteAccountRequest(BaseModel):
     password: str
+
+
+# ---------- Sessions d'aide au craving (routers/cravings.py) ----------
+
+def _texte_ou_none(valeur):
+    """Trim ; chaîne vide → None."""
+    if isinstance(valeur, str):
+        valeur = valeur.strip()
+        return valeur or None
+    return valeur
+
+
+def _declencheur(valeur):
+    """Déclencheur en liste libre : trim + minuscules, pour que « Stress » et
+    « stress » comptent ensemble dans les statistiques."""
+    valeur = _texte_ou_none(valeur)
+    return valeur.lower() if isinstance(valeur, str) else valeur
+
+
+class CravingStart(BaseModel):
+    substance_id: str
+    intensity_start: int = Field(ge=1, le=10)
+    trigger: Optional[str] = Field(default=None, max_length=40)
+    # Durée de report prévue (minuteur), 10 min par défaut, 2 h au plus.
+    planned_seconds: int = Field(default=600, ge=1, le=7200)
+
+    _trigger = field_validator("trigger", mode="before")(_declencheur)
+
+
+class CravingUpdate(BaseModel):
+    """Fin ou mise à jour d'une session. Tout est optionnel ; une session
+    terminée garde son issue (voir routers/cravings.py)."""
+    outcome: Optional[CravingOutcome] = None
+    intensity_end: Optional[int] = Field(default=None, ge=1, le=10)
+    note: Optional[str] = Field(default=None, max_length=2000)
+    trigger: Optional[str] = Field(default=None, max_length=40)
+    # Cédé : créer aussi l'entrée de consommation (même service que
+    # POST /entries) et la lier à la session.
+    log_entry: bool = False
+    quantity: int = Field(default=1, ge=1, le=100)
+
+    _trigger = field_validator("trigger", mode="before")(_declencheur)
+    _note = field_validator("note", mode="before")(_texte_ou_none)
+
+
+class CravingOut(BaseModel):
+    id: str
+    substance_id: str
+    started_at: datetime
+    ended_at: Optional[datetime] = None
+    planned_seconds: int
+    intensity_start: int
+    intensity_end: Optional[int] = None
+    trigger: Optional[str] = None
+    outcome: CravingOutcome
+    note: Optional[str] = None
+    entry_id: Optional[str] = None
+    # ended_at − started_at en secondes ; null tant que la session est en cours.
+    duration_seconds: Optional[int] = None
+
+
+class DeclencheurCompte(BaseModel):
+    nom: str
+    nombre: int
+
+
+class CravingStats(BaseModel):
+    substance_id: Optional[str] = None
+    jours: int
+    total: int
+    resistes: int
+    cedes: int
+    abandonnes: int
+    en_cours: int
+    # resistes / (resistes + cedes), de 0 à 1 ; null sans session tranchée.
+    taux_resistance: Optional[float] = None
+    intensite_moyenne_debut: Optional[float] = None
+    intensite_moyenne_fin: Optional[float] = None
+    duree_moyenne_secondes: Optional[float] = None
+    top_declencheurs: List[DeclencheurCompte]
+    # Heure locale (fuseau de l'utilisateur) : 24 cases, 0 h → 23 h.
+    par_heure: List[int]
+    # Jour local : 7 cases, lundi → dimanche.
+    par_jour_semaine: List[int]
+
+
+class CravingSuggestion(BaseModel):
+    substance_id: str
+    raison: Optional[str] = None
+    derniers_resistes: int

@@ -17,7 +17,7 @@ from .database import Base
 
 MODULES: dict[str, dict] = {
     "addictions": {"label": "Alcool et tabac",
-                   "tables": ["substances", "consumption_entries", "bad_habits"]},
+                   "tables": ["substances", "consumption_entries", "bad_habits", "cravings"]},
     "habitudes": {"label": "Habitudes",
                   "tables": ["habits", "habit_logs", "habit_reschedules", "habit_skip_reasons"]},
     "sport": {"label": "Sport",

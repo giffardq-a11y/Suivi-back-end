@@ -24,7 +24,7 @@ from ..database import Base
 from .compte import _condition
 
 TABLES_PROGRESSION = {
-    "consumption_entries", "habit_logs", "habit_reschedules", "habit_skip_reasons",
+    "consumption_entries", "cravings", "habit_logs", "habit_reschedules", "habit_skip_reasons",
     "meals", "meal_plan_entries", "cooking_logs",
     "runs", "other_sport_logs", "flexibility_sessions", "strength_sessions", "daily_steps",
     "sleep_logs", "water_logs",

@@ -90,9 +90,16 @@ class Substance(Base):
     reduction_start_value = Column(Float, nullable=True)
     reduction_step_per_week = Column(Float, nullable=True)
     reduction_start_date = Column(Date, nullable=True)
+    # « Pourquoi je réduis » : texte court (300 caractères max, validé par
+    # l'API) rappelé sur l'écran d'aide au craving (GET
+    # /craving-sessions/suggestion). Null = non renseigné.
+    reason = Column(String, nullable=True)
 
     user = relationship("User", back_populates="substances")
     entries = relationship("ConsumptionEntry", back_populates="substance", cascade="all, delete-orphan")
+    # Sessions d'aide au craving : parties avec la substance (comme ses
+    # entrées), voir Craving.
+    cravings = relationship("Craving", back_populates="substance", cascade="all, delete-orphan")
 
 
 class ConsumptionEntry(Base):
@@ -807,6 +814,46 @@ class CravingEntry(Base):
     intensity = Column(Integer, nullable=False)          # 1 à 5
     triggers = Column(JSON, nullable=False, default=list)
     note = Column(Text, nullable=True)
+
+
+class CravingOutcome(str, enum.Enum):
+    """Issue d'une session d'aide au craving (table cravings)."""
+    EN_COURS = "en_cours"
+    RESISTE = "resiste"
+    CEDE = "cede"
+    ABANDONNE = "abandonne"
+
+
+class Craving(Base):
+    """Session d'aide au craving (minuteur de report + respiration guidée),
+    puis son issue. Distincte de CravingEntry (« J'ai une envie » du module
+    Humeur, issue déduite des consommations des 2 h suivantes) : ici l'issue
+    est déclarée par l'utilisateur à la fin du minuteur.
+
+    Rattachée à une substance suivie (supprimée avec elle). entry_id pointe
+    vers la consommation créée quand l'utilisateur a cédé et demandé à
+    l'enregistrer (PUT /craving-sessions/{id} avec log_entry). Colonne
+    `trigger_label` : TRIGGER est un mot réservé SQL, l'API l'expose sous le
+    nom `trigger` (même choix que CravingEntry.triggers). `outcome` est une
+    chaîne (valeurs de CravingOutcome) plutôt qu'un Enum SQL : ajouter une
+    issue plus tard ne demandera pas de migration de type."""
+    __tablename__ = "cravings"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, index=True)
+    substance_id = Column(String, ForeignKey("substances.id", ondelete="CASCADE"), nullable=False)
+    started_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    ended_at = Column(DateTime(timezone=True), nullable=True)
+    planned_seconds = Column(Integer, nullable=False, default=600)
+    intensity_start = Column(Integer, nullable=False)    # 1 à 10
+    intensity_end = Column(Integer, nullable=True)       # 1 à 10
+    trigger_label = Column(String, nullable=True)
+    outcome = Column(String, nullable=False, default=CravingOutcome.EN_COURS.value)
+    note = Column(Text, nullable=True)
+    entry_id = Column(String, ForeignKey("consumption_entries.id", ondelete="SET NULL"), nullable=True)
+
+    substance = relationship("Substance", back_populates="cravings")
+    entry = relationship("ConsumptionEntry")
 
 
 class GratitudeEntry(Base):

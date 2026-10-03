@@ -1,7 +1,7 @@
 from datetime import date
 
 from fastapi import APIRouter, Depends, HTTPException
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from sqlalchemy.orm import Session
 
 from .. import models
@@ -14,6 +14,19 @@ from ..services.substance_progress import (
 )
 
 router = APIRouter(prefix="/substances", tags=["substances"])
+
+# « Pourquoi je réduis » : rappelé sur l'écran d'aide au craving
+# (GET /craving-sessions/suggestion). Texte court.
+RAISON_MAX = 300
+
+
+def _raison(valeur):
+    """Trim ; chaîne vide → None (efface la raison). La longueur est vérifiée
+    après le trim (max_length du champ)."""
+    if isinstance(valeur, str):
+        valeur = valeur.strip()
+        return valeur or None
+    return valeur
 
 
 class SubstanceCreate(BaseModel):
@@ -30,6 +43,10 @@ class SubstanceCreate(BaseModel):
     reduction_start_value: float | None = Field(default=None, gt=0)
     reduction_step_per_week: float | None = Field(default=None, gt=0)
     reduction_start_date: date | None = None
+    # « Pourquoi je réduis » (facultatif), voir _raison.
+    reason: str | None = Field(default=None, max_length=RAISON_MAX)
+
+    _reason = field_validator("reason", mode="before")(_raison)
 
 
 def _caler_reduction(sub: "models.Substance") -> None:
@@ -93,6 +110,7 @@ def create_substance(
         reduction_start_value=payload.reduction_start_value,
         reduction_step_per_week=payload.reduction_step_per_week,
         reduction_start_date=payload.reduction_start_date,
+        reason=payload.reason,
     )
     _caler_reduction(sub)
     db.add(sub)
@@ -124,6 +142,10 @@ class SubstanceUpdate(BaseModel):
     reduction_start_value: float | None = Field(default=None, gt=0)
     reduction_step_per_week: float | None = Field(default=None, gt=0)
     reduction_start_date: date | None = None
+    # null ou "" efface la raison.
+    reason: str | None = Field(default=None, max_length=RAISON_MAX)
+
+    _reason = field_validator("reason", mode="before")(_raison)
 
 
 @router.get("")
@@ -138,6 +160,7 @@ def list_substances(db: Session = Depends(get_db), user: models.User = Depends(g
             "reduction_start_value": s.reduction_start_value,
             "reduction_step_per_week": s.reduction_step_per_week,
             "reduction_start_date": s.reduction_start_date.isoformat() if s.reduction_start_date else None,
+            "reason": s.reason,
             # Calculés à la lecture (rien de stocké) ; null sans réduction.
             "limite_du_jour": limite_du_jour(s, today),
             "palier_courant": palier_courant(s, today),

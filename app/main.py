@@ -14,7 +14,7 @@ from .routers import (
     auth, dashboard, entries, habits, meal_photo, integrations, food_search, recipes,
     bad_habits, goals, substances, profile, cycle, training, diet, journal_stats, settings,
     partner, flashcards, health_sync, pantry, compte, legal,
-    hydration, sleep, mood, budget, character, modules,
+    hydration, sleep, mood, budget, character, modules, cravings,
 )
 
 # Schéma à jour avant tout accès à la base (migrations Alembic, voir
@@ -178,6 +178,7 @@ app.include_router(mood.router)
 app.include_router(budget.router)
 app.include_router(character.router)
 app.include_router(modules.router)
+app.include_router(cravings.router)
 
 # Fichiers statiques publics : illustrations du module Personnage
 # (/static/personnages/{univers}/{classe}_r{rang}.webp), chargées à la demande
