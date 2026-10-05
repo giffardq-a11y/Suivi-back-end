@@ -106,7 +106,14 @@ def _chiffrer_jetons_oauth():
 
 _chiffrer_jetons_oauth()
 
-app = FastAPI(title="Tanren — API", version="0.1.0")
+# DISABLE_DOCS=1 (Cloud Run) : pas de /docs, /redoc ni /openapi.json en ligne.
+_docs_off = os.environ.get("DISABLE_DOCS", "0") == "1"
+app = FastAPI(
+    title="Tanren — API", version="0.1.0",
+    docs_url=None if _docs_off else "/docs",
+    redoc_url=None if _docs_off else "/redoc",
+    openapi_url=None if _docs_off else "/openapi.json",
+)
 
 # CORS ouvert pour le dev de l'app mobile (Expo Go / simulateur).
 # À restreindre à l'origine réelle en prod.
