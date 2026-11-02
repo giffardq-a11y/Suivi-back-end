@@ -25,8 +25,8 @@ le compte de démo `demo@example.com` / `motdepasse123` s'il n'existe pas
 - **Local** : SQLite `suivi.db` par défaut. **En ligne** : Postgres Neon via
   `DATABASE_URL`.
 - Le schéma est géré par **Alembic** (`migrations/versions/`), appliqué
-  automatiquement au démarrage par `app/migrate.py` — le plan gratuit de
-  Render n'a pas de shell pour lancer une commande à part.
+  automatiquement au démarrage par `app/migrate.py` — Cloud Run n'offre pas
+  de shell pour lancer une commande à part.
 - Une base créée avant Alembic (ancien `create_all` + `ALTER TABLE`) est
   reconnue, complétée puis marquée à la révision `0001` : pas de perte de
   données.
@@ -35,18 +35,30 @@ le compte de démo `demo@example.com` / `motdepasse123` s'il n'existe pas
   généré, et vérifier avec `alembic check` (doit répondre "No new upgrade
   operations detected").
 
-## En ligne (Render)
+## En ligne (Google Cloud Run)
 
-Service `Suivi-back-end` (https://suivi-back-end.onrender.com), redéployé
-à chaque push sur `main`. Variables à définir dans Render :
+Depuis le 05/10/2026 le backend tourne sur **Cloud Run** (région `europe-west9`),
+construit depuis le `Dockerfile` (uvicorn sur le port `$PORT` injecté par Cloud Run,
+`SEED_DEMO=0` fixé dans l'image) :
+`https://suivi-back-end-634366311219.europe-west9.run.app` — c'est l'adresse que vise
+l'app mobile (`src/api/client.js` de Suivi-mobile). Variables à définir dans le
+service Cloud Run :
 
 | Variable | Valeur |
 |---|---|
 | `DATABASE_URL` | URL de connexion Neon (`postgresql://...?sslmode=require`) |
 | `JWT_SECRET` | valeur aléatoire — le serveur refuse de démarrer sans |
-| `BACKEND_BASE_URL` | `https://suivi-back-end.onrender.com` (redirections OAuth) |
+| `BACKEND_BASE_URL` | l'adresse Cloud Run ci-dessus (redirections OAuth) |
+| `DISABLE_DOCS` | `1` : pas de `/docs`, `/redoc` ni `/openapi.json` en ligne |
 
-Pas de compte de démo en ligne : crée ton compte depuis l'app.
+Pas de compte de démo en ligne : crée ton compte depuis l'app. Cloud Run descend à
+zéro instance sans trafic : le premier appel après une pause prend quelques secondes.
+Aucun « réveil » périodique n'est nécessaire (le pinger coûterait des instances).
+
+L'ancien service Render `Suivi-back-end` (`suivi-back-end.onrender.com`) est
+**suspendu depuis le 02/11/2026** ; le workflow `keepalive.yml` qui le maintenait
+éveillé a été retiré le même jour (il échouait à chaque exécution et envoyait un
+mail par échec).
 
 L'API tourne sur `http://localhost:8000`. Doc interactive auto-générée sur
 `http://localhost:8000/docs`.
