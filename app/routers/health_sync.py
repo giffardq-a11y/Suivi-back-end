@@ -3,7 +3,8 @@ Health Connect → app).
 
 Le téléphone lit Health Connect et envoie ici ce qu'il a trouvé ; le serveur
 range chaque élément dans la table qui existe déjà (course, autre sport,
-muscu, poids) plus deux nouvelles (sommeil, pas).
+muscu, poids, masse grasse) ou dans une table dédiée (sommeil avec ses
+phases, pas, fréquence cardiaque du jour, composition corporelle).
 
 Anti-doublon : chaque enregistrement Health Connect a un identifiant stable,
 conservé dans `external_id`. Une synchronisation qui renvoie les mêmes
@@ -16,14 +17,14 @@ donnée saisie à la main n'a pas à être effacée par une synchronisation.
 from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
 from ..services import personnage_hooks
-from ..services.common import date_key, from_ms, is_same_day, now_utc
+from ..services.common import date_key, from_ms, is_same_day, now_utc, to_ms
 from ..services.sport import increment_session_goals, mark_sport_habits_done_today
 
 router = APIRouter(prefix="/health", tags=["health"])
@@ -52,6 +53,11 @@ class SleepIn(BaseModel):
     externalId: str
     startMs: int
     endMs: int
+    # Minutes par phase, quand la montre les détaille (Samsung Health le fait).
+    awakeMin: float | None = Field(default=None, ge=0)
+    lightMin: float | None = Field(default=None, ge=0)
+    deepMin: float | None = Field(default=None, ge=0)
+    remMin: float | None = Field(default=None, ge=0)
 
 
 class StepsIn(BaseModel):
@@ -65,11 +71,36 @@ class WeightIn(BaseModel):
     occurredMs: int
 
 
+class BodyFatIn(BaseModel):
+    externalId: str
+    percent: float = Field(gt=0, lt=100)
+    occurredMs: int
+
+
+class BodyCompositionIn(BaseModel):
+    externalId: str
+    occurredMs: int
+    leanMassKg: float | None = Field(default=None, gt=0)
+    boneMassKg: float | None = Field(default=None, gt=0)
+    bmrKcal: float | None = Field(default=None, gt=0)
+
+
+class HeartRateDayIn(BaseModel):
+    dateKey: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
+    restingBpm: int | None = Field(default=None, gt=0, lt=300)
+    avgBpm: int | None = Field(default=None, gt=0, lt=300)
+    minBpm: int | None = Field(default=None, gt=0, lt=300)
+    maxBpm: int | None = Field(default=None, gt=0, lt=300)
+
+
 class HealthImportIn(BaseModel):
     exercises: list[ExerciseIn] = []
     sleep: list[SleepIn] = []
     steps: list[StepsIn] = []
     weights: list[WeightIn] = []
+    bodyFat: list[BodyFatIn] = []
+    composition: list[BodyCompositionIn] = []
+    heartRate: list[HeartRateDayIn] = []
 
 
 def _existing(db: Session, model, user_id: str, external_id: str):
@@ -148,7 +179,10 @@ def import_health(
     db: Session = Depends(get_db),
     user: models.User = Depends(get_current_user),
 ):
-    resume = {"seances_creees": 0, "seances_mises_a_jour": 0, "nuits": 0, "jours_de_pas": 0, "pesees": 0}
+    resume = {
+        "seances_creees": 0, "seances_mises_a_jour": 0, "nuits": 0, "jours_de_pas": 0, "pesees": 0,
+        "masse_grasse": 0, "compositions": 0, "jours_fc": 0,
+    }
 
     seances_nouvelles = 0
     # Pour le Personnage, après l'enregistrement : séances créées, nuits,
@@ -167,13 +201,20 @@ def import_health(
         debut, fin = from_ms(nuit.startMs), from_ms(nuit.endMs)
         ligne = _existing(db, models.SleepLog, user.id, nuit.externalId)
         duree = max(0.0, (fin - debut).total_seconds() / 60)
+        phases = {
+            "awake_min": nuit.awakeMin, "light_min": nuit.lightMin,
+            "deep_min": nuit.deepMin, "rem_min": nuit.remMin,
+        }
         if ligne:
             ligne.started_at, ligne.ended_at, ligne.duration_min = debut, fin, duree
             ligne.date_key = date_key(fin)
+            for k, v in phases.items():
+                setattr(ligne, k, v)
         else:
             ligne = models.SleepLog(
                 user_id=user.id, source=SOURCE, external_id=nuit.externalId,
                 started_at=debut, ended_at=fin, duration_min=duree, date_key=date_key(fin),
+                **phases,
             )
             db.add(ligne)
             resume["nuits"] += 1
@@ -205,6 +246,51 @@ def import_health(
         db.add(nouvelle)
         pesees_vues.append(nouvelle)
         resume["pesees"] += 1
+
+    for mesure in payload.bodyFat:
+        if _existing(db, models.BodyFatEntry, user.id, mesure.externalId):
+            continue
+        db.add(models.BodyFatEntry(
+            user_id=user.id, source=SOURCE, external_id=mesure.externalId,
+            percent=mesure.percent, occurred_at=from_ms(mesure.occurredMs),
+            note="Importé de la balance",
+        ))
+        resume["masse_grasse"] += 1
+
+    for mesure in payload.composition:
+        if mesure.leanMassKg is None and mesure.boneMassKg is None and mesure.bmrKcal is None:
+            continue
+        champs = {"lean_mass_kg": mesure.leanMassKg, "bone_mass_kg": mesure.boneMassKg, "bmr_kcal": mesure.bmrKcal}
+        ligne = _existing(db, models.BodyCompositionEntry, user.id, mesure.externalId)
+        if ligne:
+            for k, v in champs.items():
+                setattr(ligne, k, v)
+        else:
+            db.add(models.BodyCompositionEntry(
+                user_id=user.id, source=SOURCE, external_id=mesure.externalId,
+                occurred_at=from_ms(mesure.occurredMs), **champs,
+            ))
+            resume["compositions"] += 1
+
+    for jour in payload.heartRate:
+        champs = {
+            "resting_bpm": jour.restingBpm, "avg_bpm": jour.avgBpm,
+            "min_bpm": jour.minBpm, "max_bpm": jour.maxBpm,
+        }
+        ligne = (
+            db.query(models.DailyHeartRate)
+            .filter(models.DailyHeartRate.user_id == user.id, models.DailyHeartRate.date_key == jour.dateKey)
+            .first()
+        )
+        if ligne:
+            # Une valeur absente de cette synchro (pas de repos mesuré) n'efface
+            # pas celle d'une synchro précédente.
+            for k, v in champs.items():
+                if v is not None:
+                    setattr(ligne, k, v)
+        else:
+            db.add(models.DailyHeartRate(user_id=user.id, date_key=jour.dateKey, source=SOURCE, **champs))
+        resume["jours_fc"] += 1
 
     db.commit()
 
@@ -260,7 +346,40 @@ def health_summary(db: Session = Depends(get_db), user: models.User = Depends(ge
     derniere_nuit = max(nuits, key=lambda n: n.ended_at, default=None)
     aujourdhui = date_key(now_utc())
 
+    derniere_pesee = (
+        db.query(models.WeightEntry).filter(models.WeightEntry.user_id == user.id)
+        .order_by(models.WeightEntry.occurred_at.desc()).first()
+    )
+    derniere_graisse = (
+        db.query(models.BodyFatEntry).filter(models.BodyFatEntry.user_id == user.id)
+        .order_by(models.BodyFatEntry.occurred_at.desc()).first()
+    )
+    derniere_compo = (
+        db.query(models.BodyCompositionEntry).filter(models.BodyCompositionEntry.user_id == user.id)
+        .order_by(models.BodyCompositionEntry.occurred_at.desc()).first()
+    )
+    derniere_fc = (
+        db.query(models.DailyHeartRate)
+        .filter(models.DailyHeartRate.user_id == user.id, models.DailyHeartRate.resting_bpm.isnot(None))
+        .order_by(models.DailyHeartRate.date_key.desc()).first()
+    )
+    profil = db.query(models.Profile).filter(models.Profile.user_id == user.id).first()
+    imc = None
+    if derniere_pesee and profil and profil.height_cm and profil.height_cm > 0:
+        imc = round(derniere_pesee.weight_kg / (profil.height_cm / 100) ** 2, 1)
+
     return {
+        "derniere_pesee_kg": derniere_pesee.weight_kg if derniere_pesee else None,
+        "derniere_pesee_ms": to_ms(derniere_pesee.occurred_at) if derniere_pesee else None,
+        "imc": imc,
+        "masse_grasse_pct": derniere_graisse.percent if derniere_graisse else None,
+        "masse_maigre_kg": derniere_compo.lean_mass_kg if derniere_compo else None,
+        "fc_repos_bpm": derniere_fc.resting_bpm if derniere_fc else None,
+        "derniere_nuit_phases": (
+            {"eveil": derniere_nuit.awake_min, "leger": derniere_nuit.light_min,
+             "profond": derniere_nuit.deep_min, "rem": derniere_nuit.rem_min}
+            if derniere_nuit and derniere_nuit.deep_min is not None else None
+        ),
         "seances_importees": sum(
             db.query(m).filter(m.user_id == user.id, m.source == SOURCE).count()
             for m in (models.Run, models.OtherSportLog, models.StrengthSession)

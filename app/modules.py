@@ -22,7 +22,7 @@ MODULES: dict[str, dict] = {
                   "tables": ["habits", "habit_logs", "habit_reschedules", "habit_skip_reasons"]},
     "sport": {"label": "Sport",
               "tables": ["runs", "strength_sessions", "other_sport_logs", "flexibility_sessions",
-                         "workout_templates", "daily_steps"]},
+                         "workout_templates", "daily_steps", "daily_heart_rates"]},
     "nutrition": {"label": "Nutrition",
                   "tables": ["meals", "meal_plan_entries", "pantry_items", "cooking_logs"]},
     "cycle": {"label": "Cycle",
@@ -45,7 +45,7 @@ MODULES: dict[str, dict] = {
 
 # Toujours actif, jamais supprimé par module (seulement avec le compte).
 SOCLE = {
-    "users", "profiles", "weight_entries", "body_fat_entries", "goals", "rewards", "reward_purchases",
+    "users", "profiles", "weight_entries", "body_fat_entries", "body_composition_entries", "goals", "rewards", "reward_purchases",
     "partner_links", "partner_reminders", "report_settings", "external_integrations",
     "account_tokens", "refresh_tokens", "board_shares",
 }

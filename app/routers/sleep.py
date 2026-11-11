@@ -106,6 +106,12 @@ def _serialiser_nuit(n: models.SleepLog) -> dict:
         "quality": n.quality,
         "note": n.note,
         "source": n.source or MANUEL,
+        # Phases fournies par la montre (minutes), None si non détaillées.
+        "stages": (
+            {"awakeMin": round(n.awake_min or 0), "lightMin": round(n.light_min or 0),
+             "deepMin": round(n.deep_min or 0), "remMin": round(n.rem_min or 0)}
+            if n.deep_min is not None or n.light_min is not None else None
+        ),
     }
 
 
