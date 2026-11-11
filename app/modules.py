@@ -47,7 +47,7 @@ MODULES: dict[str, dict] = {
 SOCLE = {
     "users", "profiles", "weight_entries", "body_fat_entries", "goals", "rewards", "reward_purchases",
     "partner_links", "partner_reminders", "report_settings", "external_integrations",
-    "account_tokens", "refresh_tokens",
+    "account_tokens", "refresh_tokens", "board_shares",
 }
 
 TOUS = list(MODULES)
