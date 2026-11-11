@@ -1076,3 +1076,20 @@ class DailyQuest(Base):
     quest_key = Column(String, nullable=False)       # clé d'un modèle (config.json, « quetes »)
     xp = Column(Integer, nullable=False)
     done_at = Column(DateTime(timezone=True), nullable=True)
+
+
+class BoardShare(Base):
+    """Lien de partage en lecture seule du « tableau » (écran de salon, TV) :
+    GET /board/{jeton} renvoie sans connexion les cases du jour (bouger,
+    manger, sobre), les points de la semaine et les pesées. Un seul lien par
+    compte ; en recréer un remplace l'ancien, le supprimer coupe l'accès.
+    Seul le hachage SHA-256 du jeton est stocké, comme AccountToken. Voir
+    app/routers/board.py."""
+    __tablename__ = "board_shares"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False, unique=True)
+    token_hash = Column(String, nullable=False, unique=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    last_read_at = Column(DateTime(timezone=True), nullable=True)
+

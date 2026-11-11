@@ -46,11 +46,24 @@ dans la politique de confidentialité.
 | Santé et remise en forme → Informations de santé | repas, calories, macros, plan alimentaire, stock du placard | `meals`, `meal_plan_entries`, `pantry_items`, `cooking_logs` | Non | Suivi nutritionnel |
 | Activité dans l'app → Autres actions | habitudes et leurs coches, objectifs, récompenses, journal, cartes de révision | `habits`, `habit_logs`, `goals`, `rewards`, `flash_cards`... | Non | Fonctions de l'app |
 | Informations personnelles → Autres | lien de partage avec un proche (son compte, rappels envoyés) | `partner_links`, `partner_reminders` | Non | Partage des progrès |
+| Informations personnelles → Autres | lien de partage du tableau (hachage du jeton, date de dernière lecture) | `board_shares` | Non | Affichage du tableau sur un écran (TV) |
 | Identifiants d'accès tiers | jetons OAuth Google Agenda / Outlook | `external_integrations` | Non | Synchro des habitudes avec l'agenda. Chiffrés au repos (Fernet, clé `INTEGRATION_ENCRYPTION_KEY` dans Render) |
 
 Aucune donnée n'est vendue, ni utilisée pour de la publicité. Il n'y a ni
 publicité ni outil d'analyse d'audience dans l'app à ce jour (PostHog prévu au
 lot F : à ajouter à ce document ce jour-là).
+
+### Lien public du tableau (ajout du 11/11/2026)
+
+`GET /board/{jeton}` renvoie **sans connexion** des données de santé agrégées :
+cases du jour (activité, alimentation, absence d'alcool et de tabac), points de
+la semaine, série, pesées des 140 derniers jours et nom affiché. Ni e-mail ni
+détail des repas ou des consommations. Le lien n'existe que si l'utilisateur le
+crée (`POST /board/share`), il le remplace ou le coupe quand il veut
+(`DELETE /board/share`), et le proche lié n'y figure que s'il a créé le sien.
+Toute personne qui détient l'adresse lit ces données : **à mentionner dans la
+politique de confidentialité** et à présenter comme tel dans l'app avant la
+publication (aucun écran ne crée ce lien pour l'instant).
 
 ## 3. Données envoyées à des tiers pour traitement
 
