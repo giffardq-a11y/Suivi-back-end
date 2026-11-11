@@ -11,5 +11,13 @@ def test_page_et_script_servis(client):
     assert client.get("/web/manifest.json").json()["start_url"] == "/web/"
 
 
+def test_racine_renvoie_vers_web(client):
+    """L'adresse du service (celle qu'affiche gcloud) répondait
+    {"detail":"Not Found"} : elle doit mener à l'app web."""
+    r = client.get("/", follow_redirects=False)
+    assert r.status_code == 307 and r.headers["location"] == "/web/"
+    assert client.get("/").status_code == 200
+
+
 def test_api_non_masquee(client):
     assert client.get("/health").json() == {"status": "ok"}

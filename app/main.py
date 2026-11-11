@@ -120,7 +120,7 @@ app = FastAPI(
 import logging
 
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 
 _log = logging.getLogger("uvicorn.error")
 
@@ -201,6 +201,14 @@ app.mount("/static", StaticFiles(directory=Path(__file__).resolve().parent / "st
 _web = Path(__file__).resolve().parent / "web"
 if (_web / "index.html").is_file():
     app.mount("/web", StaticFiles(directory=_web, html=True), name="web")
+
+
+# Racine du service : c'est l'adresse qu'affiche `gcloud run deploy` et que
+# l'on ouvre en premier. Sans route, FastAPI répondait {"detail":"Not Found"}.
+# Renvoie vers la version web quand elle est présente, sinon vers /health.
+@app.get("/", include_in_schema=False)
+def racine():
+    return RedirectResponse("/web/" if (_web / "index.html").is_file() else "/health")
 
 
 @app.get("/health")
