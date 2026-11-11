@@ -194,6 +194,15 @@ app.include_router(board.router)
 app.mount("/static", StaticFiles(directory=Path(__file__).resolve().parent / "static"), name="static")
 
 
+# Version web de l'app (PC, iPhone via Safari) : export statique de
+# Suivi-mobile (`npm run build:web`), copié dans app/web/. Servie ici, sous la
+# même origine que l'API : aucun réglage CORS à faire. Montée seulement si le
+# dossier est présent, pour qu'un dépôt sans l'export démarre quand même.
+_web = Path(__file__).resolve().parent / "web"
+if (_web / "index.html").is_file():
+    app.mount("/web", StaticFiles(directory=_web, html=True), name="web")
+
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
