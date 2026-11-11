@@ -51,6 +51,13 @@ service Cloud Run :
 | `BACKEND_BASE_URL` | l'adresse Cloud Run ci-dessus (redirections OAuth) |
 | `DISABLE_DOCS` | `1` : pas de `/docs`, `/redoc` ni `/openapi.json` en ligne |
 
+La version web de l'app est servie par ce service, à l'adresse
+`https://suivi-back-end-634366311219.europe-west9.run.app/web/` (PC : « Installer
+ce site comme application » dans Edge ou Chrome ; iPhone : Safari, Partager,
+« Sur l'écran d'accueil »). Le dossier `app/web/` est un export de Suivi-mobile :
+pour le mettre à jour, lance `npm run build:web` dans Suivi-mobile, remplace le
+contenu de `app/web/` par celui de `dist/`, pousse et redéploie.
+
 Pas de compte de démo en ligne : crée ton compte depuis l'app. Cloud Run descend à
 zéro instance sans trafic : le premier appel après une pause prend quelques secondes.
 Aucun « réveil » périodique n'est nécessaire (le pinger coûterait des instances).

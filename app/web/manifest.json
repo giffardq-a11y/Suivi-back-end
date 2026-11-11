@@ -1,0 +1,17 @@
+{
+  "name": "Tanren",
+  "short_name": "Tanren",
+  "start_url": "/web/",
+  "scope": "/web/",
+  "display": "standalone",
+  "background_color": "#1E1A26",
+  "theme_color": "#1E1A26",
+  "icons": [
+    {
+      "src": "/web/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
