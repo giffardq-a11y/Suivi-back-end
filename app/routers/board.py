@@ -6,8 +6,8 @@
 - DELETE /board/share   (connecté) coupe l'accès.
 - GET    /board/{jeton} (public) renvoie l'état du tableau.
 
-Le lien public ne donne que des données agrégées (cases du jour, points,
-pesées), jamais l'e-mail ni le détail des consommations ou des repas. Le
+Le lien public ne donne que des données agrégées (catégories du jour : sport,
+nutrition, alcool et tabac, hydratation, sommeil, habitudes ; points ; pesées), jamais l'e-mail ni le détail des consommations ou des repas. Le
 proche lié (voir routers/partner.py) n'apparaît sur le tableau que s'il a
 lui-même activé un lien de partage : accepter un lien « proche » ne vaut pas
 accord pour un affichage sans connexion.

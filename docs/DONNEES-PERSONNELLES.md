@@ -56,9 +56,9 @@ lot F : à ajouter à ce document ce jour-là).
 ### Lien public du tableau (ajout du 11/11/2026)
 
 `GET /board/{jeton}` renvoie **sans connexion** des données de santé agrégées :
-cases du jour (activité, alimentation, absence d'alcool et de tabac), points de
-la semaine, série, pesées des 140 derniers jours et nom affiché. Ni e-mail ni
-détail des repas ou des consommations. Le lien n'existe que si l'utilisateur le
+catégories du jour avec leur valeur (sport, nutrition, alcool et tabac,
+hydratation, sommeil, habitudes, selon les modules actifs), points de la semaine, série, pesées des 140 derniers jours et nom affiché. Ni e-mail ni
+détail des repas ou des consommations ; cycle, humeur et budget n'y figurent jamais. Le lien n'existe que si l'utilisateur le
 crée (`POST /board/share`), il le remplace ou le coupe quand il veut
 (`DELETE /board/share`), et le proche lié n'y figure que s'il a créé le sien.
 Toute personne qui détient l'adresse lit ces données : **à mentionner dans la
