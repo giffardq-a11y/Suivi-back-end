@@ -160,3 +160,21 @@ def test_hydratation_sommeil_et_modules_inactifs(client, nouveau_compte, nouveau
     _, _, h2, _ = nouveau_compte_avec_modules(["sport"])
     seul = client.get(_lien(client, h2)).json()["people"][0]
     assert set(_cats(seul)) == {"sport"} and seul["pointsMax"] == 7
+
+
+def test_nom_jamais_tire_de_l_email(client):
+    """À l'inscription sans nom, le nom affiché est le début de l'e-mail :
+    l'écran commun ne doit pas le montrer."""
+    r = client.post("/auth/signup", json={"email": "prenom.nom.tableau@example.com", "password": "motdepasse-test-123"})
+    assert r.status_code == 201, r.text
+    h = {"Authorization": f"Bearer {r.json()['access_token']}"}
+    r = client.get(_lien(client, h))
+    assert "prenom.nom.tableau" not in r.text and r.json()["people"][0]["name"] == "Sans nom"
+
+    db = SessionLocal()
+    try:
+        db.query(models.User).filter(models.User.email == "prenom.nom.tableau@example.com").update({"display_name": "Quentin"})
+        db.commit()
+    finally:
+        db.close()
+    assert client.get(_lien(client, h)).json()["people"][0]["name"] == "Quentin"
