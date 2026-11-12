@@ -87,10 +87,10 @@ class BodyCompositionIn(BaseModel):
 
 class HeartRateDayIn(BaseModel):
     dateKey: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
-    restingBpm: int | None = Field(default=None, gt=0, lt=300)
-    avgBpm: int | None = Field(default=None, gt=0, lt=300)
-    minBpm: int | None = Field(default=None, gt=0, lt=300)
-    maxBpm: int | None = Field(default=None, gt=0, lt=300)
+    restingBpm: int | None = Field(default=None, gt=0, le=300)
+    avgBpm: int | None = Field(default=None, gt=0, le=300)
+    minBpm: int | None = Field(default=None, gt=0, le=300)
+    maxBpm: int | None = Field(default=None, gt=0, le=300)
 
 
 class HealthImportIn(BaseModel):

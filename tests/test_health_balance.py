@@ -143,3 +143,10 @@ def test_cloisonnement_des_mesures(client, nouveau_compte):
     resume_b = client.get("/health/summary", headers=h_b).json()
     assert resume_b["masse_grasse_pct"] is None and resume_b["derniere_pesee_kg"] is None
     assert client.get("/body-fat", headers=h_b).json()["entries"] == []
+
+def test_frequence_300_acceptee(client, nouveau_compte):
+    # Health Connect accepte jusqu'à 300 bpm : une telle mesure ne doit pas
+    # faire refuser tout l'envoi (la synchro resterait bloquée au même point).
+    _, _, h, _ = nouveau_compte()
+    jour = {"dateKey": "2026-11-11", "avgBpm": 90, "maxBpm": 300}
+    assert client.post("/health/import", json={"heartRate": [jour]}, headers=h).status_code == 200
