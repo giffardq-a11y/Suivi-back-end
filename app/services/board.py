@@ -26,6 +26,7 @@ Les jours sont découpés dans le fuseau de l'utilisateur (User.timezone), pas
 en UTC : une séance à 23 h 30 doit compter pour le jour où elle a été faite.
 Rien n'est stocké : tout est recalculé à la lecture.
 """
+import hashlib
 from collections import defaultdict
 from datetime import date, datetime, timedelta
 
@@ -38,13 +39,18 @@ from .habit_progress import jours_actifs
 
 PAS_JOUR_ACTIF = 8000
 TOLERANCE_CALORIES = 1.05
-JOURS_HISTORIQUE = 140  # pesées et série : un peu plus que 16 semaines
+JOURS_HISTORIQUE = 140  # série : un peu plus que 16 semaines
 SOCLE_SERIE = ("sport", "nutrition", "addictions")
 NOM_PAR_DEFAUT = "Sans nom"
 LIBELLES = {
     "sport": "Sport", "nutrition": "Nutrition", "addictions": "Alcool et tabac",
     "hydratation": "Hydratation", "sommeil": "Sommeil", "habitudes": "Habitudes",
 }
+
+
+def hacher_jeton(jeton: str) -> str:
+    """Seul ce hachage du jeton d'un lien d'écran est stocké (boards.token_hash)."""
+    return hashlib.sha256(jeton.encode()).hexdigest()
 
 
 def nom_affiche(user: models.User) -> str:
@@ -208,13 +214,6 @@ def etat_personne(db: Session, user: models.User, maintenant: datetime | None = 
         serie += 1
         jour -= timedelta(days=1)
 
-    # Une pesée par jour (la dernière), de la plus ancienne à la plus récente.
-    pesees: dict[date, float] = {}
-    for occurred_at, kg in db.query(models.WeightEntry.occurred_at, models.WeightEntry.weight_kg).filter(
-            models.WeightEntry.user_id == user.id, models.WeightEntry.occurred_at >= depuis,
-    ).order_by(models.WeightEntry.occurred_at.asc()).all():
-        pesees[_jour_local(occurred_at, fuseau)] = kg
-
     return {
         "name": nom_affiche(user),
         "today": {"date": aujourd_hui.isoformat(), "categories": categories(aujourd_hui)},
@@ -222,5 +221,4 @@ def etat_personne(db: Session, user: models.User, maintenant: datetime | None = 
         "points": points,
         "pointsMax": points_max,
         "streakDays": serie,
-        "weights": [{"date": j.isoformat(), "kg": round(kg, 1)} for j, kg in sorted(pesees.items())],
     }
