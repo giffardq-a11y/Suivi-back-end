@@ -16,28 +16,29 @@
   html, body { height: 100%; overflow: hidden; background: var(--fond); color: var(--texte);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
   body { display: flex; flex-direction: column; padding: 2.5vmin 3vmin; cursor: default; }
-  #personnes { flex: 1; display: flex; gap: 3vmin; min-height: 0; }
-  .personne { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2vmin;
-    background: var(--carte); border: 0.3vmin solid var(--bord); border-radius: 2.5vmin; padding: 2.5vmin 3vmin; }
-  .seule { max-width: 110vmin; margin: 0 auto; }
-  .entete { display: flex; align-items: baseline; justify-content: space-between; gap: 2vmin; }
-  .nom { font-size: 7vmin; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* Grille de 1 à 6 personnes (colonnes et taille --k posées en JS). */
+  #personnes { --k: 1; flex: 1; display: grid; gap: 3vmin; min-height: 0; }
+  .personne { min-width: 0; min-height: 0; overflow: hidden; display: flex; flex-direction: column; gap: calc(2vmin * var(--k));
+    background: var(--carte); border: calc(0.3vmin * var(--k)) solid var(--bord); border-radius: calc(2.5vmin * var(--k)); padding: calc(2.5vmin * var(--k)) calc(3vmin * var(--k)); }
+  .seule { width: 100%; max-width: 110vmin; margin: 0 auto; }
+  .entete { display: flex; align-items: baseline; justify-content: space-between; gap: calc(2vmin * var(--k)); }
+  .nom { font-size: calc(7vmin * var(--k)); font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .chiffres { text-align: right; white-space: nowrap; }
-  .points { font-size: 5vmin; font-weight: 700; }
+  .points { font-size: calc(5vmin * var(--k)); font-weight: 700; }
   .points small, .serie small { font-size: 0.5em; font-weight: 400; color: var(--discret); }
-  .serie { font-size: 3.4vmin; color: var(--alerte); font-weight: 600; }
-  .cases { flex: 1; min-height: 0; display: flex; flex-wrap: wrap; gap: 1.6vmin; align-content: stretch; }
+  .serie { font-size: calc(3.4vmin * var(--k)); color: var(--alerte); font-weight: 600; }
+  .cases { flex: 1; min-height: 0; display: flex; flex-wrap: wrap; gap: calc(1.6vmin * var(--k)); align-content: stretch; }
   .case { flex: 1 1 40%; min-width: 0; display: flex; flex-direction: column; justify-content: center;
-    border-radius: 1.8vmin; padding: 1.2vmin 2vmin; border: 0.4vmin solid var(--bord); }
+    border-radius: calc(1.8vmin * var(--k)); padding: calc(1.2vmin * var(--k)) calc(2vmin * var(--k)); border: calc(0.4vmin * var(--k)) solid var(--bord); }
   .case.fait { background: var(--fait-fond); border-color: var(--fait); }
-  .libelle { font-size: 4vmin; font-size: min(4vmin, 2.6vw); font-weight: 700; line-height: 1.1; hyphens: auto; }
+  .libelle { font-size: calc(4vmin * var(--k)); font-size: min(calc(4vmin * var(--k)), calc(2.6vw * var(--k))); font-weight: 700; line-height: 1.1; hyphens: auto; }
   .case.fait .libelle::before { content: "\2713\00a0"; color: var(--fait); }
-  .valeur { font-size: 3.3vmin; color: var(--discret); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .valeur { font-size: calc(3.3vmin * var(--k)); color: var(--discret); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .case.fait .valeur { color: #c9f2dc; }
-  .semaine { display: flex; gap: 1vmin; }
-  .jour { flex: 1; text-align: center; border-radius: 1.2vmin; padding: 0.8vmin 0; border: 0.3vmin solid var(--bord); }
-  .jour b { display: block; font-size: 2.6vmin; color: var(--discret); font-weight: 600; }
-  .jour span { font-size: 3vmin; font-weight: 700; }
+  .semaine { display: flex; gap: calc(1vmin * var(--k)); }
+  .jour { flex: 1; text-align: center; border-radius: calc(1.2vmin * var(--k)); padding: calc(0.8vmin * var(--k)) 0; border: calc(0.3vmin * var(--k)) solid var(--bord); }
+  .jour b { display: block; font-size: calc(2.6vmin * var(--k)); color: var(--discret); font-weight: 600; }
+  .jour span { font-size: calc(3vmin * var(--k)); font-weight: 700; }
   .jour.complet { background: var(--fait-fond); border-color: var(--fait); }
   .jour.aujourdhui { border-color: var(--texte); }
   .jour.futur span { color: var(--bord); }
@@ -49,7 +50,7 @@
 <body>
 <div id="personnes" class="cache"></div>
 <div id="message">Chargement du tableau…</div>
-<div id="pied"><span id="etat"></span><span>Tanren</span></div>
+<div id="pied"><span id="etat"></span><span id="titre">Tanren</span></div>
 <script>
 /*
  * Tableau partagé de Tanren, pour un écran (PC, TV du salon).
@@ -152,10 +153,18 @@
     var gens = (donnees && donnees.people) || [];
     if (!gens.length) { message("Aucune donnée à afficher."); return; }
     vider(elPersonnes);
-    for (var i = 0; i < gens.length; i++) elPersonnes.appendChild(carte(gens[i], gens.length === 1));
+    // 1 à 3 personnes : une rangée ; 4 : deux sur deux ; 5 ou 6 : trois sur deux.
+    var n = gens.length;
+    var colonnes = n <= 3 ? n : (n === 4 ? 2 : 3);
+    var rangees = Math.ceil(n / colonnes);
+    elPersonnes.style.gridTemplateColumns = "repeat(" + colonnes + ", minmax(0, 1fr))";
+    elPersonnes.style.gridTemplateRows = "repeat(" + rangees + ", minmax(0, 1fr))";
+    elPersonnes.style.setProperty("--k", rangees > 1 ? "0.58" : (colonnes === 3 ? "0.8" : "1"));
+    for (var i = 0; i < n; i++) elPersonnes.appendChild(carte(gens[i], n === 1));
     elPersonnes.className = "";
     elMessage.className = "cache";
     elEtat.textContent = "Mis à jour à " + heure(new Date());
+    document.getElementById("titre").textContent = donnees.name ? donnees.name + " · Tanren" : "Tanren";
   }
 
   function estLaNuit(d) {

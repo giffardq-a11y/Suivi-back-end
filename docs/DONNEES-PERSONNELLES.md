@@ -53,17 +53,28 @@ Aucune donnée n'est vendue, ni utilisée pour de la publicité. Il n'y a ni
 publicité ni outil d'analyse d'audience dans l'app à ce jour (PostHog prévu au
 lot F : à ajouter à ce document ce jour-là).
 
-### Lien public du tableau (ajout du 11/11/2026)
+### Tableaux communs et leur lien public (11/11/2026, refait le 12/11/2026)
 
-`GET /board/{jeton}` renvoie **sans connexion** des données de santé agrégées :
-catégories du jour avec leur valeur (sport, nutrition, alcool et tabac,
-hydratation, sommeil, habitudes, selon les modules actifs), points de la semaine, série, pesées des 140 derniers jours et nom affiché. Ni e-mail ni
-détail des repas ou des consommations ; cycle, humeur et budget n'y figurent jamais. Le lien n'existe que si l'utilisateur le
-crée (`POST /board/share`), il le remplace ou le coupe quand il veut
-(`DELETE /board/share`), et le proche lié n'y figure que s'il a créé le sien.
-Toute personne qui détient l'adresse lit ces données : **à mentionner dans la
-politique de confidentialité** et à présenter comme tel dans l'app avant la
-publication (aucun écran ne crée ce lien pour l'instant).
+Un utilisateur crée des tableaux communs (`boards`, onglet Tableau de l'app)
+et y invite des comptes Tanren par e-mail (`board_members`, 6 personnes au
+plus). L'e-mail d'un invité n'est montré qu'au créateur, pour ses invitations
+en attente ; les autres membres ne voient que les noms affichés des membres
+acceptés. Accepter l'invitation vaut accord pour s'afficher sur l'écran de ce
+tableau ; refuser ou quitter le retire. Être lié comme « proche » ne suffit
+plus.
+
+`GET /board/{jeton}` renvoie **sans connexion**, pour chaque membre accepté :
+nom affiché (jamais le début de l'e-mail), catégories du jour avec leur valeur
+(sport, nutrition, alcool et tabac, hydratation, sommeil, habitudes, selon les
+modules actifs), points de la semaine et série. Ni e-mail, ni pesées, ni
+détail des repas ou des consommations ; cycle, humeur et budget n'y figurent
+jamais. Le lien n'existe que si le créateur le crée (`POST /boards/{id}/link`),
+il le remplace ou le coupe quand il veut (`DELETE /boards/{id}/link`). Toute
+personne qui détient l'adresse lit ces données : **à mentionner dans la
+politique de confidentialité**.
+
+Les anciens liens personnels (`board_shares`, 11/11/2026) ont été repris en
+tableaux par la migration 0028 ; la table est gardée, plus lue.
 
 ## 3. Données envoyées à des tiers pour traitement
 

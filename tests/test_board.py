@@ -9,16 +9,25 @@ def _cats(personne) -> dict:
     return {c["key"]: c for c in personne["today"]["categories"]}
 
 
-def _lien(client, h) -> str:
-    r = client.post("/board/share", headers=h)
+def _nouveau_tableau(client, h, nom="Maison") -> str:
+    r = client.post("/boards", json={"name": nom}, headers=h)
     assert r.status_code == 201, r.text
-    return r.json()["path"]
+    return r.json()["id"]
+
+
+def _lien(client, h, board_id=None) -> str:
+    """Chemin public d'un tableau (créé s'il n'est pas donné)."""
+    board_id = board_id or _nouveau_tableau(client, h)
+    r = client.post(f"/boards/{board_id}/link", headers=h)
+    assert r.status_code == 201, r.text
+    return f"/board/{r.json()['token']}"
 
 
 def test_lien_public_sans_connexion_et_donnees_agregees(client, nouveau_compte):
     email, _, h, _ = nouveau_compte()
-    assert client.get("/board/share", headers=h).json()["enabled"] is False
-    chemin = _lien(client, h)
+    board_id = _nouveau_tableau(client, h)
+    assert client.get("/boards", headers=h).json()["boards"][0]["link"]["enabled"] is False
+    chemin = _lien(client, h, board_id)
 
     r = client.get(chemin)  # aucune en-tête d'autorisation
     assert r.status_code == 200
@@ -30,12 +39,14 @@ def test_lien_public_sans_connexion_et_donnees_agregees(client, nouveau_compte):
     # Compte neuf, tous modules actifs, aucune habitude : cinq catégories.
     assert set(cats) == {"sport", "nutrition", "addictions", "hydratation", "sommeil"}
     assert not cats["sport"]["done"] and not cats["nutrition"]["done"] and cats["addictions"]["done"]
-    assert moi["pointsMax"] == 35 and moi["weights"] == []
+    # Ni pesées (données de santé que la page n'affiche pas) ni e-mail.
+    assert moi["pointsMax"] == 35 and "weights" not in moi
     # Jamais sur un écran commun : cycle, humeur, budget.
     assert not {"cycle", "humeur", "budget"} & set(cats)
     # Ni e-mail ni identifiant dans la réponse publique.
     assert email not in r.text and "user_id" not in r.text
-    assert client.get("/board/share", headers=h).json()["lastReadAt"] is not None
+    assert corps["name"] == "Maison"
+    assert client.get("/boards", headers=h).json()["boards"][0]["link"]["lastReadAt"] is not None
 
 
 def test_cases_du_jour_points_et_pesee(client, nouveau_compte):
@@ -51,7 +62,7 @@ def test_cases_du_jour_points_et_pesee(client, nouveau_compte):
     assert cats["sport"]["done"] and cats["sport"]["value"] == "25 min"
     assert cats["nutrition"]["done"] and cats["nutrition"]["value"] == "650 / 2000 kcal"
     assert moi["points"] >= 3 and moi["streakDays"] >= 1
-    assert moi["weights"][-1]["kg"] == 85.4
+    assert "weights" not in moi and "85.4" not in client.get(chemin).text
 
     # Dépasser le budget calorique décoche « manger ».
     assert client.post("/diet/meals", json={"label": "Excès", "calories": 3000, "type": "collation"}, headers=h).status_code == 201
@@ -93,29 +104,28 @@ def test_jour_de_repos_actif_par_les_pas(client, nouveau_compte):
 
 def test_remplacement_et_suppression_du_lien(client, nouveau_compte):
     _, _, h, _ = nouveau_compte()
-    ancien = _lien(client, h)
-    nouveau = _lien(client, h)
+    board_id = _nouveau_tableau(client, h)
+    ancien = _lien(client, h, board_id)
+    nouveau = _lien(client, h, board_id)
     assert ancien != nouveau
     assert client.get(ancien).status_code == 404
     assert client.get(nouveau).status_code == 200
-    assert client.delete("/board/share", headers=h).status_code == 204
+    assert client.delete(f"/boards/{board_id}/link", headers=h).status_code == 204
     assert client.get(nouveau).status_code == 404
     assert client.get("/board/jeton-invente").status_code == 404
-    assert client.post("/board/share").status_code in (401, 403)
+    assert client.post(f"/boards/{board_id}/link").status_code in (401, 403)
 
 
-def test_proche_visible_seulement_s_il_partage_aussi(client, nouveau_compte):
+def test_lien_proche_ne_suffit_pas(client, nouveau_compte):
+    """Être lié comme « proche » ne fait pas apparaître sur un tableau : il
+    faut y être invité et accepter."""
     _, _, h_a, _ = nouveau_compte()
     email_b, _, h_b, _ = nouveau_compte()
     chemin = _lien(client, h_a)
     assert client.post("/partner/invite", json={"email": email_b}, headers=h_a).status_code == 200
     invitation = client.get("/partner", headers=h_b).json()["pendingReceived"][0]["linkId"]
     assert client.post(f"/partner/invites/{invitation}/accept", headers=h_b).status_code == 200
-
-    # Lié mais sans lien de partage à lui : le proche n'apparaît pas.
     assert len(client.get(chemin).json()["people"]) == 1
-    _lien(client, h_b)
-    assert len(client.get(chemin).json()["people"]) == 2
 
 
 def test_serie_sur_plusieurs_jours(client, nouveau_compte):

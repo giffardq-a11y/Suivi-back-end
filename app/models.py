@@ -1120,12 +1120,10 @@ class DailyQuest(Base):
 
 
 class BoardShare(Base):
-    """Lien de partage en lecture seule du « tableau » (écran de salon, TV) :
-    GET /board/{jeton} renvoie sans connexion les cases du jour (bouger,
-    manger, sobre), les points de la semaine et les pesées. Un seul lien par
-    compte ; en recréer un remplace l'ancien, le supprimer coupe l'accès.
-    Seul le hachage SHA-256 du jeton est stocké, comme AccountToken. Voir
-    app/routers/board.py."""
+    """Ancien lien de partage du tableau, un par compte (migration 0026).
+    Remplacé par les tableaux communs (Board, BoardMember) : la migration
+    0028 en a repris les lignes, plus rien ne la lit. Gardée pour pouvoir
+    revenir en arrière ; à supprimer plus tard."""
     __tablename__ = "board_shares"
 
     id = Column(String, primary_key=True, default=gen_uuid)
@@ -1134,3 +1132,37 @@ class BoardShare(Base):
     created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
     last_read_at = Column(DateTime(timezone=True), nullable=True)
 
+
+class Board(Base):
+    """Tableau commun : un nom, son créateur, ses membres (BoardMember) et un
+    lien d'écran en lecture seule (GET /board/{jeton}, page /tableau).
+    Le créateur invite, retire et gère le lien ; les invités acceptent ou
+    refusent, et peuvent quitter. Seul le hachage du jeton est stocké.
+    legacy_share_id : ligne board_shares reprise par la migration 0028
+    (rend la reprise rejouable). Voir app/routers/boards.py."""
+    __tablename__ = "boards"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    name = Column(String, nullable=False)
+    owner_id = Column(String, ForeignKey("users.id"), nullable=False)
+    token_hash = Column(String, nullable=True, unique=True)
+    link_created_at = Column(DateTime(timezone=True), nullable=True)
+    last_read_at = Column(DateTime(timezone=True), nullable=True)
+    legacy_share_id = Column(String, nullable=True, unique=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class BoardMember(Base):
+    """Membre d'un tableau commun. status : 'pending' (invité, pas encore
+    affiché) ou 'accepted' (accepter vaut accord pour s'afficher sur l'écran
+    de ce tableau). Le créateur y figure aussi, accepté d'office."""
+    __tablename__ = "board_members"
+    __table_args__ = (UniqueConstraint("board_id", "user_id", name="uq_board_members_board_user"),)
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    board_id = Column(String, ForeignKey("boards.id"), nullable=False)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    status = Column(String, nullable=False, default="pending")  # 'pending' | 'accepted'
+    invited_by = Column(String, ForeignKey("users.id"), nullable=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    accepted_at = Column(DateTime(timezone=True), nullable=True)
