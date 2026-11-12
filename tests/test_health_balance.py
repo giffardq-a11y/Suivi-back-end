@@ -56,7 +56,7 @@ def test_balance_resynchronisation_sans_doublon(client, nouveau_compte):
 
 def test_imc_calcule_avec_la_taille_du_profil(client, nouveau_compte):
     _, _, h, _ = nouveau_compte()
-    assert client.put("/profile", json={"heightCm": 180}, headers=h).status_code == 200
+    assert client.put("/profile", json={"heightCm": 180}, headers=h).status_code == 201
     client.post("/health/import", json=_pesee(client, h), headers=h)
     # 78,4 / 1,8² = 24,2
     assert client.get("/health/summary", headers=h).json()["imc"] == 24.2
@@ -149,4 +149,4 @@ def test_frequence_300_acceptee(client, nouveau_compte):
     # faire refuser tout l'envoi (la synchro resterait bloquée au même point).
     _, _, h, _ = nouveau_compte()
     jour = {"dateKey": "2026-11-11", "avgBpm": 90, "maxBpm": 300}
-    assert client.post("/health/import", json={"heartRate": [jour]}, headers=h).status_code == 200
+    assert client.post("/health/import", json={"heartRate": [jour]}, headers=h).status_code == 201
