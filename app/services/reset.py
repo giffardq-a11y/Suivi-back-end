@@ -30,7 +30,7 @@ TABLES_PROGRESSION = {
     "sleep_logs", "water_logs",
     "mood_entries", "craving_entries", "gratitude_entries",
     "cycle_logs", "cycle_flow_entries",
-    "weight_entries", "body_fat_entries",
+    "weight_entries", "body_fat_entries", "body_composition_entries", "daily_heart_rates",
     "expenses", "savings_transfers",
     "flash_card_reviews", "flash_card_events",
     "reward_purchases",

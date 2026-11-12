@@ -351,6 +351,26 @@ class BodyFatEntry(Base):
     percent = Column(Float, nullable=False)
     occurred_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
     note = Column(String, nullable=True)
+    # Mesures remontées par une balance connectée via Health Connect.
+    source = Column(String, nullable=True)
+    external_id = Column(String, nullable=True)
+
+
+class BodyCompositionEntry(Base):
+    """Autres mesures d'une balance connectée (masse maigre, masse osseuse,
+    métabolisme de base). Le poids et la masse grasse ont leurs propres
+    tables (weight_entries, body_fat_entries) ; les champs absents de la
+    balance restent à NULL."""
+    __tablename__ = "body_composition_entries"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    occurred_at = Column(DateTime(timezone=True), nullable=False)
+    lean_mass_kg = Column(Float, nullable=True)
+    bone_mass_kg = Column(Float, nullable=True)
+    bmr_kcal = Column(Float, nullable=True)
+    source = Column(String, nullable=True)
+    external_id = Column(String, nullable=True)
 
 
 class CycleSettings(Base):
@@ -621,6 +641,12 @@ class SleepLog(Base):
     external_id = Column(String, nullable=True)
     quality = Column(Integer, nullable=True)   # 1 à 5
     note = Column(String, nullable=True)
+    # Phases du sommeil fournies par la montre (minutes) ; NULL si la montre
+    # n'envoie qu'une durée globale ou pour une nuit saisie à la main.
+    awake_min = Column(Float, nullable=True)
+    light_min = Column(Float, nullable=True)
+    deep_min = Column(Float, nullable=True)
+    rem_min = Column(Float, nullable=True)
 
 
 class DailySteps(Base):
@@ -632,6 +658,21 @@ class DailySteps(Base):
     user_id = Column(String, ForeignKey("users.id"), nullable=False)
     date_key = Column(String, nullable=False)  # 'YYYY-MM-DD'
     steps = Column(Integer, nullable=False, default=0)
+    source = Column(String, nullable=True)
+
+
+class DailyHeartRate(Base):
+    """Fréquence cardiaque d'une journée (montre via Health Connect) :
+    repos, moyenne, minimum et maximum, réécrits à chaque synchronisation."""
+    __tablename__ = "daily_heart_rates"
+
+    id = Column(String, primary_key=True, default=gen_uuid)
+    user_id = Column(String, ForeignKey("users.id"), nullable=False)
+    date_key = Column(String, nullable=False)  # 'YYYY-MM-DD'
+    resting_bpm = Column(Integer, nullable=True)
+    avg_bpm = Column(Integer, nullable=True)
+    min_bpm = Column(Integer, nullable=True)
+    max_bpm = Column(Integer, nullable=True)
     source = Column(String, nullable=True)
 
 
