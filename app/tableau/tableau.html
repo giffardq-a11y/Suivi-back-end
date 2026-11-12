@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Tanren — tableau</title>
+<style>
+  /* Écran de salon : fond sombre, très gros caractères, rien ne défile. */
+  :root {
+    --fond: #0f1014; --carte: #1b1d24; --bord: #2c2f38; --texte: #f4f2ee;
+    --discret: #9a9ca6; --fait: #3fcf8e; --fait-fond: #143a2a; --alerte: #ffb454;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; background: var(--fond); color: var(--texte);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  body { display: flex; flex-direction: column; padding: 2.5vmin 3vmin; cursor: default; }
+  #personnes { flex: 1; display: flex; gap: 3vmin; min-height: 0; }
+  .personne { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2vmin;
+    background: var(--carte); border: 0.3vmin solid var(--bord); border-radius: 2.5vmin; padding: 2.5vmin 3vmin; }
+  .seule { max-width: 110vmin; margin: 0 auto; }
+  .entete { display: flex; align-items: baseline; justify-content: space-between; gap: 2vmin; }
+  .nom { font-size: 7vmin; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .chiffres { text-align: right; white-space: nowrap; }
+  .points { font-size: 5vmin; font-weight: 700; }
+  .points small, .serie small { font-size: 0.5em; font-weight: 400; color: var(--discret); }
+  .serie { font-size: 3.4vmin; color: var(--alerte); font-weight: 600; }
+  .cases { flex: 1; min-height: 0; display: flex; flex-wrap: wrap; gap: 1.6vmin; align-content: stretch; }
+  .case { flex: 1 1 40%; min-width: 0; display: flex; flex-direction: column; justify-content: center;
+    border-radius: 1.8vmin; padding: 1.2vmin 2vmin; border: 0.4vmin solid var(--bord); }
+  .case.fait { background: var(--fait-fond); border-color: var(--fait); }
+  .libelle { font-size: 4vmin; font-size: min(4vmin, 2.6vw); font-weight: 700; line-height: 1.1; hyphens: auto; }
+  .case.fait .libelle::before { content: "\2713\00a0"; color: var(--fait); }
+  .valeur { font-size: 3.3vmin; color: var(--discret); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .case.fait .valeur { color: #c9f2dc; }
+  .semaine { display: flex; gap: 1vmin; }
+  .jour { flex: 1; text-align: center; border-radius: 1.2vmin; padding: 0.8vmin 0; border: 0.3vmin solid var(--bord); }
+  .jour b { display: block; font-size: 2.6vmin; color: var(--discret); font-weight: 600; }
+  .jour span { font-size: 3vmin; font-weight: 700; }
+  .jour.complet { background: var(--fait-fond); border-color: var(--fait); }
+  .jour.aujourdhui { border-color: var(--texte); }
+  .jour.futur span { color: var(--bord); }
+  #pied { display: flex; justify-content: space-between; font-size: 2.2vmin; color: var(--discret); padding-top: 1.5vmin; }
+  #message { margin: auto; max-width: 80vmin; text-align: center; font-size: 4.2vmin; line-height: 1.35; }
+  .cache { display: none !important; }
+</style>
+</head>
+<body>
+<div id="personnes" class="cache"></div>
+<div id="message">Chargement du tableau…</div>
+<div id="pied"><span id="etat"></span><span>Tanren</span></div>
+<script>
+/*
+ * Tableau partagé de Tanren, pour un écran (PC, TV du salon).
+ *
+ * Le jeton est dans le fragment de l'adresse (/tableau#jeton) : il n'est donc
+ * jamais envoyé au serveur avec la page, ni écrit dans ses journaux. Seule la
+ * lecture des données (/board/{jeton}) le transmet.
+ *
+ * Relecture toutes les 30 min, en pause la nuit (0 h - 7 h, heure de
+ * l'écran) : chaque lecture réveille la base, un écran allumé jour et nuit ne
+ * doit pas la tenir éveillée. Un clic ou une touche relit tout de suite, au
+ * plus une fois par minute (la limite de lectures est commune au foyer).
+ * Double-clic : plein écran.
+ *
+ * Tout le texte passe par textContent : le nom affiché est saisi par
+ * l'utilisateur, il ne doit jamais être interprété comme du HTML.
+ * JavaScript volontairement simple (var, XMLHttpRequest) pour les
+ * navigateurs de télévision.
+ */
+(function () {
+  var INTERVALLE = 30 * 60 * 1000;
+  var NUIT_DEBUT = 0, NUIT_FIN = 7;          // heures locales, fin exclue
+  var RELECTURE_MIN = 60 * 1000;
+  var NOUVEL_ESSAI = 5 * 60 * 1000;
+  var JOURS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
+
+  var jeton = (location.hash || "").replace(/^#/, "");
+  var minuterie = null, derniereLecture = 0, enCours = false;
+  var elPersonnes = document.getElementById("personnes");
+  var elMessage = document.getElementById("message");
+  var elEtat = document.getElementById("etat");
+
+  function el(balise, classe, texte) {
+    var n = document.createElement(balise);
+    if (classe) n.className = classe;
+    if (texte !== undefined && texte !== null) n.textContent = String(texte);
+    return n;
+  }
+
+  function vider(n) { while (n.firstChild) n.removeChild(n.firstChild); }
+
+  function heure(d) {
+    var m = d.getMinutes();
+    return d.getHours() + " h " + (m < 10 ? "0" : "") + m;
+  }
+
+  function message(texte) {
+    vider(elPersonnes);
+    elPersonnes.className = "cache";
+    elMessage.textContent = texte;
+    elMessage.className = "";
+  }
+
+  function carte(p, seule) {
+    var bloc = el("section", "personne" + (seule ? " seule" : ""));
+
+    var entete = el("div", "entete");
+    entete.appendChild(el("div", "nom", p.name));
+    var chiffres = el("div", "chiffres");
+    var points = el("div", "points", p.points);
+    points.appendChild(el("small", null, " / " + p.pointsMax + " pts"));
+    chiffres.appendChild(points);
+    var serie = el("div", "serie", "Série : " + p.streakDays + " j");
+    chiffres.appendChild(serie);
+    entete.appendChild(chiffres);
+    bloc.appendChild(entete);
+
+    var cases = el("div", "cases");
+    var cats = (p.today && p.today.categories) || [];
+    for (var i = 0; i < cats.length; i++) {
+      var c = el("div", "case" + (cats[i].done ? " fait" : ""));
+      c.appendChild(el("div", "libelle", cats[i].label));
+      c.appendChild(el("div", "valeur", cats[i].value));
+      cases.appendChild(c);
+    }
+    bloc.appendChild(cases);
+
+    // Bande de la semaine, du lundi au dimanche : jours faits / total.
+    var semaine = el("div", "semaine");
+    var jours = p.week || [];
+    var aujourdhui = p.today ? p.today.date : null;
+    for (var j = 0; j < 7; j++) {
+      var d = jours[j];
+      var classe = "jour";
+      if (!d) classe += " futur";
+      else {
+        if (d.total > 0 && d.done >= d.total) classe += " complet";
+        if (d.date === aujourdhui) classe += " aujourdhui";
+      }
+      var boite = el("div", classe);
+      boite.appendChild(el("b", null, JOURS[j]));
+      boite.appendChild(el("span", null, d ? d.done + "/" + d.total : "·"));
+      semaine.appendChild(boite);
+    }
+    bloc.appendChild(semaine);
+    return bloc;
+  }
+
+  function afficher(donnees) {
+    var gens = (donnees && donnees.people) || [];
+    if (!gens.length) { message("Aucune donnée à afficher."); return; }
+    vider(elPersonnes);
+    for (var i = 0; i < gens.length; i++) elPersonnes.appendChild(carte(gens[i], gens.length === 1));
+    elPersonnes.className = "";
+    elMessage.className = "cache";
+    elEtat.textContent = "Mis à jour à " + heure(new Date());
+  }
+
+  function estLaNuit(d) {
+    var h = d.getHours();
+    return h >= NUIT_DEBUT && h < NUIT_FIN;
+  }
+
+  function planifier(delai) {
+    if (minuterie) clearTimeout(minuterie);
+    var maintenant = new Date();
+    var prochaine = new Date(maintenant.getTime() + delai);
+    if (estLaNuit(prochaine)) {
+      prochaine.setHours(NUIT_FIN, 0, 0, 0);
+      if (prochaine.getTime() <= maintenant.getTime()) prochaine.setDate(prochaine.getDate() + 1);
+    }
+    minuterie = setTimeout(lire, prochaine.getTime() - maintenant.getTime());
+  }
+
+  function lire() {
+    if (enCours) return;
+    enCours = true;
+    derniereLecture = Date.now();
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/board/" + encodeURIComponent(jeton));
+    xhr.timeout = 30000;
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== 4) return;
+      enCours = false;
+      if (xhr.status === 200) {
+        var donnees = null;
+        try { donnees = JSON.parse(xhr.responseText); } catch (e) { donnees = null; }
+        if (donnees) { afficher(donnees); planifier(INTERVALLE); return; }
+      }
+      if (xhr.status === 404) {
+        // Lien coupé ou remplacé : plus rien de la personne ne reste affiché.
+        message("Ce lien a été coupé ou remplacé. Crée un nouveau lien dans l'app Tanren (Mon proche → Tableau pour un écran).");
+        elEtat.textContent = "";
+        if (minuterie) clearTimeout(minuterie);
+        return;
+      }
+      // Réseau absent, serveur qui démarre, trop de lectures : on garde
+      // l'affichage et on réessaie plus tard.
+      elEtat.textContent = "Lecture impossible à " + heure(new Date()) + " — nouvel essai dans quelques minutes";
+      planifier(NOUVEL_ESSAI);
+    };
+    xhr.send();
+  }
+
+  function relireMaintenant() {
+    if (!jeton || enCours || Date.now() - derniereLecture < RELECTURE_MIN) return;
+    lire();
+  }
+
+  // Garder l'écran allumé quand le navigateur le permet (sans erreur sinon).
+  function garderAllume() {
+    try {
+      if (navigator.wakeLock && document.visibilityState === "visible") {
+        navigator.wakeLock.request("screen").then(null, function () {});
+      }
+    } catch (e) { /* navigateur sans wakeLock */ }
+  }
+
+  if (!jeton) {
+    message("Lien incomplet. Ouvre le tableau depuis l'app Tanren (Mon proche → Tableau pour un écran).");
+    return;
+  }
+  document.addEventListener("click", relireMaintenant);
+  document.addEventListener("keydown", relireMaintenant);
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible") { garderAllume(); relireMaintenant(); }
+  });
+  // Double-clic : plein écran (sinon F11 sur PC).
+  document.addEventListener("dblclick", function () {
+    var d = document.documentElement;
+    var plein = d.requestFullscreen || d.webkitRequestFullscreen;
+    if (plein && !(document.fullscreenElement || document.webkitFullscreenElement)) {
+      try { plein.call(d); } catch (e) { /* refusé par le navigateur */ }
+    }
+  });
+  garderAllume();
+  lire();
+})();
+</script>
+</body>
+</html>

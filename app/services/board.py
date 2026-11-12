@@ -40,10 +40,21 @@ PAS_JOUR_ACTIF = 8000
 TOLERANCE_CALORIES = 1.05
 JOURS_HISTORIQUE = 140  # pesées et série : un peu plus que 16 semaines
 SOCLE_SERIE = ("sport", "nutrition", "addictions")
+NOM_PAR_DEFAUT = "Sans nom"
 LIBELLES = {
     "sport": "Sport", "nutrition": "Nutrition", "addictions": "Alcool et tabac",
     "hydratation": "Hydratation", "sommeil": "Sommeil", "habitudes": "Habitudes",
 }
+
+
+def nom_affiche(user: models.User) -> str:
+    """Nom montré sur l'écran commun. À l'inscription, un compte sans nom
+    reçoit le début de son e-mail comme nom affiché (routers/auth.py) : ce
+    nom-là n'est jamais repris ici, l'e-mail ne doit pas s'afficher."""
+    nom = (user.display_name or "").strip()
+    if not nom or nom.lower() == user.email.split("@")[0].lower():
+        return NOM_PAR_DEFAUT
+    return nom
 
 
 def _jour_local(dt: datetime, fuseau) -> date:
@@ -205,7 +216,7 @@ def etat_personne(db: Session, user: models.User, maintenant: datetime | None = 
         pesees[_jour_local(occurred_at, fuseau)] = kg
 
     return {
-        "name": user.display_name or user.email.split("@")[0],
+        "name": nom_affiche(user),
         "today": {"date": aujourd_hui.isoformat(), "categories": categories(aujourd_hui)},
         "week": semaine,
         "points": points,

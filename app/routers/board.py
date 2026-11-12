@@ -27,7 +27,7 @@ from ..services.common import now_utc, to_ms
 
 router = APIRouter(prefix="/board", tags=["board"])
 
-LECTURE_PAR_IP = (240, 15 * 60)  # un écran qui relit toutes les 10 min en est très loin
+LECTURE_PAR_IP = (240, 15 * 60)  # la page /tableau relit toutes les 30 min : très loin de la limite
 
 
 def _hacher(jeton: str) -> str:
