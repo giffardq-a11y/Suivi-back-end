@@ -56,7 +56,7 @@ def test_balance_resynchronisation_sans_doublon(client, nouveau_compte):
 
 def test_imc_calcule_avec_la_taille_du_profil(client, nouveau_compte):
     _, _, h, _ = nouveau_compte()
-    assert client.put("/profile", json={"heightCm": 180}, headers=h).status_code == 201
+    assert client.put("/profile", json={"heightCm": 180}, headers=h).status_code == 200
     client.post("/health/import", json=_pesee(client, h), headers=h)
     # 78,4 / 1,8² = 24,2
     assert client.get("/health/summary", headers=h).json()["imc"] == 24.2
