@@ -14,9 +14,9 @@ séances ne crée rien de nouveau, elle met à jour les valeurs (une séance peu
 Rien n'est supprimé côté app si l'élément disparaît de la montre : une
 donnée saisie à la main n'a pas à être effacée par une synchronisation.
 """
-from datetime import datetime, timezone
+from datetime import datetime, time, timedelta, timezone
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Query
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
@@ -24,7 +24,7 @@ from .. import models
 from ..database import get_db
 from ..deps import get_current_user
 from ..services import personnage_hooks
-from ..services.common import date_key, from_ms, is_same_day, now_utc, to_ms
+from ..services.common import date_key, from_ms, fuseau_utilisateur, is_same_day, now_utc, to_ms
 from ..services.sport import increment_session_goals, mark_sport_habits_done_today
 
 router = APIRouter(prefix="/health", tags=["health"])
@@ -391,4 +391,114 @@ def health_summary(db: Session = Depends(get_db), user: models.User = Depends(ge
         "pesees_importees": db.query(models.WeightEntry).filter(
             models.WeightEntry.user_id == user.id, models.WeightEntry.source == SOURCE
         ).count(),
+    }
+
+
+@router.get("/history")
+def health_history(
+    days: int = Query(30, ge=1, le=366),
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    """Historique des constantes de santé sur `days` jours, pour l'écran
+    Santé de l'app : fréquence cardiaque du jour, nuits avec leurs phases,
+    pas, poids, masse grasse et composition corporelle.
+
+    Toutes sources confondues (une pesée ou une nuit saisie à la main compte
+    aussi). Les séries sont triées par date croissante. La période commence
+    à minuit, dans le fuseau de l'utilisateur, du premier des `days` jours
+    (`fromDateKey`) : la FC et les pas sur leur dateKey (date locale envoyée
+    par le téléphone), les nuits sur l'heure du réveil, les mesures du corps
+    sur leur instant. `latest` donne la dernière valeur de
+    chaque mesure du corps, même antérieure à la période : les pesées sont
+    espacées, une semaine sans pesée ne veut pas dire « aucune mesure »."""
+    # Import local : sleep.py importe déjà ce module.
+    from .sleep import _serialiser_nuit
+
+    fuseau = fuseau_utilisateur(user)
+    premier = now_utc().astimezone(fuseau).date() - timedelta(days=days - 1)
+    premier_jour = premier.isoformat()
+    depuis = datetime.combine(premier, time.min, tzinfo=fuseau).astimezone(timezone.utc)
+
+    def par_jour(model):
+        return (
+            db.query(model)
+            .filter(model.user_id == user.id, model.date_key >= premier_jour)
+            .order_by(model.date_key.asc())
+            .all()
+        )
+
+    def depuis_instant(model):
+        return (
+            db.query(model)
+            .filter(model.user_id == user.id, model.occurred_at >= depuis)
+            .order_by(model.occurred_at.asc())
+            .all()
+        )
+
+    def derniere(model, *conditions):
+        return (
+            db.query(model)
+            .filter(model.user_id == user.id, *conditions)
+            .order_by(model.occurred_at.desc())
+            .first()
+        )
+
+    # Une nuit par jour de réveil : si la même nuit existe saisie à la main
+    # et importée, on garde l'importée (elle porte les phases) ; à source
+    # égale, la plus longue (une sieste ne remplace pas la nuit).
+    def rang(n: models.SleepLog):
+        return (n.source == SOURCE, n.duration_min or 0)
+
+    nuits: dict[str, models.SleepLog] = {}
+    for n in (
+        db.query(models.SleepLog)
+        .filter(models.SleepLog.user_id == user.id, models.SleepLog.ended_at >= depuis)
+        .order_by(models.SleepLog.ended_at.asc())
+        .all()
+    ):
+        deja = nuits.get(n.date_key)
+        if deja is None or rang(n) > rang(deja):
+            nuits[n.date_key] = n
+
+    compo = models.BodyCompositionEntry
+    pesee = derniere(models.WeightEntry)
+    graisse = derniere(models.BodyFatEntry)
+    maigre = derniere(compo, compo.lean_mass_kg.isnot(None))
+    os_ = derniere(compo, compo.bone_mass_kg.isnot(None))
+    metab = derniere(compo, compo.bmr_kcal.isnot(None))
+
+    def mesure(ligne, valeur):
+        return {"value": valeur, "occurredAt": to_ms(ligne.occurred_at)} if ligne else None
+
+    return {
+        "days": days,
+        "fromDateKey": premier_jour,
+        "heartRate": [
+            {"dateKey": f.date_key, "restingBpm": f.resting_bpm, "avgBpm": f.avg_bpm,
+             "minBpm": f.min_bpm, "maxBpm": f.max_bpm}
+            for f in par_jour(models.DailyHeartRate)
+        ],
+        "sleep": [_serialiser_nuit(nuits[k]) for k in sorted(nuits)],
+        "steps": [{"dateKey": p.date_key, "steps": p.steps} for p in par_jour(models.DailySteps)],
+        "weight": [
+            {"occurredAt": to_ms(w.occurred_at), "weightKg": w.weight_kg, "source": w.source}
+            for w in depuis_instant(models.WeightEntry)
+        ],
+        "bodyFat": [
+            {"occurredAt": to_ms(b.occurred_at), "percent": b.percent, "source": b.source}
+            for b in depuis_instant(models.BodyFatEntry)
+        ],
+        "composition": [
+            {"occurredAt": to_ms(c.occurred_at), "leanMassKg": c.lean_mass_kg,
+             "boneMassKg": c.bone_mass_kg, "bmrKcal": c.bmr_kcal}
+            for c in depuis_instant(compo)
+        ],
+        "latest": {
+            "weightKg": mesure(pesee, pesee.weight_kg if pesee else None),
+            "bodyFatPercent": mesure(graisse, graisse.percent if graisse else None),
+            "leanMassKg": mesure(maigre, maigre.lean_mass_kg if maigre else None),
+            "boneMassKg": mesure(os_, os_.bone_mass_kg if os_ else None),
+            "bmrKcal": mesure(metab, metab.bmr_kcal if metab else None),
+        },
     }
