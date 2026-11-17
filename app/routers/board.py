@@ -11,6 +11,11 @@ nutrition, alcool et tabac, hydratation, sommeil, habitudes ; points ; série),
 jamais l'e-mail ni le détail des consommations ou des repas. N'apparaissent que
 les membres qui ont accepté l'invitation à ce tableau : être lié comme
 « proche » (routers/partner.py) ne suffit pas.
+
+Chaque membre choisit, pour ce tableau, lesquelles de ses cases s'affichent
+(PUT /boards/{id}/categories, routers/boards.py) : les cases masquées n'entrent
+ni dans les catégories, ni dans les points, ni dans la semaine, ni dans la
+série. Sans case du socle affichée, « streakDays » vaut null.
 """
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from sqlalchemy.orm import Session
@@ -35,15 +40,12 @@ def lire_tableau(jeton: str, request: Request, response: Response, db: Session =
     membres = (db.query(models.BoardMember)
                .filter(models.BoardMember.board_id == tableau.id, models.BoardMember.status == "accepted")
                .order_by(models.BoardMember.accepted_at.asc()).all())
-    ids = [m.user_id for m in membres]
-    if tableau.owner_id in ids:  # le créateur d'abord
-        ids.remove(tableau.owner_id)
-        ids.insert(0, tableau.owner_id)
+    membres = sorted(membres, key=lambda m: m.user_id != tableau.owner_id)  # le créateur d'abord (tri stable)
     personnes = []
-    for user_id in ids:
-        personne = db.query(models.User).filter(models.User.id == user_id).first()
+    for membre in membres:
+        personne = db.query(models.User).filter(models.User.id == membre.user_id).first()
         if personne is not None:
-            personnes.append(board.etat_personne(db, personne))
+            personnes.append(board.etat_personne(db, personne, masquees=frozenset(membre.hidden_categories or [])))
 
     tableau.last_read_at = now_utc()
     db.commit()

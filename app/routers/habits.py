@@ -10,7 +10,7 @@ from ..deps import get_current_user
 from ..services import personnage_hooks
 from ..services.common import now_utc, is_same_day, today_key
 from ..services.habit_progress import (
-    effective_habit_target, is_progressive, jours_actifs,
+    effective_habit_target, est_hebdo, is_progressive, jours_actifs,
     jours_valides, bande_semaine, serie_jours, serie_semaines,
 )
 
@@ -103,7 +103,7 @@ def _serialize(db: Session, habit: models.Habit) -> HabitOut:
     jours = jours_actifs(habit)
     # Même définition de « hebdomadaire » que le tableau de bord : volume avec
     # cible, ou moins de 7 séances visées par semaine.
-    hebdo = volume is not None or (habit.weekly_target or 7) < 7
+    hebdo = est_hebdo(habit)
     faits = jours_valides(habit.logs)
     return HabitOut(
         id=habit.id,

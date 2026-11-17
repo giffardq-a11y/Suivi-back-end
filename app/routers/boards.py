@@ -11,6 +11,9 @@ partager ses progrès avec une personne.
 - POST   /boards/{id}/link                créer ou remplacer le lien d'écran (créateur) :
                                           le jeton n'est renvoyé qu'ici, une seule fois
 - DELETE /boards/{id}/link                couper le lien (créateur)
+- PUT    /boards/{id}/categories          choisir MES cases affichées sur ce tableau
+                                          {hidden: [clés]} (membre accepté, pour
+                                          lui seul : personne ne règle les cases d'un autre)
 
 Le lien s'ouvre sur /tableau#jeton (routers/tableau.py), qui lit
 GET /board/{jeton} (routers/board.py). Seuls les membres acceptés y
@@ -29,7 +32,7 @@ from .. import models
 from ..database import get_db
 from ..deps import get_current_user
 from ..services import limite
-from ..services.board import hacher_jeton, nom_affiche
+from ..services.board import LIBELLES, categories_actives, hacher_jeton, nom_affiche
 from ..services.common import now_utc, to_ms
 
 router = APIRouter(prefix="/boards", tags=["board"])
@@ -46,6 +49,10 @@ class CorpsTableau(BaseModel):
 
 class CorpsInvitation(BaseModel):
     email: str
+
+
+class CorpsCases(BaseModel):
+    hidden: list[str]
 
 
 def _tableau(db: Session, board_id: str) -> models.Board:
@@ -91,8 +98,15 @@ def _decrire(db: Session, tableau: models.Board, user: models.User) -> dict:
         if createur and m.status == "pending":
             ligne["email"] = personne.email
         membres.append(ligne)
+    mon = _mon_appartenance(db, tableau.id, user.id)
+    cachees = set(mon.hidden_categories or []) if mon is not None and mon.status == "accepted" else set()
+    mes_cases = [
+        {"key": cle, "label": LIBELLES[cle], "shown": cle not in cachees}
+        for cle in categories_actives(user)
+    ] if mon is not None and mon.status == "accepted" else []
     return {
         "id": tableau.id, "name": tableau.name, "isOwner": createur, "members": membres,
+        "myCategories": mes_cases,
         "link": {"enabled": tableau.token_hash is not None, "createdAt": to_ms(tableau.link_created_at),
                  "lastReadAt": to_ms(tableau.last_read_at)},
     }
@@ -210,3 +224,25 @@ def couper_lien(board_id: str, db: Session = Depends(get_db), user: models.User 
     tableau.last_read_at = None
     db.commit()
     return Response(status_code=204)
+
+
+@router.put("/{board_id}/categories")
+def choisir_mes_cases(board_id: str, corps: CorpsCases, db: Session = Depends(get_db),
+                      user: models.User = Depends(get_current_user)):
+    """Remplace la liste des cases que l'appelant masque sur ce tableau. Il n'y
+    a aucune route pour régler les cases d'un autre membre, pas même pour le créateur."""
+    tableau = _tableau(db, board_id)
+    membre = _mon_appartenance(db, board_id, user.id)
+    if membre is None:
+        raise HTTPException(status_code=404, detail="Tableau introuvable.")
+    if membre.status != "accepted":
+        raise HTTPException(status_code=403, detail="Accepte d'abord l'invitation à ce tableau.")
+    inconnues = sorted(set(corps.hidden) - set(LIBELLES))
+    if inconnues:
+        raise HTTPException(status_code=400, detail=f"Case inconnue : {', '.join(inconnues)}.")
+    masquees = list(dict.fromkeys(corps.hidden))  # doublons retirés, ordre gardé
+    if not [cle for cle in categories_actives(user) if cle not in masquees]:
+        raise HTTPException(status_code=400, detail="Garde au moins une case affichée, ou quitte le tableau.")
+    membre.hidden_categories = masquees
+    db.commit()
+    return _decrire(db, tableau, user)

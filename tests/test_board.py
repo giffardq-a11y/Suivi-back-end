@@ -60,7 +60,8 @@ def test_cases_du_jour_points_et_pesee(client, nouveau_compte):
     moi = client.get(chemin).json()["people"][0]
     cats = _cats(moi)
     assert cats["sport"]["done"] and cats["sport"]["value"] == "25 min"
-    assert cats["nutrition"]["done"] and cats["nutrition"]["value"] == "650 / 2000 kcal"
+    # Net comme dans le compte : 650 mangés moins les 250 kcal de la course de 25 min.
+    assert cats["nutrition"]["done"] and cats["nutrition"]["value"] == "400 / 2000 kcal"
     assert moi["points"] >= 3 and moi["streakDays"] >= 1
     assert "weights" not in moi and "85.4" not in client.get(chemin).text
 
@@ -188,3 +189,131 @@ def test_nom_jamais_tire_de_l_email(client):
     finally:
         db.close()
     assert client.get(_lien(client, h)).json()["people"][0]["name"] == "Quentin"
+
+
+# --- Cohérence avec le compte : mêmes règles que l'app, jour par jour ---
+
+MERCREDI = datetime(2026, 11, 11, 12, 0, tzinfo=timezone.utc)  # jour fixe : tests indépendants de l'heure
+
+
+def _etat(user_id, maintenant=MERCREDI) -> dict:
+    """Catégories du jour calculées à `maintenant` (état_personne direct : le
+    jour affiché est celui de `maintenant`)."""
+    from app.services.board import etat_personne
+    db = SessionLocal()
+    try:
+        user = db.query(models.User).filter(models.User.id == user_id).first()
+        return _cats(etat_personne(db, user, maintenant))
+    finally:
+        db.close()
+
+
+def _ajouter(*lignes):
+    db = SessionLocal()
+    try:
+        db.add_all(lignes)
+        db.commit()
+        for ligne in lignes:
+            db.refresh(ligne)  # garde id et champs lisibles après fermeture
+    finally:
+        db.close()
+
+
+def test_jour_decoupe_en_utc_comme_le_compte(client, nouveau_compte):
+    """Un verre bu à 23 h 30 UTC (0 h 30 à Paris) compte pour la veille des
+    deux côtés : tableau et GET /hydration."""
+    _, _, h, user_id = nouveau_compte()
+    veille = MERCREDI - timedelta(days=1)
+    assert client.put("/hydration/settings", json={"dailyGoalMl": 500}, headers=h).status_code == 200
+    _ajouter(models.WaterLog(user_id=user_id, amount_ml=500, occurred_at=veille.replace(hour=23, minute=30)))
+
+    assert client.get(f"/hydration?date={veille.date().isoformat()}", headers=h).json()["totalMl"] == 500
+    assert client.get(f"/hydration?date={MERCREDI.date().isoformat()}", headers=h).json()["totalMl"] == 0
+    assert _etat(user_id, veille)["hydratation"]["done"] is True
+    assert _etat(user_id, MERCREDI)["hydratation"]["done"] is False
+
+
+def test_habitude_hebdo_pas_due_chaque_jour(client, nouveau_compte):
+    _, _, h, user_id = nouveau_compte()
+    nage = models.Habit(user_id=user_id, key="nage", label="Natation", weekly_target=3)
+    marche = models.Habit(user_id=user_id, key="marche", label="Marche")
+    _ajouter(nage, marche)
+    # Seule la quotidienne est attendue.
+    habitudes = _etat(user_id)["habitudes"]
+    assert habitudes["value"] == "0 / 1" and habitudes["done"] is False
+    # Une hebdo faite un jour libre compte pour, jamais contre.
+    _ajouter(models.HabitLog(habit_id=nage.id, occurred_at=MERCREDI))
+    assert _etat(user_id)["habitudes"]["value"] == "1 / 2"
+    _ajouter(models.HabitLog(habit_id=marche.id, occurred_at=MERCREDI))
+    assert _etat(user_id)["habitudes"] == {"key": "habitudes", "label": "Habitudes", "done": True, "value": "2 / 2"}
+    # Un jour sans rien d'attendu (que l'hebdo, non faite) : catégorie absente.
+    db = SessionLocal()
+    try:
+        db.query(models.Habit).filter(models.Habit.id == marche.id).update({"active": False})
+        db.commit()
+    finally:
+        db.close()
+    assert "habitudes" not in _etat(user_id, MERCREDI + timedelta(days=1))
+
+
+def test_habitude_a_jours_fixes_due_ces_jours_la(client, nouveau_compte):
+    _, _, _, user_id = nouveau_compte()
+    _ajouter(models.Habit(user_id=user_id, key="nage", label="Natation", weekly_target=3, days_of_week="2"))
+    assert _etat(user_id)["habitudes"]["value"] == "0 / 1"  # mercredi = 2
+    assert "habitudes" not in _etat(user_id, MERCREDI + timedelta(days=1))
+
+
+def test_nutrition_sur_le_net_apres_sport(client, nouveau_compte):
+    _, _, _, user_id = nouveau_compte()
+    _ajouter(
+        models.Meal(user_id=user_id, label="Gros repas", calories=2300, type="diner", occurred_at=MERCREDI),
+        models.Run(user_id=user_id, distance_km=8, duration_min=50, calories_burned=500, occurred_at=MERCREDI),
+    )
+    nutrition = _etat(user_id)["nutrition"]
+    assert nutrition["done"] is True and nutrition["value"] == "1800 / 2000 kcal"
+    # Sans la dépense, le même repas dépasse le budget.
+    _, _, _, autre = nouveau_compte()
+    _ajouter(models.Meal(user_id=autre, label="Gros repas", calories=2300, type="diner", occurred_at=MERCREDI))
+    assert _etat(autre)["nutrition"]["done"] is False
+
+
+def test_reduction_progressive_consommation_dans_la_limite(client, nouveau_compte):
+    _, _, _, user_id = nouveau_compte()
+    db = SessionLocal()
+    try:
+        alcool = db.query(models.Substance).filter(
+            models.Substance.user_id == user_id, models.Substance.category == models.SubstanceCategory.ALCOHOL).first()
+        alcool.reduction_start_value = 3
+        alcool.reduction_step_per_week = 1
+        alcool.reduction_start_date = MERCREDI.date()  # limite du jour : 3
+        db.commit()
+        alcool_id = alcool.id
+    finally:
+        db.close()
+    _ajouter(models.ConsumptionEntry(user_id=user_id, substance_id=alcool_id, quantity=2, occurred_at=MERCREDI))
+    addictions = _etat(user_id)["addictions"]
+    assert addictions["done"] is True and addictions["value"] == "dans la limite"
+    _ajouter(models.ConsumptionEntry(user_id=user_id, substance_id=alcool_id, quantity=2, occurred_at=MERCREDI))
+    addictions = _etat(user_id)["addictions"]
+    assert addictions["done"] is False and addictions["value"] == "consommation"
+
+
+def test_sommeil_une_nuit_par_jour_importee_prioritaire(client, nouveau_compte):
+    _, _, _, user_id = nouveau_compte()
+    jour = MERCREDI.date().isoformat()
+    fin = MERCREDI
+    _ajouter(
+        models.SleepLog(user_id=user_id, date_key=jour, started_at=fin - timedelta(minutes=390), ended_at=fin,
+                        duration_min=390, source="manual"),
+        models.SleepLog(user_id=user_id, date_key=jour, started_at=fin - timedelta(minutes=380), ended_at=fin,
+                        duration_min=380, source="health_connect", external_id="nuit-1"),
+    )
+    sommeil = _etat(user_id)["sommeil"]
+    assert sommeil["value"] == "6 h 20 / 8 h 00" and sommeil["done"] is False
+
+
+def test_seance_sans_duree_affiche_seance_faite(client, nouveau_compte):
+    _, _, _, user_id = nouveau_compte()
+    _ajouter(models.StrengthSession(user_id=user_id, duration_min=0, occurred_at=MERCREDI))
+    sport = _etat(user_id)["sport"]
+    assert sport["done"] is True and sport["value"] == "séance faite"

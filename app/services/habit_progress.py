@@ -57,6 +57,15 @@ def effective_habit_target(habit: "models.Habit", now: datetime) -> str | None:
     rounded = round(raw_value * 10) / 10 if decimals else round(raw_value)
     return format_habit_target(habit.habit_type, rounded, habit.progressive_unit)
 
+def est_hebdo(habit) -> bool:
+    """Habitude « hebdomadaire » : volume avec cible hebdomadaire, ou moins de
+    7 séances visées par semaine. Elle n'a jamais de jour « raté » : une
+    natation visée 3 fois par semaine n'est pas due chaque jour."""
+    if habit.tracking_mode == "volume" and habit.weekly_volume_target:
+        return True
+    return (habit.weekly_target or 7) < 7
+
+
 def jours_actifs(habit) -> list[int] | None:
     """Jours où l'habitude s'applique (0 = lundi), None = tous les jours.
 

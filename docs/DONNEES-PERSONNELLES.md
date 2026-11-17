@@ -63,6 +63,8 @@ acceptés. Accepter l'invitation vaut accord pour s'afficher sur l'écran de ce
 tableau ; refuser ou quitter le retire. Être lié comme « proche » ne suffit
 plus.
 
+Chaque membre choisit lesquelles de ses cases s'affichent sur chaque tableau (personne ne règle celles d'un autre) : la table `board_members` garde la liste des cases masquées.
+
 `GET /board/{jeton}` renvoie **sans connexion**, pour chaque membre accepté :
 nom affiché (jamais le début de l'e-mail), catégories du jour avec leur valeur
 (sport, nutrition, alcool et tabac, hydratation, sommeil, habitudes, selon les
