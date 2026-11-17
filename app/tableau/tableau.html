@@ -35,6 +35,14 @@
   .case.fait .libelle::before { content: "\2713\00a0"; color: var(--fait); }
   .valeur { font-size: calc(3.3vmin * var(--k)); color: var(--discret); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .case.fait .valeur { color: #c9f2dc; }
+  /* Détail des habitudes (si la personne l'a activé) : une ligne par habitude. */
+  .habitudes { display: flex; flex-direction: column; gap: calc(0.6vmin * var(--k)); }
+  .habitude { display: flex; align-items: baseline; gap: calc(1.2vmin * var(--k)); font-size: calc(3vmin * var(--k)); min-width: 0; }
+  .coche { color: var(--discret); font-weight: 700; flex: none; }
+  .habitude.faite .coche { color: var(--fait); }
+  .hnom { font-weight: 600; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .hprog { margin-left: auto; padding-left: calc(1vmin * var(--k)); color: var(--discret); font-size: calc(2.8vmin * var(--k)); white-space: nowrap; flex: none; }
+  .hplus { color: var(--discret); font-size: calc(2.4vmin * var(--k)); }
   .semaine { display: flex; gap: calc(1vmin * var(--k)); }
   .jour { flex: 1; text-align: center; border-radius: calc(1.2vmin * var(--k)); padding: calc(0.8vmin * var(--k)) 0; border: calc(0.3vmin * var(--k)) solid var(--bord); }
   .jour b { display: block; font-size: calc(2.6vmin * var(--k)); color: var(--discret); font-weight: 600; }
@@ -104,7 +112,7 @@
     elMessage.className = "";
   }
 
-  function carte(p, seule) {
+  function carte(p, seule, limite) {
     var bloc = el("section", "personne" + (seule ? " seule" : ""));
 
     var entete = el("div", "entete");
@@ -130,6 +138,24 @@
       cases.appendChild(c);
     }
     bloc.appendChild(cases);
+
+    // Détail des habitudes : prévues non faites d'abord (ordre du serveur),
+    // `limite` lignes au plus selon la place, le reste compté.
+    var liste = p.habits || [];
+    if (liste.length) {
+      var bh = el("div", "habitudes");
+      var montrees = liste.slice(0, limite);
+      for (var h = 0; h < montrees.length; h++) {
+        var ligne = el("div", "habitude" + (montrees[h].done ? " faite" : ""));
+        ligne.appendChild(el("span", "coche", montrees[h].done ? "✓" : "○"));
+        ligne.appendChild(el("span", "hnom", montrees[h].label));
+        ligne.appendChild(el("span", "hprog", montrees[h].progress));
+        bh.appendChild(ligne);
+      }
+      var reste = liste.length - montrees.length + (p.habitsMore || 0);
+      if (reste > 0) bh.appendChild(el("div", "hplus", "+ " + reste + (reste > 1 ? " autres habitudes" : " autre habitude")));
+      bloc.appendChild(bh);
+    }
 
     // Bande de la semaine, du lundi au dimanche : jours faits / total.
     var semaine = el("div", "semaine");
@@ -163,7 +189,8 @@
     elPersonnes.style.gridTemplateColumns = "repeat(" + colonnes + ", minmax(0, 1fr))";
     elPersonnes.style.gridTemplateRows = "repeat(" + rangees + ", minmax(0, 1fr))";
     elPersonnes.style.setProperty("--k", rangees > 1 ? "0.58" : (colonnes === 3 ? "0.8" : "1"));
-    for (var i = 0; i < n; i++) elPersonnes.appendChild(carte(gens[i], n === 1));
+    var limite = rangees > 1 ? 3 : (colonnes === 3 ? 4 : 6);
+    for (var i = 0; i < n; i++) elPersonnes.appendChild(carte(gens[i], n === 1, limite));
     elPersonnes.className = "";
     elMessage.className = "cache";
     elEtat.textContent = "Mis à jour à " + heure(new Date());

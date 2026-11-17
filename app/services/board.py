@@ -25,6 +25,14 @@ tableau s'affiche sans connexion dans une pièce commune.
 Chaque membre peut masquer certaines de ses cases sur un tableau (masquees) :
 elles disparaissent de tout, séries et points compris.
 
+Détail des habitudes (detail_habitudes, choisi par le membre, faux par
+défaut) : la liste de ses habitudes actives avec leur nom, faite ou non
+aujourd'hui et la progression de la semaine (même calcul que l'onglet
+Habitudes, habit_progress.progression_semaine). Les prévues non faites
+d'abord, MAX_HABITUDES au plus, le reste compté dans habitsMore. Jamais la
+note, l'heure de rappel ni les motifs de saut. Rien si la case « habitudes »
+est masquée.
+
 Un point par catégorie faite. La série compte les jours d'affilée où toutes
 les catégories du socle (sport, nutrition, addictions, selon les modules
 actifs) sont faites ; la journée en cours ne casse pas la série tant qu'elle
@@ -43,7 +51,7 @@ from sqlalchemy.orm import Session
 from .. import models, modules
 from . import streaks
 from .common import jour_du_compte, now_utc
-from .habit_progress import est_hebdo, jours_actifs
+from .habit_progress import effective_habit_target, est_hebdo, jours_actifs, progression_semaine
 from .sommeil import nuit_retenue_par_jour
 from .substance_progress import limite_du_jour
 
@@ -52,6 +60,8 @@ TOLERANCE_CALORIES = 1.05
 JOURS_HISTORIQUE = 140  # série : un peu plus que 16 semaines
 SOCLE_SERIE = ("sport", "nutrition", "addictions")
 NOM_PAR_DEFAUT = "Sans nom"
+MAX_HABITUDES = 6           # par personne : lisible sur une TV, le reste est compté
+LONGUEUR_HABITUDE = 40
 LIBELLES = {
     "sport": "Sport", "nutrition": "Nutrition", "addictions": "Alcool et tabac",
     "hydratation": "Hydratation", "sommeil": "Sommeil", "habitudes": "Habitudes",
@@ -84,7 +94,7 @@ def categories_actives(user: models.User) -> list[str]:
 
 
 def etat_personne(db: Session, user: models.User, maintenant: datetime | None = None,
-                  masquees=frozenset()) -> dict:
+                  masquees=frozenset(), detail_habitudes: bool = False) -> dict:
     """État du jour et de la semaine d'une personne. `masquees` : cases que ce
     membre cache sur ce tableau ; elles sont retirées dès le départ, donc
     absentes des catégories, des points, de la bande de la semaine et de la
@@ -259,7 +269,7 @@ def etat_personne(db: Session, user: models.User, maintenant: datetime | None = 
             serie += 1
             jour -= timedelta(days=1)
 
-    return {
+    sortie = {
         "name": nom_affiche(user),
         "today": {"date": aujourd_hui.isoformat(), "categories": categories(aujourd_hui)},
         "week": semaine,
@@ -267,3 +277,39 @@ def etat_personne(db: Session, user: models.User, maintenant: datetime | None = 
         "pointsMax": points_max,
         "streakDays": serie,
     }
+    if detail_habitudes and "habitudes" in actifs:
+        detail = _detail_habitudes(db, habitudes, faites.get(aujourd_hui, set()), aujourd_hui, maintenant)
+        sortie["habits"] = detail[:MAX_HABITUDES]
+        sortie["habitsMore"] = max(0, len(detail) - MAX_HABITUDES)
+    return sortie
+
+
+def _detail_habitudes(db: Session, habitudes: list, validees: set, jour: date, maintenant: datetime) -> list[dict]:
+    """Nom, fait aujourd'hui et progression de la semaine de chaque habitude
+    active ; prévues non faites, puis faites, puis non prévues ce jour-là."""
+    if not habitudes:
+        return []
+    lundi = datetime.combine(jour - timedelta(days=jour.weekday()), datetime.min.time(), tzinfo=maintenant.tzinfo)
+    logs: dict[str, list] = defaultdict(list)
+    for log in db.query(models.HabitLog).filter(
+            models.HabitLog.habit_id.in_([h.id for h in habitudes]), models.HabitLog.occurred_at >= lundi).all():
+        logs[log.habit_id].append(log)
+
+    lignes = []
+    for h in habitudes:
+        fixes = jours_actifs(h)
+        prevue = jour.weekday() in fixes if fixes is not None else not est_hebdo(h)
+        faite = h.id in validees
+        nb, volume, _ = progression_semaine(h, logs.get(h.id, []))
+        if volume is not None:
+            avancement = f"{volume:g} / {h.weekly_volume_target:g} {h.unit or ''}".strip()
+        else:
+            avancement = f"{nb} / {h.weekly_target or 7} cette semaine"
+        cible = effective_habit_target(h, maintenant)
+        rang = 0 if prevue and not faite else (1 if faite else 2)
+        lignes.append((rang, (h.label or "").lower(), {
+            "label": (h.label or "")[:LONGUEUR_HABITUDE],
+            "done": faite,
+            "progress": f"{cible} · {avancement}" if cible else avancement,
+        }))
+    return [ligne for _, _, ligne in sorted(lignes, key=lambda x: (x[0], x[1]))]

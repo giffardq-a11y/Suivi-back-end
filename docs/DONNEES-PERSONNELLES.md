@@ -75,6 +75,14 @@ il le remplace ou le coupe quand il veut (`DELETE /boards/{id}/link`). Toute
 personne qui détient l'adresse lit ces données : **à mentionner dans la
 politique de confidentialité**.
 
+Détail des habitudes (17/11/2026) : chaque membre peut activer, pour lui et pour
+ce tableau, la case « Détail des habitudes » (board_members.show_habit_details,
+désactivée par défaut, y compris pour les membres déjà acceptés). Le lien public
+renvoie alors le nom de ses habitudes actives (40 caractères au plus, 6 au plus,
+le reste compté), faite ou non aujourd'hui, et la progression de la semaine. Jamais
+la note, l'heure de rappel ni les motifs de saut. Rien si la case « Habitudes »
+est masquée.
+
 Les anciens liens personnels (`board_shares`, 11/11/2026) ont été repris en
 tableaux par la migration 0028 ; la table est gardée, plus lue.
 

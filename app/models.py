@@ -1173,3 +1173,7 @@ class BoardMember(Base):
     # Cases (clés de services/board.LIBELLES) que CE membre masque sur CE
     # tableau ; NULL ou [] = rien de masqué. Lui seul les règle.
     hidden_categories = Column(JSON, nullable=True)
+    # Détail des habitudes (nom, fait ou non, progression) sur CE tableau :
+    # désactivé par défaut, y compris pour les membres déjà acceptés ; seul le
+    # membre l'active (case « Détail des habitudes », routers/boards.py).
+    show_habit_details = Column(Boolean, nullable=False, default=False, server_default=sa_false())

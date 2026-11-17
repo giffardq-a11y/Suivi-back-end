@@ -187,8 +187,10 @@ def _moi(client, h, board_id):
 def test_cases_par_defaut_toutes_affichees_puis_masquage_pour_soi_seul(client, nouveau_compte):
     h_a, h_b, board_id, chemin = _deux_membres(client, nouveau_compte)
     cases = _moi(client, h_b, board_id)["myCategories"]
-    assert [c["key"] for c in cases] == ["sport", "nutrition", "addictions", "hydratation", "sommeil", "habitudes"]
-    assert all(c["shown"] for c in cases) and cases[0]["label"] == "Sport"
+    assert [c["key"] for c in cases] == ["sport", "nutrition", "addictions", "hydratation", "sommeil", "habitudes",
+                                         "habitudes_detail"]
+    # Toutes les cases affichées, sauf le détail des habitudes (à activer soi-même).
+    assert all(c["shown"] for c in cases[:-1]) and not cases[-1]["shown"] and cases[0]["label"] == "Sport"
 
     avant = client.get(chemin).json()["people"]
     r = client.put(f"/boards/{board_id}/categories", json={"hidden": ["nutrition", "nutrition", "sommeil"]}, headers=h_b)
@@ -204,7 +206,7 @@ def test_cases_par_defaut_toutes_affichees_puis_masquage_pour_soi_seul(client, n
     assert apres[1]["pointsMax"] == avant[1]["pointsMax"] - 14
     assert len(apres[1]["week"]) == len(avant[1]["week"])
     # Le créateur ne voit pas les cases de l'autre comme les siennes.
-    assert all(c["shown"] for c in _moi(client, h_a, board_id)["myCategories"])
+    assert all(c["shown"] for c in _moi(client, h_a, board_id)["myCategories"] if c["key"] != "habitudes_detail")
 
 
 def test_cases_independantes_par_tableau(client, nouveau_compte):
@@ -238,7 +240,7 @@ def test_cases_cle_inconnue_et_tout_masquer(client, nouveau_compte):
     tout = ["sport", "nutrition", "addictions", "hydratation", "sommeil", "habitudes"]
     r = client.put(f"/boards/{board_id}/categories", json={"hidden": tout}, headers=h)
     assert r.status_code == 400 and "au moins une case" in r.json()["detail"]
-    assert all(c["shown"] for c in _moi(client, h, board_id)["myCategories"])
+    assert all(c["shown"] for c in _moi(client, h, board_id)["myCategories"] if c["key"] != "habitudes_detail")
 
 
 def test_cases_module_inactif_absent_et_tout_masquer_relatif_aux_modules(client, nouveau_compte_avec_modules):

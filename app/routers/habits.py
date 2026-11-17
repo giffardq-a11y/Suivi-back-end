@@ -10,7 +10,7 @@ from ..deps import get_current_user
 from ..services import personnage_hooks
 from ..services.common import now_utc, is_same_day, today_key
 from ..services.habit_progress import (
-    effective_habit_target, est_hebdo, is_progressive, jours_actifs,
+    effective_habit_target, est_hebdo, is_progressive, jours_actifs, progression_semaine,
     jours_valides, bande_semaine, serie_jours, serie_semaines,
 )
 
@@ -87,18 +87,8 @@ def _serialize(db: Session, habit: models.Habit) -> HabitOut:
         .filter(models.HabitLog.habit_id == habit.id, models.HabitLog.occurred_at >= week_start)
         .all()
     )
-    done_this_week = len(logs_semaine)
-
-    if habit.tracking_mode == "volume" and habit.weekly_volume_target:
-        # Une validation sans quantité vaut la quantité d'une séance type, à
-        # défaut 0 : mieux vaut sous-compter que gonfler la progression.
-        volume = sum((log.quantity if log.quantity is not None else (habit.session_quantity or 0))
-                     for log in logs_semaine)
-        percent = min(100, round(100 * volume / habit.weekly_volume_target))
-    else:
-        volume = None
-        cible = habit.weekly_target or 7
-        percent = min(100, round(100 * done_this_week / cible)) if cible else 0
+    # Calcul partagé avec le tableau commun (services/board.py).
+    done_this_week, volume, percent = progression_semaine(habit, logs_semaine)
 
     jours = jours_actifs(habit)
     # Même définition de « hebdomadaire » que le tableau de bord : volume avec

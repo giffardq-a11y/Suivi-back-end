@@ -57,6 +57,21 @@ def effective_habit_target(habit: "models.Habit", now: datetime) -> str | None:
     rounded = round(raw_value * 10) / 10 if decimals else round(raw_value)
     return format_habit_target(habit.habit_type, rounded, habit.progressive_unit)
 
+def progression_semaine(habit, logs_semaine) -> tuple[int, float | None, int]:
+    """(validations de la semaine, volume de la semaine ou None, pourcentage).
+
+    Même calcul pour l'onglet Habitudes (routers/habits.py) et le tableau
+    commun (services/board.py). Une validation sans quantité vaut la quantité
+    d'une séance type, à défaut 0 : mieux vaut sous-compter que gonfler."""
+    faites = len(logs_semaine)
+    if habit.tracking_mode == "volume" and habit.weekly_volume_target:
+        volume = sum((log.quantity if log.quantity is not None else (habit.session_quantity or 0))
+                     for log in logs_semaine)
+        return faites, volume, min(100, round(100 * volume / habit.weekly_volume_target))
+    cible = habit.weekly_target or 7
+    return faites, None, (min(100, round(100 * faites / cible)) if cible else 0)
+
+
 def est_hebdo(habit) -> bool:
     """Habitude « hebdomadaire » : volume avec cible hebdomadaire, ou moins de
     7 séances visées par semaine. Elle n'a jamais de jour « raté » : une
