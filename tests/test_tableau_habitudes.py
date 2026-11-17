@@ -58,8 +58,8 @@ def test_ordre_fait_et_progression(client, nouveau_compte):
     par_nom = {x["label"]: x for x in liste}
     # Prévue non faite d'abord, puis les faites, puis les non prévues.
     assert liste[0]["label"] == "Lire" and liste[-1]["label"] == "Nager"
-    assert par_nom["Lire"]["done"] is False and par_nom["Lire"]["progress"] == "0 / 7 cette semaine"
-    assert par_nom["Méditer"]["done"] is True and par_nom["Méditer"]["progress"] == "10 min · 1 / 7 cette semaine"
+    assert par_nom["Lire"]["done"] is False and par_nom["Lire"]["progress"] == "0 / 7 sem."
+    assert par_nom["Méditer"]["done"] is True and par_nom["Méditer"]["progress"] == "10 min · 1 / 7 sem."
     assert par_nom["Course"]["progress"].endswith("2.5 / 20.5 km")
     # Même progression que l'onglet Habitudes.
     carte = next(x for x in client.get("/habits", headers=h).json() if x["id"] == lire)

@@ -27,7 +27,7 @@
   .points { font-size: calc(5vmin * var(--k)); font-weight: 700; }
   .points small, .serie small { font-size: 0.5em; font-weight: 400; color: var(--discret); }
   .serie { font-size: calc(3.4vmin * var(--k)); color: var(--alerte); font-weight: 600; }
-  .cases { flex: 1; min-height: 0; display: flex; flex-wrap: wrap; gap: calc(1.6vmin * var(--k)); align-content: stretch; }
+  .cases { flex: 1; min-height: 0; overflow: hidden; display: flex; flex-wrap: wrap; gap: calc(1.6vmin * var(--k)); align-content: stretch; }
   .case { flex: 1 1 40%; min-width: 0; display: flex; flex-direction: column; justify-content: center;
     border-radius: calc(1.8vmin * var(--k)); padding: calc(1.2vmin * var(--k)) calc(2vmin * var(--k)); border: calc(0.4vmin * var(--k)) solid var(--bord); }
   .case.fait { background: var(--fait-fond); border-color: var(--fait); }
@@ -35,14 +35,11 @@
   .case.fait .libelle::before { content: "\2713\00a0"; color: var(--fait); }
   .valeur { font-size: calc(3.3vmin * var(--k)); color: var(--discret); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .case.fait .valeur { color: #c9f2dc; }
-  /* Détail des habitudes (si la personne l'a activé) : une ligne par habitude. */
-  .habitudes { display: flex; flex-direction: column; gap: calc(0.6vmin * var(--k)); }
-  .habitude { display: flex; align-items: baseline; gap: calc(1.2vmin * var(--k)); font-size: calc(3vmin * var(--k)); min-width: 0; }
-  .coche { color: var(--discret); font-weight: 700; flex: none; }
-  .habitude.faite .coche { color: var(--fait); }
-  .hnom { font-weight: 600; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .hprog { margin-left: auto; padding-left: calc(1vmin * var(--k)); color: var(--discret); font-size: calc(2.8vmin * var(--k)); white-space: nowrap; flex: none; }
+  /* Détail des habitudes : une case par habitude, comme les autres ; le reste compté. */
   .hplus { color: var(--discret); font-size: calc(2.4vmin * var(--k)); }
+  /* Plus de 6 cases : trois par rangée (taille réduite posée en JS sur la carte). */
+  .cases.serrees .case { flex-basis: 28%; }
+  .cases.serrees .valeur { white-space: normal; }
   .semaine { display: flex; gap: calc(1vmin * var(--k)); }
   .jour { flex: 1; text-align: center; border-radius: calc(1.2vmin * var(--k)); padding: calc(0.8vmin * var(--k)) 0; border: calc(0.3vmin * var(--k)) solid var(--bord); }
   .jour b { display: block; font-size: calc(2.6vmin * var(--k)); color: var(--discret); font-weight: 600; }
@@ -112,7 +109,7 @@
     elMessage.className = "";
   }
 
-  function carte(p, seule, limite) {
+  function carte(p, seule, limite, k) {
     var bloc = el("section", "personne" + (seule ? " seule" : ""));
 
     var entete = el("div", "entete");
@@ -131,31 +128,35 @@
 
     var cases = el("div", "cases");
     var cats = (p.today && p.today.categories) || [];
+    // Détail des habitudes activé : chaque habitude a sa propre case (même
+    // présentation que Sport, Sommeil...), à la place de la case résumé
+    // « Habitudes x / y ». Prévues non faites d'abord (ordre du serveur),
+    // `limite` cases au plus selon la place, le reste compté dessous.
+    var liste = p.habits || [];
     for (var i = 0; i < cats.length; i++) {
+      if (liste.length && cats[i].key === "habitudes") continue;
       var c = el("div", "case" + (cats[i].done ? " fait" : ""));
       c.appendChild(el("div", "libelle", cats[i].label));
       c.appendChild(el("div", "valeur", cats[i].value));
       cases.appendChild(c);
     }
-    bloc.appendChild(cases);
-
-    // Détail des habitudes : prévues non faites d'abord (ordre du serveur),
-    // `limite` lignes au plus selon la place, le reste compté.
-    var liste = p.habits || [];
-    if (liste.length) {
-      var bh = el("div", "habitudes");
-      var montrees = liste.slice(0, limite);
-      for (var h = 0; h < montrees.length; h++) {
-        var ligne = el("div", "habitude" + (montrees[h].done ? " faite" : ""));
-        ligne.appendChild(el("span", "coche", montrees[h].done ? "✓" : "○"));
-        ligne.appendChild(el("span", "hnom", montrees[h].label));
-        ligne.appendChild(el("span", "hprog", montrees[h].progress));
-        bh.appendChild(ligne);
-      }
-      var reste = liste.length - montrees.length + (p.habitsMore || 0);
-      if (reste > 0) bh.appendChild(el("div", "hplus", "+ " + reste + (reste > 1 ? " autres habitudes" : " autre habitude")));
-      bloc.appendChild(bh);
+    var montrees = liste.slice(0, limite);
+    // Trois cases par rangée au-delà de 6, et taille réduite au-delà de
+    // 3 rangées, pour que tout tienne sans déborder sur la semaine.
+    var nbCases = cases.childNodes.length + montrees.length;
+    var parRangee = nbCases > 6 ? 3 : 2;
+    var nbRangees = Math.ceil(nbCases / parRangee);
+    if (parRangee === 3) cases.className = "cases serrees";
+    if (nbRangees > 3) bloc.style.setProperty("--k", String(k * 3 / nbRangees));
+    for (var h = 0; h < montrees.length; h++) {
+      var ch = el("div", "case" + (montrees[h].done ? " fait" : ""));
+      ch.appendChild(el("div", "libelle", montrees[h].label));
+      ch.appendChild(el("div", "valeur", montrees[h].progress));
+      cases.appendChild(ch);
     }
+    bloc.appendChild(cases);
+    var reste = liste.length - montrees.length + (p.habitsMore || 0);
+    if (reste > 0) bloc.appendChild(el("div", "hplus", "+ " + reste + (reste > 1 ? " autres habitudes" : " autre habitude")));
 
     // Bande de la semaine, du lundi au dimanche : jours faits / total.
     var semaine = el("div", "semaine");
@@ -188,9 +189,10 @@
     var rangees = Math.ceil(n / colonnes);
     elPersonnes.style.gridTemplateColumns = "repeat(" + colonnes + ", minmax(0, 1fr))";
     elPersonnes.style.gridTemplateRows = "repeat(" + rangees + ", minmax(0, 1fr))";
-    elPersonnes.style.setProperty("--k", rangees > 1 ? "0.58" : (colonnes === 3 ? "0.8" : "1"));
+    var k = rangees > 1 ? 0.58 : (colonnes === 3 ? 0.8 : 1);
+    elPersonnes.style.setProperty("--k", String(k));
     var limite = rangees > 1 ? 3 : (colonnes === 3 ? 4 : 6);
-    for (var i = 0; i < n; i++) elPersonnes.appendChild(carte(gens[i], n === 1, limite));
+    for (var i = 0; i < n; i++) elPersonnes.appendChild(carte(gens[i], n === 1, limite, k));
     elPersonnes.className = "";
     elMessage.className = "cache";
     elEtat.textContent = "Mis à jour à " + heure(new Date());

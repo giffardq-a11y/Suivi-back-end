@@ -304,7 +304,7 @@ def _detail_habitudes(db: Session, habitudes: list, validees: set, jour: date, m
         if volume is not None:
             avancement = f"{volume:g} / {h.weekly_volume_target:g} {h.unit or ''}".strip()
         else:
-            avancement = f"{nb} / {h.weekly_target or 7} cette semaine"
+            avancement = f"{nb} / {h.weekly_target or 7} sem."
         cible = effective_habit_target(h, maintenant)
         rang = 0 if prevue and not faite else (1 if faite else 2)
         lignes.append((rang, (h.label or "").lower(), {
