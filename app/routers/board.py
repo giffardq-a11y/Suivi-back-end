@@ -45,7 +45,8 @@ def lire_tableau(jeton: str, request: Request, response: Response, db: Session =
     for membre in membres:
         personne = db.query(models.User).filter(models.User.id == membre.user_id).first()
         if personne is not None:
-            personnes.append(board.etat_personne(db, personne, masquees=frozenset(membre.hidden_categories or [])))
+            personnes.append(board.etat_personne(db, personne, masquees=frozenset(membre.hidden_categories or []),
+                                                 detail_habitudes=bool(membre.show_habit_details)))
 
     tableau.last_read_at = now_utc()
     db.commit()

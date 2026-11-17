@@ -41,6 +41,11 @@ MAX_PERSONNES = 6           # créateur et invitations en attente compris : lisi
 MAX_TABLEAUX = 10           # par créateur
 LONGUEUR_NOM = 40
 INVITATIONS_PAR_COMPTE = (30, 60 * 60)
+# Case à part de « Ce que j'affiche » : le détail des habitudes (nom, fait ou
+# non, progression), désactivé par défaut et réglé par le membre lui-même.
+# Stocké dans board_members.show_habit_details, pas dans hidden_categories.
+DETAIL_HABITUDES = "habitudes_detail"
+LIBELLE_DETAIL_HABITUDES = "Détail des habitudes"
 
 
 class CorpsTableau(BaseModel):
@@ -104,6 +109,9 @@ def _decrire(db: Session, tableau: models.Board, user: models.User) -> dict:
         {"key": cle, "label": LIBELLES[cle], "shown": cle not in cachees}
         for cle in categories_actives(user)
     ] if mon is not None and mon.status == "accepted" else []
+    if mes_cases and "habitudes" in categories_actives(user):
+        mes_cases.append({"key": DETAIL_HABITUDES, "label": LIBELLE_DETAIL_HABITUDES,
+                          "shown": bool(mon.show_habit_details)})
     return {
         "id": tableau.id, "name": tableau.name, "isOwner": createur, "members": membres,
         "myCategories": mes_cases,
@@ -237,12 +245,14 @@ def choisir_mes_cases(board_id: str, corps: CorpsCases, db: Session = Depends(ge
         raise HTTPException(status_code=404, detail="Tableau introuvable.")
     if membre.status != "accepted":
         raise HTTPException(status_code=403, detail="Accepte d'abord l'invitation à ce tableau.")
-    inconnues = sorted(set(corps.hidden) - set(LIBELLES))
+    inconnues = sorted(set(corps.hidden) - set(LIBELLES) - {DETAIL_HABITUDES})
     if inconnues:
         raise HTTPException(status_code=400, detail=f"Case inconnue : {', '.join(inconnues)}.")
-    masquees = list(dict.fromkeys(corps.hidden))  # doublons retirés, ordre gardé
+    # Doublons retirés, ordre gardé ; le détail des habitudes n'est pas une case du calcul.
+    masquees = [cle for cle in dict.fromkeys(corps.hidden) if cle != DETAIL_HABITUDES]
     if not [cle for cle in categories_actives(user) if cle not in masquees]:
         raise HTTPException(status_code=400, detail="Garde au moins une case affichée, ou quitte le tableau.")
     membre.hidden_categories = masquees
+    membre.show_habit_details = DETAIL_HABITUDES not in corps.hidden
     db.commit()
     return _decrire(db, tableau, user)
