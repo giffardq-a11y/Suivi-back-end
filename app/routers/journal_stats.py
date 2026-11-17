@@ -5,7 +5,7 @@ buildWeekOverview / buildDayDetail / buildJournalOverview / buildHabitsStats
 / buildOverviewStats côté mockData.js.
 """
 import random
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
@@ -13,7 +13,9 @@ from sqlalchemy.orm import Session
 from .. import models
 from ..database import get_db
 from ..deps import get_current_user
-from ..services.common import now_utc, to_ms, from_ms, relative_time, is_same_day, start_of_week, aware
+from ..services.common import (
+    now_utc, to_ms, from_ms, relative_time, is_same_day, start_of_week, aware, debut_suivi, jour_du_compte,
+)
 from ..services.savings import compute_savings, savings_delta
 from ..services.streaks import current_streak_days
 from ..services.sport import calories_burned_on
@@ -156,8 +158,11 @@ def get_stats(period: str = "week", db: Session = Depends(get_db), user: models.
 
 @router.get("/history")
 def get_history(db: Session = Depends(get_db), user: models.User = Depends(get_current_user)):
-    now = datetime.now(timezone.utc)
+    now = now_utc()
     year, month = now.year, now.month
+    # Rien n'est suivi avant ce jour (création du compte ou dernière remise à
+    # zéro de la progression) : ces jours-là ne sont ni « propres » ni ratés.
+    premier_jour_suivi = jour_du_compte(debut_suivi(user, now))
     first_of_month = datetime(year, month, 1, tzinfo=timezone.utc)
     days_in_month = (
         (datetime(year + 1, 1, 1, tzinfo=timezone.utc) if month == 12 else datetime(year, month + 1, 1, tzinfo=timezone.utc))
@@ -178,7 +183,8 @@ def get_history(db: Session = Depends(get_db), user: models.User = Depends(get_c
     days = [None] * first_weekday
     for d in range(1, days_in_month + 1):
         is_future = d > now.day
-        status = "none" if is_future else ("partial" if entries_by_day.get(d) else "clean")
+        avant_suivi = date(year, month, d) < premier_jour_suivi
+        status = "none" if (is_future or avant_suivi) else ("partial" if entries_by_day.get(d) else "clean")
         days.append({"day": d, "status": status})
 
     recent = (

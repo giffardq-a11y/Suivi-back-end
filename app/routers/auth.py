@@ -6,9 +6,10 @@ from sqlalchemy.orm import Session
 
 from .. import models, schemas
 from ..database import get_db
-from ..modules import MODULES, est_actif
+from ..modules import MODULES
 from ..services import jetons, limite
 from ..services.compte import consommer_jeton, creer_jeton
+from ..services.defauts_compte import creer_defauts
 from ..services.email import envoyer_email
 from ..security import hash_password, verify_password
 
@@ -43,24 +44,11 @@ def signup(payload: schemas.SignupRequest, request: Request, db: Session = Depen
     db.commit()
     db.refresh(user)
 
-    # Les 2 substances "de base" (alcool/tabac) sont un pilier de l'app
-    # (streaks Accueil, économies, bénéfices santé) — sans elles un nouveau
-    # compte réel se retrouverait avec un dashboard vide. Coût par défaut
-    # neutre, éditable ensuite dans Paramètres (voir routers/settings.py).
-    # Créées seulement si le module addictions est actif (toujours vrai tant
-    # qu'un client n'envoie pas encore `modules`).
-    if est_actif(user, "addictions"):
-        db.add_all([
-            models.Substance(
-                user_id=user.id, label="Alcool", unit="1 verre",
-                category=models.SubstanceCategory.ALCOHOL, unit_cost=6.0, usual_frequency_per_day=1.0,
-            ),
-            models.Substance(
-                user_id=user.id, label="Tabac", unit="1 cigarette",
-                category=models.SubstanceCategory.TOBACCO, unit_cost=0.6, usual_frequency_per_day=1.0,
-            ),
-        ])
-        db.commit()
+    # Contenu par défaut d'un compte neuf (alcool/tabac si le module
+    # addictions est actif) : partagé avec « tout effacer », voir
+    # services/defauts_compte.py.
+    creer_defauts(db, user)
+    db.commit()
 
     return schemas.AuthResponse(user=schemas.UserOut.model_validate(user), **jetons.emettre(db, user.id))
 

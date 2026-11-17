@@ -4,6 +4,7 @@ from typing import List
 from sqlalchemy.orm import Session
 
 from .. import models
+from .common import debut_suivi
 
 
 def _days_between(a: datetime, b: datetime) -> int:
@@ -16,11 +17,27 @@ def _days_between(a: datetime, b: datetime) -> int:
     return max(0, delta.days)
 
 
+def reference_sans_consommation(substance: models.Substance) -> datetime:
+    """Point de départ d'une série quand aucune consommation n'est enregistrée.
+
+    La date d'arrêt déclarée prime : elle passe avant le début du suivi, sinon
+    quelqu'un qui a arrêté six mois avant d'installer l'app repartirait de
+    zéro. Sans date d'arrêt valable, on compte depuis le début du suivi
+    (création du compte, ou dernière remise à zéro de la progression)."""
+    if substance.quit_date:
+        try:
+            jour = date.fromisoformat(substance.quit_date)
+            return datetime(jour.year, jour.month, jour.day, tzinfo=timezone.utc)
+        except ValueError:
+            pass
+    return debut_suivi(substance.user)
+
+
 def current_streak_days(db: Session, substance: models.Substance, now: datetime = None) -> int:
     """Nombre de jours pleins depuis la dernière ConsumptionEntry de type
     'consumption' pour cette substance. S'il n'y a jamais eu de consommation
-    enregistrée, on compte depuis la création du compte (proxy raisonnable
-    de 'depuis que je suis sur l'app')."""
+    enregistrée, on compte depuis la date d'arrêt, à défaut depuis le début du
+    suivi (voir reference_sans_consommation)."""
     now = now or datetime.now(timezone.utc)
 
     last_entry = (
@@ -32,25 +49,27 @@ def current_streak_days(db: Session, substance: models.Substance, now: datetime 
         .order_by(models.ConsumptionEntry.occurred_at.desc())
         .first()
     )
-    if last_entry:
-        reference = last_entry.occurred_at
-    elif substance.quit_date:
-        # Date d'arrêt déclarée : elle prime sur la création du compte, sinon
-        # quelqu'un qui a arrêté six mois avant d'installer l'app repart de zéro.
-        try:
-            jour = date.fromisoformat(substance.quit_date)
-            reference = datetime(jour.year, jour.month, jour.day, tzinfo=timezone.utc)
-        except ValueError:
-            reference = substance.user.created_at
-    else:
-        reference = substance.user.created_at
+    reference = last_entry.occurred_at if last_entry else reference_sans_consommation(substance)
     return _days_between(reference, now)
 
 
 def personal_best_days(db: Session, substance: models.Substance, now: datetime = None) -> int:
     """Le plus long intervalle jamais tenu entre deux consommations
-    successives (ou avant la première / depuis la dernière), en jours."""
+    successives (ou avant la première / depuis la dernière), en jours.
+
+    Sans consommation, le record est la série en cours (même référence : la
+    date d'arrêt si elle est valable, sinon le début du suivi) : après une
+    remise à zéro, il n'affiche donc plus l'ancienneté du compte.
+
+    Avec des consommations, tout l'historique compte. Le premier intervalle
+    part de la date d'arrêt si elle précède la première consommation (arrêt
+    déclaré avant d'installer l'app, ou jour de la remise à zéro), sinon du
+    début du suivi : déclarer une nouvelle date d'arrêt après une rechute ne
+    doit pas effacer un ancien record."""
     now = now or datetime.now(timezone.utc)
+
+    def _aware(d: datetime) -> datetime:
+        return d if d.tzinfo else d.replace(tzinfo=timezone.utc)
 
     entries = (
         db.query(models.ConsumptionEntry)
@@ -61,12 +80,17 @@ def personal_best_days(db: Session, substance: models.Substance, now: datetime =
         .order_by(models.ConsumptionEntry.occurred_at.asc())
         .all()
     )
+    instants = sorted(_aware(e.occurred_at) for e in entries)
+    if not instants:
+        return current_streak_days(db, substance, now=now)
 
-    if not entries:
-        return _days_between(substance.user.created_at, now)
+    reference = _aware(reference_sans_consommation(substance))
+    depart = reference if reference <= instants[0] else min(_aware(debut_suivi(substance.user)), instants[0])
 
-    checkpoints: List[datetime] = [substance.user.created_at] + [e.occurred_at for e in entries] + [now]
+    checkpoints: List[datetime] = [depart] + instants + [now]
     best = 0
     for i in range(1, len(checkpoints)):
         best = max(best, _days_between(checkpoints[i - 1], checkpoints[i]))
-    return best
+    # Jamais en dessous de la série en cours (qui peut partir d'une dernière
+    # consommation antérieure à la date d'arrêt).
+    return max(best, current_streak_days(db, substance, now=now))

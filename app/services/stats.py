@@ -33,7 +33,7 @@ from sqlalchemy.orm import Session
 
 from .. import models
 from ..modules import est_actif
-from .common import aware, date_key as _date_key, now_utc, today_key
+from .common import aware, date_key as _date_key, debut_suivi, jour_du_compte, now_utc, today_key
 
 _log = logging.getLogger("uvicorn.error")
 
@@ -513,7 +513,10 @@ def constater_sobriete(db: Session, user: models.User, now: datetime | None = No
 
         # --- Journées sans ---
         source_jour = f"{cle}_free_day"
-        debut = aware(user.created_at or now).date()
+        # Début du suivi (création du compte ou dernière remise à zéro) : sans
+        # lui, une réinitialisation ferait rattraper des « journées sans »
+        # depuis la création du compte, donc des points sur du passé effacé.
+        debut = jour_du_compte(debut_suivi(user, now))
         if arret is not None and arret.date() > debut:
             debut = arret.date()
         jours_conso = {c.date().isoformat() for c in consos}
