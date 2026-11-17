@@ -1166,3 +1166,6 @@ class BoardMember(Base):
     invited_by = Column(String, ForeignKey("users.id"), nullable=True)
     created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
     accepted_at = Column(DateTime(timezone=True), nullable=True)
+    # Cases (clés de services/board.LIBELLES) que CE membre masque sur CE
+    # tableau ; NULL ou [] = rien de masqué. Lui seul les règle.
+    hidden_categories = Column(JSON, nullable=True)

@@ -167,3 +167,102 @@ def test_reprise_des_anciens_liens(client, nouveau_compte):
     assert ecran_a["name"] == "Mon tableau" and len(ecran_a["people"]) == 2
     assert client.get(f"/board/{jetons[b]}").json()["name"] == "Tableau de Bea"
     assert len(client.get(f"/board/{jetons[c]}").json()["people"]) == 1
+
+
+# --- « Chacun pour soi » : chaque membre choisit ses cases, tableau par tableau ---
+
+def _deux_membres(client, nouveau_compte):
+    _, _, h_a, id_a = nouveau_compte()
+    email_b, _, h_b, id_b = nouveau_compte()
+    tableau = _creer(client, h_a)
+    assert _inviter(client, h_a, tableau["id"], email_b).status_code == 200
+    assert client.post(f"/boards/{tableau['id']}/accept", headers=h_b).status_code == 200
+    return h_a, h_b, tableau["id"], _lien(client, h_a, tableau["id"])
+
+
+def _moi(client, h, board_id):
+    return next(b for b in client.get("/boards", headers=h).json()["boards"] if b["id"] == board_id)
+
+
+def test_cases_par_defaut_toutes_affichees_puis_masquage_pour_soi_seul(client, nouveau_compte):
+    h_a, h_b, board_id, chemin = _deux_membres(client, nouveau_compte)
+    cases = _moi(client, h_b, board_id)["myCategories"]
+    assert [c["key"] for c in cases] == ["sport", "nutrition", "addictions", "hydratation", "sommeil", "habitudes"]
+    assert all(c["shown"] for c in cases) and cases[0]["label"] == "Sport"
+
+    avant = client.get(chemin).json()["people"]
+    r = client.put(f"/boards/{board_id}/categories", json={"hidden": ["nutrition", "nutrition", "sommeil"]}, headers=h_b)
+    assert r.status_code == 200, r.text
+    assert {c["key"] for c in r.json()["myCategories"] if not c["shown"]} == {"nutrition", "sommeil"}
+
+    apres = client.get(chemin).json()["people"]
+    cats_a = {c["key"] for c in apres[0]["today"]["categories"]}
+    cats_b = {c["key"] for c in apres[1]["today"]["categories"]}
+    assert "nutrition" in cats_a and "sommeil" in cats_a  # le créateur n'est pas touché
+    assert not {"nutrition", "sommeil"} & cats_b
+    assert apres[0]["pointsMax"] == avant[0]["pointsMax"]
+    assert apres[1]["pointsMax"] == avant[1]["pointsMax"] - 14
+    assert len(apres[1]["week"]) == len(avant[1]["week"])
+    # Le créateur ne voit pas les cases de l'autre comme les siennes.
+    assert all(c["shown"] for c in _moi(client, h_a, board_id)["myCategories"])
+
+
+def test_cases_independantes_par_tableau(client, nouveau_compte):
+    _, _, h, _ = nouveau_compte()
+    un = _creer(client, h, "Un")["id"]
+    deux = _creer(client, h, "Deux")["id"]
+    assert client.put(f"/boards/{un}/categories", json={"hidden": ["sport"]}, headers=h).status_code == 200
+    assert client.put(f"/boards/{deux}/categories", json={"hidden": ["hydratation"]}, headers=h).status_code == 200
+    assert [c["key"] for c in _moi(client, h, un)["myCategories"] if not c["shown"]] == ["sport"]
+    assert [c["key"] for c in _moi(client, h, deux)["myCategories"] if not c["shown"]] == ["hydratation"]
+    chemin = _lien(client, h, un)
+    assert "sport" not in {c["key"] for c in client.get(chemin).json()["people"][0]["today"]["categories"]}
+
+
+def test_cases_droits_non_membre_et_invite_en_attente(client, nouveau_compte):
+    h_a, _, board_id, _ = _deux_membres(client, nouveau_compte)
+    _, _, h_x, _ = nouveau_compte()
+    r = client.put(f"/boards/{board_id}/categories", json={"hidden": ["sport"]}, headers=h_x)
+    assert r.status_code == 404 and r.json()["detail"] == "Tableau introuvable."
+    email_y, _, h_y, _ = nouveau_compte()
+    assert _inviter(client, h_a, board_id, email_y).status_code == 200
+    assert client.put(f"/boards/{board_id}/categories", json={"hidden": ["sport"]}, headers=h_y).status_code == 403
+    assert client.put(f"/boards/{board_id}/categories", json={"hidden": ["sport"]}).status_code in (401, 403)
+
+
+def test_cases_cle_inconnue_et_tout_masquer(client, nouveau_compte):
+    _, _, h, _ = nouveau_compte()
+    board_id = _creer(client, h)["id"]
+    r = client.put(f"/boards/{board_id}/categories", json={"hidden": ["cycle"]}, headers=h)
+    assert r.status_code == 400 and "cycle" in r.json()["detail"]
+    tout = ["sport", "nutrition", "addictions", "hydratation", "sommeil", "habitudes"]
+    r = client.put(f"/boards/{board_id}/categories", json={"hidden": tout}, headers=h)
+    assert r.status_code == 400 and "au moins une case" in r.json()["detail"]
+    assert all(c["shown"] for c in _moi(client, h, board_id)["myCategories"])
+
+
+def test_cases_module_inactif_absent_et_tout_masquer_relatif_aux_modules(client, nouveau_compte_avec_modules):
+    _, _, h, _ = nouveau_compte_avec_modules(["sport", "hydratation"])
+    board_id = _creer(client, h)["id"]
+    assert [c["key"] for c in _moi(client, h, board_id)["myCategories"]] == ["sport", "hydratation"]
+    # Les cases des modules actifs sont toutes masquées : refusé, même si d'autres clés valides sont données.
+    r = client.put(f"/boards/{board_id}/categories", json={"hidden": ["sport", "hydratation"]}, headers=h)
+    assert r.status_code == 400
+    assert client.put(f"/boards/{board_id}/categories", json={"hidden": ["sport", "sommeil"]}, headers=h).status_code == 200
+
+
+def test_serie_nulle_quand_le_socle_est_masque(client, nouveau_compte):
+    _, _, h, _ = nouveau_compte()
+    board_id = _creer(client, h)["id"]
+    chemin = _lien(client, h, board_id)
+    assert isinstance(client.get(chemin).json()["people"][0]["streakDays"], int)
+    r = client.put(f"/boards/{board_id}/categories", json={"hidden": ["sport", "nutrition", "addictions"]}, headers=h)
+    assert r.status_code == 200
+    moi = client.get(chemin).json()["people"][0]
+    assert moi["streakDays"] is None
+    assert {c["key"] for c in moi["today"]["categories"]} == {"hydratation", "sommeil"}
+
+
+def test_colonne_cases_masquees_apres_migration_0029():
+    from sqlalchemy import inspect
+    assert "hidden_categories" in {c["name"] for c in inspect(engine).get_columns("board_members")}

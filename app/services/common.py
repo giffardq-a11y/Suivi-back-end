@@ -9,7 +9,7 @@ millisecondes epoch (to_ms), pas en ISO 8601 — mockData.js utilise partout
 `Date.now()` / `occurredAt` en ms, et les écrans front s'attendent à ce
 format (arithmétique JS directe sur les valeurs reçues).
 """
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 
 
 def now_utc() -> datetime:
@@ -52,6 +52,16 @@ def is_same_day(a: datetime, b: datetime) -> bool:
     if b.tzinfo is None:
         b = b.replace(tzinfo=timezone.utc)
     return a.astimezone(timezone.utc).date() == b.astimezone(timezone.utc).date()
+
+
+def jour_du_compte(dt: datetime) -> date:
+    """Jour (date UTC) auquel un instant est rattaché dans le compte.
+
+    C'est LE point à changer le jour où l'app passera au fuseau de
+    l'utilisateur : le compte (is_same_day, date_key, tableau de bord) et le
+    tableau commun découpent tous les deux les jours avec cette convention,
+    pour qu'une même saisie compte pour le même jour des deux côtés."""
+    return aware(dt).astimezone(timezone.utc).date()
 
 
 def days_since(dt: datetime, now: datetime | None = None) -> int:

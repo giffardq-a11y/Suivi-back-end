@@ -12,7 +12,7 @@ from .savings import compute_savings
 from .rewards import compute_reward_budget
 from .common import start_of_week, is_same_day
 from .habit_progress import (
-    effective_habit_target, jours_actifs, jours_valides, bande_semaine,
+    effective_habit_target, est_hebdo, jours_actifs, jours_valides, bande_semaine,
     serie_jours, serie_semaines, semaine_du_plan,
 )
 from .sport import calories_burned_on
@@ -99,11 +99,10 @@ def build_dashboard_dict(db: Session, user: models.User) -> dict:
                     for log in logs_semaine
                 ), 1)
                 cible = habit.weekly_volume_target
-                weekly = True
             else:
                 faites = len(logs_semaine)
                 cible = habit.weekly_target or 7
-                weekly = cible < 7
+            weekly = est_hebdo(habit)
             # Carte d'habitude : bande des 7 jours, série (en jours pour une
             # habitude quotidienne, en semaines atteintes sinon) et semaine du
             # plan pour une habitude progressive à durée explicite.

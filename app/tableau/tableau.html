@@ -113,8 +113,11 @@
     var points = el("div", "points", p.points);
     points.appendChild(el("small", null, " / " + p.pointsMax + " pts"));
     chiffres.appendChild(points);
-    var serie = el("div", "serie", "Série : " + p.streakDays + " j");
-    chiffres.appendChild(serie);
+    // Série absente (null) quand la personne ne montre aucune case du socle.
+    if (p.streakDays !== null && p.streakDays !== undefined) {
+      var serie = el("div", "serie", "Série : " + p.streakDays + " j");
+      chiffres.appendChild(serie);
+    }
     entete.appendChild(chiffres);
     bloc.appendChild(entete);
 
@@ -200,7 +203,7 @@
       }
       if (xhr.status === 404) {
         // Lien coupé ou remplacé : plus rien de la personne ne reste affiché.
-        message("Ce lien a été coupé ou remplacé. Crée un nouveau lien dans l'app Tanren (Mon proche → Tableau pour un écran).");
+        message("Ce lien a été coupé ou remplacé. Crée un nouveau lien dans l'app Tanren (onglet Tableau).");
         elEtat.textContent = "";
         if (minuterie) clearTimeout(minuterie);
         return;
@@ -228,7 +231,7 @@
   }
 
   if (!jeton) {
-    message("Lien incomplet. Ouvre le tableau depuis l'app Tanren (Mon proche → Tableau pour un écran).");
+    message("Lien incomplet. Ouvre le tableau depuis l'app Tanren (onglet Tableau).");
     return;
   }
   document.addEventListener("click", relireMaintenant);

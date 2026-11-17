@@ -25,6 +25,7 @@ from ..database import get_db
 from ..deps import get_current_user
 from ..services import personnage_hooks
 from ..services.common import date_key, from_ms, fuseau_utilisateur, is_same_day, now_utc, to_ms
+from ..services.sommeil import nuit_retenue_par_jour
 from ..services.sport import increment_session_goals, mark_sport_habits_done_today
 
 router = APIRouter(prefix="/health", tags=["health"])
@@ -447,19 +448,12 @@ def health_history(
     # Une nuit par jour de réveil : si la même nuit existe saisie à la main
     # et importée, on garde l'importée (elle porte les phases) ; à source
     # égale, la plus longue (une sieste ne remplace pas la nuit).
-    def rang(n: models.SleepLog):
-        return (n.source == SOURCE, n.duration_min or 0)
-
-    nuits: dict[str, models.SleepLog] = {}
-    for n in (
+    nuits = nuit_retenue_par_jour(
         db.query(models.SleepLog)
         .filter(models.SleepLog.user_id == user.id, models.SleepLog.ended_at >= depuis)
         .order_by(models.SleepLog.ended_at.asc())
         .all()
-    ):
-        deja = nuits.get(n.date_key)
-        if deja is None or rang(n) > rang(deja):
-            nuits[n.date_key] = n
+    )
 
     compo = models.BodyCompositionEntry
     pesee = derniere(models.WeightEntry)
