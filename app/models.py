@@ -50,6 +50,10 @@ class User(Base):
     # Modules choisis (clés de app/modules.py). NULL = tout actif, voir
     # modules.modules_actifs.
     enabled_modules = Column(JSON, nullable=True)
+    # Dernière remise à zéro de la progression (POST /me/reset/*). Avec
+    # created_at, donne le début du suivi (services/common.debut_suivi) : rien
+    # avant ce jour ne compte dans les séries, le calendrier ni les bénéfices.
+    progress_reset_at = Column(DateTime(timezone=True), nullable=True)
 
     substances = relationship("Substance", back_populates="user", cascade="all, delete-orphan")
     habits = relationship("Habit", back_populates="user", cascade="all, delete-orphan")

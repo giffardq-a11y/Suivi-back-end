@@ -2,7 +2,7 @@ import math
 from datetime import timedelta, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
 from .. import models
@@ -11,6 +11,7 @@ from ..deps import get_current_user
 from ..services import personnage_hooks
 from ..services.common import now_utc, is_same_day
 from ..services.savings import compute_savings
+from ..services.streaks import reference_sans_consommation
 from ..services.rewards import compute_reward_budget
 
 router = APIRouter(tags=["goals"])
@@ -31,9 +32,25 @@ class GoalCreate(BaseModel):
     label: str
     weight: int = 1
     linkedType: str | None = None
-    targetValue: float
+    # Facultative pour un objectif « à cocher » (sans lien) : 1 par défaut.
+    targetValue: float | None = None
     linkedHabitId: str | None = None
     linkedExerciseName: str | None = None
+
+
+class GoalUpdate(BaseModel):
+    """Tout est facultatif : seuls les champs envoyés changent."""
+    label: str | None = None
+    weight: int | None = Field(default=None, ge=1, le=3)
+    targetValue: float | None = Field(default=None, gt=0)
+    currentValue: float | None = Field(default=None, ge=0)
+    completed: bool | None = None
+
+
+def _est_manuel(goal: models.Goal) -> bool:
+    """Objectif qui n'avance pas tout seul : ni lié à une métrique ni à un
+    compteur de séances. C'est l'utilisateur qui le fait progresser."""
+    return not goal.linked_type and not goal.linked_metric
 
 
 def _habit_streak_days(db: Session, habit_id: str, now) -> int:
@@ -143,6 +160,7 @@ def _serialize_goal(db: Session, user: models.User, goal: models.Goal, now) -> d
         "weight": goal.weight,
         "completed": goal.completed_at is not None or percent >= 100,
         "linked_type": goal.linked_type,
+        "manual": _est_manuel(goal),
         # Objectif d'économies : date d'atteinte au rythme actuel (None si
         # aucune substance chiffrée).
         "eta_days": linked.get("eta_days") if linked else None,
@@ -206,10 +224,17 @@ def create_goal(
     # linked_* stockés sur des colonnes non normalisées côté modèle actuel
     # (Goal n'a pas encore linked_type/linked_habit_id/linked_exercise_name
     # — ajoutés ci-dessous via _ensure_goal_columns dans main.py).
+    cible = payload.targetValue
+    if cible is None:
+        if payload.linkedType:
+            raise HTTPException(status_code=400, detail="Un objectif lié à une mesure a besoin d'une valeur cible.")
+        cible = 1  # objectif « à cocher »
+    if cible <= 0:
+        raise HTTPException(status_code=400, detail="La valeur cible doit être supérieure à 0.")
     goal = models.Goal(
         user_id=user.id,
         label=payload.label,
-        target_value=payload.targetValue,
+        target_value=cible,
         current_value=0,
         weight=payload.weight,
         linked_type=payload.linkedType,
@@ -220,6 +245,75 @@ def create_goal(
     db.commit()
     db.refresh(goal)
     return {"ok": True, "id": goal.id}
+
+
+def _objectif_de(db: Session, user: models.User, goal_id: str) -> models.Goal:
+    goal = db.query(models.Goal).filter(models.Goal.id == goal_id, models.Goal.user_id == user.id).first()
+    if not goal:
+        raise HTTPException(status_code=404, detail="Objectif introuvable")
+    return goal
+
+
+@router.put("/goals/{goal_id}")
+def update_goal(
+    goal_id: str,
+    payload: GoalUpdate,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    goal = _objectif_de(db, user, goal_id)
+    champs = payload.model_fields_set
+    manuel = _est_manuel(goal)
+    if ({"currentValue", "completed"} & champs) and not manuel:
+        raise HTTPException(status_code=400, detail="Cet objectif avance tout seul.")
+
+    etait_atteint = goal.completed_at is not None
+    now = now_utc()
+
+    if payload.label is not None:
+        label = payload.label.strip()
+        if not label:
+            raise HTTPException(status_code=400, detail="Le libellé ne peut pas être vide.")
+        goal.label = label
+    if payload.weight is not None:
+        goal.weight = payload.weight
+    if payload.targetValue is not None:
+        goal.target_value = payload.targetValue
+
+    if manuel and ({"currentValue", "completed", "targetValue"} & champs):
+        cible = goal.target_value
+        if payload.currentValue is not None:
+            goal.current_value = payload.currentValue
+        # Jamais au-dessus de la cible (y compris quand on baisse la cible).
+        goal.current_value = min(goal.current_value, cible)
+        if payload.completed is True:
+            goal.current_value = cible
+        elif payload.completed is False and goal.current_value >= cible:
+            goal.current_value = 0
+        if goal.current_value >= cible:
+            if goal.completed_at is None:
+                goal.completed_at = now
+        else:
+            goal.completed_at = None
+
+    db.commit()
+    db.refresh(goal)
+    if etait_atteint and goal.completed_at is None:
+        personnage_hooks.retrait(db, user, "goal_completed", goal.id)
+    return _serialize_goal(db, user, goal, now)
+
+
+@router.delete("/goals/{goal_id}", status_code=204)
+def delete_goal(
+    goal_id: str,
+    db: Session = Depends(get_db),
+    user: models.User = Depends(get_current_user),
+):
+    goal = _objectif_de(db, user, goal_id)
+    identifiant = goal.id
+    db.delete(goal)
+    db.commit()
+    personnage_hooks.retrait(db, user, "goal_completed", identifiant)
 
 
 class RewardIn(BaseModel):
@@ -337,7 +431,8 @@ def get_benefits(db: Session = Depends(get_db), user: models.User = Depends(get_
             (e.occurred_at for e in sub.entries if e.type == models.EntryType.CONSUMPTION),
             default=None,
         )
-        reference = last or sub.user.created_at
+        # Même référence que la série en cours (services/streaks.py).
+        reference = last or reference_sans_consommation(sub)
         if reference.tzinfo is None:
             reference = reference.replace(tzinfo=timezone.utc)
         elapsed_hours = (now - reference).total_seconds() / 3600

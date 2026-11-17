@@ -64,6 +64,16 @@ def jour_du_compte(dt: datetime) -> date:
     return aware(dt).astimezone(timezone.utc).date()
 
 
+def debut_suivi(user, now: datetime | None = None) -> datetime:
+    """Depuis quand on suit l'utilisateur : le plus récent de la création du
+    compte et de la dernière remise à zéro de la progression. Tout calcul de
+    progression (séries, calendrier, bénéfices...) qui n'a pas de date plus
+    précise repart d'ici, jamais du passé d'avant la réinitialisation.
+    `now` sert seulement de repli pour un compte pas encore enregistré."""
+    dates = [aware(d) for d in (user.created_at, getattr(user, "progress_reset_at", None)) if d is not None]
+    return max(dates) if dates else (now or now_utc())
+
+
 def days_since(dt: datetime, now: datetime | None = None) -> int:
     now = now or now_utc()
     if dt.tzinfo is None:
